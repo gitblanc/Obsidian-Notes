@@ -1,0 +1,90 @@
+{
+  "main": {
+    "id": "46396cf51d5bc3b7",
+    "type": "split",
+    "children": [
+      {
+        "id": "453754c034d76460",
+        "type": "leaf",
+        "state": {
+          "type": "empty",
+          "state": {}
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "bad504e166783888",
+    "type": "split",
+    "children": [
+      {
+        "id": "11999ff16d8ab007",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "317e254f1c7bfd77",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "c27b10d80078b9f9",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "1b2d980ad4b04eb7",
+    "type": "split",
+    "children": [
+      {
+        "id": "1613227075961c54",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "18776e4c52d6b962",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "453754c034d76460",
+  "lastOpenFiles": [
+    "SO/Most useful Linux commands.md",
+    "Invariants, preconditions, postconditions.md"
+  ]
+}
