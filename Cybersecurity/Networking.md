@@ -1,3 +1,6 @@
+# 📘Theory📘
+---
+
 # OSI Model
 There are 7 layers:
 #### 7. Application
@@ -37,7 +40,48 @@ TCP means Transmission Control Protocol. It's a connection based protocol. You m
 Whe you attempt to make a connection, your computer first sends a special request to the remote server indicating that it wants to initialise a connection. This request contains a SYN bit (synchronise bit), which makes first contact in starting the connection process. The server will then respond with a packet containing the SYN bit, as well as the acknowledgement bit, called ACK. Finally, your computer will send a packet that contains the ACK bit, confirming that the connection has been set up succesfully. With the three-way handshake succesfully completed, data can be reliabky transmitted between the two computers. Any data that is lost or corrupted is re-sent, so the conection is lossless.
 
 ---
+# 🔋💡TOOLS💡🔋
 
-# Ping
+---
+## Ping
+It is used to test wether a connection to a remote resource is possible. Uses the ICMP protocol. It can be used to determinate the IP address of the server hosting a website.
+````
+ping <destination>
+````
+---
+## Traceroute
+Maps the path of your request as it heads to the target machine. It allows to see every intermediate step between your computer and the resource that you requested.
+````
+traceroute <destination>
+````
 
+---
+## Whois
+A domain translates into an IP address so that we don't need to remember it. Whois allows you to query who a domain name is registered to.
+````
+whois <domain>
+````
 
+---
+## Dig
+An URL gets converted to an IP address with DNS (Domain Name System). DNS gives us the IP address of the website we are trying to access.
+
+You make a request to a website. The first thing that your computer does is check its local cache to see if it's already got an IP address stored for the website; if it does, great. If not, it goes to the next stage of the process.
+
+Assuming the address hasn't already been found, your computer will then send a request to what's known as a _recursive_ DNS server. These will automatically be known to the router on your network. Many Internet Service Providers (ISPs) maintain their own recursive servers, but companies such as Google and OpenDNS also control recursive servers. This is how your computer automatically knows where to send the request for information: details for a recursive DNS server are stored in your router. This server will also maintain a cache of results for popular domains; however, if the website you've requested isn't stored in the cache, the recursive server will pass the request on to a _root name_ server.
+
+Before 2004 there were precisely 13 root name DNS servers in the world. These days there are many more; however, they are still accessible using the same 13 IP addresses assigned to the original servers (balanced so that you get the closest server when you make a request). The root name servers essentially keep track of the DNS servers in the next level down, choosing an appropriate one to redirect your request to. These lower level servers are called _Top-Level_ _Domain_ servers.
+
+Top-Level Domain (TLD) servers are split up into extensions. So, for example, if you were searching for tryhackme**.com** your request would be redirected to a TLD server that handled `.com` domains. If you were searching for bbc**.co.uk** your request would be redirected to a TLD server that handles `.co.uk` domains. As with root name servers, TLD servers keep track of the next level down: _Authoritative name servers_. When a TLD server receives your request for information, the server passes it down to an appropriate Authoritative name server.
+
+Authoritative name servers are used to store DNS records for domains directly. In other words, every domain in the world will have its DNS records stored on an Authoritative name server somewhere or another; they are the source of the information. When your request reaches the authoritative name server for the domain you're querying, it will send the relevant information back to you, allowing your computer to connect to the IP address behind the domain you requested.
+
+When you visit a website in your web browser this all happens automatically, but we can also do it manually with a tool called `dig` .
+
+Dig allows us to manually query recursive DNS servers of our choice for information about domains:
+```
+dig <domain> @<dns-server-ip>
+```
+
+This gives tons of information. If appears `status: NOERROR` we recieved a full answer, which contains the IP address for the domain we required.
+Another interesting information is the TTL (Time To Live), which is measured in seconds.
