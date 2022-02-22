@@ -47,3 +47,19 @@ We use `-sn`. We could scan :
 - `nmap -sn 192.168.0.0``
 
 ---
+# NSE Scripts
+
+The **N**map **S**cripting **E**ngine (NSE) is an incredibly powerful addition to Nmap, extending its functionality quite considerably. NSE Scripts are written in the _Lua_ programming language, and can be used to do a variety of things: from scanning for vulnerabilities, to automating exploits for them. The NSE is particularly useful for reconnaisance, however, it is well worth bearing in mind how extensive the script library is.
+
+There are many categories available. Some useful categories include:
+
+-   `safe`:- Won't affect the target
+-   `intrusive`:- Not safe: likely to affect the target  
+    
+-   `vuln`:- Scan for vulnerabilities
+-   `exploit`:- Attempt to exploit a vulnerability
+-   `auth`:- Attempt to bypass authentication for running services (e.g. Log into an FTP server anonymously)
+-   `brute`:- Attempt to bruteforce credentials for running services
+-   `discovery`:- Attempt to query running services for further information about the network (e.g. query an SNMP server)
+
+---
