@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "TPP/Programación concurrente y paralela.md",
+            "file": "BD/Primera parte 💿.md",
             "mode": "source"
           }
         }
@@ -52,7 +52,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 195
+    "width": 204
   },
   "right": {
     "id": "1b2d980ad4b04eb7",
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "TPP/Programación concurrente y paralela.md",
+                "file": "BD/Primera parte 💿.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,14 +88,15 @@
   },
   "active": "bb22b53490018101",
   "lastOpenFiles": [
-    "TPP/Programación concurrente y paralela.md",
-    "TPP/Invariants, preconditions, postconditions.md",
+    "BD/Primera parte 💿.md",
+    "TPP/Programación concurrente y paralela 🔫.md",
+    "BD/31 Enero 2022.md",
+    "TPP/Untitled.md",
     "Cybersecurity/Networking.md",
+    "TPP/Invariants, preconditions, postconditions.md",
     "Cybersecurity/Nmap.md",
     "Pasted image 20220218233836.png",
     "Cybersecurity/Networking/Untitled.md",
-    "Cybersecurity/Nmap/Connect Scans.md",
-    "SO/Most useful Linux commands.md",
-    "Invariants, preconditions, postconditions.md"
+    "Cybersecurity/Nmap/Connect Scans.md"
   ]
 }
