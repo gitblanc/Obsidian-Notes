@@ -21,3 +21,12 @@ http://di002.edv.uniovi.es/~darioa/bdatos/mysql/Ejemplo_programa_MySQL_C_API.htm
 *¿En qué se diferencia un create table frente a una búsqueda?*
 El create sólo se hace una vez, la búsqueda la puedes realizar de forma ilimitada.
 
+---
+### **ENTRA:**
+- *MODELO RELACIONAL:* relacion -> tabla, 
+											   atributos -> columna, 
+											   valores de atribs. en: dominio -> tipo de datos, 
+											   dominios son: atómicos
+											   tuplas -> fila
+1. Una base de datos relacional tiene **integridad de entidad**, es decir, tiene clave primaria. Impide que haya datos repetidos.
+2. Una base de datos mantiene la **integridad referencial**, es decir, tiene claves externas. Los valores de la clave externa tienen que existir donde son clave primaria.
