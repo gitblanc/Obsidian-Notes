@@ -1,0 +1,4 @@
+### Ortogonalización
+![[ortogonalizacion.png]]
+
+---

@@ -1,9 +1,28 @@
-# 22 Marzo 2022 🌽
+# 17 Marzo 2022 🧨
 ---
-RELLENAR CON NOTAS
+- El mapa del proceso se crea en el disco. Se usa asignación no contigua.
+---
+### Principio de localidad de referencias
+- **Temporal:** es bastante probable que una referencia se repita. Contribuyen mucho los bucles.
+- **Espacial:** si accedo a una posición de memoria, en un futuro es posible que acceda a posiciones cercanas a esta.
+---
+### Ventajas de la Memoria Virtual
+1. El tamaño del proceso puede ser mayor que el de la propia memoria.
+2. Aumenta el grado de multiprogramación.
+3. La gestión corre a cargo del procesador.
+---
+- **Paginación:** se siguen criterios físicos (se divide el proceso en trozos de igual tamaño).
+- **Segmentación:** se siguen criterios lógicos (se tiene en cuenta el contenido del proceso).
+---
+### Memoria virtual, paginación
+![[paginacion.png]]
 
 ---
-### Memoria virtual
+---
+# 22 Marzo 2022 🌽
+---
+
+### Memoria virtual, segmentación
 ---
 2. *Mediante segmentación:*
 	- Se divide el proceso siguiendo procesos lógicos, agrupando en cada segmento datos relacionados entre sí. 

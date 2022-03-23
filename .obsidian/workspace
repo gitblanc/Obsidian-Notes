@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Algoritmia/ALG Segunda parte 🧼.md",
+            "file": "SO/SO Segunda Parte🖥.md",
             "mode": "preview"
           }
         }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Algoritmia/ALG Segunda parte 🧼.md",
+                "file": "SO/SO Segunda Parte🖥.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,15 +88,15 @@
   },
   "active": "bb22b53490018101",
   "lastOpenFiles": [
+    "SO/SO Segunda Parte🖥.md",
+    "CN/Notas generales CN 📈.md",
+    "CN/img/ortogonalizacion.png",
+    "SO/Untitled.md",
+    "SO/img/paginacion.png",
+    "README.md",
     "Algoritmia/ALG Segunda parte 🧼.md",
     "Pasted image 20220322182607.png.md",
     "Algoritmia/img/funcion recursiva.png",
-    "SO/SO Segunda Parte🖥.md",
-    "BD/BD Primera parte 💿.md",
-    "TPP/Programación concurrente y paralela 🔫.md",
-    "BD/31 Enero 2022.md",
-    "TPP/Untitled.md",
-    "Cybersecurity/Networking.md",
-    "TPP/Invariants, preconditions, postconditions.md"
+    "BD/BD Primera parte 💿.md"
   ]
 }
