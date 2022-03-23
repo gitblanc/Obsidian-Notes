@@ -1,3 +1,4 @@
+♻️ Primera parte -> [[SO Primera Parte 💻]]
 # 17 Marzo 2022 🧨
 ---
 - El mapa del proceso se crea en el disco. Se usa asignación no contigua.
