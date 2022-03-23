@@ -4,7 +4,7 @@
     "type": "split",
     "children": [
       {
-        "id": "bb22b53490018101",
+        "id": "1591956dfa15e9ff",
         "type": "leaf",
         "state": {
           "type": "markdown",
@@ -86,11 +86,11 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "bb22b53490018101",
+  "active": "1591956dfa15e9ff",
   "lastOpenFiles": [
     "SO/SO Primera Parte 💻.md",
-    "README.md",
     "SO/SO Segunda Parte🖥.md",
+    "README.md",
     "CN/Notas generales CN 📈.md",
     "CN/img/ortogonalizacion.png",
     "SO/img/paginacion.png",
