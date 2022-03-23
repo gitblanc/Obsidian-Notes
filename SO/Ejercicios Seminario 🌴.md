@@ -1,0 +1,2 @@
+![[prioridades.png]]
+![[operaciones.png]]

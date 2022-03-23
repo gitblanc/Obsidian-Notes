@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "SO/SO Primera Parte 💻.md",
-            "mode": "source"
+            "file": "SO/Ejercicios Seminario 🌴.md",
+            "mode": "preview"
           }
         }
       }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SO/SO Primera Parte 💻.md",
+                "file": "SO/Ejercicios Seminario 🌴.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,15 +88,15 @@
   },
   "active": "1591956dfa15e9ff",
   "lastOpenFiles": [
+    "SO/Ejercicios Seminario 🌴.md",
+    "README.md",
     "SO/SO Primera Parte 💻.md",
     "CN/Notas generales CN 📈.md",
     "SO/SO Segunda Parte🖥.md",
-    "README.md",
     "CN/img/ortogonalizacion.png",
     "SO/img/paginacion.png",
     "Algoritmia/ALG Segunda parte 🧼.md",
     "Pasted image 20220322182607.png.md",
-    "Algoritmia/img/funcion recursiva.png",
-    "BD/BD Primera parte 💿.md"
+    "Algoritmia/img/funcion recursiva.png"
   ]
 }
