@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "SO/SO Primera Parte 💻.md",
-            "mode": "preview"
+            "file": "TPP/Programación concurrente y paralela 🔫.md",
+            "mode": "source"
           }
         }
       }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SO/SO Primera Parte 💻.md",
+                "file": "TPP/Programación concurrente y paralela 🔫.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,15 +88,15 @@
   },
   "active": "1591956dfa15e9ff",
   "lastOpenFiles": [
-    "SO/SO Primera Parte 💻.md",
+    "TPP/Programación concurrente y paralela 🔫.md",
+    "TPP/img/paso asincrono.png",
     "SO/SO Segunda Parte 🖥.md",
-    "SO/Ejercicios Seminario 🌴.md",
-    "TPP/Invariants, preconditions, postconditions.md",
-    "CN/Notas generales CN 📈.md",
+    "SO/SO Primera Parte 💻.md",
     "README.md",
+    "TPP/Invariants, preconditions, postconditions.md",
+    "SO/Ejercicios Seminario 🌴.md",
+    "CN/Notas generales CN 📈.md",
     "CN/img/ortogonalizacion.png",
-    "SO/img/paginacion.png",
-    "Algoritmia/ALG Segunda parte 🧼.md",
-    "Pasted image 20220322182607.png.md"
+    "SO/img/paginacion.png"
   ]
 }

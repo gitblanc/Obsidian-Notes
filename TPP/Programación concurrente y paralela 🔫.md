@@ -48,6 +48,7 @@ virtual: {2:N} MB“, proceso.Id, proceso.ProcessName, proceso.VirtualMemorySize
 ---
 # Hilos (Threads)🫐
 ---
+- Son de muy bajo nivel
 ## Creación Explícita de hilos
 ````C#
 // Lo creamos
@@ -276,4 +277,242 @@ Thread foreground = new Thread(() => {
 - Excepciones asíncronas
 - Rendimiento de los cambios de contextos
 ---
+# 24 Marzo 2022 🏀
+---
+## Tasks
+- Es un mecanismo de **más alto nivel** que los hilos.
+- En las transparencias es casi equivalente a los hilos.
+- Tienen un nivel de abstracción mayor y proporcionan más funcionalidades que los hilos.
+- TPL, PLINQ
+-   https://docs.microsoft.com/en-us/dotnet/standard/parallel-programming/task-based-asynchronous-programming
+
+	---
+- Una task representa una operación síncrona. Presenta dos beneficios:
+	- Uso más eficiente y escalable de los recursos: las Tasks se encolan automáticamente en el ThreadPool.
+	- Mayor control de ejecución
+- En .NET -> Task y TPL
+
+	---
+- Una tarea que no devuelve valores está representada por System.Threading.Tasks.Task
+- Una tarea que devuelve valores está representada por la clase System.Threading.Tasks.Task "Tresult"
+	
+````c#
+// Crea una tarea y proporciona una expresión lambda con el código a ejecutar  
+Task firstTask = new Task(() => Console.WriteLine(“Ejecutando primera tarea (Thread {0})", Thread.CurrentThread.ManagedThreadId));
+
+// Arranca la tarea 
+
+firstTask.Start();
+
+// Imprime un mensaje desde el hilo que la llama 
+
+Console.WriteLine(“Ejecutando thread principal (Thread {0})",
+ Thread.CurrentThread.ManagedThreadId); 
+
+// Espera a que la tarea termine 
+
+firstTask.Wait();
+````
+
+````
+Consultar código en tasks/explicit.task.creation
+````
+---
+### Creación y ejecución explícita de tareas
+ 
+```c#
+Task[] taskArray = new Task[10];  
+for (int i = 0; i < taskArray.Length; i++) {
+
+//Pasa un objeto TaskData como segundo parámetro para contener el estado
+
+taskArray[i] = Task.Factory.StartNew((Object obj) => { TaskData data = obj as TaskData;  
+if (data == null) return;  
+data.ThreadNum = Thread.CurrentThread.ManagedThreadId;
+
+}, new TaskData() { Name = i, CreationTime = DateTime.Now.Ticks }); }
+
+Task.WaitAll(taskArray);  
+foreach (var task in taskArray) {
+
+ var data = task.AsyncState as TaskData;
+ if (data != null) 
+
+}
+```
+---
+- También existe un Task genérico. 
+- Los task genéricos evitan las condiciones de carrera.
+````
+Código en tasks/task.result
+````
+NOTA: las task son como los hilos pero éstas evitan las condiciones carrera, los cambios de contexto y las excepciones.
+````
+Código en tasks/task.free.variables
+````
+````
+Código en tasks/task.state.object
+````
+---
+# Composición de tareas
+- WhenAll
+- WhenAny
+- Delay
+````
+Código en tasks/task.composition
+````
+---
+# Manejo de excepciones con tareas
+- Cuando una tarea lanza una excepción o más, todas ellas se encapsulan en una excepción de tipo AggregateException.
+- Esta excepción se propaga al hilo vinculado a la tarea.
+
+````c#
+ static void CaptureException(){ 
+	 try {
+
+var task = Task.Run(() => { throw new ArgumentNullException(); });
+
+ task.Wait();
+       } 
+
+catch (AggregateException e) {  
+Console.WriteLine("Task lanza la siguiente excepcion: " + e);
+
+}
+
+return; }
+
+static void ReThrowException (){ try {
+
+var task = Task.Run(() => { throw new ArgumentNullException(); });
+
+ task.Wait();
+    } 
+
+catch (AggregateException e) {  
+Exception[] list = new Exception[] { e };  
+throw new AggregateException(“Excepcion relanzada como una
+
+AggregateException", list); }
+
+return; }
+````
+````
+Código en tasks/task.exception
+````
+
+---
+# Paso asíncrono de mensajes
+- Cada mensaje crea un nuevo hilo
+- En C# esta funcionalidad se obtiene mediante delegados
+![[paso asincrono.png]]
+````
+Código en delegates/sequential
+````
+
+
+### Esquema
+1. Pasar el primer mensaje de forma asíncrona.
+2. Pasar el segundo se forma síncrona.
+3. Obtener el número de imágenes del segundo mensaje.
+4. Tomar el número de imágenes del primer mensaje.
+5. Mostrar los resultados
+---
+## Uso de async y await
+- Actualmente se usa async y awat.
+- Un método **async** devuelve una Task o una Task-Result-
+- El operador **await**se usa sobre la Task devuelta
+- Para conocer su uso ver el enlace ->https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/async/task-asynchronous-programming-model
+![[await async.png]]
+- Como es una ejecución asíncrona, el hilo pricipal puede continuar(método GetUrlContentLengthAsync())
+
+**Ejemplos de uso**
+```c#
+public async Task<int> GetNumberOfImagesAsyncTask()
+    { 
+
+ var client = new WebClient();
+ Console.WriteLine("Getting the web page in the asynchronous 
+
+method.");
+
+//Call and API asynchronous method. Wait for this asynchronous //task to finish. Yields control to the caller.  
+var html = "";  
+await Task.Run(() => html = client.DownloadString(url));
+
+ var html = await client.GetStringAsync(url); 
+
+ Console.WriteLine("Obtained the web page in the asynchronous
+    method."); 
+
+}
+
+return Ocurrences(html.ToLower(), "<img");
+```
+```c#
+private static async void GetImagesAsync() {  
+var school = new WebPage("http://www.ingenieriainformatica.uniovi.es"); var uniovi = new WebPage("http://www.uniovi.es");  
+...  
+//Begin task. Yields the control to the caller  
+//when its await line is reached.  
+Task<int> taskGetImagesUniovi = uniovi.GetNumberOfImagesAsyncTask(); Console.WriteLine("Returned from the asynchronous method"); Console.WriteLine("Performing synchronous work");
+
+//Synchronous call: Performing tasks while we wait for the //async task to finish  
+int numberOfImgsInSchool = school.GetNumberOfImages(); Console.WriteLine("Synchronous work finished");
+
+ //Wait for the asynchronous task to finish 
+
+var numberOfImgsInUniovi = await taskGetImagesUniovi;
+```
+
+### Particularidades
+- No pueden llamar a ref o out, pero pueden llamar a métodos que los tengan.
+- Se puede devolver void, pero no se puede hacer un await.
+
+---
+# Sincronización de hilos
+- Los hilos pelean por la CPU.
+- El mayor problema es el uso de recursos compartidos. Con operaciones de lectura no hay problema, pero no es posible que varios hilos escriban a la vez.
+- Hay que evitar el uso de un recurso (exclusión mutua)
+- Esto se aplica a hilos y a Tasks.
+
+- Una sección crítica es un fragmento de código que accede a un recurso compartido que no debe ser accedido concurrentemente por más de un hilo de ejecución
+---
+# Lock
+- Consigue que únicamente un hilo pueda ejecutar una sección crítica simultáneamente (exclusión mutua).
+- Requiere especificar un objeto (referencia) como parámetro
+![[lock.png]]
+- No se puede acceder a la seccion crítica 1 y a la 2 por separado, ya que hacen referencia al mismo objeto.
+---
+# Asignaciones
+- No todas las asignaciones son atómicas.
+- Las de 32 bits sí lo son.
+- Las de 64 no en sistemas de 32 bits.
+- **ALTERNATIVA AL LOCK** -> usar la clase InterLocked(System.Threading) (mucho más eficiente que usar un lock).
+````
+Código en synchronization/interlocked
+````
+---
+# Mutex y semáforos
+- Mecanismos de sincronización entre procesos.
+- **Mutex:** funcionamiento similar al lock pero mucho más lento.
+- **Semáforo:** permiten el acceso a n procesos concurrentes. Se suele usar para limitar la concurrencia.
+````
+Código en synchronization/mutex
+````
+````
+Código en synchronization/semaphores
+````
+---
+# Interbloqueo
+- Se produceentre un conjunto de tareas si todas y cada una de ellas están esperando por un evento que sólo otra puede causar. Todas se bloquean de forma permanente.
+- El caso más común es el acceso a recursos compartidos.
+![[interbloqueo.png]]
+````
+Código en deadlock/
+````
+
+
+
+
 
