@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Algoritmia/Seminarios 🛼.md",
-            "mode": "preview"
+            "file": "SO/Seminarios 🧩.md",
+            "mode": "source"
           }
         }
       }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Algoritmia/Seminarios 🛼.md",
+                "file": "SO/Seminarios 🧩.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,15 +88,15 @@
   },
   "active": "1591956dfa15e9ff",
   "lastOpenFiles": [
+    "SO/Seminarios 🧩.md",
     "Algoritmia/Seminarios 🛼.md",
     "SO/SO Segunda Parte 🖥.md",
-    "TPP/Programación concurrente y paralela 🔫.md",
-    "TPP/img/paso asincrono.png",
+    "SO/img/TPP/Programación concurrente y paralela 🔫.md",
+    "SO/img/TPP/img/paso asincrono.png",
     "SO/SO Primera Parte 💻.md",
     "README.md",
-    "TPP/Invariants, preconditions, postconditions.md",
+    "SO/img/TPP/Invariants, preconditions, postconditions.md",
     "SO/Ejercicios Seminario 🌴.md",
-    "CN/Notas generales CN 📈.md",
-    "CN/img/ortogonalizacion.png"
+    "CN/Notas generales CN 📈.md"
   ]
 }

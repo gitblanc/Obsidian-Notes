@@ -20,3 +20,5 @@
 ![[ej 2 backtracking.png]]
 ![[ej 2 sol.png]]
 ![[ej 2 comp.png]]
+
+---
