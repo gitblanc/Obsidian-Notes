@@ -30,3 +30,5 @@ El create sólo se hace una vez, la búsqueda la puedes realizar de forma ilimit
 											   tuplas -> fila
 1. Una base de datos relacional tiene **integridad de entidad**, es decir, tiene clave primaria. Impide que haya datos repetidos.
 2. Una base de datos mantiene la **integridad referencial**, es decir, tiene claves externas. Los valores de la clave externa tienen que existir donde son clave primaria.
+---
+♻️ Segunda parte -> [[BD Segunda parte 🚀]]

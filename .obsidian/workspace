@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "1591956dfa15e9ff",
+        "id": "370effa2f1d352b9",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "SO/Seminarios 🧩.md",
+            "file": "BD/BD Segunda parte 🚀.md",
             "mode": "source"
           }
         }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SO/Seminarios 🧩.md",
+                "file": "BD/BD Segunda parte 🚀.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,17 +86,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "1591956dfa15e9ff",
+  "active": "370effa2f1d352b9",
   "lastOpenFiles": [
-    "SO/Seminarios 🧩.md",
-    "Algoritmia/Seminarios 🛼.md",
-    "SO/SO Segunda Parte 🖥.md",
-    "SO/img/TPP/Programación concurrente y paralela 🔫.md",
-    "SO/img/TPP/img/paso asincrono.png",
-    "SO/SO Primera Parte 💻.md",
+    "BD/BD Segunda parte 🚀.md",
+    "BD/BD Primera parte 💿.md",
+    "Cybersecurity/Nmap.md",
+    "Cybersecurity/Networking.md",
     "README.md",
-    "SO/img/TPP/Invariants, preconditions, postconditions.md",
-    "SO/Ejercicios Seminario 🌴.md",
-    "CN/Notas generales CN 📈.md"
+    "SO/SO Segunda Parte 🖥.md",
+    "SO/SO Primera Parte 💻.md",
+    "CN/Notas generales CN 📈.md",
+    "SO/Seminarios 🧩.md",
+    "Algoritmia/Seminarios 🛼.md"
   ]
 }
