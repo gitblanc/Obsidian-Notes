@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "BD/BD Segunda parte 🚀.md",
+            "file": "SO/SO Segunda Parte 🖥.md",
             "mode": "source"
           }
         }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "BD/BD Segunda parte 🚀.md",
+                "file": "SO/SO Segunda Parte 🖥.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,15 +88,15 @@
   },
   "active": "370effa2f1d352b9",
   "lastOpenFiles": [
-    "BD/BD Segunda parte 🚀.md",
-    "BD/BD Primera parte 💿.md",
-    "Cybersecurity/Nmap.md",
-    "Cybersecurity/Networking.md",
-    "README.md",
     "SO/SO Segunda Parte 🖥.md",
+    "README.md",
     "SO/SO Primera Parte 💻.md",
-    "CN/Notas generales CN 📈.md",
     "SO/Seminarios 🧩.md",
+    "BD/BD Segunda parte 📀.md",
+    "BD/BD Primera parte 💿.md",
+    "Cybersecurity/Networking.md",
+    "Cybersecurity/Nmap.md",
+    "CN/Notas generales CN 📈.md",
     "Algoritmia/Seminarios 🛼.md"
   ]
 }

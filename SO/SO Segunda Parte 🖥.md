@@ -110,3 +110,38 @@ Estrategias de asignación:
 - Cada página tiene un bit de uso, cuando se accede a la página se pone a 1. Cuano hay que reemplazar una página miramos si el bit está a 1, si lo está se pone a 0 y se avanza.
 - Comportamiento similar al FIFO.
 ---
+# 29 Marzo 2022 🚎
+---
+- **Políticas de lectura:** cuando leer las páginas
+- **Política de asignación:** es la más importante. Interesa asignar el número justo de marcos a un proceso, porque si asignamos demasiado ese proceso ocupa mucha memoria que no está siendo usada, y si está ocupando demasiado poco puede generar muchos fallos de página dando lugar a la hiperpaginación.
+---
+### Estrategia del conjunto de trabajo
+---
+- **Conjunto residente:** conjunto de páginas que tiene el proceso cargado en memoria en cada momento. Su tamaño es el número de marcos que tiene asignado ese proceso.
+- **Conjunto de trabajo:** se calcula en un instante T y para un tamaño de ventana lambda(⍙). Es el conjunto de páginas a las que el proceso ha hecho referencia últimamente. Representa las páginas que hacían falta para ejecutar el proceso en ese intervalo de tiempo. Aproxima el comportamiento futuro a través del comportamiento pasado.
+
+NOTAS:
+- Si el proceso tiene en memoria el conjunto de trabajo se produce una baja tasa de fallos de página.
+1. Una página debería ejeutarse sólo si su conjunto de trabajo se encuentra en memoria.
+2. Una página no debería ser retirada de memoria si es miembro del conjunto de trabajo de un proceso.
+
+- Si el proceso falla a menudo, no tiene su conjunto de trabajo cargado. 
+- Si hay muchos fallos de página el proceso tiene pocos marcos.
+---
+### Buffering de páginas
+---
+- Técnica que almacena cosas que nos vayan a hacer falta (que sean referenciadas) en un futuro (Ej, la caché del procesador).
+- En todo momento se mantiene una lista de marcos de página libres en el sistema.
+---
+# TEMA 5, Gestión de entrada salida 🚨
+---
+- Es importante que el sistema operativo generalice la aceptación de dispositivos (diversidad).
+- Partes de los dispositivos:
+![[partes dispositivos.png | 500]]
+
+- Un controlador tiene las siguientes partes:
+	- Registro de control
+	- Registro de estado
+	- Registro de dirección
+	- Registro de datos
+- Cada registro tiene asignado un puerto
