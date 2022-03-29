@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "SO/SO Segunda Parte 🖥.md",
+            "file": "Algoritmia/ALG Segunda parte 🧼.md",
             "mode": "source"
           }
         }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SO/SO Segunda Parte 🖥.md",
+                "file": "Algoritmia/ALG Segunda parte 🧼.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,6 +88,7 @@
   },
   "active": "370effa2f1d352b9",
   "lastOpenFiles": [
+    "Algoritmia/ALG Segunda parte 🧼.md",
     "SO/SO Segunda Parte 🖥.md",
     "README.md",
     "SO/SO Primera Parte 💻.md",
@@ -96,7 +97,6 @@
     "BD/BD Primera parte 💿.md",
     "Cybersecurity/Networking.md",
     "Cybersecurity/Nmap.md",
-    "CN/Notas generales CN 📈.md",
-    "Algoritmia/Seminarios 🛼.md"
+    "CN/Notas generales CN 📈.md"
   ]
 }

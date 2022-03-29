@@ -41,3 +41,74 @@ public static void backtracking(Estado e) {
 
 } }
 ```
+---
+# 29 Marzo 2022 🗿
+---
+- Backtracking busca todas las soluciones posibles.
+- También se puede buscar la solución óptima.
+---
+## Poda de nodos
+- Consiste en establecer una condición que impida seguir desarrollando nodos aunque sean válidos.
+- Se aplica cuando tenemos que buscar una solución óptima.
+- Backtracking tiene complejidad explonencial.
+---
+### Ejercicio formar palabras a partir de un conjunto de letras
+![[formar palabras planteo.png]]
+![[formar palabras.png]]
+```java
+ public static void backtracking (int nivel) {
+
+	if (nivel==m) //hay ya una palabra completa {
+
+		mostrarSolucion();
+
+		cont++; 
+	}
+
+	else  {
+		for (int i=0;i<n;i++){
+
+			if (!marca[i]) {
+
+				sol[nivel] =vLetras[i]; 
+				marca[i]=true; 
+				backtracking(nivel+1); 
+				marca[i]=false;
+			}
+		}
+	}
+
+}
+```
+---
+### Problema de la asignación de tareas a agentes
+![[tareas agentes.png]]
+![[tareas agente res.png]]
+```java
+ static void backtracking (int nivel) {  
+	if (nivel==n) { //hay ya una asignación completa
+
+		if (coste<costeMejor) { 
+			for (int k=0;k<n;k++){
+				 asigMejor[k]=asig[k];
+			costeMejor=coste; 
+			}
+		} }
+
+	else {  
+		for (int i=0;i<n;i++){
+
+			if (!marca[i] && coste<costeMejor ) //ostemMejor->poda
+				asig[nivel]=i;
+				coste=coste+w[nivel][i]; 
+			    marca[i]=true; 
+			    backtracking(nivel+1); 
+			    coste=coste-w[nivel][i]; 
+				marca[i]=false;
+		}
+
+	} 
+}
+```
+- Se podría hacer una poda (costemejor).
+---
