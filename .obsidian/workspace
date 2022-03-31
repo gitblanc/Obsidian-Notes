@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "SO/SO Segunda Parte 🖥.md",
+            "file": "TPP/Tipado dinámico y Metaprogramación 🍒.md",
             "mode": "source"
           }
         }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SO/SO Segunda Parte 🖥.md",
+                "file": "TPP/Tipado dinámico y Metaprogramación 🍒.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,15 +88,15 @@
   },
   "active": "370effa2f1d352b9",
   "lastOpenFiles": [
+    "TPP/Tipado dinámico y Metaprogramación 🍒.md",
+    "TPP/Programación concurrente y paralela 🔫.md",
+    "SO/img/ej 2 sem 4 resuelto.png",
+    "SO/img/funcionamiento Entrada salida.png",
+    "SO/img/funcionamiento Entrada salida 1.png",
     "SO/SO Segunda Parte 🖥.md",
     "README.md",
     "Algoritmia/ALG Segunda parte 🧼.md",
     "SO/SO Primera Parte 💻.md",
-    "SO/Seminarios 🧩.md",
-    "BD/BD Segunda parte 📀.md",
-    "BD/BD Primera parte 💿.md",
-    "Cybersecurity/Networking.md",
-    "Cybersecurity/Nmap.md",
-    "CN/Notas generales CN 📈.md"
+    "SO/Seminarios 🧩.md"
   ]
 }

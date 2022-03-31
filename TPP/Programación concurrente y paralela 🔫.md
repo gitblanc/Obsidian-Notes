@@ -512,7 +512,58 @@ Código en synchronization/semaphores
 Código en deadlock/
 ````
 
+---
+# 31 Marzo 2022 ☕️
+---
+### Estructuras de datos Thread-Safe
+- El lock no impide que otro proceso actúe sobre la sección concreta.
+- El lock se hace sobre un recurso compartido, e indica si ese recurso está libre o no. Si está libre, lo ejecuta, y sino se duerme hasta que esté libre.
+```c#
+static void AñadirYMostrarThreadSafe(List lista) {
 
+lock (lista) lista.Add("Item " + lista.Count); string[] items;  
+lock (lista) items = lista.ToArray();  
+lock (Console.Out)
 
+foreach (string s in items) {
+	Console.WriteLine(s); }
+```
+---
+## Implementación EEDD Thread-Safe
+- **Composición:** Si tenemos A composición B. A no puede vivir sin B. Es una relación más fuerte.
+- **Agregación:** Si tenemos A agrega B, A tiene un objeto de tipo B. A y B son objetos independientes. Es una relación más débil.
+![[thread safe.png]]
+- En este caso, se trata de una composición
+- La clase de la izquierda usa a la clase de la derecha.
+
+- Para realizar un **lock** es mejor usar el *this* porque la referencia es pública, en lugar de ser privada (this.lista).
+- Esto puede afectar al rendimiento del programa o incluso generar interbloqueos.
+- Es una implementación sencilla pero ineficiente.
+- El **lock** no permite diferenciar entre lectura y escritura. No se deben de bloquear dos operaciones de lectura, pero sí dos de escritura de forma simultánea.
+---
+## ReaderWriterLockSlim
+- Tiene modo lectura, modo escritura y modo lectura actualizable.
+- Esta política disminuye la posibilidad de interbloqueos y mejora el rendimiento.
+````
+Código en ReaderWiterLockSlim
+````
+![[readerwriterlock.png]]
+
+---
+## TPL y PLINQ 🍉
+---
+### Task Parallel Library
+Ventajas:
+- Simplifica la paralelización.
+- Escala dinámicamente
+- División de datos procesados.
+- Tareas independientes.
+https://docs.microsoft.com/es-es/dotnet/standard/parallel-programming/task-parallel-library-tpl
+---
+![[pregunta paralelo.png]]
+```c#
+vector.Select(x => x^2).Sum().Math.sqrt()
+```
+---
 
 
