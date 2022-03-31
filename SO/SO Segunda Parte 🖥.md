@@ -145,3 +145,15 @@ NOTAS:
 	- Registro de dirección
 	- Registro de datos
 - Cada registro tiene asignado un puerto
+---
+# 31 Marzo 2022 🛩
+---
+- Cómo podría planificarse un sistema de entrada salida:
+![[funcionamiento Entrada salida.png]]
+- **IORB**-> Input Output Request Block, forma de funcionar el manejador independiente de dispositivo.
+- **Manejador independiente:**: verifica los parámetros, crea el IORB y avisa al manejador dependiente del dispositivo (hay uno en el sistema).
+- **Manejador dependiente del dispositivo (driver):** Hay uno por cada dispositivo o tipo de dispositivo. Es el driver del dispositivo. Da las órdenes para cumplir la petición (hay uno por cada dispositivo).
+---
+- **Buffering:** mecanismo acelerador que aparece por ejemplo en la caché, que almacena los últimos bloques de discos accedidos.
+- **Spooling:** mecanismo por el cual no hay interbloqueo en los sistemas operativos.
+---

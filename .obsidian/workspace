@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Algoritmia/ALG Segunda parte 🧼.md",
+            "file": "SO/SO Segunda Parte 🖥.md",
             "mode": "source"
           }
         }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Algoritmia/ALG Segunda parte 🧼.md",
+                "file": "SO/SO Segunda Parte 🖥.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,9 +88,9 @@
   },
   "active": "370effa2f1d352b9",
   "lastOpenFiles": [
-    "Algoritmia/ALG Segunda parte 🧼.md",
     "SO/SO Segunda Parte 🖥.md",
     "README.md",
+    "Algoritmia/ALG Segunda parte 🧼.md",
     "SO/SO Primera Parte 💻.md",
     "SO/Seminarios 🧩.md",
     "BD/BD Segunda parte 📀.md",
