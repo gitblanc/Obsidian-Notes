@@ -32,3 +32,4 @@ NOTA: En todas las operaciones se eliminan los elementos duplicados.
 - **Esquema:** es el conjunto de atributos, se representa dentro de dos paréntesis "(x)".
 ---
 
+
