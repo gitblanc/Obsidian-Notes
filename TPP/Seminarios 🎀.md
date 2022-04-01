@@ -33,3 +33,7 @@ T Switch (IEnumerable<(Func<bool>,Func<T>)>){
 	}
 }
 ```
+---
+![[Ej 4 Seminario 5.png]]
+
+---
