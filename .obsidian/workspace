@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "370effa2f1d352b9",
+        "id": "a7006e20599905e1",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "BD/Seminarios 🎁.md",
+            "file": "TPP/Seminarios 🎀.md",
             "mode": "source"
           }
         }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "BD/Seminarios 🎁.md",
+                "file": "TPP/Seminarios 🎀.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,8 +86,9 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "370effa2f1d352b9",
+  "active": "a7006e20599905e1",
   "lastOpenFiles": [
+    "TPP/Seminarios 🎀.md",
     "BD/Seminarios 🎁.md",
     "TPP/Tipado dinámico y Metaprogramación 🍒.md",
     "TPP/Programación concurrente y paralela 🔫.md",
@@ -96,7 +97,6 @@
     "SO/img/ej 2 sem 4 resuelto.png",
     "SO/img/funcionamiento Entrada salida.png",
     "SO/img/funcionamiento Entrada salida 1.png",
-    "SO/SO Segunda Parte 🖥.md",
-    "README.md"
+    "SO/SO Segunda Parte 🖥.md"
   ]
 }
