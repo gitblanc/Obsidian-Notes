@@ -26,7 +26,7 @@ static int Suma(int[] a){
 - Elementos de switch:
 	- Switch (IEnumerable< (Func< bool>,Func< T>)>)
 ```c#
-Switch (IEnumerable<(Func<bool>,Func<T>)>){
+T Switch (IEnumerable<(Func<bool>,Func<T>)>){
 	foreach(var v in collection){
 	if(v.First())
 		return v.Second();
