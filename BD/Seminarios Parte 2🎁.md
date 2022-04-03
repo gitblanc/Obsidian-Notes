@@ -1,3 +1,4 @@
+♻️ Primera parte -> [[Seminarios Parte 1☮️]]
 # 1 Abril 2022 🎏
 ---
 ![[Seminario 5.png]]
