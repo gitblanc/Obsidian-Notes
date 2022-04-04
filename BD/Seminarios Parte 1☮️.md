@@ -49,7 +49,7 @@ Crear un diagrama Entidad-Relación (que modele capturando la mayor semántica p
 Indicar en un listado las RESTRICCIONES QUE NO QUEDAN RECOGIDAS EN EL DIAGRAMA.  
   
 Nota: Sólo es necesario representar aquellos atributos de las entidades que sean fundamentales para comprender el esquema. Representar de manera más amplia (de la manera que parezca más razonable) aquellos aspectos que no queden completamente definidos en el enunciado anterior. Razonar en cada caso la representación que se elige.
-![[Ej b seminario 2.png]]
+![[ej b seminario 2.png]]
 
 ---
 

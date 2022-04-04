@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "CN/Notas generales CN 📈.md",
-            "mode": "source"
+            "file": "BD/Seminarios Parte 1☮️.md",
+            "mode": "preview"
           }
         }
       }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CN/Notas generales CN 📈.md",
+                "file": "BD/Seminarios Parte 1☮️.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,6 +88,7 @@
   },
   "active": "a7006e20599905e1",
   "lastOpenFiles": [
+    "BD/Seminarios Parte 1☮️.md",
     "CN/Notas generales CN 📈.md",
     "TPP/Seminarios 🎀.md",
     "BD/Seminarios 🎁.md",
@@ -96,7 +97,6 @@
     "BD/BD Segunda parte 📀.md",
     "BD/BD Primera parte 💿.md",
     "SO/img/ej 2 sem 4 resuelto.png",
-    "SO/img/funcionamiento Entrada salida.png",
-    "SO/img/funcionamiento Entrada salida 1.png"
+    "SO/img/funcionamiento Entrada salida.png"
   ]
 }
