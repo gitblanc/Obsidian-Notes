@@ -157,3 +157,70 @@ NOTAS:
 - **Buffering:** mecanismo acelerador que aparece por ejemplo en la caché, que almacena los últimos bloques de discos accedidos.
 - **Spooling:** mecanismo por el cual no hay interbloqueo en los sistemas operativos.
 ---
+# 5 Abril 2022 🧽
+---
+- **El reloj:** se encarga  de la verificación de que el cuanto del proceso ha terminado.
+
+### Elementos de un disco duro
+- Partes físicas
+	- Platos
+	- Ejes
+	- Cabezas de L/e
+- Organización
+	- Caras
+	- Pistas
+	- Sectores
+	- Cilindros
+   ![[disco.png|400]]
+   ¿Cómo funciona un disco? -> https://www.youtube.com/watch?v=kdmLvl1n82U
+   - El disco sabe leer y escribir un sector.
+   
+### Acciones del disco
+- **Búsqueda:** desplazamiento de la cabeza hasta el cilindro correspondiente.
+- **Latencia:** espera a que el sector solicitado se alinee con la cabeza de lectura escritura.
+- **Lectura/Escritura y transmisión(Transferencia)**
+
+*FÓRMULAS*
+- **T acceso** =  T. Búsqueda + T. Latencia + T. Lectura/escritura . Es directamente proporcional al número de pistas.
+- **T.Búsqueda** = T.Arranque + T.entre pistas * número de pistas
+- **T. Latencia** : Depende de la velocidad de rotación
+
+	---
+## Planificación del disco
+Pretende:
+- Aumentar la productividad del disco
+- Disminuir tiempos de respuesta
+- Disminuir varianza de tiempos de respuesta (que los tiempos sean semejantes)
+- Evitar inanición de peticiones
+---
+- **FCFS(First Come First Served)**, igual que la FIFO
+![[fcfs.png|400]]
+ - **SSTF (Shortest Seek Time First)**, óptimo en rendimiento, pero discrimina peticiones
+ ![[sstf.png|400]]
+ - **Scan y Look**, también conocida como política del ascensor. 
+ Diferencia entre scan y look: El scan siempre hace barridos completos, llega hasta el final, mientras que el loop se ahorra el tramo en el que no quedan peticiones.
+ ![[scan look.png|400]]
+ - **Scan Circular (C-Scan) y C-look**, en lugar de dar la vuelta mirando las peticiones, al llegar al final se vuelve al principio.
+ ![[scan circular.png|400]]
+ - NO ESTÁ EN DIAPOS-> **Scan o loop N-Pasos**, empieza el recorrido partiendo la cola en dos. Se trata la primera mitad de peticiones en primer lugar. Cuando se termina esa partición, se comienza un nuevo recorrido con otra partición. No hay posibilidad de inanicion.
+ ---
+# Tema 6, Gestión de ficheros ⛵️
+---
+- **Sistema de gestor de ficheros:** parte del SO encargada de gestionar los ficheros, crearlos, gestionar la memoria para los accesos, ...
+ Funciones:
+ - Interfaz de llamadas al sistema
+ - Gestionar ficheros
+ - Gestionar directorios
+ - Gestionar espacio libre
+ - Gestionar la caché
+ - Proporcionar protección
+ - Comunicarse con el Sistema de Gestión de E/S
+---
+- **Fichero:** abstracción del sistema operativo para almacenar datos de manera persistente. Agrupación de datos con un nombre.
+
+### Métodos de acceso
+- Secuencial
+- Directo
+- Directo por clave
+---
+- El SO guarda la información de los ficheros en un **Descriptor del Fichero**.
