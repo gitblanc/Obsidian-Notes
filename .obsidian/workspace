@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "2ad6b06ed235ff16",
+        "id": "bbdb368b8d49cf83",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Algoritmia/ALG Segunda parte 🧼.md",
+            "file": "SO/SO Segunda Parte 🖥.md",
             "mode": "source"
           }
         }
@@ -52,7 +52,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 335
+    "width": 256
   },
   "right": {
     "id": "1b2d980ad4b04eb7",
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Algoritmia/ALG Segunda parte 🧼.md",
+                "file": "SO/SO Segunda Parte 🖥.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,17 +86,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "2ad6b06ed235ff16",
+  "active": "bbdb368b8d49cf83",
   "lastOpenFiles": [
+    "SO/SO Segunda Parte 🖥.md",
+    "BD/BD Primera parte 💿.md",
     "Algoritmia/ALG Segunda parte 🧼.md",
     "Algoritmia/img/ramifica asignacion good.png",
     "Algoritmia/img/ramifica asignacion.png",
-    "SO/SO Segunda Parte 🖥.md",
     "SO/SO Primera Parte 💻.md",
     "CN/Notas generales CN 📈.md",
     "TPP/Seminarios 🎀.md",
     "BD/Seminarios 🎁.md",
-    "TPP/Tipado dinámico y Metaprogramación 🍒.md",
-    "TPP/Programación concurrente y paralela 🔫.md"
+    "TPP/Tipado dinámico y Metaprogramación 🍒.md"
   ]
 }

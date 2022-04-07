@@ -220,7 +220,43 @@ Pretende:
 
 ### Métodos de acceso
 - Secuencial
-- Directo
+- Directo por dirección
 - Directo por clave
 ---
 - El SO guarda la información de los ficheros en un **Descriptor del Fichero**.
+---
+# 7 Abril 2022 ♿️
+---
+- El disco se organiza en bloques.
+- Los ficheros se dividen en bloques.
+- Dos posibilidades de asignación:
+	- **Contigua:** bloques consecutivos
+	- **No contigua:** bloques no consecutivos
+---
+### Asignación contigua
+- Alta fragmentación externa.
+- No es adecuado para ficheros con alta volatibilidad. Se usa en ficheros que se usen muy poco.
+---
+### Asignación no contigua
+- Rendimiento pobre.
+	#### Asignación enlazada
+	![[enlazada.png|500]]
+	#### Asignación con FAT
+	- Usado en dispositivos externos (SD, usb).
+	- Cada entrada es de 32 bits.
+  ![[fat.png|500]]
+	#### Asignación indexada con tabla de índices
+  ![[indexada.png|500]]
+	#### Asignación indexada con árboles equilibrados
+	![[arboles.png|500]]
+---
+## Directorios
+- Asocia los nombres que el usuario le da al fichero con el descriptor interno usado por el sistema operativo.
+Estructura y almacenamiento de los directorios:
+-En los **FAT**, Los directorios son ficheros que contienen un descriptor para cada fichero o directorio (un directorio dentro de otro) que almacenan y su nombre.
+- En los **ficheros indexados**, son ficheros que contienen un descriptor para cada fichero o directorio (un directorio dentro de otro) que almacenan y el número del descriptor de ficheros.
+---
+## El sistema de ficheros
+- Los discos se dividen en una o varias particiones.
+-  **Sistema de ficheros:** modo de organización de la información en el disco, en un formato inteligible para el sistema operativo
+---
