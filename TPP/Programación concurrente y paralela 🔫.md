@@ -1,3 +1,4 @@
+♻️ 	Parte anterior -> [[Invariants, preconditions, postconditions 🦠]]
 # Tema 4🥭
 ---
 ```
@@ -565,5 +566,5 @@ https://docs.microsoft.com/es-es/dotnet/standard/parallel-programming/task-paral
 vector.Select(x => x^2).Sum().Math.sqrt()
 ```
 ---
-
+♻️ Parte siguiente -> [[Tipado dinámico y Metaprogramación 🍒]]
 
