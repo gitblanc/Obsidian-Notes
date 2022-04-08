@@ -22,3 +22,34 @@
 ![[ej 2 comp.png]]
 
 ---
+# 8 Abril 2022 ✏️
+---
+## Seminario 5, Problema del viajero
+---
+ ![[viajero 1.png]]
+ ![[viajero 2.png]]
+ ### Camino Hamiltoniano
+ ![[caMINO HAMILTONIANO.png]]
+ 
+ ## Forma voraz
+ Depende mucho del heurístico.
+# EJ 1
+ ![[EJ 1.png]]
+ - SOL: Es la 2 
+
+# Ej 2
+![[eJ 2 S5.png]]
+
+# Soluciones
+![[sols 1 2 s5.png]]
+
+---
+# Ejercicio de backtracking
+![[backtracking s5.png]]
+![[backtrcking 2.png]]
+![[mas backtracking s5.png]]
+![[poda s5.png]]
+
+- Backtracking tiene complejidad de O(N!) en el problema del viajero.
+
+![[voracesvsbt.png]]

@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "TPP/Tipado dinámico y Metaprogramación 🍒.md",
+            "file": "Algoritmia/Seminarios 🛼.md",
             "mode": "source"
           }
         }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "TPP/Tipado dinámico y Metaprogramación 🍒.md",
+                "file": "Algoritmia/Seminarios 🛼.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,15 +88,15 @@
   },
   "active": "4fd4889aaad68f84",
   "lastOpenFiles": [
+    "Algoritmia/Seminarios 🛼.md",
+    "README.md",
+    "Algoritmia/ALG Segunda parte 🧼.md",
     "TPP/Tipado dinámico y Metaprogramación 🍒.md",
     "TPP/Programación concurrente y paralela 🔫.md",
     "SO/SO Segunda Parte 🖥.md",
     "BD/BD Primera parte 💿.md",
-    "Algoritmia/ALG Segunda parte 🧼.md",
     "Algoritmia/img/ramifica asignacion good.png",
     "Algoritmia/img/ramifica asignacion.png",
-    "SO/SO Primera Parte 💻.md",
-    "CN/Notas generales CN 📈.md",
-    "TPP/Seminarios 🎀.md"
+    "SO/SO Primera Parte 💻.md"
   ]
 }
