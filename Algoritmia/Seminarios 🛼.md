@@ -53,3 +53,8 @@
 - Backtracking tiene complejidad de O(N!) en el problema del viajero.
 
 ![[voracesvsbt.png]]
+
+---
+# 8 Abril 2022 🧮
+---
+## Seminario 5
