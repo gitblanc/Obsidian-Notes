@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Algoritmia/Seminarios 🛼.md",
+            "file": "BD/BD Segunda parte 📀.md",
             "mode": "source"
           }
         }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Algoritmia/Seminarios 🛼.md",
+                "file": "BD/BD Segunda parte 📀.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,15 +88,15 @@
   },
   "active": "4fd4889aaad68f84",
   "lastOpenFiles": [
-    "Algoritmia/Seminarios 🛼.md",
+    "BD/BD Segunda parte 📀.md",
+    "BD/Seminarios Parte 2 🎁.md",
+    "BD/Seminarios Parte 1 ☮️.md",
     "README.md",
+    "BD/BD Primera parte 💿.md",
+    "Algoritmia/Seminarios 🛼.md",
     "Algoritmia/ALG Segunda parte 🧼.md",
     "TPP/Tipado dinámico y Metaprogramación 🍒.md",
     "TPP/Programación concurrente y paralela 🔫.md",
-    "SO/SO Segunda Parte 🖥.md",
-    "BD/BD Primera parte 💿.md",
-    "Algoritmia/img/ramifica asignacion good.png",
-    "Algoritmia/img/ramifica asignacion.png",
-    "SO/SO Primera Parte 💻.md"
+    "SO/SO Segunda Parte 🖥.md"
   ]
 }

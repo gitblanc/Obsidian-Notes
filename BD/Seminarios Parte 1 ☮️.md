@@ -54,4 +54,4 @@ Nota: Sólo es necesario representar aquellos atributos de las entidades que sea
 ---
 
 
-♻️ Segunda parte -> [[Seminarios Parte 2🎁]]
+♻️ Segunda parte -> [[Seminarios Parte 2 🎁]]
