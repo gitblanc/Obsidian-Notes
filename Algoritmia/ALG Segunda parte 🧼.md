@@ -182,3 +182,8 @@ MALA FORMA, sirve para hallar una solución. Para hallar la solución óptima es
 ![[ramifica asignacion good.png|500]]
 
 ---
+# 19 Abril 2022 ⏰
+---
+- El heurístico de ramificación permite saber los nodos que llevan a la solución final
+- El heurístico de poda permite ir eliminando aquellos nodos que superen la cota.
+![[nreinas.png||500]]
