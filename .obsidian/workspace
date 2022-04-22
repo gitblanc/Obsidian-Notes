@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Algoritmia/ALG Segunda parte 🧼.md",
-            "mode": "preview"
+            "file": "Algoritmia/Seminarios ALG 🛼.md",
+            "mode": "source"
           }
         }
       }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Algoritmia/ALG Segunda parte 🧼.md",
+                "file": "Algoritmia/Seminarios ALG 🛼.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,15 +88,15 @@
   },
   "active": "4fd4889aaad68f84",
   "lastOpenFiles": [
+    "Algoritmia/Seminarios ALG 🛼.md",
+    "BD/Seminarios Parte 2 BD 🎁.md",
+    "BD/Seminarios Parte 1 BD ☮️.md",
+    "TPP/Seminarios TPP 🎀.md",
+    "SO/Seminarios SO 🧩.md",
     "Algoritmia/ALG Segunda parte 🧼.md",
     "BD/BD Segunda parte 📀.md",
-    "BD/Seminarios Parte 2 🎁.md",
-    "BD/Seminarios Parte 1 ☮️.md",
     "README.md",
     "BD/BD Primera parte 💿.md",
-    "Algoritmia/Seminarios 🛼.md",
-    "TPP/Tipado dinámico y Metaprogramación 🍒.md",
-    "TPP/Programación concurrente y paralela 🔫.md",
-    "SO/SO Segunda Parte 🖥.md"
+    "TPP/Tipado dinámico y Metaprogramación 🍒.md"
   ]
 }

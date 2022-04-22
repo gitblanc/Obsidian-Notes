@@ -37,3 +37,6 @@ T Switch (IEnumerable<(Func<bool>,Func<T>)>){
 ![[Ej 4 Seminario 5.png]]
 
 ---
+# 22 Abril 2022, Seminario 6 🥖
+---
+
