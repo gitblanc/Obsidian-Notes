@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Algoritmia/Seminarios ALG 🛼.md",
+            "file": "TPP/Seminarios TPP 🎀.md",
             "mode": "source"
           }
         }
@@ -52,7 +52,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 334
+    "width": 350
   },
   "right": {
     "id": "1b2d980ad4b04eb7",
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Algoritmia/Seminarios ALG 🛼.md",
+                "file": "TPP/Seminarios TPP 🎀.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,10 +88,10 @@
   },
   "active": "4fd4889aaad68f84",
   "lastOpenFiles": [
+    "TPP/Seminarios TPP 🎀.md",
     "Algoritmia/Seminarios ALG 🛼.md",
     "BD/Seminarios Parte 2 BD 🎁.md",
     "BD/Seminarios Parte 1 BD ☮️.md",
-    "TPP/Seminarios TPP 🎀.md",
     "SO/Seminarios SO 🧩.md",
     "Algoritmia/ALG Segunda parte 🧼.md",
     "BD/BD Segunda parte 📀.md",
