@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "4fd4889aaad68f84",
+        "id": "10e9d2e1ddc4087b",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "TPP/Seminarios TPP 🎀.md",
+            "file": "BD/Seminarios Parte 2 BD 🎁.md",
             "mode": "source"
           }
         }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "TPP/Seminarios TPP 🎀.md",
+                "file": "BD/Seminarios Parte 2 BD 🎁.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,17 +86,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "4fd4889aaad68f84",
+  "active": "10e9d2e1ddc4087b",
   "lastOpenFiles": [
+    "BD/Seminarios Parte 2 BD 🎁.md",
+    "Untitled.md",
+    "BD/BD Segunda parte 📀.md",
     "TPP/Seminarios TPP 🎀.md",
     "Algoritmia/Seminarios ALG 🛼.md",
-    "BD/Seminarios Parte 2 BD 🎁.md",
     "BD/Seminarios Parte 1 BD ☮️.md",
     "SO/Seminarios SO 🧩.md",
     "Algoritmia/ALG Segunda parte 🧼.md",
-    "BD/BD Segunda parte 📀.md",
     "README.md",
-    "BD/BD Primera parte 💿.md",
-    "TPP/Tipado dinámico y Metaprogramación 🍒.md"
+    "BD/BD Primera parte 💿.md"
   ]
 }
