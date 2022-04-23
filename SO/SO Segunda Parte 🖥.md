@@ -55,7 +55,7 @@
 	- Paginación, segmentación, segmentación con paginación.
 2. Dependientes del Software
 	- Qué hacer cuando se produce un fallo de página, mediante el **sistema operativo**.
-	- Un **fallo de página** es una excepción que e genera cuando la página buscada no está en memoria.
+	- Un **fallo de página** es una excepción que se genera cuando la página buscada no está en memoria.
 ---
 ##  Administración del almacenamiento virtual 🥪
 
