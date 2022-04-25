@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "SO/SO Segunda Parte 🖥.md",
+            "file": "BD/BD Segunda parte 📀.md",
             "mode": "source"
           }
         }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "SO/SO Segunda Parte 🖥.md",
+                "file": "BD/BD Segunda parte 📀.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,15 +88,15 @@
   },
   "active": "10e9d2e1ddc4087b",
   "lastOpenFiles": [
-    "SO/SO Segunda Parte 🖥.md",
-    "SO/Seminarios SO 🧩.md",
-    "BD/Seminarios Parte 2 BD 🎁.md",
-    "BD/img/sem 6 2.png",
-    "Untitled.md",
     "BD/BD Segunda parte 📀.md",
+    "BD/Seminarios Parte 2 BD 🎁.md",
+    "SO/SO Segunda Parte 🖥.md",
+    "Untitled.md",
     "TPP/Seminarios TPP 🎀.md",
     "Algoritmia/Seminarios ALG 🛼.md",
     "BD/Seminarios Parte 1 BD ☮️.md",
-    "Algoritmia/ALG Segunda parte 🧼.md"
+    "SO/Seminarios SO 🧩.md",
+    "Algoritmia/ALG Segunda parte 🧼.md",
+    "README.md"
   ]
 }

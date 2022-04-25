@@ -81,3 +81,22 @@ NOTA: En todas las operaciones se eliminan los elementos duplicados.
 5. **Descomposición**: x->yz, x->z, x->y
 6. **Pseudotransitividad**: x->y, wy->z, wx->z
 ---
+# 25 Abril 2022 🍓
+---
+![[cierre.png||600]]
+- **Cierre de un conjunto de atributos**: dado un conjutno de atributos, qué otros atributos puedo alcanzar.
+![[mas cierre.png||500]]
+
+- **Recubrimiento canónico:** conjunto equivalente más pequeño posible.
+- **Atributo ajeno:** aquel que es trivial. Ej: F={AB -> CD, A -> B, C->D}, sobran D y B ya que A -> B y C->D.
+- **Normalizar:** eliminar la redundancia.
+![[normalizacion.png||500]]
+- **Decomposición de producto**, propiedades:
+	- **Sin pérdida de información**: los atributos comunes han de ser clave o bien de R1 o R2.
+	![[spdi.png||500]]
+	- **Conservación de dependencias**: hace referencia a un asunto de rendimiento, a la hora de comprobar el cumplimiento de las dependencias.
+	![[dpen.png||500]]
+- **BOYCE-CODD**:
+![[boyce.png||500]]
+- **3NF** (tercera forma normal): incluye los puntos anteriores y además 
+	3.todo Y es primo
