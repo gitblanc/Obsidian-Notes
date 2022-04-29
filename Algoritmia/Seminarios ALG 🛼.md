@@ -54,7 +54,4 @@
 
 ![[voracesvsbt.png]]
 
----
-# 8 Abril 2022 🧮
----
-## Seminario 5
+--- 
