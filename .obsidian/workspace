@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "BD/BD Segunda parte 📀.md",
-            "mode": "preview"
+            "file": "CN/Notas generales CN 📈.md",
+            "mode": "source"
           }
         }
       }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "BD/BD Segunda parte 📀.md",
+                "file": "CN/Notas generales CN 📈.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,6 +88,7 @@
   },
   "active": "10e9d2e1ddc4087b",
   "lastOpenFiles": [
+    "CN/Notas generales CN 📈.md",
     "BD/BD Segunda parte 📀.md",
     "Algoritmia/Seminarios ALG 🛼.md",
     "Algoritmia/ALG Segunda parte 🧼.md",
@@ -96,7 +97,6 @@
     "SO/SO Segunda Parte 🖥.md",
     "Untitled.md",
     "TPP/Seminarios TPP 🎀.md",
-    "BD/Seminarios Parte 1 BD ☮️.md",
-    "SO/Seminarios SO 🧩.md"
+    "BD/Seminarios Parte 1 BD ☮️.md"
   ]
 }
