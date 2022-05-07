@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Cybersecurity/Nmap 🧬.md",
+            "file": "Cybersecurity/Vulnerability Searching 🩸.md",
             "mode": "source"
           }
         }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cybersecurity/Nmap 🧬.md",
+                "file": "Cybersecurity/Vulnerability Searching 🩸.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,6 +88,7 @@
   },
   "active": "10e9d2e1ddc4087b",
   "lastOpenFiles": [
+    "Cybersecurity/Vulnerability Searching 🩸.md",
     "Cybersecurity/Nmap 🧬.md",
     "Cybersecurity/Networking 📡.md",
     "BD/Seminarios Parte 2 BD 🎁.md",
@@ -96,7 +97,6 @@
     "CN/Notas generales CN 📈.md",
     "BD/BD Segunda parte 📀.md",
     "Algoritmia/Seminarios ALG 🛼.md",
-    "Algoritmia/ALG Segunda parte 🧼.md",
-    "Algoritmia/img/backtracking s5.png"
+    "Algoritmia/ALG Segunda parte 🧼.md"
   ]
 }
