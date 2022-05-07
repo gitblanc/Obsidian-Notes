@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "BD/Seminarios Parte 2 BD 🎁.md",
+            "file": "Cybersecurity/Nmap 🧬.md",
             "mode": "source"
           }
         }
@@ -52,7 +52,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 350
+    "width": 307
   },
   "right": {
     "id": "1b2d980ad4b04eb7",
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "BD/Seminarios Parte 2 BD 🎁.md",
+                "file": "Cybersecurity/Nmap 🧬.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,6 +88,8 @@
   },
   "active": "10e9d2e1ddc4087b",
   "lastOpenFiles": [
+    "Cybersecurity/Nmap 🧬.md",
+    "Cybersecurity/Networking 📡.md",
     "BD/Seminarios Parte 2 BD 🎁.md",
     "BD/img/sem7.png",
     "BD/img/sem 7.png",
@@ -95,8 +97,6 @@
     "BD/BD Segunda parte 📀.md",
     "Algoritmia/Seminarios ALG 🛼.md",
     "Algoritmia/ALG Segunda parte 🧼.md",
-    "Algoritmia/img/backtracking s5.png",
-    "SO/SO Segunda Parte 🖥.md",
-    "Untitled.md"
+    "Algoritmia/img/backtracking s5.png"
   ]
 }

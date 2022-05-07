@@ -61,5 +61,23 @@ There are many categories available. Some useful categories include:
 -   `auth`:- Attempt to bypass authentication for running services (e.g. Log into an FTP server anonymously)
 -   `brute`:- Attempt to bruteforce credentials for running services
 -   `discovery`:- Attempt to query running services for further information about the network (e.g. query an SNMP server)
+Multiple scripts can be run simultaneously by separating them by a comma: `--script=smb-enum-users,smb-enum-shares`.
+
+Some scripts require arguments. These can be given with the `--script-args`. The arguments are separated with commas too.
+
+### Search for scripts
+Full list of scripts -> https://nmap.org/nsedoc/
+Also they are stores on `/usr/share/nmap/scripts`.
+
+We can use `grep` to find pattern matches.
+
+---
+# Firewall Evasion
+It uses the option `-Pn`, which tells Nmap to not bother pinging the host before scanning it. This means that Nmap will always terat the target host as being alive, effectively bypassing the ICMP block, but it comes at the price of potencially taking a very long time to complete the scan.
+There are other switches that are useful for firewall evasion:
+- `-f`: used to fragment the packets making it less likely that the packets will be detected by a firewall or IDS (Intrusion Detection System)
+- `-mtu <number>`: it's an alternative to `-f` that provides more control over the size of the packets. Accepts a maximum transmission unit size to use that must be a multiple of 8
+- `--scan-delay <time>ms`: used to add a delay between packets sent. Useful if the network is unestable, but also for evading any time-based firewall/IDS triggers which may be in place
+- `--badsum`: this is used to generate in invalid chcksum for packets. This switch can be used to determine the presence of a firewall/IDS.
 
 ---
