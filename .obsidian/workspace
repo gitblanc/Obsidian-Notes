@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "README.md",
+            "file": "Cybersecurity/Content Discovery 🧲.md",
             "mode": "preview"
           }
         }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "Cybersecurity/Content Discovery 🧲.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,15 +88,15 @@
   },
   "active": "10e9d2e1ddc4087b",
   "lastOpenFiles": [
-    "README.md",
+    "Cybersecurity/Content Discovery 🧲.md",
+    "Cybersecurity/img/automated 1.png",
+    "Cybersecurity/img/robots.png",
+    "Cybersecurity/Tools 🧩.md",
     "Cybersecurity/Walking an application 🛒.md",
-    "Cybersecurity/img/wapp1.png",
-    "Cybersecurity/img/wapp5.png",
-    "Cybersecurity/img/wapp8.png",
-    "Cybersecurity/img/wapp3 1.png",
-    "Cybersecurity/img/wapp2.png",
-    "Untitled.md",
+    "Cybersecurity/Networking 📡.md",
     "Cybersecurity/Vulnerability Searching 🩸.md",
-    "Cybersecurity/Nmap 🧬.md"
+    "Cybersecurity/Nmap 🧬.md",
+    "README.md",
+    "Cybersecurity/img/wapp1.png"
   ]
 }
