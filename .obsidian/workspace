@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Cybersecurity/Walking an application 🛒.md",
+            "file": "README.md",
             "mode": "preview"
           }
         }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cybersecurity/Walking an application 🛒.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,6 +88,7 @@
   },
   "active": "10e9d2e1ddc4087b",
   "lastOpenFiles": [
+    "README.md",
     "Cybersecurity/Walking an application 🛒.md",
     "Cybersecurity/img/wapp1.png",
     "Cybersecurity/img/wapp5.png",
@@ -96,7 +97,6 @@
     "Cybersecurity/img/wapp2.png",
     "Untitled.md",
     "Cybersecurity/Vulnerability Searching 🩸.md",
-    "Cybersecurity/Nmap 🧬.md",
-    "Cybersecurity/Networking 📡.md"
+    "Cybersecurity/Nmap 🧬.md"
   ]
 }
