@@ -34,7 +34,7 @@
  ## Forma voraz
  Depende mucho del heurístico.
 # EJ 1
- ![[Algoritmia/img/EJ 1.png]]
+ ![[2 CURSO/Algoritmia/img/EJ 1.png]]
  - SOL: Es la 2 
 
 # Ej 2
