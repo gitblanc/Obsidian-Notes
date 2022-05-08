@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Cybersecurity/Vulnerability Searching 🩸.md",
-            "mode": "source"
+            "file": "Cybersecurity/Walking an application 🛒.md",
+            "mode": "preview"
           }
         }
       }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cybersecurity/Vulnerability Searching 🩸.md",
+                "file": "Cybersecurity/Walking an application 🛒.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,15 +88,15 @@
   },
   "active": "10e9d2e1ddc4087b",
   "lastOpenFiles": [
+    "Cybersecurity/Walking an application 🛒.md",
+    "Cybersecurity/img/wapp1.png",
+    "Cybersecurity/img/wapp5.png",
+    "Cybersecurity/img/wapp8.png",
+    "Cybersecurity/img/wapp3 1.png",
+    "Cybersecurity/img/wapp2.png",
+    "Untitled.md",
     "Cybersecurity/Vulnerability Searching 🩸.md",
     "Cybersecurity/Nmap 🧬.md",
-    "Cybersecurity/Networking 📡.md",
-    "BD/Seminarios Parte 2 BD 🎁.md",
-    "BD/img/sem7.png",
-    "BD/img/sem 7.png",
-    "CN/Notas generales CN 📈.md",
-    "BD/BD Segunda parte 📀.md",
-    "Algoritmia/Seminarios ALG 🛼.md",
-    "Algoritmia/ALG Segunda parte 🧼.md"
+    "Cybersecurity/Networking 📡.md"
   ]
 }
