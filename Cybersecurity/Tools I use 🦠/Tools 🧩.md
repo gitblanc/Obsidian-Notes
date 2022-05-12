@@ -5,3 +5,4 @@
 - **SecLists** -> https://github.com/danielmiessler/SecLists , resource for wordlists.
 - **Sublist3r** -> automates the process of OSINT subdomain discovery
 - **FoxyProxy** -> change easily the proxy you are using
+- **Cookie editor**

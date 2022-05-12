@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Cybersecurity/Web Hacking 🎁/File Inclusion 📊.md",
-            "mode": "source"
+            "file": "Cybersecurity/Web Hacking 🎁/SSRF 🧰.md",
+            "mode": "preview"
           }
         }
       }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cybersecurity/Web Hacking 🎁/File Inclusion 📊.md",
+                "file": "Cybersecurity/Web Hacking 🎁/SSRF 🧰.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,15 +88,15 @@
   },
   "active": "e681707e753ce1dc",
   "lastOpenFiles": [
+    "Cybersecurity/Web Hacking 🎁/SSRF 🧰.md",
+    "Cybersecurity/img/ssrf7.png",
     "Cybersecurity/Web Hacking 🎁/File Inclusion 📊.md",
+    "Pasted image 20220512230840.png",
+    "Cybersecurity/img/ssrf6.png",
+    "Cybersecurity/img/ssrf1.png",
     "Cybersecurity/Tools I use 🦠/Tools 🧩.md",
     "Cybersecurity/Burp Suite 🚧/Basics 🚘.md",
     "Cybersecurity/Web Hacking 🎁/Authentication bypass 🔑.md",
-    "Cybersecurity/Web Hacking 🎁/Content Discovery 🧲.md",
-    "Cybersecurity/img/file10.png",
-    "Cybersecurity/img/file1.png",
-    "Cybersecurity/Web Hacking 🎁/IDOR  🗳.md",
-    "Cybersecurity/img/idor1.png",
-    "Cybersecurity/img/auth1.png"
+    "Cybersecurity/Web Hacking 🎁/Content Discovery 🧲.md"
   ]
 }
