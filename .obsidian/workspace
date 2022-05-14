@@ -4,13 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "e681707e753ce1dc",
+        "id": "c64c86b0212397d7",
         "type": "leaf",
         "state": {
-          "type": "markdown",
+          "type": "image",
           "state": {
-            "file": "Cybersecurity/Web Hacking 🎁/SSRF 🧰.md",
-            "mode": "preview"
+            "file": "Cybersecurity/img/xss19.png"
           }
         }
       }
@@ -68,7 +67,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cybersecurity/Web Hacking 🎁/SSRF 🧰.md",
+                "file": "Cybersecurity/img/xss19.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,17 +85,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "e681707e753ce1dc",
+  "active": "c64c86b0212397d7",
   "lastOpenFiles": [
+    "Cybersecurity/img/xss19.png",
+    "Cybersecurity/Web Hacking 🎁/Cross-site Scripting 🔌.md",
+    "Cybersecurity/img/xss1.png",
     "Cybersecurity/Web Hacking 🎁/SSRF 🧰.md",
     "Cybersecurity/img/ssrf7.png",
     "Cybersecurity/Web Hacking 🎁/File Inclusion 📊.md",
     "Pasted image 20220512230840.png",
     "Cybersecurity/img/ssrf6.png",
     "Cybersecurity/img/ssrf1.png",
-    "Cybersecurity/Tools I use 🦠/Tools 🧩.md",
-    "Cybersecurity/Burp Suite 🚧/Basics 🚘.md",
-    "Cybersecurity/Web Hacking 🎁/Authentication bypass 🔑.md",
-    "Cybersecurity/Web Hacking 🎁/Content Discovery 🧲.md"
+    "Cybersecurity/Tools I use 🦠/Tools 🧩.md"
   ]
 }
