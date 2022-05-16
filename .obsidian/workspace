@@ -9,7 +9,7 @@
         "state": {
           "type": "image",
           "state": {
-            "file": "Cybersecurity/img/xss19.png"
+            "file": "Cybersecurity/img/ci8.png"
           }
         }
       }
@@ -67,7 +67,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cybersecurity/img/xss19.png",
+                "file": "Cybersecurity/img/ci8.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -87,15 +87,15 @@
   },
   "active": "c64c86b0212397d7",
   "lastOpenFiles": [
-    "Cybersecurity/img/xss19.png",
-    "Cybersecurity/Web Hacking 🎁/Cross-site Scripting 🔌.md",
-    "Cybersecurity/img/xss1.png",
-    "Cybersecurity/Web Hacking 🎁/SSRF 🧰.md",
-    "Cybersecurity/img/ssrf7.png",
-    "Cybersecurity/Web Hacking 🎁/File Inclusion 📊.md",
-    "Pasted image 20220512230840.png",
-    "Cybersecurity/img/ssrf6.png",
-    "Cybersecurity/img/ssrf1.png",
-    "Cybersecurity/Tools I use 🦠/Tools 🧩.md"
+    "Cybersecurity/img/ci8.png",
+    "Cybersecurity/Web Hacking 🎁/Command Injection 🧪.md",
+    "Cybersecurity/img/ci1.png",
+    "Cybersecurity/Web Hacking 🎁/Content Discovery 🧲.md",
+    "Cybersecurity/Web Hacking 🎁/Authentication bypass 🔑.md",
+    "Cybersecurity/Others 🧸/Nmap 🧬.md",
+    "Cybersecurity/Others 🧸/Vulnerability Searching 🩸.md",
+    "Cybersecurity/Others 🧸/Networking 📡.md",
+    "Cybersecurity/Web Hacking 🎁/IDOR  🗳.md",
+    "Cybersecurity/Web Hacking 🎁/File Inclusion 📊.md"
   ]
 }
