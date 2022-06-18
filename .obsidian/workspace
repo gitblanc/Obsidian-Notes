@@ -4,13 +4,13 @@
     "type": "split",
     "children": [
       {
-        "id": "c64c86b0212397d7",
+        "id": "811f9d1725ff5bb6",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "2 CURSO/TPP/Lenguajes y Paradigmas de la programación 🩳.md",
-            "mode": "source"
+            "file": "2 CURSO/TPP/Actividades del paradigma orientado a objetos 🦄.md",
+            "mode": "preview"
           }
         }
       }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2 CURSO/TPP/Lenguajes y Paradigmas de la programación 🩳.md",
+                "file": "2 CURSO/TPP/Actividades del paradigma orientado a objetos 🦄.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,17 +86,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "c64c86b0212397d7",
+  "active": "811f9d1725ff5bb6",
   "lastOpenFiles": [
-    "2 CURSO/TPP/Lenguajes y Paradigmas de la programación 🩳.md",
-    "2 CURSO/TPP/Tipado dinámico y Metaprogramación 🍒.md",
-    "2 CURSO/TPP/Programación concurrente y paralela 🔫.md",
+    "2 CURSO/TPP/Actividades del paradigma orientado a objetos 🦄.md",
+    "2 CURSO/TPP/img/por referencia.png",
+    "2 CURSO/TPP/img/structs.png",
+    "2 CURSO/TPP/img/strings 1.png",
+    "2 CURSO/TPP/img/partial class1.png",
+    "2 CURSO/TPP/img/partial class 2.png",
+    "2 CURSO/TPP/img/tipos simple c#.png",
+    "tipos simple c.md",
     "2 CURSO/TPP/Invariants, preconditions, postconditions 🦠.md",
-    "Cybersecurity/img/ci8.png",
-    "Cybersecurity/Web Hacking 🎁/Command Injection 🧪.md",
-    "Cybersecurity/img/ci1.png",
-    "Cybersecurity/Web Hacking 🎁/Content Discovery 🧲.md",
-    "Cybersecurity/Web Hacking 🎁/Authentication bypass 🔑.md",
-    "Cybersecurity/Others 🧸/Nmap 🧬.md"
+    "2 CURSO/TPP/Lenguajes y Paradigmas de la programación 🩳.md"
   ]
 }

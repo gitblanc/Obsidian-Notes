@@ -1,4 +1,4 @@
-# TEMA 1
+# TEMA 1 🐫
 ---
 ## Lenguaje de programación, compilador e intérprete
 - **Traductor**: programa que procesa un texto fuente (origen) y genera un texto objeto (destino)
