@@ -7,9 +7,10 @@
         "id": "c64c86b0212397d7",
         "type": "leaf",
         "state": {
-          "type": "image",
+          "type": "markdown",
           "state": {
-            "file": "Cybersecurity/img/ci8.png"
+            "file": "2 CURSO/TPP/Lenguajes y Paradigmas de la programación 🩳.md",
+            "mode": "source"
           }
         }
       }
@@ -51,7 +52,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 307
+    "width": 522
   },
   "right": {
     "id": "1b2d980ad4b04eb7",
@@ -67,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cybersecurity/img/ci8.png",
+                "file": "2 CURSO/TPP/Lenguajes y Paradigmas de la programación 🩳.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -87,15 +88,15 @@
   },
   "active": "c64c86b0212397d7",
   "lastOpenFiles": [
+    "2 CURSO/TPP/Lenguajes y Paradigmas de la programación 🩳.md",
+    "2 CURSO/TPP/Tipado dinámico y Metaprogramación 🍒.md",
+    "2 CURSO/TPP/Programación concurrente y paralela 🔫.md",
+    "2 CURSO/TPP/Invariants, preconditions, postconditions 🦠.md",
     "Cybersecurity/img/ci8.png",
     "Cybersecurity/Web Hacking 🎁/Command Injection 🧪.md",
     "Cybersecurity/img/ci1.png",
     "Cybersecurity/Web Hacking 🎁/Content Discovery 🧲.md",
     "Cybersecurity/Web Hacking 🎁/Authentication bypass 🔑.md",
-    "Cybersecurity/Others 🧸/Nmap 🧬.md",
-    "Cybersecurity/Others 🧸/Vulnerability Searching 🩸.md",
-    "Cybersecurity/Others 🧸/Networking 📡.md",
-    "Cybersecurity/Web Hacking 🎁/IDOR  🗳.md",
-    "Cybersecurity/Web Hacking 🎁/File Inclusion 📊.md"
+    "Cybersecurity/Others 🧸/Nmap 🧬.md"
   ]
 }
