@@ -166,3 +166,212 @@ Hay tres tipos:
 ![[por referencia.png]]
 ![[por salida.png]]
 ![[resultados parametros.png]]
+
+---
+## Parámetros opcionales
+- Valores por omisión a los parámetros que siempre han de ser los últimos (más a la derecha)
+- Permite la invocación de una misma función con distinto número de argumentos
+- Se puede cambiar el orden de los argumentos.
+![[params opcionales 1.png]]
+![[params opcionales 2.png]]
+
+---
+## Sobrecarga de operadores
+- Emplea la palabra reservada `operator`
+- Los operadores son siempre métodos de clase (`static`) -> no son polimórficos
+- Permite sobrecargar la conversión explícita (cast) y la implícita
+- Si sobrecargamos un operador `+` obtenemos automáticamente `+=`
+![[sobrecarga operadores.png]]
+
+---
+## Declaración implícita de variables
+- Para las variables locales no se requiere especificar su tipo, en su lugar ponemos `var`
+- Es útil cuando los tipos son muy largos, no es sencillo identificar el tipo (LINQ) o no existe un tipo explícito.
+
+---
+## Métodos extensores
+Para crearlos hay que:
+- Implementar un método de clase `static`
+- En una clase de utilidad `static`
+- El primer parámetro ha de ser del tipo que deseamos ampliar
+- El primer parámetro ha de declararse anteponiendo la palabra `this`
+````c#
+static class StringExtension{
+	static public uint CountWords (this string cad){
+		...
+	}
+}
+````
+![[extensores.png]]
+
+---
+## Herencia
+- Mecanismo de reutilización de código
+![[herencia.png]]
+
+---
+## Invocación a constructores base
+Se hace  con `base`:
+````c#
+public Circunference (int x, int y, int radius) : base(x,y){
+	this.radius = radius;
+}
+````
+
+---
+## Polimorfismo
+- Mecanismo de generalización que hace que la abstracción más general pueda representar abstracciones más específicas. El tipo general representa por tanto varias formas.
+![[polimorfismo.png]]
+
+---
+## Enlace dinámico
+- Los métodos heredados se pueden especializar en las clases derivadas
+- Si queremos que se llame al método real implementado por el objeto, debemos hacer uso del enlace dinámico (**dynamic binding**)
+- Es un mecanismo por el que en tiempo de ejecución se invoca al método del tipo dinámico implementado por el objeto (no al estático declarado en su clase)
+- Para que exista el enlace dinámico tenemos que:
+	- Poner la palabra `virtual` al método que recibe el mensaje (referencia)
+	- Sobreescribir su funcionalidad usando la palabra `override` en los métodos derivados
+- Si no queremos que haya polimorfismo, pues es una coincidencia de nombres, ponemos la palabnra `new`
+![[dynamic binding.png]]
+![[figure 1.png]]
+![[figure 2.png]]
+
+---
+## Comparación de objetos
+Podemos estar interesados en saber si:
+- Dos objetos *son exactamente el mismo* -> Comparación por **identidad** -> usamos el operador `==`
+- Dos objetos *representan la misma identidad* -> Comparación por **estado** -> redefinimos el método `Equals(Object o)`. Al redefinir el equals también será necesario redefinir el GetHashCode()
+
+---
+## Operadores is y as
+- Cuando utilizamos colecciones polimórficas que hacen uso de Object, no siempre se puede hacer un **cast**, ya que no estamos seguros de que el objeto introducido sea del tipo que queremos. Para ello se introduce el operador **is**.
+![[isas 1.png]]
+![[is as 2.png]]
+- Si después de usar el operador **is** vamos a realizar un cast, es mejor usar el operador **as**
+![[2 CURSO/TPP/img/is as 3.png|500]]
+![[is as 4.png]]
+
+---
+## Autoboxing
+- Los tipos simples ¡no heredan de Object!
+![[autoboxing 1.png]]
+![[autoboxing 2.png]]
+
+---
+## Clases y Métodos Abstractos
+- Cuando en una abstracción necesitamos que un mensaje forme parte de su interfaz, pero no podemos implementarlo, este mensaje se declara como método abstracto.
+- Se usa la palabra `abstract`
+- Este método no se implementa
+- Todo método abstracto ofrece enlace dinámico (no hay que especificar que es virtual)
+- En su redefinición hay que usar `override`
+- Toda clase que posea al menos un método abstracto será una clase abstracta
+
+---
+## Interfaces
+- **Interfaz**: Conjunto de métodos y/o propiedades públicos que ofrecen un conjunto de clases
+- Son métodos comunes a las distintas abstracciones
+![[interfaces.png|300]]
+- No pueden tener miembros `static`
+![[interfaces 2.png]]
+![[interfaces 3.png]]
+![[interfaces 4.png]]
+![[interfaces 5.png]]
+![[interfaces 6.png]]
+![[interfaces 7.png]]
+
+---
+## IDisposable y using
+- Es una interfaz del namespace System con un único método -> `void Dispose()`
+- Se encarga de liberar los recursos adicionales gestionados por el objeto
+- Toda clase que asigna recursos adicionales debe implementar esta interfaz
+- Las clases que definan un destructor, probablemente implementarásn IDisposable
+![[idisposable.png]]
+- Se usa la palabra reservada `using` para asegurar la liberación de los recursos adicionales de un objeto IDisposable
+![[idisposable 2.png]]
+---
+## Implementación explícita de interfaces
+![[ieinterf.png]]
+
+---
+## Composición vs herencia
+- **Herencia**: un objeto o clase se basa en otro obnjeto o clase, usando la misma implementación o comportamiento
+![[hervscomp.png]]
+- **Composición**: quiere decir que tenemos una instancia de una clase que contiene instancias de otras clases que implementan las funciones deseadas
+![[composicion-esquema.png]]
+Comparativa:
+![[comparativa.png]]
+
+---
+## Excepciones
+- Una **excepción** es un objeto que encapsula información acerca de un evento irregular ocurrido en tiempo de ejecución
+- En C# solo se pueden lanzar excepciones del tipo `System.Exception`
+![[excepciones.png]]
+- Se usa la palabra `throw`
+- No es obligatorio manejar ninguna excepción
+- Para manejarlas se usa `try` y `catch`. También podremos poner `finally` si queremos que se ejecute un código en concreto
+![[excp1.png]]
+![[excp2.png]]
+
+---
+## Asertos en C#
+- **Aserto**: construcción del lenguaje para asegurar que una condición deba ser siempre cierta. Si no lo fuese, se pararía la ejecución. Están orientadas al proceso de desarrollo
+- La técnica más usada está basada en **compilación condicional**
+![[2 CURSO/TPP/img/asertos.png]]
+![[asertos2.png]]
+
+---
+## Precondiciones
+Pueden ser de dos tipos:
+- El método no se puede ejecutar para determinados **valores de los parámetros** (factorial de u número negativo)
+- El método no se puede ejecutar para un determinado estado del objeto implícito () ssacar un elemento de la pila vacía
+-> Consultar [[Invariants, preconditions, postconditions 🦠]]
+
+- **Invariantes**: siempre al principio de los métodos (excepto constructores). También han de mirarse al final de cada método
+- **Precondiciones**: comprueba si el objeto está en un estado válido
+- **Postcondidiones**: han de comprobarse después de ejecutar un método
+
+---
+## Genericidad
+- Permite construir abstracciones modelo para otras abstracciones
+- Ofrece una mayor robustez (detección de errores en tiempo de compilación) y un mayor rendimiento
+
+---
+## default(T)
+- Un tipo genérico puede ser cualquier tipo del lenguaje, incluyendo los tipos simples
+- En ocasiones queremos asignar o retornar el valor por omisión de un tipo T:
+	- La asignación `variable = null` no sería válida, porque T también podría ser un Value Type (int , char)
+- Para ello  se usa la palabra `default`
+![[default.png]]
+
+---
+## Genericidad acotada
+- Permite hacer más específicos los tipos genéricos.
+- Por ejemplo un método de ordenación donde se puedan ordenar objetos `IComparable<T>`
+![[icomparable.png]]
+
+---
+# `IEnumerable<T>`
+- Interfaz que representa una colección de elementos genérica
+- Deriva de IEnumerable
+- Un objeto que implemente un **IEnumerable** se puede recorrer con un **foreach**
+- Los arrays derivan de Array e implementan `IEnumerable<T>`
+![[ienumerable.png]]
+- IEnumerable(T) sólo posee un método -> `GetEnumerator()`
+- Este es un *factory method* (patrón de diseño) encargado de construír un iterador
+- El IEnumerator es un *bridge* (patrón de diseño) para ser independiente de la implementación del iterador
+- El iterador suele implementarse como una clase anidada de la colección
+![[ienumerable2.png]]
+![[ienumerable 4.png]]
+![[ienumerable 3.png]]
+![[ienumerable 5.png]]
+
+---
+## Tipos anulables
+- En ocasiones se quiere representar que un tipo simple pueda no poseer valor null
+- Estos tipos derivan del struct `Nullable<int>`
+- También se usa el operador `??`
+
+## System.Collections.Generic
+![[colectionsgeneric.png]]
+
+---

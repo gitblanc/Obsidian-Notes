@@ -62,7 +62,7 @@ NOTA: En todas las operaciones se eliminan los elementos duplicados.
 - Poner como default -> **SET DEFAULT**
 ---
 ## Asertos
-![[asertos.png||500]]
+![[2 CURSO/BD/img/asertos.png||500]]
 
 ---
 ## Dependencias funcionales
