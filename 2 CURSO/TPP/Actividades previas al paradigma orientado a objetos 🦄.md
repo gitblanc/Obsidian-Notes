@@ -1,3 +1,6 @@
+# TEMA 2 🙃
+---
+
 ## Ensamblados
 - Un **ensamblado** es una colección lógica de recursos de una aplicación (archivos .exe, .dll, .ini, ...).
 - Cada proyecto genera un ensamblado.
@@ -375,3 +378,5 @@ Pueden ser de dos tipos:
 ![[colectionsgeneric.png]]
 
 ---
+
+Siguiente lección -> [[Paradigma Orientado a Objetos 🐤]]

@@ -46,3 +46,7 @@ Hay dos tipos:
 - **Orientado a objetos**: usa objetos (unión de datos y métodos). Es puro cuando toda abstracción ofrecida es un objeto.
 - **Funcional**: uso de funciones que manejan datos inmutables (los datos nunca se modifican, se llama a una función que devuelve una copia modificada). Usa la recursividad en lugar de la iteración.
 - **Lógico**: usa la lógica matemática.
+
+---
+
+Siguiente lección -> [[Actividades previas al paradigma orientado a objetos 🦄]]

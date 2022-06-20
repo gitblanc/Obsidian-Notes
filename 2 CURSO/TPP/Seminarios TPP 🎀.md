@@ -1,3 +1,9 @@
+# 4 Febrero 2022
+---
+![[seminario 1.1.png]]
+![[seminario 1.2.png]]
+
+---
 # 1 Abril 2022
 ---
 ![[Clausulas Seminario 5.png]]
