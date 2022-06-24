@@ -125,3 +125,5 @@ En desarrollo del software interesa un **bajo acoplamiento** (poca dependencia e
 ![[inferencia 2.png]]
 
 ---
+
+Siguiente  lección -> [[Fundamentos del paradigma funcional 🧮]]

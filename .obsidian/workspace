@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "811f9d1725ff5bb6",
+        "id": "9d0c7b4f8c419d0c",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "2 CURSO/TPP/Paradigma Orientado a Objetos 🐤.md",
+            "file": "2 CURSO/TPP/Tipado dinámico y Metaprogramación 👽.md",
             "mode": "source"
           }
         }
@@ -52,7 +52,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 522
+    "width": 488
   },
   "right": {
     "id": "1b2d980ad4b04eb7",
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2 CURSO/TPP/Paradigma Orientado a Objetos 🐤.md",
+                "file": "2 CURSO/TPP/Tipado dinámico y Metaprogramación 👽.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,17 +86,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "811f9d1725ff5bb6",
+  "active": "9d0c7b4f8c419d0c",
   "lastOpenFiles": [
-    "2 CURSO/TPP/Paradigma Orientado a Objetos 🐤.md",
-    "2 CURSO/TPP/Programación concurrente y paralela 🔫.md",
-    "2 CURSO/TPP/Tipado dinámico y Metaprogramación 🍒.md",
+    "2 CURSO/TPP/Tipado dinámico y Metaprogramación 👽.md",
+    "2 CURSO/TPP/Tipado dinámico y Metaprogramación (clase)🍒.md",
+    "Untitled.md",
+    "2 CURSO/TPP/Fundamentos de la Programación Concurrente y Paralela 🦋.md",
+    "README.md",
     "2 CURSO/TPP/Seminarios TPP 🎀.md",
-    "2 CURSO/TPP/img/herencia multiple 4.png",
-    "2 CURSO/TPP/Actividades previas al paradigma orientado a objetos 🦄.md",
-    "2 CURSO/TPP/Lenguajes y Paradigmas de la programación 🩳.md",
-    "2 CURSO/TPP/Invariants, preconditions, postconditions 🦠.md",
-    "2 CURSO/TPP/img/default.png",
-    "2 CURSO/TPP/img/idisposable.png"
+    "2 CURSO/TPP/Fundamentos del paradigma funcional 🧮.md",
+    "2 CURSO/TPP/Programación concurrente y paralela (clase)🔫.md",
+    "2 CURSO/TPP/img/pc5.png",
+    "2 CURSO/TPP/img/pc4.png"
   ]
 }
