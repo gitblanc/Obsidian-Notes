@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "2 CURSO/TPP/Tipado dinámico y Metaprogramación 👽.md",
-            "mode": "source"
+            "file": "Cybersecurity/Open Webinars (Ebroker)/XSS 🧩.md",
+            "mode": "preview"
           }
         }
       }
@@ -52,7 +52,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 488
+    "width": 480
   },
   "right": {
     "id": "1b2d980ad4b04eb7",
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2 CURSO/TPP/Tipado dinámico y Metaprogramación 👽.md",
+                "file": "Cybersecurity/Open Webinars (Ebroker)/XSS 🧩.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,15 +88,15 @@
   },
   "active": "9d0c7b4f8c419d0c",
   "lastOpenFiles": [
-    "2 CURSO/TPP/Tipado dinámico y Metaprogramación 👽.md",
+    "Cybersecurity/Open Webinars (Ebroker)/XSS 🧩.md",
+    "Cybersecurity/Open Webinars (Ebroker)/SQL Injection 💉.md",
+    "Cybersecurity/Open Webinars (Ebroker)/Brute Force 🚘.md",
+    "Cybersecurity/Open Webinars (Ebroker)/Shodan 🦠.md",
+    "Cybersecurity/Open Webinars (Ebroker)/Nmap ♈️.md",
+    "Cybersecurity/Open Webinars (Ebroker)/Netfilter ♿️.md",
+    "Cybersecurity/Open Webinars (Ebroker)/Iptables 🧪.md",
     "2 CURSO/TPP/Tipado dinámico y Metaprogramación (clase)🍒.md",
-    "Untitled.md",
     "2 CURSO/TPP/Fundamentos de la Programación Concurrente y Paralela 🦋.md",
-    "README.md",
-    "2 CURSO/TPP/Seminarios TPP 🎀.md",
-    "2 CURSO/TPP/Fundamentos del paradigma funcional 🧮.md",
-    "2 CURSO/TPP/Programación concurrente y paralela (clase)🔫.md",
-    "2 CURSO/TPP/img/pc5.png",
-    "2 CURSO/TPP/img/pc4.png"
+    "2 CURSO/TPP/Seminarios TPP 🎀.md"
   ]
 }
