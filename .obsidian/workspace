@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Cybersecurity/Open Webinars (Ebroker)/XSS 🧩.md",
+            "file": "Cybersecurity/Open Webinars (Ebroker)/Man in the middle 🪬.md",
             "mode": "preview"
           }
         }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cybersecurity/Open Webinars (Ebroker)/XSS 🧩.md",
+                "file": "Cybersecurity/Open Webinars (Ebroker)/Man in the middle 🪬.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,6 +88,7 @@
   },
   "active": "9d0c7b4f8c419d0c",
   "lastOpenFiles": [
+    "Cybersecurity/Open Webinars (Ebroker)/Man in the middle 🪬.md",
     "Cybersecurity/Open Webinars (Ebroker)/XSS 🧩.md",
     "Cybersecurity/Open Webinars (Ebroker)/SQL Injection 💉.md",
     "Cybersecurity/Open Webinars (Ebroker)/Brute Force 🚘.md",
@@ -96,7 +97,6 @@
     "Cybersecurity/Open Webinars (Ebroker)/Netfilter ♿️.md",
     "Cybersecurity/Open Webinars (Ebroker)/Iptables 🧪.md",
     "2 CURSO/TPP/Tipado dinámico y Metaprogramación (clase)🍒.md",
-    "2 CURSO/TPP/Fundamentos de la Programación Concurrente y Paralela 🦋.md",
-    "2 CURSO/TPP/Seminarios TPP 🎀.md"
+    "2 CURSO/TPP/Fundamentos de la Programación Concurrente y Paralela 🦋.md"
   ]
 }
