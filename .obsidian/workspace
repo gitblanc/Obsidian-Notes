@@ -9,8 +9,9 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Cybersecurity/Windows 🧿.md",
-            "mode": "source"
+            "file": "Cybersecurity/PluralSight (Ebroker)/Penetration Testing and Ethical Hacking with Kali Linux/3. Information Gathering 🦧/Playing around with Recon-ng 🎮.md",
+            "mode": "source",
+            "source": false
           }
         }
       }
@@ -52,7 +53,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 480
+    "width": 398.5
   },
   "right": {
     "id": "1b2d980ad4b04eb7",
@@ -68,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cybersecurity/Windows 🧿.md",
+                "file": "Cybersecurity/PluralSight (Ebroker)/Penetration Testing and Ethical Hacking with Kali Linux/3. Information Gathering 🦧/Playing around with Recon-ng 🎮.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,15 +89,15 @@
   },
   "active": "9d0c7b4f8c419d0c",
   "lastOpenFiles": [
-    "Cybersecurity/Windows 🧿.md",
-    "Cybersecurity/Open Webinars (Ebroker)/Iptables 🧪.md",
-    "Cybersecurity/Open Webinars (Ebroker)/XSS 🧩.md",
-    "Cybersecurity/Open Webinars (Ebroker)/Brute Force 🚘.md",
-    "Cybersecurity/Open Webinars (Ebroker)/Nmap ♈️.md",
-    "Cybersecurity/Open Webinars (Ebroker)/Netfilter ♿️.md",
-    "Cybersecurity/Open Webinars (Ebroker)/Meterpreter 💰.md",
-    "Cybersecurity/Open Webinars (Ebroker)/Primeros pasos MSF (Metasploit) ⛺️.md",
-    "Cybersecurity/Open Webinars (Ebroker)/Introducción a Metasploit ⛺️.md",
-    "Cybersecurity/Open Webinars (Ebroker)/DNS Spoofing 🚕.md"
+    "Cybersecurity/PluralSight (Ebroker)/Penetration Testing and Ethical Hacking with Kali Linux/3. Information Gathering 🦧/Discover Scripts 🪂.md",
+    "Cybersecurity/PluralSight (Ebroker)/Penetration Testing and Ethical Hacking with Kali Linux/3. Information Gathering 🦧/Trying Metagoofil to gather documents information 🧃.md",
+    "Cybersecurity/PluralSight (Ebroker)/Penetration Testing and Ethical Hacking with Kali Linux/3. Information Gathering 🦧/Gathering information Checklist 🦗.md",
+    "Cybersecurity/PluralSight (Ebroker)/Penetration Testing and Ethical Hacking with Kali Linux/3. Information Gathering 🦧/Write findings using Obsidian 🍒.md",
+    "Cybersecurity/PluralSight (Ebroker)/Penetration Testing and Ethical Hacking with Kali Linux/3. Information Gathering 🦧/Deep Magic Information Gathering Tool 🛹.md",
+    "Cybersecurity/PluralSight (Ebroker)/Penetration Testing and Ethical Hacking with Kali Linux/3. Information Gathering 🦧/DNS Reconnaissance 🎲.md",
+    "Cybersecurity/PluralSight (Ebroker)/Penetration Testing and Ethical Hacking with Kali Linux/3. Information Gathering 🦧/Whois 🎸.md",
+    "Cybersecurity/PluralSight (Ebroker)/Penetration Testing and Ethical Hacking with Kali Linux/3. Information Gathering 🦧/Gather contacts information 🍸.md",
+    "Cybersecurity/PluralSight (Ebroker)/Penetration Testing and Ethical Hacking with Kali Linux/3. Information Gathering 🦧/Using some tools on the web 🥭.md",
+    "Cybersecurity/PluralSight (Ebroker)/Penetration Testing and Ethical Hacking with Kali Linux/3. Information Gathering 🦧/Google Hacking Database (Google Dorks) 🥬.md"
   ]
 }

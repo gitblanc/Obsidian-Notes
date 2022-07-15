@@ -1,0 +1,1 @@
+![[Cybersecurity/PluralSight (Ebroker)/Penetration Testing and Ethical Hacking with Kali Linux/img/workflow.png]]

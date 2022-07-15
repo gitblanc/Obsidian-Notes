@@ -1,0 +1,1 @@
+All the vulnerabilities will be written using Obsidian in Markdown
