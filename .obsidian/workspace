@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Cybersecurity/PluralSight (Ebroker)/Penetration Testing and Ethical Hacking with Kali Linux/3. Information Gathering 🦧/Playing around with Recon-ng 🎮.md",
+            "file": "Cybersecurity/PluralSight (Ebroker)/Penetration Testing and Ethical Hacking with Kali Linux/5. Website penetration testing 🛰/15. DOS attack ☄️.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cybersecurity/PluralSight (Ebroker)/Penetration Testing and Ethical Hacking with Kali Linux/3. Information Gathering 🦧/Playing around with Recon-ng 🎮.md",
+                "file": "Cybersecurity/PluralSight (Ebroker)/Penetration Testing and Ethical Hacking with Kali Linux/5. Website penetration testing 🛰/15. DOS attack ☄️.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,15 +89,15 @@
   },
   "active": "9d0c7b4f8c419d0c",
   "lastOpenFiles": [
-    "Cybersecurity/PluralSight (Ebroker)/Penetration Testing and Ethical Hacking with Kali Linux/3. Information Gathering 🦧/Discover Scripts 🪂.md",
-    "Cybersecurity/PluralSight (Ebroker)/Penetration Testing and Ethical Hacking with Kali Linux/3. Information Gathering 🦧/Trying Metagoofil to gather documents information 🧃.md",
-    "Cybersecurity/PluralSight (Ebroker)/Penetration Testing and Ethical Hacking with Kali Linux/3. Information Gathering 🦧/Gathering information Checklist 🦗.md",
-    "Cybersecurity/PluralSight (Ebroker)/Penetration Testing and Ethical Hacking with Kali Linux/3. Information Gathering 🦧/Write findings using Obsidian 🍒.md",
-    "Cybersecurity/PluralSight (Ebroker)/Penetration Testing and Ethical Hacking with Kali Linux/3. Information Gathering 🦧/Deep Magic Information Gathering Tool 🛹.md",
-    "Cybersecurity/PluralSight (Ebroker)/Penetration Testing and Ethical Hacking with Kali Linux/3. Information Gathering 🦧/DNS Reconnaissance 🎲.md",
-    "Cybersecurity/PluralSight (Ebroker)/Penetration Testing and Ethical Hacking with Kali Linux/3. Information Gathering 🦧/Whois 🎸.md",
-    "Cybersecurity/PluralSight (Ebroker)/Penetration Testing and Ethical Hacking with Kali Linux/3. Information Gathering 🦧/Gather contacts information 🍸.md",
-    "Cybersecurity/PluralSight (Ebroker)/Penetration Testing and Ethical Hacking with Kali Linux/3. Information Gathering 🦧/Using some tools on the web 🥭.md",
-    "Cybersecurity/PluralSight (Ebroker)/Penetration Testing and Ethical Hacking with Kali Linux/3. Information Gathering 🦧/Google Hacking Database (Google Dorks) 🥬.md"
+    "Cybersecurity/PluralSight (Ebroker)/Penetration Testing and Ethical Hacking with Kali Linux/5. Website penetration testing 🛰/14. Maintaining access 🌈.md",
+    "Cybersecurity/PluralSight (Ebroker)/Penetration Testing and Ethical Hacking with Kali Linux/5. Website penetration testing 🛰/13. Exploiting the SQL Injection 🪐.md",
+    "Cybersecurity/PluralSight (Ebroker)/Penetration Testing and Ethical Hacking with Kali Linux/5. Website penetration testing 🛰/12. Sessions tokens 🐸.md",
+    "Cybersecurity/PluralSight (Ebroker)/Penetration Testing and Ethical Hacking with Kali Linux/5. Website penetration testing 🛰/11. Scanning for web specific vulnerabnilities 🐞.md",
+    "Cybersecurity/PluralSight (Ebroker)/Penetration Testing and Ethical Hacking with Kali Linux/5. Website penetration testing 🛰/10. CMS Scan 🐕.md",
+    "Cybersecurity/PluralSight (Ebroker)/Penetration Testing and Ethical Hacking with Kali Linux/5. Website penetration testing 🛰/9. SSL Scanning 🐛.md",
+    "Cybersecurity/PluralSight (Ebroker)/Penetration Testing and Ethical Hacking with Kali Linux/5. Website penetration testing 🛰/8. Copy or clone a website 🐌.md",
+    "Cybersecurity/PluralSight (Ebroker)/Penetration Testing and Ethical Hacking with Kali Linux/5. Website penetration testing 🛰/8. Burpsuite discover contents 🐠.md",
+    "Cybersecurity/PluralSight (Ebroker)/Penetration Testing and Ethical Hacking with Kali Linux/5. Website penetration testing 🛰/7. Burpsuite spider 🕷.md",
+    "Cybersecurity/PluralSight (Ebroker)/Penetration Testing and Ethical Hacking with Kali Linux/5. Website penetration testing 🛰/6. Burpsuite target 🌌.md"
   ]
 }
