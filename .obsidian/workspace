@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "9d0c7b4f8c419d0c",
+        "id": "cf9afb3917d9e17b",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Cybersecurity/PluralSight (Ebroker)/Penetration Testing and Ethical Hacking with Kali Linux/5. Website penetration testing 🛰/15. DOS attack ☄️.md",
+            "file": "Cybersecurity/PluralSight (Ebroker)/Penetration Testing and Ethical Hacking with Kali Linux/6. Internal network pentesting 🌊/1. Internal pentesting workflow 🌜.md",
             "mode": "source",
             "source": false
           }
@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "internal",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -49,7 +49,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -69,7 +70,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cybersecurity/PluralSight (Ebroker)/Penetration Testing and Ethical Hacking with Kali Linux/5. Website penetration testing 🛰/15. DOS attack ☄️.md",
+                "file": "Cybersecurity/PluralSight (Ebroker)/Penetration Testing and Ethical Hacking with Kali Linux/6. Internal network pentesting 🌊/1. Internal pentesting workflow 🌜.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -87,17 +88,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "9d0c7b4f8c419d0c",
+  "active": "cf9afb3917d9e17b",
   "lastOpenFiles": [
-    "Cybersecurity/PluralSight (Ebroker)/Penetration Testing and Ethical Hacking with Kali Linux/5. Website penetration testing 🛰/14. Maintaining access 🌈.md",
-    "Cybersecurity/PluralSight (Ebroker)/Penetration Testing and Ethical Hacking with Kali Linux/5. Website penetration testing 🛰/13. Exploiting the SQL Injection 🪐.md",
-    "Cybersecurity/PluralSight (Ebroker)/Penetration Testing and Ethical Hacking with Kali Linux/5. Website penetration testing 🛰/12. Sessions tokens 🐸.md",
-    "Cybersecurity/PluralSight (Ebroker)/Penetration Testing and Ethical Hacking with Kali Linux/5. Website penetration testing 🛰/11. Scanning for web specific vulnerabnilities 🐞.md",
-    "Cybersecurity/PluralSight (Ebroker)/Penetration Testing and Ethical Hacking with Kali Linux/5. Website penetration testing 🛰/10. CMS Scan 🐕.md",
-    "Cybersecurity/PluralSight (Ebroker)/Penetration Testing and Ethical Hacking with Kali Linux/5. Website penetration testing 🛰/9. SSL Scanning 🐛.md",
-    "Cybersecurity/PluralSight (Ebroker)/Penetration Testing and Ethical Hacking with Kali Linux/5. Website penetration testing 🛰/8. Copy or clone a website 🐌.md",
-    "Cybersecurity/PluralSight (Ebroker)/Penetration Testing and Ethical Hacking with Kali Linux/5. Website penetration testing 🛰/8. Burpsuite discover contents 🐠.md",
-    "Cybersecurity/PluralSight (Ebroker)/Penetration Testing and Ethical Hacking with Kali Linux/5. Website penetration testing 🛰/7. Burpsuite spider 🕷.md",
-    "Cybersecurity/PluralSight (Ebroker)/Penetration Testing and Ethical Hacking with Kali Linux/5. Website penetration testing 🛰/6. Burpsuite target 🌌.md"
+    "Cybersecurity/PluralSight (Ebroker)/Penetration Testing and Ethical Hacking with Kali Linux/6. Internal network pentesting 🌊/2. Port scanning the internal network 🎄.md",
+    "Cybersecurity/TryHackMe/Web Hacking 🎁/SSRF 🧰.md",
+    "Cybersecurity/PluralSight (Ebroker)/Penetration Testing and Ethical Hacking with Kali Linux/6. Internal network pentesting 🌊/3. Scanning for vulnerabilities 🌴.md",
+    "Cybersecurity/PluralSight (Ebroker)/Penetration Testing and Ethical Hacking with Kali Linux/6. Internal network pentesting 🌊/1. Internal pentesting workflow 🌜.md",
+    "Cybersecurity/Server knowledge 🟣.md",
+    "Cybersecurity/PluralSight (Ebroker)/Penetration Testing and Ethical Hacking with Kali Linux/10. Wi-Fi pentesting 📕/4. Bypassing a hidden ESSID 🥩.md",
+    "Cybersecurity/PluralSight (Ebroker)/Penetration Testing and Ethical Hacking with Kali Linux/10. Wi-Fi pentesting 📕/3. WPA AND WPA2 Attack 🏀.md",
+    "Cybersecurity/PluralSight (Ebroker)/Penetration Testing and Ethical Hacking with Kali Linux/10. Wi-Fi pentesting 📕/2. WEP attack 🌄.md",
+    "Cybersecurity/PluralSight (Ebroker)/Penetration Testing and Ethical Hacking with Kali Linux/img/key found.png",
+    "Cybersecurity/PluralSight (Ebroker)/Penetration Testing and Ethical Hacking with Kali Linux/10. Wi-Fi pentesting 📕/1. Wireless Reconnaissance 🔐.md"
   ]
 }
