@@ -1,4 +1,4 @@
-# Obtener claves Wifi cmd
+# Obtain WiFi keys on cmd
 ---
 ````
 netsh wlan show profile
