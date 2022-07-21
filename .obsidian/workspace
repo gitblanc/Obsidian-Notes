@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Cybersecurity/EOL and LTS ⚪️.md",
+            "file": "Cybersecurity/PluralSight (Ebroker)/2. Input Validation/3. SQL Injection and Insecure Direct Object Reference ⚛️/2. Insecure Direct Object Reference (IDOR) 🌐.md",
             "mode": "source",
             "source": false
           }
@@ -53,7 +53,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 398.5
+    "width": 539.5
   },
   "right": {
     "id": "1b2d980ad4b04eb7",
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cybersecurity/EOL and LTS ⚪️.md",
+                "file": "Cybersecurity/PluralSight (Ebroker)/2. Input Validation/3. SQL Injection and Insecure Direct Object Reference ⚛️/2. Insecure Direct Object Reference (IDOR) 🌐.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,15 +89,15 @@
   },
   "active": "a31f1cb2a8236838",
   "lastOpenFiles": [
+    "Cybersecurity/PluralSight (Ebroker)/2. Input Validation/3. SQL Injection and Insecure Direct Object Reference ⚛️/1. SQL Injection ✳️.md",
+    "Cybersecurity/PluralSight (Ebroker)/2. Input Validation/3. SQL Injection and Insecure Direct Object Reference ⚛️/2. Insecure Direct Object Reference (IDOR) 🌐.md",
+    "Cybersecurity/PluralSight (Ebroker)/2. Input Validation/2. Testing for XML External Entity Attack and HTTP parameter Pollution ♻️/2. HTTP Parameter Pollution 📛.md",
+    "Cybersecurity/PluralSight (Ebroker)/2. Input Validation/2. Testing for XML External Entity Attack and HTTP parameter Pollution ♻️/1. XML External Entity Attack 🔆.md",
+    "Cybersecurity/PluralSight (Ebroker)/2. Input Validation/1. Cross-Site Scripting and AngularJS Template Injection 🍂/2. AngularJS Template Injection 🦚.md",
+    "Cybersecurity/PluralSight (Ebroker)/2. Input Validation/1. Cross-Site Scripting and AngularJS Template Injection 🍂/1. Cross-Site Scripting 🍀.md",
     "Cybersecurity/Server management knowledge 🟣.md",
     "Cybersecurity/Windows commands🔵.md",
-    "Cybersecurity/PluralSight (Ebroker)/Penetration Testing and Ethical Hacking with Kali Linux/12. Advanced Pentesting 🐸/4. Attacking the domain controller 🟢.md",
-    "Cybersecurity/PluralSight (Ebroker)/Penetration Testing and Ethical Hacking with Kali Linux/12. Advanced Pentesting 🐸/3. Finding Exploits 🟡.md",
-    "Cybersecurity/PluralSight (Ebroker)/Penetration Testing and Ethical Hacking with Kali Linux/12. Advanced Pentesting 🐸/2. Metasploit Rc Scripts 🟠.md",
-    "Cybersecurity/PluralSight (Ebroker)/Penetration Testing and Ethical Hacking with Kali Linux/12. Advanced Pentesting 🐸/1. Bypassing the Anti-virus 🔴.md",
-    "Cybersecurity/PluralSight (Ebroker)/Penetration Testing and Ethical Hacking with Kali Linux/11. Brute-Force Attack Testing 🔰/2. Brute-Force RDP 🦁.md",
-    "Cybersecurity/PluralSight (Ebroker)/Penetration Testing and Ethical Hacking with Kali Linux/11. Brute-Force Attack Testing 🔰/3. Cracking the Hashes 🦎.md",
-    "Cybersecurity/PluralSight (Ebroker)/Penetration Testing and Ethical Hacking with Kali Linux/11. Brute-Force Attack Testing 🔰/1. Brute-Force SSH 📞.md",
-    "Cybersecurity/PluralSight (Ebroker)/Penetration Testing and Ethical Hacking with Kali Linux/6. Internal network pentesting 🌊/3. Scanning for vulnerabilities 🌴.md"
+    "Cybersecurity/EOL and LTS ⚪️.md",
+    "Cybersecurity/PluralSight (Ebroker)/1. Penetration Testing and Ethical Hacking with Kali Linux/12. Advanced Pentesting 🐸/4. Attacking the domain controller 🟢.md"
   ]
 }

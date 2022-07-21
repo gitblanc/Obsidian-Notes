@@ -4,3 +4,5 @@
 		`yum install ...
 - To shutdown
 		`shutdown -h now`
+- How to know the apache version and tools installed
+		`yum list installed httpd`

@@ -3,7 +3,7 @@
 - **Hashed IDs**
 - To edit the id, right click and press edit and resend.
 
-![[idor1.png]]
+![[Cybersecurity/TryHackMe/img/idor1.png]]
 ![[idor2.png]]
 ![[idor3.png]]
 ![[idor4.png]]
