@@ -31,3 +31,15 @@ quote bob
 sudo ifconfig eth0 up
 sudo dhclient eth0
 ````
+- How to stabilise a shell:
+````
+python -c "import pty; pty.spawn('/bin/bash')" 
+````
+- SUID:
+	- Files with the SUID bit set when executed are run with the permissions of the owner of the file. So if there is an binary that is owned by root and it has the SUID bit set we could theoretically use this binary to elevate our permissions.
+
+		To find SUID binaries, we can run the following command:
+
+> find / -user root -perm /4000 2>/dev/null
+- How to find any file:
+> find / type f -iname filename.txt 2> /dev/null
