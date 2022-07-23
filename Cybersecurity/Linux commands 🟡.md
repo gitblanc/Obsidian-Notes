@@ -26,3 +26,8 @@ type quote
 ````
 quote bob
 ````
+- If you don't have Internet, try this:
+````
+sudo ifconfig eth0 up
+sudo dhclient eth0
+````
