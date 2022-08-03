@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Cybersecurity/PluralSight (Ebroker)/3. Creating Shell Scripts/5. Using functions and loops in scripts 🧺.md",
+            "file": "Cybersecurity/Open Webinars (Ebroker)/2. Curso de Hacking tools & Forensic, Red Team 📛/1. Taxonomía de un ataque 🥋/2. XSS y Server Side Includes (SSI)🗽.md",
             "mode": "source",
             "source": false
           }
@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "session",
+                "query": "XSS",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cybersecurity/PluralSight (Ebroker)/3. Creating Shell Scripts/5. Using functions and loops in scripts 🧺.md",
+                "file": "Cybersecurity/Open Webinars (Ebroker)/2. Curso de Hacking tools & Forensic, Red Team 📛/1. Taxonomía de un ataque 🥋/2. XSS y Server Side Includes (SSI)🗽.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -87,17 +87,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "a31f1cb2a8236838",
+  "active": "317e254f1c7bfd77",
   "lastOpenFiles": [
-    "Cybersecurity/PluralSight (Ebroker)/3. Creating Shell Scripts/6. Building Menus in BASH 🔮.md",
-    "Cybersecurity/PluralSight (Ebroker)/3. Creating Shell Scripts/5. Using functions and loops in scripts 🧺.md",
-    "Cybersecurity/PluralSight (Ebroker)/3. Creating Shell Scripts/4. Collecting user input and code logic ⚔️.md",
-    "Cybersecurity/PluralSight (Ebroker)/3. Creating Shell Scripts/3. Customizing Vim 🧼.md",
-    "Cybersecurity/PluralSight (Ebroker)/3. Creating Shell Scripts/1. Automating the Boring Stuff 🌦.md",
-    "Cybersecurity/PluralSight (Ebroker)/3. Creating Shell Scripts/2. Writing your first script 🎵.md",
-    "Cybersecurity/Linux commands 🟡.md",
-    "Cybersecurity/Open Webinars (Ebroker)/1. Introducción al hacking ético 🦇/Primeros pasos MSF (Metasploit) ⛺️.md",
-    "Cybersecurity/Open Webinars (Ebroker)/1. Introducción al hacking ético 🦇/Meterpreter 💰.md",
-    "Cybersecurity/PluralSight (Ebroker)/1. Penetration Testing and Ethical Hacking with Kali Linux/8. Exploitation 💫/4. Meterpreter ✨.md"
+    "Cybersecurity/Open Webinars (Ebroker)/2. Curso de Hacking tools & Forensic, Red Team 📛/2. Hacking infraestructuras 🪁/4. Cracking WiFi 🩻.md",
+    "Cybersecurity/Open Webinars (Ebroker)/2. Curso de Hacking tools & Forensic, Red Team 📛/3. Forensic 🔑/1. Introducción a la informática forense 🪬.md",
+    "Cybersecurity/Open Webinars (Ebroker)/2. Curso de Hacking tools & Forensic, Red Team 📛/3. Forensic 🔑/2. Normativa RFC3227 🪣.md",
+    "Cybersecurity/Open Webinars (Ebroker)/2. Curso de Hacking tools & Forensic, Red Team 📛/3. Forensic 🔑/3. Volcados de memoria en Windows y Linux 🦠.md",
+    "Cybersecurity/Open Webinars (Ebroker)/2. Curso de Hacking tools & Forensic, Red Team 📛/1. Taxonomía de un ataque 🥋/1. Inyección SQL y fuerza bruta 💎.md",
+    "Cybersecurity/Open Webinars (Ebroker)/2. Curso de Hacking tools & Forensic, Red Team 📛/2. Hacking infraestructuras 🪁/1. Buscando objetivos con Shodan y ZoomEye 🤿.md",
+    "Cybersecurity/Open Webinars (Ebroker)/2. Curso de Hacking tools & Forensic, Red Team 📛/3. Forensic 🔑/4. Herramientas útiles (useful tools) 🎏.md",
+    "Cybersecurity/Open Webinars (Ebroker)/2. Curso de Hacking tools & Forensic, Red Team 📛/2. Hacking infraestructuras 🪁/3. Ataques Man in the Middle 🖼.md",
+    "Cybersecurity/Open Webinars (Ebroker)/2. Curso de Hacking tools & Forensic, Red Team 📛/2. Hacking infraestructuras 🪁/2. Google Dorks ⛳️.md",
+    "Mac useful commands and customizations .md"
   ]
 }
