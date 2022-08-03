@@ -46,3 +46,8 @@ find / -user root -perm /4000 2>/dev/null
 ```
 find / type f -iname filename.txt 2> /dev/null
 ```
+- Get the size of a file:
+````
+du -sh file.txt
+````
+- ASCII text signature Generator -> http://www.kammerl.de/ascii/AsciiSignature.php
