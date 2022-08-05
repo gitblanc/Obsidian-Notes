@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Cybersecurity/Open Webinars (Ebroker)/3. Curso de análisis de malware 🤬/3. Creación de malware 👻.md",
+            "file": "README.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cybersecurity/Open Webinars (Ebroker)/3. Curso de análisis de malware 🤬/3. Creación de malware 👻.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,15 +89,15 @@
   },
   "active": "a31f1cb2a8236838",
   "lastOpenFiles": [
+    "Untitled.md",
+    "Mac useful commands and customizations .md",
+    "Cybersecurity/Open Webinars (Ebroker)/3. Curso de análisis de malware 🤬/3. Creación de malware 👻.md",
     "Cybersecurity/Open Webinars (Ebroker)/3. Curso de análisis de malware 🤬/2. Análisis de malware 👽.md",
     "Cybersecurity/Open Webinars (Ebroker)/3. Curso de análisis de malware 🤬/2. Laboratorio de análisis 🥶.md",
     "Cybersecurity/Open Webinars (Ebroker)/3. Curso de análisis de malware 🤬/1. Introducción 👾.md",
     "Cybersecurity/Linux commands 🟡.md",
     "Cybersecurity/PluralSight (Ebroker)/3. Creating Shell Scripts/4. Collecting user input and code logic ⚔️.md",
     "Cybersecurity/How to configure vpn 🟢.md",
-    "Cybersecurity/PluralSight (Ebroker)/3. Creating Shell Scripts/3. Customizing Vim 🧼.md",
-    "Cybersecurity/PluralSight (Ebroker)/3. Creating Shell Scripts/2. Writing your first script 🎵.md",
-    "Mac useful commands and customizations .md",
-    "Cybersecurity/Open Webinars (Ebroker)/2. Curso de Hacking tools & Forensic, Red Team 📛/1. Taxonomía de un ataque 🥋/2. XSS y Server Side Includes (SSI)🗽.md"
+    "Cybersecurity/PluralSight (Ebroker)/3. Creating Shell Scripts/3. Customizing Vim 🧼.md"
   ]
 }

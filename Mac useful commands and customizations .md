@@ -28,3 +28,4 @@ Puedes elegir un icono personalizado para cualquier archivo o carpeta utilizando
 Si tras pegarla ves una imagen JPEG o PNG genérica en lugar de la tuya, asegúrate de abrir el archivo que contiene la imagen y selecciona Edición > Copiar en la barra de menús antes de pegar. Copia el _contenido_ del archivo de imagen, no el archivo en sí.
 
 ---
+
