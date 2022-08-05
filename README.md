@@ -1,7 +1,6 @@
 # 💚💜APUNTES UNIVERSIDAD💚💜
-# Hola :-)
----
 ![](https://img.shields.io/badge/Markdown-000000?style=for-the-badge&logo=markdown&logoColor=white)![](`https://img.shields.io/badge/Markdown-000000?style=for-the-badge&logo=markdown&logoColor=white`) ![](https://img.shields.io/badge/Made%20with-Obsidian-blueviolet)
+# Hola :-)
 - Si utilizas estos apuntes te agradecería una 🌟 :)
 - Son de libre uso y hechos en Markdown.
 - El entorno para manejarlos que uso es Obsidian, pero puedes usar cualquiera que permita la edición de Markdown.
@@ -135,5 +134,3 @@ X^2^
 ---
 # Create your own badges
 https://shields.io/#your-badge
-
----
