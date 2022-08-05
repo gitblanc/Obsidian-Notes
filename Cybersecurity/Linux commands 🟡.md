@@ -51,3 +51,13 @@ find / type f -iname filename.txt 2> /dev/null
 du -sh file.txt
 ````
 - ASCII text signature Generator -> http://www.kammerl.de/ascii/AsciiSignature.php
+- BASH math -> https://phoenixnap.com/kb/bash-math
+- `ERROR: Unable to negotiate with X.X.X.X port 22: no matching host key type found. Their offer: ssh-rsa,ssh-dss`
+````
+ssh -oHostKeyAlgorithms=+ssh-dss username@x.x.x.x
+````
+- To encrypt an external or internal hard drive or USB:
+````
+sudo apt-get install cryptsetup
+sudo apt-get install gnome-disk-utility
+````
