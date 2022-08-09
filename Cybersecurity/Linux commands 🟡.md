@@ -65,3 +65,7 @@ sudo apt-get install gnome-disk-utility
 ````
 ls -l file.txt | awk '{ print $x }' #x is the option you want
 ````
+- How to remove a package on linux:
+````
+sudo apt-get remove package
+````
