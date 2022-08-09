@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "README.md",
+            "file": "Cybersecurity/PluralSight (Ebroker)/3. Creating Shell Scripts/4. Collecting user input and code logic ⚔️.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "Cybersecurity/PluralSight (Ebroker)/3. Creating Shell Scripts/4. Collecting user input and code logic ⚔️.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,15 +89,15 @@
   },
   "active": "a31f1cb2a8236838",
   "lastOpenFiles": [
-    "Untitled.md",
+    "Cybersecurity/Linux commands 🟡.md",
     "Mac useful commands and customizations .md",
+    "README.md",
+    "Untitled.md",
     "Cybersecurity/Open Webinars (Ebroker)/3. Curso de análisis de malware 🤬/3. Creación de malware 👻.md",
     "Cybersecurity/Open Webinars (Ebroker)/3. Curso de análisis de malware 🤬/2. Análisis de malware 👽.md",
     "Cybersecurity/Open Webinars (Ebroker)/3. Curso de análisis de malware 🤬/2. Laboratorio de análisis 🥶.md",
     "Cybersecurity/Open Webinars (Ebroker)/3. Curso de análisis de malware 🤬/1. Introducción 👾.md",
-    "Cybersecurity/Linux commands 🟡.md",
     "Cybersecurity/PluralSight (Ebroker)/3. Creating Shell Scripts/4. Collecting user input and code logic ⚔️.md",
-    "Cybersecurity/How to configure vpn 🟢.md",
-    "Cybersecurity/PluralSight (Ebroker)/3. Creating Shell Scripts/3. Customizing Vim 🧼.md"
+    "Cybersecurity/How to configure vpn 🟢.md"
   ]
 }

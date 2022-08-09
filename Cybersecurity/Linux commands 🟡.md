@@ -61,3 +61,7 @@ ssh -oHostKeyAlgorithms=+ssh-dss username@x.x.x.x
 sudo apt-get install cryptsetup
 sudo apt-get install gnome-disk-utility
 ````
+- Compare the size of two remote files using ssh:
+````
+ls -l file.txt | awk '{ print $x }' #x is the option you want
+````
