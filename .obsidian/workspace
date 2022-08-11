@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Cybersecurity/Linux commands 🟡.md",
+            "file": "Cybersecurity/PluralSight (Ebroker)/4. Web application hacking/3. How to perform SQL injections 🏞.md",
             "mode": "source",
             "source": false
           }
@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "XSS",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -53,7 +53,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 383.5
+    "width": 456.5
   },
   "right": {
     "id": "1b2d980ad4b04eb7",
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cybersecurity/Linux commands 🟡.md",
+                "file": "Cybersecurity/PluralSight (Ebroker)/4. Web application hacking/3. How to perform SQL injections 🏞.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,15 +89,15 @@
   },
   "active": "a31f1cb2a8236838",
   "lastOpenFiles": [
-    "Cybersecurity/PluralSight (Ebroker)/3. Creating Shell Scripts/6. Building Menus in BASH 🔮.md",
-    "Cybersecurity/PluralSight (Ebroker)/3. Creating Shell Scripts/4. Collecting user input and code logic ⚔️.md",
+    "Cybersecurity/PluralSight (Ebroker)/4. Web application hacking/2. How to hack web applications 🌠.md",
+    "Cybersecurity/PluralSight (Ebroker)/4. Web application hacking/1. How to hack web servers 🛒.md",
+    "Cybersecurity/PluralSight (Ebroker)/4. Web application hacking/3. How to perform SQL injections 🏞.md",
+    "Cybersecurity/Windows commands🔵.md",
     "Cybersecurity/Linux commands 🟡.md",
-    "Mac useful commands and customizations .md",
-    "README.md",
-    "Untitled.md",
-    "Cybersecurity/Open Webinars (Ebroker)/3. Curso de análisis de malware 🤬/3. Creación de malware 👻.md",
-    "Cybersecurity/Open Webinars (Ebroker)/3. Curso de análisis de malware 🤬/2. Análisis de malware 👽.md",
-    "Cybersecurity/Open Webinars (Ebroker)/3. Curso de análisis de malware 🤬/2. Laboratorio de análisis 🥶.md",
-    "Cybersecurity/Open Webinars (Ebroker)/3. Curso de análisis de malware 🤬/1. Introducción 👾.md"
+    "Cybersecurity/PluralSight (Ebroker)/1. Penetration Testing and Ethical Hacking with Kali Linux/3. Information Gathering 🦧/1. Gathering information Checklist 🦗.md",
+    "Cybersecurity/PluralSight (Ebroker)/1. Penetration Testing and Ethical Hacking with Kali Linux/3. Information Gathering 🦧/2. Write findings using Obsidian 🍒.md",
+    "Cybersecurity/TryHackMe/Web Hacking 🎁/Content Discovery 🧲.md",
+    "Cybersecurity/TryHackMe/Web Hacking 🎁/SSRF 🧰.md",
+    "Cybersecurity/PluralSight (Ebroker)/1. Penetration Testing and Ethical Hacking with Kali Linux/10. Wi-Fi pentesting 📕/4. Bypassing a hidden ESSID 🥩.md"
   ]
 }
