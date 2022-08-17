@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Cybersecurity/PluralSight (Ebroker)/5. Log4j Shell Vulnerability/5. Analysis and detection 🛬.md",
+            "file": "Cybersecurity/PluralSight (Ebroker)/5. Log4j Shell Vulnerability/Log4j Shell Laboratory ☢️/1. Procedure.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cybersecurity/PluralSight (Ebroker)/5. Log4j Shell Vulnerability/5. Analysis and detection 🛬.md",
+                "file": "Cybersecurity/PluralSight (Ebroker)/5. Log4j Shell Vulnerability/Log4j Shell Laboratory ☢️/1. Procedure.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,15 +89,15 @@
   },
   "active": "d1125374951b4be0",
   "lastOpenFiles": [
-    "Cybersecurity/PluralSight (Ebroker)/5. Log4j Shell Vulnerability/img/conv 3.png",
+    "Cybersecurity/Linux commands 🟡.md",
+    "README.md",
+    "Cybersecurity/PluralSight (Ebroker)/5. Log4j Shell Vulnerability/Log4j Shell Laboratory ☢️/1. Procedure.md",
     "Cybersecurity/PluralSight (Ebroker)/5. Log4j Shell Vulnerability/5. Analysis and detection 🛬.md",
+    "Cybersecurity/PluralSight (Ebroker)/5. Log4j Shell Vulnerability/img/conv 3.png",
     "Mac useful commands and customizations .md",
     "Pasted image 20220817103940 1.png",
     "Cybersecurity/PluralSight (Ebroker)/5. Log4j Shell Vulnerability/4. Upgrade to a reverse shell 🦽.md",
     "Cybersecurity/PluralSight (Ebroker)/5. Log4j Shell Vulnerability/3. Set up malicious LDAP server and POC 🚗.md",
-    "Cybersecurity/PluralSight (Ebroker)/5. Log4j Shell Vulnerability/2. Set up network detections 🚙.md",
-    "Cybersecurity/PluralSight (Ebroker)/5. Log4j Shell Vulnerability/1. Previous knowledge 🚓.md",
-    "Cybersecurity/Interesting links to visit 🌐.md",
-    "Cybersecurity/PluralSight (Ebroker)/4. Web application hacking/3. How to perform SQL injections 🏞.md"
+    "Cybersecurity/PluralSight (Ebroker)/5. Log4j Shell Vulnerability/2. Set up network detections 🚙.md"
   ]
 }
