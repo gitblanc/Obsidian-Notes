@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Mac useful commands and customizations .md",
+            "file": "3 CURSO/IPS/Introducción 🪣.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Mac useful commands and customizations .md",
+                "file": "3 CURSO/IPS/Introducción 🪣.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,6 +89,8 @@
   },
   "active": "d1125374951b4be0",
   "lastOpenFiles": [
+    "3 CURSO/IPS/Introducción 🪣.md",
+    "Mac useful commands and customizations .md",
     "Cybersecurity/Interesting links to visit 🌐.md",
     "Cybersecurity/PluralSight (Ebroker)/4. Web application hacking/3. How to perform SQL injections 🏞.md",
     "Cybersecurity/PluralSight (Ebroker)/5. Log4j Shell Vulnerability/1. Previous knowledge 🚓.md",
@@ -96,8 +98,6 @@
     "Cybersecurity/PluralSight (Ebroker)/5. Log4j Shell Vulnerability/Log4j Shell Laboratory ☢️/1. Procedure.md",
     "Cybersecurity/Linux commands 🟡.md",
     "Cybersecurity/PluralSight (Ebroker)/5. Log4j Shell Vulnerability/3. Set up malicious LDAP server and POC 🚗.md",
-    "README.md",
-    "Cybersecurity/PluralSight (Ebroker)/5. Log4j Shell Vulnerability/img/conv 3.png",
-    "Mac useful commands and customizations .md"
+    "README.md"
   ]
 }
