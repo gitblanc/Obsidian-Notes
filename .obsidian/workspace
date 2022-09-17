@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "3 CURSO/RI/Seminarios 🥸.md",
+            "file": "3 CURSO/UML cheatsheet 🥳.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "3 CURSO/RI/Seminarios 🥸.md",
+                "file": "3 CURSO/UML cheatsheet 🥳.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,6 +89,7 @@
   },
   "active": "d1125374951b4be0",
   "lastOpenFiles": [
+    "3 CURSO/RI/Seminarios 🥸.md",
     "3 CURSO/RI/JDBC 🦩.md",
     "3 CURSO/IPS/Seminarios 💡.md",
     "3 CURSO/RI/Seminarios 💤.md",
@@ -97,7 +98,6 @@
     "3 CURSO/SEW/img/componentes web.png",
     "3 CURSO/SEW/img/cliente servidor 2.png",
     "3 CURSO/SEW/img/cliente servidor.png",
-    "README.md",
-    "3 CURSO/SEW/Planificación 🐙.md"
+    "README.md"
   ]
 }
