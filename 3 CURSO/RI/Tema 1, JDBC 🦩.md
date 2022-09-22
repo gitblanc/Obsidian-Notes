@@ -161,3 +161,16 @@ try{
 - La **conexión avanzada** es totalmente desacoplada, no la maneja el cliente
 
 ---
+# 22 Sept 2022 ⚽️
+## Conexión avanzada
+- Para hacer las conexiones de manera desacoplada usamos la interfaz DataSource
+- El objeto **DataSource** lo despliega el administrador de la base de datos
+````java
+OracleDataSource ods = new OracleDataSource();
+ods.setDriverType(driverType);
+````
+- El objeto **DataSource** también nos permite el pool de conexiones (conjunto de conexiones físicas con la base de datos)
+- **RowSet**: como un ResultSet (no navegables ni sensibles, sólo permiten rs.next y no permiten borrar, actualizar ni insertar) pero mejorado.
+	- **CachedRowSet**: un ResultSet pero en caché. No es ideal para grandes volúmenes de datos
+
+---
