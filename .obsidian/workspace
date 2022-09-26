@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "3 CURSO/SEW/Seminarios 🥃.md",
+            "file": "3 CURSO/IPS/Primer sprint 🌋.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "3 CURSO/SEW/Seminarios 🥃.md",
+                "file": "3 CURSO/IPS/Primer sprint 🌋.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,15 +89,15 @@
   },
   "active": "d1125374951b4be0",
   "lastOpenFiles": [
+    "3 CURSO/Gitflow 👽.md",
+    "3 CURSO/IPS/Primer sprint 🌋.md",
+    "3 CURSO/SEW/Seminarios 🥃.md",
     "3 CURSO/DS/Seminarios 🥡.md",
     "3 CURSO/RI/Tema 2, Transacciones 🍹.md",
     "Cybersecurity/EOL and LTS ⚪️.md",
     "3 CURSO/RI/Tema 1, JDBC 🦩.md",
     "3 CURSO/SR/Introducción 🧪.md",
-    "3 CURSO/Gitflow 👽.md",
     "3 CURSO/RI/Seminarios 🥸.md",
-    "3 CURSO/DS/Introducción al diseño, parte 1 🚖.md",
-    "3 CURSO/UML cheatsheet 🥳.md",
-    "3 CURSO/DS/Introducción 🛎.md"
+    "3 CURSO/DS/Introducción al diseño, parte 1 🚖.md"
   ]
 }

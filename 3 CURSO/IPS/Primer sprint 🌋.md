@@ -29,4 +29,30 @@
 - **Formato**:
 	- Como "tipo de usuario" quiero "hacer algo" para "crear algún valor"
 
+NOTA: las historias de usuarios han de ser suficientemente pequeñas para ser implementadas dentro de un sprint. Si requieren más de un sprint se llaman **Epics**.
+
+Hay que evitar las ambigüedades, han de ser claras y concisas.
+
+Tienen una serie de características -> acrónimo INVEST (independiente, negociable, valioso, estimable,small, testing)
+- **Independiente**: la historia es independiente de las demás
+- **Negociable**: se puede negociar la historia con el cliente antes de comenzar un sprint
+- **Valioso**: tiene que aportar valor al negocio, al usuario, al cliente... Ha de formar parte del objetivo del Product Owner
+- **Estimable**: se puede determinar el tiempo que se va a tardar en desarrollarla y nos comprometemos a realizarla en ese tiempo
+- **Small**: tiene que ser pequeña en su descripción, en su duración
+- **Testing**: se tiene que poder probar
+
+---
+# 26 Sept 2022 🫑
+- Si no conocemos el negocio, hablaremos siempre con el Product Owner hasta que seamos capaces de realizar y estimar la historia de usuario
+- Estos datos se indican en los criterios de aceptación (no todos son pruebas de aceptación), y pueden incluir restricciones y notas para recordar temas a discutir
+- Hay que estar pendiente para la división de historias de usuario de:
+	- Criterios de aceptación complejos
+	- Conjunciones y conectores (y, o, también, pero, ...)
+	- Palabras genéricas o poco precisas (información, gestionar, bueno, mucho...)
+
+- El conjunto de historias forman parte del Backlog del produto
+- Hay que seleccionar las que sean factibles para realizar en un sprint
+
+- La **base de datos** se elabora de forma incremental con la técnica de **Modelo de clases de dominio** (y no entidad relación)
+
 ---
