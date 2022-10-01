@@ -4,3 +4,7 @@
 Corregido ✓
 
 ---
+Ampliación car workshop tarea:
+![[tarea 2 seminario.png]]
+
+---
