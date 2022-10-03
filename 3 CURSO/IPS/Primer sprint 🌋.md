@@ -56,3 +56,10 @@ Tienen una serie de características -> acrónimo INVEST (independiente, negocia
 - La **base de datos** se elabora de forma incremental con la técnica de **Modelo de clases de dominio** (y no entidad relación)
 
 ---
+# 3 Octubre 2022 🌴
+![[modelo 1.png|500]]
+![[modelo 2.png|500]]
+![[modelo 3.png|500]]
+- La cuenta debe de estar tanto en recibo como en socio
+
+---
