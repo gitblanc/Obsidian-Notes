@@ -8,4 +8,5 @@ Ampliación car workshop tarea:
 ![[tarea 2 seminario.png]]
 ![[ampliacion completa.png]]
 
+![[ej resuelto 2.jpeg]]
 ---
