@@ -35,3 +35,26 @@ Desventajas:
 ## Factoría
 - Clase que crea instancias de interfaces ocultándole al cliente cómo las crea
 ![[factoria.png|500]]
+
+---
+#  6 Octubre 2022 🫐
+
+## Patrón DAO
+- Define que nuevos objetos tienen que aparecer, dónde tienen que aparecer y es un intermediario entre la capa de negocio y el acceso a los datas
+- Los DAO proporcionan métodos CRUD: inserción, actualización, borrado y consulta de información
+
+## Row Data Gateway
+- Patrón que solicita implementar un objeto por cada fila de una tabla que tu recuperes
+
+## Table Data Gateway
+- Es un DAO implementado uno para cada tabla
+
+![[gateway.png]]
+![[organizacion base de datos.png|700]] 
+![[organizacion base de datos png.png]]
+
+## Patrones para la capa de negocio
+
+- Transaction scripts
+
+---
