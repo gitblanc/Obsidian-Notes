@@ -1,5 +1,6 @@
 # 23 Sept 2022 🍮
 ---
+## Seminario 1
 ## Herencia
 
 ### Ejercicio 1
@@ -28,3 +29,16 @@ No es correcto porque si existiese un método double getValor(), ¿qué devolver
 - Para el cliente, un cuadrado no es un rectángulo
 
 ---
+# 7 Octubre 2022 🍬
+## Seminario 2
+### Principios SOLID
+- **SRP** (principio de responsabilidad única)
+	- Una clase debería tener un único motivo para cambiar
+- **OCP** (principio abierto cerrado)
+	- Las clases deberían estar abiertas para la extensión pero cerradas a la modificación
+- **LSP** (principio de sustitución de Liskov)
+	- Si metemos una nueva necesidad, podemos declararla o tratar la excepción
+- DIP (principio de inversión de dependencias)
+
+==SOLUCION TAREA 4 lab: Crear dos interfaces y que luego el objeto implemente las dos==
+

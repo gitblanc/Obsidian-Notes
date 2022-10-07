@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "3 CURSO/RI/Tema 3, Patrones y estándares de acceso a datos 🦠.md",
+            "file": "3 CURSO/DS/Seminarios 🥡.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "3 CURSO/RI/Tema 3, Patrones y estándares de acceso a datos 🦠.md",
+                "file": "3 CURSO/DS/Seminarios 🥡.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -87,10 +87,10 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "317e254f1c7bfd77",
+  "active": "9229a88e8550de07",
   "lastOpenFiles": [
-    "3 CURSO/RI/img/organizacion base de datos.png",
     "3 CURSO/RI/Tema 3, Patrones y estándares de acceso a datos 🦠.md",
+    "3 CURSO/RI/img/organizacion base de datos.png",
     "3 CURSO/IPS/Seminarios 💡.md",
     "3 CURSO/Gitflow 👽.md",
     "3 CURSO/SEW/2. Lenguajes de Marcado 🖲.md",
