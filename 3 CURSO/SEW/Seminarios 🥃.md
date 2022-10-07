@@ -7,3 +7,10 @@
 - Alta disponibilidad
 - Seguridad
 - Bajos costes
+
+---
+# 7 Octubre 2022 🥏
+## Usabilidad en la Web
+- Leer libro: **No me hagas pensar**, de Steve Krug -> https://www.amazon.es/hagas-pensar-Actualizaci%C3%B3n-T%C3%ADtulos-Especiales/dp/8441537275 
+
+---
