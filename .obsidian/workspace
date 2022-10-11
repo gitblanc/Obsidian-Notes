@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "3 CURSO/IPS/Segundo sprint 🐁.md",
+            "file": "3 CURSO/DS/4. Introducción al diseño, parte 3 🌼.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "3 CURSO/IPS/Segundo sprint 🐁.md",
+                "file": "3 CURSO/DS/4. Introducción al diseño, parte 3 🌼.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,15 +89,15 @@
   },
   "active": "9229a88e8550de07",
   "lastOpenFiles": [
-    "3 CURSO/IPS/Seminarios 💡.md",
+    "3 CURSO/UML cheatsheet 🥳.md",
+    "3 CURSO/DS/4. Introducción al diseño, parte 3 🌼.md",
+    "3 CURSO/DS/1. Introducción 🛎.md",
     "3 CURSO/IPS/Segundo sprint 🐁.md",
+    "3 CURSO/IPS/Seminarios 💡.md",
     "3 CURSO/IPS/Primer sprint 🌋.md",
     "Cybersecurity/Windows commands🔵.md",
     "Cybersecurity/Linux commands 🟡.md",
     "3 CURSO/SEW/Seminarios 🥃.md",
-    "3 CURSO/DS/Seminarios 🥡.md",
-    "3 CURSO/RI/Tema 3, Patrones y estándares de acceso a datos 🦠.md",
-    "3 CURSO/RI/img/organizacion base de datos.png",
-    "3 CURSO/Gitflow 👽.md"
+    "3 CURSO/DS/Seminarios 🥡.md"
   ]
 }
