@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "3 CURSO/DS/Herencia vs Composición 🧦.md",
+            "file": "3 CURSO/RI/JPA 🛰/1. JPA 🚥.md",
             "mode": "source",
             "source": false
           }
@@ -40,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "herencia",
+                "query": "wifi",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "3 CURSO/DS/Herencia vs Composición 🧦.md",
+                "file": "3 CURSO/RI/JPA 🛰/1. JPA 🚥.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,15 +89,15 @@
   },
   "active": "9229a88e8550de07",
   "lastOpenFiles": [
-    "3 CURSO/DS/4. Introducción al diseño, parte 3 🌼.md",
-    "2 CURSO/TPP/Actividades previas al paradigma orientado a objetos 🦄.md",
-    "3 CURSO/DS/3. Introducción al diseño, parte 2 🥐.md",
     "3 CURSO/UML cheatsheet 🥳.md",
-    "3 CURSO/DS/1. Introducción 🛎.md",
-    "3 CURSO/IPS/Segundo sprint 🐁.md",
-    "3 CURSO/IPS/Seminarios 💡.md",
-    "3 CURSO/IPS/Primer sprint 🌋.md",
-    "Cybersecurity/Windows commands🔵.md",
-    "Cybersecurity/Linux commands 🟡.md"
+    "3 CURSO/RI/JPA 🛰/1. JPA 🚥.md",
+    "3 CURSO/SR/Impresoras 3D 🍌.md",
+    "3 CURSO/SR/Introducción 🧪.md",
+    "Cybersecurity/PluralSight (Ebroker)/5. Log4j Shell Vulnerability/5. Analysis and detection 🛬.md",
+    "Cybersecurity/PluralSight (Ebroker)/5. Log4j Shell Vulnerability/4. Upgrade to a reverse shell 🦽.md",
+    "Cybersecurity/PluralSight (Ebroker)/5. Log4j Shell Vulnerability/3. Set up malicious LDAP server and POC 🚗.md",
+    "Cybersecurity/PluralSight (Ebroker)/5. Log4j Shell Vulnerability/2. Set up network detections 🚙.md",
+    "Cybersecurity/PluralSight (Ebroker)/5. Log4j Shell Vulnerability/1. Previous knowledge 🚓.md",
+    "Cybersecurity/PluralSight (Ebroker)/5. Log4j Shell Vulnerability/Log4j Shell Laboratory ☢️/1. Procedure.md"
   ]
 }
