@@ -1,0 +1,114 @@
+{
+  "main": {
+    "id": "46396cf51d5bc3b7",
+    "type": "split",
+    "children": [
+      {
+        "id": "8b5fd726f7bdd5f8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9229a88e8550de07",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "3 CURSO/RI/Seminarios 🥸.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "bad504e166783888",
+    "type": "split",
+    "children": [
+      {
+        "id": "11999ff16d8ab007",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "317e254f1c7bfd77",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "c27b10d80078b9f9",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "wifi",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 314.5
+  },
+  "right": {
+    "id": "1b2d980ad4b04eb7",
+    "type": "split",
+    "children": [
+      {
+        "id": "1613227075961c54",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "18776e4c52d6b962",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "3 CURSO/RI/Seminarios 🥸.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "ribbon": {
+    "mostRecentAction": ""
+  },
+  "active": "9229a88e8550de07",
+  "lastOpenFiles": [
+    "3 CURSO/RI/JPA 🛰/1. JPA 🚥.md",
+    "3 CURSO/RI/Seminarios 🥸.md",
+    "3 CURSO/UML cheatsheet 🥳.md",
+    "3 CURSO/SR/Impresoras 3D 🍌.md",
+    "3 CURSO/SR/Introducción 🧪.md",
+    "Cybersecurity/PluralSight (Ebroker)/5. Log4j Shell Vulnerability/5. Analysis and detection 🛬.md",
+    "Cybersecurity/PluralSight (Ebroker)/5. Log4j Shell Vulnerability/4. Upgrade to a reverse shell 🦽.md",
+    "Cybersecurity/PluralSight (Ebroker)/5. Log4j Shell Vulnerability/3. Set up malicious LDAP server and POC 🚗.md",
+    "Cybersecurity/PluralSight (Ebroker)/5. Log4j Shell Vulnerability/2. Set up network detections 🚙.md",
+    "Cybersecurity/PluralSight (Ebroker)/5. Log4j Shell Vulnerability/1. Previous knowledge 🚓.md"
+  ]
+}

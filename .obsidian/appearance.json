@@ -1,3 +1,5 @@
 {
-  "baseFontSize": 16
+  "baseFontSize": 16,
+  "accentColor": "#6438f5",
+  "theme": "system"
 }
