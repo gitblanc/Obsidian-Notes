@@ -30,3 +30,14 @@
 ![[mapa de pantallas.png|500]]
 
 ---
+# 17 Octubre 2022 🌠
+## Refinamiento de las historias de usuario
+- Con todos los nuevos datos que tenemos en el modelo, debemos fijarnos en:
+	- Impacto de los cambios:
+		- Medio: poca nueva funcionalidad, pocos cambios a realizar
+		- Alto: mucha nueva funcionalidad, muchos cambios a realizar
+- Tres modelos:
+	- Funciones realizadas (en SCRUM historias de usuario)
+	- Datos manejados (modelo de dominio -> base de datos)
+	- Uso por parte del usuario (prototipos de pantallas)
+- Analizando cada modelo permite descubrir detalles adicionales
