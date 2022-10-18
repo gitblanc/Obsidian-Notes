@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "9229a88e8550de07",
+            "id": "c67179e5d8b723f3",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3 CURSO/IPS/Primer sprint 🌋.md",
+                "file": "3 CURSO/DS/5. Patrones de diseño Introducción ⏰.md",
                 "mode": "source",
                 "source": false
               }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "3 CURSO/IPS/Primer sprint 🌋.md",
+                "file": "3 CURSO/DS/5. Patrones de diseño Introducción ⏰.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -98,8 +98,9 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "9229a88e8550de07",
+  "active": "c67179e5d8b723f3",
   "lastOpenFiles": [
+    "3 CURSO/IPS/Primer sprint 🌋.md",
     "3 CURSO/IPS/Segundo sprint 🐁.md",
     "3 CURSO/IPS/Seminarios 💡.md",
     "3 CURSO/RI/Seminarios 🥸.md",
@@ -108,7 +109,6 @@
     "3 CURSO/SR/Impresoras 3D 🍌.md",
     "3 CURSO/SR/Introducción 🧪.md",
     "Cybersecurity/PluralSight (Ebroker)/5. Log4j Shell Vulnerability/5. Analysis and detection 🛬.md",
-    "Cybersecurity/PluralSight (Ebroker)/5. Log4j Shell Vulnerability/4. Upgrade to a reverse shell 🦽.md",
-    "Cybersecurity/PluralSight (Ebroker)/5. Log4j Shell Vulnerability/3. Set up malicious LDAP server and POC 🚗.md"
+    "Cybersecurity/PluralSight (Ebroker)/5. Log4j Shell Vulnerability/4. Upgrade to a reverse shell 🦽.md"
   ]
 }
