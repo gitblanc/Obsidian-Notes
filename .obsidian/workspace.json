@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "f6ff763a74339b23",
+        "id": "a13a254dcf14110b",
         "type": "tabs",
         "children": [
           {
-            "id": "6a6795a26c3bee05",
+            "id": "adbd6cc04fe2cdcc",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Cybersecurity/Linux commands 🟡.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -77,7 +73,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cybersecurity/Linux commands 🟡.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -98,17 +93,17 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "6a6795a26c3bee05",
+  "active": "adbd6cc04fe2cdcc",
   "lastOpenFiles": [
+    "Cybersecurity/Linux commands 🟡.md",
+    "Cybersecurity/Untitled.md",
     "3 CURSO/RI/JPA 🛰/1. JPA 🚥.md",
     "3 CURSO/RI/Seminarios 🥸.md",
     "3 CURSO/Install Java in environment variables ☕️.md",
     "3 CURSO/SEW/3. XML 💎.md",
-    "Cybersecurity/Linux commands 🟡.md",
     "Cybersecurity/EOL and LTS ⚪️.md",
     "Cybersecurity/Interesting links to visit 🌐.md",
     "Cybersecurity/How to configure vpn 🟢.md",
-    "Untitled.md",
-    "3 CURSO/DS/5. Patrones de diseño Introducción ⏰.md"
+    "Untitled.md"
   ]
 }
