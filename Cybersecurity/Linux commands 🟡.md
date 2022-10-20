@@ -286,3 +286,9 @@ put -r directory_from directory_to
 netstat -putona
 netstat -nlptn
 ```
+
+---
+¿Cómo instalar tool **Volatility**?
+https://behacker.pro/que-es-volatility-y-como-instalarloinstalacion-no-standalone-en-windows-10/
+
+---
