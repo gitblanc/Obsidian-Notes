@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "a13a254dcf14110b",
+        "id": "f6ff763a74339b23",
         "type": "tabs",
         "children": [
           {
-            "id": "adbd6cc04fe2cdcc",
+            "id": "6a6795a26c3bee05",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "3 CURSO/IPS/Segundo sprint 🐁.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -73,6 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "3 CURSO/IPS/Segundo sprint 🐁.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -93,17 +98,17 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "adbd6cc04fe2cdcc",
+  "active": "6a6795a26c3bee05",
   "lastOpenFiles": [
+    "3 CURSO/IPS/Segundo sprint 🐁.md",
+    "Cybersecurity/Windows commands🔵.md",
+    "3 CURSO/DS/Seminarios 🥡.md",
     "Cybersecurity/Linux commands 🟡.md",
-    "Cybersecurity/Untitled.md",
     "3 CURSO/RI/JPA 🛰/1. JPA 🚥.md",
     "3 CURSO/RI/Seminarios 🥸.md",
     "3 CURSO/Install Java in environment variables ☕️.md",
     "3 CURSO/SEW/3. XML 💎.md",
     "Cybersecurity/EOL and LTS ⚪️.md",
-    "Cybersecurity/Interesting links to visit 🌐.md",
-    "Cybersecurity/How to configure vpn 🟢.md",
-    "Untitled.md"
+    "Cybersecurity/Interesting links to visit 🌐.md"
   ]
 }

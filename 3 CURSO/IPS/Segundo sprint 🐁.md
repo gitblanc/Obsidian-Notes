@@ -41,3 +41,36 @@
 	- Datos manejados (modelo de dominio -> base de datos)
 	- Uso por parte del usuario (prototipos de pantallas)
 - Analizando cada modelo permite descubrir detalles adicionales
+
+---
+# 24 Octubre 2022 🪣
+## Procesos SCRUM
+
+- **Alcance fijo**: en las metodologías tradicionales, cuántos requisitos vamos a necesitar están preestablecidos
+
+## Manifiesto ágil
+- Valora:
+	- **Individuos e interacciones** más que procesos y herramientas
+	- **Software que funciona** más que documentación exhaustiva
+	- **Colaboración con el cliente** más que negociación de contratos
+	- **Responder ante el cambio** más que seguimiento de un plan
+
+## Proceso de SCRUM
+- Es un Framework (una filosofía más que una metodología)
+- Ciclos cortos (de 1 a 4 semanas)
+- Equipo multifuncional
+- Bastante usado en la industria
+
+## ROLES
+- **SCRUM TEAM**: Product Owner + Scrum Master + Development Team
+- **Dueño del producto**:
+	- Representa al negocio y a los clientes
+- Gestor de Scrum (Scrum Master)
+	- Ayuda a aplicar el Scrum
+	- No es jefe de equipo
+- Development Team
+	- Autogestionado
+	- Estimación de tiempos a emplear
+	- Decide cómo realizar el trabajo
+
+---

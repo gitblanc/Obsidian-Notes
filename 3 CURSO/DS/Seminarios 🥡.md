@@ -42,3 +42,36 @@ No es correcto porque si existiese un método double getValor(), ¿qué devolver
 
 ==SOLUCION TAREA 4 lab: Crear dos interfaces y que luego el objeto implemente las dos==
 
+---
+# 21 Octubre 2022 🧸
+## Seminario 3
+
+Ej: Crear una clase Logger que permita mostrar mensajes de traza en una aplicación
+`logger.log("¡Hola mundo!")`
+
+¿Cómo podríamos garantizar que de dicha clase sólo exista un único objeto?
+
+==Es un patrón singleton==: cuidado con ellos. Al fin y al cabo un singleton es una variable global.
+PROBLEMAS de Singleton:
+	- Casa mal con temas de concurrencia
+VENTAJAS de Singleton:
+	- Sigue siendo un objeto normal. Podríamos aplicarle herencia o composición por encima
+````java
+public class Logger{
+	//la única instancia se crea desde dentro de Logger
+	//inicialización perezosa
+	private static final Logger instance = new Logger();
+
+	//hacemos el constructor privado para que nadie pueda crear instancias
+	private Logger(){}
+		
+	public void log(String cad){
+		System.out.println(cad);
+	}
+
+	//método que devuelve la instancia
+	public static Logger getInstance(){
+		return instance;
+	}
+}
+````
