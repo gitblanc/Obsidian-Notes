@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3 CURSO/SEW/3. XML 💎.md",
+                "file": "3 CURSO/RI/JPA 🛰/1. JPA 🚥.md",
                 "mode": "source",
                 "source": false
               }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "3 CURSO/SEW/3. XML 💎.md",
+                "file": "3 CURSO/RI/JPA 🛰/1. JPA 🚥.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,6 +100,7 @@
   },
   "active": "6a6795a26c3bee05",
   "lastOpenFiles": [
+    "3 CURSO/SEW/3. XML 💎.md",
     "3 CURSO/DS/5. Patrones de diseño Introducción ⏰.md",
     "3 CURSO/IPS/Segundo sprint 🐁.md",
     "Cybersecurity/Windows commands🔵.md",
@@ -108,7 +109,6 @@
     "3 CURSO/RI/JPA 🛰/1. JPA 🚥.md",
     "3 CURSO/RI/Seminarios 🥸.md",
     "3 CURSO/Install Java in environment variables ☕️.md",
-    "3 CURSO/SEW/3. XML 💎.md",
     "Cybersecurity/EOL and LTS ⚪️.md"
   ]
 }
