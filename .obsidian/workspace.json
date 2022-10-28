@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "f6ff763a74339b23",
+        "id": "eb81a113e43f7524",
         "type": "tabs",
         "children": [
           {
-            "id": "6a6795a26c3bee05",
+            "id": "9490399546467f4a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3 CURSO/RI/JPA 🛰/1. JPA 🚥.md",
+                "file": "3 CURSO/RI/Seminarios 🥸.md",
                 "mode": "source",
                 "source": false
               }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "3 CURSO/RI/JPA 🛰/1. JPA 🚥.md",
+                "file": "3 CURSO/RI/Seminarios 🥸.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -98,16 +98,16 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "6a6795a26c3bee05",
+  "active": "9490399546467f4a",
   "lastOpenFiles": [
+    "3 CURSO/RI/JPA 🛰/1. JPA 🚥.md",
+    "3 CURSO/RI/Seminarios 🥸.md",
     "3 CURSO/SEW/3. XML 💎.md",
     "3 CURSO/DS/5. Patrones de diseño Introducción ⏰.md",
     "3 CURSO/IPS/Segundo sprint 🐁.md",
     "Cybersecurity/Windows commands🔵.md",
     "3 CURSO/DS/Seminarios 🥡.md",
     "Cybersecurity/Linux commands 🟡.md",
-    "3 CURSO/RI/JPA 🛰/1. JPA 🚥.md",
-    "3 CURSO/RI/Seminarios 🥸.md",
     "3 CURSO/Install Java in environment variables ☕️.md",
     "Cybersecurity/EOL and LTS ⚪️.md"
   ]

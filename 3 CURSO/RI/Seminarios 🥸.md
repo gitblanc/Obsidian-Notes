@@ -21,3 +21,8 @@ Ampliación car workshop tarea:
 - Clases asociativas: representan a la vez clase y asociación
 
 ---
+
+# 28 Octubre 2022 🦧
+- La capa que más cambia es la presentación
+- Ahora tendremos una **arquitectura hexagonal**
+- En los repositorios ya no hay update porque se comportan como una lista
