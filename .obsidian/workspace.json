@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "cdb3ab7fe1faf4b7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Cybersecurity/Python 🐍.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -77,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "3 CURSO/RI/Seminarios 🥸.md",
+                "file": "Cybersecurity/Python 🐍.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -98,10 +111,10 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "9490399546467f4a",
+  "active": "cdb3ab7fe1faf4b7",
   "lastOpenFiles": [
-    "3 CURSO/RI/JPA 🛰/1. JPA 🚥.md",
     "3 CURSO/RI/Seminarios 🥸.md",
+    "3 CURSO/RI/JPA 🛰/1. JPA 🚥.md",
     "3 CURSO/SEW/3. XML 💎.md",
     "3 CURSO/DS/5. Patrones de diseño Introducción ⏰.md",
     "3 CURSO/IPS/Segundo sprint 🐁.md",
