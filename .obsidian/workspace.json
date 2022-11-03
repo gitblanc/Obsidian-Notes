@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "fc7ee5450517c4c3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Cybersecurity/Python 🐍.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -77,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cybersecurity/Turn a usb into Rubber ducky 🐤.md",
+                "file": "Cybersecurity/Python 🐍.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -98,8 +111,10 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "317e254f1c7bfd77",
+  "active": "fc7ee5450517c4c3",
   "lastOpenFiles": [
+    "3 CURSO/SEW/4. Computación en la web 🐨.md",
+    "Cybersecurity/Turn a usb into Rubber ducky 🐤.md",
     "3 CURSO/RI/Seminarios 🥸.md",
     "Cybersecurity/Python 🐍.md",
     "3 CURSO/RI/JPA 🛰/1. JPA 🚥.md",
@@ -107,8 +122,6 @@
     "3 CURSO/DS/5. Patrones de diseño Introducción ⏰.md",
     "3 CURSO/IPS/Segundo sprint 🐁.md",
     "Cybersecurity/Windows commands🔵.md",
-    "3 CURSO/DS/Seminarios 🥡.md",
-    "Cybersecurity/Linux commands 🟡.md",
-    "3 CURSO/Install Java in environment variables ☕️.md"
+    "3 CURSO/DS/Seminarios 🥡.md"
   ]
 }
