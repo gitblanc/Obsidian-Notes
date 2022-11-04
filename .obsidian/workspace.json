@@ -4,35 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "eb81a113e43f7524",
+        "id": "8f48514bd5361279",
         "type": "tabs",
         "children": [
           {
-            "id": "9490399546467f4a",
+            "id": "a8305e2b301a3cd9",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3 CURSO/RI/Seminarios 🥸.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "fc7ee5450517c4c3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Cybersecurity/Python 🐍.md",
+                "file": "3 CURSO/DS/Seminarios 🥡.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -90,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cybersecurity/Python 🐍.md",
+                "file": "3 CURSO/DS/Seminarios 🥡.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,17 +98,17 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "fc7ee5450517c4c3",
+  "active": "a8305e2b301a3cd9",
   "lastOpenFiles": [
+    "3 CURSO/DS/4. Introducción al diseño, parte 3 🌼.md",
+    "Cybersecurity/Python 🐍.md",
     "3 CURSO/SEW/4. Computación en la web 🐨.md",
     "Cybersecurity/Turn a usb into Rubber ducky 🐤.md",
     "3 CURSO/RI/Seminarios 🥸.md",
-    "Cybersecurity/Python 🐍.md",
     "3 CURSO/RI/JPA 🛰/1. JPA 🚥.md",
     "3 CURSO/SEW/3. XML 💎.md",
     "3 CURSO/DS/5. Patrones de diseño Introducción ⏰.md",
     "3 CURSO/IPS/Segundo sprint 🐁.md",
-    "Cybersecurity/Windows commands🔵.md",
-    "3 CURSO/DS/Seminarios 🥡.md"
+    "Cybersecurity/Windows commands🔵.md"
   ]
 }

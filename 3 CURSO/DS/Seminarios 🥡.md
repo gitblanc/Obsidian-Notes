@@ -75,3 +75,15 @@ public class Logger{
 	}
 }
 ````
+
+---
+# 4 noviembre 2022 🦆
+
+```java
+public interface LoggerInterface{
+	void log(String cad);
+}
+```
+Patrón strategy
+
+---
