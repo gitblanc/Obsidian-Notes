@@ -74,3 +74,26 @@
 	- Decide cómo realizar el trabajo
 
 ---
+# 7 Noviembre 2022 🦑
+- El backlog nos indica lo que tenemos que hacer
+- Visión de los requisitos funcionales del producto
+![[backlog.png|500]]
+![[backlog 2.png|500]]
+
+## Pruebas 
+- **TDD**: Test-Driven Development
+	- definir primero las pruebas
+	- implementarlas y ejecutar las pruebas
+	- refactorizar
+- **BDD**: Behaviour-Driven Development
+	- evolución de TDD
+	- usar historias de usuario con estructura, que se convierten en pruebas
+- Otros tipos de pruebas
+
+## Otros métodos ágiles
+- Extreme programming (pionero)
+- Lean
+- Kanban
+- Scrumban
+
+---
