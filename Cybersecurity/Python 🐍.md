@@ -290,3 +290,55 @@ We saved our coordinates as lat,long but simplekml wants them in the reverse ord
 So for each row in our CSV file, we create new point via the newpoint method of the kml object. Once we’ve finished with the file, we just need to call the save method on the kml object, and it will create a perfect KML file (‘battleplaces.kml’) for us.
 
 ---
+# How to create a python executable file
+
+**Step 1:**   
+Install the library pyinstaller.   
+Type below command in the command prompt.   
+`pip install pyinstaller`
+
+**Step 2:**   
+Go into the directory where your ‘.py’ file is located.
+![[Pasted image 20221107103500.png]]
+**Step 3:**   
+Press the shift⇧ button and simultaneously right-click at the same location. You will get the below box.
+![[Pasted image 20221107103518.png]]
+**Step 4:**   
+Click on ‘Open PowerShell window here’.
+![[Pasted image 20221107103543.png]]
+You will get a window shown below.
+![[Pasted image 20221107103604.png]]
+**Step 5:**   
+Type the command given below in that PowerShell window.   
+`pyinstaller --onefile -w 'filename.py'`
+
+Here the ‘.py’ file name is ‘1’.   
+See below:
+![[Pasted image 20221107103639.png]]
+In case you get an error at this point in the PowerShell window like this:
+![[Pasted image 20221107103705.png]]
+The correction while typing the above command:   
+```
+.\pyinstaller --onefile -w 'filename.py'
+
+#For any missing package:
+pyinstaller --hidden-import 'package_name' --onefile 'filename.py'
+```
+![[Pasted image 20221107103800.png]]
+**Step 6:**   
+After typing the command ‘Hit the Enter’.   
+It will take some time to finish the process depending on the size of the file and how big is your project.   
+After the processing has been finished, the window will look as below:
+![[Pasted image 20221107103818.png]]
+**Step 7:**   
+See the directory it should look like this:
+![[Pasted image 20221107103834.png]]
+‘build’ folder and ‘1.spec’ is of no use. You can delete these if you want, it will not affect your ‘.exe’ file.
+![[Pasted image 20221107103858.png]]
+**Step 8:**   
+Open ‘dist’ folder above. Here you will get your ‘.exe’ file.
+![[Pasted image 20221107103916.png]]
+Right-click on the file and check the properties.
+![[Pasted image 20221107103934.png]]
+
+---
