@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "f69b5e8c20b6df08",
+        "id": "9451d75cf7a83043",
         "type": "tabs",
         "children": [
           {
-            "id": "8ea7bded1a06770a",
+            "id": "cdb5c2935ddcd11f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3 CURSO/IPS/Sprint 3 🪲.md",
+                "file": "3 CURSO/DS/5. Patrones de diseño Introducción ⏰.md",
                 "mode": "source",
                 "source": false
               }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "3 CURSO/IPS/Sprint 3 🪲.md",
+                "file": "3 CURSO/DS/5. Patrones de diseño Introducción ⏰.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -98,11 +98,11 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "8ea7bded1a06770a",
+  "active": "cdb5c2935ddcd11f",
   "lastOpenFiles": [
+    "3 CURSO/IPS/Sprint 3 🪲.md",
     "Cybersecurity/Python 🐍.md",
     "3 CURSO/IPS/Segundo sprint 🐁.md",
-    "3 CURSO/IPS/Sprint 3 🪲.md",
     "3 CURSO/Install Java in environment variables ☕️.md",
     "3 CURSO/DS/Seminarios 🥡.md",
     "3 CURSO/DS/4. Introducción al diseño, parte 3 🌼.md",
