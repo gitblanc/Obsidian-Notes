@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3 CURSO/SEW/4. Computación en la web 🐨.md",
+                "file": "3 CURSO/Gitflow 👽.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "f199c519c1a976e4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "3 CURSO/RI/Recuperación de información ☄️/1. Recuperación de información 🌺.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -77,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "3 CURSO/SEW/4. Computación en la web 🐨.md",
+                "file": "3 CURSO/RI/Recuperación de información ☄️/1. Recuperación de información 🌺.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -98,17 +111,17 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "6e116d71ccbb79b6",
+  "active": "f199c519c1a976e4",
   "lastOpenFiles": [
+    "3 CURSO/RI/img/modelo conceptual.png",
+    "3 CURSO/RI/Recuperación de información ☄️/1. Recuperación de información 🌺.md",
+    "Untitled.md",
+    "3 CURSO/Gitflow 👽.md",
+    "3 CURSO/Install Java in environment variables ☕️.md",
     "3 CURSO/UML cheatsheet 🥳.md",
+    "Cybersecurity/Turn a usb into Rubber ducky 🐤.md",
     "3 CURSO/SEW/4. Computación en la web 🐨.md",
     "Cybersecurity/Python 🐍.md",
-    "Cybersecurity/img/Pasted image 20221107103705.png",
-    "Cybersecurity/img/Pasted image 20221031101113.png",
-    "Cybersecurity/img/Pasted image 20221031101043.png",
-    "Cybersecurity/img/Pasted image 20221031100943.png",
-    "3 CURSO/Install Java in environment variables ☕️.md",
-    "3 CURSO/Gitflow 👽.md",
-    "3 CURSO/DS/5. Patrones de diseño Introducción ⏰.md"
+    "Cybersecurity/img/Pasted image 20221107103705.png"
   ]
 }
