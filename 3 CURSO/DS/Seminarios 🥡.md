@@ -87,3 +87,38 @@ public interface LoggerInterface{
 Patrón strategy
 
 ---
+# 18 Noviembre 2022 🦊
+
+## Ejercicio 1
+![[ej 1 18 nov.png]]
+==Es un patrón composite==: Tratamos a los elementos compuestos y simples por igual
+
+## Ejercicio 2
+
+![[Ej 2 18 nov.png]]
+==Es un factory method==
+
+## Ejercicio 3
+Java I/O
+
+```java
+Reader in = new BufferedReader(new InputStreamReader(System.in))
+```
+
+==Es un patrón decorator==
+
+
+## Ejercicio 4
+
+```java
+public void run()
+{
+	setUp();
+	runTest();
+	tearDown();
+}
+```
+
+==Es un patrón template method==
+
+---
