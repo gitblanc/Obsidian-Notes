@@ -342,3 +342,8 @@ Right-click on the file and check the properties.
 ![[Pasted image 20221107103934.png]]
 
 ---
+# How to use Github from python
+
+Use the library pygithub -> https://pygithub.readthedocs.io/en/latest/index.html
+
+---

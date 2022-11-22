@@ -13,26 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Mac useful commands and customizations .md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "0531347f53330706",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "3 CURSO/Github API 🎒.md",
+                "file": "Cybersecurity/Python 🐍.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -90,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "3 CURSO/Github API 🎒.md",
+                "file": "Cybersecurity/Python 🐍.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,17 +98,17 @@
   "ribbon": {
     "mostRecentAction": ""
   },
-  "active": "0531347f53330706",
+  "active": "f88651467ea786e5",
   "lastOpenFiles": [
+    "3 CURSO/IPS/Primer sprint 🌋.md",
+    "3 CURSO/IPS/Segundo sprint 🐁.md",
+    "3 CURSO/IPS/Introducción 🪣.md",
+    "3 CURSO/IPS/Sprint 3 🪲.md",
+    "3 CURSO/RI/JPA 🛰/1. JPA 🚥.md",
     "Mac useful commands and customizations .md",
+    "3 CURSO/Github API 🎒.md",
     "3 CURSO/SEW/Seminarios 🥃.md",
     "3 CURSO/DS/Seminarios 🥡.md",
-    "3 CURSO/RI/Recuperación de información ☄️/1. Recuperación de información 🌺.md",
-    "3 CURSO/SEW/4. Computación en la web 🐨.md",
-    "3 CURSO/Gitflow 👽.md",
-    "Cybersecurity/Python 🐍.md",
-    "Cybersecurity/How to configure vpn 🟢.md",
-    "Cybersecurity/TryHackMe/Burp Suite 🚧/Basics 🚘.md",
-    "Cybersecurity/EOL and LTS ⚪️.md"
+    "3 CURSO/RI/Recuperación de información ☄️/1. Recuperación de información 🌺.md"
   ]
 }
