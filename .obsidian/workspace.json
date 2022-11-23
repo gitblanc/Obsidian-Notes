@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "f88651467ea786e5",
+            "id": "e3d27f83511b0c76",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Cybersecurity/Python 🐍.md",
+                "file": "3 CURSO/SEW/4. Computación en la web 🐨.md",
                 "mode": "source",
                 "source": false
               }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Cybersecurity/Python 🐍.md",
+                "file": "3 CURSO/SEW/4. Computación en la web 🐨.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -95,20 +95,17 @@
     "width": 300,
     "collapsed": true
   },
-  "ribbon": {
-    "mostRecentAction": ""
-  },
-  "active": "f88651467ea786e5",
+  "active": "e3d27f83511b0c76",
   "lastOpenFiles": [
+    "3 CURSO/Github API 🎒.md",
+    "3 CURSO/SEW/4. Computación en la web 🐨.md",
     "3 CURSO/IPS/Primer sprint 🌋.md",
     "3 CURSO/IPS/Segundo sprint 🐁.md",
     "3 CURSO/IPS/Introducción 🪣.md",
     "3 CURSO/IPS/Sprint 3 🪲.md",
     "3 CURSO/RI/JPA 🛰/1. JPA 🚥.md",
     "Mac useful commands and customizations .md",
-    "3 CURSO/Github API 🎒.md",
     "3 CURSO/SEW/Seminarios 🥃.md",
-    "3 CURSO/DS/Seminarios 🥡.md",
-    "3 CURSO/RI/Recuperación de información ☄️/1. Recuperación de información 🌺.md"
+    "3 CURSO/DS/Seminarios 🥡.md"
   ]
 }
