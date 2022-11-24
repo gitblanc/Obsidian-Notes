@@ -80,4 +80,17 @@
 - Consulta por clave
 - Consulta por contenido del documento
 
+## Bases de datos de grafo
+
+- Estructura de datos de grafo
+	- Nodos con propiedades
+	- Relaciones entre nodos (arcos)
+		- También tienen propiedades
+		- Unidireccionales/bidireccionales
+- Diferente al resto de NoSQL
+	- Poco orientadas a distribución
+	- Transacciones ACID
+	- Énfasis en relaciones
+	- Consultas complejas
+
 ---
