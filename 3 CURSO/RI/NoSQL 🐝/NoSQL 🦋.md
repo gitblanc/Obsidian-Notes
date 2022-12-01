@@ -94,3 +94,28 @@
 	- Consultas complejas
 
 ---
+# 1 Dic 2022 🪺
+## Bases de datos en grafo
+
+- Escalabilidad de datos:
+	- **Vertical**: para pequeñas empresas
+	- **Horizontal**: para empresas grandes (añades más clústers)
+- Distribución de datos:
+	- Los datos se reparten entre distintos servidores
+	- Mayor rendimiento, disponibilidad
+	- Mayor complejidad
+- Alternativas distribución
+	- Servidor único (con o sin fragmentación y replicación)
+
+- **Fragmentación** (sharding): fragmentar los datos y repartirlos entre servidores. Cada servidor es responsable de un fragmento (adecuado para datos necesarios en el mismo servidor (agregados)).
+- **Replicación Maestro-Esclavo**: replicar los datos entre los nodos. Estro proporciona escalabilidad en lecturas
+	- **Maestro**: gestiona actualizaciones, retransmite actualizaciones a esclavos, defimnidos manualmente o automáticamente
+	- **Esclavos**: repiten los datos
+- **Replicación entre iguales**: todas son réplicas equivalentes (todas pueden hacer actualizaciones y escrituras). Mayor robustez, pues no hay un maestro único.
+- **Fragmentación + replicación**: almacenamiento en columnas
+
+==TEOREMA CAP==
+
+libro -> https://www.amazon.es/NoSQL-Distilled-Emerging-Polyglot-Persistence/dp/0321826620
+
+---
