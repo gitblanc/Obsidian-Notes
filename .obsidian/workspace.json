@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "91bffd111e1ae18b",
+            "id": "e54db50116e65ab8",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3 CURSO/RI/NoSQL 🐝/NoSQL 🦋.md",
+                "file": "3 CURSO/RI/NoSQL 🐝/Entrega NoSQL 🍀.md",
                 "mode": "source",
                 "source": false
               }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "3 CURSO/RI/NoSQL 🐝/NoSQL 🦋.md",
+                "file": "3 CURSO/RI/NoSQL 🐝/Entrega NoSQL 🍀.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -95,8 +95,9 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "91bffd111e1ae18b",
+  "active": "e54db50116e65ab8",
   "lastOpenFiles": [
+    "3 CURSO/RI/NoSQL 🐝/NoSQL 🦋.md",
     "3 CURSO/RI/Recuperación de información ☄️/1. Recuperación de información 🌺.md",
     "Mac useful commands and customizations .md",
     "3 CURSO/Install Java in environment variables ☕️.md",
@@ -105,7 +106,6 @@
     "3 CURSO/DS/1. Introducción 🛎.md",
     "3 CURSO/Github API 🎒.md",
     "3 CURSO/SR/Impresoras 3D 🍌.md",
-    "2 CURSO/TEC/Notas de TEC ⛑.md",
-    "3 CURSO/RI/NoSQL 🐝/NoSQL 🦋.md"
+    "2 CURSO/TEC/Notas de TEC ⛑.md"
   ]
 }
