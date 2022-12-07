@@ -9,4 +9,17 @@
 - Nuevo proyecto >>> Movies databse (coger esta base de datos)
 - MATCH (n) DETACH DELETE n , (elimina todo)
 - Intentar no usar nombres para las relaciones (sólo usar verbos). Ej: Ann es dueña de un coche (no usarlo) -> usar Ann posee un coche
-- 
+- Todo lo que va entre paréntesis es un nodo en las queries
+
+Ejemplo de gql:
+```sql
+
+CREATE (TheMatrix:Movie {title:'The Matrix',
+released:1999, tagline:'Welcome to the Real World'}) --creacion de un nodo
+
+CREATE (Keanu:Person {name:'Keanu Reeves', born:1974}) --creacion de un nodo
+
+CREATE (Keanu)-[:ACTED_IN {roles:['Neo']}]->(TheMatrix) --relacion
+```
+
+---

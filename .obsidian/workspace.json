@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "a7b602f608bc5c08",
+        "id": "21c4e963549875e0",
         "type": "tabs",
         "children": [
           {
-            "id": "8b7bca78db1e3e35",
+            "id": "a0684e06ea34fa82",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3 CURSO/SEW/4. Computación en la web 🐨.md",
+                "file": "3 CURSO/RI/NoSQL 🐝/NoSQL trabajo 🌏.md",
                 "mode": "source",
                 "source": false
               }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "3 CURSO/SEW/4. Computación en la web 🐨.md",
+                "file": "3 CURSO/RI/NoSQL 🐝/NoSQL trabajo 🌏.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -95,8 +95,9 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "8b7bca78db1e3e35",
+  "active": "a0684e06ea34fa82",
   "lastOpenFiles": [
+    "3 CURSO/SEW/4. Computación en la web 🐨.md",
     "3 CURSO/RI/NoSQL 🐝/NoSQL trabajo 🌏.md",
     "3 CURSO/RI/Seminarios 🥸.md",
     "3 CURSO/RI/NoSQL 🐝/Entrega NoSQL 🍀.md",
@@ -105,7 +106,6 @@
     "Mac useful commands and customizations .md",
     "3 CURSO/Install Java in environment variables ☕️.md",
     "Cybersecurity/Python 🐍.md",
-    "3 CURSO/DS/5. Patrones de diseño Introducción ⏰.md",
-    "3 CURSO/DS/1. Introducción 🛎.md"
+    "3 CURSO/DS/5. Patrones de diseño Introducción ⏰.md"
   ]
 }
