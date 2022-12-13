@@ -23,3 +23,35 @@ CREATE (Keanu)-[:ACTED_IN {roles:['Neo']}]->(TheMatrix) --relacion
 ```
 
 ---
+# 13 Dic 2022 🌯
+
+- El lenguaje consiste en especificar la estructura que quieres encontrar, y el lenguaje te devuelve todas las combinaciones que encajan con esa estructura
+- El resultado es una **tabla** con los datos del return
+- Sale 1 fila por cada MATCH
+- El **WITH** nos permite partir una consulta en trozos
+
+Ejemplos de consultas:
+````sql
+MATCH (n) DETACH DELETE n --borra todo
+
+--Los actores ordenados por edad
+MATCH (p:Person)-[r:ACTED_IN]->(m:Movie) WHERE m.released > 1990 RETURN DISTINCT p, p.name ORDER BY p.born DESC
+--Los actores ordenados por edad sin fecha de nacimiento nula
+MATCH (p:Person)-[r:ACTED_IN]->(m:Movie) WHERE m.released > 1990 AND p.born IS NOT NULL RETURN DISTINCT p, p.name ORDER BY p.born DESC
+--El actor más joven
+MATCH (p:Person)-[r:ACTED_IN]->(m:Movie) WHERE m.released > 1990 AND p.born IS NOT NULL RETURN DISTINCT p, p.name ORDER BY p.born DESC LIMIT 1
+--Los actores con sus películas(con actores repetidos)
+MATCH (p:Person)-[r:ACTED_IN]->(m:Movie) WHERE m.released > 1990 AND p.born IS NOT NULL RETURN p.name, m.title ORDER BY p.name
+--Los actores con sus películas(sin actores repetidos)
+MATCH (p:Person)-[r:ACTED_IN]->(m:Movie) WHERE m.released > 1990 AND p.born IS NOT NULL RETURN p.name, COLLECT(m.title) AS peliculas
+--Los actores con su número total de películas
+MATCH (p:Person)-[r:ACTED_IN]->(m:Movie) WHERE m.released > 1990 AND p.born IS NOT NULL RETURN p.name, COUNT(m.title) AS total
+--Los actores con su número total de películas ordenados por el total
+MATCH (p:Person)-[r:ACTED_IN]->(m:Movie) WHERE m.released > 1990 AND p.born IS NOT NULL RETURN p.name, COUNT(m.title) AS total ORDER BY total DESC
+--Consulta múltiple usando WITH
+MATCH (p:Person)-[r:ACTED_IN]->(m:Movie) WHERE m.released > 1990 AND p.born IS NOT NULL WITH p.name AS nombre, COUNT(m.title) AS total WHERE total >= 4 RETURN nombre, total
+````
+- ==CHEAT SHEET== -> https://neo4j.com/docs/cypher-cheat-sheet/current/
+- Las relaciones sólo pueden tener un tipo, no se pueden realizar operaciones AND
+
+---
