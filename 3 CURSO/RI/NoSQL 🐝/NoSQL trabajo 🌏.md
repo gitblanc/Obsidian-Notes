@@ -50,6 +50,8 @@ MATCH (p:Person)-[r:ACTED_IN]->(m:Movie) WHERE m.released > 1990 AND p.born IS N
 MATCH (p:Person)-[r:ACTED_IN]->(m:Movie) WHERE m.released > 1990 AND p.born IS NOT NULL RETURN p.name, COUNT(m.title) AS total ORDER BY total DESC
 --Consulta múltiple usando WITH
 MATCH (p:Person)-[r:ACTED_IN]->(m:Movie) WHERE m.released > 1990 AND p.born IS NOT NULL WITH p.name AS nombre, COUNT(m.title) AS total WHERE total >= 4 RETURN nombre, total
+
+(a)-[:A|D|W*]-(KB) -- como llegar a un nodo en concreto sin saber los intermedios pero que sean de tipos determinados
 ````
 - ==CHEAT SHEET== -> https://neo4j.com/docs/cypher-cheat-sheet/current/
 - Las relaciones sólo pueden tener un tipo, no se pueden realizar operaciones AND
