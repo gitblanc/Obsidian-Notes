@@ -463,5 +463,145 @@ La dependencia en un programa orientado a objetos bien diseñado suele ser a la 
 - Los patrones de diseño son elementos arquitectónicos más pequeños
 - Los patrones de diseño son generales; los frameworks, especializados
 
-# 5.
+# 5. Strategy
+---
+- Encapsular el concepto que varía
+- Favorecer composición sobre la herencia
+- Programar para una interfaz, no para una implementación
+
+### Propósito
+- Define una familia de algoritmos, encapsula cada uno y los hace intercambiables. Permite que el algoritmo varíe de forma independiente a los clientes que lo usan.
+
+- Es un **patrón de comportamiento** también conocido como **Policy**
+![[Pasted image 20221214222810.png]]
+
+### Aplicabilidad
+- Permite configurar una clase con un comportamiento determinado de entre varios
+- Se necesitan distintas variantes de un algoritmo
+- Los distintos comportamientos de una clase aparecen como múltiples sentencias condicionales.
+	- El patrón Strategy permite mover cada rama de esos condicionales anidados a su propia clase
+
+### Estructura
+![[Pasted image 20221214222957.png]]
+
+### Participantes
+- **Strategy (Compositor)**: declara una interfaz común
+- **ConcreteStrategy** **(SimpleCompositor, TeXCompositor, ArrayCompositor)**: implementa los distintos algoritmos
+- **Context (Composition)**:
+	- Se configura como una estrategia concreta
+	- Mantiene una referencia a dicho objeto Strategy
+	- Puede definir operaciones para permitir a la estrategia acceder a los datos que necesite
+
+### Colaboraciones
+- La Estrategia y el contexto colaboran para implementar el algoritmo escogido
+	- El contexto puede pasar todos los datos que necesita al llamar a la estrategia concreta
+	- O se puede pasar a sí mismo como referencia para que aquélla llame a los métodos que necesite
+- Los clientes colaboran en el contexto
+	- Pueden pasarle la estrategia concreta
+
+Consecuencias
+- Es una alternativa a la herencia
+	- Evita la duplicación de código
+	- Evita la explosión de subclases
+	- Hace que el contexto sea más fácil de entender, modificar y mantener
+	- Se puede cambiar dinámicamente
+![[Pasted image 20221214223631.png]]
+![[Pasted image 20221214223643.png]]
+- Sin embargo, crece el número de objetos
+
+### Posibles usos
+- Validadores de campos de formularios
+- Distintas modalidades de juego (niveles de dificultad, tipo de juego...) 
+
+# 6. Factory Method y Abstract Factory 
+---
+- ¿Qué pasa con new()?
+![[Pasted image 20221214224846.png]]
+![[Pasted image 20221214224954.png]]
+- Es decir, tenemos una serie de clases concretas que instancias, y la decisión de cuál debe ser sólo se puede tomar en tiempo de ejecución
+- Cada vez que aparecen nuevas clases o se eliminan, hay que modificar el código
+- Tenemos que identificar aquellos aspectos que varían y separarlos de lo que tiende a permanecer igual
+![[Pasted image 20221214225257.png]]
+![[Pasted image 20221214225322.png]]
+![[Pasted image 20221214225404.png]]
+![[Pasted image 20221214225427.png]]
+¿Qué ocurre si añadimos o eliminamos algún tipo de pizza?
+- Que tenemos que modificar el código
+![[Pasted image 20221214225538.png]]
+![[Pasted image 20221214225603.png]]
+![[Pasted image 20221214225631.png]]
+![[Pasted image 20221214225721.png]]
+![[Pasted image 20221214225750.png]]
+![[Pasted image 20221214225856.png]]
+
+### Aclaración:
+- Un método de creación es cualquier método (estático o no) que devuelve una instancia de un objeto
+- Una clase es una factoría (**Factory**) si implementa uno o más métodos de creación
+
+
+Ahora resulta que queremos añadir dos estilos de pizzerías (estilo New York y estilo Chicago)
+- Tendremos que crear un framework para la pizzería:
+![[Pasted image 20221214230908.png]]
+![[Pasted image 20221214230227.png|500]]
+![[Pasted image 20221214230339.png]]
+![[Pasted image 20221214230355.png]]
+ ¿Quién es el responsable de decidir qué objeto Pizza se crea?
+ - Las subclases (usando el patrón **Factory Method**)
+
+## Factory Method
+- Es un patrón de creación
+
+### Propósito
+- Define una interfaz para crear un objeto, pero deja que sean las subclases quienes decidan la clase del objeto a crear
+- También conocido como Constructor virtual
+
+### Aplicabilidad
+- Úsese cuando:
+	- Una clase no puede anticipar la clase de objetos que debe crear
+	- Una clase quiere que sus subclases especifiquen los objetos a crear
+	- Hay clases que delegan responsabilidades en una o varias subclases y queremos localizar el conocimiento de qué subclase es el delegado
+
+### Estructura
+![[Pasted image 20221214230816.png]]
+En Java:
+- Podemos pasarle el nombre de la clase al método de fabricación y crear ésta mediante reflectividad
+- Más común:
+	- Guardar la clase en una variable de clase estática de Application
+	- De esa manera no hay que heredar de ella sólo para cambiar el tipo de producto
+	- 
+## Abstract Factory
+### Propósito
+- Define una interfaz para crear familias de objetos relacionados sin especificar sus clases concretas
+![[Pasted image 20221214233742.png]]
+![[Pasted image 20221214233811.png]]
+
+### Estructura
+![[Pasted image 20221214233900.png]]
+
+### Consecuencias
+- Aísla las clases concretas
+	- Los clientes manipulan los productos únicamente a través de sus interfaces abstractas, gracias a que las clases de productos concretos están encapsuladas en cada fábrica concreta, no aparecen en el código
+	- Basta con cambiar una única clase, en un único sitio: la fábrica concreta
+	- Dificulta añadir nuevos tipos de productos
+		- Hay que cambiar la interfaz de la fábrica abstracta y por tanto implementar el nuevo método en todas sus subclases
+
+### Implementación
+- Las fábricas pueden ser **Singletons**
+- Crear los productos:
+	- Normalmente el **Abstract Factory** emplea a su vez un Factory Method para cada producto
+	- Otra posibilidad es usar el patrón **Prototype**: una clase única para la fábrica abstracta y tener distintos tipos de objetos de la misma configurados mediante prototipos
+- Fábricas extensibles:
+	- Pretenden resolver el problema de poder añadir nuevos tipos de productos
+	- Un único método de creación especificando el tipo de producto como parámetro
+	- Es más flexible pero menos seguro:
+		- Todos los productos deben compartir el mismo tipo base
+		- Se pierde la comprobación estática de tipos
+
+## Diferencias entre Factory, Factory Method y Abstract Factory
+![[Pasted image 20221214234702.png]]
+
+### Encapsular clases con Factory
+- Hacer los constructores privados y dejar que los clientes creen objetos de ellas usando una factoría
+
+# 7. Composite, State y Template Method
 ---
