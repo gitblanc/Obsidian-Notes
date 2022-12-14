@@ -182,3 +182,171 @@ programador)
 - Impacto en el resto del diseño si cambiamos unas u otras
 ![[Pasted image 20221214182147.png]]
 ![[Pasted image 20221214182358.png]]
+
+# 3 Principios de diseño
+---
+Síntomas de un diseño pobre:
+- **Rigidez**: es difícil de cambiar. Un cambio produce una sucesión de cambios en cascada
+- **Fragilidad**: es fácil que falle. Un cambio en una parte causa un fallo en otras partes no relacionadas
+- **Inmovilidad**: es difícil de reutilizar
+- **Viscosidad**: es difícil hacer lo correcto. Hay dos tipos de viscosidad:
+	- **Del software**: si hacer cambios respetando el diseño original es más costoso que hacerlos mal
+	- **Del entorno de desarrollo**: si es lento e ineficiente
+- **Complejidad innecesaria**: sobrediseño
+- **Repetición innecesaria**: copiar y pegar. Duplicación de código
+- **Opacidad**: es complejo averiguar su intención
+
+## Principios SOLID
+- **SRP**: Single Responsibility Principle
+- **OCP**: Open-Closed Principle
+- **LSP**: Liskov Substitution Principle
+- **DIP**: Dependency Inversion Principle
+- **ISP**: Interface Segregationm Principle
+
+## SRP: Principio de responsabilidad única
+- **Una clase debería tener un único motivo para cambiar**
+- Una responsabilidad es una razón para el cambio
+	- Si podemos pensar en más de un motivo por el que la clase debería cambiar, dicha clase tiene más de una responsabilidad
+
+![[Pasted image 20221214185841.png]]
+No es un buen diseño, porque viola el principio de responsabilidad única:
+- La clase Rectangle tiene dos responsabilidades
+	- Si una de las dos aplicaciones requiriese un cambio en rectangle, afectaría a la otra
+
+## OCP: Principio de abierto-cerrado
+- **Las clases deberían estar abiertas para la extensión, pero cerradas para la modificación**
+- La idea es que los cambios se hagan añadiendo código nuevo, no modificando el anterior que ya funcionaba
+![[Pasted image 20221214190233.png]]
+![[Pasted image 20221214190250.png]]
+
+## LSP: Principio de sustitución de Liskov
+- **Los subtipos deben poder sustituir a sus tipos base** / **Las funciones que usan referencias a una clase base deberían poder usar un objeto de cualquier clase derivada sin saberlo**
+- Dicho de otra forma:
+	- Los objetos de un programa deberían ser reemplazables por instancias de sus subtipos sin alterar el correcto funcionamiento de un programa
+	- Debemos asegurarnos de que las clases derivadas extiendan la clase base sin alterar su comportamiento de manera que se viole el contrato
+
+- No debemos usar `instanceof` ni downcasts
+
+## DIP: Principio de inversión de dependencias
+- **Los módulos de alto nivel no deben depender de los de bajo nivel, ambos deben depender de abstracciones**
+- **Las abstracciones no deben depender de los detalles, sino éstos de las abstracciones**
+![[Pasted image 20221214190912.png]]
+La dependencia en un programa orientado a objetos bien diseñado suele ser a la inversa:
+![[Pasted image 20221214191034.png]]
+
+## Principio de Hollywood
+- **Hay que depender de abstracciones, no de implementaciones concretas**, es decir, **programar para una interfaz, no para una implemenetación**
+
+### ISP: Principio de segregación de interfaces
+- Este principio trata con el problema de las interfaces gruesas (fat). Las clases que tienen este tipo de interfaz no son cohesivas, es decir, deberíamos separar sus métodos en distintos grupos, cada uno de los cuales serviría a un conjunto distinto de clientes.
+- ISP sugiere: **los clientes no deberían tratar con la clase original, sino sólo con la interfaz correspondiente**
+- Es mejor muchas interfaces específicas para cada cliente que una sóla interfaz de propósito general, es decir, los clientes no deberían depender de métodos que no usan.
+
+![[Pasted image 20221214191652.png]]
+![[Pasted image 20221214191707.png]]
+![[Pasted image 20221214191721.png]]
+![[Pasted image 20221214191740.png]]
+![[Pasted image 20221214191751.png]]
+![[Pasted image 20221214191805.png]]
+![[Pasted image 20221214191817.png]]
+
+## Patrones/Principios GRASP
+- Principios generales para asignar responsabilidades
+- GRASP (General Responsibility Assignment Software Patterns)
+- Se refieren a las obligaciones (**responsabilidades**) de un objeto:
+	- Conocer
+		- Conocer los datos privados encapsulados
+		- Conocer los objetos relacionados
+		- Conocer las cosas que puede calcular o derivar
+	- Hacer
+		- Hacer algo él mismo
+		- Iniciar una acción en otros objetos
+		- Controlar y corrdinar actividades en otros objetos
+- Los métodos se definen para llevar a cabo responsabilidades
+- Las responsabilidades se implementan mediante métodos que o actúan sólos o colaboran con otros métodos u objetos
+- Los diagramas de interacción reflejan las decisiones de diseño en la asignación de responsabilidades
+![[Pasted image 20221214192353.png]]
+
+## GRASP 1º: Experto en información
+- Uno de los principios más generales para asignar responsabilidades a los objetos
+- **Asignar una responsabilidad al experto (la clase que tiene la información necesaria para llevarla a cabo)**
+
+## GRASP 2º: Creador
+- ¿Quién debería ser el responsable de la creación de una nueva instancia de una clase?
+![[Pasted image 20221214193005.png]]
+- Si se asignan bien las responsabilidades, el diseño tendrá un bajo acoplamiento, mayor claridad, encapsulamiento y reutilización
+- A veces la creación de objetos requiere una cierta complejidad
+	- En esos casos es conveniente delegar la creación a una clase de fabricación auxiliar (MUCHO OJO CON ABUSAR DE LAS FACTORÍAS)
+
+## GRASP 3º: Bajo acoplamiento
+- ¿Cómo lograr que hay pocas dependencias, que los cambios tengan un bajo impacto e incrementar la reutilización?
+- **Asignar una responsabilidad de manera que el acoplamiento permanezca bajo**
+- **Acoplamiento**: medida de la fuerza con que un elemento está conectado a otros
+	- Un elemento con bajo nivel de acoplamiento no depende de demasiados otros elementos
+- Si una clase presenta un fuerte acoplamiento con otras:
+	- Cambios en esas clases obligan a hacer cambios en ella
+	- Es difícil de entender de manera aislada
+	- Es difícil de reutilizar
+- El alto acoplamiento en sí no es un problema
+	- Es un problema entre elementos que no son estables, que pueden cambiar
+
+## GRASP 4º: Alta cohesión
+- ¿Cómo mantener la complejidad manejable?
+- **Asignar una responsabilidad de manera que la cohesión permanezca alta**
+- **Cohesión**: medida de la fuerza con que se relacionan las responsabilidades de un elemento
+- Una clase con baja cohesión hace muchas cosas no relacionadas o hace demasiado trabajo
+
+## Acomplamiento, cohesión y el cambio
+![[Pasted image 20221214194344.png]]
+![[Pasted image 20221214194428.png]]
+![[Pasted image 20221214194444.png|500]]
+![[Pasted image 20221214194456.png||500]]
+
+## Suficiencia, completitud y ser primitivo
+- **Suficiente**: el componente representa suficientes características de una abstracción como para permitir una asbtracción significativa con el componente
+- **Completo**: la interfaz del componente representa todas las características de la abstracción
+- **Primitivo**: si todas las operaciones que realiza un componente pueden implementarse fácil y eficientemente necesitando acceder a la representación interna del componente
+
+![[Pasted image 20221214194827.png]]
+
+## GRASP 5º: Controlador
+- ¿Quién debe ser el responsable de gestionar un evento de entrada al sistema?
+![[Pasted image 20221214194951.png]]
+
+## GRASP 6º: Polimorfismo
+- ¿Cómo manejar las alternativas basadas en el tipo?¿Cómo crear componentes software conectables?
+![[Pasted image 20221214195115.png]]
+- Hay que intentar huír de la lógica condicional con respecto al tipo (if, instanceof, switch)
+
+## GRASP 7º: Fabricación pura
+- ¿Qué objetos deberían tener la responsabilidad cuando no se quiere violar los principios de alta cohesión y bajo acoplamiento pero, sin embargo, las solouciones que ofrece el experto no son adecuadas?
+![[Pasted image 20221214195326.png]]
+
+## GRASP 8º: Indirección
+- ¿Dónde asignar una responsabilidad, para evitar el acoplamiento directo entre dos o más elementos?
+![[Pasted image 20221214195604.png]]
+
+## GRASP 9º: Variaciones protegidas
+- ¿Cómo diseñar objetos, subsistemas y sistemas de manera que las variaciones o inestabilidades en estos elementos no tengan un impacto no deseable en otros elementos?
+![[Pasted image 20221214195725.png]]
+
+## ¿Qué es un buen diseño?
+- Un sistema está bien diseñado si:
+	- Es fácil de comprender
+	- Es fácil de cambiar
+- Hay que diseñar para el cambio, pues todo programa sufrirá cambios
+- El objetivo del diseño es facilitar esos cambios
+- Un cambio será fácil de realizar si:
+	- Sólo hay que hacerlo en un único sitio
+	- Resulta fácil determinar dónde es dicho lugar
+- Sólo habrá que cambiar en un lugar si:
+	- Las clases y los métodos son cohesivos
+		- Sólo tienen una responsabilidad
+		- Si hacen varias cosas hanrá que modificarlas por distintos tipos de cambios
+	- Se puede cambiar su implementación sin afectar al resto
+
+## Resumen
+- Clases con pocas responsabilidades
+- Métodos con nombres que las indiquen claramente y el uso de patrones de diseño hacen que sea fácil saber cuál es la clase a modificar cuando aparezca algún cambio en los requisitos
+
+# 4.
