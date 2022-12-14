@@ -1,7 +1,5 @@
 # 💚💜TODAS MIS NOTAS💚💜
 ![](https://img.shields.io/badge/Markdown-000000?style=for-the-badge&logo=markdown&logoColor=white)![](`https://img.shields.io/badge/Markdown-000000?style=for-the-badge&logo=markdown&logoColor=white`) ![](https://img.shields.io/badge/Made%20with-Obsidian-blueviolet)
-
-![](https://img.shields.io/github/search/gitblanc/Obsidian-Notes/goto)
 # Hola :-)
 - Si utilizas estos apuntes te agradecería una 🌟 :)
 - Son de libre uso y hechos en Markdown.
