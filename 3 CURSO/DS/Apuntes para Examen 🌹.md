@@ -349,4 +349,119 @@ La dependencia en un programa orientado a objetos bien diseñado suele ser a la 
 - Clases con pocas responsabilidades
 - Métodos con nombres que las indiquen claramente y el uso de patrones de diseño hacen que sea fácil saber cuál es la clase a modificar cuando aparezca algún cambio en los requisitos
 
-# 4.
+# 4. Introducción patrones de diseño
+---
+## Elementos de un patrón
+
+- Cada patrón es una regla de 3 partes que expresa una relación entre un contexto determinado, un problema y una solución
+- **Contexto**: describe las situaciones en las que se da el problema
+- **Problema**: una descripción general que represente bien la esencia de éste
+- **Solución**: cómo resolver el problema. Incluye dos aspectos:
+	- La estructura estática del patrón (clases y sus relaciones)
+	- Su comportamiento, los aspectos dinámicos
+		- ¿Cómo colaboran los participantes?, ¿cómo se reparten el trabajo?, ¿cómo se comunican entre ellos?
+- Los patrones son un esquema. 
+- Un **patrón** es un bloque de construcción mental para ser implementado en un sinfín de aplicaciones y contextos diferentes
+
+## Categorías de patrones
+- Atendiendo a su nivel de abstracción
+	- Arquitectónicos
+	- De diseño
+	- Centrados en el código
+### Patrones arquitectónicos
+- Situados en el nivel de abstracción más alto
+- Describen la arquitectura, la estructura de un sistema en torno a subsistemas y las relaciones entre ellos
+
+### Patrones de diseño
+- Se sitúan en un nivel de abstracción medio, de diseño (independientes del lenguaje de programación)
+
+### Modismos (idioms)
+- Son patrones de muy bajo nivel (codificación)
+- La mayoría son específicos de un lenguaje de programación determinado
+
+## Propiedades de los patrones
+
+1. Un patrón responde a un problema de diseño que se repite frecuentemente en determinadas situaciones y presenta una solución a dicho problema
+2. Los patrones sirven para documentar la experiencia previa, los diseños que ya se probaron útiles
+3. Identifican y especifican abstracciones que están por encima de clases y objetos o componentes individuales
+4. Proporcionan un vocabulario de diseño común
+5. Permiten documentar nuestros diseños
+6. Ayudan a construír arquitecturas complejas y heterogéneas
+
+## La curva de aprendizaje
+- Un catálogo de patrones es un medio para comunicar la experiencia de forma efectiva, reduciendo lo que se conoce como "curva de aprendizaje" del diseño
+
+## Secciones de un patrón de diseño
+- Nombre del patrón (y clasificación)
+- Propósito
+- También conocido como
+- Motivación
+- Aplicabilidad
+- Estructura
+- Participantes
+- Colaboraciones
+- Consecuencias
+- Implementación
+- Código de ejemplo
+- Patrones relacionados
+
+==Hay un total de 23 patrones de diseño a estudiar==
+![[Pasted image 20221214204207.png]]
+
+## ¿Cómo seleccionar un patrón de diseño?
+- Examinar la sección Intent (Propósito)
+- Estudiar cómo se interrelacionan los patrones
+- Estudiar los patrones de propósito similar
+- Tener claras las causas de rediseño
+- Considerar qué es lo más probable que cambie en nuestro diseño
+	- Y encapsular el concepto que varía
+
+## ¿Cómo usar un patrón de diseño?
+- Leer el patrón entero por primera vez
+- Estudiar en detalle las secciones de Estructura, Participantes y Colaboraciones
+- Echar un vistazo al código de ejemplo
+- Elegir los nombres correctos para los participantes en nuestro contexto
+- Definir las clases (interfaces, atributos y relaciones)
+- Definir nombres específicos de la aplicación para las operaciones del patrón
+- Implementar las operaciones que lleven a cabo las responsabilidades del patrón
+
+## Herencia de clases frente a herencia de interfaces
+- Hay que distinguir entre la clase de un objeto y su tipo
+- **Clase**: define la implementación del objeto
+- **Tipo**: es su interfaz (el conjunto de peticiones a las que puede responder)
+- Un objeto puede tener muchos tipos y objetops de distintas clases pueden tener el mismo tipo
+- Especificar el nombre de la clase en el código al crear el objeto nos liga a una implementación particular en vez de a una interfaz
+- **Es mejor crear los objetos indirectamente (Abstract Factory, Factory Method, Prototype)**
+- **Evitando llamar directamente a un método determinado en el código se facilita cambiar la forma en que se responde a una petición (Chain of Responsibility, Command)**
+- **Hay que limitar el software dependiente de plataforma, pues es difícil de llevar a otras (Abstract Factory, Bridge)**
+- **Es preciso ocultar información a los clientes para prevenir los cambios en cascada (Abstract Factory, Bridge, Memento, Proxy)**
+- **Los algoritmos que es probable que cambien a lo largo del tiempo deben estar aislados (Builder, Iterator, Strategy, Template Method, Visitor)**
+- **Es difícil reutilizar clases que están fuertemente acopladas a otras. Esto conduce a sistemas monolíticos donde no se puede cambiar o eliminar una clase sin que afecte a muchas de las demás (Abstract Factory, Bridge, Chain of Responsibility, Command, Facade, Mediator, Observer)**
+- **Extender funcionalidad mediante la herencia (Bridge, Chain of Responsibility, Composite, Decorator, Observer, Strategy)**
+- **A veces es necesario modificar una clase de la que no se dispone del código fuente o que requeriría cambiar montones de subclases existentes (Adapter, Decorator, Visitor)**
+
+## Bibliotecas de clases
+- Son bibliotecas de clases predefinidas
+	- Diseñadas para algúntipo de funcionalidad de propósito general
+- Se basan en la reutilización de código (no nos imponen ningún diseño concreto)
+- Es más importante aún evitar toda posible dependencia: no sabemos qué aplicaciones las van a utilizar
+
+## Frameworks
+- Conjunto de clases cooperantes que constituyen un diseño reutilizable para un determinado tipo de aplicaciones
+- El framework debe ser adaptado a cada aplicación concreta
+	- Creando subclases específicas de la aplicación a partir de las clases abstractas proporcionadas por aquel
+- El framework dictamina cómo será la arquitectura de nuestra aplicación
+
+## Bibliotecas de clases vs Frameworks
+- Cuando reutilizamos una biblioteca de clases escribimos el código principal de la aplicación y llamamos al código que queremos reutilizar
+- En el caso de los Frameworks, escribimos el código específico de la aplicación que será llamado por el framework
+
+## Diferencias entre patrones de diseño y frameworks
+- Los patrones de diseño son más abstractos que los frameworks
+	- Los patrones sólo se codifican en los ejemplos de uso
+	- El framework se escribe en un lenguaje de programación y se puede ejecutar directamente
+- Los patrones de diseño son elementos arquitectónicos más pequeños
+- Los patrones de diseño son generales; los frameworks, especializados
+
+# 5.
+---
