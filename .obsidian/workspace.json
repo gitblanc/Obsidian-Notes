@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "21c4e963549875e0",
+        "id": "d7f12a0529bba23d",
         "type": "tabs",
         "children": [
           {
-            "id": "a0684e06ea34fa82",
+            "id": "29f1eafdb630317f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3 CURSO/RI/NoSQL 🐝/NoSQL trabajo 🌏.md",
+                "file": "3 CURSO/DS/Apuntes para Examen 🌹.md",
                 "mode": "source",
                 "source": false
               }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "3 CURSO/RI/NoSQL 🐝/NoSQL trabajo 🌏.md",
+                "file": "3 CURSO/DS/Apuntes para Examen 🌹.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -95,17 +95,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "a0684e06ea34fa82",
+  "active": "29f1eafdb630317f",
   "lastOpenFiles": [
-    "3 CURSO/SEW/4. Computación en la web 🐨.md",
     "3 CURSO/RI/NoSQL 🐝/NoSQL trabajo 🌏.md",
+    "3 CURSO/DS/img/Pasted image 20221214174911.png",
+    "3 CURSO/DS/img/Pasted image 20221214174842.png",
+    "3 CURSO/DS/Apuntes para Examen 🌹.md",
+    "3 CURSO/SEW/4. Computación en la web 🐨.md",
     "3 CURSO/RI/Seminarios 🥸.md",
     "3 CURSO/RI/NoSQL 🐝/Entrega NoSQL 🍀.md",
     "3 CURSO/RI/NoSQL 🐝/NoSQL 🦋.md",
     "3 CURSO/RI/Recuperación de información ☄️/1. Recuperación de información 🌺.md",
-    "Mac useful commands and customizations .md",
-    "3 CURSO/Install Java in environment variables ☕️.md",
-    "Cybersecurity/Python 🐍.md",
-    "3 CURSO/DS/5. Patrones de diseño Introducción ⏰.md"
+    "Mac useful commands and customizations .md"
   ]
 }
