@@ -941,5 +941,93 @@ Un editor de dibujo permite realizar dibujos compuestos de elementos simples (l�
 
 Un buen ejemplo serían los Eventos de Java y los Listener
 
-# 10. Visitor y Prototype
+# 10. Prototype y Visitor
+---
+## Prototype
+- Supongamos un editor de dibujo
+- Tenemos las figuras de siempre: cuadrado, circulo ,rectángulo y triángulo
+- Pero queremos añadir stencils, es decir, elementos de uml, widgets, o cualquier otra figura compleja
+- El programa obviamente no puede conocer todos los tipos de figura, pues son infinitos y se crean dinámicamente
+
+- El patrón Prototype consiste en que los objetos sepan **cómo clonarse a sí mismos**
+
+### Propósito
+- Especifica los tipos de objetos a crear usando una instancia prototípica y crea nuevos objetos copiando dicho prototipo
+
+![[Pasted image 20221215203949.png]]
+
+### Aplicabilidad 
+- Usese el patrón Prototype cuando un sistema no pueda (o no deba) conocer cómo se crean, componen y representan los productos, y si además se da alguna de estas circunstancias:
+	- las clases a instanciar son definidas en tiempo de ejecución
+	- para evitar construir una jerarquía paralela de factorías de productos
+	- cuando las instancias de una clase puedan tener sólo unos pocos posibles estados, y pueda resultar más convincente crear los objetos correspondientes como prototipos y clonarlos, en vez de instanciar manualmente la clase, cada vez con el estado necesario
+
+### Estructura
+![[Pasted image 20221215204259.png]]
+![[Pasted image 20221215204327.png]]
+
+### Participantes
+- **Prototype**: declara la interfaz para clonarse (suele ser una única operación)
+- **ConcretePrototype**: implementa la operación de clonación
+- **Client**: crea un nuevo objeto diciéndole al prototipo que se clone
+
+- Un cliente le pide al prototipo que se clone
+
+### Consecuencias
+- Como el **Abstract Factory** oculta las clases concretas de producto al cliente
+- También permite:
+	- Añadir y eliminar productos dinámicamente (en tiempo de ejecución)
+	- Especificar nuevos objetos modificando valores de sus propiedades
+		- Mediante composición 
+	- Especificar nuevos objetos variando su clase (como en el **Composite**)
+	- Reduce las subclases (a diferencia del **Factory Method**)
+
+Inconvenientes:
+- La implementación de la operación de clonación puede no ser fácil
+
+## Visitor
+
+### Propósito
+- Representa una operación a realizar sobre una estructura de objetos. Permite definir nuevas operaciones sin modificar las clases de los elementos sobre los que opera
+![[Pasted image 20221215205904.png]]
+![[Pasted image 20221215205954.png]]
+![[Pasted image 20221215210008.png]]
+![[Pasted image 20221215210045.png]]
+
+- En Java, el enlace dinámico no se aplica a los parámetros, sino sólo al receptor del mensaje
+
+### Aplicabilidad
+Debería aplicarse cuando:
+- Una estructura de objetos contiene muchas clases de objetos con diferentes interfaces, y queremos realizar operaciones sobre esos elementos que dependen de su clase concreta
+- Se necesitan realizar muchas operaciones distintas y no relacionadas sobre objetos de una estructura de objetos, y queremos evitar contaminar sus clases con dichas operaciones
+	- El **Visitor**  permite mantener juntas operaciones relacionadas definiéndolas en una clase
+
+### Estructura
+![[Pasted image 20221215211855.png]]
+![[Pasted image 20221215211917.png]]
+
+### Participantes
+- **Visitor**:
+	- Declara una operación **visit** para  cada clase de operación **ConcreteElement**
+	- El nombre y signatura identifican a la clase que envía la petición visit al visitante
+- **ConcreteVisitor**:
+	- Implementa cada operación declarada por **Visitor**
+	- Cada operación implementa un fragmento del algoritmo definido por la clase correspondiente de la estructura
+	- **ConcreteVisitor** proporciona el contexto para el algoritmo y guarda su estado local
+- **Element**: define una operación **accept** que recibe un visitante como argumento
+- **ObjectStructure**: 
+	- Permite enumerar sus elementos
+	- Puede proporcionar una interfaz de alto nivel para permitir al visitante visitar sus elementos
+	- Puede ser un **Composite** o una colección, como una lista o un conjunto
+
+### Colaboraciones
+- Un cliente debe crear un objeto ConcreteVisitor y a continuación recorrer la estructura visitando cada objeto con el **Visitante**
+- Cada vez que se visita un elemento, éste llama a la operación del Visitor que se corresponde con su clase
+	- El elemento se pasa a sí mismo como argumento de la operación, en caso de que sea necesario
+
+### Consecuencias
+- El visitante facilita añadir nuevas operaciones
+- Un visitante agrupa operaciones que están relacionadas y separa las que no lo están
+- Es difícil añadir nuevas clases de elementos concretos
+
 ---
