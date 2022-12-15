@@ -744,3 +744,88 @@ Un editor de dibujo permite realizar dibujops compuestos de elementos simples (l
 
 # 8. Adapter y Command
 ---
+## Adapter
+- Es un patrón estructural
+### Propósito
+- Convierte la interfaz de una clase en otra que es la que esperan los clientes. Permite que trabajen juntas clases que de otro modo no podrían por tener interfaces incompatibles
+![[Pasted image 20221215130354.png]]
+- Muchas veces el adaptador tendrá que implementar funcionalidad que la clase adaptada no hace
+
+### Aplicabilidad
+- Queremos usar una clase existente y ésta no tiene la interfaz (tipo) que necesitamos
+- Queremos crear una clase reutilizable que coopere con clases con las que no está relacionada (interfaces incompatibles)
+- (Sólo la versión de objetos) Necesitamos usar varias subclases existentes pero sin tener que adaptar su interfaz creando una nueva subclase de cada una
+	- Un adaptador de objetos puede adaptar la interfaz de su clase padre
+
+### Estructura
+![[Pasted image 20221215130806.png]]
+![[Pasted image 20221215130843.png]]
+![[Pasted image 20221215130911.png]]
+![[Pasted image 20221215130933.png]]
+
+### Participantes
+- **Target**: define la interfaz específica del dominio (usada por los clientes)
+- **Client**: colabora con objetos de tipo Target
+- **Adaptee**: la clase existente cuya interfaz necesita ser adaptada
+- **Adapter**: adapta la interfaz de Adaptee a la de Target
+
+### Consecuencias
+- Un adaptador de clases:
+	- Adapta una clase concreta a una interfaz (no se puede usar cuando queremos adaptar una clase y todas sus subclases)
+	- Permite que el adaptador redefina parte del comportamiento de la clase adaptada
+	- Introduce un sólo objeto adicional, sin indirección
+- Un adaptador de objetos:
+	- Permite que un único adaptador funcione para un objeto de la clase adaptada y todas sus subclases
+	- Permite adaptar objetos existentes
+	- No es del tipo del objeto adaptado
+
+## Command
+- Patrón de comportamiento
+
+### Propósito
+- Encapsula una petición dentro de un objeto, permitiendo parametrizar a los clientes con distintas peticiones, encolarlas, guardarlas en un registro de sucesos o implementar un mecanismo de deshacer/repetir
+
+### Motivación
+- La clave de este patrón es una interfaz **Command** que define una operación **execute**
+- Son las subclases concretas quienes implementan la operación y especifican el receptor de la orden
+![[Pasted image 20221215133007.png]]
+![[Pasted image 20221215133020.png]]
+- Lo que permite el patrón Command es desacoplar el objeto que invoca a la operación de aquél que tiene el conocimiento necesario para realizarla
+
+### Aplicabilidad
+- Úsese el patrón Command cuando se quiera:
+	- Parametrizar objetos con una determinada acción
+	- Especificar, guardar y ejecutar una petición en distintos momentos (desacoplamiento atemporal)
+	- Permitir deshace/repetir
+		- En este caso, **execute** deberá guardar el estado para poder revertir los efectos de ejecutar la operación
+		- Y hará falta una operación añadida, **unexecute**
+	- Guardar todas las operaciones ejecutadas en un registro (log)
+		- Proporcionando un par de operaciones **store** y **load**
+	- Usar transacciones (como en RI)
+
+### Estructura
+![[Pasted image 20221215133428.png]]
+![[Pasted image 20221215133450.png]]
+
+### Participantes
+- **Command**: define una interfaz para ejecutar una operación
+- **ConcreteCommand**: 
+	- Asocia un objeto Receiver con una acción
+	- Implementa execute llamando a las operaciones de dicho objeto receptor
+- **Client**: crea un objeto ConcreteCommand y establece su receptor
+- **Invoker**: le pide al Command que se ejecute
+- **Receiver**: quien realmente lleva a cabo la acción
+
+### Colaboraciones
+- El cliente crea un objeto **ConcreteCommand** y especifica su receptor
+- Un objeto **Invoker** guarda el objeto **ConcreteCommand**
+- Aquél llama a la operación de este último
+- El objeto **ConcreteCommand** se vale de las operaciones de su receptor para llevar a cabo la acción
+![[Pasted image 20221215134101.png]]
+
+### Consecuencias
+- Resulta sencillo añadir nuevas acciones, al no tener que tocar las clases existentes
+![[Pasted image 20221215134157.png]]
+![[Pasted image 20221215134241.png]]
+
+# 9. Decorator y Observer
