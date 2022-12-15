@@ -605,3 +605,142 @@ En Java:
 
 # 7. Composite, State y Template Method
 ---
+### Propósito
+- Permite componer objetos en estructuras arbóreas para representar jerarquías de todo-parte, de modo que los clientes puedan tratar a los objetos individuales y a los compuestos de manera uniforme
+
+### Motivación
+Un editor de dibujo permite realizar dibujops compuestos de elementos simples (líneas, rectángulos...) u otros dibujos.
+- ¿Cómo evitamos que los clientes tengan que distinguir entre unos y otros?
+![[Pasted image 20221215112521.png]]
+![[Pasted image 20221215112540.png]]
+
+### Estructura
+![[Pasted image 20221215112613.png]]
+![[Pasted image 20221215112649.png]]
+
+### Participantes
+- **Component**: 
+	- Declara la interfaz común
+	- Implementa el comportamiento predeterminado a todas las clases
+	- Declara operaciones para acceder a los hijos
+	- (opcional) Define una interfaz para acceder al padre
+- **Leaf**: (linea, rectangulo, ...)
+- **Composite**:
+	- Almacena a sus componentes hijos
+	- Implementa las operaciones relacionadas con los hijos
+- **Client**: manipula los objetos de la composición a través de la interfaz de Component
+
+### Consecuencias
+- Permite jerarquías de objetos tan complejas como se quiera
+	- El cliente podrá recibir un compuesto o un primitivo y no se dará cuenta
+- Simplifica el cliente (evita tener que distinguir entre unos y otros)
+- Se pueden añadir nuevos componentes fácilmente
+- DESVENTAJA: puede hace el diseño demasiado general
+
+### Implementación
+- Maximizar la interfaz de Component
+![[Pasted image 20221215113242.png]]
+
+
+## State
+
+### Propósito
+- Permite a un objeto alterar su comportamiento cuando cambia su estado interno en tiempo de ejecución. Parecerá como si el objeto hubiera cambiado su clase.
+
+### Motivación
+![[Pasted image 20221215114813.png]]
+![[Pasted image 20221215114835.png]]
+
+### Aplicabilidad
+Úsese cuando:
+- El comportamiento de un objeto depende de su estado
+	- Éste puede cambiar en tiempo de ejecución
+- Las operaciones tienen sentencias condicionales anidadas que tratan con los estados
+	- El patrón mueve cada rama de la lógica condicional a una clase aparte
+
+### Estructura
+![[Pasted image 20221215115047.png]]
+![[Pasted image 20221215115101.png]]
+
+### Participantes
+- **Context**: 
+	- Define la interfaz que interesa a los clientes
+	- Mantiene una referencia a una subclase de estado concreto que representa el estado actual
+- **State**:
+	- Define la interfaz para encapsular el comportamiento asociado con el estado del contexto
+- **Subclases ConcreteState**: 
+	- Cada clase implementa las operaciones para ese estado concreto
+
+### Colaboraciones
+- El contexto podría pasarse a sí mismo como parámetro
+	- Para que el estado acceda al contexto si es necesario
+- Una vez que el contexto es inicializado en un determinado estado, los clientes no necesitan tratar directamente con los estados
+- O bien el contexto o bien los estados concretos deciden cuándo se pasa de uno a otro estado
+
+### Consecuencias
+- Se pueden añadir nuevos estados y transiciones fácilmente simplemente definiendo nuevas subclases de State
+- Uso de herencia dinámica
+	- Este patrón no sería necesario en lenguajes que permiten cambiar la clase de un objeto en tiempo de ejecución
+- Puede venir bien añadir métodos de entrada (entry) y de salida (exit) a la interfaz de State
+
+![[Pasted image 20221215115954.png]]
+
+
+### ¿En qué se diferencia del Strategy?
+
+- Strategy es seleccionado por un agente externo o por el contexto. Strategy tiende a tener un único método de inicio que llama al resto. Hay **mucha cohesión** entre los métodos de Strategy
+- State  normalmente cambia el estado de su contexto. Un state suele tener muchos métodos no relacionados (**baja cohesión**)
+![[Pasted image 20221215120513.png]]
+
+
+## Template Method
+
+### Propósito
+- Define el esqueleto de un algoritmo en una operación, difiriendo algunos pasos hasta las subclases. Permite que éstas redefinan ciertos pasos del algoritmo sin cambiar la estructura del algoritmo en sí
+
+### Aplicabilidad
+- Para implementar las partes de un algoritmo que no cambian y dejar que las subclases implementen aquéllas otras que pueden variar
+- Como motivo de factorizar código, para evitar código duplicado
+- Para controlar el modo en el que las subclases extienden de la clase base
+
+### Estructura
+![[Pasted image 20221215122415.png]]
+![[Pasted image 20221215122458.png]]
+
+### Participantes
+- **AbstractClass**: 
+	- Define las operaciones primitivas abstractas que redefinirán las subclases
+	- Implementa un método de plantilla con el esqueleto del algoritmo
+- **ConcreteClass**:
+	- Implementa las operaciones primitivas
+
+### Consecuencias
+- Los Template Methods son una técnica fundamental para la reutilización de código
+- Es la clase padre quien llama a operaciones en los hijos
+- Los Template Methods pueden llamar a los siguientes tipos de operaciones
+	- Operaciones concretas de otras clases (o métodos privados de la propia clase)
+	- Operaciones concretas en la propia clase base abstracta (que pueden ser o no redefinidas)
+	- Operaciones primitivas (abstractas), que deberán ser implementadas
+	- Métodos de fabricación (Factory Method)
+	- Operaciones de enganche (**hook**)
+		- Normalmente protegidas, tienen una implementación vacía en la clase abstracta que las subclases podrán redefinir. Son como operaciones opcionales
+
+### Operaciones de enganche
+![[Pasted image 20221215123103.png]]
+![[Pasted image 20221215123128.png]]
+
+### Implementación
+- Hacer a las operaciones primitivas llamadas por el método de plantilla **protected**
+	- Y aquéllas que deban ser obligatoriamente redefinidas **abstractas**
+- Minimizar el número de operaciones primitivas asbtractas
+- Convenio de nombrado:
+	- Que empiecen por **Do-**
+
+### Patrones relacionados
+- **Factory Method**
+	- Los métodos de fabricación son llamados desde métodos plantilla
+- **Strategy**
+	- El Template Method usa la herencia para modificar parte de un algoritmo; el Strategy usa delegación para cambiar el algoritmo entero
+
+# 8. Adapter y Command
+---

@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "d7f12a0529bba23d",
+        "id": "9bf1f921146f080d",
         "type": "tabs",
         "children": [
           {
-            "id": "29f1eafdb630317f",
+            "id": "f7f88a75dbb16f43",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -95,17 +95,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "29f1eafdb630317f",
+  "active": "f7f88a75dbb16f43",
   "lastOpenFiles": [
-    "3 CURSO/RI/NoSQL 🐝/NoSQL trabajo 🌏.md",
-    "3 CURSO/DS/img/Pasted image 20221214174911.png",
-    "3 CURSO/DS/img/Pasted image 20221214174842.png",
+    "3 CURSO/DS/Herencia vs Composición 🧦.md",
     "3 CURSO/DS/Apuntes para Examen 🌹.md",
-    "3 CURSO/SEW/4. Computación en la web 🐨.md",
-    "3 CURSO/RI/Seminarios 🥸.md",
-    "3 CURSO/RI/NoSQL 🐝/Entrega NoSQL 🍀.md",
-    "3 CURSO/RI/NoSQL 🐝/NoSQL 🦋.md",
-    "3 CURSO/RI/Recuperación de información ☄️/1. Recuperación de información 🌺.md",
-    "Mac useful commands and customizations .md"
+    "2 CURSO/TPP/Tipado dinámico y Metaprogramación 👽.md",
+    "2 CURSO/TPP/Tipado dinámico y Metaprogramación (clase)🍒.md",
+    "2 CURSO/TPP/Seminarios TPP 🎀.md",
+    "2 CURSO/TPP/Programación concurrente y paralela (clase)🔫.md",
+    "2 CURSO/TPP/Paradigma Orientado a Objetos 🐤.md",
+    "2 CURSO/TPP/Lenguajes y Paradigmas de la programación 🩳.md",
+    "2 CURSO/TPP/Invariants, preconditions, postconditions 🦠.md",
+    "2 CURSO/TPP/Fundamentos del paradigma funcional 🧮.md"
   ]
 }
