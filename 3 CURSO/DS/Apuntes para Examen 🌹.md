@@ -605,11 +605,12 @@ En Java:
 
 # 7. Composite, State y Template Method
 ---
+## Composite
 ### Propósito
 - Permite componer objetos en estructuras arbóreas para representar jerarquías de todo-parte, de modo que los clientes puedan tratar a los objetos individuales y a los compuestos de manera uniforme
 
 ### Motivación
-Un editor de dibujo permite realizar dibujops compuestos de elementos simples (líneas, rectángulos...) u otros dibujos.
+Un editor de dibujo permite realizar dibujos compuestos de elementos simples (líneas, rectángulos...) u otros dibujos.
 - ¿Cómo evitamos que los clientes tengan que distinguir entre unos y otros?
 ![[Pasted image 20221215112521.png]]
 ![[Pasted image 20221215112540.png]]
@@ -829,3 +830,116 @@ Un editor de dibujo permite realizar dibujops compuestos de elementos simples (l
 ![[Pasted image 20221215134241.png]]
 
 # 9. Decorator y Observer
+---
+
+## Decorator
+
+### Propósito
+- Permite añadir responsabilidades a un objeto dinámicamente. Los decoradores proporcionan una alternativa flexible a la herencia para extender la funcionalidad
+- También conocido como Wrapper
+
+### Estructura
+![[Pasted image 20221215145648.png]]
+![[Pasted image 20221215145818.png]]
+![[Pasted image 20221215145834.png]]
+
+### Aspectos clave
+- Los decoradores tienen el mismo tipo que los objetos que decoran
+	- Por tanto podemos usar un decorador en vez del objeto original
+- Se puede usar uno o más decoradores para envolver un objeto
+- El decorador añade su propio comportamiento antes o después de delegar al objeto decorado el resto del trabajo
+- Los objetos pueden ser decorados en cualquier momento (en tiempo de ejecución y en cualquier orden)
+
+### Motivación 
+- A veces se quiere añadir responsabilidades a objetos individuales, no a toda una clase
+- Una solución más flexible que la herencia sería envolver el componente en otro objeto envoltorio que realice una operación (el decorador)
+- La presencia del decorador es transparente para los clientes del componente
+- El decorador puede llevar a cabo acciones adicionales
+![[Pasted image 20221215150356.png]]
+
+### Aplicabilidad
+- Para añadir responsabilidades a otros objetos dinámicamente y de forma transparente
+- Cuando no se puede heredar o no resulta práctico
+
+### Estructura
+![[Pasted image 20221215150513.png]]
+
+### Participantes
+- **Component**: define la interfaz de los objetos a los que se les puede añadir responsabilidades dinámicamente
+- **ConcreteComponent**
+- **Decorator**: mantiene una referencia a un objeto Component y tiene su misma interfaz
+- **ConcreteDecorator**: añade responsabilidades al componente
+
+### Consecuencias
+- **Ventajas**:
+	- Más flexibilidad que la herencia estática
+	- Evita que las clases de arriba de la jerarquía estén repletas de funcionalidad
+		- En vez de definir una clase compleja para tratar de dar cabida a todas ellas, la funcionalidad se logra añadiendo decoradores a una clase simple
+- **Inconvenientes**: 
+	- Un decorador y sus componentes no son idénticos
+	- Muchos objetos pequeños
+
+![[Pasted image 20221215151101.png]]
+
+### Patrones relacionados
+- **Adapter**
+	- El decorador sólo cambia las responsabilidades del objeto, no su interfaz
+- **Composite**
+	- Un decorator puede verse como un Composite de sólo un componente
+	- Pero el decorador añade responsabilidades adicionales (no está pensado para la agregación de objetos)
+- **Strategy**
+	- Un decorator cambia la piel del objeto, un Strategy sus tripas
+
+![[Pasted image 20221215151445.png]]
+![[Pasted image 20221215151456.png]]
+
+## Observer
+- Patrón de comportamiento de objetos
+
+### Propósito
+- Define una dependencia de uno a muchos entre objetos, de modo que cuando un objeto cambia su estado, todos los demás objetos dependientes se modifican y actualizan su estado automáticamente
+- También conocido como Publicar-Suscribir
+![[Pasted image 20221215153322.png]]
+
+### Aplicabilidad
+- Una abstracción tiene dos aspectos, uno de los cuales depende del otro
+- Un cambio en un objeto requiere que cambien otros
+	- Y no sabemos a priori cuáles ni cuántos
+- Un objeto necesita notificar a otros cambios en su estado sin hacer presunciones sobre quiénes son dichos objetos (cuando no queremos que estén fuertemente acoplados)
+
+### Estructura
+![[Pasted image 20221215153542.png]]
+![[Pasted image 20221215153616.png]]
+![[Pasted image 20221215153649.png]]
+
+### Participantes 
+- **Subject**:
+	- Conoce a sus observadores
+	- Proporciona una interfaz para que se suscriban los objetos Observer (o que se borren)
+- **Observer**:
+	- Define una interfaz para actualizar los objetos que deben ser notificados de cambios en el objeto Subject
+- **ConcreteSubject**:
+	- Guarda el estado de interés para los objetos ConcreteObserver
+	- Envía una notificación a sus observadores cuando cambia su estado
+- **ConcreteObserver**:
+	- Mantiene una referencia al objeto ConcreteSubject
+	- Guarda el estado que debería permanecer sincronizado con el objeto observado
+	- Implementa la interfaz Observer para mantener su estado consistente con el objeto observado
+
+![[Pasted image 20221215154200.png]]
+
+### Consecuencias
+- No se especifica el receptor de una actualización, se envía a todos los interesados
+- Se podrían producir actualizaciones inesperadas en cascada muy ineficientes 
+- La actualización es lanzada por el objeto observado
+
+### Protocolos de actualización
+- Push
+	- El objeto observado envía información detallada a sus observadores sobre el cambio producido (la necesiten o no)
+- Pull
+	- Tan sólo avisa de que cambió (los observadores solicitan la información que necesiten)
+
+Un buen ejemplo serían los Eventos de Java y los Listener
+
+# 10. Visitor y Prototype
+---
