@@ -8,13 +8,13 @@
         "type": "tabs",
         "children": [
           {
-            "id": "87ff6132f2d941d2",
+            "id": "e5020ba55a529f98",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3 CURSO/SEW/Preguntas Examen 👹.md",
-                "mode": "preview",
+                "file": "3 CURSO/IPS/Apuntes para Examen 🤩.md",
+                "mode": "source",
                 "source": false
               }
             }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "3 CURSO/SEW/Preguntas Examen 👹.md",
+                "file": "3 CURSO/IPS/Apuntes para Examen 🤩.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -95,17 +95,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "87ff6132f2d941d2",
+  "active": "317e254f1c7bfd77",
   "lastOpenFiles": [
+    "3 CURSO/IPS/Primer sprint 🌋.md",
+    "3 CURSO/SEW/Preguntas Examen 👹.md",
+    "3 CURSO/IPS/Apuntes para Examen 🤩.md",
     "3 CURSO/SEW/4. Computación en la web 🐨.md",
     "3 CURSO/SEW/Seminarios 🥃.md",
-    "3 CURSO/SEW/Preguntas Examen 👹.md",
     "3 CURSO/SEW/3. XML 💎.md",
     "3 CURSO/SEW/2. Lenguajes de Marcado 🖲.md",
     "3 CURSO/SEW/1. Introducción 🙀.md",
     "3 CURSO/DS/Apuntes para Examen 🌹.md",
-    "3 CURSO/DS/Herencia vs Composición 🧦.md",
-    "3 CURSO/DS/5. Patrones de diseño Introducción ⏰.md",
-    "3 CURSO/DS/4. Introducción al diseño, parte 3 🌼.md"
+    "3 CURSO/DS/Herencia vs Composición 🧦.md"
   ]
 }
