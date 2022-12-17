@@ -64,6 +64,8 @@ elemento global? ==Tiene ambos métodos==
 40. XML. La x del Microsoft Office (tipo docx) ¿se refiere a XML? ¿sólo se usa para
 docx (para Excel, PowerPoint y eso no)? FALTA
 
+---
+
 ## Examen extraordinaria Mayo 2021
 
 1. Sobre el evento "onchange" en JavasCript se puede decir: ==Está definido para los elementos HTML: < input >, < select > y < textarea >==
@@ -76,4 +78,67 @@ docx (para Excel, PowerPoint y eso no)? FALTA
 8. Sobre MariaDB se puede decir: ==Es usada por XAMPP==
 9. Sobre las API de HTML5 se puede decir: ==Están dentro del estándar HTML5 del W3C==
 10. Sobre `$_FILES` en PHP se puede decir: ==Es un array asociativo== 
-11. 
+11. Sobre el uso de la secuencia de elementos complejos no ordenados con < xs:all > en XML se puede decir: ==Los elementos aparecen en cualquier orden==
+12. La cascada en CSS: ==Es uno de los principios fundamentales de las hojas de estilo y permite que varias hojas de estilo afecten a un mismo documento==
+13. Sobre el método mysqli::prepare de PHP, cuando hay código SQL procedente de orígenes externos, se puede decir: ==Es necesario para evitar la inyección directa de SQL==
+14. Sobre el evento "onload" en JavaScript se puede decir: ==Está definido para el elemento HTMl < body >==
+15. Sobre el uso de secciones CDATA en XML se puede decir: ==Permite especificar datos, utilizando cualquier carácter, especial o no, sin que se interprete como marcado XML==
+16. Sobre jQuery se puede decir: ==Es una biblioteca externa==
+17. Sobre HTTPS se puede decir: ==El nivel de cifrado depende del servidor remoto y del navegador utilizado por el cliente==
+18. Sobre el evento "onclick" en JavaScript se puede decir: ==Está definido para todos los elementos HTML==
+19. Sobre el lenguaje derivado de XML denominado XML Signature se puede decir: ==Es utilizado para información de firma electrónica==
+20. Sobre el uso de espacios de nombres en XML se puede decir: ==Evita el problema de la homonimia en las etiquetas==
+21. Sobre PHP se puede decir: ==Es un lenguaje interpretado y ejecutado en el servidor==
+22. Sobre CSS se puede decir que: ==Es un lenguaje para describir la presentación de documentos estructurados (como HTML y XML) en diferentes medios==
+23. Sobre mysqli de PHP se puede decir: ==Es una clase==
+24. Sobre el evento "onmousedown" en JavasCript se puede decir: ==Está definido para todos los elementos HTML==
+25. En cuanto a los selectores en CSS: ==El selector "body>p" selecciona los párrafos que son hijos de los elementos del body==
+26. Sobre XSLT se puede decir: ==Tiene sintaxis XML, No lo soportan los navegadores y es un estándar del W3C==
+27. Sobre JSON se puede decir: ==Es un formato de texto==
+28. Sobre el API Geolocation de HTML5 se puede decir: ==Está dentro del estándar del W3C==
+29. Sobre el lenguaje TypeScript se puede decir: ==Es un lenguaje que tiene comprobación de tipos==
+30. Para establecer la información referida a las palabras clave de un documento HTML5 válido se debe añadir < head >: `<meta name="keywords" content="british,type,face,font"> />`
+31. Del árbol DOM (Document Object Model) construido a partir de un documento HTML5 válido se puede decir: ==Los elementos se representan como objetos que pueden ser manipulados con una API==
+32. Que elementos se deben de utilizar para crear (marcar) secciones dentro de un documento HTML5 válido: ==< article >, < section >, < nav >, < aside >, < header >, < footer >, < address >==
+33. Sobre el uso de tipos abstractos en XML se puede decir: ==Los tipos derivados pueden usarse en los mismos sitios que el tipo base==
+34. En cuanto a la especificidad en CSS: ==El selector ".contenedor" tiene una especificidad de 010==
+35. El elemento < link > de HTML5 sirve para: ==Vincular al documento recursos como los estilos especificados en CSS y comportamiento especificado en archivos JavaScript==
+36. Sobre el lenguaje derivado de XML denominado XAML se puede decir: ==Es utilizado por interfaces y tecnología .NET==
+37. Sobre el evento "onunload" de Javascript se puede decir: ==Está definido para el elemento de HTML < body >==
+38. Sobre `$_GET` en PHP se puede decir: ==Es superglobal==
+39. Sobre los servicios Web se puede decir: ==Permiten la interración entre ordenadores==
+40. Sobre el servicio "onblur" en JavaScript se puede decir: ==Está definido para los elementos HTML: < button >, < input >, < label >, < select >, < textarea > y < body >==
+41. Sobre XAMPP se puede decir: ==Es un entorno de desarrollo local que permite trabajar con Apache, PHP, y MariaDB==
+42. Sobre mysqli::query de PHP se puede decir: ==Que devuelve un objeto==
+43. Sobre el lenguaje WebAssembly se puede decir: ==Su objetivo es incrementar la velocidad de ejecución==
+44. Sobre ajax se puede decir: ==Utiliza el objeto predefinido XMLHttpRequest==
+45. Sobre el objeto "Date" en JavaScript se puede decir: ==Es un objeto predefinido==
+46. Sobre el uso del tipo duración (xs:duration) en XML se puede decir: ==< duracionRuta >P1Y7M29DT10H< /duracionRuta > indica una duración de 1 año 7 meses 29 días y 10 horas==
+47. El modelo de caja CSS generado para un elemento < article > de HTML5: ==Se puede modificar mediante las propiedades margin, padding y border==
+48. Sobre el lenguaje derivado de XML denominado XMI se puede decir: ==Es utilizado en el intercambio de metadatos de diseños de software en UML==
+49. Sobre "const" en JavaScript se puede decir: ==Especifica que las constantes tienen ámbito local a un bloque==
+50. Sobre XPath se puede decir: ==Permite acceder al árbol DOM de un documento XML==
+
+---
+# Datos que Cueva dice "importantes" en clase
+
+- Primer navegadorÑ: ==Lynx==
+- Primer navegador gráfico: ==ViolaWWW==
+- HTML inicialmente sólo tenía 22 etiquetas
+- En un árbol DOM ==no podemos usar el elemento BASE==, en su lugar usamos los path relativos
+- Metalenguaje: ==lenguaje para crear lenguajes==
+- Última  norma de XML: ==Septiembre de 2006==
+- $ es lo mismo que JQuery: ==$ es la abreviatura del constructor de jQuery==
+- ¿Cómo se hace un bucle en jQuery?: ==$(this) recorro "cada" elemento==
+- El padre de una celda es: ==la fila==
+- AJAX: ==JavaScript Asíncrono y XML==
+- El objeto XMLHttpRequest: ==es un objeto de JavaScript que permite usar la comunicación asíncrona=
+- JSON: ==JavaScript Object Notation==
+- ==Todo objeto JavaScript vive en el navegador==
+- Inconveniente del uso de Ajax: ==no es accesible==
+- Google Maps: ==no es accesible==
+- $FILES: ==es la forma de acceder a un archivo del cliente, es un objeto predefinido, no hay que instanciarlo==
+- mysql: ==es una clase==
+- ==No se debe ejecutar instrucciones SQL directamente desde orígenes externos por la inyección de código==
+
+---
