@@ -4,7 +4,7 @@
 4. ¿ECMAScript de qué es estándar? ==Estándar de los lenguajes de Script==
 5. ¿XML de qué es estándar? ==Estándar de transferencia de datos==
 6. ¿Año de la última versión de XML? ==2006==
-7. ¿Última versión de PHP? ==8.2==
+7. ¿Última versión de PHP? ==8.0.12==
 8. ¿Última versión de ECMAScript? ==12==
 9. En JavaScript, si tu pulsas, ¿Qué eventos se lanzan? ==onclick==
 10. mysqli::prepare, ¿para que es? ==(evitar inyección de código, mejorar la seguridad==
@@ -33,12 +33,12 @@ puede aplicar a xs:non negative number? ==Si en xs:string, no en xs:number ni xs
 nodos que se van añadiendo a un árbol? FALTA
 28. Árbol DOM ¿Un tabulador lo trata como un espacio? ¿Un salto de línea lo trata
 como un espacio? ¿Dos espacios los trata como un espacio? ==Un tab lo trata como espacio, un salto de línea como un nuevo#text y varios espacios un solo#text== 
-29. $(*,document.palabraxquenomeacuerdo).each(function (){…}) ¿Selecciona
+29. $(*document.palabraxquenomeacuerdo).each(function (){…}*) ¿Selecciona
 todos los elementos del HTML? ¿Selecciona todos los elementos del body?
 ¿Recorre todos los elementos del HTML? ==Recorre todos los elementos dentro de document.loquesea y sólo esos elementos, no todo el DOM==
 30. Especificidad abc. ¿La a para qué es? ¿para clases? ¿para ids? ¿para
 pseudoelementos? ==a) para ids, b) para clases, atributos y pseudoclases, c) para elementos y pseudoelementos==
-31. PHP ¿es un metalenguaje? ¿es un estándar? … FALTA
+31. PHP ¿es un metalenguaje? ¿es un estándar? … ==Es un lenguaje multiplataforma==
 32. XML ¿es un metalenguaje? ¿es un estándar? … ==Metalenguaje estándar del W3C==
 33. La API de Geolocalización ¿es un estándar de ECMAScript? ¿es un estándar de
 W3C? ¿es un estándar de API nombrequenomeacuerdo? ==Estándar HTML5 del W3C==
@@ -62,18 +62,18 @@ elemento global? ==Tiene ambos métodos==
 ¿tiene un atributo number? FALTA
 39. SVG ¿es un estándar de ECMAScript? ¿es un estándar de W3C? ==Estándar del W3C==
 40. XML. La x del Microsoft Office (tipo docx) ¿se refiere a XML? ¿sólo se usa para
-docx (para Excel, PowerPoint y eso no)? FALTA
+docx (para Excel, PowerPoint y eso no)? ==Se refiere a xml==
 
 ---
 
 ## Examen extraordinaria Mayo 2021
 
-1. Sobre el evento "onchange" en JavasCript se puede decir: ==Está definido para los elementos HTML: < input >, < select > y < textarea >==
+1. Sobre el evento "onchange" en JavaScript se puede decir: ==Está definido para los elementos HTML: < input >, < select > y < textarea >==
 2. Sobre ActiveX se puede decir: ==No se debe usar nunca por problemas de seguridad==
 3. Sobre PHP se puede decir: ==Es un lenguaje dinámico con inferencia de tipos==
 4. Sobre prototype en JavaScript se puede decir: ==Permite modificar objetos añadiendo métodos y propiedades en tiempo de ejecución==
 5. Sobre el evento "onsubmit" en JavaScript se puede decir: ==Está definido para el elemento HTML: < form >==
-6. Para incorporar en un documento HTML5 válido un recurso multimedia de tipo vide (video.mp4) se debe escribir: ==< video src="video.mp4" loop >< /video >==
+6. Para incorporar en un documento HTML5 válido un recurso multimedia de tipo video (video.mp4) se debe escribir: ==< video src="video.mp4" loop >< /video >==
 7. Sobre PHP se puede decir: ==Es un lenguaje que soporta SGBD relacionales==
 8. Sobre MariaDB se puede decir: ==Es usada por XAMPP==
 9. Sobre las API de HTML5 se puede decir: ==Están dentro del estándar HTML5 del W3C==
@@ -122,9 +122,9 @@ docx (para Excel, PowerPoint y eso no)? FALTA
 ---
 # Datos que Cueva dice "importantes" en clase
 
-- Primer navegadorÑ: ==Lynx==
+- Primer navegador: ==Lynx==
 - Primer navegador gráfico: ==ViolaWWW==
-- HTML inicialmente sólo tenía 22 etiquetas
+- HTML inicialmente sólo tenía **==22 etiquetas==**
 - En un árbol DOM ==no podemos usar el elemento BASE==, en su lugar usamos los path relativos
 - Metalenguaje: ==lenguaje para crear lenguajes==
 - Última  norma de XML: ==Septiembre de 2006==
@@ -132,7 +132,7 @@ docx (para Excel, PowerPoint y eso no)? FALTA
 - ¿Cómo se hace un bucle en jQuery?: ==$(this) recorro "cada" elemento==
 - El padre de una celda es: ==la fila==
 - AJAX: ==JavaScript Asíncrono y XML==
-- El objeto XMLHttpRequest: ==es un objeto de JavaScript que permite usar la comunicación asíncrona=
+- El objeto XMLHttpRequest: ==es un objeto de JavaScript que permite usar la comunicación asíncrona==
 - JSON: ==JavaScript Object Notation==
 - ==Todo objeto JavaScript vive en el navegador==
 - Inconveniente del uso de Ajax: ==no es accesible==
@@ -140,5 +140,8 @@ docx (para Excel, PowerPoint y eso no)? FALTA
 - $FILES: ==es la forma de acceder a un archivo del cliente, es un objeto predefinido, no hay que instanciarlo==
 - mysql: ==es una clase==
 - ==No se debe ejecutar instrucciones SQL directamente desde orígenes externos por la inyección de código==
-
+- Uso de variables locales y globales en JavaScript
+	- **==var y let==** en el interior de una función hace que la variable sea **local**, mientras que en el exterior de una función es **global**
+- Lenguajes derivados de XML:
+![[Pasted image 20221217153849.png]]
 ---
