@@ -100,9 +100,9 @@ docx (para Excel, PowerPoint y eso no)? ==Se refiere a xml==
 30. Para establecer la información referida a las palabras clave de un documento HTML5 válido se debe añadir < head >: `<meta name="keywords" content="british,type,face,font"> />`
 31. Del árbol DOM (Document Object Model) construido a partir de un documento HTML5 válido se puede decir: ==Los elementos se representan como objetos que pueden ser manipulados con una API==
 32. Que elementos se deben de utilizar para crear (marcar) secciones dentro de un documento HTML5 válido: ==< article >, < section >, < nav >, < aside >, < header >, < footer >, < address >==
-33. Sobre el uso de tipos abstractos en XML se puede decir: ==Los tipos derivados pueden usarse en los mismos sitios que el tipo base==
+33. Sobre el uso de tipos abstractos en XML se puede decir: ==Los tipos derivados NO pueden usarse en los mismos sitios que el tipo base==
 34. En cuanto a la especificidad en CSS: ==El selector ".contenedor" tiene una especificidad de 010==
-35. El elemento < link > de HTML5 sirve para: ==Vincular al documento recursos como los estilos especificados en CSS y comportamiento especificado en archivos JavaScript==
+35. El elemento < link > de HTML5 sirve para: ==Vincular otros recursos==
 36. Sobre el lenguaje derivado de XML denominado XAML se puede decir: ==Es utilizado por interfaces y tecnología .NET==
 37. Sobre el evento "onunload" de Javascript se puede decir: ==Está definido para el elemento de HTML < body >==
 38. Sobre `$_GET` en PHP se puede decir: ==Es superglobal==
@@ -110,7 +110,7 @@ docx (para Excel, PowerPoint y eso no)? ==Se refiere a xml==
 40. Sobre el servicio "onblur" en JavaScript se puede decir: ==Está definido para los elementos HTML: < button >, < input >, < label >, < select >, < textarea > y < body >==
 41. Sobre XAMPP se puede decir: ==Es un entorno de desarrollo local que permite trabajar con Apache, PHP, y MariaDB==
 42. Sobre mysqli::query de PHP se puede decir: ==Que devuelve un objeto==
-43. Sobre el lenguaje WebAssembly se puede decir: ==Su objetivo es incrementar la velocidad de ejecución==
+43. Sobre el lenguaje WebAssembly se puede decir: ==Su objetivo es incrementar la velocidad de ejecución==, y ==Es un formato binario basado en una máquina de pila==
 44. Sobre ajax se puede decir: ==Utiliza el objeto predefinido XMLHttpRequest==
 45. Sobre el objeto "Date" en JavaScript se puede decir: ==Es un objeto predefinido==
 46. Sobre el uso del tipo duración (xs:duration) en XML se puede decir: ==< duracionRuta >P1Y7M29DT10H< /duracionRuta > indica una duración de 1 año 7 meses 29 días y 10 horas==
@@ -118,6 +118,27 @@ docx (para Excel, PowerPoint y eso no)? ==Se refiere a xml==
 48. Sobre el lenguaje derivado de XML denominado XMI se puede decir: ==Es utilizado en el intercambio de metadatos de diseños de software en UML==
 49. Sobre "const" en JavaScript se puede decir: ==Especifica que las constantes tienen ámbito local a un bloque==
 50. Sobre XPath se puede decir: ==Permite acceder al árbol DOM de un documento XML==
+51. Sobre `$_SERVER` en PHP se puede decir: ==Es un array asociativo==
+52. El puerto que utiliza HTTPS es: ==443==
+53. El puerto que utiliza HTTP es: ==80==
+54. Sobre `$_POST` se puede decir: ==Es una variable superglobal==
+55. Sobre PHP se puede decir: ==Es el lenguaje de script más utilizado en servidores==
+56. Para establecer la información referida al autor de un documento HTML5 válido se debe
+añadir al < head >: ==< meta name="author" content="pepito grillo" />==
+57. Sobre jQuery se puede decir: ==Permite recorrer el árbol DOM y seleccionar los elementos HTML==
+58. Sobre Window en JavaScript se puede decir: ==Es un objeto predefinido==
+59. En cuanto a especificidad en CSS:
+````css
+#contenedor /*Especificidad 100*/
+
+.contenedor /*Especificidad 010*/
+
+body>p /*Especificidad 002*/
+
+a[accesskey] /*Especificidad 011*/
+
+* /*Especificidad 000 (selector universal)*/
+````
 
 ---
 # Datos que Cueva dice "importantes" en clase
