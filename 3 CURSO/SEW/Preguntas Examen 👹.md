@@ -5,7 +5,7 @@
 5. ¿XML de qué es estándar? ==Estándar de transferencia de datos==
 6. ¿Año de la última versión de XML? ==2006==
 7. ¿Última versión de PHP? ==8.0.26==
-8. ¿Última versión de ECMAScript? ==12==
+8. ¿Última versión de ECMAScript? ==13==
 9. En JavaScript, si tu pulsas, ¿Qué eventos se lanzan? ==onclick==
 10. mysqli::prepare, ¿para que es? ==(evitar inyección de código, mejorar la seguridad==
 11. ¿MariaDB es compatible con MySQL? ¿Se usa en XAMPP? ==Si y si (se sustituye por MySQL a partir de la versión 5.5.30)==
