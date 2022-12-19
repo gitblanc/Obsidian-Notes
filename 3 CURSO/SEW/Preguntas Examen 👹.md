@@ -28,7 +28,7 @@ son protocolos? ==Si y si==
 ¿Puede no definirse el tipo de retorno? ==Pueden tener varios retornos, no pueden ser anónimas y son de tipo Function==
 25. xs:length ¿Se puede aplicar a xs:string? ¿Se puede aplicar a xs:number? ¿Se
 puede aplicar a xs:non negative number? ==Si en xs:string, no en xs:number ni xs:nonnegativenumber==
-26. ¿Es JSON un estándar de JavaScript? ¿Tiene un árbol n-ario? ==Es un formato de texto (nop árbol binario)== FALTA un poco
+26. ¿Es JSON un estándar de JavaScript? ¿Tiene un árbol n-ario? ==Es un formato de texto (no árbol binario)== FALTA un poco
 27. ¿XML es un árbol binario equilibrado? ¿Se pone por nodos de clave-valor? ¿Son
 nodos que se van añadiendo a un árbol? FALTA
 28. Árbol DOM ¿Un tabulador lo trata como un espacio? ¿Un salto de línea lo trata
@@ -81,7 +81,7 @@ docx (para Excel, PowerPoint y eso no)? ==Se refiere a xml==
 11. Sobre el uso de la secuencia de elementos complejos no ordenados con < xs:all > en XML se puede decir: ==Los elementos aparecen en cualquier orden==
 12. La cascada en CSS: ==Es uno de los principios fundamentales de las hojas de estilo y permite que varias hojas de estilo afecten a un mismo documento==
 13. Sobre el método mysqli::prepare de PHP, cuando hay código SQL procedente de orígenes externos, se puede decir: ==Es necesario para evitar la inyección directa de SQL==
-14. Sobre el evento "onload" en JavaScript se puede decir: ==Está definido para el elemento HTMl < body >==
+14. Sobre el evento "onload" en JavaScript se puede decir: ==Está definido para el elemento HTML < body >==
 15. Sobre el uso de secciones CDATA en XML se puede decir: ==Permite especificar datos, utilizando cualquier carácter, especial o no, sin que se interprete como marcado XML==
 16. Sobre jQuery se puede decir: ==Es una biblioteca externa==
 17. Sobre HTTPS se puede decir: ==El nivel de cifrado depende del servidor remoto y del navegador utilizado por el cliente==
@@ -91,7 +91,7 @@ docx (para Excel, PowerPoint y eso no)? ==Se refiere a xml==
 21. Sobre PHP se puede decir: ==Es un lenguaje interpretado y ejecutado en el servidor==
 22. Sobre CSS se puede decir que: ==Es un lenguaje para describir la presentación de documentos estructurados (como HTML y XML) en diferentes medios==
 23. Sobre mysqli de PHP se puede decir: ==Es una clase==
-24. Sobre el evento "onmousedown" en JavasCript se puede decir: ==Está definido para todos los elementos HTML==
+24. Sobre el evento "onmousedown" en JavaScript se puede decir: ==Está definido para todos los elementos HTML==
 25. En cuanto a los selectores en CSS: ==El selector "body>p" selecciona los párrafos que son hijos de los elementos del body==
 26. Sobre XSLT se puede decir: ==Tiene sintaxis XML, No lo soportan los navegadores y es un estándar del W3C==
 27. Sobre JSON se puede decir: ==Es un formato de texto==
