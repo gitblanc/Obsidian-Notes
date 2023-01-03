@@ -463,9 +463,48 @@ No siempre serán iguales las tres identidades. El período de tiempo que sí lo
 	- Las consultas son más complicadas
 	- Para jerarquías complejas el rendimiento puede ser peor
 
+### Consultas en JPQL
+![[Pasted image 20230103200537.png]]
+![[Pasted image 20230103200706.png]]
 
+- **getSingleResult()** sólo puede ser invocado para aquellas consultas en las que está garantizado que siempre van a devolver un único resultado. Si se usa cuando puede devolver más de un elemento, null u Optional.empty() saltará una excepción
+![[Pasted image 20230103201016.png]]
+
+- Hay que usar siempre alias
+
+````sql
+select u from User u where u.firstname like 'G%'
+select u from User u where u.firstname not like 'G%'
+select u from User u where u.firstname like '\G%' escape='\'
+````
+
+#### Funciones NOSQL
+![[Pasted image 20230103201349.png]]
+![[Pasted image 20230103201408.png]]
+
+#### ¿Cómo hacer buenas consultas?
+![[Pasted image 20230103201511.png]]
+
+#### Agrupamiento
+![[Pasted image 20230103201732.png]]
+![[Pasted image 20230103201753.png]]
+
+#### Varios SELECT
+- En JPQL los subselects sólo pueden ir dentro del WHERE
+![[Pasted image 20230103201847.png]]
+
+#### Any, all, some, in
+![[Pasted image 20230103201933.png]]
+
+### Repositorios
+
+- Almacén de objetos con interfaz de tipo colección (add, remove..., sin update)
+- Las implementaciones de repositorios resuelven métodos de consulta usando el mapeador
+- Un repositorio por cada entidad
 
 ---
+
+
 
 
 # Preguntas 🎅🏻
