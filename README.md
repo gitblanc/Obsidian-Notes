@@ -6,7 +6,12 @@
 # Hola :-)
 - Si utilizas estos apuntes te agradecería una 🌟 :)
 - Son de libre uso y hechos en Markdown.
-- El entorno para manejarlos que uso es Obsidian, pero puedes usar cualquiera que permita la edición de Markdown.
+- Pongo un emoji random cada día (no tienen significado)
+- El entorno para manejarlos que uso es [Obsidian](https://obsidian.md/), pero puedes usar cualquiera que permita la edición de Markdown. Si lo usáis, podréis ver mis apuntes como los veo yo tal que:
+![imagen](https://user-images.githubusercontent.com/87705461/210357656-2561da7e-66b7-4a6c-a429-205265d15902.png)
+![imagen](https://user-images.githubusercontent.com/87705461/210357876-a5223ae3-0e55-4249-a5bd-8193eb2ffc98.png)
+
+
 - También están mis conocimientos sobre ciberseguridad, por si te curiosean.
 
 
