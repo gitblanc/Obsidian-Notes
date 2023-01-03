@@ -15,7 +15,12 @@
 - También están mis conocimientos sobre ciberseguridad, por si te curiosean.
 
 
-![image](https://user-images.githubusercontent.com/87705461/159601672-3430cfc7-3334-4fd7-97bc-9a62c5f76c05.png)
+![imagen](https://user-images.githubusercontent.com/87705461/210358499-d9ba998a-0e2a-4619-bf64-6a85545024a2.png)
+<img src="https://cdn4.iconfinder.com/data/icons/cyber-security-18/65/97-512.png" align="top" width="55" height="55">
+<img src="https://cdn4.iconfinder.com/data/icons/cyber-security-18/65/6-512.png" align="top" width="55" height="55">
+<img src="https://cdn3.iconfinder.com/data/icons/cyber-security-19/65/39-512.png" align="top" width="55" height="55">
+<img src="https://cdn3.iconfinder.com/data/icons/cyber-security-19/65/59-512.png" align="top" width="55" height="55">
+
 
 ---
 # Markdown Cheat Sheet
