@@ -162,6 +162,16 @@ absolute(int rowNumber); //navega a la fila indicada
 
 ![[Pasted image 20230103123445.png]]
 
+### Niveles de aislamiento
+
+1. Lectura no confirmada (Read Uncommited)
+2. Read committed
+3. Repeatable read
+4. Serializable
+
+### Anomalías vs Niveles de aislamiento
+![[Pasted image 20230103161028.png]]
+
 ### Atributos de calidad para el software
 - **Escalabilidad**: a medida que el sistema crece, qué alternativas razonables existen de lidiar con ese crecimiento
 - **Mantenibilidad**: costes relativos a la reparación o actualización a lo largo de su vida útil
@@ -230,6 +240,229 @@ absolute(int rowNumber); //navega a la fila indicada
 - Convierte una solicitud en un objeto independiente que contiene toda la información sobre la solicitud
 
 ---
+## JPA 🦜
+
+### Entidades y Value Types
+
+- **Entidades**: tienen identidad propia, evolucionan a lo largo del tiempo y participan en asociaciones
+- **Value Types**: no se necesita conocer su identidad, sólo su valor (String, Date, Time, Integer...). Son atributos de entidades y su ciclo de vida está ligado al de la clase
+
+### Identidad
+
+- En Java:
+	- **Identidad** (a == b), *dos referencias apuntan al mismo objeto*
+	- **Equivalencia** (a.equals(b)), *dos objetos representan la misma cosa*
+- En BDD relacional:
+	- La **clave primaria** define la identidad (no hay dos filas con la misma clave)
+
+Hay 3 identidades:
+![[Pasted image 20230103155735.png]]
+
+### ¿Cómo vincular la identidad de la entidad con la identidad Java y la clave primaria?
+A través de *equals()* y *hashCode()*
+
+### Encapsulación
+![[Pasted image 20230103160552.png]]
+
+### Asociaciones
+![[Pasted image 20230103155947.png]]
+
+### Concurrencia
+
+Para controlar las transacciones ACID se usa una única caché por hilo y la BDD gestiona las transacciones
+
+### Implementación de asociaciones
+![[Pasted image 20230103161518.png]]
+
+- Las cardinalidades UNO o sin especificar se interpretan como un único elemento:
+````java
+private Factura factura;
+````
+- Las cardinalidades MUCHO se representan con un 0..* o 1..*
+````java
+private Set<Averia> averias = new HashSet<Averia>();
+````
+
+- Es fundamental mantener las referencias cruzadas (*link* y *unlink*)
+![[Pasted image 20230103161959.png]]
+![[Pasted image 20230103162022.png]]
+
+- Dos getters para el mismo atributo (el público y el de paquete)
+![[Pasted image 20230103162117.png]]
+- Setter restringido
+![[Pasted image 20230103162218.png]]
+
+
+### Entidades
+
+- Representa la existencia de algo en el dominio que es de interés y que tiene identidad propia
+	- Sus propiedades pueden cambiar a lo largo del tiempo, pero sigue siendo "ella"
+	- Puede estar asociada con otras entidades
+	- Su ciclo de vida es independiente de otras entidades
+	- Representamos su **identidad** basándonos en algún rasgo o característica (*atributo(s)*). Los atributos que forman identidad son **inmutables**. Existen dos tipos de identidad:
+		- **Identidad natural**:
+			- Basada en atributos naturales del dominio
+			- Siempre debe existir atributo o combinación que formen identidad natural
+		- **Identidad artificial**:
+			- Basada en atributo extra (artificial) con valor generado sin repetición posible
+````java
+private String id = UUID.randomUUID().toString(); //identidad artificial
+private String dni; //identidad natural
+````
+
+### Value Type
+
+- Son conceptos del dominio (nombre, email, apellidos...)
+- Representan un valor, no tienen identidad (su **valor es inalterable**)
+- Son atributos de una entidad (dependen de la entidad de la que forman parte)
+- Son **inmutables** (no tienen setters), como los tipos básicos de Java: *Integer, Double, String...*
+
+![[Pasted image 20230103163112.png]]
+![[Pasted image 20230103163126.png]]
+
+### Clases asociativas
+
+- Representan a la vez clase y asociación
+- Permiten añadir atributos y funcionalidad a una asociación
+- Cada instancia representa un enlace
+- Identidad compuesta por los dos extremos -> dos objetos sólo pueden estar enlazados una vez
+![[Pasted image 20230103163433.png]]
+
+![[Pasted image 20230103163514.png]]
+
+### equals() y hashCode()
+
+- **Entidades**:
+	- Sólo son redefinidos sobre los atributos que determinan la identidad (*Si se opta por identidad artificial va sobre ese atributo*)
+	![[Pasted image 20230103163803.png]]
+- **Value Types**:
+	- Son redefinidos sobre TODOS los atributos
+	![[Pasted image 20230103163740.png]]
+
+### toString()
+
+- Es útil para la depuración
+- No incluir referencias a otras entidades
+![[Pasted image 20230103164120.png]]
+
+### Ciclo de vida de un objeto persistente
+![[Pasted image 20230103164347.png]]
+
+### Estados de persistencia
+
+- **Transient**: objeto recién creado que no ha sido enlazado con el gestor de persistencia (sólo existe en la memoria)
+- **Persistent**: un objeto enlazado con la sesión en el que todos los cambios que se le hagan serán persistentes
+- **Detached**: un objeto persistente que sigue en memoria después de que termina la sesión (existe en java y en la BDD)
+
+### Control del ciclo de vida
+
+- Se gestiona desde un EntityManager (sesión)
+- Un objeto "está en sesión" cuando está en Persistent
+- La sesión es una caché de primer nivel que:
+	- Garantiza la identidad java y la identidad en BDD
+	- Se optimiza el SQL para minimizar tráfico a la BDD
+![[Pasted image 20230103164855.png]]
+![[Pasted image 20230103164917.png]]
+
+- La identidad sólo está garantizada dentro del contexto:
+![[Pasted image 20230103165331.png]]
+
+### Escenarios de mapeo
+
+- **Green Field**:
+	- El proyecto empieza de nuevo
+	- El diseño no está condicionado por nada anterior
+	- El mapeador genera la base de datos a su medida
+- **Legacy**:
+	- Actualizamos o expandimos un sistema ya existente
+	- La base de datos ya existe de antes
+	- El mapeador se debe adaptar al diseño de una BDD ya existente y seguramente retorcido
+
+### Condiciones de una clase para ser mapeada
+
+- Clases Java planas (POJO)
+- Constructor sin parámetros
+- La información necesaria para persistencia se añade en forma de metadatos (@Anotations, xml)
+![[Pasted image 20230103170246.png]]
+![[Pasted image 20230103170358.png]]
+
+### Posición de @Id
+![[Pasted image 20230103170632.png]]
+
+### Metadatos en anotaciones y XML
+![[Pasted image 20230103170740.png]]
+
+### Categorías de anotaciones
+![[Pasted image 20230103170835.png]]
+![[Pasted image 20230103170905.png]]
+
+### Entidades
+- Una entidad se mapea siempre a una tabla
+![[Pasted image 20230103171014.png]]
+
+### Value Types
+- Representan conceptos adicionales del dominio
+- Su ciclo de vida depende de la entidad que los posee
+- Semántica de composición
+![[Pasted image 20230103171316.png]]
+
+@Embeddable marca una clase como ValueType
+
+### Identity vs Equality
+
+- Java identity        a == b
+- Object Equality       a.equals(b)
+- Database identity        a.getId().equals(b.getId())
+	- Sobre la clave primaria de la tabla
+	- Se mapean con la etiqueta @Id
+	- Todas las clases Entidad deben tener @Id (identificador)
+
+No siempre serán iguales las tres identidades. El período de tiempo que sí lo son se le denomina =="Ámbito de identidad garantizada" o "Ámbito de persistencia"==
+
+### Tipos de claves
+
+- **Candidata**: campo(s) que permiten determinar de forma única una fila
+- **Natural**: candidatas con significado para el usuario. Las entiende y las maneja día a día
+- **Artificial (subrogada)**: sin significado en el dominio, pero sí en el sistema. Son siempre generadas por el sistema
+
+#### Problema con las claves naturales...
+¿Siempre son NOT-NULL?
+¿Nunca van a cambiar?
+¿Nunca se van a repetir?
+
+#### Estrategia recomendable
+- Usar siempre claves artificiales como claves primarias (un Long o un String eficiente)
+
+### Asociaciones en el mapeador
+
+````java
+@OnetoOne (mappedBy = "name")
+@OnetoMany (mappedBy = "name")
+@ManytoOne (mappedBy = "name")
+@ManyToMany (mappedBy = "name")
+````
+
+### Estrategias para mapear la herencia
+
+- **Tabla única para toda la jerarquía**: `InheritanceType.SINGLE_TABLE`
+	- Todas las tablas persisten en una única tabla con la unión de todas las columnas de todas las clases
+	- Usa un discriminador en cada fila para distinguir el tipo
+	- Todas las columnas no comunes deben ser nulables
+	- Van a quedar columnas vacías
+	- Puede generar tablas que ocupan mucho con pocos datos
+- **Tabla por cada clase no abstracta**: `InheritanceType.TABLE_PER_CLASS`
+	- Una tabla por cada clase no abstracta
+	- Las propiedades heredadas se repiten en cada tabla
+	- Evita los nulos
+	- Consultas menos eficientes
+	- Cambios en la superclase se propagan a todas las tablas
+- **Tabla por cada clase**: `InheritanceType.JOINED`
+	- Cada clase de la jerarquía tiene su propia tabla
+	- Las relaciones de herencia se resuelven con FK
+	- Cada tabla sólo tiene columnas para las propiedades no heredadas
+	- Las consultas son más complicadas
+	- Para jerarquías complejas el rendimiento puede ser peor
+
 
 
 ---
@@ -244,3 +477,5 @@ absolute(int rowNumber); //navega a la fila indicada
 	- ==Evitar usar métodos getXXX()==
 	- ==Usar clases envoltorio (wrapper) junto con wasNull()==
 	- ==Usar tipos de datos primitivos junto con wasNull()==
+
+## Preguntas JPA
