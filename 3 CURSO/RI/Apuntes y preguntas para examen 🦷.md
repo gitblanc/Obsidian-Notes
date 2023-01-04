@@ -633,6 +633,137 @@ Difieren en:
 
 ## NoSQL 🪀
 
+### Características de NoSQL
+- Modelo de datos no relacional, basado en agregados
+- Esquema flexible (sin esquema - schemaless)
+- Orientación a clústers
+- Open Source
+- Orientación a los problemas de los grandes servicios web
+- Son bases de datos menos maduras
+- Transacciones de bajo nivel, atomicidad elemental sin transacciones
+- Orientado a procesos
+
+### Principales modelos de datos NoSQL
+- **Clave-Valor**: Riak, Redis...
+- **Documental**: MongoDB, RavenDB...
+- **Almacenamiento en columnas**: Cassandra, HBase...
+- **Grafo**: Neo4j...
+
+### Agregados
+- Agregado:
+	- Conjunto de objetos relacionados tratado como unidad
+	- Unidad típica para **persistencia** (almacenamiento), **consistencia/atomicidad** (transacciones) y **distribución**
+
+### Almacenes Clave-Valor
+- Asociación clave-valor
+- Recuperación del valor buscando por clave
+- Valor es un agregado opaco a la base de datos
+	- Sin semántica, tipo void
+	- La aplicación da semántica
+
+### Bases de datos documentales
+- Sistema clave-valor
+- Valor no opaco, documento agregado con estructura (ej: JSON)
+- Consulta por clave
+- Consulta por contenido del documento
+
+### Almacenes en columna
+- Estructuras de agragados clave-valor en dos niveles:
+	- Primer nivel
+		- Clave de la fila
+		- Agregado asociado
+	- Segundo nivel (columnas)
+		- Clave de columna
+		- Valor de la columna
+
+### Bases de datos de grafo
+- Estructura de datos de grafo
+	- Nodos con propiedades
+	- Relaciones entre nodos (arcos)
+		- Unidireccionales / Bidireccionales
+		- Propiedades en relaciones
+![[Pasted image 20230104160936.png]]
+
+### Distribución de los datos
+- Escalabilidad de datos
+	- **Vertical**: aumentar la capacidad del servidor
+	- **Horizontal**:
+		- Añadir más servidores -> distribución
+		- Bases de datos en clúster
+- Distribución de datos
+	- Repartirlos entre distintos servidores
+	- Mayor rendimiento, disponibilidad
+	- Mayor complejidad
+- Alternativas para la distribución
+	- ==Servidor único, fragmentación y replicación==
+
+### Servidor único
+- No se distribuyen los datos
+- Es la opción más sencilla
+- Es la mejor opción SI SE PUEDE, en función de las necesidades de la aplicación
+
+### Fragmentación (sharding)
+- Consiste en fragmentar los datos y repartirlos entre servidores
+- Cada servidor es responsable de un fragmento
+- No mejora la robustez
+
+### Replicación maestro-esclavo
+- Consiste en replicar los datos entre los nodos
+- **Maestro**: es la fuente de referencia (la autoridad)
+	- Gestiona las actualizaciones
+	- Retransmite las actualizaciones a los esclavos
+	- Son definidos manualmente o automáticamente
+- **Esclavos**: repiten los datos
+- Mayor escalabilidad y robustez en las lecturas
+
+### Replicación entre iguales (peer to peer)
+- No hay maestro, todas las réplicas son equivalentes
+- Todas pueden aceptar actualizaciones (escrituras)
+- Existe una coordinación para sincronizar las actualizaciones
+- Tienen mayor robustez que las maestro-esclavo
+- Puede haber inconsistencias al hacer escrituras simultáneas
+
+### Teorema CAP
+- Elementos principales:
+	- **Consistencia**
+		- Respuestas correctas a los clientes
+	- **Disponibilidad**
+		- Si hay acceso, el nodo contesta
+	- **Particionamiento** (tolerancia a partición)
+		- Partición de clúster dividida por fallo de red, sigue respondiendo a los clientes
+		- Sólo puede haber dos a la vez
+
+### ACID vs BASE
+- ACID tradicional
+	- Atomicidad
+	- Consistencia
+	- aIslamiento
+	- Durabilidad
+- BASE NoSQL
+	- Basically Available
+	- Soft state
+	- Eventual Consistency
+
+### Quorums
+- **==Quorum de escritura==**: W > N/2
+	- Inconsistencia de escritura. Gana la escritura que alzanza la mayoría de nodos
+	- W: nodos que participan en la escritura
+	- N: factor de replicación (número de copias del dato)
+- **==Quorum de lectura==**: R
+	- Número de nodos a contactar para estar seguro de leer el dato actualizado. Depende del W
+	- No hay quorum de escritura, así que hay que preguntar a todos porque puede detectarse un conflicto de escritura
+
+### Map/Reduce
+- Patrón de paralelización de computación en clúster
+- **Map**
+	- Lee datos de agregado y genera listas clave-valor
+	- Paralelizable. Ejecutado en el nodo del agregado
+- **Reduce**
+	- Toman valores pertenecientes a la misma clave y los reducen a un valor único
+	- Paralelizable por valor de clave
+
+
+
 
 # Preguntas 🎅🏻
 ## Preguntas JDBC
@@ -647,3 +778,5 @@ Difieren en:
 ## Preguntas JPA
 
 ## Preguntas Recuperación de Información
+
+## Preguntas NoSQL
