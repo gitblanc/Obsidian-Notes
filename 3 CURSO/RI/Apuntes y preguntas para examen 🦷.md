@@ -507,6 +507,133 @@ select u from User u where u.firstname like '\G%' escape='\'
 
 
 
+## Recuperación de información 🧋
+
+- La **recuperación de información** se ocupa de la representación de documentos y consultas, del matching entre documentos y consultas, de la ordenación de los resultados y de la evaluación del rendimiento de sistemas concretos en relación con las espectativas de los usuarios
+
+### Definiciones básicas
+- La ==**recuperación de información**== (RI) consiste en el estudio y desarrollo de sistemas automatizados que permitan a una persona usuaria determinar si existen (o no) documentos textuales relacionados con una necesidad de información determinada (que se formula normalmente con una consulta textual). Dichos documentos deben ser relevantes para la necesidad de esa persona y normalmente el sistemalos retorna ordenados.
+- Un ==**documento**== es la unidad de trabajo fundamental en un sistema RI, es decir, es el elemento más simple que se puede retornar como un resultado único.
+	- Un documento es un fragmento de texto libre expresado en algún lenguaje natural, usando algún sistema de escritura
+	- El **contenido** puede ser de cualquier tipo y de extensión arbitraria
+- Los sistemas RI pueden explotar la estructura de los documentos
+- Una **==colección==** es un conjunto de documentos con el que las personas usuarias esperan satisfacer  sus necesidades de información
+- En la **==búsqueda *ad hoc*==** la persona usuaria tiene en mente una necesidad específica y formula para la misma una consulta personalizada que envía al sistema de recuperación de información para que éste pueda buscar en una colección de documentos, seleccionar algunos y ordenarlos según su relevancia para la consulta recibida
+- Una **==necesidad de información==** es la expresión de un objetivo informativo concreto que tiene una persona usuaria. Las necesidades se pueden expresar en lenguaje natural, con imágenes o con una serie depalabras clave
+- Una **==consulta==** es una expresión escrita en algún lenguaje de entrada de un sistema RI que la persona usuaria contruye para formular su necesidad de información de tal modo que el sistema sea capaz de recuperar el mayor número posible de resultados relevantes. La mayoría de los sistemas RI aceptan consultas formadas por palabras clave conectadas por operadores booleanos
+
+### Modelo conceptual de RI
+
+![[Pasted image 20230104115815.png]]
+
+- Los documentos de texto en bruto no se utilizan directamente para la recuperación y ranking, es necesario transformarlos durante el proceso de indexado. Cuando esto se lleva a cabo, hay una serie de decisiones que tomar:
+	1. El **vocabulario** a usar
+	2. Las **características** del texto que hay que **preservar/eliminar**
+	3. Explotar (o no) la **estructura** de los documentos
+
+- **Hapax legomenon**: palabra que aparece una única vez en un contexto
+
+### RI vs SGBD
+Difieren en:
+- Los elementos que almacenan
+- Las consultas que aceptan
+- La forma en la que hacen el matching entre elementos y consultas
+- Los resultados que retornan
+
+
+- Los **SGBD** almacenan datos muy estructurados con distintos campos con una semántica bien definida
+- Los sistemas **RI** almacenan textos escritos en lenguaje natural con poca o ninguna estructura y cuya semántica es totalmente ajena al sistema
+
+- Las consultas en los **SGBD** se formulan en lenguajes artificiales y deben estar completamente definidas para funcionar
+- Los sistemas **RI** aceptan consultas en texto libre. Además, las consultas suelen ser cortas, poco específicas e incompletas.
+
+- Los **SGBD** retornan coincidencias exactas
+- Los sistemas **RI** proporcionan resultados aproximados
+
+- Los **SGBD** retornan todos los ítems que hacen match con una conslta concreta y no necesitan estar ordenados
+- Los sistemas **RI** retornan resultados ordenados puesto que algunos documentos son más relevantes que otros
+
+### Historia de la recuperación de información
+- 1940
+	- se describe un dispositivo que permitiría a los usuarios almacenar, enlazar y encontrar información, el ==**memex**==
+- 1950
+	- se introduce el término ==**recuperación de información**==
+	- primera descripción de un **sistema RI automático**. Uso de frecuencia de términos para determinar su relevancia y uso de listas de palabras vacías
+	- primera propuesta de un **sistema de resumen automático**
+- 1960
+	- primera alternativa aritmética a la búsqueda booleana
+	- primer intento de evaluación experimental de sistemas RI
+	- se proponen el modelo vectorial y la similitud del coseno
+- 1970
+	- se propone la ==***cluster hypothesis***==, según la cual los documentos similares tienden a ser relevantes para las mismas consultas
+	- se propone el concepto de ==**idf (*inverse document frequency*)**==
+	- primera colección de evaluación moderadamente grande (11500 documentos)
+- 1980
+	- se propone el ==primer algoritmo de **stemming**==
+	- se propone la técnica **Latent Semantic Indexing**
+	- se inventa la web
+	- primera propuesta de un método **learning to rank**
+- 1990
+	- se propone el ==algoritmo de ranking **BM25**==
+	- se desarrollan los primeros buscadores web
+	- desarrollo de sistemas IR robustos usando **n-grams**
+	- primeros métodos de pseude-relevance feedback
+	- primeros pasos hacia la **web semántica**
+	- se propone el **ranking basado en hiperenlaces**
+	- uso de modelos lingüísticos para RI
+- 2000
+	- Se propone la **Web Semántica**
+	- Se propone el **relevance model**
+	- Se propone el ==método **RM3** de expansión de consultas==
+	- Se presenta un enfoque basado en aprendizaje profundo para hacer la búsqueda neuronal
+- 2010
+	- primera propuesta para usar **word embeddings**
+	- se propone ==**word2vec**==
+
+- **Preprocesamiento de documentos**: consiste en extraer el vocabulario del texto completo aunque se eliminen algunas palabras (palabras vacías) y otras que se aglutinan mediante algoritmos de estematización o lematización
+
+### Tokenización
+- Es el proceso por el que se divide una secuencia de caracteres en elementos significativos más pequeños (**tokens**), que se usarán en el indexado.
+- Hay casos en los que los tokens pueden separarse o mantenerse juntos: Unión Europea, recuperación de información... Este tipo de secuencias se conocen como **términos multipalabra o MWE** (multiword expressions)
+
+### Eliminación de palabras vacías
+- Las ==**palabras vacías**== son aquellas palabras que, a pesar de su uso frecuente, aportan poco significado a un texto por sí solas
+- Durante el procesamiento de documentos también es crucial el método **part of speech tagging**
+
+### Normalización
+- **Normalización**: Se refiere a aquellos procesos que persiguen mejorar el matching entre términos aunque no sean la misma secuencia exacta de caracteres
+- Al proceso de pasar a minúsculas todo el texto se le conoce como **case-folding**
+- Muchos idiomas son lenguas flexivas, por lo que existe el número, género y tiempo de los verbos
+- **==Stemming==**: consiste en truncar las palabras a su **raíz léxica o stem**, no a su lema
+	- Ej: <span style="text-decoration: underline">univers</span>o, <span style="text-decoration: underline">univers</span>idad, <span style="text-decoration: underline">univers</span>itario, <span style="text-decoration: underline">univers</span>itarias
+	- Es una forma sencilla de aglutinar términos semánticamente relacionados, reducir el tamaño del índice e incrementar la exhaustividad
+	- Sin embargo, los algoritmos de stemming sufren de **overstemming** (tendencia a reducir a la misma raíz términos no relacionados)
+	- El overstemming puede reducir la precisión al recuperar documentos que no tienen nada que ver con la necesidad de información expresada en la consulta. Por ello es preferible usar la **lematización**
+- **==Lematización==**: es una herramienta de procesamiento de lenguaje natural. Realiza un análisis morfológico del texto para identificar el lema de cada token
+	- Un **lema** es una palabra que encabeza un artículo en un diccionario o enciclopedia
+	- Mientras que el stemming es una aproximación heurística un tanto cruda, la lematización realmente aglutina todas las formas flexionadas de una palabra en un solo término
+
+### Procesamiento del lenguaje natural
+- El **PLN** es un campo interdisciplinar que involucra la lingüística y la informática con el objetivo de hacer que los ordenadores puedan manejar las complejidades de los lenguajes humanos
+
+### Índices
+- **Stringology**: estudio de algoritmos y estructuras de datos para procesar texto, incluyendo la búsqueda de texto. Incluye pattern matching, búsqueda de subcadenas, búsqueda de subcadenas aproximadas, búsqueda de subcadena común más larga entre dos cadenas y archivos invertidos o índices
+
+- **==Índice==**: estructura de datos que evita que las consultas deban compararse con todos los documentos en la colección
+
+- **==Inverse document frequency==**: cuantos menos documentos contienen un token, más importante es ese token. Si un token aparece mucho no es útil, pero si aparece poco sí lo es
+
+### Modelos RI
+- Para cada modelo hay que especificar
+	1. cómo se representan los documentos
+	2. cómo se representan las consultas
+	3. cuál es la función de ranking
+
+---
+
+## NoSQL 🪀
+
+
 # Preguntas 🎅🏻
 ## Preguntas JDBC
 
@@ -518,3 +645,5 @@ select u from User u where u.firstname like '\G%' escape='\'
 	- ==Usar tipos de datos primitivos junto con wasNull()==
 
 ## Preguntas JPA
+
+## Preguntas Recuperación de Información
