@@ -801,7 +801,10 @@ Difieren en:
 - ==Aceptable si la sentencia se ejecuta únicamente una vez==
 11. ¿Qué patrón nos permite acceder a un servicio sin conocer la clase que lo implementa?
 - ==Service Layer==
-
+12. Determina si la siguiente aplicación presenta anomalías y en tal caso qué nivel(es) de aislamiento evitan que se produzcan
+![[Pasted image 20230105131154.png]]
+- ==Se produce una lectura no repetible.==
+- ==Evitaría que se produjese los niveles de lectura repetible y serializable==
 
 ## Preguntas JPA
 
@@ -824,6 +827,9 @@ where a.mark >= 5 and a.subject.id = ?1
 - ==**Entidad**: sobre los atributos que conformen la identidad de la entidad (ya sea natural o artificial)==
 - ==**ValueType**: sobre TODOS los atributos==
 7. ¿Qué estrategias usan los mapeadores O/R para recrear en memoria una sección del grafo?
+FALTA
+8. ¿Por qué no se puede utilizar como identidad de una entidad un atributo con las anotaciones @Id @GeneratedValue?
+- ==No se debe utilizar  @GeneratedValue pues la identidad es inestable, ya que no se asigna hasta FLUSH de la base de datos.==
 
 
 
@@ -850,6 +856,12 @@ where a.mark >= 5 and a.subject.id = ?1
 	- ==Entorno adversarial
 	- ==Es preciso explotar la estructura de hiperenlaces
 	- ==Puede explotarse el comportamiento agregado de los usuarios==
+6. Unidad de un sistema de recuperación. Puede ser un párrafo, una sección, un capítulo, una página web, un artículo o un libro completo.
+- ==Documento==
+7. Tarea de recuperación de información en la que el usuario especifica su necesidad de información a través de una consulta que inicia una búsqueda de documentos que probablemente son relevantes para el usuario
+- ==Búsqueda *ad hoc*==
+8. El término de *inverse document frequency* fue propuesto en la década de...
+- ==1970==
 
 
 
@@ -874,4 +886,21 @@ where a.mark >= 5 and a.subject.id = ?1
 5. Consulta que devuelva películas que no tienen director
 ````cypher
 MATCH (m:Movie) WHERE NOT ((m)<-[:DIRECTED]-())
+````
+6. ¿Además de las bases de datos en grafo, qué otros tipos de bases de datos se incluyen habitualmente dentro del grupo de sistemas NoSQL?
+- ==Clave-Valor, Documental y Almacenamiento en columnas==
+7. Describe brevemente qué son y cuál es el beneficio principal de los Quorum de lectura y escritura en un cluster de servidores
+- ==**Quorums**: son el número de nodos en los que hay que escribir un dato antes de indicarle al cliente que su dato ya está grabado==
+- ==En la **lectura** es el número de nodos que hay que contactar para leer un dato (y que devuelvan el mismo valor) antes de devolver al cliente el valor pedido==
+- ==En la escritura gana la escritura con la mayoría de nodos==
+8. ¿Cuáles son las alternativas para la distribución de datos en una base de datos en un cluster de servidores?
+- ==Replicación, fragmentación y servidor único==
+9. ¿Cuáles de los siguientes son elementos principales del teorema CAP?
+- ==Consistencia, Disponibilidad y Particionamiento==
+10. Escribe una consulta en Cypher que devuelva los actores de las películas en las que no dirige "Clint Eastwood"
+![[Pasted image 20230105133846.png]]
+````cypher
+MATCH (p:Person)-[r:ACTED_IN]->(m:Movie) 
+WHERE NOT (p2:Person {name: "Clint Eastwood"})-[r2:DIRECTED]->(m)
+RETURN p.name
 ````
