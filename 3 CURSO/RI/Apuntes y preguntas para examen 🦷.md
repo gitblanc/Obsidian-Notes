@@ -75,7 +75,7 @@ absolute(int rowNumber); //navega a la fila indicada
 	- Mejor rendimiento
 	- Mayor seguridad contra inyecciones SQL
 - **CallableStatement**
-![[Pasted image 20230103113554.png]]
+![[Pasted image 20230105124507.png]]
 
 
 ### Tipos de ResultSet
@@ -774,9 +774,104 @@ Difieren en:
 	- ==Evitar usar métodos getXXX()==
 	- ==Usar clases envoltorio (wrapper) junto con wasNull()==
 	- ==Usar tipos de datos primitivos junto con wasNull()==
+4. ¿Qué es un driver (JDBC)?
+==Es una implementación de diferentes clases e interfaces Java que abstraen las funciones de acceso a una base de datos para que los programas Java puedan acceder a diferentes SGBD a través de SQL==
+5. Tipos de resultset en función de su navegabilidad e (in)sensibilidad
+==- En función de su navegabilidad e insensibilidad==
+![[Pasted image 20230103114830.png]]
+- ==En función de su capacidad para actualizar==
+	- ==CONCUR_READ_ONLY: NO actualizable==
+	- ==CONCUR_UPDATABLE: SI actualizable==
+6. Transacciones y niveles de aislamiento como en prácticas
+- ==Una **transacción** es una secuencia de una o má operaciones (lectura/escritura) que reflejan una sola operación en el mundo real. Características de una transacción (ACID):==
+	- ==**Atomicidad**: o se completan o no se completan, nunca quedan a medias==
+	- ==**Consistencia**: sólo se guardan datos válidos==
+	- ==**aIslamiento**: las transacciones no se afectan las unas a las otras==
+	- ==**Durabilidad**: los datos una vez escritos nunca se perderán==
+- ==El **aislamiento** es una propiedad de las transacciones que define cuándo y cómo los cambios producidos por una operación se hacen visibles para las demás operaciones concurrentes. Niveles de aislamiento:==
+![[Pasted image 20230103161028.png]]
+7. Problemas de una transacción concurrente
+==A mayor concurrencia, mayor riesgo de que se produzcan efectos no deseados==
+8. Dado el siguiente esquema, completarlo:
+![[Pasted image 20230105123748.png|500]]
+9. En el modo de aislamiento Read-Uncommitted puede producirse
+- ==Lectura sucia, lectura fantasma y lectura no repetible==
+10. Ventajas de usar Statement
+- ==Mejor para consultas estáticas en tiempo de ejecución==
+- ==Aceptable si la sentencia se ejecuta únicamente una vez==
+11. ¿Qué patrón nos permite acceder a un servicio sin conocer la clase que lo implementa?
+- ==Service Layer==
+
 
 ## Preguntas JPA
 
+1. Entidad y ValueType. ¿Qué es mutable e inmutable en cada uno de ellos? ¿Sobre qué atributos se deben definir los métodos *hasCode()* y *equals()* en cada uno de ellos?
+- ==**Entidad**: una entidad representa un concepto del dominio que se puede asociar a otras entidades y tiene un ciclo de vida independiente. Debe tener una identidad (clave primaria en BDD) que es inmutable. Mutables serían todos quellos atributos que se pudiesen modificar en un futuro y rompiesen el encapsulamiento. Los métodos *hasCode()* y *equals()* se redefinen sólo sobre los atributos que determinan la identidad.==
+- ==**ValueType**: representa un valor, no tiene identidad. Su valor es inalterable. Se suelen presentar como atributos de una entidad. Su ciclo de vida depende enteramente de la entidad a la que pertenece. Son atributos inmutables (no hay setters). Los métodos *hasCode()* y *equals()* se redefinen sobre TODOS los atributos.==
+2. Diferencias XML y anotaciones
+![[Pasted image 20230103170740.png]]
+3. ¿Cómo se debe usar el atributo @Id?
+- ==El atributo @Id se usa para comprobar si dos entidades de la base de datos son la misma: a.getId().equals(b.getId()) -> Si es true, son la misma entidad. Deberemos poner la notación @Id en el atributo de la entidad que vaya a ser clave en la tabla de la BDD.==
+4. Consulta sobre matrícula alumno y asignatura (todos los alumnos con nota mayor de 5 y matriculados en una asignatura con un código)
+````sql
+select a from Alumno a
+where a.mark >= 5 and a.subject.id = ?1
+````
+5. ¿En qué estado están los objetos devueltos por una consulta JPQL?¿y el que devuelve el método find(...)?
+- ==Persistent==
+- ==Persistent==
+6. Entidad y ValueType. ¿Sobre qué atributos se deben definir los métodos *hashCode()* y *equals()* en cada uno de ellos?
+- ==**Entidad**: sobre los atributos que conformen la identidad de la entidad (ya sea natural o artificial)==
+- ==**ValueType**: sobre TODOS los atributos==
+7. ¿Qué estrategias usan los mapeadores O/R para recrear en memoria una sección del grafo?
+
+
+
 ## Preguntas Recuperación de Información
 
+1. Definir consulta
+- ==Es la traducción de una necesidad de información==
+2. Ventaja *stemming*
+- ==**Stemming**: Reducción de palabras a su raíz (que no a su lema)==
+	- Ej: <span style="text-decoration: underline">univers</span>o, <span style="text-decoration: underline">univers</span>idad, <span style="text-decoration: underline">univers</span>itario, <span style="text-decoration: underline">univers</span>itarias
+	- ==Ventajas:
+		- ==Reduce el número de términos que conforman el lenguaje de indexación
+		- ==Aglutina términos que están relacionados semánticamente==
+	- ==Inconvenientes:
+		- ==**Overstemming**: términos no relacionados entre sí pueden reducirse al mismo stem==
+3. idf (inverse document frequency)
+- ==A mayor número de documentos que contienen un término, menor es la importancia del mismo y viceversa.==
+4. ¿Se puede hacer un estudio de la exhaustividad de una búsqueda en la web?
+- ==No, se podría hacer en un entorno controlado donde ya sepamos cuánmtos documentos son relevantes de antemano. En la web, el número de resultados es prácticamente infinito, por lo que aunque retorne 10 documentos y los 10 sean relevantes, aunque la precisión sea del 100% no se sabe cuántos documentos relevantes existen realmente.==
+5. Diferencias recuperación de información tradicional a en la web
+- ==La recuperación en la web es muy distinta:==
+	- ==La cantidad de documentos es muchísimo mayor
+	- ==Mucha mayor heterogeneidad
+	- ==Entorno adversarial
+	- ==Es preciso explotar la estructura de hiperenlaces
+	- ==Puede explotarse el comportamiento agregado de los usuarios==
+
+
+
 ## Preguntas NoSQL
+
+1. Explicar brevemente el teorema CAP
+- ==El teorema CAP dice que en sistemas distribuidos es imposible garantizar a la vez: consistencia, disponibilidad y tolerancia a particiones:==
+	- ==AP: garantizan disponibilidad y tolerancia a particiones, pero no consistencia de forma total
+	- ==CP: garantizan consistencia y tolerancia a particiones, pero sacrifican disponibilidad
+	- ==CA: garantizan consistencia y disponibilidad, pero tienen problemas con la tolerancia a particiones. Este problema se suele gestionar replicando los datos==
+2. Modelos de datos NoSQL
+- ==Clave-Valor
+- ==Documental
+- ==Almacenamiento en columnas
+- ==Grafo==
+3. Consistencia eventual
+- ==Datos inconsistentes pasado un tiempo. Se permite inconsistencia en la replicación, pero eventualmente todos los nodos estarán actualizados==
+4. Quorums
+- ==Son el número de nodos en los que hay que escribir un dato antes de indicarle al cliente que su dato ya está grabado. Después de eso, los datos se siguen propagando por las distintas réplicas.==
+- ==En la **lectura** es el número de nodos que hay que contactar para leer un dato (y que devuelvan el mismo valor) antes de devolver al cliente el valor pedido.==
+- ==En la **escritura** gana la escritura con la mayoría de nodos
+5. Consulta que devuelva películas que no tienen director
+````cypher
+MATCH (m:Movie) WHERE NOT ((m)<-[:DIRECTED]-())
+````
