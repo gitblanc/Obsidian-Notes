@@ -776,12 +776,13 @@ Difieren en:
 	- ==Usar tipos de datos primitivos junto con wasNull()==
 4. ¿Qué es un driver (JDBC)?
 ==Es una implementación de diferentes clases e interfaces Java que abstraen las funciones de acceso a una base de datos para que los programas Java puedan acceder a diferentes SGBD a través de SQL==
-5. Tipos de resultset en función de su navegabilidad e (in)sensibilidad
+5. Tipos de resultset en función de su navegabilidad e (in)sensibilidad. ¿A través de qué método se establece el tipo de ResultSet a utilizar?
 ==- En función de su navegabilidad e insensibilidad==
 ![[Pasted image 20230103114830.png]]
 - ==En función de su capacidad para actualizar==
 	- ==CONCUR_READ_ONLY: NO actualizable==
 	- ==CONCUR_UPDATABLE: SI actualizable==
+- ==Se establece a partir del método *executeQuery()*==
 6. Transacciones y niveles de aislamiento como en prácticas
 - ==Una **transacción** es una secuencia de una o má operaciones (lectura/escritura) que reflejan una sola operación en el mundo real. Características de una transacción (ACID):==
 	- ==**Atomicidad**: o se completan o no se completan, nunca quedan a medias==
@@ -800,17 +801,49 @@ Difieren en:
 - ==Mejor para consultas estáticas en tiempo de ejecución==
 - ==Aceptable si la sentencia se ejecuta únicamente una vez==
 11. ¿Qué patrón nos permite acceder a un servicio sin conocer la clase que lo implementa?
-- ==Service Layer==
+- ==Abstract Factory==
 12. Determina si la siguiente aplicación presenta anomalías y en tal caso qué nivel(es) de aislamiento evitan que se produzcan
 ![[Pasted image 20230105131154.png]]
 - ==Se produce una lectura no repetible.==
 - ==Evitaría que se produjese los niveles de lectura repetible y serializable==
+### Dirty read / Lectura sucia
+
+![[Pasted image 20230103122513.png]]
+
+### Unrepeatable read / Lectura no repetible
+
+![[Pasted image 20230103122624.png]]
+
+### Phantom read / Lectura fantasma
+
+![[Pasted image 20230103122838.png]]
+
+### Inconsistent read / Lectura inconsistente
+
+![[Pasted image 20230103122929.png]]
+13. Completa el siguiente esquema
+![[Pasted image 20230107141914.png]]
+14. Un ResultSet de tipo Scroll Insensitive puede ver:
+==Actualizaciones internas y eliminaciones internas==
+15. ¿Cuál de las siguientes afirmaciones sobre el patrón Transaction Script es cierta?
+- ==Es ideal para sistemas con poca lógica==
+- ==Modelo procedimental simple y fácil de entender== RESP
+- ==Tiene poca sobrecarga de rendimiento==
+- ==Funciona bien cuando se combina con Row Data Gateway o Table Data Gateway==
+- ==Aumenta la duplicación de código==
+- ==No es adecuado cuando el modelo de dominio es complejo==
+16. Completa el siguiente esquema con las operaciones que se realizan
+![[Pasted image 20230107154811.png]]
+17. ¿Qué patrón utilizarías para conectar la interfaz de usuario con los distintos servicios que conforman la aplicación?
+- ==Service Layer==
+18. Una serie de servicios A, B, ... cada uno de los cuales pertenece a un dominio distinto, se ejecutan en aplicaciones separadas y ofrecen cada uno APIs independientes, necesitan ser utilizados conjuntamente por parte de un cliente. Elija UNO de los siguientes patrones de diseño para orquestar su aplicación y explique su adaptación al problema. Fachada, Factory, Layering.
+- ==Fachada: proporciona una interfaz simple para un subsistema complejo, se estructuran varios subsistemas en capas, ya que las fachadas serían el punto de entrada a cada nivel==
 
 ## Preguntas JPA
 
-1. Entidad y ValueType. ¿Qué es mutable e inmutable en cada uno de ellos? ¿Sobre qué atributos se deben definir los métodos *hasCode()* y *equals()* en cada uno de ellos?
-- ==**Entidad**: una entidad representa un concepto del dominio que se puede asociar a otras entidades y tiene un ciclo de vida independiente. Debe tener una identidad (clave primaria en BDD) que es inmutable. Mutables serían todos quellos atributos que se pudiesen modificar en un futuro y rompiesen el encapsulamiento. Los métodos *hasCode()* y *equals()* se redefinen sólo sobre los atributos que determinan la identidad.==
-- ==**ValueType**: representa un valor, no tiene identidad. Su valor es inalterable. Se suelen presentar como atributos de una entidad. Su ciclo de vida depende enteramente de la entidad a la que pertenece. Son atributos inmutables (no hay setters). Los métodos *hasCode()* y *equals()* se redefinen sobre TODOS los atributos.==
+1. Entidad y ValueType. ¿Qué es mutable e inmutable en cada uno de ellos? ¿Sobre qué atributos se deben definir los métodos *hashCode()* y *equals()* en cada uno de ellos?
+- ==**Entidad**: una entidad representa un concepto del dominio que se puede asociar a otras entidades y tiene un ciclo de vida independiente. Debe tener una identidad (clave primaria en BDD) que es inmutable. Mutables serían todos quellos atributos que se pudiesen modificar en un futuro y rompiesen el encapsulamiento. Los métodos *hashCode()* y *equals()* se redefinen sólo sobre los atributos que determinan la identidad.==
+- ==**ValueType**: representa un valor, no tiene identidad. Su valor es inalterable. Se suelen presentar como atributos de una entidad. Su ciclo de vida depende enteramente de la entidad a la que pertenece. Son atributos inmutables (no hay setters). Los métodos *hashCode()* y *equals()* se redefinen sobre TODOS los atributos.==
 2. Diferencias XML y anotaciones
 ![[Pasted image 20230103170740.png]]
 3. ¿Cómo se debe usar el atributo @Id?
@@ -823,13 +856,64 @@ where a.mark >= 5 and a.subject.id = ?1
 5. ¿En qué estado están los objetos devueltos por una consulta JPQL?¿y el que devuelve el método find(...)?
 - ==Persistent==
 - ==Persistent==
+![[Pasted image 20230103164347.png]]
+
+### Estados de persistencia
+
+- **Transient**: objeto recién creado que no ha sido enlazado con el gestor de persistencia (sólo existe en la memoria)
+- **Persistent**: un objeto enlazado con la sesión en el que todos los cambios que se le hagan serán persistentes
+- **Detached**: un objeto persistente que sigue en memoria después de que termina la sesión (existe en java y en la BDD)
+
 6. Entidad y ValueType. ¿Sobre qué atributos se deben definir los métodos *hashCode()* y *equals()* en cada uno de ellos?
 - ==**Entidad**: sobre los atributos que conformen la identidad de la entidad (ya sea natural o artificial)==
 - ==**ValueType**: sobre TODOS los atributos==
 7. ¿Qué estrategias usan los mapeadores O/R para recrear en memoria una sección del grafo?
-FALTA
+- ==Eager loading: se carga un objeto y sus asociados==
+- ==Lazy loading: se carga al necesitarlo==
 8. ¿Por qué no se puede utilizar como identidad de una entidad un atributo con las anotaciones @Id @GeneratedValue?
 - ==No se debe utilizar  @GeneratedValue pues la identidad es inestable, ya que no se asigna hasta FLUSH de la base de datos.==
+9. ¿Qué parámetros mínimos debe recibir el constructor de una Entidad? ¿Y el de un ValueType?¿Por qué?
+- ==Ambos deben recibir al menos un parámetro que corresponda a la clave primaria de la Entidad para que se pueda crear la instancia de la entidad.==
+10. ¿Qué fallos encuentras en estas consultas JPQL?
+````sql
+select * from TMechanics m --no se puede usar *
+select m from Mechanics m --la tabla se llama TMechanics
+select m from mechanic m --la tabla se llama TMechanics
+select * from TMechanics --falta asignar alias a TMechanics
+````
+11. Si bajo la arquitectura hexagonal en una clase que representa una entidad del modelo de dominio hay un `import uo.ri.cws.application.service.*;` ¿qué significa?
+- ==Que se trata de una Factoría de servicios==
+12. Un mapeador de objetos a relacional (O/R) debe resolver las diferencias entre los dos paradigmas. ¿Cómo resuelve un mapeador JPA la herencia?
+- ==**Tabla única para toda la jerarquía**: `InheritanceType.SINGLE_TABLE`
+	- ==Todas las tablas persisten en una única tabla con la unión de todas las columnas de todas las clases
+	- ==Usa un discriminador en cada fila para distinguir el tipo
+	- ==Todas las columnas no comunes deben ser nulables
+	- ==Van a quedar columnas vacías
+	- ==Puede generar tablas que ocupan mucho con pocos datos
+- ==**Tabla por cada clase no abstracta**: `InheritanceType.TABLE_PER_CLASS`
+	- ==Una tabla por cada clase no abstracta
+	- ==Las propiedades heredadas se repiten en cada tabla
+	- ==Evita los nulos
+	- ==Consultas menos eficientes
+	- ==Cambios en la superclase se propagan a todas las tablas
+- ==**Tabla por cada clase**: `InheritanceType.JOINED`
+	- ==Cada clase de la jerarquía tiene su propia tabla
+	- ==Las relaciones de herencia se resuelven con FK
+	- ==Cada tabla sólo tiene columnas para las propiedades no heredadas
+	- ==Las consultas son más complicadas
+	- ==Para jerarquías complejas el rendimiento puede ser peor==
+13. Añadiendo anotaciones de mapeo, ¿cómo se vinculan los dos extremos de una asociación bidireccional?, ¿qué pasa si no se hace?
+- ==Mediante la anotación @ManyToMany(mappedBy="x"). Si no se usase se interpretaría como dos asociaciones unidireccionales separadas==
+14. ¿Es correcta esta consulta?
+````sql
+select i.workOrders.vehicle.client
+from Invoice i
+where i.date = '12/12/2014' --no porque el formato de la fecha no es válido
+````
+15. Describe a grandes rasgos la arquitectura hexagonal
+- ==Lógica en las clases de dominio (la fundamental)
+- ==Servicios en paquete application (transactions scripts se transforman en comandos)
+- ==El mapeador hace persistencia (consultas externalizadas en orm.xml)==
 
 
 
@@ -837,7 +921,7 @@ FALTA
 
 1. Definir consulta
 - ==Es la traducción de una necesidad de información==
-2. Ventaja *stemming*
+2. Ventajas *stemming*
 - ==**Stemming**: Reducción de palabras a su raíz (que no a su lema)==
 	- Ej: <span style="text-decoration: underline">univers</span>o, <span style="text-decoration: underline">univers</span>idad, <span style="text-decoration: underline">univers</span>itario, <span style="text-decoration: underline">univers</span>itarias
 	- ==Ventajas:
@@ -862,8 +946,20 @@ FALTA
 - ==Búsqueda *ad hoc*==
 8. El término de *inverse document frequency* fue propuesto en la década de...
 - ==1970==
-
-
+9. Función de ranking para la asignación de relevancia a los documentos en un buscador basada en los modelos probabilísticos desarrollados por Stephen E. Robertson y Karen Spärk Jones.
+- ==Okapi BM25==
+10. Representación simplificada de documentos utilizada en recuperación de información donde se tiene en cuenta la frecuencia de aparición de las palabras pero no el orden de las mismas
+- ==Índice==
+11. Nombre del algoritmo que permite explotar la estructura de hiperenlaces para determinar el ranking de distintas páginas web en un buscador
+- ==PageRank==
+12. Búsqueda de recursos en una colección que son los más próximos (según una medida de similitud o disimilitud) a un objetivo dado
+- ==Best-match retrieval==
+13. Si estuvieras escribiendo sobre un tema y fueras a usar la información contenida en un documento dicho documento sería... ==relevante==
+14. Sistema de software diseñado para ofrecer listas de documentos en la Web a partir de una consulta textual ==buscador web==
+15. Estudio de sistemas automáticos que permitan a un usuario determinar la existencia o inexistencia de documentos relativos a una necesidad de información formulada habitualmente como una consulta. ==recuperación de información==
+16. El primer sistema de recuperación de información fue descrito en la década de... ==1950==
+17. Técnica para reducir palabras a su raíz: ==estematización (stemming)==
+18. Conjunto de los diferentes términos que aparecen en una colección de documentos: ==vocabulario==
 
 ## Preguntas NoSQL
 
@@ -885,22 +981,50 @@ FALTA
 - ==En la **escritura** gana la escritura con la mayoría de nodos
 5. Consulta que devuelva películas que no tienen director
 ````cypher
-MATCH (m:Movie) WHERE NOT ((m)<-[:DIRECTED]-())
+MATCH (m:Movie) WHERE NOT ((m)<-[:DIRECTED]-(:Person)) return m
 ````
 6. ¿Además de las bases de datos en grafo, qué otros tipos de bases de datos se incluyen habitualmente dentro del grupo de sistemas NoSQL?
 - ==Clave-Valor, Documental y Almacenamiento en columnas==
 7. Describe brevemente qué son y cuál es el beneficio principal de los Quorum de lectura y escritura en un cluster de servidores
-- ==**Quorums**: son el número de nodos en los que hay que escribir un dato antes de indicarle al cliente que su dato ya está grabado==
-- ==En la **lectura** es el número de nodos que hay que contactar para leer un dato (y que devuelvan el mismo valor) antes de devolver al cliente el valor pedido==
-- ==En la escritura gana la escritura con la mayoría de nodos==
-8. ¿Cuáles son las alternativas para la distribución de datos en una base de datos en un cluster de servidores?
+- ==De escritura W>N/2:
+	- ==Son el nº de nodos en los que hay que escribir un dato antes de indicarle al cliente que su dato ya está grabado. Después de eso, los datos se siguen propagando por las distintas réplicas.
+- ==De lectura R:
+	- ==En la lectura es el nº de nodos que hay que contactar para leer un dato (y que devuelvan el mismo valor) antes de devolver al cliente el valor pedido.==
+9. ¿Cuáles son las alternativas para la distribución de datos en una base de datos en un cluster de servidores?
 - ==Replicación, fragmentación y servidor único==
-9. ¿Cuáles de los siguientes son elementos principales del teorema CAP?
+10. ¿Cuáles de los siguientes son elementos principales del teorema CAP?
 - ==Consistencia, Disponibilidad y Particionamiento==
-10. Escribe una consulta en Cypher que devuelva los actores de las películas en las que no dirige "Clint Eastwood"
+11. Escribe una consulta en Cypher que devuelva los actores de las películas en las que no dirige "Clint Eastwood"
 ![[Pasted image 20230105133846.png]]
 ````cypher
 MATCH (p:Person)-[r:ACTED_IN]->(m:Movie) 
 WHERE NOT (p2:Person {name: "Clint Eastwood"})-[r2:DIRECTED]->(m)
 RETURN p.name
+````
+11. Escribe una consulta en Cypher que devuelva los actores que actúan en una película cuyo director también actúa en la misma
+![[Pasted image 20230105133846.png]]
+````cypher
+MATCH (p:Person)-[:ACTED_IN]->(m:Movie)<-[:DIRECTED]-(dir:Person)
+WHERE (dir:Person)-[:ACTED_IN]->(m)
+RETURN p
+````
+12. Escribe una consulta en Cypher que devuelva los directores que actúan en una película que ellos mismos han dirigido
+![[Pasted image 20230105133846.png]]
+````cypher
+MATCH (dir:Person)-[:ACTED_IN]->(m:Movie)<-[:DIRECTED]-(dir)
+RETURN dir
+````
+13. Resume al menos dos inconvenientes que se señalan habitualmente como típicos de las bases de datos NoSQL
+- ==Están menos maduras que las relacionales
+- ==Tienen funcionalidad limitada:
+	- ==No tienen control de seguridad
+	- ==No tienen control de integridad
+- ==Atomicidad elemental sin transacciones o transacciones de bajo nivel==
+14. Escribe una consulta en Cypher que devuelva la película que más actores tiene
+![[Pasted image 20230105133846.png]]
+````cypher
+MATCH (p:Person)-[:ACTED_IN]->(m:Movie)
+WHERE m, count(*) as counter
+ORDER BY counter DESC
+RETURN m
 ````
