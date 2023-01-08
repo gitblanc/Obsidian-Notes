@@ -914,8 +914,40 @@ where i.date = '12/12/2014' --no porque el formato de la fecha no es válido
 - ==Lógica en las clases de dominio (la fundamental)
 - ==Servicios en paquete application (transactions scripts se transforman en comandos)
 - ==El mapeador hace persistencia (consultas externalizadas en orm.xml)==
-
-
+16. Los clientes con saldo en sus bonos (CarWorkshop)
+````sql
+select v.client
+from Voucher v
+where v.available > 0
+````
+17. El último número de factura generado (CarWorkshop)
+````sql
+select max(i.number)
+from Invoice i
+````
+18. La cantidad de órdenes de trabajo en las que trabajó un mecánico entre dos fechas (CarWorkshop)
+````sql
+select count(i.workOrders)
+from Intervention i
+where i.mechanic.dni = ?1 and i.workOrder.date >= ?1 and i.workOrder.date <= ?2
+````
+19. ¿Cuántas órdenes de trabajo tiene asignadas cada mecánico? Proyecta el id del mecánico y la cantidad. (Nota: los mecánicos tienen asignadas las órdenes de trabajo del día; una vez terminada la orden de trabajo ya no tiene mecánico asignado) (CarWorkshop)
+````sql
+select i.mechanic.dni, count(i.workOrders)
+from Intervention i
+group by i.mechanic.dni
+````
+20. Todas las órdenes de trabajo con tiempo total de intervención mayor de 4 horas (una orden de trabajo puede tener varias intervenciones) (CarWorkshop)
+````sql
+select w
+from WorkOrder w
+where w.id in (
+	select i.workorders.id
+	from Intervention i
+	group by i.workOrder.id
+	having sum(i.minutes) > 240
+)
+````
 
 ## Preguntas Recuperación de Información
 
