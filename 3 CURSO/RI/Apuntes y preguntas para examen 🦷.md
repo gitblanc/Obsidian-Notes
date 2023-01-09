@@ -952,7 +952,7 @@ where w.id in (
 ## Preguntas Recuperación de Información
 
 1. Definir consulta
-- ==Es la traducción de una necesidad de información==
+- ==Es la traducción de una necesidad de información que permite al sistema recuperar el mayor número posible de resultados relevantes==
 2. Ventajas *stemming*
 - ==**Stemming**: Reducción de palabras a su raíz (que no a su lema)==
 	- Ej: <span style="text-decoration: underline">univers</span>o, <span style="text-decoration: underline">univers</span>idad, <span style="text-decoration: underline">univers</span>itario, <span style="text-decoration: underline">univers</span>itarias
