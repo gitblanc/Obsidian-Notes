@@ -4,31 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "14ee8d75110e37de",
+        "id": "b756c5446d6bbbd8",
         "type": "tabs",
         "children": [
           {
-            "id": "0cfbbc5779ce88eb",
+            "id": "cb664d007e460add",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "3 CURSO/RI/Apuntes y preguntas para examen 🦷.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "7a2cabc9bc28f4c8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "3 CURSO/RI/JPA 🛰/1. JPA 🚥.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -73,7 +57,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 314.5
   },
   "right": {
     "id": "1b2d980ad4b04eb7",
@@ -89,7 +73,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "3 CURSO/RI/Apuntes y preguntas para examen 🦷.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,17 +99,17 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "0cfbbc5779ce88eb",
+  "active": "317e254f1c7bfd77",
   "lastOpenFiles": [
-    "3 CURSO/RI/JPA 🛰/1. JPA 🚥.md",
-    "3 CURSO/RI/Apuntes y preguntas para examen 🦷.md",
-    "3 CURSO/RI/Seminarios 🥸.md",
-    "3 CURSO/DS/Apuntes para Examen 🌹.md",
-    "3 CURSO/RI/NoSQL 🐝/NoSQL trabajo 🌏.md",
-    "3 CURSO/RI/img/Pasted image 20230105123748.png",
-    "3 CURSO/SEW/Preguntas Examen 👹.md",
-    "README.md",
-    "Mac useful commands and customizations .md",
-    "3 CURSO/RI/JDBC 🚀/Tema 2, Transacciones 🍹.md"
+    "3 CURSO/1 semestre/RI/NoSQL 🐝/NoSQL trabajo 🌏.md",
+    "3 CURSO/1 semestre/RI/Apuntes y preguntas para examen 🦷.md",
+    "3 CURSO/1 semestre/SEW/Preguntas Examen 👹.md",
+    "3 CURSO/1 semestre/SEW/Planificación 🐙.md",
+    "3 CURSO/1 semestre/DS/Apuntes para Examen 🌹.md",
+    "3 CURSO/1 semestre/SEW/4. Computación en la web 🐨.md",
+    "3 CURSO/1 semestre/RI/Seminarios 🥸.md",
+    "3 CURSO/1 semestre/RI/NoSQL 🐝/Entrega NoSQL 🍀.md",
+    "3 CURSO/1 semestre/RI/NoSQL 🐝/NoSQL 🦋.md",
+    "3 CURSO/1 semestre/RI/Recuperación de información ☄️/1. Recuperación de información 🌺.md"
   ]
 }
