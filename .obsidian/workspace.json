@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "b756c5446d6bbbd8",
+        "id": "ea29f10cea05441b",
         "type": "tabs",
         "children": [
           {
-            "id": "cb664d007e460add",
+            "id": "03dd7abf447ffb36",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3 CURSO/2 semestre/ASW/Presentación 🚼.md",
+                "file": "3 CURSO/2 semestre/SSI/Introducción 🥤.md",
                 "mode": "source",
                 "source": false
               }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "3 CURSO/2 semestre/ASW/Presentación 🚼.md",
+                "file": "3 CURSO/2 semestre/SSI/Introducción 🥤.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,8 +104,10 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "317e254f1c7bfd77",
+  "active": "03dd7abf447ffb36",
   "lastOpenFiles": [
+    "3 CURSO/2 semestre/ASW/Presentación 🚼.md",
+    "3 CURSO/2 semestre/SSI/Introducción 🥤.md",
     "3 CURSO/1 semestre/RI/NoSQL 🐝/NoSQL trabajo 🌏.md",
     "3 CURSO/1 semestre/RI/Apuntes y preguntas para examen 🦷.md",
     "3 CURSO/1 semestre/SEW/Preguntas Examen 👹.md",
@@ -113,8 +115,6 @@
     "3 CURSO/1 semestre/DS/Apuntes para Examen 🌹.md",
     "3 CURSO/1 semestre/SEW/4. Computación en la web 🐨.md",
     "3 CURSO/1 semestre/RI/Seminarios 🥸.md",
-    "3 CURSO/1 semestre/RI/NoSQL 🐝/Entrega NoSQL 🍀.md",
-    "3 CURSO/1 semestre/RI/NoSQL 🐝/NoSQL 🦋.md",
-    "3 CURSO/1 semestre/RI/Recuperación de información ☄️/1. Recuperación de información 🌺.md"
+    "3 CURSO/1 semestre/RI/NoSQL 🐝/Entrega NoSQL 🍀.md"
   ]
 }
