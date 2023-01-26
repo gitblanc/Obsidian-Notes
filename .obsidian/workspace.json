@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "d76d1fa99053a087",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "3 CURSO/2 semestre/ASR/Bloque 1 🍭.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -77,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "3 CURSO/2 semestre/SSI/Introducción 🥤.md",
+                "file": "3 CURSO/2 semestre/ASR/Bloque 1 🍭.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,10 +117,10 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "03dd7abf447ffb36",
+  "active": "d76d1fa99053a087",
   "lastOpenFiles": [
-    "3 CURSO/2 semestre/ASW/Presentación 🚼.md",
     "3 CURSO/2 semestre/SSI/Introducción 🥤.md",
+    "3 CURSO/2 semestre/ASW/Presentación 🚼.md",
     "3 CURSO/1 semestre/RI/NoSQL 🐝/NoSQL trabajo 🌏.md",
     "3 CURSO/1 semestre/RI/Apuntes y preguntas para examen 🦷.md",
     "3 CURSO/1 semestre/SEW/Preguntas Examen 👹.md",
