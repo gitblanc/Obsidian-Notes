@@ -59,3 +59,91 @@
 
 ## Acciones
 ![[Pasted image 20230126160121.png||500]]
+
+---
+# 30 Enero 2022 🪀
+
+## Spring vs SpringBoot
+- **Spring**: framework basado en JEE que usa el patrón MVC (modelo vista controlador) para desarrollo de aplicaciones web cuya principal caracteróstica es el uso de un modelo POJO
+- **SpringBoot**: no es un framework, es una forma fácil de desarrollar aplicaciones Spring pero facilitando los aspectos duros de Spring
+
+## SpringBoot
+- Aumenta la agilidad del desarrollo de aplicaciones en Spring
+	- Provee de configuraciones por defecto
+	- Uso opcional de POMs
+	- Evita la generación de código y configuraciones XML
+	- Permite crear aplicaciones stand-alone
+
+## Spring
+- Aplicaciones basadas en el patrón MVC
+- Soporte completo al desarrollo de aplicaciones  POJO
+- Sistema de inyección de dependencias basado en el IoC (**Inversion of control**: el responsable de instanciar es el framework)
+- Gran cantidad de módulos con funcionalidad reutilizable
+- Traducción de excepciones específicas a genéricas
+
+## Standalone
+![[Pasted image 20230130112326.png|500]]
+
+## Entorno de desarrollo
+- IntelliJ
+
+## Main: condiciones
+![[Pasted image 20230130112643.png|500]]
+![[Pasted image 20230130112706.png|500]]
+
+## @SpringBootApplication
+- Tiene 3 anotaciones:
+	- @Configuration
+	- @EnableAutoConfiguration
+	- @ComponentScan: se debe escanear la aplicación en busca de componentes implementados
+
+## Elementos principales
+![[Pasted image 20230130113352.png]]
+
+- Todos son componentes
+- Algunos añaden funcionalidad al componente
+- Todos los componentes se procesan internamente como Beans (clase Java POJO con constructor por defecto y con getters y setters)
+	- Los beans registrados contienen una instancia de un objeto
+- Los componentes son instanciados y registrados como beans
+
+## Elementos escaneables
+![[Pasted image 20230130113906.png|500]]
+
+## Controladores
+- Componentes que procesan peticiones realizadas por los clientes
+- El retorno es el nombre de una vista
+![[Pasted image 20230130114240.png|500]]
+- Suelen invocar la lógica de negocio definida en los servicios
+- Las vistas pueden recibir un Modelo de datos con atributos
+![[Pasted image 20230130114435.png|600]]
+![[Pasted image 20230130114554.png|600]]
+
+## Procesamiento en Spring
+![[Pasted image 20230130114748.png|600]]
+
+### @RequestParam
+![[Pasted image 20230130115029.png|600]]
+- Si no lo pasas uno de los parámetros casca
+
+### Petición y parámetros
+![[Pasted image 20230130115314.png|600]]
+
+## Thymeleaf
+- Es la plantilla de acceso a los atributos del modelo
+![[Pasted image 20230130120115.png|600]]
+- El modelo contiene atributos
+![[Pasted image 20230130121508.png|600]]
+![[Pasted image 20230130121619.png|600]]
+![[Pasted image 20230130121724.png|600]]
+![[Pasted image 20230130121743.png|600]]
+
+## Servicios
+- Componentes que contienen lógica de negocio
+- Suelen ser utilizados desde los controladores o desde otros servicios
+
+## Repositorios
+- Son los componentes que acceden a la base de datos
+- Suelen ser utilizados desde la capa de servicios
+- El repositorio puede usar multitud de APIs para acceder a la base de datos
+
+---
