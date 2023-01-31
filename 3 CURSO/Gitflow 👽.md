@@ -10,3 +10,10 @@
 - Eliminar una rama (en caso de que nada funcionase) `git branch -D <rama>`
 - Crear una rama y movernos a ella directamente `git checkout -b <rama>`
 - Unir ramas->posicionarse en la rama que queremos mergear y hacer `git merge <rama>`
+- Si queremos cambiar el nombre de un push que hayamos nombrado mal:
+````cmd
+git reset --soft HEAD~1
+git add .
+git commit -m "custom message"
+git push -u -f origin master
+````

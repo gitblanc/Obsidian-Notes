@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3 CURSO/2 semestre/SDI/Introducción a JEE 🍯.md",
+                "file": "3 CURSO/Gitflow 👽.md",
                 "mode": "source",
                 "source": false
               }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "3 CURSO/2 semestre/SDI/Introducción a JEE 🍯.md",
+                "file": "3 CURSO/Gitflow 👽.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,15 +106,15 @@
   },
   "active": "8446b3c2df19ea9c",
   "lastOpenFiles": [
+    "3 CURSO/Install Java in environment variables ☕️.md",
+    "3 CURSO/2 semestre/SDI/Introducción a JEE 🍯.md",
     "Cybersecurity/PluralSight (Ebroker)/2. Input Validation/1. Cross-Site Scripting and AngularJS Template Injection 🍂/2. AngularJS Template Injection 🦚.md",
     "Cybersecurity/PluralSight (Ebroker)/2. Input Validation/1. Cross-Site Scripting and AngularJS Template Injection 🍂/1. Cross-Site Scripting 🍀.md",
     "Cybersecurity/Open Webinars (Ebroker)/1. Introducción al hacking ético 🦇/XSS 🧩.md",
     "Cybersecurity/Open Webinars (Ebroker)/2. Curso de Hacking tools & Forensic, Red Team 📛/1. Taxonomía de un ataque 🥋/2. XSS y Server Side Includes (SSI)🗽.md",
-    "3 CURSO/2 semestre/SDI/Introducción a JEE 🍯.md",
     "Mac useful commands and customizations .md",
     "3 CURSO/2 semestre/ASR/Bloque 1 🍭.md",
     "3 CURSO/2 semestre/SSI/Introducción 🥤.md",
-    "3 CURSO/2 semestre/ASW/Presentación 🚼.md",
-    "3 CURSO/1 semestre/RI/NoSQL 🐝/NoSQL trabajo 🌏.md"
+    "3 CURSO/2 semestre/ASW/Presentación 🚼.md"
   ]
 }
