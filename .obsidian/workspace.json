@@ -4,35 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "ea29f10cea05441b",
+        "id": "cca4cdbd0db70cd5",
         "type": "tabs",
         "children": [
           {
-            "id": "8446b3c2df19ea9c",
+            "id": "d807508c4cd4b8a3",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3 CURSO/2 semestre/ASW/Presentación 🚼.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "72a72d085389b649",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "3 CURSO/2 semestre/ASW/ASW 🥋.md",
+                "file": "3 CURSO/2 semestre/SSI/SSI 🥤.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -90,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "3 CURSO/2 semestre/ASW/ASW 🥋.md",
+                "file": "3 CURSO/2 semestre/SSI/SSI 🥤.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,8 +104,9 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "72a72d085389b649",
+  "active": "d807508c4cd4b8a3",
   "lastOpenFiles": [
+    "3 CURSO/2 semestre/ASW/ASW 🥋.md",
     "3 CURSO/2 semestre/ASW/Presentación 🚼.md",
     "3 CURSO/2 semestre/SDI/Introducción a JEE 🍯.md",
     "Cybersecurity/PluralSight (Ebroker)/2. Input Validation/1. Cross-Site Scripting and AngularJS Template Injection 🍂/2. AngularJS Template Injection 🦚.md",
@@ -127,7 +115,6 @@
     "Cybersecurity/Open Webinars (Ebroker)/2. Curso de Hacking tools & Forensic, Red Team 📛/1. Taxonomía de un ataque 🥋/2. XSS y Server Side Includes (SSI)🗽.md",
     "Mac useful commands and customizations .md",
     "3 CURSO/2 semestre/ASR/Bloque 1 🍭.md",
-    "3 CURSO/2 semestre/SSI/Introducción 🥤.md",
-    "3 CURSO/1 semestre/RI/NoSQL 🐝/NoSQL trabajo 🌏.md"
+    "3 CURSO/2 semestre/SSI/SSI 🥤.md"
   ]
 }
