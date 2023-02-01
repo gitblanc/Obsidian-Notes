@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3 CURSO/Gitflow 👽.md",
+                "file": "3 CURSO/2 semestre/ASW/Presentación 🚼.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "72a72d085389b649",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "3 CURSO/2 semestre/ASW/ASW 🥋.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -77,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "3 CURSO/Gitflow 👽.md",
+                "file": "3 CURSO/2 semestre/ASW/ASW 🥋.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,9 +117,9 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "8446b3c2df19ea9c",
+  "active": "72a72d085389b649",
   "lastOpenFiles": [
-    "3 CURSO/Install Java in environment variables ☕️.md",
+    "3 CURSO/2 semestre/ASW/Presentación 🚼.md",
     "3 CURSO/2 semestre/SDI/Introducción a JEE 🍯.md",
     "Cybersecurity/PluralSight (Ebroker)/2. Input Validation/1. Cross-Site Scripting and AngularJS Template Injection 🍂/2. AngularJS Template Injection 🦚.md",
     "Cybersecurity/PluralSight (Ebroker)/2. Input Validation/1. Cross-Site Scripting and AngularJS Template Injection 🍂/1. Cross-Site Scripting 🍀.md",
@@ -115,6 +128,6 @@
     "Mac useful commands and customizations .md",
     "3 CURSO/2 semestre/ASR/Bloque 1 🍭.md",
     "3 CURSO/2 semestre/SSI/Introducción 🥤.md",
-    "3 CURSO/2 semestre/ASW/Presentación 🚼.md"
+    "3 CURSO/1 semestre/RI/NoSQL 🐝/NoSQL trabajo 🌏.md"
   ]
 }
