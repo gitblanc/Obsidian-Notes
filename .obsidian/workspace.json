@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3 CURSO/2 semestre/ASW/Meetings.md",
+                "file": "3 CURSO/2 semestre/SSI/SSI 🥤.md",
                 "mode": "source",
                 "source": false
               }
@@ -102,7 +102,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "3 CURSO/2 semestre/ASW/Meetings.md",
+                "file": "3 CURSO/2 semestre/SSI/SSI 🥤.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -131,15 +131,15 @@
   },
   "active": "00c776ed6eb16ec6",
   "lastOpenFiles": [
-    "Untitled.md",
+    "3 CURSO/2 semestre/ASR/Bloque 1 🍭.md",
     "3 CURSO/2 semestre/ASW/Meetings.md",
+    "Untitled.md",
     "3 CURSO/2 semestre/SSI/SSI 🥤.md",
     "3 CURSO/2 semestre/ASW/ASW 🥋.md",
     "3 CURSO/2 semestre/ASW/Presentación 🚼.md",
     "3 CURSO/2 semestre/SDI/Introducción a JEE 🍯.md",
     "Cybersecurity/PluralSight (Ebroker)/2. Input Validation/1. Cross-Site Scripting and AngularJS Template Injection 🍂/2. AngularJS Template Injection 🦚.md",
     "Cybersecurity/PluralSight (Ebroker)/2. Input Validation/1. Cross-Site Scripting and AngularJS Template Injection 🍂/1. Cross-Site Scripting 🍀.md",
-    "Cybersecurity/Open Webinars (Ebroker)/1. Introducción al hacking ético 🦇/XSS 🧩.md",
-    "Cybersecurity/Open Webinars (Ebroker)/2. Curso de Hacking tools & Forensic, Red Team 📛/1. Taxonomía de un ataque 🥋/2. XSS y Server Side Includes (SSI)🗽.md"
+    "Cybersecurity/Open Webinars (Ebroker)/1. Introducción al hacking ético 🦇/XSS 🧩.md"
   ]
 }
