@@ -20,12 +20,12 @@
             }
           },
           {
-            "id": "95b5e2cf0c14ea55",
+            "id": "826c25d8e134b737",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3 CURSO/2 semestre/SSI/SSI Seminarios 🪙.md",
+                "file": "3 CURSO/2 semestre/ASW/ASW Seminarios 💎.md",
                 "mode": "source",
                 "source": false
               }
@@ -90,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "3 CURSO/2 semestre/SSI/SSI Seminarios 🪙.md",
+                "file": "3 CURSO/2 semestre/ASW/ASW Seminarios 💎.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,17 +117,17 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "95b5e2cf0c14ea55",
+  "active": "826c25d8e134b737",
   "lastOpenFiles": [
+    "3 CURSO/2 semestre/ASW/Meetings Lab 🩻.md",
+    "3 CURSO/2 semestre/ASW/ASW Seminarios 💎.md",
+    "3 CURSO/2 semestre/SSI/SSI Seminarios 🪙.md",
     "3 CURSO/2 semestre/SSI/SSI 🥤.md",
     "3 CURSO/2 semestre/SSI/SSI Lab notas 🔮.md",
     "3 CURSO/2 semestre/ASR/Bloque 1 🍭.md",
-    "3 CURSO/2 semestre/ASW/Meetings.md",
     "Untitled.md",
     "3 CURSO/2 semestre/ASW/ASW 🥋.md",
     "3 CURSO/2 semestre/ASW/Presentación 🚼.md",
-    "3 CURSO/2 semestre/SDI/Introducción a JEE 🍯.md",
-    "Cybersecurity/PluralSight (Ebroker)/2. Input Validation/1. Cross-Site Scripting and AngularJS Template Injection 🍂/2. AngularJS Template Injection 🦚.md",
-    "Cybersecurity/PluralSight (Ebroker)/2. Input Validation/1. Cross-Site Scripting and AngularJS Template Injection 🍂/1. Cross-Site Scripting 🍀.md"
+    "3 CURSO/2 semestre/SDI/Introducción a JEE 🍯.md"
   ]
 }
