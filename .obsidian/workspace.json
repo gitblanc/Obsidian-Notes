@@ -8,55 +8,31 @@
         "type": "tabs",
         "children": [
           {
-            "id": "d807508c4cd4b8a3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "3 CURSO/2 semestre/SSI/SSI 🥤.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "cb1008509e3644b4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "3 CURSO/2 semestre/ASW/Meetings.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "00c776ed6eb16ec6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "3 CURSO/2 semestre/SSI/SSI 🥤.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "b175c0f756cddff2",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3 CURSO/2 semestre/SSI/SSI Lab notas 🔮.md",
+                "file": "3 CURSO/2 semestre/SSI/SSI 🥤.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "95b5e2cf0c14ea55",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "3 CURSO/2 semestre/SSI/SSI Seminarios 🪙.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -114,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "3 CURSO/2 semestre/SSI/SSI Lab notas 🔮.md",
+                "file": "3 CURSO/2 semestre/SSI/SSI Seminarios 🪙.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -141,9 +117,10 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "b175c0f756cddff2",
+  "active": "95b5e2cf0c14ea55",
   "lastOpenFiles": [
     "3 CURSO/2 semestre/SSI/SSI 🥤.md",
+    "3 CURSO/2 semestre/SSI/SSI Lab notas 🔮.md",
     "3 CURSO/2 semestre/ASR/Bloque 1 🍭.md",
     "3 CURSO/2 semestre/ASW/Meetings.md",
     "Untitled.md",
@@ -151,7 +128,6 @@
     "3 CURSO/2 semestre/ASW/Presentación 🚼.md",
     "3 CURSO/2 semestre/SDI/Introducción a JEE 🍯.md",
     "Cybersecurity/PluralSight (Ebroker)/2. Input Validation/1. Cross-Site Scripting and AngularJS Template Injection 🍂/2. AngularJS Template Injection 🦚.md",
-    "Cybersecurity/PluralSight (Ebroker)/2. Input Validation/1. Cross-Site Scripting and AngularJS Template Injection 🍂/1. Cross-Site Scripting 🍀.md",
-    "Cybersecurity/Open Webinars (Ebroker)/1. Introducción al hacking ético 🦇/XSS 🧩.md"
+    "Cybersecurity/PluralSight (Ebroker)/2. Input Validation/1. Cross-Site Scripting and AngularJS Template Injection 🍂/1. Cross-Site Scripting 🍀.md"
   ]
 }
