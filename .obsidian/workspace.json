@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "cca4cdbd0db70cd5",
+        "id": "7e142d1184265427",
         "type": "tabs",
         "children": [
           {
-            "id": "35199244dd33f5ab",
+            "id": "b82965960d44a639",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3 CURSO/2 semestre/SDI/Introducción a JEE 🍯.md",
+                "file": "3 CURSO/2 semestre/SDI/Laboratorios 🌠.md",
                 "mode": "source",
                 "source": false
               }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "3 CURSO/2 semestre/SDI/Introducción a JEE 🍯.md",
+                "file": "3 CURSO/2 semestre/SDI/Laboratorios 🌠.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,17 +104,17 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "35199244dd33f5ab",
+  "active": "b82965960d44a639",
   "lastOpenFiles": [
+    "README.md",
+    "Untitled.md",
+    "3 CURSO/2 semestre/SDI/Laboratorios 🌠.md",
     "3 CURSO/2 semestre/SDI/Introducción a JEE 🍯.md",
     "3 CURSO/Gitflow 👽.md",
     "3 CURSO/2 semestre/SSI/SSI Lab notas 🔮.md",
     "3 CURSO/2 semestre/SDI/SDI Seminarios 🧪.md",
     "3 CURSO/2 semestre/ASW/ASW Seminarios 💎.md",
     "3 CURSO/2 semestre/ASW/Meetings Lab 🩻.md",
-    "3 CURSO/2 semestre/SSI/SSI Seminarios 🪙.md",
-    "3 CURSO/2 semestre/SSI/SSI 🥤.md",
-    "3 CURSO/2 semestre/ASR/Bloque 1 🍭.md",
-    "Untitled.md"
+    "3 CURSO/2 semestre/SSI/SSI Seminarios 🪙.md"
   ]
 }
