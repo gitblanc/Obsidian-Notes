@@ -147,3 +147,14 @@
 - El repositorio puede usar multitud de APIs para acceder a la base de datos
 
 ---
+# 6 Febrero 2022 🪬
+- Un interceptor en un Servlet personalizado.
+- LocaleChangeInterceptor: interceptor que permite definir un parámetro para realizar cambios de localización:
+![[Pasted image 20230206114901.png]]
+- ISO 639 -> especificación del código de idiomas (es, en, it...)
+- Se suelen usar varios ficheros de propiedades, uno por cada localización:
+![[Pasted image 20230206115504.png]]
+- **antmatcher**: especificación url en los cuales pueden aparecer comodines (un sólo asterisco es un único nivel, dos son todos los niveles que queramos)
+![[Pasted image 20230206121920.png]]
+
+---
