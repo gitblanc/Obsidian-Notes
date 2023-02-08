@@ -5,4 +5,11 @@
 - Para auto-cambiarse la ip --> desconectar el router durante un buen rato
 - Generador de tabals de markdown por medio de imports -> https://www.tablesgenerator.com/markdown_tables
 
+## Jerarquía de directorios en Linux
+![[Pasted image 20230208131723.png]]
+- Listado completo de comandos en Linux: https://ss64.com/bash/
+- Comandos de lINUX (versión corta)
+![[Pasted image 20230208131838.png]]
+- **Minificación de código**: coger un cacho de código y hacerlo más pequeño pero que funcione
+
 ---
