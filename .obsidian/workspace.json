@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "40a23e7a39b6c0bf",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Create Desktop shortcut of an AppImage 🌎.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -61,7 +74,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 314.5
+    "width": 269.5
   },
   "right": {
     "id": "1b2d980ad4b04eb7",
@@ -77,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "3 CURSO/2 semestre/SSI/SSI 🥤.md",
+                "file": "Create Desktop shortcut of an AppImage 🌎.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,10 +117,10 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "fa3c3ca597cebb32",
+  "active": "40a23e7a39b6c0bf",
   "lastOpenFiles": [
-    "Mac useful commands and customizations .md",
     "3 CURSO/2 semestre/SSI/SSI 🥤.md",
+    "Mac useful commands and customizations .md",
     "3 CURSO/2 semestre/ASR/Bloque 1 🍭.md",
     "3 CURSO/2 semestre/ASW/Meetings Lab 🩻.md",
     "3 CURSO/2 semestre/SSI/SSI Lab notas 🔮.md",
@@ -115,6 +128,6 @@
     "Pasted image 20230208123024.png",
     "3 CURSO/2 semestre/SDI/Laboratorios 🌠.md",
     "README.md",
-    "Untitled.md"
+    "Create Desktop shortcut of an AppImage 🌎.md"
   ]
 }
