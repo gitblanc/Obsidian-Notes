@@ -70,3 +70,11 @@ Si encriptas un dispositivo de almacenamiento externo, no puedes conectarlo a un
 10.  Haz clic en Borrar, y a continuación, en Aceptar.
 
 ---
+# ¿Cómo configurar el portapapeles compartido en Iphone/Mac/Ipad?
+https://blog.hardpeach.com/como-copiar-pegar-entre-dispositivos-apple-portapapeles-universal/
+Básicamente:
+- Habilitar Handoff en todos los dispositivos
+- Estar conectado con los dispositivos deseados a la misma red WiFi
+- Tener en todos los dispositivos la misma cuenta de Apple Id
+
+---
