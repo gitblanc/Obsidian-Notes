@@ -11,5 +11,9 @@
 - Comandos de lINUX (versión corta)
 ![[Pasted image 20230208131838.png]]
 - **Minificación de código**: coger un cacho de código y hacerlo más pequeño pero que funcione
+- tool **GnuPG** (criptografía):
+![[Pasted image 20230209131923.png]]
+- Algoritmos KDF:
+![[Pasted image 20230209134835.png]]
 
 ---
