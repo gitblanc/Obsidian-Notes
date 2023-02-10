@@ -18,21 +18,8 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "40a23e7a39b6c0bf",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Create Desktop shortcut of an AppImage 🌎.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -90,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Create Desktop shortcut of an AppImage 🌎.md",
+                "file": "3 CURSO/2 semestre/ASR/Bloque 1 🍭.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,17 +104,17 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "40a23e7a39b6c0bf",
+  "active": "317e254f1c7bfd77",
   "lastOpenFiles": [
-    "3 CURSO/2 semestre/SSI/SSI 🥤.md",
-    "Mac useful commands and customizations .md",
-    "3 CURSO/2 semestre/ASR/Bloque 1 🍭.md",
+    "3 CURSO/2 semestre/ASW/Presentación 🚼.md",
     "3 CURSO/2 semestre/ASW/Meetings Lab 🩻.md",
-    "3 CURSO/2 semestre/SSI/SSI Lab notas 🔮.md",
+    "3 CURSO/2 semestre/ASW/ASW Seminarios 💎.md",
     "3 CURSO/2 semestre/ASW/ASW 🥋.md",
-    "Pasted image 20230208123024.png",
+    "3 CURSO/2 semestre/SDI/SDI Seminarios 🧪.md",
     "3 CURSO/2 semestre/SDI/Laboratorios 🌠.md",
-    "README.md",
-    "Create Desktop shortcut of an AppImage 🌎.md"
+    "3 CURSO/2 semestre/SDI/Introducción a JEE 🍯.md",
+    "3 CURSO/2 semestre/SSI/SSI 🥤.md",
+    "3 CURSO/2 semestre/SSI/SSI Seminarios 🪙.md",
+    "3 CURSO/2 semestre/SSI/SSI Lab notas 🔮.md"
   ]
 }

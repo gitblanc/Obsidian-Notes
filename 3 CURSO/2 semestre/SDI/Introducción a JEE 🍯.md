@@ -1,4 +1,4 @@
-# 26 Enero 2022 🍿
+# 26 Enero 2023 🍿
 
 ## Servlets
 - Pueden ser scripts de python, una página php..., es decir, cualquier tecnología que pueda ser ejecutada en el servidor
@@ -61,7 +61,7 @@
 ![[Pasted image 20230126160121.png||500]]
 
 ---
-# 30 Enero 2022 🪀
+# 30 Enero 2023 🪀
 
 ## Spring vs SpringBoot
 - **Spring**: framework basado en JEE que usa el patrón MVC (modelo vista controlador) para desarrollo de aplicaciones web cuya principal caracteróstica es el uso de un modelo POJO
@@ -147,7 +147,7 @@
 - El repositorio puede usar multitud de APIs para acceder a la base de datos
 
 ---
-# 6 Febrero 2022 🪬
+# 6 Febrero 2023 🪬
 - Un interceptor en un Servlet personalizado.
 - LocaleChangeInterceptor: interceptor que permite definir un parámetro para realizar cambios de localización:
 ![[Pasted image 20230206114901.png]]

@@ -1,4 +1,4 @@
-# 3 Febrero 2022 - Lab1 ⚱️
+# 3 Febrero 2023 - Lab1 ⚱️
 
 - Crear un usuario en Linux: `sudo adduser <user>`
 - Para generar múltiples usuarios: `sudo useradd`
@@ -80,3 +80,4 @@
 | ==Platino==                          | Puedo hacer esto todo el día: Puedes desplegar una máquina virtual base, evaluar su seguridad y realizar algunas operaciones iniciales relacionadas con la seguridad que te permiten comprender mejor los conceptos de teoría       |   ✅    |
 
 ---
+# 10 Febrero 2023 - Lab1 ⚱️

@@ -1,4 +1,4 @@
-# 1 Febrero 2022 🎱
+# 1 Febrero 2023 🎱
 
 - **Registro de decisiones arquitectónicas**: anotación de las ventajas e inconvenientes de una arquitectura de software
 - Todas las arquitecturas son diseños, pero no todas las decisiones de diseño son arquitecturas
@@ -24,7 +24,7 @@
 - **Stakeholder**: personas interesadas en el software
 
 ---
-# 8 Febrero 2022 🛣️
+# 8 Febrero 2023 🛣️
 - Arquitecto de software es un rol, no un rango
 - Expectativas de un arquitecto:
 	- Tomar decisiones arquitectónicas  
