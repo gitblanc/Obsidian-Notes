@@ -80,4 +80,25 @@
 | ==Platino==                          | Puedo hacer esto todo el día: Puedes desplegar una máquina virtual base, evaluar su seguridad y realizar algunas operaciones iniciales relacionadas con la seguridad que te permiten comprender mejor los conceptos de teoría       |   ✅    |
 
 ---
-# 10 Febrero 2023 - Lab1 ⚱️
+# 10 Febrero 2023 - Lab2 ⚱️
+
+- Para descomprimir un zip en ubuntu: `unzip -d directory "file"`
+- El comentario `#!/bin/bash` dice que un script se ejecuta con la shell de bash
+- En docker las imágenes reutilizan código (en lugar de que cada máquina ocupe varios gigas)
+- Requisitos previos para docker:
+````bash
+sudo apt install gnome-keyring gnupg2 pass
+````
+- Para ver las imagenes en docker: `docker images`
+- Para ver los contenedores activos: `docker ps` y para ver los inactivos `docker ps -a`
+- Para parar un proceso en Linux usar: Ctrl+Z
+- Para usar un proceso en background escribir: `bg`
+- Para parar un contenedor: `sudo docker stop id`
+- Para parar todos los contenedores de golpe usar: `sudo docker stop $(sudo docker ps -q)`
+- Para borrar todos los contenedores usar: `sudo docker rm $(sudo docker ps -qa)`
+- Para ver los procesos parados usar: `jobs`
+- Para devolver un proceso usar: `fg`
+- Para salir de un contenedor usar: Ctrl+D
+- FALTA CONTINUAR
+
+---
