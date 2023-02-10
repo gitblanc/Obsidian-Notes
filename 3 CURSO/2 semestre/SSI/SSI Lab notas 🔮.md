@@ -99,6 +99,45 @@ sudo apt install gnome-keyring gnupg2 pass
 - Para ver los procesos parados usar: `jobs`
 - Para devolver un proceso usar: `fg`
 - Para salir de un contenedor usar: Ctrl+D
-- FALTA CONTINUAR
+- Para saber si una web está reveleando rutas "secretas": visitar el fichero `robots.txt`
+- Para saber si los documentos, imágenes, etc de una web están revelando mucha información de sus autores (*metadatos*) usar: **tool FOCA** o **tool Metashield Clean-up Online** -> https://metashieldclean-up.elevenpaths.com/, o la herramienta local **tool exiftool**
+	 - Para instalarla: `sudo apt install exiftool`
+	 - Para uso básico: `exiftools -s file`
+	 - Más info: https://linuxopsys.com/topics/install-and-use-exiftool-on-linux?utm_content=cmp-true
+- ¿Cómo usar Google Hacking? (búsquedas en Google combinadas con el operador **site:** que tienen como objetivo detectar vulnerabilidades, problemas de configuración o información que puedan provocar un ataque):
+	- Google Hacking Database (GHDB): https://www.exploit-db.com/google-hacking-database
+- Para ver la historia de una página web o de cualquier archivo consultar tool **The Wayback Machine**: https://archive.org/web/
+	- Para más información: https://www.elladodelmal.com/2013/04/hacking-con-archivecom-wayback-machine.html
+- Para descubrir subdominios registrados de un dominio usar:
+	- **tool knockpy** -> https://github.com/guelfoweb/knock o `sudo apt install knockpy`
+	- **tool dnsenum** -> https://github.com/fwaeytens/dnsenum
+	- tools que son Sitios web:
+		- https://dnsdumpster.com/
+		- https://search.netcraft.com/
+		- https://www.virustotal.com
+		- https://crt.sh/
+	- Podemos encontrarnos dominios abandonados (que pueden estar realmente **abandonados** o bien **no mantenidos** (siendo ahí donde puede haber más vulnerabilidades))
+	- Para hacer un resumen de cada subdominio que encontremos está el **tool eyewitness** https://github.com/ChrisTruncer/EyeWitness
+- Para analizar un rango de IPs asociados a un dominio de Internet usar los tools:
+	- Para dominios **.com** usar el **tool https://whois.arin.net 
+	- Para dominios **.es** usar el **tool https://www.nic.es
+- Para hacer escaneos de servicios en un puerto concreto en todo Internet se pueden usar:
+	- **tool Zmap**: es más rápido pero por defecto no funciona en redes locales
+	- **tool Nmap**: se usa para escaneos LAN en busca de máquinas "vivas"
+	- Cheat Sheet Zmap:
+![[Pasted image 20230210162031.png]]
+ - Cheat Sheet Nmap:
+![[Pasted image 20230210162202.png]]
+- Para saber cómo cualquier sitio web usa tus datos de navegación para su propio provecho usar el **tool BlackLight** -> http://themarkup.org/blacklight
+- ¿Cómo crear un entorno de navegación más seguro?
+	- Para tratar con extensiones maliciosas: usar el **tool de navegador uBlock Origin**
+	- Para bloquear scripts: usar el **tool de navegador NoScript**
+	- Para evitar rastreadores: usar el **tool de navegador Privacy Badger**
+- Para comprobar si una de tus cuentas ha sido comprometida: usar la página https://haveibeenpwned.com/
+- Para geolocalizar al remitente de un correo electrónico: usar la página https://www.iplocation.net/
+	- Podemos obtener la ip de un correo para obtener de manera aproximada el remitente obtenido del campo `x-originating-ip`
+![[Pasted image 20230210165124.png]]
+![[Pasted image 20230210165144.png]]
+![[Pasted image 20230210165202.png]]
 
 ---

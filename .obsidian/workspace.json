@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "a634cb5abce940fd",
+        "id": "ee59ea32aa50772a",
         "type": "tabs",
         "children": [
           {
-            "id": "fa3c3ca597cebb32",
+            "id": "11656c4dc72a0a64",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -104,17 +104,17 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "fa3c3ca597cebb32",
+  "active": "11656c4dc72a0a64",
   "lastOpenFiles": [
+    "Create Desktop shortcut of an AppImage 🌎.md",
+    "3 CURSO/2 semestre/SSI/SSI Lab notas 🔮.md",
+    "Screenshot from 2023-02-10 16-16-55.png.md",
     "3 CURSO/2 semestre/SSI/SSI 🥤.md",
     "3 CURSO/2 semestre/ASW/Presentación 🚼.md",
     "3 CURSO/2 semestre/ASW/Meetings Lab 🩻.md",
     "3 CURSO/2 semestre/ASW/ASW Seminarios 💎.md",
     "3 CURSO/2 semestre/ASW/ASW 🥋.md",
     "3 CURSO/2 semestre/SDI/SDI Seminarios 🧪.md",
-    "3 CURSO/2 semestre/SDI/Laboratorios 🌠.md",
-    "3 CURSO/2 semestre/SDI/Introducción a JEE 🍯.md",
-    "3 CURSO/2 semestre/SSI/SSI Seminarios 🪙.md",
-    "3 CURSO/2 semestre/SSI/SSI Lab notas 🔮.md"
+    "3 CURSO/2 semestre/SDI/Laboratorios 🌠.md"
   ]
 }
