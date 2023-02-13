@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "ee59ea32aa50772a",
+        "id": "a634cb5abce940fd",
         "type": "tabs",
         "children": [
           {
-            "id": "11656c4dc72a0a64",
+            "id": "fa3c3ca597cebb32",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3 CURSO/2 semestre/SSI/SSI Lab notas 🔮.md",
+                "file": "3 CURSO/2 semestre/SDI/SDI 🍯.md",
                 "mode": "source",
                 "source": false
               }
@@ -61,7 +61,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 269.5
+    "width": 314.5
   },
   "right": {
     "id": "1b2d980ad4b04eb7",
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "3 CURSO/2 semestre/SSI/SSI Lab notas 🔮.md",
+                "file": "3 CURSO/2 semestre/SDI/SDI 🍯.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,17 +104,17 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "11656c4dc72a0a64",
+  "active": "fa3c3ca597cebb32",
   "lastOpenFiles": [
-    "Create Desktop shortcut of an AppImage 🌎.md",
-    "3 CURSO/2 semestre/SSI/SSI Lab notas 🔮.md",
-    "Screenshot from 2023-02-10 16-16-55.png.md",
     "3 CURSO/2 semestre/SSI/SSI 🥤.md",
-    "3 CURSO/2 semestre/ASW/Presentación 🚼.md",
+    "Mac useful commands and customizations .md",
+    "3 CURSO/2 semestre/ASR/Bloque 1 🍭.md",
     "3 CURSO/2 semestre/ASW/Meetings Lab 🩻.md",
-    "3 CURSO/2 semestre/ASW/ASW Seminarios 💎.md",
+    "3 CURSO/2 semestre/SSI/SSI Lab notas 🔮.md",
     "3 CURSO/2 semestre/ASW/ASW 🥋.md",
-    "3 CURSO/2 semestre/SDI/SDI Seminarios 🧪.md",
-    "3 CURSO/2 semestre/SDI/Laboratorios 🌠.md"
+    "Pasted image 20230208123024.png",
+    "3 CURSO/2 semestre/SDI/Laboratorios 🌠.md",
+    "README.md",
+    "Untitled.md"
   ]
 }

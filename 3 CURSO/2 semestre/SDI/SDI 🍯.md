@@ -158,3 +158,21 @@
 ![[Pasted image 20230206121920.png]]
 
 ---
+# 13 Febrero 2022 🍎
+
+- Una sesión se destruye automáticamente tras un tiempo de inactividad
+- El Bean **HttpSession** permite acceder a la sesión (funciona como un hashmap)
+- Formas de tratar la sesión en Spring:
+	- Las plantillas **Thymeleaft** pueden acceder a la sesión:
+		- **Indirectamente**: atributos del modelo eviados desde el controlador a la plantilla
+		- **Directamente**: usando el objeto {session}
+	- Anotación @SessionScope
+		- ==Conseguir que todos los Beans se gestionen como singleton (que todos los accesos se traten como una instancia)==
+- Las URLs con **datos/acciones sensibles** dolo pueden ser usadas por ciertos usuarios (ej: no todos los alumnos pueden ver todas las asignaturas, sólo aquellas a las que estén matriculados)
+- Usar **AccessDecisionVoter**
+- No se deben manejar coleciones con muchos recursos/entidades. Se debe usar **paginación**:
+	- Clase `Page<E>`
+- La siguiente a la actual (page=getNumber+1) si es que existe (<=getTotalPages)
+- La ultima (page=getTotalPages - 1) siempre
+- Todas las excepciones producen rollback
+- 
