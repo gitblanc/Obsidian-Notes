@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3 CURSO/2 semestre/ASW/Conferencia ASW 🌊.md",
+                "file": "3 CURSO/2 semestre/SSI/SSI Lab notas 🔮.md",
                 "mode": "source",
                 "source": false
               }
@@ -90,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "3 CURSO/2 semestre/ASW/Conferencia ASW 🌊.md",
+                "file": "3 CURSO/2 semestre/SSI/SSI Lab notas 🔮.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,6 +119,7 @@
   },
   "active": "ca4ee9e4f77969b3",
   "lastOpenFiles": [
+    "3 CURSO/2 semestre/ASW/Conferencia ASW 🌊.md",
     "3 CURSO/2 semestre/SDI/SDI 🍯.md",
     "3 CURSO/2 semestre/SSI/SSI 🥤.md",
     "Mac useful commands and customizations .md",
@@ -127,7 +128,6 @@
     "3 CURSO/2 semestre/SSI/SSI Lab notas 🔮.md",
     "3 CURSO/2 semestre/ASW/ASW 🥋.md",
     "Pasted image 20230208123024.png",
-    "3 CURSO/2 semestre/SDI/Laboratorios 🌠.md",
-    "README.md"
+    "3 CURSO/2 semestre/SDI/Laboratorios 🌠.md"
   ]
 }

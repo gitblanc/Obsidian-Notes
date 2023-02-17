@@ -170,3 +170,21 @@ sudo apt install gnome-keyring gnupg2 pass
 | ==Platino==                                      | He visto cosas que no creerías: Conoces múltiples técnicas de enumeración y OSINT para extraer mucha información sobre máquinas, empresas y personas que puedes utilizar para investigarlas.                                                                                                                                                                                    |   ✅    |
 
 ---
+# 17 Febrero 2023 - Lab3 ⚱️
+- En el fichero `/etc/hosts` podemos guardar los ssh que queramos
+- Para copiar ficheros entre máquinas: 
+````bash
+#para mandarlo a una máquina remota
+scp my_file user@machine_ip:directory -> scp hola.txt uo285176@ssiserver:/tmp
+scp uo285176@ssiserver:/tmp/file . #para mandártelo de una máquina remota
+````
+- Para ejecutar cualquier comando en una máquina remota: `ssh uo285176@ssiserver "comando"`
+- Si la máquina a la que nos queremos conectar no tiene ssh, podemos conectarnos con docker
+- Para cifrar archivos usaremos el **tool GPG**
+- Para cifrar un archivo con AES256: `gpg --symmetric --cipher-algo AES256 -c supersecreto.txt`
+- Con la opción `--armor` genera un contenido no bienario (sino ASCII):
+`gpg --symmetric --cipher-algo AES256 -c --armor supersecreto.txt`
+- Para desencriptar un fichero con gpg: `gpg --decrypt --output=juanito.txt mensaje-285176.txt.asc`
+- GPG Cheatsheet:
+==FALTAA==
+- Para generar parámetros Diffie-Hellman: https://2ton.com.au/dhtool/
