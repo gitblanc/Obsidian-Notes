@@ -175,4 +175,5 @@
 - La siguiente a la actual (page=getNumber+1) si es que existe (<=getTotalPages)
 - La ultima (page=getTotalPages - 1) siempre
 - Todas las excepciones producen rollback
-- 
+
+---
