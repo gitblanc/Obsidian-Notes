@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3 CURSO/2 semestre/SDI/SDI Seminarios 🧪.md",
+                "file": "3 CURSO/2 semestre/SSI/SSI Lab notas 🔮.md",
                 "mode": "source",
                 "source": false
               }
@@ -61,7 +61,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 314.5
+    "width": 229.5
   },
   "right": {
     "id": "1b2d980ad4b04eb7",
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "3 CURSO/2 semestre/SDI/SDI Seminarios 🧪.md",
+                "file": "3 CURSO/2 semestre/SSI/SSI Lab notas 🔮.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,8 +106,8 @@
   },
   "active": "5207e3ac1721b940",
   "lastOpenFiles": [
-    "Pasted image 20230217165056.png",
     "3 CURSO/2 semestre/SDI/SDI Seminarios 🧪.md",
+    "Pasted image 20230217165056.png",
     "3 CURSO/2 semestre/SDI/SDI 🍯.md",
     "Pasted image 20230217165012.png",
     "Pasted image 20230217165031.png",

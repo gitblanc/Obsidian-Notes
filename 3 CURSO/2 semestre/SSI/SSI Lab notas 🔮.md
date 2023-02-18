@@ -186,5 +186,91 @@ scp uo285176@ssiserver:/tmp/file . #para mandártelo de una máquina remota
 `gpg --symmetric --cipher-algo AES256 -c --armor supersecreto.txt`
 - Para desencriptar un fichero con gpg: `gpg --decrypt --output=juanito.txt mensaje-285176.txt.asc`
 - GPG Cheatsheet:
-==FALTAA==
+![[Pasted image 20230218123606.png]]
 - Para generar parámetros Diffie-Hellman: https://2ton.com.au/dhtool/
+- Para cifrar discos posteriormente a la instalación de Linux: https://www.howtogeek.com/116032/how-to-encrypt-your-home-folder-after-installing-ubuntu/
+- Para cifrar una carpeta y lo que contiene:
+````bash
+#instalar la app
+sudo apt install ecryptfs-utils
+#cifra la carpeta con
+mount -t ecryptfs cartpeta/ carpeta/
+#comprueba que ha sido cifrada con
+mount | grep encryptfs
+#Para poder leer el contenido de la carpeta de nuevo
+sudo umount carpeta/
+````
+- Para transformar tus datos (codificación de datos) y un gran número de posibles formas de hacerlo usar el **tool Cyberchef**: https://gchq.github.io/CyberChef/. También permite ver metadatos de archivos.
+- Para ocultar secretos en imágenes sin alterar lo que la imagen muestra usar el **tool steghide**.
+````bash
+#para instalarlo
+sudo apt-get install -y steghide
+#para añadir texto a una imagen
+steghide --embed -cf imagen.jpg file.txt
+#para extraer los datos ocultos
+steghide --extract -sf imagen.jpg
+````
+Steghide CheatSheet:
+![[Pasted image 20230218131147.png]]
+- Para ofuscar un código Javascript para hacer más difícil que alguien averigue cómo  implementaste cierta funcionalidad:
+	- Copia tu código JavaScript
+	- Empaquétalo aquí (sin las etiquetas script y sin el HTML): http://dean.edwards.name/packer/
+	- Habilita las opciones de Base62 encode y shrink variable
+	- Si ahora quieres "poner bonito" este código usa: http://jsnice.org/ o https://beautifier.io/
+	- Ahora para ofuscar AÚN MÁS el código ve a esta página y copia el código ofuscado que ya tenías: https://obfuscator.io/
+	- Ahora ya **nunca podrán obtener el código original**
+- Para crackear un mensaje cifrado con GPG usar el **tool John the ripper**:
+- Hay varias estrategias para romper las contraseñas:
+	- **Fuerza bruta**
+	- **Diccionarios**
+	- **Rainbow tables**: son una serie de hashes precalculados. Se realiza una bísqueda del hash en toda la tabla
+````bash
+#para instalar john
+sudo apt install john
+#para descifrar un archivo gpg
+gpg2john file.gpg > pass.txt
+john --wordlist=ruta_wordlist pass.txt
+````
+- Para más wordlists:  https://ns2.elhacker.net/wordlists/
+- Los archivos cifrados GPG no son directamente procesables con john, por lo que se han de procesar previamente con el **tool gpg2john**: `gpg2john file.asc > pass_to_crack`
+John the ripper Cheat sheet:
+![[Pasted image 20230218133114.png]]
+- Para crackear la clave de un usuario con una wordlist personalizada usar el **tool John the Ripper**. También serán necesarios:
+	- Una herramienta para combinar el passwd filtrado y el archivo de shadow (**tool unshadow**)
+	- Un generador de wordlists como **tool crunch** `sudo apt install crunch`
+	- Consejos para usar crunch:
+		- El símbolo **%** significa cualquier número
+		- El símbolo **@** significa cualquier letra minúscula
+		- Si tecleas una **cadena de caracteres** se tratará como una constante
+- Para crear wordlists con crunch mirar: https://null-byte.wonderhowto.com/how-to/tutorial-create-wordlists-with-crunch-0165931/
+	- El comando básico sigue esta estructura: `crunch min max charset options`
+Crunch Cheat Sheet:
+````bash
+-b : the maximum size of the wordlist (requires -o START)  
+-c : numbers of lines to write to the wordlist (requires -o START)  
+-d : limit the number of duplicate characters  
+-e : stop generating words at a certain string  
+-f : specify a list of character sets from the charset.lst file  
+-i : invert the order of characters in the wordlist  
+-l : allows the literal interpretation of @,%^ when using -t  
+-o : the output wordlist file  
+-p : print permutations without repeating characters (cannot be used with -s)  
+-q : Like the -p option except it reads the strings from a specified file  
+-r : resume a previous session (cannot be used with -s)  
+-s : specify a particular string to begin the wordlist with  
+-t : set a specific pattern of @,%^  
+-z : compress the output wordlist file, accompanied by -o
+
+Reference:  
+@ represents lowercase letters  
+, represents uppercase letters  
+% represents numbers  
+^ represents special characters
+
+Examples:
+#generar una wordlist de 10 letras minimo y maximo cada palabra con el patrón test%%%... y guardarla en el output
+crunch 10 10 -t test%%%... -o output.txt
+````
+![[Pasted image 20230218150622.png]]
+Nota: posteriormente, para crackear el fichero shadow con john usaremos el siguiente comando:
+`john -wordlist=/crunch_wordlist.txt /file_to_crack.txt`
