@@ -178,3 +178,4 @@
 
 ---
 # 20 Febrero 2023 🍓
+- Están **==prohibidas==** las **esperas incondicionales** -> `Thread.sleep()`

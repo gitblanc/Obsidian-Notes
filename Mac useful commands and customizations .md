@@ -78,3 +78,172 @@ Básicamente:
 - Tener en todos los dispositivos la misma cuenta de Apple Id
 
 ---
+# How to move your iPhone or iPad backups to an external hard drive
+### STEP 1: LOCATE YOUR BACKUPS
+
+This part is easy. Your backups are stored in a MobileSync folder. You can find them by typing ~/Library/Application Support/MobileSync/Backup into [Spotlight](https://www.imore.com/how-use-spotlight-mac). You can also find the backups for specific devices from Finder.
+
+1.  Click **Finder** on your Mac's Dock.
+2.  Click on **your device** on the left side of the Finder window.
+3.  Click on **Manage Backups** on the General tab.
+
+![[Pasted image 20230220230831.png]]
+
+(Image credit: iMore)
+
+4.  Select a **specific device**.
+5.  Hold down the **Control key** and click on the device.
+6.  Select **Show in Finder** from the list of available options.
+
+![[Pasted image 20230220230910.png]]
+
+### STEP 2: MOVE YOUR BACKUPS TO AN EXTERNAL HARD DRIVE
+
+This part is easy, too. But, you _really_ have to pay close attention to the name of your hard drive and the new folder names you create, including punctuation and spacing. This information will be used when creating a Terminal pathway. If you use different terms than the ones suggested, replace them with the _exact_ name you have in the Terminal command in Step 3.
+
+1.  Connect your **external hard drive** to your Mac if it isn't already connected.
+2.  Open the **external hard drive**.
+3.  Go back to the Finder window with your iOS backups in it and select the **device backup folder** (It will either be called "Backup" or have a bunch of numbers and letters).
+4.  Drag it to your **external hard drive**.
+
+![[Pasted image 20230220230927.png]]
+
+5.  Enter your **administrator password** to authenticate your action.
+6.  Rename the iOS backup folder on your external hard drive to **ios_backup**. You may have to enter your **administrator password** once again to make this change.
+7.  Rename the old backup folder in Finder to **old_backup**.
+
+![[Pasted image 20230220230941.png]]
+
+_**Do not**_ delete the old_backup folder yet.
+
+### STEP 3: CREATE A SYMLINK TO TELL YOUR COMPUTER THE NEW LOCATION OF YOUR BACKUPS
+
+This is the most complex and _essential_ step to moving your iOS backups to an external hard drive. If you don't perform this step, your computer won't back up your iPhone or iPad anymore. You'll have to move the folders back to your Mac instead of manually.
+
+In this step, you'll create a symlink — or symbolic link. When you create a symlink, you create a new path for Finder to take to get to the backups folder.
+
+Former iMore writer and Mac genius [Peter Cohen](https://twitter.com/flargh) explains symlinks perfectly:
+
+"Some applications don't follow aliases properly. An older way of creating those connections is more reliable for actions like what we want iTunes to do: Symbolic links, aka symlinks. They work at a low enough level that applications and operating system functions don't have as hard a time with them as they do aliases. We're going to use Mac's Terminal app to create a symbolic link to trick iTunes into backing up onto your external drive rather than the boot drive," Cohen said.
+
+If you're using macOS Mojave or later, you will first need to change the permissions for Terminal on your Mac. Otherwise, you won't have permission to follow the remaining steps of this process. To do so:
+
+1.  Open **System Preference**.
+2.  Select **Security & Privacy**.
+3.  Choose the **Privacy** tab.
+4.  Select **Click the lock to make changes** at the bottom left of the screen if this screen is locked. Otherwise, skip to Step 6.
+5.  Enter your **system password** and click **Unlock** on the popup screen.
+
+![[Pasted image 20230220231054.png]]
+
+6.  Click **Full Disk Access** on the left-hand side of the screen.
+7.  Choose **+** to add Terminal to the list of apps with full control on your computer.
+8.  In the Finder screen that's displayed, type **Terminal** in the search box.
+9.  In the search results, highlight **Terminal**.
+10.  Tap **Open**.
+
+![[Pasted image 20230220231107.png]]
+
+Next, a lesson in using Terminal. The proper pathway is critical for this to work. Every person's hard drive and backup folder names will be different. The following is the anatomy of the Terminal code we are using:
+
+ln -s /Volumes/External/ios_backup ~/Library/Application\ Support/MobileSync/Backup/4f1234a05e6e7ccbaddfd12345678f1234b123f
+
+-   **ln -s**: This command tells the operating system to go to the new location. (This starts with a lowercase L, not a capital I.)
+-   **Volumes**: A hard drive.
+-   **External**: The name of a hard drive. Yours will likely be named something else. In the Terminal command, _you must change "External" to whatever your external hard drive is named_.
+-   **ios_backup**: The renamed backup folder you dragged into your external hard drive. This is the new place that your iOS backups will be stored.
+-   **~/Library/Application\ Support/MobileSync/Backup**: This command tells the operating system where the backup is.
+-   [**4f1234a05e6e7ccbaddfd12345678f1234b123f**](https://www.imore.com/backup): The name of the device backup folder. If you are transferring all of your backups, this will just be named "Backup." If you are transferring one device, use the name of the backup folder for your device. The one above isn't even a real file name. _You must change the above backup folder name to whatever is the name of the folder you are transferring_.
+
+If your external hard drive's name has space, be sure to use the proper coding. For example, if your hard drive is named "My Passport," be sure to use a backslash after My, then Space, then Passport. Like this: My\ Passport. Don't forget to capitalize when necessary.
+
+1.  Find **Terminal** using Spotlight.
+2.  Type the **code** below.Don't forget to change the **hard drive name** and the [**backup folder name**](https://www.imore.com/how-move-your-iphone-or-ipad-backups-external-hard-drive#backup) to reflect the name of _your_ hard drive and backup folder.`ln -s /Volumes/**External**/ios_backup ~/Library/Application\ Support/MobileSync/Backup/**4f1234a05e6e7ccbaddfd12345678f1234b123f**`
+
+![[Pasted image 20230220231143.png]]
+
+3.  Hit **Return**.
+4.  Quit **Terminal**.
+
+You will see a new folder in your MobileSync folder called "Backup," or the series of numbers and letters that represent your device. You can tell this is a symlink because it will have an arrow in the bottom left corner.
+
+![[Pasted image 20230220231159.png]]
+
+Next, you'll need to confirm that it worked before deleting your old_backup file on your Mac.
+
+1.  Click **Finder** on your Mac's Dock.
+2.  Click on **your device** on the left side of the Finder window.
+3.  Click on **Back Up Now** on the General tab.
+
+![[Pasted image 20230220231214.png]]
+
+4.  Open the **ios_backup** folder on your external hard drive.
+5.  Check to see that the **date and time** on the latest backup is for the one you just completed.
+
+![[Pasted image 20230220231230.png]]
+
+If the pathway relocation worked, and you can confirm that backups are now happening on your external hard drive, you can delete the old_backup folder on your Mac.
+
+![[Pasted image 20230220231245.png]]
+
+**Note:** If you go back to the MobileSync folder and open the symlink folder, you will see the names of the files that relate to your backup. These are aliases, not actual files. It's like a thumbnail of a picture.
+
+### STEP 4: DISABLE AUTOMATIC BACKUPS WHEN CONNECTED TO YOUR COMPUTER
+
+If you don't _always_ have an external hard drive connected to your Mac, you will need to disable automatic backups of your iPhone or iPad. Otherwise, you'll get an error message whenever you connect your iOS device to your Mac.
+
+1.  Click **Finder** on your Mac's Dock.
+2.  Click on **your device** on the left side of the Finder window.
+3.  Tick the box at the bottom next to **Automatically sync when this iPhone is connected**.
+
+![[Pasted image 20230220231314.png]]
+
+Don't forget to manually back up your iPhone whenever you connect it to your computer and have your external hard drive plugged in too.
+
+## HOW TO RESTORE THE BACKUP TO YOUR IPHONE
+
+To restore an iPhone or iPad backup from an external drive requires moving the files back to the Mac.
+
+1.  Connect your **external hard drive** to your Mac if it isn't already connected.
+2.  Open the **external hard drive**.
+3.  Go back to the Finder window and go to the **device backup folder** on your Mac, where the symlink file you created above is located. Our example above is located at ~/Library/Application\ Support/MobileSync/Backup/.
+4.  Drag the **backup file** on your external hard drive to the device backup folder.
+
+![[Pasted image 20230220231329.png]]
+
+5.  Enter your **administrator password** to authenticate your action, if necessary.
+
+Depending on the size of your backup, this could take a long time. Make sure you have enough space on your Mac. Next, you'll need to begin the restore process in Finder:
+
+1.  Click **Finder** on your Mac's Dock.
+2.  Click on **your device** on the left side of the Finder window.
+3.  Click on **Manage Backups** on the General tab to confirm the backup you wish to use is present.
+
+![[Pasted image 20230220231348.png]]
+
+4.  Click **OK** to close the box.
+5.  Select **Restore Backup**.
+6.  Toggle the backup you wish to use in the pop-up box.
+7.  Click **Restore**.
+
+![[Pasted image 20230220231402.png]]
+
+Your mobile device is now being restored. Once it's done, you may wish to delete the backup folder you dragged to the Mac to save space. Otherwise, you'll now have two backups, the one you saved on the Mac and the other on the external drive that continues being used for backup purposes.
+
+## HOW TO REMOVE THE SYMLINK AND GO BACK TO STORING YOUR BACKUPS ON YOUR MAC
+
+If you made a mistake and the symlink didn't work, or you want to go back to storing your backups on your Mac, all you have to do is delete the symlink folder you created. No need to enter any "rm" or "unlink" command in Terminal.
+
+1.  Type **~/Library/Application Support/MobileSync/Backup** into Spotlight.
+2.  Select the **symlink folder**. Remember, it's the one with an arrow in the bottom left. It will either be called "Backup" or have a series of numbers and letters representing your device.
+3.  Delete the **symlink folder**.
+4.  Back up your device via the computer.
+5.  Delete the **ios_backup folder** on your external hard drive (optional).
+
+![[Pasted image 20230220231413.png]]
+
+## Lots of steps — perhaps a better solution
+
+As previously stated, we strongly recommend _not_ backing up your mobile devices via Mac. Instead, consider using [iCloud](https://www.imore.com/how-back-your-iphone-or-ipad) to keep copies of your iPhone or iPad files. iCloud works seamlessly with all of your Apple devices and can keep everything tidy and organized. There are even other [cloud storage apps](https://www.imore.com/best-cloud-storage-apps-iphone-ipad) and sites if you don't prefer iCloud, but want something like OneDrive instead. However, if you're still committed to going old-school, the above steps will help.
+
+---
