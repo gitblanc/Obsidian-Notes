@@ -177,3 +177,4 @@
 - Todas las excepciones producen rollback
 
 ---
+# 20 Febrero 2023 🍓
