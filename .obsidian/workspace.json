@@ -4,22 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "62a5356a14f6f8c3",
+        "id": "d9fec3054ee1414f",
         "type": "tabs",
         "children": [
           {
-            "id": "5207e3ac1721b940",
+            "id": "d31639615bcdcdaf",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Mac useful commands and customizations .md",
+                "file": "3 CURSO/2 semestre/SDI/SDI 🍯.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "9e9e486ef4aef3dd",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "3 CURSO/2 semestre/SDI/Examen Teoría Spring 🩳.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -61,7 +74,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 314.5
+    "width": 288.5
   },
   "right": {
     "id": "1b2d980ad4b04eb7",
@@ -77,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Mac useful commands and customizations .md",
+                "file": "3 CURSO/2 semestre/SDI/Examen Teoría Spring 🩳.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,17 +117,17 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "5207e3ac1721b940",
+  "active": "9e9e486ef4aef3dd",
   "lastOpenFiles": [
+    "Create Desktop shortcut of an AppImage 🌎.md",
+    "3 CURSO/2 semestre/SDI/Examen Teoría Spring 🩳.md",
     "3 CURSO/2 semestre/SDI/SDI 🍯.md",
+    "3 CURSO/2 semestre/SDI/Laboratorios 🌠.md",
     "3 CURSO/2 semestre/SDI/SDI Seminarios 🧪.md",
+    "3 CURSO/2 semestre/SSI/SSI Lab notas 🔮.md",
     "Pasted image 20230217165056.png",
     "Pasted image 20230217165012.png",
     "Pasted image 20230217165031.png",
-    "Pasted image 20230217164025.png",
-    "3 CURSO/2 semestre/SSI/SSI Lab notas 🔮.md",
-    "3 CURSO/2 semestre/ASR/Bloque 1 🍭.md",
-    "3 CURSO/2 semestre/SSI/SSI 🥤.md",
-    "3 CURSO/2 semestre/ASW/Conferencia ASW 🌊.md"
+    "Pasted image 20230217164025.png"
   ]
 }
