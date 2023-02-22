@@ -73,3 +73,48 @@ Porcentaje de cambios en producción que resultan en fallos
 https://www.devops-research.com/quickcheck.html
 
 ---
+# 22 Febrero 2023 🍐
+
+## ADD: Attribute-driven design
+- No se usa en las empresas porque es difícil de seguir
+
+
+- Es importante hacer un registro de decisiones arquitectónicas
+
+- **Riesgo**: algo malo que puede o no ocurrir
+- Se suelen crear tablas de riesgo (tablas de matriz de riesgo)
+![[Pasted image 20230222113230.png]]
+
+- Los problemas que no se arreglan pueden generar una deuda técnica (**technical debt**)
+
+## Técnicas de arquitectura del software
+
+### Herramientas de un arquitecto del software
+- **Tácticas**: estrategia a seguir para resolver un atributo de calidad
+- **Estilos arquitectónicos**: definen la forma general del sistema
+- **Patrón arquitectónico**: solución general y reutilizable a algún problema  recurrente que aparece en un contexto. Hay 3 tipos:
+	- Estructurales
+	- Runtime (comportamiento)
+	- Despliegue
+- **Patrón vs Estilo**:
+	- Los estilos, en general, son independientes entre sí
+	- Un patrón puede relacionarse con otros patrones
+- Arquitecturas de referencia
+- Componentes desarrollados externamente (**stack tecnológico**): tecnologías que suelen ir muy bien de la mano
+
+## Taxonomía del software, patrones, estilos y tácticas
+
+- Cada vez más el software se está volviendo un servicio en lugar de ser un producto.
+- Tenemos que afrontar que el software va a cambiar
+- Tenemos que ser capaces de atomatizar la contrucción
+- Modelo en V
+![[Pasted image 20230222121354.png]]
+- **Big Design Up Front**: dedicarse únicamente a diseñar es una mala práctica
+- Hay que intentar que las pruebas sean automáticas
+- Principios FIRST:
+	- Fast
+	- Independent
+	- RepeatableSelf-checking
+	- Timely
+
+---
