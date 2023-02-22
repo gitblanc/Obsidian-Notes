@@ -113,6 +113,98 @@ public MiServicio{
 26. Indica cuales son casos de prueba de compatibilidad válidos en proyectos web:
 ==Navegadores, SSOO y Dispositivos móviles==
 
+27. ¿Qué elemento de una aplicación JEE se encarga de recibir las peticiones HTTP y redireccionarlas a servlets específicos?
+==El contenedor de servlets==
+
+28. En un ciclo de vida de un servlet ¿cuántas veces se podría ejecutar (mínimo y máximo) la función **init()** y **doGet()**?
+|función|mínimo|máximo|
+|---|---|---|
+|init()|1|1|
+|doGet()|0|las que se quiera|
+
+29. Desed un servlet, explica cuál es la diferencia funcional entre obtener un valor "nombre" con:
+**a) request.getPArameter("nombre")
+b) request.getSession.getAttribute("nombre")**
+==El ámbito es diferente:
+a) obtiene el parámetro nombre de la petición actual
+b) obtiene el atributo nombre de la sesión del cliente ==
+
+30. ¿Sobre qué elemento básico de JEE se construye una JSP?
+==Cada JSP se transforma en un Servlet==
+
+31. ¿Cuál es la principal ventaja de los JSP sobre las tecnologías anteriores?
+==Mayor separación entre presentación y lógica de negocio, pues:
+- ==Generar HTML por código dificultaba la separación entre lógica y diseño==
+
+32. ¿Qué 3 tipos de elementos puede contener una JSP?
+==DIrectivas, acciones y scripting(elementos de secuencia)==
+
+33. ¿En la siguiente directiva JSP qué es "gestorCanciones"?
+`«jspisetProperty name= "gestorCanciones" property= "canciones "value= "27>`
+==Es un Bean / identificador / nombre de un Bean==
+
+34. ¿En una arquitectura MVC en JEE qué elemento se utilizaría para implementar el modelo (lógica de negocio y datos)?-> servlets, beans y JSPs
+==Los Beans (clases Java) son los que se encargan de la lógica de negocio==
+
+35. ¿En qué consiste el patrón fachada? ¿Cuál es su principal ventaja?
+- ==Interfaz único simplificado con los servicios más generales del sistema
+- ==Interfaz simple para un subsistema capa / compleja
+- ==Reduce el acoplamiento==
+
+36. ![[Pasted image 20230217163822.png|600]]
+==Fachada==
+
+37. ![[Pasted image 20230217164056.png|600]]
+==Presentación y persistencia no pueden comunicarse entre ellas==
+
+38. ![[Pasted image 20230217164159.png|600]]
+
+39. ¿Quién recibe antes una petición, un controlador o un interceptor?
+	- ==El interceptor recibirá antes la petición==
+
+40. ¿Cuál es la función del LocaleChangeInterceptor en los sistemas de internacionalización?
+	- ==Se utiliza para detectar si las peticiones incluyen el parámetro que indica el idioma, ej Lang=es==
+
+41. ![[Pasted image 20230217164639.png|600]]
+
+42.  ¿Según la siguiente configuración que se requiere para que una petición pueda acceder a la URL /barco/eliminar?, razona la respuesta.
+http .authorizeRequests ()
+==.antMatchers ("/barco/add") .authenticated ()==
+vantMatchera ("/barco") .hasAuthority ("ROLE USUARIO")
+.antMatchers (*/barco/as*) .hasAuthority ("ROLE ADMIN")
+anyRequest () . permitAlI ()
+
+43. ![[Pasted image 20230217164834.png|600]]
+
+44. ¿Qué dos tipos de validaciones de datos de entrada podríamos aplicar? Nómbralos y explícalos brevemente. ¿Cuáles son más seguras?
+- ==**cliente**: utilizan código de script que valida los datos de entrada en el propio navegador del diente antes de enviar los datos al servidor
+- ==**servidor**: son comprobaciones en el servidor sobre los datos enviados por el cliente.
+- ==Las **validaciones en el servidor** son más seguras.==
+
+45. ![[Pasted image 20230217165205.png]]
+
+46. 1) ¿Qué es el objeto sesión? 2) Pon un ejemplo de uso común.
+- ==Es un objeto propio de cada cliente / usuario
+	- ==Se identifica con una ID única que viaja en cada petición realizada por el navegador.
+	- ==En el objeto sesión se pueden almacenar/recuperar datos por claves
+- ==Almacenar productos temporalmente en el carrito de la compra==
+
+47. Completa el siguiente código, se debe utiliza HttpSession para guardar la fecha del último inicio de cada usuario:
+![[Pasted image 20230217165522.png]]
+
+48. ¿Cómo afectaría a los formularios de la aplicación incluir protección contra ataques CSRF
+- ==deberían incluir un parámetro nuevo con el token CSRF
+- ==El token es generado por la aplicación==
+
+49. ![[Pasted image 20230217165803.png]]
+- ==asignaturasRepository.findOne solo recibe el ID de la nota
+- ==El repositorio debería recibir también una referencia al usuario==
+
+50. ![[Pasted image 20230217165938.png]]
+
+51. ![[Pasted image 20230217170015.png]]
+- ==De esta no tengo la solución==
+
 ---
 
 

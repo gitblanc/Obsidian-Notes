@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "62a5356a14f6f8c3",
+        "id": "f2e66dc196eee9cf",
         "type": "tabs",
         "children": [
           {
-            "id": "5207e3ac1721b940",
+            "id": "791e1d651645620e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "3 CURSO/2 semestre/ASW/ASW 🥋.md",
+                "file": "3 CURSO/2 semestre/SDI/Examen Teoría Spring 🩳.md",
                 "mode": "source",
                 "source": false
               }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "3 CURSO/2 semestre/ASW/ASW 🥋.md",
+                "file": "3 CURSO/2 semestre/SDI/Examen Teoría Spring 🩳.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,17 +104,17 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "5207e3ac1721b940",
+  "active": "791e1d651645620e",
   "lastOpenFiles": [
+    "3 CURSO/2 semestre/SDI/SDI Seminarios 🧪.md",
+    "3 CURSO/2 semestre/SDI/Examen Teoría Spring 🩳.md",
+    "3 CURSO/2 semestre/ASW/ASW 🥋.md",
     "Mac useful commands and customizations .md",
     "3 CURSO/2 semestre/SDI/SDI 🍯.md",
-    "3 CURSO/2 semestre/SDI/SDI Seminarios 🧪.md",
     "Pasted image 20230217165056.png",
     "Pasted image 20230217165012.png",
     "Pasted image 20230217165031.png",
     "Pasted image 20230217164025.png",
-    "3 CURSO/2 semestre/SSI/SSI Lab notas 🔮.md",
-    "3 CURSO/2 semestre/ASR/Bloque 1 🍭.md",
-    "3 CURSO/2 semestre/SSI/SSI 🥤.md"
+    "3 CURSO/2 semestre/SSI/SSI Lab notas 🔮.md"
   ]
 }
