@@ -1,5 +1,5 @@
 # 💚💜TODAS MIS NOTAS💚💜
-![](https://img.shields.io/badge/Markdown-000000?style=for-the-badge&logo=markdown&logoColor=white)![]![](https://img.shields.io/badge/Made%20with-Obsidian-blueviolet)
+![](https://img.shields.io/badge/Markdown-000000?style=for-the-badge&logo=markdown&logoColor=white) ![](https://img.shields.io/badge/Made%20with-Obsidian-blueviolet)
 
   [![HitCount](https://hits.dwyl.com/gitblanc/Obsidian-Notes.svg?style=flat-square)](http://hits.dwyl.com/gitblanc/Obsidian-Notes)
 
