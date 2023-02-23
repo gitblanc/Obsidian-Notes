@@ -1,145 +1,125 @@
-![](https://img.shields.io/badge/Markdown-000000?style=for-the-badge&logo=markdown&logoColor=white) ![](https://img.shields.io/badge/Made%20with-Obsidian-blueviolet)
-
-  [![HitCount](https://hits.dwyl.com/gitblanc/Obsidian-Notes.svg?style=flat-square)](http://hits.dwyl.com/gitblanc/Obsidian-Notes)
-
-# Hola :-)
-- Si utilizas estos apuntes te agradecería una 🌟 :)
-- Son de libre uso y hechos en Markdown.
-- Pongo un emoji random cada día (no tienen significado)
-- El entorno para manejarlos que uso es [Obsidian](https://obsidian.md/), pero puedes usar cualquiera que permita la edición de Markdown. Si lo usáis, podréis ver mis apuntes como los veo yo tal que:
-![imagen](https://user-images.githubusercontent.com/87705461/210357656-2561da7e-66b7-4a6c-a429-205265d15902.png)
-![imagen](https://user-images.githubusercontent.com/87705461/210357876-a5223ae3-0e55-4249-a5bd-8193eb2ffc98.png)
-
-
-- También están mis conocimientos sobre ciberseguridad, por si te curiosean.
-
-
-![imagen](https://user-images.githubusercontent.com/87705461/210358499-d9ba998a-0e2a-4619-bf64-6a85545024a2.png)
-
-<img src="https://cdn4.iconfinder.com/data/icons/cyber-security-18/65/97-512.png" align="top" width="55" height="55">      <img src="https://cdn4.iconfinder.com/data/icons/cyber-security-18/65/6-512.png" align="top" width="55" height="55">      <img src="https://cdn3.iconfinder.com/data/icons/cyber-security-19/65/39-512.png" align="top" width="55" height="55">      <img src="https://cdn3.iconfinder.com/data/icons/cyber-security-19/65/59-512.png" align="top" width="55" height="55">
-
-
+```
+          __    __       ___                              
+       __/\ \__/\ \     /\_ \                             
+   __ /\_\ \ ,_\ \ \____\//\ \      __      ___     ___   
+ /'_ `\/\ \ \ \/\ \ '__`\ \ \ \   /'__`\  /' _ `\  /'___\ 
+/\ \L\ \ \ \ \ \_\ \ \L\ \ \_\ \_/\ \L\.\_/\ \/\ \/\ \__/ 
+\ \____ \ \_\ \__\\ \_,__/ /\____\ \__/.\_\ \_\ \_\ \____\
+ \/___L\ \/_/\/__/ \/___/  \/____/\/__/\/_/\/_/\/_/\/____/
+   /\____/                                                
+   \_/__/ 
+```
 ---
-# Markdown Cheat Sheet
+_♨My name is gitblanc and I'm studying Software Engineering in Oviedo♨_ 
 
-Thanks for visiting [The Markdown Guide](https://www.markdownguide.org)!
+_👽Currently in 3rd grade👽_
 
-This Markdown cheat sheet provides a quick overview of all the Markdown syntax elements. It can’t cover every edge case, so if you need more information about any of these elements, refer to the reference guides for [basic syntax](https://www.markdownguide.org/basic-syntax) and [extended syntax](https://www.markdownguide.org/extended-syntax).
+![](https://github.com/gitblanc/gifs/blob/main/magi.gif) 
 
-## Basic Syntax
 
-These are the elements outlined in John Gruber’s original design document. All Markdown applications support these elements.
+## Here is a summary of my skills: 👻
 
-### Heading
+![](https://img.shields.io/badge/♡-Math-informational?style=flat&logo=math&color=E01517)
+![](https://img.shields.io/badge/♡-Physics-informational?style=flat&logo=physics&color=DED123)
 
-# H1
-## H2
-### H3
+![](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)
+![](https://img.shields.io/badge/Python-14354C?style=for-the-badge&logo=python&logoColor=white)
+![](https://img.shields.io/badge/Markdown-000000?style=for-the-badge&logo=markdown&logoColor=white)
+![](https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white)
+![](https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white)
+![](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white)
+![](https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)
+![](https://img.shields.io/badge/Shell_Script-121011?style=for-the-badge&logo=gnu-bash&logoColor=white)
+![](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
+![](https://img.shields.io/badge/Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white)
 
-### Bold
+![](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)
+![](https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white)
+![](https://img.shields.io/badge/GNU%20Bash-4EAA25?style=for-the-badge&logo=GNU%20Bash&logoColor=white)
+![](https://img.shields.io/badge/windows%20terminal-4D4D4D?style=for-the-badge&logo=windows%20terminal&logoColor=white)
+![](https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white)
+![](https://img.shields.io/badge/Spring_Security-6DB33F?style=for-the-badge&logo=Spring-Security&logoColor=white)
+![](https://img.shields.io/badge/Elastic_Search-005571?style=for-the-badge&logo=elasticsearch&logoColor=white)
+![](https://img.shields.io/badge/Neo4j-018bff?style=for-the-badge&logo=neo4j&logoColor=white)
 
-**bold text**
+![](https://img.shields.io/badge/Kali_Linux-557C94?style=for-the-badge&logo=kali-linux&logoColor=white)
+![](https://img.shields.io/badge/mac%20os-000000?style=for-the-badge&logo=apple&logoColor=white)
+![](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+![](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
+![](https://img.shields.io/badge/Tor_Browser-7D4698?style=for-the-badge&logo=Tor-Browser&logoColor=white)
 
-### Italic
+![](https://img.shields.io/badge/NVIDIA-GTX1060-76B900?style=for-the-badge&logo=nvidia&logoColor=white)
+![](https://img.shields.io/badge/AMD-Ryzen_7_5700XT-ED1C24?style=for-the-badge&logo=amd&logoColor=white)
 
-*italicized text*
+![](http://ForTheBadge.com/images/badges/built-with-love.svg)
 
-### Blockquote
+![](https://github-readme-streak-stats.herokuapp.com/?user=gitblanc&theme=dark)
 
-> blockquote
+![Profile View Counter](https://komarev.com/ghpvc/?username=gitblanc)
 
-### Ordered List
+![Snake animation](https://github.com/gitblanc/gitblanc/blob/output/github-contribution-grid-snake.svg)
 
-1. First item
-2. Second item
-3. Third item
+## Connect with me: 🤝
 
-### Unordered List
 
-- First item
-- Second item
-- Third item
+<a href="https://twitter.com/gitblanc"><img align="left" src="http://1000logos.net/wp-content/uploads/2017/06/Twitter-Logo.png" width="40px"/></a>
+<a href="https://stackoverflow.com/users/20457435/gitblanc"><img align="left" src="https://ih0.redbubble.net/image.316143164.7951/flat,800x800,075,f.jpg" width="30px"/></a>
 
-### Code
 
-`code`
+### What am I studying for? 📋
 
-### Horizontal Rule
+_I'm studying for being a professional ethical hacker on the red team💀_
 
----
+![](https://img.shields.io/github/followers/gitblanc.svg?style=social&label=Follow&maxAge=2592000)
 
-### Link
+███████████████████████████████████████████████████
 
-[Markdown Guide](https://www.markdownguide.org)
+### I'm learning by my own: 🔧
 
-### Image
+* Pentesting ♦
+* Hardware Hacking ♦
 
-![alt text](https://www.markdownguide.org/assets/images/tux.png)
+### Favourite platforms: 💎
+* [HacktheBox](https://www.hackthebox.com) 📀 
+* [TryHackMe](https://tryhackme.com) 📀
 
-## Extended Syntax
 
-These elements extend the basic syntax by adding additional features. Not all Markdown applications support these elements.
+## Favourite editors: 🎱
 
-### Table
-
-| Syntax | Description |
-| ----------- | ----------- |
-| Header | Title |
-| Paragraph | Text |
-
-### Fenced Code Block
+![](https://img.shields.io/badge/Visual_Studio_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white)
+![](https://img.shields.io/badge/Eclipse-2C2255?style=for-the-badge&logo=eclipse&logoColor=white)
+![](https://img.shields.io/badge/Visual_Studio-5C2D91?style=for-the-badge&logo=visual%20studio&logoColor=white)
+![](https://img.shields.io/badge/Atom-66595C?style=for-the-badge&logo=Atom&logoColor=white)
+![](https://img.shields.io/badge/PyCharm-000000.svg?&style=for-the-badge&logo=PyCharm&logoColor=white)
+![](https://img.shields.io/badge/Arduino_IDE-00979D?style=for-the-badge&logo=arduino&logoColor=white)
 
 ```
-{
-  "firstName": "John",
-  "lastName": "Smith",
-  "age": 25
-}
+ ,,
+`""*$b..
+     ""*$o.
+         "$$o.
+           "*$$o.
+              "$$$o.
+                "$$$$bo...       ..o:
+                  "$$$$$$$$booocS$$$    ..    ,.
+               ".    "*$$$$SP     V$o..o$$. .$$$b
+                "$$o. .$$$$$o. ...A$$$$$$$$$$$$$$b
+          ""bo.   "*$$$$$$$$$$$$$$$$$$$$P*$$$$$$$$:
+             "$$.    V$$$$$$$$$P"**""*"'   VP  * "l
+               "$$$o.4$$$$$$$$X
+                "*$$$$$$$$$$$$$AoA$o..oooooo..           .b
+                       .X$$$$$$$$$$$P""     ""*oo,,     ,$P
+                      $$P""V$$$$$$$:    .        ""*****"
+                    .*"    A$$$$$$$$o.4;      .
+                         .oP""   "$$$$$$b.  .$;
+                                  A$$$$$$$$$$P
+                                  "  "$$$$$P"
+                                      $$P*"
+  ~gitblanc~                           .$"
+                                     "
 ```
 
-### Footnote
-
-Here's a sentence with a footnote. [^1]
-
-[^1]: This is the footnote.
-
-### Heading ID
-
-### My Great Heading {#custom-id}
-
-### Definition List
-
-term
-: definition
-
-### Strikethrough
-
-~~The world is flat.~~
-
-### Task List
-
-- [x] Write the press release
-- [ ] Update the website
-- [ ] Contact the media
-
-### Emoji
-
-That is so funny! :joy:
-
-(See also [Copying and Pasting Emoji](https://www.markdownguide.org/extended-syntax/#copying-and-pasting-emoji))
-
-### Highlight
-
-I need to highlight these ==very important words==.
-
-### Subscript
-
-H~2~O
-
-### Superscript
-
-X^2^
+![](https://github.com/gitblanc/gifs/blob/main/dum.gif)
 
 ---
-# Create your own badges
-https://shields.io/#your-badge
+<img src="https://profile-counter.glitch.me/gitblanc/count.svg" />
