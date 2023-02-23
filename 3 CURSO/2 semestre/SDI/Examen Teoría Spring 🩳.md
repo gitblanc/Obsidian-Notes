@@ -72,7 +72,7 @@ http.authorizeRequests()
 16. ¿Con qué propósito se usa comúnmente la anotación @Bean?
 ==Para declarar Objetos de configuración o funcionalidad transversal==
 
-17. El siguiente fragmento de código trata de utilizar un validador, para validar los datos facilitados por el usuario en la entidad “Coche” ¿Hay algún error en la implementación? Indica la respuesta correcta.![[image.YVQ401.png]]
+17. El siguiente fragmento de código trata de utilizar un validador, para validar los datos facilitados por el usuario en la entidad “Coche” ¿Hay algún error en la implementación? Indica la respuesta correcta.![[./img/image.YVQ401.png]]
 ==El Bean del validador miValidador no ha sido inyectado==
 ==Faltan errores por mencionar==
 
@@ -151,13 +151,13 @@ b) obtiene el atributo nombre de la sesión del cliente ==
 - ==Interfaz simple para un subsistema capa / compleja
 - ==Reduce el acoplamiento==
 
-36. ![[Pasted image 20230217163822.png|600]]
+36. ![[./img/Pasted image 20230217163822.png|600]]
 ==Fachada==
 
-37. ![[Pasted image 20230217164056.png|600]]
+37. ![[./img/Pasted image 20230217164056.png|600]]
 ==Presentación y persistencia no pueden comunicarse entre ellas==
 
-38. ![[Pasted image 20230217164159.png|600]]
+38. ![[./img/Pasted image 20230217164159.png|600]]
 
 39. ¿Quién recibe antes una petición, un controlador o un interceptor?
 	- ==El interceptor recibirá antes la petición==
@@ -165,7 +165,7 @@ b) obtiene el atributo nombre de la sesión del cliente ==
 40. ¿Cuál es la función del LocaleChangeInterceptor en los sistemas de internacionalización?
 	- ==Se utiliza para detectar si las peticiones incluyen el parámetro que indica el idioma, ej Lang=es==
 
-41. ![[Pasted image 20230217164639.png|600]]
+41. ![[./img/Pasted image 20230217164639.png|600]]
 
 42.  ¿Según la siguiente configuración que se requiere para que una petición pueda acceder a la URL /barco/eliminar?, razona la respuesta.
 http .authorizeRequests ()
@@ -174,14 +174,14 @@ vantMatchera ("/barco") .hasAuthority ("ROLE USUARIO")
 .antMatchers (*/barco/as*) .hasAuthority ("ROLE ADMIN")
 anyRequest () . permitAlI ()
 
-43. ![[Pasted image 20230217164834.png|600]]
+43. ![[./img/Pasted image 20230217164834.png|600]]
 
 44. ¿Qué dos tipos de validaciones de datos de entrada podríamos aplicar? Nómbralos y explícalos brevemente. ¿Cuáles son más seguras?
 - ==**cliente**: utilizan código de script que valida los datos de entrada en el propio navegador del diente antes de enviar los datos al servidor
 - ==**servidor**: son comprobaciones en el servidor sobre los datos enviados por el cliente.
 - ==Las **validaciones en el servidor** son más seguras.==
 
-45. ![[Pasted image 20230217165205.png]]
+45. ![[./img/Pasted image 20230217165205.png]]
 
 46. 1) ¿Qué es el objeto sesión? 2) Pon un ejemplo de uso común.
 - ==Es un objeto propio de cada cliente / usuario
@@ -190,19 +190,19 @@ anyRequest () . permitAlI ()
 - ==Almacenar productos temporalmente en el carrito de la compra==
 
 47. Completa el siguiente código, se debe utiliza HttpSession para guardar la fecha del último inicio de cada usuario:
-![[Pasted image 20230217165522.png]]
+![[./img/Pasted image 20230217165522.png]]
 
 48. ¿Cómo afectaría a los formularios de la aplicación incluir protección contra ataques CSRF
 - ==deberían incluir un parámetro nuevo con el token CSRF
 - ==El token es generado por la aplicación==
 
-49. ![[Pasted image 20230217165803.png]]
+49. ![[./img/Pasted image 20230217165803.png]]
 - ==asignaturasRepository.findOne solo recibe el ID de la nota
 - ==El repositorio debería recibir también una referencia al usuario==
 
-50. ![[Pasted image 20230217165938.png]]
+50. ![[./img/Pasted image 20230217165938.png]]
 
-51. ![[Pasted image 20230217170015.png]]
+51. ![[./img/Pasted image 20230217170015.png]]
 - ==De esta no tengo la solución==
 
 ---
