@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "7c828f32665271be",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "docs/README.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -77,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "docs/README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,11 +117,11 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "317e254f1c7bfd77",
+  "active": "7c828f32665271be",
   "lastOpenFiles": [
+    "README.md",
     "docs/home.md",
     "home.md",
-    "README.md",
     "3 CURSO/2 semestre/SDI/SDI Seminarios 🧪.md",
     "3 CURSO/2 semestre/SDI/Examen Teoría Spring 🩳.md",
     "3 CURSO/2 semestre/ASW/ASW 🥋.md",
