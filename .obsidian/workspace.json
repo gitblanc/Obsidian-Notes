@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "docs/3 CURSO/2 semestre/SSI/SSI Lab notas 🔮.md",
                 "mode": "source",
                 "source": false
               }
@@ -25,14 +25,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/Mac useful commands and customizations .md",
+                "file": "docs/3 CURSO/2 semestre/SSI/SSI Lab notas 🔮.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -90,7 +89,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/Mac useful commands and customizations .md",
+                "file": "docs/3 CURSO/2 semestre/SSI/SSI Lab notas 🔮.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,17 +116,17 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "7c828f32665271be",
+  "active": "791e1d651645620e",
   "lastOpenFiles": [
-    "docs/README.md",
     "README.md",
+    "docs/3 CURSO/2 semestre/SSI/SSI Lab notas 🔮.md",
+    "docs/Mac useful commands and customizations .md",
+    "docs/README.md",
     "docs/home.md",
     "home.md",
     "3 CURSO/2 semestre/SDI/SDI Seminarios 🧪.md",
     "3 CURSO/2 semestre/SDI/Examen Teoría Spring 🩳.md",
     "3 CURSO/2 semestre/ASW/ASW 🥋.md",
-    "Mac useful commands and customizations .md",
-    "3 CURSO/2 semestre/SDI/SDI 🍯.md",
-    "Pasted image 20230217165056.png"
+    "Mac useful commands and customizations .md"
   ]
 }

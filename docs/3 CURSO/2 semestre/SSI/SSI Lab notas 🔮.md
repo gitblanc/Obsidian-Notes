@@ -213,7 +213,7 @@ crunch 10 10 -t test%%%... -o output.txt
 ![[Pasted image 20230218150622.png]]
 Nota: posteriormente, para crackear el fichero shadow con john usaremos el siguiente comando:
 `john -wordlist=/crunch_wordlist.txt /file_to_crack.txt`
-- Si usamos fuerza bruta pura con John The Ripper: `john --incremental -m,ax-length=4 passwd.txt`
+- Si usamos fuerza bruta pura con John The Ripper: `john --incremental -max-length=4 passwd.txt`
 - Más documentación sobre john the ripper:
 	- Modos de craqueo de John: https://www.openwall.com/john/doc/MODES.shtml
 	- Preguntas frecuentes de John: https://www.openwall.com/john/doc/FAQ.shtml
@@ -222,3 +222,18 @@ Nota: posteriormente, para crackear el fichero shadow con john usaremos el sigui
 	- Más información: https://manualdehacker.com/john-the-ripper-cracking-passwords/
 
 ---
+# 24 Febrero 2023 - Lab 3 ⚱️
+- Para generar una clave asimétrica para ssh: `ssh-keygen`
+- Creamos un fichero de configuración en el directorio ~/.ssh: `echo "AddKeysToAgent yes" >> ~/.ssh/config`
+- Para copiar una clave pública a otra máquina usar el comando: `ssh-copy-id server`
+- De esta manera podremos conectarnos a una máquina remota con una clave asimétrica
+- Para buscar personas y sus claves: https://www.rediris.es/keyserver/
+- Para generar un par de claves usar: `gpg --gen-key`. ESte certificado se almacena en la carpeta /home
+- Cada usuario local tiene su propio llavero público y un llavero privado que almacena las claves que genera o importa de otros usuarios o sitios. Para ver las claves en mi llavero privado usar `gpg --list-keys` y para las públicas `gpg --list-public-keys`
+- Si tenemos varias claves públicas o privadas pertenecientes a diferentes usuarios podemos ver sus detalles con: `gpg --list-public-keys <username>` o `gpg --list-secret-keys <username>`
+- Para poder enviar la clave pública usar: `gpg --armor --export <usuario> > <usuario>._public_key.asc`
+- Para validar las claves importadas mediante firmado:
+	- Importar la clave con: `gpg --import file.asc`
+	- Editar la clave importada: `gpg --edit-key user`
+	- Para ver la huella digital usar: `fpr`
+	- Para firmar usar: `sign`
