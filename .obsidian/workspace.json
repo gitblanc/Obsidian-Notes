@@ -4,31 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "f2e66dc196eee9cf",
+        "id": "a1e6a2b5d1987549",
         "type": "tabs",
         "children": [
           {
-            "id": "791e1d651645620e",
+            "id": "1c97f74ceb49dd9e",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "docs/3 CURSO/2 semestre/SSI/SSI Lab notas 🔮.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "7c828f32665271be",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "docs/3 CURSO/2 semestre/SSI/SSI Lab notas 🔮.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -116,7 +100,7 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "791e1d651645620e",
+  "active": "317e254f1c7bfd77",
   "lastOpenFiles": [
     "README.md",
     "docs/3 CURSO/2 semestre/SSI/SSI Lab notas 🔮.md",
