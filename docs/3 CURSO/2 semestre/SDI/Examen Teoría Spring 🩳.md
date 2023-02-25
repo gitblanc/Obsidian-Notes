@@ -22,7 +22,7 @@ d) El ámbito sesión puede durar más que el resto
 a) Servlets son más adecuados para presentación que JSP
 b) JSP y Servlets son igualmente adecuados para presentación
 c) JSP es más adecuado para lógica de negocio
-d) JSP son más adecuados para presentación
+d) ==JSP son más adecuados para presentación==
 
 7. ¿En qué se convierten los componentes una vez escaneados para poder ser
 inyectados en diferentes partes de la aplicación?
