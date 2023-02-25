@@ -207,4 +207,17 @@ anyRequest () . permitAlI ()
 
 ---
 
+# Pequeñas definiciones con apuntes
+
+## WebTesting con Selenium
+
+- Tipos de tests:
+	- **Funcional**: pruebas de la funcionalidad de la aplicación
+	- **Usabilidad**: pruebas de la interacción humana con la aplicación
+	- **Interface**: pruebas de las conexiones entre servidores aplicación-web y servidores aplicación-base de datos
+	- **Copatibilidad**: pruebas de compatibilidad con distintos navegadores
+	- **Rendimiento**: 
+		- Pruebas de carga: un alto volumen de peso a la página
+		- Pruebas de estrés: llevar las pruebas al límite de la página
+	- **Seguridad**
 
