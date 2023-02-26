@@ -223,10 +223,11 @@ Nota: posteriormente, para crackear el fichero shadow con john usaremos el sigui
 
 ---
 # 24 Febrero 2023 - Lab 3 ⚱️
-- Para generar una clave asimétrica para ssh: `ssh-keygen`
-- Creamos un fichero de configuración en el directorio ~/.ssh: `echo "AddKeysToAgent yes" >> ~/.ssh/config`
-- Para copiar una clave pública a otra máquina usar el comando: `ssh-copy-id server`
-- De esta manera podremos conectarnos a una máquina remota con una clave asimétrica
+- Para usar ssh sin contraseña:
+	- Para generar una clave asimétrica para ssh: `ssh-keygen`
+	- Creamos un fichero de configuración en el directorio ~/.ssh: `echo "AddKeysToAgent yes" >> ~/.ssh/config`
+	- Para copiar una clave pública a otra máquina usar el comando: `ssh-copy-id server`
+	- De esta manera podremos conectarnos a una máquina remota con una clave asimétrica
 - Para buscar personas y sus claves: https://www.rediris.es/keyserver/
 - Para generar un par de claves usar: `gpg --gen-key`. ESte certificado se almacena en la carpeta /home
 - Cada usuario local tiene su propio llavero público y un llavero privado que almacena las claves que genera o importa de otros usuarios o sitios. Para ver las claves en mi llavero privado usar `gpg --list-keys` y para las públicas `gpg --list-public-keys`
@@ -237,3 +238,33 @@ Nota: posteriormente, para crackear el fichero shadow con john usaremos el sigui
 	- Editar la clave importada: `gpg --edit-key user`
 	- Para ver la huella digital usar: `fpr`
 	- Para firmar usar: `sign`
+- Para cifrar un fichero de manera que sólo una persona concreta pueda leerlo:
+	- Encriptamos: `gpg -e -r <username> <file>`
+	- Esto generará un archivo `file.gpg`
+- Para descifrar un texto cifrado asimétricamente:
+	- Desciframos: `gpg -o outputfile -d file_encrypted`
+- Para firmar un archivo en texto plano usar: `gpg --clearsign file.txt`
+	- La salida es un archivo .asc con el contenido original más la firma digital
+	- El receptor puede verificar la firma **siempre que tenga la clave pública del remitente importada en su llavero**: `gpg --verify archivo.txt.asc`
+- Para enviar un fichero con contenidos secretos y asegurarte de que ese fichero no se ha modificado durante su envío:
+	- Combinar **confidencialidad** e **integridad**
+	- Firmar y cifrar con cifrado asimétrico: `gpg -o output.enc -s -e -r user file`
+	- Para desencriptarlo: `gpg -o output.txt -d encrypted.enc`
+- Para comprobar la integridad de un fichero que has descargado, para asegurarnos de que no se ha corrompido o alguien lo ha alterado maliciosamente:
+	- Comprobar con el tool **sha256sum**
+	- Comprobar en la página oficial de firmas del programa  (buscar la que se corresponde)
+	- Comparar los dos textos para ver si son iguales o no
+- Para marcar una imagen con una marca de agua:
+	- Usaremos el **tool Image Magick**: `sudo apt install imagemagick`
+	- Texto corto, marca de agua grande: `convert -density 150 -fill "rgba(255,0,0,0.25)" -gravity Center -pointsize 80 -draw "rotate -45 text 0,0 <text>" <original image>  <watermarked image>`
+	- Marca de agua de dos líneas: `convert -density 150 -fill "rgba(255,0,0,0.50)" -pointsize 15 -draw "rotate -15 text 0,200 '<line of text 1>'" -draw "rotate -15 text -25,260 '<line of text 2>'" <original image> <watermarked image>`
+- Para investigar o eliminar los metadatos de cualquier fichero:
+	- Usaremos el **tool exiftool**: `sudo apt install exiftool`
+	- Hay que tener en cuenta que hay metadatos esenciales y adicionales. Esta herramienta sólo elimina metadatos adicionales.
+	- Para consultar los metadatos actuales de una imagen: `exiftool image`
+	- Para eliminar todos los metadatos de una imagen. `exiftool -all= image`
+	- Ejemplos de uso:
+		- https://exiftool.org/examples.html
+		- https://exiftool.org/exiftool_pod.html
+
+---
