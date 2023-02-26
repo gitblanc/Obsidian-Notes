@@ -3,6 +3,7 @@
   [![HitCount](https://hits.dwyl.com/gitblanc/Obsidian-Notes.svg?style=flat-square)](http://hits.dwyl.com/gitblanc/Obsidian-Notes)
 
 <a href="https://www.buymeacoffee.com/gitblanc"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a pincho&emoji=🥪&slug=gitblanc&button_colour=BD5FFF&font_colour=ffffff&font_family=Lato&outline_colour=000000&coffee_colour=FFDD00" /></a>
+
 Si me pagas un pincho para mis descansos en la uni que sepas que te amo ❤
 
 # Hola :-)
