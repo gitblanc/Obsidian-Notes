@@ -203,7 +203,7 @@ anyRequest () . permitAlI ()
 50. ![[Pasted image 20230217165938.png]]
 
 51. ![[Pasted image 20230217170015.png]]
-- ==De esta no tengo la solución==
+- ==El método ha de llevar la notación @Transactional==
 
 ---
 
