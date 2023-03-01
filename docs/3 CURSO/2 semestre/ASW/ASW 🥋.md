@@ -118,3 +118,14 @@ https://www.devops-research.com/quickcheck.html
 	- Timely
 
 ---
+
+# 1 Marzo 2023 🗳️
+
+- Módulo: algo que identificamos a la hora de construír
+- Componente: algo que se puede identificar en tiempo de ejecución
+
+- Principio de Responsabilidad Única: un módulo debe tener una única responsabilidad
+- Un módulo debería ser abierto para extender pero cerrado para modiicar su propio código
+
+
+---
