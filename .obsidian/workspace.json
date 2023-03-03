@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "a1e6a2b5d1987549",
+        "id": "017c5aff8f612c55",
         "type": "tabs",
         "children": [
           {
-            "id": "1c97f74ceb49dd9e",
+            "id": "481cdf836bda5076",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/3 CURSO/2 semestre/ASW/ASW 🥋.md",
+                "file": "docs/3 CURSO/2 semestre/SSI/SSI Lab notas 🔮.md",
                 "mode": "source",
                 "source": false
               }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/3 CURSO/2 semestre/ASW/ASW 🥋.md",
+                "file": "docs/3 CURSO/2 semestre/SSI/SSI Lab notas 🔮.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,10 +104,10 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "1c97f74ceb49dd9e",
+  "active": "481cdf836bda5076",
   "lastOpenFiles": [
-    "docs/3 CURSO/2 semestre/ASW/Presentación 🚼.md",
     "docs/3 CURSO/2 semestre/ASW/ASW 🥋.md",
+    "docs/3 CURSO/2 semestre/ASW/Presentación 🚼.md",
     "README.md",
     "docs/3 CURSO/2 semestre/SDI/Examen Teoría Spring 🩳.md",
     "docs/3 CURSO/2 semestre/SDI/img/Pasted image 20230217170015.png",

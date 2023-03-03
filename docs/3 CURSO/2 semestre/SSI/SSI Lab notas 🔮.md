@@ -222,7 +222,7 @@ Nota: posteriormente, para crackear el fichero shadow con john usaremos el sigui
 	- Más información: https://manualdehacker.com/john-the-ripper-cracking-passwords/
 
 ---
-# 24 Febrero 2023 - Lab 3 ⚱️
+# 24 Febrero 2023 - Lab 4 ⚱️
 - Para usar ssh sin contraseña:
 	- Para generar una clave asimétrica para ssh: `ssh-keygen`
 	- Creamos un fichero de configuración en el directorio ~/.ssh: `echo "AddKeysToAgent yes" >> ~/.ssh/config`
@@ -268,3 +268,9 @@ Nota: posteriormente, para crackear el fichero shadow con john usaremos el sigui
 		- https://exiftool.org/exiftool_pod.html
 
 ---
+# 3 Marzo 2023 - Lab 5 ⚱️
+
+- Para hacer un reporte en un archivo con fecha con el **tool Lynis**: `sudo lynis audit system > report_$(date +%Y-%m-%d-%T)`. El redireccionamiento a un fichero lo hace el dueño de la terminal (ssiuser). Los pipes los hace el dueño de la terminal.
+	- `sudo grep ^root[*\!]: /etc/shadow`: mira si la password de root está sin definir
+	- para ser root sin contraseña: `sudo su -`
+- 
