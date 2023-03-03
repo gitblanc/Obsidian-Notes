@@ -778,4 +778,47 @@ console.log("App running on http://localhost:3000");
 
 });
 ````
-15. 
+15. To dockerize the app:
+- Install [Docker](https://www.docker.com/)
+- Open it (make sure it's opened before doing anything)
+- Create a new file called `Dockerfile`, where instructions for docker will be descripted
+````docker
+# linux container
+FROM node:12
+
+# app directory
+
+WORKDIR /app
+
+# environment variable
+
+ENV NODE_ENV production
+
+# copy package logs files into the working directory
+
+COPY package*.json ./
+
+# docker will make npm install
+
+RUN npm install
+
+# copy all the sources files (from current paste into working directory)
+
+COPY . .
+
+# installs the library pm2
+
+RUN npm install -g pm2
+
+# expose the port 3000
+
+EXPOSE 3000
+
+# executes the library
+
+CMD ["pm2-runtime", "index.js"]
+````
+16. Create a new file called `.dockerignore` and type this to ignore all the node packages:
+````docker
+node_modules
+````
