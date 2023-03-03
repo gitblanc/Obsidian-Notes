@@ -270,7 +270,41 @@ Nota: posteriormente, para crackear el fichero shadow con john usaremos el sigui
 ---
 # 3 Marzo 2023 - Lab 5 ⚱️
 
-- Para hacer un reporte en un archivo con fecha con el **tool Lynis**: `sudo lynis audit system > report_$(date +%Y-%m-%d-%T)`. El redireccionamiento a un fichero lo hace el dueño de la terminal (ssiuser). Los pipes los hace el dueño de la terminal.
+- Para hacer un reporte en un archivo con fecha con el **tool Lynis** (evaluar la seguridad actual de tu máquina Linux): `sudo lynis audit system > report_$(date +%Y-%m-%d-%T)`. El redireccionamiento a un fichero lo hace el dueño de la terminal (ssiuser). Los pipes los hace el dueño de la terminal.
+- Para evitar que alguien arranque tu máquina y adquiera privilegios de **root** entrando en modo single user (modo de manteniemiento):
+	- Hay que hacer que root tenga contraseña
 	- `sudo grep ^root[*\!]: /etc/shadow`: mira si la password de root está sin definir
 	- para ser root sin contraseña: `sudo su -`
-- 
+- Para detectar a los usuarios que se conectan desde fuera (ssh por ejemplo):
+	- Los ficheros `/etc/motd`, `/etc/issue` y `/etc/issue.net` gobiernan los banners de aviso para los logueos por consola (locales y remotos)
+	- COmprueba si el fichero existe: `cat /etc/motd`
+	- Ejecuta el siguiente comando y verifica que no hay resultados: `grep -E -i -s "(\\\v|\\\r|\\\m|\\\s|$(grep '^ID=' /etc/os-release | cut -d=-f2 | sed -e 's/"//g'))" /etc/motd`
+	- Elimina el fichero motd si no es utilizado
+	- Mensajes para configurar el motd etc: https://www.tecmint.com/ssh-warning-message-before-login/
+	- Obtén información del SO con `uname -a`
+	- Para comprobar que no hay nada en el fichero `/etc/issue` o no existe: `grep -E -i "(\\\v|\\\r|\\\m|\\\s|$(grep '^ID=' /etc/os-release | cut -d= -f2 | sed -e 's/"//g'))" /etc/issue`
+	- Corrige el fichero con: `echo "Authorized uses only. All activity may be monitored and reported." > /etc/issue`
+	- Los contenidos del fichero `/etc/issue.net` son expuestos a todo usuario que se loguee desde conexiones remotas.
+	- Ejecuta el siguiente comando para verificar que no se devuelve ningún resultado: `grep -E -i "(\\\v|\\\r|\\\m|\\\s|$(grep '^ID=' /etc/os-release | cut -d= -f2 | sed -e 's/"//g'))" /etc/issue.net`
+	- Corrige el fichero con: `echo "Authorized uses only. All activity may be monitored and reported." > /etc/issue.net`
+- Para fortalecer las conexiones remotas vía SSH todo lo posible:
+	- Eliminamos el daemon de SSH: `apt purge openssh-server`
+	- Reinicia la configuración de ssh: `systemctl reload sshd`
+	- Ejecuta el siguiente comando para verificar que Uid y Gid son 0/root y Access no da permisos a otros grupos o usuarios: `stat /etc/ssh/sshd_config`
+	- Haz dueño a root con: `chown root:root /etc/ssh/sshd_config` y `chmod og-rwx /etc/ssh/sshd_config`
+	- Run the following command and verify Uid is 0/root and and Gid is 0/root. Ensure group and other do not have permissions: `find /etc/ssh -xdev -type f -name 'ssh_host_*_key' -exec stat {} \;`
+	- Run the following commands to set ownership and permissions on the private SSH host key files: `find /etc/ssh -xdev -type f -name 'ssh_host_*_key' -exec chown root:root {} \;`  
+	- `find /etc/ssh -xdev -type f -name 'ssh_host_*_key' -exec chmod 0600 {} \;`
+	- Run the following command and verify Access does not grant write or execute permissions to group or other for all returned files: `find /etc/ssh -xdev -type f -name 'ssh_host_*_key.pub' -exec stat {} \;`
+	- Run the following commands to set permissions and ownership on the SSH host public key files: `find /etc/ssh -xdev -type f -name 'ssh_host_*_key.pub' -exec chmod 0644 {} \;`
+	- `find /etc/ssh -xdev -type f -name 'ssh_host_*_key.pub' -exec chown root:root {} \;`
+	- `sshd -T | grep -Ei '^\s*protocol\s+(1|1\s*,\s*2|2\s*,\s*1)\s*'` no debería devolver nada
+	- Edit the /etc/ssh/sshd_config file to set the parameter as follows: `Protocol 2`
+	- **==Para más info mirar el Benchmark de Ubuntu==**
+- Para asegurarte de que el sistema MAC AppArmor está activo y confinando tu navegador:
+	-  Instala el tool AppArmor con: `sudo apt install apparmor-utils`
+	- Para activarlo: `sudo aa-enforce /etc/apparmor.d/usr.bin.firefox`
+	- Para deshabilitarlo: `sudo ln -s /etc/apparmor.d/usr.bin.firefox /etc/apparmor.d/disable/`
+	- `sudo apparmor_parser -R /etc/apparmor.d/usr.bin.firefox`
+- Para saber que no se instalan paquetes corruptos instalaremos los **tools** **debsums** y **apt-show-versions**:
+- Para probarlo seguir estas instrucciones: https://manpages.ubuntu.com/manpages/trusty/man1/debsums.1.html

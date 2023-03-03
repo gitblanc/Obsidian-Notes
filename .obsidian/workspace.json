@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "9bb16eb14c79f696",
+        "id": "a1e6a2b5d1987549",
         "type": "tabs",
         "children": [
           {
-            "id": "87ec8a6c53586a54",
+            "id": "1c97f74ceb49dd9e",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "wifi",
+                "query": "xss",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -61,7 +61,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 345.5
+    "width": 237.5
   },
   "right": {
     "id": "1b2d980ad4b04eb7",
@@ -104,18 +104,19 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "87ec8a6c53586a54",
+  "active": "1c97f74ceb49dd9e",
   "lastOpenFiles": [
     "docs/3 CURSO/Creating a Nodejs App with Express 🗂️.md",
-    "3 CURSO/UML cheatsheet 🥳.md",
-    "3 CURSO/RI/JPA 🛰/1. JPA 🚥.md",
-    "3 CURSO/SR/Impresoras 3D 🍌.md",
-    "3 CURSO/SR/Introducción 🧪.md",
-    "Cybersecurity/PluralSight (Ebroker)/5. Log4j Shell Vulnerability/5. Analysis and detection 🛬.md",
-    "Cybersecurity/PluralSight (Ebroker)/5. Log4j Shell Vulnerability/4. Upgrade to a reverse shell 🦽.md",
-    "Cybersecurity/PluralSight (Ebroker)/5. Log4j Shell Vulnerability/3. Set up malicious LDAP server and POC 🚗.md",
-    "Cybersecurity/PluralSight (Ebroker)/5. Log4j Shell Vulnerability/2. Set up network detections 🚙.md",
-    "Cybersecurity/PluralSight (Ebroker)/5. Log4j Shell Vulnerability/1. Previous knowledge 🚓.md",
-    "Cybersecurity/PluralSight (Ebroker)/5. Log4j Shell Vulnerability/Log4j Shell Laboratory ☢️/1. Procedure.md"
+    "docs/3 CURSO/2 semestre/SSI/SSI Lab notas 🔮.md",
+    "Untitled.md",
+    "docs/3 CURSO/2 semestre/SDI/Examen Teoría Spring 🩳.md",
+    "docs/3 CURSO/2 semestre/SDI/img/Pasted image 20230217170015.png",
+    "README.md",
+    "docs/Mac useful commands and customizations .md",
+    "docs/README.md",
+    "docs/home.md",
+    "home.md",
+    "3 CURSO/2 semestre/SDI/SDI Seminarios 🧪.md",
+    "3 CURSO/2 semestre/SDI/Examen Teoría Spring 🩳.md"
   ]
 }
