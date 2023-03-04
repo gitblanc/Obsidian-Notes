@@ -862,3 +862,5 @@ node_modules
 		4. Select the default vpc and select all the subnets
 20. Refresh the tasks view (1~2mis)
 ![[Pasted image 20230304142754.png]]
+
+
