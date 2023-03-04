@@ -822,3 +822,43 @@ CMD ["pm2-runtime", "index.js"]
 ````docker
 node_modules
 ````
+17. Go to the aws console an type (create a Elastic Container Repository):
+	1. **ecr** >> repositories
+	2. Create a new repository
+	3. View push commands (execute them)
+	4. Type **ecs** >> clusters (To create a Elastic Cluster) (make sure you use the old version)
+	5. **==Do not click VPC==**
+18. Go to the tasks definitions of the new cluster:
+	1. Create a new one with fargate
+	2. Assign a name like `taskdef-xxx`
+	3. Add a task size of 0.5 Gb and 0.25vCPU
+	4. Click add container
+	5. Put a name (maybe the same as the container you created before) like `container-xxx`
+	6. On image copy the url of the repository where all was store (ecr)
+		1. Go back to ecr
+		2. Copy the image uri of your latest repository
+		3. ![[Pasted image 20230304140349.png]]
+		4. Keep default soft Limit (128)
+		5. Put port 3000 on port maps with protocol tcp
+		6. Leave blank the rest and create
+19. Go to the cluster you created before >> Services:
+	1. Create a new Service
+	2. Select FARGATE
+	3. select the latest task definition
+	4. Add a task and a service name
+	5. Leave the rest by default and click next
+	6. Select the VPC of the cluster you want
+	7. Add your subnets
+	8. Edit security groups
+		1. Select Custom TCP
+		2. Put the port 3000
+		3. Save
+	9. Select Application Load Balancer
+	10. Put health check period to 30
+	11. Create an application load balancer
+		1. Select the http/https one
+		2. Give it a name like `alb-xxx`
+		3. Listener set to HTTP on port 80 (Create a target group if not exists)
+		4. Select the default vpc and select all the subnets
+20. Refresh the tasks view (1~2mis)
+![[Pasted image 20230304142754.png]]
