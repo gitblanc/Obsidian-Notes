@@ -179,3 +179,23 @@
 ---
 # 20 Febrero 2023 🍓
 - Están **==prohibidas==** las **esperas incondicionales** -> `Thread.sleep()`
+
+---
+# 6 Marzo 2023 🌏
+
+## Node.js
+- Es una plataforma de software que nos permite ejeutar JavaScript del lado del servidor
+- No es un framework
+- Características:
+	- Basado en un **diseño modular**:
+		- Cada funcionalidad es dividida en módulos o paquetes separados
+		- Por defecto cuando se instala Node, se incluye un conjunto de módulos
+		- La gestión de dependencias o paquetes se realiza con **NPM**
+	- **Modelo de operaciones I/O asíncrona o sin bloqueo**:
+		- Se usa para leer o escribir en el sistema de archivos, lmacenar información en bases de datos y establecer comunicación de red o comunicarse con otros componentes
+		- Las operaciones son bloqueantes
+		- Las operaciones se ejecutan de forma secuencial
+		- El programa permanece bloqueado hasta que termine la operación
+		- El cliente espera la respuesta del servidor para continuar con el flujo del programa
+
+---

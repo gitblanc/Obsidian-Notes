@@ -17,7 +17,7 @@ const app = express(); //express app initializing
 
 //petition get to the root directory, 2nd param is callback function
 
-app.get("/", (request, response) => {
+app.get("/", (reequest, response) => {
 
 //we have to set what we're going to do with response and request
 
