@@ -129,3 +129,37 @@ https://www.devops-research.com/quickcheck.html
 
 
 ---
+# 8 Marzo 2023 🌹
+
+## Flujos de datos
+
+|Tipo|Ventajas|Inconvenientes|
+|-----|-----|-----|
+|Secuencial - Batch|Poco acoplamiento entre componentes, reconfigurabilidad y depuración|Sin interfaz, requiere intervención externa, sin concurrencia y alta latencia|
+|Pipes & Filters|Comprensión global, reconfiguración, evolución y extensibilidad, testabilidad y rendimiento|Posibles retardos, difícil pasar estructuras de datos complejas, sin interactividad, backpressure(se reciben más datos de los que se pueden procesar)|
+|Pipes & Filters-Interfaz uniforme|Facilita el desarrollo independiente de filtros, más fácil de comprender, fácil reconfiguración|Emperora el rendimiento si los datos deben transformarse|
+|Master-slave|Computacuón paralela, tolerancia a fallos|Dificultad de coordinación entre los nodos slaves, dependencia del Master, dependencia de configuración física|
+|MVC|Múltiples vistas del mismo modelo, sincronización de vistas, separación de incumbencias, facilidad para crear nuevas vistas y controladores, potencial para creación de marcos genéricos|Mayor complejidad en desarrollos de GUIS, Acoplación entre Modelos y Vistas, Controlador/Vista depende de la nterfaz del modelo, Dificultades con herramientas GUI|
+|PAC|Separación de responsabilidades, soporte para cambios y extensiones, multitarea|Complejidad del sistema, del componente de control y rendimiento |
+|Datos compartidos|Componentes independientes, facilita comunicación entre componentes, consistencia de datos|Punto de fallo único, posible cuello de botella, Sincronización en acceso a memoria compartida|
+|Blackboard|Experimentación, reusabilidad, tolerancia a fallos|Depuración, rendimiento, alto coste de desarrollo|
+|Sistemas basados en reglas|Mantenibilidad, separación de responsabilidades, reutilización|Depuración, rendimiento, creación y mantenimiento de las reglas|
+|Call-return|Sencillo de implementar|Ejecución concurrente, entornos distribuidos|
+|Cliente-Servidor|Servidores pueden estar distribuidos, separación de funcionalidad cliente/sevidor, funcionalidad general disponible para todos los clientes|Cada servidor puede ser un punto de fallo, rendimiento impredecible, seguridad|
+|Servidor replicado|Mejora tiempos de respuesta, menor latencia, tolerancia a fallos|mantenimiento de consistencia, sincronización|
+|Cliente-Servidor con caché|Menor carga en la red, menor tiempo de respuesta|Complejidad de configuración, no apropiado en ciertos dominios|
+|Basado en eventos|desacoplamiento, atemporalidad, asincronicidad|Solución no secuencial, consistencia del sistema, dificultad de depuración|
+|Publish-subscribe|calidad de comunicación, bajo acoplamiento, escalabilidad|se añade nivel de indirección, implementación compleja|
+|Modelos de actores|paralelismo, transparencia y escalabilidad, modelos de actores no locales|envío de mensajes, coordinación entre actores, sistemas no consistentes por definición|
+|CQRS|escalabilidad, facilita descomposición de equipos|operaciones híbridas(consulta/comando), complejidad, sincronización|
+|Event-Sourcing|tolerancia a fallos, trazabilidad, reconstrucción, escalabilidad|novedad desarrollo, consistencia de datos, actualización software, gestión de recursos|
+|Plugins|extensibilidad, personalización|consistencia, rendimiento, seguridad, gestión de plugins y dependencias|
+|Microkernel|portabilidad, flexibilidad y extensibilidad, seguridad y fiabilidad|rendimiento, complejidad del diseño, punto de fallo único|
+|Reflection|flexibilidad|implementación, rendimiento, seguridad|
+|Intérpretes y DSLs|flexiilidad, usabilidad, adaptabilidad|diseño del lenguaje, complejidad de implementación, rendimiento, seguridad|
+|Código móvil|flexibilidad y adaptación a diferentes entornos|complejidad de la implementación, seguridad|
+|Código bajo demanda|mejora experiencia de usuario, extensibilidad, adaptación a entorno del cliente|seguridad, coherencia|
+|Evaluación remota|Aprovechar capacidades de terceras partes|seguridad, configuración|
+|Agentes móviles|reducción del tráfico en la red, paralelismo implícito, tolerancia a fallos de red, conceptualmente sencillos, adaptación a cambios en el entorno|complejidad de la configuración, seguridad|
+
+---
