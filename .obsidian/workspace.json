@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "1de176912916a334",
+        "id": "f2463b554fd4d1df",
         "type": "tabs",
         "children": [
           {
-            "id": "12e05b1df64acde0",
+            "id": "a8f855db1b1aaefd",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/3 CURSO/2 semestre/ASW/ASW 🥋.md",
+                "file": "docs/3 CURSO/2 semestre/SSI/SSI Lab notas 🔮.md",
                 "mode": "source",
                 "source": false
               }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/3 CURSO/2 semestre/ASW/ASW 🥋.md",
+                "file": "docs/3 CURSO/2 semestre/SSI/SSI Lab notas 🔮.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,11 +104,11 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "12e05b1df64acde0",
+  "active": "a8f855db1b1aaefd",
   "lastOpenFiles": [
+    "docs/3 CURSO/2 semestre/ASW/ASW 🥋.md",
     "docs/Cybersecurity/PluralSight (Ebroker)/1. Penetration Testing and Ethical Hacking with Kali Linux/5. Website penetration testing 🛰/15. DOS attack ☄️.md",
     "docs/Cybersecurity/PluralSight (Ebroker)/1. Penetration Testing and Ethical Hacking with Kali Linux/7. Network sniffing 🍍/6. Discovering DOS and DDOS attacks 🍉.md",
-    "docs/3 CURSO/2 semestre/ASW/ASW 🥋.md",
     "docs/3 CURSO/2 semestre/SDI/SDI 🍯.md",
     "docs/3 CURSO/Creating a Nodejs App with Express 🗂️.md",
     "docs/Mac useful commands and customizations .md",

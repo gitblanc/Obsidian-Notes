@@ -308,3 +308,15 @@ Nota: posteriormente, para crackear el fichero shadow con john usaremos el sigui
 	- `sudo apparmor_parser -R /etc/apparmor.d/usr.bin.firefox`
 - Para saber que no se instalan paquetes corruptos instalaremos los **tools** **debsums** y **apt-show-versions**:
 - Para probarlo seguir estas instrucciones: https://manpages.ubuntu.com/manpages/trusty/man1/debsums.1.html
+
+---
+# 10 Marzo 2023 - Lab6 ⚱️
+- Usaremos el **tool Scap-workbench** para hacer hardening automático
+- Para ejecutar apps desde una sesión ssh: `ssh -X user@ip_addr`
+- Para retocar las configuraciones del ssh: `sudo vim /etc/ssh/sshd_config`
+	- Creamos el directorio `.ssh`
+	- Copiamos la clave pública del usuario en .ssh: `cp /home/ssiuser/.ssh/id_rsa.pub .ssh/authorized_keys`
+	- Para poder entrar sin que nos pida la password por ssh:
+		- Desde usuario: `echo "AddKeysToAgent yes" >> .ssh/config`
+		- `ssh -X user@ip_addr`: comprobar que nos pide la passphrase y no la password
+- 	
