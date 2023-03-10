@@ -312,6 +312,8 @@ Nota: posteriormente, para crackear el fichero shadow con john usaremos el sigui
 ---
 # 10 Marzo 2023 - Lab6 ⚱️
 - Usaremos el **tool Scap-workbench** para hacer hardening automático
+- Para abrirlo usar: `scap-workbench`
+	- Para instalar la herramienta seguir estos pasos: https://www.open-scap.org/tools/openscap-base/#download 
 - Para ejecutar apps desde una sesión ssh: `ssh -X user@ip_addr`
 - Para retocar las configuraciones del ssh: `sudo vim /etc/ssh/sshd_config`
 	- Creamos el directorio `.ssh`
@@ -319,4 +321,33 @@ Nota: posteriormente, para crackear el fichero shadow con john usaremos el sigui
 	- Para poder entrar sin que nos pida la password por ssh:
 		- Desde usuario: `echo "AddKeysToAgent yes" >> .ssh/config`
 		- `ssh -X user@ip_addr`: comprobar que nos pide la passphrase y no la password
-- 	
+- La última versión de las políticas de seguridad: https://github.com/ComplianceAsCode/content 
+![[Pasted image 20230310152931.png]]
+- Podemos ver los resultados en forma de HTML con show report:
+![[Pasted image 20230310153038.png]]
+- Para ejecutar oscap sin GUI:
+	- Hay que ser **root**
+	- Para evaluar el estado de seguridad de la máquina añadir al comando: `xccdf eval`
+	- Si queremos intentar remediar automáticamente los controles: `xccdf eval --remediate`
+	- Después requiere el parámetro `--profile`
+	- Luego requiere el parámetro `--results` y tras un espacio en blanco requiere el archivo .xml para guardar el informe en ese formato
+	- Después de los resultados es necesario un parámetro `--report`
+	- Ejemplo:
+````bash
+# Sin remediate
+oscap xccdf eval --datastream-id scap_org.open-scap_datastream_from_xccdf_ssg-ubuntu1804-xccdf-1.2.xml --xccdf-id scap_org.open-scap_cref_ssg-ubuntu1804-xccdf-1.2.xml --profile xccdf_org.ssgproject.content_profile_anssi_np_nt28_average --oval-results --results /tmp/xccdf-results.xml --results-arf /tmp/arf.xml --report /tmp/report.html /home/ssiuser/ssi_labs/lab_sessions/lab_06/scap-security-guide-0.1.59-oval-5.10/ssg-ubuntu1804-ds.xml
+
+# Con remediate
+oscap xccdf eval --datastream-id scap_org.open-scap_datastream_from_xccdf_ssg-ubuntu1804-xccdf-1.2.xml --xccdf-id scap_org.open-scap_cref_ssg-ubuntu1804-xccdf-1.2.xml --profile xccdf_org.ssgproject.content_profile_anssi_np_nt28_average --oval-results --results /tmp/xccdf-results.xml --results-arf /tmp/arf.xml --report /tmp/report.html --remediate /home/ssiuser/ssi_labs/lab_sessions/lab_06/scap-security-guide-0.1.59-oval-5.10/ssg-ubuntu1804-ds.xml
+````
+- Para hacer hardening automático a tu SO siguiendo las políticas del paquete **scap-security-guide** usando remediación **OSCAP**:
+	- Primero ejecuta una auditoría con Lynis para tener una puntuación base
+	- Intenta remediar parte de ellos con la opción remediate de oscap
+- Para hacer hardening automático a tu SO siguiendo las políticas del paquete **scap-security-guide** usando remediación con scripts de **bash**:
+	- Ve al directorio bash dentro del lab06
+	- Ejecuta el perfil de seguridad CIS de ubuntu
+- Para hacer hardening automático a tu SO siguiendo las políticas del paquete **scap-security-guide** usando remediación con **Ansible**:
+	- Para instalar el **tool Ansible** : `sudo apt install ansible`
+	- Busca el .yml correspondiente al SO y cambia hosts: all por hosts:localhost
+
+---
