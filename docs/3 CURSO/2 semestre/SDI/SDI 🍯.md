@@ -199,3 +199,16 @@
 		- El cliente espera la respuesta del servidor para continuar con el flujo del programa
 
 ---
+# 13 Marzo 2023 🐚
+
+- **express-generator**: herramienta que permite crear rápidamente un esqueleto de aplicación Node.js
+	- Instalar con `npm install express-generator`
+	- Crear el esqueleto: `express --view=pug myapp`
+	- `cd myapp` 
+	- `npm install`
+	- `npm start`
+- Estructura de directorios de una aplicación con express:
+![[Pasted image 20230313113333.png|200]]
+- El app.js es el primer fichero que se ejecuta
+
+---
