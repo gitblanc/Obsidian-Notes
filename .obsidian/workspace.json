@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/3 CURSO/2 semestre/ASW/Conf 2 ASW 🌿.md",
+                "file": "docs/3 CURSO/2 semestre/SSI/SSI Lab notas 🔮.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "163b4e01f9e2a8f6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "docs/3 CURSO/2 semestre/SSI/SSI apuntes Examen Teoría 🦥.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -77,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/3 CURSO/2 semestre/ASW/Conf 2 ASW 🌿.md",
+                "file": "docs/3 CURSO/2 semestre/SSI/SSI apuntes Examen Teoría 🦥.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,15 +117,15 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "51f9da2362469120",
+  "active": "163b4e01f9e2a8f6",
   "lastOpenFiles": [
-    "docs/3 CURSO/2 semestre/ASW/Conf 1 ASW 🌊.md",
+    "docs/3 CURSO/2 semestre/SSI/SSI Lab notas 🔮.md",
     "docs/3 CURSO/2 semestre/ASW/Conf 2 ASW 🌿.md",
+    "docs/3 CURSO/2 semestre/ASW/Conf 1 ASW 🌊.md",
     "docs/3 CURSO/2 semestre/SDI/SDI 🍯.md",
     "docs/3 CURSO/1 semestre/DS/Apuntes para Examen 🌹.md",
     "docs/3 CURSO/2 semestre/ASR/Bloque 1 🍭.md",
     "docs/3 CURSO/2 semestre/ASR/ASR 🍭.md",
-    "docs/3 CURSO/2 semestre/SSI/SSI Lab notas 🔮.md",
     "docs/3 CURSO/2 semestre/ASW/ASW 🥋.md",
     "docs/3 CURSO/2 semestre/ASW/Presentación 🚼.md",
     "docs/Cybersecurity/PluralSight (Ebroker)/1. Penetration Testing and Ethical Hacking with Kali Linux/5. Website penetration testing 🛰/15. DOS attack ☄️.md"
