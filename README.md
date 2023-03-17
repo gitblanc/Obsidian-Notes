@@ -1,4 +1,4 @@
-![](https://img.shields.io/badge/Markdown-000000?style=for-the-badge&logo=markdown&logoColor=white) ![](https://img.shields.io/badge/Made%20with-Obsidian-blueviolet)  [![HitCount](https://hits.dwyl.com/gitblanc/Obsidian-Notes.svg?style=flat-square)](http://hits.dwyl.com/gitblanc/Obsidian-Notes)
+![](https://img.shields.io/badge/Markdown-000000?style=for-the-badge&logo=markdown&logoColor=white) ![](https://img.shields.io/badge/Made%20with-Obsidian-blueviolet)  [![HitCount](https://hits.dwyl.com/gitblanc/Obsidian-Notes.svg?style=flat-square)](http://hits.dwyl.com/gitblanc/Obsidian-Notes) ![](https://img.shields.io/github/watchers/gitblanc/Obsidian-Notes?label=Actual%20watchers&logoColor=purple&style=social)
 
 <a href="https://www.buymeacoffee.com/gitblanc"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a pincho&emoji=🥪&slug=gitblanc&button_colour=BD5FFF&font_colour=ffffff&font_family=Lato&outline_colour=000000&coffee_colour=FFDD00" /></a>
 
