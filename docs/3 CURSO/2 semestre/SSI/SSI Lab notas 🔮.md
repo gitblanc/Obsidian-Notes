@@ -351,3 +351,34 @@ oscap xccdf eval --datastream-id scap_org.open-scap_datastream_from_xccdf_ssg-ub
 	- Busca el .yml correspondiente al SO y cambia hosts: all por hosts:localhost
 
 ---
+# 17 Marzo 2023 - Lab7 ⚱️
+- Para separar interfaces de red en zonas con firewalld para poder asignarles diferentes configuraciones se usa el **tool firewalld**. Para usarlo:
+	- Deshabilitar **ufw** con `sudo ufw disable`
+	- Instalar el software necesario con: `sudo apt install firewalld firewall-config`
+	- ==Ahora reinicia la máquina virtual==
+	- Ahora debemos entender como funciona:
+		- Distribuye las tarjetas de red en la MV en zonas
+		- Las zonas son conjuntos predefinidos de reglas que especifican qué tráfico se debe permitir en función del nivel de confianza en las redes a las que está conectado el equipo
+		- Cuando asignas interfaces de red a una zona todas las máquinas conectadas a la misma red pertenecerán a dicha zona.
+		- De esta forma puedes atribuír las máquinas por zonas
+		- Se cumple el siguiente principio: *el firewall hace de policía e inspector de aduanas de todas las conexiones, poniéndose siempre en medio*
+		- Zonas que incorpora **firewalld**:
+			- **docker**: contiene todas las redes creadas por los contenedores de Docker
+			- **drop**: todas las conexiones entrantes se eliminan sin ninguna notificación (filtered en nmap)
+			- **block**: todas las conexiones entrantes son rechazadas (se le notifica al cliente)(closed en nmap)
+			- **public**: para uso en áreas públicas no confiables. No confía en otros equipos de la red
+			- **external**: para uso en redes externas con enmascaramiento NAT habilitado, cuando el sistema actúa como puerta de enlace o enrutador
+			- **internal**: para uso de redes internas, cuando el sistema actúa como puerta de enlace o enrutador. Los otros sistemas son generalmente de confianza.
+			- **dmz**: se utiliza para equipos ubicados en una zona desmilitarizada o DMZ
+			- **work**: utilizado para máquinas de trabajo. Otros equipos son de confianza
+			- **home**: utilizado para máquinas domésticas. Otros equipos son de confianza
+			- **trusted**: se aceptan todas las conexiones de red. Confía en todos los equipos.
+	- Configuramos la GUI de firewalld:
+		- `sudo firewall-config`
+		- Agregar eth0 con `sudo firewall-cmd --zone=public --change-interface=eth0`
+		- Agregar eth1 con `sudo firewall-cmd --zone=work --change-interface=eth1`
+		- Asegúrate de que la zona work tenga habilitado el servicio **ssh**
+- Para bloquear ips individuales o redes completas para que no puedan acceder aa tu máquina:
+	- FALTA
+
+---
