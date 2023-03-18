@@ -180,4 +180,16 @@ Diseño típico de una red doméstica:
 ![[Pasted image 20230316184021.png]]
 - Cuando se pierde una clave privada, cualquiera que la tenga puede firmar como otra persona o entidad suplantándola.
 
+# Tema 3
+- El **nivel de seguridad de un sistema** no se obtiene sumando todas las medidas de seguridad implementadas en una organización, sino comprobando el nivel de seguridad del elemento más débil. Estos elementos son: aplicaciones en uso, diseño del software, sistemas operativos y usuarios
+- Las **contraseñas de arranque** evitan que usuarios no autorizados con acceso físico al sistema obtengan privilegios de root a través del modo de usuario único/mantenimiento (operaciones peligrosas como cambiar el gestor de arranque, acceso a consola, restablecer la contraseña de root, acceso a SO no seguros...)
+- Algunos SO permiten marcar las particiones con propiedades de seguridad (**nodev**, **noexec**, **nosuid**)
+- Las ubicaciones de archivos temporales suelen tener permisos de escritura para todo el mundo de forma predeterminada (/var y /tmp). Las aplicaciones maliciosas generalmente escriben en directorios temporales y luego intentan ejecutar lo que escribieron. Por tanto hay que montar  /tmp en una partición separada con las opciones de **nodev**, **nosuid** y **noexec**.
+- La mejor opcion contra el software vulnerable es ejecutar menos software.
+- Un proceso no puede interactuar con otro que tiene un nivel de integridad (IL) más alto
+- La forma más fácil de obtener acceso no autorizado a un sistema Linux es arrancar el servidor en single user mode
+- Permisos en Linux:
+![[Pasted image 20230318152938.png]]
+
+
 ---
