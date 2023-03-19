@@ -180,7 +180,7 @@ Diseño típico de una red doméstica:
 ![[Pasted image 20230316184021.png]]
 - Cuando se pierde una clave privada, cualquiera que la tenga puede firmar como otra persona o entidad suplantándola.
 
-# Tema 3
+# Tema 3 Seguridad de sistemas operativos
 - El **nivel de seguridad de un sistema** no se obtiene sumando todas las medidas de seguridad implementadas en una organización, sino comprobando el nivel de seguridad del elemento más débil. Estos elementos son: aplicaciones en uso, diseño del software, sistemas operativos y usuarios
 - Las **contraseñas de arranque** evitan que usuarios no autorizados con acceso físico al sistema obtengan privilegios de root a través del modo de usuario único/mantenimiento (operaciones peligrosas como cambiar el gestor de arranque, acceso a consola, restablecer la contraseña de root, acceso a SO no seguros...)
 - Algunos SO permiten marcar las particiones con propiedades de seguridad (**nodev**, **noexec**, **nosuid**)
@@ -190,6 +190,31 @@ Diseño típico de una red doméstica:
 - La forma más fácil de obtener acceso no autorizado a un sistema Linux es arrancar el servidor en single user mode
 - Permisos en Linux:
 ![[Pasted image 20230318152938.png]]
+
+# Tema 4 Políticas de seguridad y hardening automatizado
+
+- Protocolo **SCAP** (Security Content Automation Protocol): protocolo que permite el hardening automatizado en sistemas software -> OpenSCAP es el proyecto más popular
+- **STIGs**: listas de controles de seguridad para "mazar" un software. Niveles de gravedad:
+	- CAT I: muy grave
+	- CAT II: intermedio
+	- CAT III: menos grave
+- **CIS** benchmarks: fuente bien establecida de guías de hardening
+- **Implementation Groups**: son categorías que las propias empresas pueden utilizar para aito-evaluarse su seguridad. Hay tres grupos:
+	- IG 1: limitada exposición al riesgo
+	- IG 2: exposición al riesgo más elevada
+	- IG 3: exposición al riesgo máximo
+- **SGSI** (Sistema de Gestión de la Seguridad de la Información): proceso de gestión de la seguridad. Implementar un SGSI significa que la empresa ha:
+	- **Estudiado** los riesgos a los que está sometida su información
+	- **Evaluado** que nivel de riesgo asume
+	- **Implementado** controles
+	- **Documentado** las políticas y los procedimientos relacionados
+	- Entrado en proceso de **revisión y mejora**
+- Fases de implementación de un SGSI:
+	- PLAN: crear el plan de seguridad final
+	- DO: implementar procedimientos de gestión de riesgos y formación de usuarios
+	- CHECK: medir la eficacia de los controles, monitorización y revisión
+	- ACT: mantenimiento y mejora del SGSI
+![[Pasted image 20230319125637.png|400]]
 
 
 ---
