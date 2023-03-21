@@ -218,3 +218,87 @@ Diseño típico de una red doméstica:
 
 
 ---
+# Resumen medallitas
+# Medallitas Tema 1
+![[Pasted image 20230321194030.png]]
+1. Tipos de ataques contra los sistemas informáticos:
+- Contra la **confidencialidad**
+- Contra la **integridad**
+- Contra la **disponibilidad**
+
+2. Tipos de redes existentes
+- **LAN**: red que interconecta máquinas dentro de un área limitada
+- **CIDR**: Classless Inter-Domain Routing, estándar que usa prefijos para mostrar direcciones ip con sus propiedades de enrutamiento. Forman grupos denominados grupos CIDR
+
+3. Cómo funciona DHCP y NAT
+- **DHCP**: Dynamic Host Configuration Protocol, protocolo que asigna direcciones ip de forma automática y dinámica típico de las redes locales
+- **NAT**: se envían peticiones que se traducen a IPs de la red de destino, y se reciben respuestas que se traducen a la IP del origen.
+
+4. Cómo funcionan los dns
+![[Pasted image 20230321195141.png]]
+![[Pasted image 20230321195303.png]]
+
+# Medallitas Tema 2
+![[Pasted image 20230321195448.png]]
+
+1. Diferencia entre criptografía y esteganografía
+- **Criptografía**: ocultar el *significado* de la información
+- **Esteganografía**: ocultar la *existencia* de la información
+
+2. Objetivos principales de la criptografía
+- **Confidencialidad**: sólo aquellos que conocen el método de descifrado pueden conocer el significado de la información
+- **Integridad**: garantía de que los datos no han sido modificados
+- **Autenticación**: verificación de que la identidad de los emisores es la que se declara
+
+3. Clasificación de los algoritmos de cifrado
+- **Cifrados por bloques**: IDEA, AES, RSA, cifran por bloques
+- **Cifrados de flujo**: A5, RC4, SEAL, cifran bit a bit
+- **Cifrados sin clave**: ROT13, ROT47, permutan posiciones de unidades de texto
+- **Cifrados con clave criptográfica**: 
+	- Clave simétrica: AES, IDEA, el emisor y el receptor comparten la misma clave privada
+	- Clave asimétrica: el emisor y el receptor tienen dos claves cada uno (una pública para cifrar y una privada para descifrar/autenticar)
+
+4. Para qué se usan habitualmente los algoritmos de hashing y qué es un KDF
+- Los algoritmos de hashing (SHA, BLAKE2) se usan para almacenar contraseñas, para huellas digitales, para firmas digitales y para el blockchain.
+- En concreto **KDF** (Key Derivation Function, como PBKDF) se usa para almacenar contraseñas de forma que sean verdaderamente resistente a ataques. Usa técnicas "**key streching**" para mejorar la seguridad de los datos almacenados:
+	- **Salt** (semilla): datos aleatorios concatenados a las contraseñas de texto sin formato
+	- **Iteraciones/rondas**: aplicar una función hash varias veces
+- Nota: debido al salt y al pepper l**a misma contraseña en dos equipos distintos nunca será la misma**
+
+# Medallitas Tema 3
+![[Pasted image 20230321201253.png]]
+
+1. Partes involucradas en la seguridad de un sistema operativo
+- Los defectos del software
+- La homogeneidad en el SO
+- La diversidad en el SO
+- Diseño inseguro o errores de usuario
+- Usuarios y código con privilegios excesivos
+- Usuarios
+
+2. Diferencias entre políticas de control de acceso MAC y DAC
+- **DAC**: control de acceso discrecional (típicos permisos)
+- **MAC**: control de acceso obligatorio
+
+# Medallitas Tema 4
+![[Pasted image 20230321202103.png]]
+
+1. Protocolo SCAP y sus componentes
+- Protocolo que permite el hardening automatizado en sistemas de software.
+
+2. Qué ofrecen los STIGs
+- Son varias comprobaciones para determinar si un dispositivo cumple con el estándar de seguridad que especifica
+- A cada una de las comprobaciones de seguridad se le asigna un nivel de gravedad (de más a menos: CAT I, CAT II, CAT III)
+
+3. Ventajas de los CIS
+- La principal diferencia con respecto a otros controles de seguridad es el apoyo profesional que recibe, es decir, el sustento por parte de Empresas privadas y gobiernos.
+
+4. Para qué sirven los implementation groups
+- Son categorías para que una empresa se evalúe a sí misma su nivel de seguridad
+- Cada grupo contiene una serie de subcontroles de seguridad
+
+5. Cómo se implementa un SGSI
+![[Pasted image 20230319125637.png|400]]
+
+---
+
