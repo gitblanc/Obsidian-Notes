@@ -300,7 +300,5 @@ Diseño típico de una red doméstica:
 5. Cómo se implementa un SGSI
 ![[Pasted image 20230319125637.png|400]]
 
-> Anotación
-
 ---
 
