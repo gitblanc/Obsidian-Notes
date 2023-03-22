@@ -40,7 +40,7 @@ GRAPH_OPTIONS = """
         	},
         }
         """
-HOME_GRAPH = "README"
+HOME_GRAPH = "n"
 LANDING_BUTTON = "<span class='shake-rotate shake-freeze'>Have a look?</span>"
 LANDING_DESCRIPTION = "<div style='margin-bottom: 1rem; margin-top: -3rem;'>My physical brain is <div style='font-size: 4rem; display: inline-block' class='animate__animated animate__pulse animate__infinite '>💤 </div> but my digital brain is active.</div>"
 LANDING_PAGE = "README"
