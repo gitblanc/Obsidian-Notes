@@ -227,3 +227,8 @@ Si el objetivo tiene servicios HTTPS en ejecución, hay una serie de **tools** q
 ![[Pasted image 20230509172318.png|500]]
 
 # Tema 7 Introducción a técnicas de Red Team
+
+## Valid Accounts - CEWL
+- Usar el tool **CEWL** para explorar una web y crear un diccionario de palabras de su contenido
+- Útil para nombres de usuario o contraseñas
+![[Pasted image 20230509172927.png]]
