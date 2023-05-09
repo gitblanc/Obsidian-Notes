@@ -60,5 +60,6 @@
 ## Botnet
 ![[Pasted image 20230509140944.png]]
 
+## Principios de diseño general de redes seguras
 
 
