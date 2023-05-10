@@ -454,5 +454,100 @@ outf
 ![[Pasted image 20230510174139.png]]
 ![[Pasted image 20230510174326.png]]
 
+5. ==EJ TIPICO EXAMEN==
+![[Pasted image 20230510202713.png]]
+![[Pasted image 20230510202733.png]]
+Solución:
+1. Añadir un nuevo método **getNumberOfBytes():int** a todos los tipos
+2. Hay dos estrategias para calcular los desplazamientos de los campos de registro:
+	1. Iterando el nodo principal a través de los nodos secundarios de RecordField
+	2. En los nodos secundarios RecordField, modificando una variable global declarada como un campo en el Visitor
+1 para campos y 2 para variables globales
+**(R):**
+```java
+(8) int byteFilesSum = 0;
+	for(RecordField field ; fieldSum){
+		field.offset = bytes.byteFilesSum += field.type.getNumberOfBytes();
+	}
+```
+3. Desplazamiento de las variables globales:
+**(R):**
+```java
+vardefinition.offset = bytesGlobalSum;
+bytesGlobalSum += type.numberOfBytes;
+```
+4. Implementación es trivial
+`---FIN EJERCICIO---`
 
+6. 
+![[Pasted image 20230510203936.png]]
 
+7. 
+![[Pasted image 20230510204201.png]]
+**(R):**
+```java
+(1) int LocalBytesSum = 0;
+	for(VarDefinition vardef : vardefinition*){
+		localBytesSum += varedf.type.getNumberOfBytes();
+		vardef.offset = -localBytesSum
+	}
+(3) int paramBytesSum = 0;
+	for(int i = vardefinition*.length() - 1; i--){
+		vardf.offset = 4 + paramBytesSum;
+		paramBytesSym += vardef.type.number();
+	}
+```
+
+8. AGs para Generación de Código
+![[Pasted image 20230510204717.png]]
+**(G):**
+![[Pasted image 20230510204848.png]]
+**(A):**
+code
+**(R):**
+```java
+(1) expression.code = "PUSHB" + (int)CHAR_CONSTANT + "\n" 
+(2) expression.code = "PUSHI" + INT_CONSTANT + "\n"
+(3) expression.code = "PUSHF" + REAL_CONSTANT + "\n"
+(4) if (expression.definition.scope == 0)
+		expression.code = "PUSHA" + expression.definition.offset + "\n"
+	else
+		expression.code = "PUSHBP \n" + "PUSHI" + expression.definition.offset + "\n" + "ADDI \n";
+	expression.code += "LOAD" + expression.type.getSuffix() + "\n";
+(5) expression1.code = expression2.code + expression2.type.convertTo(expression1.type) + expression3.code + expression3.type.convertTo(expression1.type);
+	expression1.code += getOperator(expression1.operator);
+	expression1.code += expression1.type.suffix() + "\n"
+```
+
+9. Ejercicio de contexto:
+![[Pasted image 20230510205821.png]]
+**(G):**
+![[Pasted image 20230510205907.png]]
+**(A):**
+code y pushValue
+**(R):**
+```java
+(1) expression1.pushValue = false;
+	expression2.pushValue = true;
+	statement.code = expression1.code + expression2.code + "STOREI \n"
+(2) expression.code = "PUSHA" + expression.definition.offset + "\n"
+	if(expression.pushValue)
+		expression.code += "LOADI \n"
+```
+
+10. 
+![[Pasted image 20230510212323.png]]
+Solución:
+![[Pasted image 20230510212525.png]]
+
+11. 
+![[Pasted image 20230510213031.png]]
+Solucion:
+![[Pasted image 20230510213105.png]]
+![[Pasted image 20230510213157.png]]
+![[Pasted image 20230510213227.png]]
+![[Pasted image 20230510213237.png]]
+
+12. 
+![[Pasted image 20230510213806.png]]
+![[Pasted image 20230510213829.png]]

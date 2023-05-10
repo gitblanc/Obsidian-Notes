@@ -321,3 +321,100 @@ public int numberOfBytes(){
 	- El **tamaño** de un registro es la suma de los tamaños de los tipos de los campos
 	- El **desplazamiento** (offset) de memoria relativo de cada campo es la suma de los tipos de los campos anteriores
 ![[Pasted image 20230510174109.png]]
+
+## Memoria estática
+- El tamaño de la memoria estática permanece fijo durante la ejecución del programa
+- La memoria estática se divide en áreas de código y datos
+- El tamaño del área de datos en la memoria estática permanece fijo durante todo el proceso de ejecución
+- Normalmente se accede a los datos estáticos por sus direcciones de memoria absolutas
+- Los datos comunres incluídos en la memoria estática son:
+![[Pasted image 20230510202416.png]]
+- En MAPL los datos estáticos tienen direcciones de memoria crecientes, comenzando en cero
+![[Pasted image 20230510202630.png]]
+
+## Plantillas de código
+- Se basan en **semántica denotacional** (formalizar el significado de una construcción sintáctica describiendo el efecto de ejecutarla)
+![[Pasted image 20230510210631.png]]
+
+## Elementos de una plantilla de código
+![[Pasted image 20230510210743.png]]
+
+## Generación de código Inductiva
+![[Pasted image 20230510210830.png]]
+
+## Escribiendo el código generado
+![[Pasted image 20230510211008.png]]
+
+## Contexto
+![[Pasted image 20230510211104.png]]
+
+## Parametrización de plantillas. Alternativa 1
+![[Pasted image 20230510211136.png]]
+![[Pasted image 20230510211326.png]]
+
+## Parametrización de plantillas. Alternativa 2
+![[Pasted image 20230510211353.png]]
+- Las funciones de código que se usan son **address, value y execute**:
+![[Pasted image 20230510211416.png]]
+![[Pasted image 20230510211532.png]]
+
+## Funciones de código
+![[Pasted image 20230510211622.png]]
+
+## Definiciones de funciones de código
+![[Pasted image 20230510211709.png]]
+![[Pasted image 20230510211845.png]]
+Implementación típica: usar 3 visitors -> ExecuteCGVisitor, ValueCGVisitor, AddressVisitor
+![[Pasted image 20230510212125.png]]
+![[Pasted image 20230510212245.png]]
+
+## Generación de código de estructuras de datos: Definición de variable
+![[Pasted image 20230510212918.png]]
+
+## Generación de código de estructuras de datos: Definición de variable Local
+![[Pasted image 20230510212946.png]]
+
+## Generación de código de estructuras de datos: Expresiones
+![[Pasted image 20230510213405.png]]
+![[Pasted image 20230510213417.png]]
+![[Pasted image 20230510213442.png]]
+
+## Generación de código de estructuras de datos: Arrays
+![[Pasted image 20230510213635.png]]
+![[Pasted image 20230510213700.png]]
+![[Pasted image 20230510213725.png]]
+## Generación de código de estructuras de datos: Registros
+![[Pasted image 20230510214332.png]]
+![[Pasted image 20230510214359.png]]
+
+## Sentencias de control de flujo. Etiquetas y saltos
+![[Pasted image 20230510214548.png]]
+
+## While
+![[Pasted image 20230510214626.png]]
+![[Pasted image 20230510214643.png]]
+
+## Do while
+![[Pasted image 20230510214707.png]]
+![[Pasted image 20230510214720.png]]
+
+## For
+![[Pasted image 20230510214750.png]]
+![[Pasted image 20230510214831.png]]
+![[Pasted image 20230510214846.png]]
+
+# If/else
+![[Pasted image 20230510214911.png]]
+![[Pasted image 20230510214925.png]]
+
+## Funciones/Procedimientos
+![[Pasted image 20230510215000.png]]
+![[Pasted image 20230510215030.png]]
+![[Pasted image 20230510215041.png]]
+
+---
+
+
+
+
+
