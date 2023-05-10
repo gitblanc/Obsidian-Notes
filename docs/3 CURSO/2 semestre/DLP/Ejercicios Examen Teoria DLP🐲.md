@@ -319,6 +319,87 @@ expr returns[Expresion ast]
 1. 
 ![[Pasted image 20230510111647.png]]
 
+2. 
+![[Pasted image 20230510151010.png]]
+![[Pasted image 20230510151037.png]]
+![[Pasted image 20230510151109.png]]
+
+Solución:
+**(G):**![[Pasted image 20230510151037.png]]
+**(A):**
+`{expression.lvalue} dominio=booleano`
+
+**(R):**
+```java
+(4) expression.lvalue = true
+(5) expression.lvalue = false
+(1) expression1.lvalue = false //no se permite en el enunciado
+(2) expression1.lvalue = expression2.lvalue
+(3) expression1.lvalue = true //lo pone en el enunciado
+```
+
+3. 
+![[Pasted image 20230510153801.png]]
+Solución:
+![[Pasted image 20230510153921.png]]
+
+4. ¿Cuál es el tipo Java de esta tabla de símbolos?
+![[Pasted image 20230510154648.png]]
+![[Pasted image 20230510154903.png]]
+
+5. Dada la siguiente CFG, definir una gramática atribuida para realizar la fase de Identificación. Nota, se puede usar el objeto **st** del ejercicio anterior.
+	Una vez que se ha definido la AG, impleméntelo en Java utilizando el patrón de diseño Visitor.
+**(G):**
+![[Pasted image 20230510155120.png]]
+Solución:
+**(A):**
+|Atributo|Afecta a|Dominio|
+|--|--|--|
+|definition|variable|VarDefinition|
+
+**(R):**
+```java
+Nota: las que no se incluyen es porque no requieren nada
+(2) IF (!st.put(ID, definition)) print("Variable duplicada")
+(7) IF (!st.get(ID)) ERROR("Variable no definida");
+	expression.definicion = st.get(ID) //else
+```
+
+6. 
+![[Pasted image 20230510162041.png]]
+**(G):**
+![[Pasted image 20230510162117.png]]
+**(A):**
+|Atributo|Afecta a|Dominio|
+|--|--|--|
+|type|expression|{int, double, char, error, array}|
+**(R):**
+```java
+//Buena solución: NO USAR INSTANCEOF PARA CADA TIPO
+//Usamos el patrón Composite para el tratamiento uniforme de objetos simples y compuestos
+(1) expression.type -> expression2.type.arithmetic(expression3.type)
+```
+
+7. 
+![[Pasted image 20230510163214.png]]
+![[Pasted image 20230510163326.png]]
+![[Pasted image 20230510163348.png]]
+![[Pasted image 20230510163514.png]]
+8. 
+![[Pasted image 20230510163627.png]]
+**(G):**
+![[Pasted image 20230510163744.png]]
+**(A):**
+|Atributo|Afecta a|Dominio|
+|--|--|--|
+|returnType|statement|type|
+**(R):**
+```java
+(1) statement* -> foreach(statement -> statement.returnType = definition.type.returnType)
+(2) expression.mustPromoteTo(statement.returnType)//comprueba si un entero se puede convertir a un double (si promociona)
+```
+
+---
 # Generación de código
 
 1. Nota: un entero ocupa 2 bytes
