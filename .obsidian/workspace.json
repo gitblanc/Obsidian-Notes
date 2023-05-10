@@ -31,8 +31,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/3 CURSO/2 semestre/DLP/Apuntes Examen Teoria DLP🐟.md",
+                "file": "docs/3 CURSO/2 semestre/DLP/Ejercicios Examen Teoria DLP🐲.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -125,20 +124,21 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "4a264e92de32e699",
+  "active": "317e254f1c7bfd77",
   "lastOpenFiles": [
-    "docs/3 CURSO/2 semestre/DLP/Ejercicios Examen Teoria DLP🐲.md",
+    "docs/3 CURSO/2 semestre/DLP/img/Pasted image 20230510174326.png",
+    "docs/3 CURSO/2 semestre/DLP/img/Pasted image 20230510174139.png",
     "docs/3 CURSO/2 semestre/DLP/Apuntes Examen Teoria DLP🐟.md",
+    "docs/3 CURSO/2 semestre/DLP/img/Pasted image 20230510174109.png",
+    "docs/3 CURSO/2 semestre/DLP/img/Pasted image 20230510173242.png",
+    "Pasted image 20230510173226.png",
+    "docs/3 CURSO/2 semestre/DLP/img/Pasted image 20230510173112.png",
+    "docs/3 CURSO/2 semestre/DLP/img/Pasted image 20230510173058.png",
+    "docs/3 CURSO/2 semestre/DLP/img/Pasted image 20230510172952.png",
+    "docs/3 CURSO/2 semestre/DLP/Ejercicios Examen Teoria DLP🐲.md",
     "docs/3 CURSO/2 semestre/DLP/img/Pasted image 20230510171309.png",
     "docs/3 CURSO/2 semestre/DLP/img/Pasted image 20230510171215.png",
     "docs/3 CURSO/2 semestre/DLP/img/Pasted image 20230510171142.png",
-    "docs/3 CURSO/2 semestre/DLP/img/Pasted image 20230510170413.png",
-    "docs/3 CURSO/2 semestre/DLP/img/Pasted image 20230510170327.png",
-    "docs/3 CURSO/2 semestre/DLP/img/Pasted image 20230510170225.png",
-    "docs/3 CURSO/2 semestre/DLP/img/Pasted image 20230510170136.png",
-    "docs/3 CURSO/2 semestre/DLP/img/Pasted image 20230510163744.png",
-    "docs/3 CURSO/2 semestre/DLP/img/Pasted image 20230510163627.png",
-    "docs/3 CURSO/2 semestre/DLP/img/Pasted image 20230510163514.png",
     "README.md",
     "docs/README.md",
     "docs/3 CURSO/2 semestre/DLP/img",

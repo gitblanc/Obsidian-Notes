@@ -289,3 +289,35 @@ Ver ejercicios en [[Ejercicios Examen Teoria DLP🐲#Generación de código]]
 
 ---
 # Generación de código
+Los principales subproblemas de la generación de código son:
+1. Asignación del almacenamiento
+2. Selección de instrucciones
+3. Asignación de registros
+
+## Entornos de ejecución
+- Un compilador debe:
+	- **Asignar estáticamente la dirección de memoria** que tendrá cualquier variable en tiempo de ejecución (ha de hacerlo en tiempo de compilación)
+	- **Generar código** que gestione la organización de la memoria en tiempo de ejecución y mantenga la información para guiar el proceso de ejecución
+
+## Símbolos y tipos
+- Los **símbolos** (Variable) en el análisis semántico se enlazan a sus definiciones para inferir sus tipos (fase de identificación). En la generación de código se utilizan para conocer las direcciones de memoria de las variables
+- Los **tipos** en el análisis semántico se utilizan para verificar la validez de algunas construcciones sintácticas. En la generación de código incorporan el tamaño y la representación de cada variable
+
+## Tipos
+![[Pasted image 20230510172952.png]]
+![[Pasted image 20230510173058.png]]
+![[Pasted image 20230510173112.png]]
+
+El **número de bytes** para almacenar un **array** es la multiplicación de su tamaño y el número de bytes del tipo de sus elementos.
+![[Pasted image 20230510173242.png]]
+```java
+public int numberOfBytes(){
+	return size*elementType.numberOfBytes();
+}
+```
+
+## Tipos Compuestos: Structs
+- Un registro (struct) es una colección de campos de diferentes tipos donde cada campo se identifica por su nombre
+	- El **tamaño** de un registro es la suma de los tamaños de los tipos de los campos
+	- El **desplazamiento** (offset) de memoria relativo de cada campo es la suma de los tipos de los campos anteriores
+![[Pasted image 20230510174109.png]]

@@ -450,3 +450,9 @@ loadf
 outf
 ```
 
+4. (CREO QUE NO ESTÁ BIEN)
+![[Pasted image 20230510174139.png]]
+![[Pasted image 20230510174326.png]]
+
+
+
