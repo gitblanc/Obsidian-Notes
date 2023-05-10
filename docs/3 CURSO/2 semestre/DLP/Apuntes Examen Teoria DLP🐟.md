@@ -257,4 +257,35 @@ Anotación para resolver el ejercicio 6 de Semántico -> [[Ejercicios Examen Teo
 Mirar ejercicios en [[Ejercicios Examen Teoria DLP🐲#Semántico]]
 
 ---
-# Lenguajes y representaciones 
+# Lenguajes y representaciones intermedias
+Hay:
+- De alto nivel
+- De medio nivel
+- De bajo nivel
+
+## MAPL: Arquitectura
+MAPL es una **representación intermedia de Medio nivel**.
+
+- **IP**, Instruction Pointer: dirección de la instrucción en ejecución
+- **SP**, Stack Pointer: dirección del tope de la pila
+- **BP**, Base Pointer: dirección del marco de pila activo
+![[Pasted image 20230510170136.png]]
+
+## MAPL: Instrucciones push y pop
+![[Pasted image 20230510170225.png]]
+
+## MAPL: Instrucciones load
+![[Pasted image 20230510170327.png]]
+
+## MAPL: Instrucciones store
+![[Pasted image 20230510170413.png]]
+
+## MAPL: Operaciones
+![[Pasted image 20230510171142.png]]
+
+## MAPL: I/0 y Conversiones
+![[Pasted image 20230510171215.png]]
+Ver ejercicios en [[Ejercicios Examen Teoria DLP🐲#Generación de código]]
+
+---
+# Generación de código

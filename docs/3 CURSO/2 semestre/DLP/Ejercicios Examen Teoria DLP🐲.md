@@ -404,3 +404,49 @@ Nota: las que no se incluyen es porque no requieren nada
 
 1. Nota: un entero ocupa 2 bytes
 ![[Pasted image 20230510111746.png]]
+
+2. Dado el siguiente programa de alto nivel:
+```java
+a = 3;
+b = a;
+```
+Escribir el código destino MAPL.
+Suponer que:
+- Las direcciones de memoria de a y b son 0 y 2
+- Ambas son variables enteras
+
+Solución:
+```assembly
+PUSHA 0 //meto una direccion
+PUSHI 3 //meto un 3 ocupando 2 bytes
+STOREI //escribo un 3 ocupando 2 porciones de memoria
+PUSHA 2
+PUSHA 0
+LOADI //va a la dirección 0 y lo deja en el tope de la pila
+STOREI
+```
+3. 
+![[Pasted image 20230510171309.png]]
+```assembly
+//read myInteger;
+pusha 0
+ini
+storei
+
+//real = myInteger * 3.4 -7;
+pusha 2
+pusha 0
+loadi
+i2f
+mulf
+pushi 7
+i2f
+subf
+storef
+
+//write real;
+pusha 2
+loadf
+outf
+```
+
