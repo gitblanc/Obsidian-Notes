@@ -4,35 +4,34 @@
     "type": "split",
     "children": [
       {
-        "id": "1de176912916a334",
+        "id": "fdbd0e0644480226",
         "type": "tabs",
         "children": [
           {
-            "id": "51f9da2362469120",
+            "id": "2ec08de0a7a5a048",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/3 CURSO/2 semestre/SSI/SSI apuntes Examen 1 Teoría 🦥.md",
+                "file": "docs/3 CURSO/2 semestre/DLP/Ejercicios Examen Teoria DLP🐲.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "9431be97f3bc4df2",
+            "id": "4a264e92de32e699",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/3 CURSO/2 semestre/SSI/SSI apuntes Examen 2 Teoría 🥇.md",
+                "file": "docs/3 CURSO/2 semestre/DLP/Apuntes Examen Teoria DLP🐟.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/3 CURSO/2 semestre/SSI/SSI apuntes Examen 2 Teoría 🥇.md",
+                "file": "docs/3 CURSO/2 semestre/DLP/Ejercicios Examen Teoria DLP🐲.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -125,19 +124,23 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "317e254f1c7bfd77",
+  "active": "2ec08de0a7a5a048",
   "lastOpenFiles": [
-    "docs/3 CURSO/2 semestre/SSI/img/Pasted image 20230509172927.png",
-    "docs/3 CURSO/2 semestre/SSI/img/Pasted image 20230509172318.png",
-    "docs/3 CURSO/2 semestre/SSI/img/Pasted image 20230509171959.png",
-    "docs/3 CURSO/2 semestre/SSI/img/Pasted image 20230509171856.png",
-    "docs/3 CURSO/2 semestre/SSI/img/Pasted image 20230509171555.png",
-    "docs/3 CURSO/2 semestre/SSI/img/Pasted image 20230509171210.png",
-    "docs/3 CURSO/2 semestre/SSI/img/Pasted image 20230509170415.png",
-    "docs/3 CURSO/2 semestre/SSI/img/Pasted image 20230509164357.png",
-    "docs/3 CURSO/2 semestre/SSI/img/Pasted image 20230509162944.png",
-    "docs/3 CURSO/2 semestre/SSI/img/Pasted image 20230509150646.png",
-    "docs/3 CURSO/2 semestre/SSI/img/Pasted image 20230509145903.png",
+    "docs/3 CURSO/2 semestre/DLP/img/Pasted image 20230510123227.png",
+    "docs/3 CURSO/2 semestre/DLP/img/Pasted image 20230510123048.png",
+    "docs/3 CURSO/2 semestre/DLP/img/Pasted image 20230510123020.png",
+    "docs/3 CURSO/2 semestre/DLP/Apuntes Examen Teoria DLP🐟.md",
+    "docs/3 CURSO/2 semestre/DLP/img/Pasted image 20230510122909.png",
+    "docs/3 CURSO/2 semestre/DLP/img/Pasted image 20230510122833.png",
+    "docs/3 CURSO/2 semestre/DLP/img/Pasted image 20230510122811.png",
+    "docs/3 CURSO/2 semestre/DLP/Ejercicios Examen Teoria DLP🐲.md",
+    "docs/3 CURSO/2 semestre/DLP/img/Pasted image 20230510121917.png",
+    "docs/3 CURSO/2 semestre/DLP/img/Pasted image 20230510121625.png",
+    "docs/3 CURSO/2 semestre/DLP/img/Pasted image 20230510121004.png",
+    "docs/3 CURSO/2 semestre/DLP/img/Pasted image 20230510120757.png",
+    "docs/3 CURSO/2 semestre/DLP/img/Pasted image 20230510114912.png",
+    "docs/3 CURSO/2 semestre/DLP/img",
+    "docs/3 CURSO/2 semestre/DLP",
     "docs/3 CURSO/2 semestre/SSI/SSI apuntes Examen 1 Teoría 🦥.md",
     "docs/3 CURSO/2 semestre/SSI/SSI apuntes Examen 2 Teoría 🥇.md",
     "README.md",
