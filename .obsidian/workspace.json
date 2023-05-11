@@ -31,8 +31,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/3 CURSO/2 semestre/DLP/Apuntes Examen Teoria DLP🐟.md",
+                "file": "docs/3 CURSO/2 semestre/DLP/Ejercicios Examen Teoria DLP🐲.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -125,8 +124,10 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "4a264e92de32e699",
+  "active": "2ec08de0a7a5a048",
   "lastOpenFiles": [
+    "docs/3 CURSO/2 semestre/DLP/img/Pasted image 20230511163635.png",
+    "docs/3 CURSO/2 semestre/DLP/Apuntes Examen Teoria DLP🐟.md",
     "docs/3 CURSO/2 semestre/DLP/img/Pasted image 20230510215041.png",
     "docs/3 CURSO/2 semestre/DLP/img/Pasted image 20230510215030.png",
     "docs/3 CURSO/2 semestre/DLP/img/Pasted image 20230510215000.png",
@@ -136,10 +137,8 @@
     "docs/3 CURSO/2 semestre/DLP/img/Pasted image 20230510214831.png",
     "docs/3 CURSO/2 semestre/DLP/img/Pasted image 20230510214750.png",
     "docs/3 CURSO/2 semestre/DLP/Ejercicios Examen Teoria DLP🐲.md",
-    "docs/3 CURSO/2 semestre/DLP/Apuntes Examen Teoria DLP🐟.md",
     "docs/3 CURSO/2 semestre/DLP/img/Pasted image 20230510214720.png",
     "docs/3 CURSO/2 semestre/DLP/img/Pasted image 20230510214707.png",
-    "docs/3 CURSO/2 semestre/DLP/img/Pasted image 20230510214643.png",
     "README.md",
     "docs/README.md",
     "docs/3 CURSO/2 semestre/DLP/img",

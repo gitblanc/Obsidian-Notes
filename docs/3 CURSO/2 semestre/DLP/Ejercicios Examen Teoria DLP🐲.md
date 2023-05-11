@@ -311,6 +311,41 @@ expr returns[Expresion ast]
 	;
 ```
 
+11. Dada la siguiente gramática:
+```g4
+programa: sent*
+sent: PRINT expr ';'
+expr: IDENT
+	| INT_CONSTANT
+	| expr '*' expr
+	| expr '+' expr
+```
+a) Añadir la invocación de funciones y procedimientos en BNF y EBNF.
+Ejemplos:
+- `print a+f();`
+- `print log(n,2);`
+- `print doble(doble(a));`
+- `print (23)`
+b) Añadir el uso de arrays de 1 dimensión y tipos primitivos y registros de tipos primitivos
+c) Añadir el uso de arrays de cualquier dimensión y tipo y registros de cualquier tipo
+d) Añadir la asignación a=4 (múltiple)
+
+Solución:
+```
+programa: sent*
+sent: PRINT expr ';'
+	| expr ';' //asignación múltiple
+expr: IDENT
+	| INT_CONSTANT
+	| expr '*' expr
+	| expr '+' expr
+	| IDENT '(' expr ')' //invocación a funciones
+	| IDENT '[' expr ']' //arrays de cualquier dimensión
+	| expr '=' expr //asignación simple
+	
+```
+![[Pasted image 20230511163635.png]]
+
 
 ---
 
