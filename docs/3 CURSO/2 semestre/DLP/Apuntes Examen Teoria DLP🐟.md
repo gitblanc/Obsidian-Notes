@@ -709,10 +709,41 @@ El cálculo de los _símbolos directores_ en este caso ha sido trivial, ya que l
 - Una gramática L(1) puede usar recursividad iszuierda? ==no==
 - Si una gramática no pasa únicamente el algoritmo L(1), ¿es ambigua? ==no==
 
-## Creación de gramáticas
-FALTA
+## Creación de gramáticas. Construcciones básicas
+-   **Secuencia**. Una secuencia no es más que una sucesión de símbolos que indica el orden en el que deben aparecer. Es la construcción más básica y los demás son casos particulares de este.
+    ```
+    escritura ⟶ `print` expr `;`
+    ```
+
+-   **Lista**. Se utiliza cuando se quiere indicar que una cadena puede aparecer en la entrada varias veces seguidas. En BNF esto se expresa con recursividad.
+```
+programa ⟶ instruccion
+        | programa instruccion
+```
+
+-   **Composición**. Se usa cuando hay unos elementos atómicos o finales y otros mayores que se crean a partir de estos (similar al patrón de diseño _Composite_). El caso más habitual son las expresiones.
+    
+```
+expr ⟶ NUM                 // Elemento atómico
+            | IDENT             // Elemento atómico
+            | expr '*' expr     // Elemento compuesto
+            | expr '+' expr     // Elemento compuesto
+```
+
+> Nota: para ver un ejemplo, ver el ejercicio 12 en [[Ejercicios Examen Teoria DLP🐲#Sintáctico]]
 
 ## Tipos de listas
+- Por un lado, pueden clasificarse en función de que requieran al menos un elemento (1+) o bien que no lo requieran (0+)
+- Por otro lado, las listas pueden ser *sin separadores(ss)* o con *separadores(cs)*. Un separador es aquella cadena (normalmente sólo un token) que se deba intercalar entre los elementos de la lista.
+Un ejemplo de separador es la coma entre los argumentos de una función.
+
+```
+f(x, y, z)
+```
+
+Nótese que si hay un sólo elemento no tiene que haber separador; si hay _n_ elementos, deberá haber _n-1_ separadores.
+
+Combinando estos parámetros, se obtienen cuatro tipos de listas, donde *e* es el elemento que se quiere repetir y *s* representa al separador.
 |Tipo de Lista|Cadenas que genera|
 |--|--|
 |1+ss|_e ee eee eeee ..._|
@@ -721,11 +752,226 @@ FALTA
 |0+cs|_ε e ese esese ..._|
 
 ## Patrones
-Tabla original de Holub con una columna EBNF:
+Tabla original de Holub con una columna EBNF, donde se muestran los patrones para obtener las reglas que generen los cuatro tipos de listas anteriores:
 ![[Pasted image 20230510122811.png]]
 ![[Pasted image 20230510122833.png]]
 
 ![[Pasted image 20230510122909.png]]
+
+## Carácterísticas que impiden a una gramática ser LL(1)
+- Que haya **símbolos directores comunes**
+- Que tenga **recursividad a izquierda**
+- Que sea **ambigua**
+
+## Símbolos directores comunes
+- Son aquellos tokens de una regla que, a la hora de tener que elegir entre varias reglas, si aparecen a la entrada indican que hay que seleccionar dicha regla. Son el primer token que aparece en alguna de las cadenas:
+Por ejemplo:
+
+```
+a ⟶ IDENT IDENT
+    | b NUM
+
+b ⟶ X | Y
+```
+
+Los símbolos directores de las dos reglas de _a_ son:
+-   _SD(IDENT IDENT)_ es sólo el token _IDENT_.
+-   _SD(b NUM)_ son los tokens { _X_, _Y_ }. Es decir, las dos cadenas que se pueden generar a partir de la cadena '_b NUM_' son '_X NUM'_ e '_Y NUM_'. De estas cadenas, se coge el primer token de cada una.
+
+Estos son los símbolos que vimos en la [[Apuntes Examen Teoria DLP🐟#Implementación de una regla]], que hay que utilizar en los if para saber por qué regla ir.
+
+En el ejemplo anterior, la implementación de las reglas del antecedente _a_, usando los símbolos directores de cada regla, sería:
+
+```java
+void a() {
+    if (getToken() == Lexicon.IDENT) {
+        match(Lexicon.IDENT);
+        match(Lexicon.IDENT);
+    } else if (getToken() == Lexicon.X || getToken() == Lexicon.Y) {
+        b();
+        match(Lexicon.NUM);
+    } else
+        error();
+}
+```
+
+## Colisión de símbolos directores
+A la hora de elegir entre varias reglas con el _mismo antecedente_, no debería haber ningún token que estuviera entre los símbolos directores de más de una de ellas. Si esto ocurriera, al aparecer dicho token en la entrada, no se sabría cual de las reglas aplicar.
+
+### Ejemplo 1 
+
+Por ejemplo, supóngase la siguiente gramática.
+
+```
+a ⟶ IDENT IDENT
+    | b NUM
+
+b ⟶ IDENT
+```
+
+La implementación recursiva descendente seria:
+
+```java
+void a() {
+    if (getToken() == Lexicon.IDENT) {
+        match(Lexicon.IDENT);
+        match(Lexicon.IDENT);
+    } else if (getToken() == Lexicon.IDENT) {
+        g();
+        match(Lexicon.NUM);
+    } else
+        error();
+}
+```
+
+Aquí se ve el problema de que un token esté entre los símbolos directores de más de una regla (con mismo antecedente). En este caso, puede verse que el token _IDENT_ está entre los símbolos directores tanto de '_a ⟶ IDENT IDENT_' como de '_a ⟶ b NUM_'. Por tanto, en la implementación anterior nunca se metería por la segunda rama del _if_.
+
+Esto haría que una entrada válida tal como '_a 24_' fuera erróneamente clasificada como inválida.
+
+### Ejemplo 2
+
+En el ejemplo anterior el calcular los símbolos directores era trivial. Sin embargo, no es una tarea que se deba hacer a _ojo_, ya que enseguida puede complicarse la tarea, por ejemplo, en cuanto aparezcan producciones a vacío (ε). En la siguiente gramática, aunque a simple vista no se vea, hay dos reglas con el mismo antecedente que comparten símbolos directores:
+
+```
+s ⟶ c d g
+c ⟶ NUM | IDENT
+d ⟶ NUM | f g
+f ⟶ PRINT NUM | ε
+g ⟶ IDENT | NUM
+```
+
+El problema está en las dos reglas que tienen a _d_ como antecedente.
+
+-   En la primera regla '_d ⟶ NUM_' es fácil ver que su único símbolo director es el token _NUM_.
+    
+-   En la regla '_d ⟶ f g_', sus símbolos directores son los tokens { _PRINT_, _IDENT_ y _NUM_ }.
+    
+    El primer token se obtiene si _f_ se sustituye aplicando la primera de sus reglas. Pero _f_ también puede sustituirse por su segunda regla y anularse. En este caso, serían los símbolos directores de _g_ (_IDENT_ y _NUM_) los que formarían parte de los símbolos directores de _d_.
+    
+
+Por tanto, el token _NUM_ forma parte de los símbolos directores de ambas reglas de _d_.
+
+Este ejemplo pretende mostrar que no es conveniente calcular los símbolos directores a ojo, ya que a veces se pueden pasar por alto ciertas situaciones, y por ello que se debe comprobar la gramática antes de implementarla usando una herramienta.
+
+### Posibles soluciones
+Las opciones más comunes a la hora de implementar una gramática que no sea _LL(1)_ son:
+-   Leer _más tokens_ de la entrada.
+-   Cambiar de _dirección_ de reconocimiento del parser.
+-   Buscar una gramática _equivalente_.
+
+### ¿Qué hace ANTLR?
+- Ante una gramática que presente reglas con el mismo antecedente y símbolos directores comunes, opta por leer más tokens de entrada. En vez de quedarse en k=1, sigue mirando tantos tokens como sea necesario.
+
+## Recursividad a la izquierda
+- Se dice que una regla es recursiva cuando el antecedente aparece en el consecuente de la regla:
+```java
+a ⟶ ... a ...
+```
+
+Se dice que una regla es _recursiva a izquierda_ (_RI_) cuando el antecedente aparece como _primer_ símbolo del consecuente.
+
+```java
+a ⟶ a ...
+```
+
+### Problema de la recursividad a la izquierda
+- Los bucles infinitos:
+```
+a ⟶ a ...
+```
+
+```java
+void a() {
+    a();
+    ...
+}
+```
+
+### Posibles soluciones
+A diferencia del capítulo anterior, aquí no es solución mirar más tokens hacia adelante. Las alternativas que sí permanecen son las otras dos:
+-   Cambiar de _dirección_ de reconocimiento del parser.
+-   Buscar una gramática _equivalente_ sin _RI_.
+Regla para eliminar la recursividad a la izquierda
+![[slide_17.542a11e0.png]]
+
+### ¿Qué hace ANTLR?
+ANTLR es un parser recursivo descendente. Por tanto, no puede implementar una gramática con recursividad a izquierda. Pero lo que sí hace, de manera automática, es transformar la gramática tal y como se acaba de ver en el apartado anterior. Y es esta _otra_ nueva gramática (que no tiene _RI_) la que realmente implementa.
+
+Pero ANTLR no puede tratar todo tipo de recursividad a izquierda. Sólo puede tratar la recursividad a izquierda **directa**, es decir, cuando la recursividad se halla en la propia regla (que son los ejemplos vistos anteriormente). Sin embargo, si la gramática tiene recursividad a izquierda **indirecta**, no puede transformarla y la gramática es rechazada.
+
+Un ejemplo de recursividad a izquierda _indirecta_ seria el siguiente, en el cual ANTLR produciría un error.
+
+```
+a ⟶ b ...
+b ⟶ a ...
+```
+
+## Ambigüedad
+
+En el tema anterior se vio cómo se registraba en un árbol concreto (o de análisis sintáctico) [[Apuntes Examen Teoria DLP🐟#Árbol Concreto (o de Análisis Gramatical)]] el camino encontrado para llegar desde el símbolo inicial hasta la cadena de entrada (lo cual prueba que es una entrada válida)
+
+Concretamente, se vio esta gramática y un árbol para la entrada que la sigue.
+
+```
+s ⟶ e
+e ⟶ e + e
+e ⟶ e * e
+e ⟶ LITENT
+```
+
+```
+3 + 4 * 5
+```
+
+Sin embargo, existe otra forma de llegar a dicha entrada partiendo de _s_ (y, por tanto, existe otro árbol concreto distinto). Estos son los dos árboles que se pueden obtener para la entrada:
+
+![](http://di002.edv.uniovi.es/~ric/sites/apuntes_dlp/assets/slide_41b.3f1c0296.png)
+
+Esto ocurre por que la gramática anterior es _ambigua_.
+
+### Posibles soluciones
+Las soluciones más comunes ante una gramática ambigua son:
+-   Como en las situaciones anteriores, siempre hay la opción de _hallar una gramática equivalente_.
+-   Cambiar el _lenguaje_.
+-   Usar _reglas de selección_.
+
+### ¿Qué hace ANTLR?
+ANTLR acepta gramáticas ambiguas con _reglas de selección_ para indicar qué interpretación se debe hacer de las entradas con más de una interpretación.
+
+### Ejemplo
+Supóngase la siguiente especificación de ANTLR.
+
+```java
+start : 'print' expr ';';
+
+expr : NUM
+    | IDENT
+    | expr '+' expr
+    | expr '*' expr;
+```
+
+Supóngase la entrada:
+
+```
+print 1 + 2 * 3;
+```
+
+Dado que la gramática anterior es ambigua, la entrada podría reconocerse de dos formas: una en que se realiza primero la suma y otra en la que se hace primero la multiplicación.
+![[a.22136359.svg]]
+
+Sin embargo, ANTLR usar el orden de las reglas para extraer la _regla de selección_ por la cual se quiere elegir el árbol en el que el '+' tiene mayor prioridad. Por tanto, tomaría la interpretación de la izquierda (realiza antes la suma).
+
+Esta, obviamente, no es la que se corresponde con la precedencia real de los operadores aritméticos. La forma de indicarle que se quiere el otro árbol es cambiando el orden de las dos reglas de los operadores '*' y '+'.
+
+```
+start : 'print' expr ';';
+
+expr : NUM
+    | IDENT
+    | expr '*' expr;
+    | expr '+' expr
+```
+Ahora, sí que ANTLR interpretaría la entrada de la forma correcta dando más prioridad al '*' y se formaría el árbol de la derecha.
 
 Mirar ejercicios en [[Ejercicios Examen Teoria DLP🐲#Sintáctico]]
 

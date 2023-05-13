@@ -365,6 +365,217 @@ expr: IDENT
 ```
 ![[Pasted image 20230511163635.png]]
 
+12. Hacer una gramática en BNF de un lenguaje con las siguientes características:
+-   Un conjunto está formado por uno o más elementos entre paréntesis separados por comas.
+-   Cada elemento puede ser un número u otro conjunto.
+-   Los números están formados por dígitos de 1 al 3, pudiendo haber espacios entre ellos. Suponer que el analizador léxico devuelve los tokens _UNO_, _DOS_ y _TRES_.
+-   Los números están formados por un número impar de dígitos y son [_capicúa_](https://es.wikipedia.org/wiki/Capic%C3%BAa).
+
+Ejemplos de entradas válidas serían:
+
+```
+(131)
+(3, 222, 12 313)
+(12121, 2, (333), (2, 3, 1111111))
+(2132312, ( ( (1, 2), 2, 131), 1, 2), 3322233)
+```
+
+Se pide hacer una gramática BNF usando las construcciones anteriores. Anotar en cada regla qué construcción sigue.
+
+Solución: 
+La gramática pedida sería:
+
+```java
+conjunto: '(' elementos ')'                     // Secuencia
+
+elementos: elemento | elementos ‘,’ elemento    // Lista
+elemento: num | conjunto                        // Dos secuencias
+
+num: UNO            // Composición
+    | DOS
+    | TRES
+    | UNO num UNO
+    | DOS num DOS
+    | TRES num TRES
+```
+
+13. Sea un lenguaje para la definición de variables.
+
+```
+int a, b;
+double x;
+```
+
+Requisitos:
+
+-   Sólo hay dos tipos: entero (_int_) y real (_double_).
+-   En una sola definición, pueden definirse varias variables del mismo tipo.
+-   En un programa puede haber varias definiciones, pero también sería válido que no hubiera ninguna.
+
+Se pide especificar la sintaxis de dicho lenguaje en BNF y en EBNF. Indicar, además, los patrones usados en las listas.
+
+### Solución BNF 
+
+Aplicando los patrones anteriores y sustituyendo sus símbolos por los nombres adecuados para este ejercicio, quedaría finalmente esta gramática.
+
+```
+definiciones: ε | definiciones definicion       // lista 0+ss
+definicion: tipo nombres ';'                    // secuencia
+nombres: IDENT | nombres ',' IDENT              // lista 1+cs
+```
+
+Como puede verse, toda regla sigue alguna de las tres construcciones básicas. Lo cual, a medida que el alumno se familiarice con ellas, hará que cada vez le será más fácil entender y crear cualquier gramática.
+
+En el caso concreto de las listas (reglas 1 y 3) se han aplicado los patrones correspondientes a la versión recursiva a izquierda.
+
+### Solución EBNF 
+
+La solución en EBNF sería:
+
+```
+definiciones: definicion*           // lista 0+ss
+definicion: tipo nombres ';'        // secuencia
+nombres: IDENT (',' IDENT)*         // lista 1+cs
+```
+
+Como puede verse, las construcciones son las mismas, sólo que en el caso de las listas se han tomado los patrones de otra columna de la tabla (la última).
+
+14. Sea la siguiente gramática _ambigua_.
+
+```
+expr ⟶ expr '+' NUM
+    | NUM
+    | '(‘ tipo ')' expr 	// Suponemos tipo definido
+```
+
+Se pide:
+
+1.  Demostrar que es ambigua.
+2.  Dar una solución no ambigua con _cambio de lenguaje_ y otra usando _reglas de selección_ en ANTLR.
+
+### Solución
+### 1. Demostrar que es Ambigua 
+
+Tal y como se dijo anteriormente, no existe un algoritmo que dada una gramática cualquiera indique si es ambigua o no. Pero una forma de demostrar que una gramática en particular _sí_ es ambigua es mostrar una entrada para la cual al menos se puedan crear dos árboles concretos (es decir, que haya dos formas de interpretarla).
+
+Una entrada que demostraría que la gramática es ambigua sería la siguiente:
+
+```
+(double) 3 + 4
+```
+
+Esta entrada puede producir dos árboles concretos (es decir, se puede llegar del símbolo inicial a la cadena mediante dos caminos) ya que hay dos formas de interpretarla:
+
+![](http://di002.edv.uniovi.es/~ric/sites/apuntes_dlp/assets/b.c57a9cea.svg)
+
+En el primer árbol se interpreta que primero se convierte el _3_ a _double_ y al resultado de la conversión se suma al _4_. En el árbol de la derecha se interpreta que primero hay que sumar y luego realizar la conversión de todo ello.
+
+Por tanto, la gramática es ambigua.
+
+### 2. Solución con Cambio de Lenguaje 
+
+Se podría cambiar el lenguaje para que el valor sobre el que se realiza la conversión tuviera que estar delimitado, por ejemplo, con '<' y '>'. En esta caso, ya no habría dos formas de interpretar la entrada:
+
+```java
+expr ⟶ expr '+' NUM
+    | NUM
+    | '(' tipo ')' '<' expr '>'
+```
+
+Las entradas dejarían claro el alcance de la conversión:
+
+```
+(double)<3 + 4>
+
+(double)<3> + 4
+```
+
+### Solución con Reglas de Selección
+
+En vez de cambiar el lenguaje, se puede dejar como está y, dejando la gramática ambigua, determinar qué derivación (interpretación) se quiere para dichas entradas.
+
+De los dos árboles que generaba la entrada anterior, lo habitual es que se quiera interpretar que primero se hace la conversión y luego la suma, es decir, que la conversión tenga mayor prioridad. Por tanto, se quiere seguir la derivación que se corresponda con el árbol de la izquierda.
+
+Para ello, en ANTLR habría que dar mayor prioridad (poner primero) la regla de la conversión y luego la de la suma.
+
+```java
+expr ⟶ NUM
+    | '(' tipo ')' expr
+    | expr '+' NUM
+```
+
+### Solución con Gramática Equivalente 
+
+Aunque no se ha pedido en el enunciado, por si se tiene curiosidad, aquí estaría la solución hallando una gramática equivalente que no es ambigua.
+
+```java
+expr ⟶ termino
+    	| expr + termino
+
+termino ⟶ factor
+	    | '(' type ')' termino
+
+factor ⟶ NUM
+```
+
+14. Hacer una especificación en ANTLR para un lenguaje con las siguientes características:
+-   Una entrada tendrá sólo una única sentencia 'print' seguida de una expresión y un punto y coma.
+-   Características de las expresiones:
+    -   Operadores relacionales: `'==' y '!='.`
+    -   Operadores lógicos: '||' y '&&' (_or_ y _and_ respectivamente).
+    -   Operadores aritméticos: '+', '-', '*' y '/'.
+    -   Agrupación de expresiones entre paréntesis.
+
+Ejemplos de entradas válidas en este lenguaje serían:
+
+```java
+print a + 2 == 3 && a / 5 != b;
+print a * (4 - 2);
+```
+
+Solución:
+Lo primero, habría que hacer el léxico del lenguaje.
+
+```java
+lexer grammar Lexicon;
+
+NUM : [0-9]+;
+IDENT : [a-zA-Z0-9_]+;
+
+WS : [ \t\r\n]+ -> skip;
+```
+
+Y a continuación se haría la gramática.
+
+```java
+grammar Grammar;
+
+import Lexicon;
+
+start : 'print' expr ';';
+
+expr:
+	NUM
+	| IDENT
+	| '(' expr ')'
+	| expr ('*' | '/') expr
+	| expr ('+' | '-') expr
+	| expr ('==' | '!=') expr
+	| expr '&&' expr
+	| expr '||' expr
+	;
+```
+
+Nótese cómo el orden de las reglas corresponde con la prioridad de los operadores (los operadores de la misma prioridad, por tanto, deben ir en la misma regla).
+
+Supóngase la siguiente entrada válida.
+
+```java
+print a + 2 == 3 && a / 5 != b;
+```
+
+Para dicha entrada, el árbol concreto que correspondería con la interpretación que hará ANTLR de la misma tal y como están ordenadas las reglas sería el siguiente.
+![[gui_0450.6d3f4c4b.svg]]
 
 ---
 

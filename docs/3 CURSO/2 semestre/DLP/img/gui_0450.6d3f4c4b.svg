@@ -1,0 +1,755 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="186.2701mm"
+   height="107.5227mm"
+   viewBox="0 0 186.27009 107.5227"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="gui_0450.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1.5193868"
+     inkscape:cx="221.47093"
+     inkscape:cy="235.95046"
+     inkscape:window-width="2560"
+     inkscape:window-height="1387"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <clipPath
+       id="clip0">
+      <rect
+         x="120"
+         y="176"
+         width="740"
+         height="438"
+         id="rect824" />
+    </clipPath>
+    <clipPath
+       id="clip0-7">
+      <rect
+         x="120"
+         y="176"
+         width="740"
+         height="438"
+         id="rect1446" />
+    </clipPath>
+    <clipPath
+       id="clip0-3">
+      <rect
+         x="120"
+         y="176"
+         width="761"
+         height="438"
+         id="rect2070" />
+    </clipPath>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(163.67386,-57.402523)">
+    <g
+       clip-path="url(#clip0-3)"
+       transform="matrix(0.24144403,0,0,0.24144403,-191.7658,16.503446)"
+       id="g2187">
+      <g
+         aria-label="expr&amp;&amp;‘print’;start"
+         transform="translate(519.77,278)"
+         id="text2085"
+         style="font-weight:300;font-size:21px;font-family:'a Gotham. 1 Normal. 3 Light', 'a Gotham. 1 Normal. 3 Light_MSFontService', sans-serif;fill:#4b6276">
+        <path
+           d="m 6.468,0.252 c 2.058,0 3.339,-0.84 4.431,-2.016 l -0.714,-0.63 c -0.882,0.945 -2.016,1.68 -3.675,1.68 -2.1,0 -4.011,-1.554 -4.2,-4.221 h 8.883 c 0.021,-0.168 0.021,-0.231 0.021,-0.42 0,-3.171 -1.911,-5.607 -4.914,-5.607 -2.898,0 -5.082,2.478 -5.082,5.586 v 0.042 c 0,3.339 2.436,5.586 5.25,5.586 z M 2.31,-5.859 c 0.189,-2.373 1.827,-4.158 3.948,-4.158 2.457,0 3.696,1.995 3.843,4.158 z"
+           style="font-weight:300;font-size:21px;font-family:'a Gotham. 1 Normal. 3 Light', 'a Gotham. 1 Normal. 3 Light_MSFontService', sans-serif;fill:#4b6276"
+           id="path2252" />
+        <path
+           d="m 14.027978,-10.71 h -1.281 l 4.2,5.25 -4.368,5.46 h 1.239 l 3.78,-4.767 3.78,4.767 h 1.281 l -4.389,-5.481 4.221,-5.229 h -1.239 l -3.633,4.536 z"
+           style="font-weight:300;font-size:21px;font-family:'a Gotham. 1 Normal. 3 Light', 'a Gotham. 1 Normal. 3 Light_MSFontService', sans-serif;fill:#4b6276"
+           id="path2254" />
+        <path
+           d="m 25.556971,3.36 h 1.029 v -5.67 c 0.882,1.344 2.268,2.562 4.41,2.562 2.583,0 5.208,-2.121 5.208,-5.607 v -0.042 c 0,-3.486 -2.625,-5.565 -5.208,-5.565 -2.121,0 -3.486,1.239 -4.41,2.646 v -2.394 h -1.029 z m 5.334,-4.095 c -2.226,0 -4.368,-1.848 -4.368,-4.599 v -0.042 c 0,-2.73 2.142,-4.599 4.368,-4.599 2.247,0 4.2,1.806 4.2,4.62 v 0.042 c 0,2.877 -1.869,4.578 -4.2,4.578 z"
+           style="font-weight:300;font-size:21px;font-family:'a Gotham. 1 Normal. 3 Light', 'a Gotham. 1 Normal. 3 Light_MSFontService', sans-serif;fill:#4b6276"
+           id="path2256" />
+        <path
+           d="m 39.416966,0 h 1.029 v -4.389 c 0,-3.486 2.163,-5.355 4.641,-5.355 h 0.105 v -1.134 c -2.121,-0.084 -3.906,1.302 -4.746,3.213 v -3.045 h -1.029 z"
+           style="font-weight:300;font-size:21px;font-family:'a Gotham. 1 Normal. 3 Light', 'a Gotham. 1 Normal. 3 Light_MSFontService', sans-serif;fill:#4b6276"
+           id="path2258" />
+        <path
+           d="m 20.50499,74.294 1.932,-1.386 -2.331,-2.352 c 0.756,-1.008 1.407,-2.163 1.995,-3.339 l -1.953,-1.029 c -0.483,1.029 -1.008,1.995 -1.575,2.835 l -2.52,-2.562 c 1.953,-0.735 3.234,-1.89 3.234,-3.822 v -0.042 c 0,-1.974 -1.575,-3.549 -3.906,-3.549 -2.625,0 -4.221,1.722 -4.221,3.696 v 0.042 c 0,1.071 0.378,1.995 1.218,3.066 -2.016,0.861 -3.1290002,2.226 -3.1290002,4.116 v 0.042 c 0,2.541 2.0580002,4.2 4.8090002,4.2 1.764,0 3.234,-0.735 4.494,-1.911 z m -5.817,-9.219 c -0.819,-0.903 -1.113,-1.449 -1.113,-2.184 v -0.042 c 0,-1.029 0.714,-1.764 1.764,-1.764 0.966,0 1.659,0.672 1.659,1.659 v 0.042 c 0,1.05 -0.798,1.743 -2.31,2.289 z m -0.378,6.993 c -1.428,0 -2.457,-0.903 -2.457,-2.142 v -0.042 c 0,-0.945 0.588,-1.848 1.953,-2.436 l 3.276,3.339 c -0.84,0.798 -1.764,1.281 -2.772,1.281 z"
+           style="font-family:'a Gotham. 1 Normal. 5 Medium', 'a Gotham. 1 Normal. 5 Medium_MSFontService', sans-serif;fill:#f28a3e"
+           id="path2260" />
+        <path
+           d="m 35.3383,74.294 1.932,-1.386 -2.331,-2.352 c 0.756,-1.008 1.407,-2.163 1.995,-3.339 l -1.953,-1.029 c -0.483,1.029 -1.008,1.995 -1.575,2.835 l -2.52,-2.562 c 1.953,-0.735 3.234,-1.89 3.234,-3.822 v -0.042 c 0,-1.974 -1.575,-3.549 -3.906,-3.549 -2.625,0 -4.221,1.722 -4.221,3.696 v 0.042 c 0,1.071 0.378,1.995 1.218,3.066 -2.016,0.861 -3.129,2.226 -3.129,4.116 v 0.042 c 0,2.541 2.058,4.2 4.809,4.2 1.764,0 3.234,-0.735 4.494,-1.911 z m -5.817,-9.219 c -0.819,-0.903 -1.113,-1.449 -1.113,-2.184 v -0.042 c 0,-1.029 0.714,-1.764 1.764,-1.764 0.966,0 1.659,0.672 1.659,1.659 v 0.042 c 0,1.05 -0.798,1.743 -2.31,2.289 z m -0.378,6.993 c -1.428,0 -2.457,-0.903 -2.457,-2.142 v -0.042 c 0,-0.945 0.588,-1.848 1.953,-2.436 l 3.276,3.339 c -0.84,0.798 -1.764,1.281 -2.772,1.281 z"
+           style="font-family:'a Gotham. 1 Normal. 5 Medium', 'a Gotham. 1 Normal. 5 Medium_MSFontService', sans-serif;fill:#f28a3e"
+           id="path2262" />
+        <path
+           d="m -369.685,-8.862 h 2.793 v -2.898 h -1.071 c -0.105,-1.071 0.504,-1.722 1.785,-1.953 l -0.273,-1.092 c -2.121,0.168 -3.234,1.155 -3.234,3.486 z"
+           style="font-family:'a Gotham. 1 Normal. 5 Medium', 'a Gotham. 1 Normal. 5 Medium_MSFontService', sans-serif;fill:#f28a3e"
+           id="path2264" />
+        <path
+           d="m -363.76301,3.36 h 2.541 v -5.082 c 0.777,1.029 1.932,1.953 3.78,1.953 2.625,0 5.145,-2.079 5.145,-5.754 v -0.042 c 0,-3.696 -2.541,-5.754 -5.145,-5.754 -1.806,0 -2.961,0.924 -3.78,2.079 v -1.848 h -2.541 z m 5.712,-5.334 c -1.722,0 -3.234,-1.428 -3.234,-3.549 v -0.042 c 0,-2.121 1.512,-3.549 3.234,-3.549 1.722,0 3.171,1.407 3.171,3.549 v 0.042 c 0,2.184 -1.428,3.549 -3.171,3.549 z"
+           style="font-family:'a Gotham. 1 Normal. 5 Medium', 'a Gotham. 1 Normal. 5 Medium_MSFontService', sans-serif;fill:#f28a3e"
+           id="path2266" />
+        <path
+           d="m -349.67202,0 h 2.541 v -4.221 c 0,-2.94 1.554,-4.389 3.78,-4.389 h 0.147 v -2.688 c -1.953,-0.084 -3.234,1.05 -3.927,2.709 v -2.499 h -2.541 z"
+           style="font-family:'a Gotham. 1 Normal. 5 Medium', 'a Gotham. 1 Normal. 5 Medium_MSFontService', sans-serif;fill:#f28a3e"
+           id="path2268" />
+        <path
+           d="m -340.95706,-12.789 h 2.73 v -2.415 h -2.73 z m 0.105,12.789 h 2.541 v -11.088 h -2.541 z"
+           style="font-family:'a Gotham. 1 Normal. 5 Medium', 'a Gotham. 1 Normal. 5 Medium_MSFontService', sans-serif;fill:#f28a3e"
+           id="path2270" />
+        <path
+           d="m -334.99308,0 h 2.541 v -6.258 c 0,-1.722 1.029,-2.751 2.499,-2.751 1.512,0 2.373,0.987 2.373,2.709 V 0 h 2.541 v -7.077 c 0,-2.562 -1.449,-4.242 -3.948,-4.242 -1.722,0 -2.751,0.903 -3.465,1.932 v -1.701 h -2.541 z"
+           style="font-family:'a Gotham. 1 Normal. 5 Medium', 'a Gotham. 1 Normal. 5 Medium_MSFontService', sans-serif;fill:#f28a3e"
+           id="path2272" />
+        <path
+           d="m -318.2561,0.189 c 0.966,0 1.659,-0.21 2.289,-0.567 v -2.079 c -0.504,0.252 -1.008,0.378 -1.575,0.378 -0.861,0 -1.365,-0.399 -1.365,-1.386 v -5.439 h 2.982 v -2.184 h -2.982 v -3.045 h -2.541 v 3.045 h -1.407 v 2.184 h 1.407 v 5.838 c 0,2.436 1.323,3.255 3.192,3.255 z"
+           style="font-family:'a Gotham. 1 Normal. 5 Medium', 'a Gotham. 1 Normal. 5 Medium_MSFontService', sans-serif;fill:#f28a3e"
+           id="path2274" />
+        <path
+           d="m -313.69911,-8.757 c 2.121,-0.168 3.234,-1.155 3.234,-3.486 V -14.7 h -2.793 v 2.877 h 1.092 c 0.084,1.092 -0.525,1.743 -1.806,1.974 z"
+           style="font-family:'a Gotham. 1 Normal. 5 Medium', 'a Gotham. 1 Normal. 5 Medium_MSFontService', sans-serif;fill:#f28a3e"
+           id="path2276" />
+        <path
+           d="m 331.136,-5.384 h 3.192 v -3.288 h -3.192 z m -0.504,12.888 c 2.424,-0.216 3.696,-1.344 3.696,-4.008 V 0.688 h -3.192 V 4 h 1.248 c 0.096,1.224 -0.6,1.968 -2.064,2.256 z"
+           style="font-size:24px;font-family:'a Gotham. 1 Normal. 5 Medium', 'a Gotham. 1 Normal. 5 Medium_MSFontService', sans-serif;fill:#f28a3e"
+           id="path2278" />
+        <path
+           d="m -12.3661,-74.79 c 2.058,0 3.6960004,-1.218 3.6960004,-3.129 v -0.042 c 0,-1.89 -1.8060004,-2.52 -3.5280004,-3.003 -1.533,-0.441 -2.982,-0.882 -2.982,-2.079 v -0.042 c 0,-1.071 0.966,-1.869 2.436,-1.869 1.134,0 2.31,0.42 3.2970004,1.071 l 0.546,-0.861 c -1.071,-0.714 -2.5200004,-1.176 -3.8010004,-1.176 -2.079,0 -3.528,1.239 -3.528,2.961 v 0.042 c 0,1.911 1.932,2.436 3.675,2.94 1.491,0.42 2.8350004,0.882 2.8350004,2.142 v 0.042 c 0,1.239 -1.1340004,2.037 -2.5830004,2.037 -1.365,0 -2.667,-0.504 -3.843,-1.407 l -0.609,0.819 c 1.134,0.924 2.835,1.554 4.389,1.554 z"
+           id="path2280" />
+        <path
+           d="m -2.0341098,-74.811 c 0.672,0 1.19699997,-0.126 1.74299997,-0.378 v -0.966 c -0.609,0.273 -1.04999997,0.378 -1.57499997,0.378 -1.239,0 -2.142,-0.546 -2.142,-2.079 v -6.909 h 3.75899997 V -85.71 H -4.0081098 v -3.423 h -1.029 v 3.423 h -1.554 v 0.945 h 1.554 v 7.014 c 0,2.037 1.344,2.94 3.003,2.94 z"
+           id="path2282" />
+        <path
+           d="m 6.0508822,-74.748 c 2.037,0 3.36,-1.008 4.0949998,-2.037 V -75 h 1.008 v -6.678 c 0,-1.323 -0.378,-2.31 -1.092,-3.024 -0.7769998,-0.777 -1.9319998,-1.176 -3.3809998,-1.176 -1.47,0 -2.625,0.378 -3.801,0.924 l 0.378,0.903 c 0.987,-0.504 2.058,-0.861 3.36,-0.861 2.205,0 3.5279998,1.113 3.5279998,3.276 v 0.462 c -1.0289998,-0.273 -2.0579998,-0.462 -3.5489998,-0.462 -2.772,0 -4.683,1.26 -4.683,3.486 v 0.042 c 0,2.226 2.142,3.36 4.137,3.36 z m 0.063,-0.966 c -1.638,0 -3.108,-0.903 -3.108,-2.457 v -0.042 c 0,-1.491 1.26,-2.499 3.528,-2.499 1.533,0 2.73,0.252 3.6329998,0.483 v 1.218 c 0,1.953 -1.8689998,3.297 -4.0529998,3.297 z"
+           id="path2284" />
+        <path
+           d="m 14.84987,-75 h 1.029 v -4.389 c 0,-3.486 2.163,-5.355 4.641,-5.355 h 0.105 v -1.134 c -2.121,-0.084 -3.906,1.302 -4.746,3.213 v -3.045 h -1.029 z"
+           id="path2286" />
+        <path
+           d="m 26.819864,-74.811 c 0.672,0 1.197,-0.126 1.743,-0.378 v -0.966 c -0.609,0.273 -1.05,0.378 -1.575,0.378 -1.239,0 -2.142,-0.546 -2.142,-2.079 v -6.909 h 3.759 v -0.945 h -3.759 v -3.423 h -1.029 v 3.423 h -1.554 v 0.945 h 1.554 v 7.014 c 0,2.037 1.344,2.94 3.003,2.94 z"
+           id="path2288" />
+      </g>
+      <path
+         d="M 0,0 345.878,42.1046"
+         stroke="#d9d9d9"
+         stroke-width="2"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         fill="none"
+         fill-rule="evenodd"
+         transform="matrix(-1,0,0,1,525.878,212)"
+         id="path2087" />
+      <path
+         d="m 526,212 16.987,42.105"
+         stroke="#d9d9d9"
+         stroke-width="2"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         fill="none"
+         fill-rule="evenodd"
+         id="path2089" />
+      <path
+         d="m 526,212 326.441,42.105"
+         stroke="#d9d9d9"
+         stroke-width="2"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         fill="none"
+         fill-rule="evenodd"
+         id="path2091" />
+      <path
+         d="M 0,0 171.457,39.9578"
+         stroke="#d9d9d9"
+         stroke-width="2"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         fill="none"
+         fill-rule="evenodd"
+         transform="matrix(-1,0,0,1,543.457,288)"
+         id="path2093" />
+      <path
+         d="m 543,288 v 39.958"
+         stroke="#d9d9d9"
+         stroke-width="2"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         fill="none"
+         fill-rule="evenodd"
+         id="path2095" />
+      <path
+         d="M 0,0 55.3002,39.2846"
+         stroke="#d9d9d9"
+         stroke-width="2"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         fill="none"
+         fill-rule="evenodd"
+         transform="matrix(-1,0,0,1,283.3,434)"
+         id="path2097" />
+      <path
+         d="m 283,434 v 37.518"
+         stroke="#d9d9d9"
+         stroke-width="2"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         fill="none"
+         fill-rule="evenodd"
+         id="path2099" />
+      <g
+         aria-label="expr"
+         transform="translate(259.623,424)"
+         id="text2101"
+         style="font-weight:300;font-size:21px;font-family:'a Gotham. 1 Normal. 3 Light', 'a Gotham. 1 Normal. 3 Light_MSFontService', sans-serif;fill:#4b6276">
+        <path
+           d="m 6.468,0.252 c 2.058,0 3.339,-0.84 4.431,-2.016 l -0.714,-0.63 c -0.882,0.945 -2.016,1.68 -3.675,1.68 -2.1,0 -4.011,-1.554 -4.2,-4.221 h 8.883 c 0.021,-0.168 0.021,-0.231 0.021,-0.42 0,-3.171 -1.911,-5.607 -4.914,-5.607 -2.898,0 -5.082,2.478 -5.082,5.586 v 0.042 c 0,3.339 2.436,5.586 5.25,5.586 z M 2.31,-5.859 c 0.189,-2.373 1.827,-4.158 3.948,-4.158 2.457,0 3.696,1.995 3.843,4.158 z"
+           style="font-weight:300;font-size:21px;font-family:'a Gotham. 1 Normal. 3 Light', 'a Gotham. 1 Normal. 3 Light_MSFontService', sans-serif;fill:#4b6276"
+           id="path2291" />
+        <path
+           d="m 14.027978,-10.71 h -1.281 l 4.2,5.25 -4.368,5.46 h 1.239 l 3.78,-4.767 3.78,4.767 h 1.281 l -4.389,-5.481 4.221,-5.229 h -1.239 l -3.633,4.536 z"
+           style="font-weight:300;font-size:21px;font-family:'a Gotham. 1 Normal. 3 Light', 'a Gotham. 1 Normal. 3 Light_MSFontService', sans-serif;fill:#4b6276"
+           id="path2293" />
+        <path
+           d="m 25.556971,3.36 h 1.029 v -5.67 c 0.882,1.344 2.268,2.562 4.41,2.562 2.583,0 5.208,-2.121 5.208,-5.607 v -0.042 c 0,-3.486 -2.625,-5.565 -5.208,-5.565 -2.121,0 -3.486,1.239 -4.41,2.646 v -2.394 h -1.029 z m 5.334,-4.095 c -2.226,0 -4.368,-1.848 -4.368,-4.599 v -0.042 c 0,-2.73 2.142,-4.599 4.368,-4.599 2.247,0 4.2,1.806 4.2,4.62 v 0.042 c 0,2.877 -1.869,4.578 -4.2,4.578 z"
+           style="font-weight:300;font-size:21px;font-family:'a Gotham. 1 Normal. 3 Light', 'a Gotham. 1 Normal. 3 Light_MSFontService', sans-serif;fill:#4b6276"
+           id="path2295" />
+        <path
+           d="m 39.416966,0 h 1.029 v -4.389 c 0,-3.486 2.163,-5.355 4.641,-5.355 h 0.105 v -1.134 c -2.121,-0.084 -3.906,1.302 -4.746,3.213 v -3.045 h -1.029 z"
+           style="font-weight:300;font-size:21px;font-family:'a Gotham. 1 Normal. 3 Light', 'a Gotham. 1 Normal. 3 Light_MSFontService', sans-serif;fill:#4b6276"
+           id="path2297" />
+      </g>
+      <path
+         d="m 283,434 55.3,39.285"
+         stroke="#d9d9d9"
+         stroke-width="2"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         fill="none"
+         fill-rule="evenodd"
+         id="path2103" />
+      <g
+         aria-label="exprNUM2"
+         transform="translate(314.924,497)"
+         id="text2109"
+         style="font-weight:300;font-size:21px;font-family:'a Gotham. 1 Normal. 3 Light', 'a Gotham. 1 Normal. 3 Light_MSFontService', sans-serif;fill:#4b6276">
+        <path
+           d="m 6.468,0.252 c 2.058,0 3.339,-0.84 4.431,-2.016 l -0.714,-0.63 c -0.882,0.945 -2.016,1.68 -3.675,1.68 -2.1,0 -4.011,-1.554 -4.2,-4.221 h 8.883 c 0.021,-0.168 0.021,-0.231 0.021,-0.42 0,-3.171 -1.911,-5.607 -4.914,-5.607 -2.898,0 -5.082,2.478 -5.082,5.586 v 0.042 c 0,3.339 2.436,5.586 5.25,5.586 z M 2.31,-5.859 c 0.189,-2.373 1.827,-4.158 3.948,-4.158 2.457,0 3.696,1.995 3.843,4.158 z"
+           style="font-weight:300;font-size:21px;font-family:'a Gotham. 1 Normal. 3 Light', 'a Gotham. 1 Normal. 3 Light_MSFontService', sans-serif;fill:#4b6276"
+           id="path2300" />
+        <path
+           d="m 14.027978,-10.71 h -1.281 l 4.2,5.25 -4.368,5.46 h 1.239 l 3.78,-4.767 3.78,4.767 h 1.281 l -4.389,-5.481 4.221,-5.229 h -1.239 l -3.633,4.536 z"
+           style="font-weight:300;font-size:21px;font-family:'a Gotham. 1 Normal. 3 Light', 'a Gotham. 1 Normal. 3 Light_MSFontService', sans-serif;fill:#4b6276"
+           id="path2302" />
+        <path
+           d="m 25.556971,3.36 h 1.029 v -5.67 c 0.882,1.344 2.268,2.562 4.41,2.562 2.583,0 5.208,-2.121 5.208,-5.607 v -0.042 c 0,-3.486 -2.625,-5.565 -5.208,-5.565 -2.121,0 -3.486,1.239 -4.41,2.646 v -2.394 h -1.029 z m 5.334,-4.095 c -2.226,0 -4.368,-1.848 -4.368,-4.599 v -0.042 c 0,-2.73 2.142,-4.599 4.368,-4.599 2.247,0 4.2,1.806 4.2,4.62 v 0.042 c 0,2.877 -1.869,4.578 -4.2,4.578 z"
+           style="font-weight:300;font-size:21px;font-family:'a Gotham. 1 Normal. 3 Light', 'a Gotham. 1 Normal. 3 Light_MSFontService', sans-serif;fill:#4b6276"
+           id="path2304" />
+        <path
+           d="m 39.416966,0 h 1.029 v -4.389 c 0,-3.486 2.163,-5.355 4.641,-5.355 h 0.105 v -1.134 c -2.121,-0.084 -3.906,1.302 -4.746,3.213 v -3.045 h -1.029 z"
+           style="font-weight:300;font-size:21px;font-family:'a Gotham. 1 Normal. 3 Light', 'a Gotham. 1 Normal. 3 Light_MSFontService', sans-serif;fill:#4b6276"
+           id="path2306" />
+        <path
+           d="m -0.30278994,73 h 1.05 V 59.938 L 11.10021,73 h 0.819 V 58.3 h -1.05 V 71.089 L 0.72621006,58.3 h -1.029 z"
+           id="path2308" />
+        <path
+           d="m 22.083189,73.231 c 3.57,0 6.027,-2.247 6.027,-6.468 V 58.3 h -1.092 v 8.589 c 0,3.549 -1.911,5.355 -4.893,5.355 -3.108,0 -4.977,-1.995 -4.977,-5.46 V 58.3 h -1.092 v 8.589 c 0,4.116 2.499,6.342 6.027,6.342 z"
+           id="path2310" />
+        <path
+           d="m 32.247152,73 h 1.05 V 60.232 l 5.817,8.463 h 0.084 l 5.817,-8.463 V 73 h 1.092 V 58.3 h -1.029 l -5.901,8.694 -5.901,-8.694 h -1.029 z"
+           id="path2312" />
+        <path
+           d="m 17.937899,98 h 10.038 v -1.05 h -8.316 l 4.494,-4.074 c 2.583,-2.352 3.675,-3.696 3.675,-5.712 v -0.042 c 0,-2.289 -1.869,-4.032 -4.368,-4.032 -2.583,0 -3.948,1.197 -5.229,3.15 l 0.819,0.546 c 1.218,-1.764 2.436,-2.73 4.305,-2.73 1.764,0 3.318,1.239 3.318,3.15 0,1.554 -0.84,2.814 -3.255,5.019 l -5.481,4.956 z"
+           style="fill:#f28a3e"
+           id="path2314" />
+      </g>
+      <path
+         d="M 0,0 1.04987e-4,39.9578"
+         stroke="#d9d9d9"
+         stroke-width="2"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         fill="none"
+         fill-rule="evenodd"
+         transform="matrix(-1,0,0,1,338,507)"
+         id="path2111" />
+      <g
+         aria-label="exprIDENTa"
+         transform="translate(204.323,497)"
+         id="text2117"
+         style="font-weight:300;font-size:21px;font-family:'a Gotham. 1 Normal. 3 Light', 'a Gotham. 1 Normal. 3 Light_MSFontService', sans-serif;fill:#4b6276">
+        <path
+           d="m 6.468,0.252 c 2.058,0 3.339,-0.84 4.431,-2.016 l -0.714,-0.63 c -0.882,0.945 -2.016,1.68 -3.675,1.68 -2.1,0 -4.011,-1.554 -4.2,-4.221 h 8.883 c 0.021,-0.168 0.021,-0.231 0.021,-0.42 0,-3.171 -1.911,-5.607 -4.914,-5.607 -2.898,0 -5.082,2.478 -5.082,5.586 v 0.042 c 0,3.339 2.436,5.586 5.25,5.586 z M 2.31,-5.859 c 0.189,-2.373 1.827,-4.158 3.948,-4.158 2.457,0 3.696,1.995 3.843,4.158 z"
+           style="font-weight:300;font-size:21px;font-family:'a Gotham. 1 Normal. 3 Light', 'a Gotham. 1 Normal. 3 Light_MSFontService', sans-serif;fill:#4b6276"
+           id="path2317" />
+        <path
+           d="m 14.027978,-10.71 h -1.281 l 4.2,5.25 -4.368,5.46 h 1.239 l 3.78,-4.767 3.78,4.767 h 1.281 l -4.389,-5.481 4.221,-5.229 h -1.239 l -3.633,4.536 z"
+           style="font-weight:300;font-size:21px;font-family:'a Gotham. 1 Normal. 3 Light', 'a Gotham. 1 Normal. 3 Light_MSFontService', sans-serif;fill:#4b6276"
+           id="path2319" />
+        <path
+           d="m 25.556971,3.36 h 1.029 v -5.67 c 0.882,1.344 2.268,2.562 4.41,2.562 2.583,0 5.208,-2.121 5.208,-5.607 v -0.042 c 0,-3.486 -2.625,-5.565 -5.208,-5.565 -2.121,0 -3.486,1.239 -4.41,2.646 v -2.394 h -1.029 z m 5.334,-4.095 c -2.226,0 -4.368,-1.848 -4.368,-4.599 v -0.042 c 0,-2.73 2.142,-4.599 4.368,-4.599 2.247,0 4.2,1.806 4.2,4.62 v 0.042 c 0,2.877 -1.869,4.578 -4.2,4.578 z"
+           style="font-weight:300;font-size:21px;font-family:'a Gotham. 1 Normal. 3 Light', 'a Gotham. 1 Normal. 3 Light_MSFontService', sans-serif;fill:#4b6276"
+           id="path2321" />
+        <path
+           d="m 39.416966,0 h 1.029 v -4.389 c 0,-3.486 2.163,-5.355 4.641,-5.355 h 0.105 v -1.134 c -2.121,-0.084 -3.906,1.302 -4.746,3.213 v -3.045 h -1.029 z"
+           style="font-weight:300;font-size:21px;font-family:'a Gotham. 1 Normal. 3 Light', 'a Gotham. 1 Normal. 3 Light_MSFontService', sans-serif;fill:#4b6276"
+           id="path2323" />
+        <path
+           d="m -8.1558002,73 h 1.092 V 58.3 h -1.092 z"
+           id="path2325" />
+        <path
+           d="m -2.5488367,73 h 4.893 c 4.62,0 7.8119997,-3.213 7.8119997,-7.35 v -0.042 c 0,-4.137 -3.1919997,-7.308 -7.8119997,-7.308 h -4.893 z m 4.893,-13.692 c 4.095,0 6.678,2.856 6.678,6.342 v 0.042 c 0,3.507 -2.583,6.3 -6.678,6.3 h -3.801 V 59.308 Z"
+           id="path2327" />
+        <path
+           d="m 13.873155,73 h 10.563 v -1.008 h -9.471 v -5.901 h 8.421 v -1.008 h -8.421 v -5.775 h 9.366 V 58.3 h -10.458 z"
+           id="path2329" />
+        <path
+           d="m 27.943118,73 h 1.05 V 59.938 L 39.346118,73 h 0.819 V 58.3 h -1.05 V 71.089 L 28.972118,58.3 h -1.029 z"
+           id="path2331" />
+        <path
+           d="m 48.607095,73 h 1.092 V 59.308 h 5.124 V 58.3 h -11.34 v 1.008 h 5.124 z"
+           id="path2333" />
+        <path
+           d="m 22.387899,98.252 c 2.037,0 3.36,-1.008 4.095,-2.037 V 98 h 1.008 v -6.678 c 0,-1.323 -0.378,-2.31 -1.092,-3.024 -0.777,-0.777 -1.932,-1.176 -3.381,-1.176 -1.47,0 -2.625,0.378 -3.801,0.924 l 0.378,0.903 c 0.987,-0.504 2.058,-0.861 3.36,-0.861 2.205,0 3.528,1.113 3.528,3.276 v 0.462 c -1.029,-0.273 -2.058,-0.462 -3.549,-0.462 -2.772,0 -4.683,1.26 -4.683,3.486 v 0.042 c 0,2.226 2.142,3.36 4.137,3.36 z m 0.063,-0.966 c -1.638,0 -3.108,-0.903 -3.108,-2.457 v -0.042 c 0,-1.491 1.26,-2.499 3.528,-2.499 1.533,0 2.73,0.252 3.633,0.483 v 1.218 c 0,1.953 -1.869,3.297 -4.053,3.297 z"
+           style="fill:#f28a3e"
+           id="path2335" />
+      </g>
+      <path
+         d="M 0,0 1.04987e-4,39.9578"
+         stroke="#d9d9d9"
+         stroke-width="2"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         fill="none"
+         fill-rule="evenodd"
+         transform="matrix(-1,0,0,1,228,507)"
+         id="path2119" />
+      <g
+         aria-label="+"
+         transform="translate(275.303,500)"
+         id="text2121"
+         style="font-weight:300;font-size:24px;font-family:'a Gotham. 1 Normal. 5 Medium', 'a Gotham. 1 Normal. 5 Medium_MSFontService', sans-serif;fill:#f28a3e">
+        <path
+           d="m 6.24,-2.544 h 2.736 v -4.584 h 4.608 V -9.792 H 8.976 v -4.56 H 6.24 v 4.56 H 1.632 v 2.664 H 6.24 Z"
+           style="font-weight:300;font-size:24px;font-family:'a Gotham. 1 Normal. 5 Medium', 'a Gotham. 1 Normal. 5 Medium_MSFontService', sans-serif;fill:#f28a3e"
+           id="path2338" />
+      </g>
+      <path
+         d="m 372,361 v 40.165"
+         stroke="#d9d9d9"
+         stroke-width="2"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         fill="none"
+         fill-rule="evenodd"
+         id="path2123" />
+      <path
+         d="m 372,361 89.659,40.165"
+         stroke="#d9d9d9"
+         stroke-width="2"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         fill="none"
+         fill-rule="evenodd"
+         id="path2125" />
+      <g
+         aria-label="exprNUM3=="
+         transform="translate(437.972,424)"
+         id="text2133"
+         style="font-weight:300;font-size:21px;font-family:'a Gotham. 1 Normal. 3 Light', 'a Gotham. 1 Normal. 3 Light_MSFontService', sans-serif;fill:#4b6276">
+        <path
+           d="m 6.468,0.252 c 2.058,0 3.339,-0.84 4.431,-2.016 l -0.714,-0.63 c -0.882,0.945 -2.016,1.68 -3.675,1.68 -2.1,0 -4.011,-1.554 -4.2,-4.221 h 8.883 c 0.021,-0.168 0.021,-0.231 0.021,-0.42 0,-3.171 -1.911,-5.607 -4.914,-5.607 -2.898,0 -5.082,2.478 -5.082,5.586 v 0.042 c 0,3.339 2.436,5.586 5.25,5.586 z M 2.31,-5.859 c 0.189,-2.373 1.827,-4.158 3.948,-4.158 2.457,0 3.696,1.995 3.843,4.158 z"
+           style="font-weight:300;font-size:21px;font-family:'a Gotham. 1 Normal. 3 Light', 'a Gotham. 1 Normal. 3 Light_MSFontService', sans-serif;fill:#4b6276"
+           id="path2341" />
+        <path
+           d="m 14.027978,-10.71 h -1.281 l 4.2,5.25 -4.368,5.46 h 1.239 l 3.78,-4.767 3.78,4.767 h 1.281 l -4.389,-5.481 4.221,-5.229 h -1.239 l -3.633,4.536 z"
+           style="font-weight:300;font-size:21px;font-family:'a Gotham. 1 Normal. 3 Light', 'a Gotham. 1 Normal. 3 Light_MSFontService', sans-serif;fill:#4b6276"
+           id="path2343" />
+        <path
+           d="m 25.556971,3.36 h 1.029 v -5.67 c 0.882,1.344 2.268,2.562 4.41,2.562 2.583,0 5.208,-2.121 5.208,-5.607 v -0.042 c 0,-3.486 -2.625,-5.565 -5.208,-5.565 -2.121,0 -3.486,1.239 -4.41,2.646 v -2.394 h -1.029 z m 5.334,-4.095 c -2.226,0 -4.368,-1.848 -4.368,-4.599 v -0.042 c 0,-2.73 2.142,-4.599 4.368,-4.599 2.247,0 4.2,1.806 4.2,4.62 v 0.042 c 0,2.877 -1.869,4.578 -4.2,4.578 z"
+           style="font-weight:300;font-size:21px;font-family:'a Gotham. 1 Normal. 3 Light', 'a Gotham. 1 Normal. 3 Light_MSFontService', sans-serif;fill:#4b6276"
+           id="path2345" />
+        <path
+           d="m 39.416966,0 h 1.029 v -4.389 c 0,-3.486 2.163,-5.355 4.641,-5.355 h 0.105 v -1.134 c -2.121,-0.084 -3.906,1.302 -4.746,3.213 v -3.045 h -1.029 z"
+           style="font-weight:300;font-size:21px;font-family:'a Gotham. 1 Normal. 3 Light', 'a Gotham. 1 Normal. 3 Light_MSFontService', sans-serif;fill:#4b6276"
+           id="path2347" />
+        <path
+           d="m -0.30256988,74 h 1.05 V 60.938 L 11.10043,74 h 0.819 V 59.3 h -1.05 V 72.089 L 0.72643012,59.3 h -1.029 z"
+           id="path2349" />
+        <path
+           d="m 22.083409,74.231 c 3.57,0 6.027,-2.247 6.027,-6.468 V 59.3 h -1.092 v 8.589 c 0,3.549 -1.911,5.355 -4.893,5.355 -3.108,0 -4.977,-1.995 -4.977,-5.46 V 59.3 h -1.092 v 8.589 c 0,4.116 2.499,6.342 6.027,6.342 z"
+           id="path2351" />
+        <path
+           d="m 32.247372,74 h 1.05 V 61.232 l 5.817,8.463 h 0.084 l 5.817,-8.463 V 74 h 1.092 V 59.3 h -1.029 l -5.901,8.694 -5.901,-8.694 h -1.029 z"
+           id="path2353" />
+        <path
+           d="m 23.2945,99.252 c 2.541,0 4.788,-1.722 4.788,-4.284 v -0.042 c 0,-2.688 -2.415,-3.99 -5.208,-4.158 l 4.977,-5.691 V 84.3 h -9.198 v 1.029 h 7.707 l -5.061,5.838 0.273,0.609 h 0.798 c 2.646,0 4.578,1.134 4.578,3.192 v 0.042 c 0,1.932 -1.659,3.255 -3.633,3.255 -1.932,0 -3.402,-0.861 -4.578,-2.352 l -0.84,0.693 c 1.197,1.554 3.003,2.646 5.397,2.646 z"
+           style="fill:#f28a3e"
+           id="path2355" />
+        <path
+           d="m -79.7385,-5.104 h 11.568 v -2.688 h -11.568 z m 0,6 h 11.568 v -2.688 h -11.568 z"
+           style="font-size:24px;font-family:'a Gotham. 1 Normal. 5 Medium', 'a Gotham. 1 Normal. 5 Medium_MSFontService', sans-serif;fill:#f28a3e"
+           id="path2357" />
+        <path
+           d="m -64.522527,-5.104 h 11.568 v -2.688 h -11.568 z m 0,6 h 11.568 v -2.688 h -11.568 z"
+           style="font-size:24px;font-family:'a Gotham. 1 Normal. 5 Medium', 'a Gotham. 1 Normal. 5 Medium_MSFontService', sans-serif;fill:#f28a3e"
+           id="path2359" />
+      </g>
+      <path
+         d="m 461,434 v 39.958"
+         stroke="#d9d9d9"
+         stroke-width="2"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         fill="none"
+         fill-rule="evenodd"
+         id="path2135" />
+      <g
+         aria-label="expr"
+         transform="translate(348.313,351)"
+         id="text2137"
+         style="font-weight:300;font-size:21px;font-family:'a Gotham. 1 Normal. 3 Light', 'a Gotham. 1 Normal. 3 Light_MSFontService', sans-serif;fill:#4b6276">
+        <path
+           d="m 6.468,0.252 c 2.058,0 3.339,-0.84 4.431,-2.016 l -0.714,-0.63 c -0.882,0.945 -2.016,1.68 -3.675,1.68 -2.1,0 -4.011,-1.554 -4.2,-4.221 h 8.883 c 0.021,-0.168 0.021,-0.231 0.021,-0.42 0,-3.171 -1.911,-5.607 -4.914,-5.607 -2.898,0 -5.082,2.478 -5.082,5.586 v 0.042 c 0,3.339 2.436,5.586 5.25,5.586 z M 2.31,-5.859 c 0.189,-2.373 1.827,-4.158 3.948,-4.158 2.457,0 3.696,1.995 3.843,4.158 z"
+           style="font-weight:300;font-size:21px;font-family:'a Gotham. 1 Normal. 3 Light', 'a Gotham. 1 Normal. 3 Light_MSFontService', sans-serif;fill:#4b6276"
+           id="path2362" />
+        <path
+           d="m 14.027978,-10.71 h -1.281 l 4.2,5.25 -4.368,5.46 h 1.239 l 3.78,-4.767 3.78,4.767 h 1.281 l -4.389,-5.481 4.221,-5.229 h -1.239 l -3.633,4.536 z"
+           style="font-weight:300;font-size:21px;font-family:'a Gotham. 1 Normal. 3 Light', 'a Gotham. 1 Normal. 3 Light_MSFontService', sans-serif;fill:#4b6276"
+           id="path2364" />
+        <path
+           d="m 25.556971,3.36 h 1.029 v -5.67 c 0.882,1.344 2.268,2.562 4.41,2.562 2.583,0 5.208,-2.121 5.208,-5.607 v -0.042 c 0,-3.486 -2.625,-5.565 -5.208,-5.565 -2.121,0 -3.486,1.239 -4.41,2.646 v -2.394 h -1.029 z m 5.334,-4.095 c -2.226,0 -4.368,-1.848 -4.368,-4.599 v -0.042 c 0,-2.73 2.142,-4.599 4.368,-4.599 2.247,0 4.2,1.806 4.2,4.62 v 0.042 c 0,2.877 -1.869,4.578 -4.2,4.578 z"
+           style="font-weight:300;font-size:21px;font-family:'a Gotham. 1 Normal. 3 Light', 'a Gotham. 1 Normal. 3 Light_MSFontService', sans-serif;fill:#4b6276"
+           id="path2366" />
+        <path
+           d="m 39.416966,0 h 1.029 v -4.389 c 0,-3.486 2.163,-5.355 4.641,-5.355 h 0.105 v -1.134 c -2.121,-0.084 -3.906,1.302 -4.746,3.213 v -3.045 h -1.029 z"
+           style="font-weight:300;font-size:21px;font-family:'a Gotham. 1 Normal. 3 Light', 'a Gotham. 1 Normal. 3 Light_MSFontService', sans-serif;fill:#4b6276"
+           id="path2368" />
+      </g>
+      <path
+         d="M 0,0 88.6897,40.1654"
+         stroke="#d9d9d9"
+         stroke-width="2"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         fill="none"
+         fill-rule="evenodd"
+         transform="matrix(-1,0,0,1,371.69,361)"
+         id="path2139" />
+      <path
+         d="M 0,0 55.3002,39.2846"
+         stroke="#d9d9d9"
+         stroke-width="2"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         fill="none"
+         fill-rule="evenodd"
+         transform="matrix(-1,0,0,1,625.3,434)"
+         id="path2141" />
+      <path
+         d="m 626,434 v 37.518"
+         stroke="#d9d9d9"
+         stroke-width="2"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         fill="none"
+         fill-rule="evenodd"
+         id="path2143" />
+      <g
+         aria-label="expr"
+         transform="translate(602.537,424)"
+         id="text2145"
+         style="font-weight:300;font-size:21px;font-family:'a Gotham. 1 Normal. 3 Light', 'a Gotham. 1 Normal. 3 Light_MSFontService', sans-serif;fill:#4b6276">
+        <path
+           d="m 6.468,0.252 c 2.058,0 3.339,-0.84 4.431,-2.016 l -0.714,-0.63 c -0.882,0.945 -2.016,1.68 -3.675,1.68 -2.1,0 -4.011,-1.554 -4.2,-4.221 h 8.883 c 0.021,-0.168 0.021,-0.231 0.021,-0.42 0,-3.171 -1.911,-5.607 -4.914,-5.607 -2.898,0 -5.082,2.478 -5.082,5.586 v 0.042 c 0,3.339 2.436,5.586 5.25,5.586 z M 2.31,-5.859 c 0.189,-2.373 1.827,-4.158 3.948,-4.158 2.457,0 3.696,1.995 3.843,4.158 z"
+           style="font-weight:300;font-size:21px;font-family:'a Gotham. 1 Normal. 3 Light', 'a Gotham. 1 Normal. 3 Light_MSFontService', sans-serif;fill:#4b6276"
+           id="path2371" />
+        <path
+           d="m 14.027978,-10.71 h -1.281 l 4.2,5.25 -4.368,5.46 h 1.239 l 3.78,-4.767 3.78,4.767 h 1.281 l -4.389,-5.481 4.221,-5.229 h -1.239 l -3.633,4.536 z"
+           style="font-weight:300;font-size:21px;font-family:'a Gotham. 1 Normal. 3 Light', 'a Gotham. 1 Normal. 3 Light_MSFontService', sans-serif;fill:#4b6276"
+           id="path2373" />
+        <path
+           d="m 25.556971,3.36 h 1.029 v -5.67 c 0.882,1.344 2.268,2.562 4.41,2.562 2.583,0 5.208,-2.121 5.208,-5.607 v -0.042 c 0,-3.486 -2.625,-5.565 -5.208,-5.565 -2.121,0 -3.486,1.239 -4.41,2.646 v -2.394 h -1.029 z m 5.334,-4.095 c -2.226,0 -4.368,-1.848 -4.368,-4.599 v -0.042 c 0,-2.73 2.142,-4.599 4.368,-4.599 2.247,0 4.2,1.806 4.2,4.62 v 0.042 c 0,2.877 -1.869,4.578 -4.2,4.578 z"
+           style="font-weight:300;font-size:21px;font-family:'a Gotham. 1 Normal. 3 Light', 'a Gotham. 1 Normal. 3 Light_MSFontService', sans-serif;fill:#4b6276"
+           id="path2375" />
+        <path
+           d="m 39.416966,0 h 1.029 v -4.389 c 0,-3.486 2.163,-5.355 4.641,-5.355 h 0.105 v -1.134 c -2.121,-0.084 -3.906,1.302 -4.746,3.213 v -3.045 h -1.029 z"
+           style="font-weight:300;font-size:21px;font-family:'a Gotham. 1 Normal. 3 Light', 'a Gotham. 1 Normal. 3 Light_MSFontService', sans-serif;fill:#4b6276"
+           id="path2377" />
+      </g>
+      <path
+         d="m 626,434 55.3,39.285"
+         stroke="#d9d9d9"
+         stroke-width="2"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         fill="none"
+         fill-rule="evenodd"
+         id="path2147" />
+      <g
+         aria-label="exprNUM5"
+         transform="translate(657.837,497)"
+         id="text2153"
+         style="font-weight:300;font-size:21px;font-family:'a Gotham. 1 Normal. 3 Light', 'a Gotham. 1 Normal. 3 Light_MSFontService', sans-serif;fill:#4b6276">
+        <path
+           d="m 6.468,0.252 c 2.058,0 3.339,-0.84 4.431,-2.016 l -0.714,-0.63 c -0.882,0.945 -2.016,1.68 -3.675,1.68 -2.1,0 -4.011,-1.554 -4.2,-4.221 h 8.883 c 0.021,-0.168 0.021,-0.231 0.021,-0.42 0,-3.171 -1.911,-5.607 -4.914,-5.607 -2.898,0 -5.082,2.478 -5.082,5.586 v 0.042 c 0,3.339 2.436,5.586 5.25,5.586 z M 2.31,-5.859 c 0.189,-2.373 1.827,-4.158 3.948,-4.158 2.457,0 3.696,1.995 3.843,4.158 z"
+           style="font-weight:300;font-size:21px;font-family:'a Gotham. 1 Normal. 3 Light', 'a Gotham. 1 Normal. 3 Light_MSFontService', sans-serif;fill:#4b6276"
+           id="path2380" />
+        <path
+           d="m 14.027978,-10.71 h -1.281 l 4.2,5.25 -4.368,5.46 h 1.239 l 3.78,-4.767 3.78,4.767 h 1.281 l -4.389,-5.481 4.221,-5.229 h -1.239 l -3.633,4.536 z"
+           style="font-weight:300;font-size:21px;font-family:'a Gotham. 1 Normal. 3 Light', 'a Gotham. 1 Normal. 3 Light_MSFontService', sans-serif;fill:#4b6276"
+           id="path2382" />
+        <path
+           d="m 25.556971,3.36 h 1.029 v -5.67 c 0.882,1.344 2.268,2.562 4.41,2.562 2.583,0 5.208,-2.121 5.208,-5.607 v -0.042 c 0,-3.486 -2.625,-5.565 -5.208,-5.565 -2.121,0 -3.486,1.239 -4.41,2.646 v -2.394 h -1.029 z m 5.334,-4.095 c -2.226,0 -4.368,-1.848 -4.368,-4.599 v -0.042 c 0,-2.73 2.142,-4.599 4.368,-4.599 2.247,0 4.2,1.806 4.2,4.62 v 0.042 c 0,2.877 -1.869,4.578 -4.2,4.578 z"
+           style="font-weight:300;font-size:21px;font-family:'a Gotham. 1 Normal. 3 Light', 'a Gotham. 1 Normal. 3 Light_MSFontService', sans-serif;fill:#4b6276"
+           id="path2384" />
+        <path
+           d="m 39.416966,0 h 1.029 v -4.389 c 0,-3.486 2.163,-5.355 4.641,-5.355 h 0.105 v -1.134 c -2.121,-0.084 -3.906,1.302 -4.746,3.213 v -3.045 h -1.029 z"
+           style="font-weight:300;font-size:21px;font-family:'a Gotham. 1 Normal. 3 Light', 'a Gotham. 1 Normal. 3 Light_MSFontService', sans-serif;fill:#4b6276"
+           id="path2386" />
+        <path
+           d="m -0.30281998,73 h 1.05 V 59.938 L 11.10018,73 h 0.819 V 58.3 h -1.05 V 71.089 L 0.72618002,58.3 h -1.029 z"
+           id="path2388" />
+        <path
+           d="m 22.083159,73.231 c 3.57,0 6.027,-2.247 6.027,-6.468 V 58.3 h -1.092 v 8.589 c 0,3.549 -1.911,5.355 -4.893,5.355 -3.108,0 -4.977,-1.995 -4.977,-5.46 V 58.3 h -1.092 v 8.589 c 0,4.116 2.499,6.342 6.027,6.342 z"
+           id="path2390" />
+        <path
+           d="m 32.247122,73 h 1.05 V 60.232 l 5.817,8.463 h 0.084 l 5.817,-8.463 V 73 h 1.092 V 58.3 h -1.029 l -5.901,8.694 -5.901,-8.694 h -1.029 z"
+           id="path2392" />
+        <path
+           d="m 23.1886,98.252 c 2.961,0 5.124,-1.953 5.124,-4.725 v -0.042 c 0,-2.625 -2.205,-4.431 -5.04,-4.431 -1.365,0 -2.31,0.336 -3.255,0.798 l 0.357,-5.502 h 7.287 V 83.3 h -8.253 l -0.42,7.119 0.84,0.546 c 0.924,-0.504 1.953,-0.924 3.318,-0.924 2.373,0 4.032,1.449 4.032,3.486 v 0.042 c 0,2.058 -1.617,3.696 -3.948,3.696 -1.554,0 -3.087,-0.84 -4.41,-2.163 l -0.777,0.777 c 1.281,1.302 3.15,2.373 5.145,2.373 z"
+           style="fill:#f28a3e"
+           id="path2394" />
+      </g>
+      <path
+         d="M 0,0 1.04987e-4,39.9578"
+         stroke="#d9d9d9"
+         stroke-width="2"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         fill="none"
+         fill-rule="evenodd"
+         transform="matrix(-1,0,0,1,681,507)"
+         id="path2155" />
+      <g
+         aria-label="exprIDENTa"
+         transform="translate(547.237,497)"
+         id="text2161"
+         style="font-weight:300;font-size:21px;font-family:'a Gotham. 1 Normal. 3 Light', 'a Gotham. 1 Normal. 3 Light_MSFontService', sans-serif;fill:#4b6276">
+        <path
+           d="m 6.468,0.252 c 2.058,0 3.339,-0.84 4.431,-2.016 l -0.714,-0.63 c -0.882,0.945 -2.016,1.68 -3.675,1.68 -2.1,0 -4.011,-1.554 -4.2,-4.221 h 8.883 c 0.021,-0.168 0.021,-0.231 0.021,-0.42 0,-3.171 -1.911,-5.607 -4.914,-5.607 -2.898,0 -5.082,2.478 -5.082,5.586 v 0.042 c 0,3.339 2.436,5.586 5.25,5.586 z M 2.31,-5.859 c 0.189,-2.373 1.827,-4.158 3.948,-4.158 2.457,0 3.696,1.995 3.843,4.158 z"
+           style="font-weight:300;font-size:21px;font-family:'a Gotham. 1 Normal. 3 Light', 'a Gotham. 1 Normal. 3 Light_MSFontService', sans-serif;fill:#4b6276"
+           id="path2397" />
+        <path
+           d="m 14.027978,-10.71 h -1.281 l 4.2,5.25 -4.368,5.46 h 1.239 l 3.78,-4.767 3.78,4.767 h 1.281 l -4.389,-5.481 4.221,-5.229 h -1.239 l -3.633,4.536 z"
+           style="font-weight:300;font-size:21px;font-family:'a Gotham. 1 Normal. 3 Light', 'a Gotham. 1 Normal. 3 Light_MSFontService', sans-serif;fill:#4b6276"
+           id="path2399" />
+        <path
+           d="m 25.556971,3.36 h 1.029 v -5.67 c 0.882,1.344 2.268,2.562 4.41,2.562 2.583,0 5.208,-2.121 5.208,-5.607 v -0.042 c 0,-3.486 -2.625,-5.565 -5.208,-5.565 -2.121,0 -3.486,1.239 -4.41,2.646 v -2.394 h -1.029 z m 5.334,-4.095 c -2.226,0 -4.368,-1.848 -4.368,-4.599 v -0.042 c 0,-2.73 2.142,-4.599 4.368,-4.599 2.247,0 4.2,1.806 4.2,4.62 v 0.042 c 0,2.877 -1.869,4.578 -4.2,4.578 z"
+           style="font-weight:300;font-size:21px;font-family:'a Gotham. 1 Normal. 3 Light', 'a Gotham. 1 Normal. 3 Light_MSFontService', sans-serif;fill:#4b6276"
+           id="path2401" />
+        <path
+           d="m 39.416966,0 h 1.029 v -4.389 c 0,-3.486 2.163,-5.355 4.641,-5.355 h 0.105 v -1.134 c -2.121,-0.084 -3.906,1.302 -4.746,3.213 v -3.045 h -1.029 z"
+           style="font-weight:300;font-size:21px;font-family:'a Gotham. 1 Normal. 3 Light', 'a Gotham. 1 Normal. 3 Light_MSFontService', sans-serif;fill:#4b6276"
+           id="path2403" />
+        <path
+           d="m -8.1558002,73 h 1.092 V 58.3 h -1.092 z"
+           id="path2405" />
+        <path
+           d="m -2.5488367,73 h 4.893 c 4.62,0 7.8119997,-3.213 7.8119997,-7.35 v -0.042 c 0,-4.137 -3.1919997,-7.308 -7.8119997,-7.308 h -4.893 z m 4.893,-13.692 c 4.095,0 6.678,2.856 6.678,6.342 v 0.042 c 0,3.507 -2.583,6.3 -6.678,6.3 h -3.801 V 59.308 Z"
+           id="path2407" />
+        <path
+           d="m 13.873155,73 h 10.563 v -1.008 h -9.471 v -5.901 h 8.421 v -1.008 h -8.421 v -5.775 h 9.366 V 58.3 h -10.458 z"
+           id="path2409" />
+        <path
+           d="m 27.943118,73 h 1.05 V 59.938 L 39.346118,73 h 0.819 V 58.3 h -1.05 V 71.089 L 28.972118,58.3 h -1.029 z"
+           id="path2411" />
+        <path
+           d="m 48.607095,73 h 1.092 V 59.308 h 5.124 V 58.3 h -11.34 v 1.008 h 5.124 z"
+           id="path2413" />
+        <path
+           d="m 22.387899,98.252 c 2.037,0 3.36,-1.008 4.095,-2.037 V 98 h 1.008 v -6.678 c 0,-1.323 -0.378,-2.31 -1.092,-3.024 -0.777,-0.777 -1.932,-1.176 -3.381,-1.176 -1.47,0 -2.625,0.378 -3.801,0.924 l 0.378,0.903 c 0.987,-0.504 2.058,-0.861 3.36,-0.861 2.205,0 3.528,1.113 3.528,3.276 v 0.462 c -1.029,-0.273 -2.058,-0.462 -3.549,-0.462 -2.772,0 -4.683,1.26 -4.683,3.486 v 0.042 c 0,2.226 2.142,3.36 4.137,3.36 z m 0.063,-0.966 c -1.638,0 -3.108,-0.903 -3.108,-2.457 v -0.042 c 0,-1.491 1.26,-2.499 3.528,-2.499 1.533,0 2.73,0.252 3.633,0.483 v 1.218 c 0,1.953 -1.869,3.297 -4.053,3.297 z"
+           style="fill:#f28a3e"
+           id="path2415" />
+      </g>
+      <path
+         d="M 0,0 1.04987e-4,39.9578"
+         stroke="#d9d9d9"
+         stroke-width="2"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         fill="none"
+         fill-rule="evenodd"
+         transform="matrix(-1,0,0,1,570,507)"
+         id="path2163" />
+      <g
+         aria-label="/"
+         transform="translate(619.55,500)"
+         id="text2165"
+         style="font-weight:300;font-size:24px;font-family:'a Gotham. 1 Normal. 5 Medium', 'a Gotham. 1 Normal. 5 Medium_MSFontService', sans-serif;fill:#f28a3e">
+        <path
+           d="m -0.6,3.072 h 2.52 l 10.848,-22.224 h -2.52 z"
+           style="font-weight:300;font-size:24px;font-family:'a Gotham. 1 Normal. 5 Medium', 'a Gotham. 1 Normal. 5 Medium_MSFontService', sans-serif;fill:#f28a3e"
+           id="path2418" />
+      </g>
+      <path
+         d="m 714,361 v 40.165"
+         stroke="#d9d9d9"
+         stroke-width="2"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         fill="none"
+         fill-rule="evenodd"
+         id="path2167" />
+      <path
+         d="m 714,361 89.659,40.165"
+         stroke="#d9d9d9"
+         stroke-width="2"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         fill="none"
+         fill-rule="evenodd"
+         id="path2169" />
+      <g
+         aria-label="exprIDENTb!="
+         transform="translate(780.885,424)"
+         id="text2177"
+         style="font-weight:300;font-size:21px;font-family:'a Gotham. 1 Normal. 3 Light', 'a Gotham. 1 Normal. 3 Light_MSFontService', sans-serif;fill:#4b6276">
+        <path
+           d="m 6.468,0.252 c 2.058,0 3.339,-0.84 4.431,-2.016 l -0.714,-0.63 c -0.882,0.945 -2.016,1.68 -3.675,1.68 -2.1,0 -4.011,-1.554 -4.2,-4.221 h 8.883 c 0.021,-0.168 0.021,-0.231 0.021,-0.42 0,-3.171 -1.911,-5.607 -4.914,-5.607 -2.898,0 -5.082,2.478 -5.082,5.586 v 0.042 c 0,3.339 2.436,5.586 5.25,5.586 z M 2.31,-5.859 c 0.189,-2.373 1.827,-4.158 3.948,-4.158 2.457,0 3.696,1.995 3.843,4.158 z"
+           style="font-weight:300;font-size:21px;font-family:'a Gotham. 1 Normal. 3 Light', 'a Gotham. 1 Normal. 3 Light_MSFontService', sans-serif;fill:#4b6276"
+           id="path2421" />
+        <path
+           d="m 14.027978,-10.71 h -1.281 l 4.2,5.25 -4.368,5.46 h 1.239 l 3.78,-4.767 3.78,4.767 h 1.281 l -4.389,-5.481 4.221,-5.229 h -1.239 l -3.633,4.536 z"
+           style="font-weight:300;font-size:21px;font-family:'a Gotham. 1 Normal. 3 Light', 'a Gotham. 1 Normal. 3 Light_MSFontService', sans-serif;fill:#4b6276"
+           id="path2423" />
+        <path
+           d="m 25.556971,3.36 h 1.029 v -5.67 c 0.882,1.344 2.268,2.562 4.41,2.562 2.583,0 5.208,-2.121 5.208,-5.607 v -0.042 c 0,-3.486 -2.625,-5.565 -5.208,-5.565 -2.121,0 -3.486,1.239 -4.41,2.646 v -2.394 h -1.029 z m 5.334,-4.095 c -2.226,0 -4.368,-1.848 -4.368,-4.599 v -0.042 c 0,-2.73 2.142,-4.599 4.368,-4.599 2.247,0 4.2,1.806 4.2,4.62 v 0.042 c 0,2.877 -1.869,4.578 -4.2,4.578 z"
+           style="font-weight:300;font-size:21px;font-family:'a Gotham. 1 Normal. 3 Light', 'a Gotham. 1 Normal. 3 Light_MSFontService', sans-serif;fill:#4b6276"
+           id="path2425" />
+        <path
+           d="m 39.416966,0 h 1.029 v -4.389 c 0,-3.486 2.163,-5.355 4.641,-5.355 h 0.105 v -1.134 c -2.121,-0.084 -3.906,1.302 -4.746,3.213 v -3.045 h -1.029 z"
+           style="font-weight:300;font-size:21px;font-family:'a Gotham. 1 Normal. 3 Light', 'a Gotham. 1 Normal. 3 Light_MSFontService', sans-serif;fill:#4b6276"
+           id="path2427" />
+        <path
+           d="m -8.1555999,74 h 1.092 V 59.3 h -1.092 z"
+           id="path2429" />
+        <path
+           d="m -2.5486365,74 h 4.893 c 4.62,0 7.8120005,-3.213 7.8120005,-7.35 v -0.042 c 0,-4.137 -3.1920005,-7.308 -7.8120005,-7.308 h -4.893 z m 4.893,-13.692 c 4.095,0 6.678,2.856 6.678,6.342 v 0.042 c 0,3.507 -2.583,6.3 -6.678,6.3 h -3.801 V 60.308 Z"
+           id="path2431" />
+        <path
+           d="m 13.873355,74 h 10.563 v -1.008 h -9.471 v -5.901 h 8.421 v -1.008 h -8.421 v -5.775 h 9.366 V 59.3 h -10.458 z"
+           id="path2433" />
+        <path
+           d="m 27.943318,74 h 1.05 V 60.938 L 39.346318,74 h 0.819 V 59.3 h -1.05 V 72.089 L 28.972318,59.3 h -1.029 z"
+           id="path2435" />
+        <path
+           d="m 48.607296,74 h 1.092 V 60.308 h 5.124 V 59.3 h -11.34 v 1.008 h 5.124 z"
+           id="path2437" />
+        <path
+           d="m 23.655399,99.252 c 2.583,0 5.208,-2.121 5.208,-5.607 v -0.042 c 0,-3.486 -2.625,-5.565 -5.208,-5.565 -2.121,0 -3.486,1.239 -4.41,2.646 V 83.67 h -1.029 V 99 h 1.029 v -2.31 c 0.882,1.344 2.268,2.562 4.41,2.562 z m -0.105,-0.987 c -2.226,0 -4.368,-1.848 -4.368,-4.599 v -0.042 c 0,-2.73 2.142,-4.599 4.368,-4.599 2.247,0 4.2,1.806 4.2,4.62 v 0.042 c 0,2.877 -1.869,4.578 -4.2,4.578 z"
+           style="fill:#f28a3e"
+           id="path2439" />
+        <path
+           d="m -74.7305,-0.328 h 1.608 l 0.888,-10.632 v -0.84 h -3.408 v 0.84 z M -75.5225,5 h 3.192 V 1.688 h -3.192 z"
+           style="font-size:24px;font-family:'a Gotham. 1 Normal. 5 Medium', 'a Gotham. 1 Normal. 5 Medium_MSFontService', sans-serif;fill:#f28a3e"
+           id="path2441" />
+        <path
+           d="m -68.490545,-5.104 h 11.568 v -2.688 h -11.568 z m 0,6 h 11.568 v -2.688 h -11.568 z"
+           style="font-size:24px;font-family:'a Gotham. 1 Normal. 5 Medium', 'a Gotham. 1 Normal. 5 Medium_MSFontService', sans-serif;fill:#f28a3e"
+           id="path2443" />
+      </g>
+      <path
+         d="m 804,434 v 39.958"
+         stroke="#d9d9d9"
+         stroke-width="2"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         fill="none"
+         fill-rule="evenodd"
+         id="path2179" />
+      <g
+         aria-label="expr"
+         transform="translate(691.226,351)"
+         id="text2181"
+         style="font-weight:300;font-size:21px;font-family:'a Gotham. 1 Normal. 3 Light', 'a Gotham. 1 Normal. 3 Light_MSFontService', sans-serif;fill:#4b6276">
+        <path
+           d="m 6.468,0.252 c 2.058,0 3.339,-0.84 4.431,-2.016 l -0.714,-0.63 c -0.882,0.945 -2.016,1.68 -3.675,1.68 -2.1,0 -4.011,-1.554 -4.2,-4.221 h 8.883 c 0.021,-0.168 0.021,-0.231 0.021,-0.42 0,-3.171 -1.911,-5.607 -4.914,-5.607 -2.898,0 -5.082,2.478 -5.082,5.586 v 0.042 c 0,3.339 2.436,5.586 5.25,5.586 z M 2.31,-5.859 c 0.189,-2.373 1.827,-4.158 3.948,-4.158 2.457,0 3.696,1.995 3.843,4.158 z"
+           style="font-weight:300;font-size:21px;font-family:'a Gotham. 1 Normal. 3 Light', 'a Gotham. 1 Normal. 3 Light_MSFontService', sans-serif;fill:#4b6276"
+           id="path2446" />
+        <path
+           d="m 14.027978,-10.71 h -1.281 l 4.2,5.25 -4.368,5.46 h 1.239 l 3.78,-4.767 3.78,4.767 h 1.281 l -4.389,-5.481 4.221,-5.229 h -1.239 l -3.633,4.536 z"
+           style="font-weight:300;font-size:21px;font-family:'a Gotham. 1 Normal. 3 Light', 'a Gotham. 1 Normal. 3 Light_MSFontService', sans-serif;fill:#4b6276"
+           id="path2448" />
+        <path
+           d="m 25.556971,3.36 h 1.029 v -5.67 c 0.882,1.344 2.268,2.562 4.41,2.562 2.583,0 5.208,-2.121 5.208,-5.607 v -0.042 c 0,-3.486 -2.625,-5.565 -5.208,-5.565 -2.121,0 -3.486,1.239 -4.41,2.646 v -2.394 h -1.029 z m 5.334,-4.095 c -2.226,0 -4.368,-1.848 -4.368,-4.599 v -0.042 c 0,-2.73 2.142,-4.599 4.368,-4.599 2.247,0 4.2,1.806 4.2,4.62 v 0.042 c 0,2.877 -1.869,4.578 -4.2,4.578 z"
+           style="font-weight:300;font-size:21px;font-family:'a Gotham. 1 Normal. 3 Light', 'a Gotham. 1 Normal. 3 Light_MSFontService', sans-serif;fill:#4b6276"
+           id="path2450" />
+        <path
+           d="m 39.416966,0 h 1.029 v -4.389 c 0,-3.486 2.163,-5.355 4.641,-5.355 h 0.105 v -1.134 c -2.121,-0.084 -3.906,1.302 -4.746,3.213 v -3.045 h -1.029 z"
+           style="font-weight:300;font-size:21px;font-family:'a Gotham. 1 Normal. 3 Light', 'a Gotham. 1 Normal. 3 Light_MSFontService', sans-serif;fill:#4b6276"
+           id="path2452" />
+      </g>
+      <path
+         d="M 0,0 88.6897,40.1654"
+         stroke="#d9d9d9"
+         stroke-width="2"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         fill="none"
+         fill-rule="evenodd"
+         transform="matrix(-1,0,0,1,714.69,361)"
+         id="path2183" />
+      <path
+         d="m 543,288 171.457,39.958"
+         stroke="#d9d9d9"
+         stroke-width="2"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         stroke-miterlimit="10"
+         fill="none"
+         fill-rule="evenodd"
+         id="path2185" />
+    </g>
+  </g>
+</svg>
