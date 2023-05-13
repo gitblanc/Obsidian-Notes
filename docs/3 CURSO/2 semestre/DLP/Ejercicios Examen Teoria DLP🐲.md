@@ -576,6 +576,168 @@ print a + 2 == 3 && a / 5 != b;
 
 Para dicha entrada, el árbol concreto que correspondería con la interpretación que hará ANTLR de la misma tal y como están ordenadas las reglas sería el siguiente.
 ![[gui_0450.6d3f4c4b.svg]]
+15. Crear la gramática abstracta para el lenguaje del siguiente ejemplo:
+
+```java
+double a;
+
+if (a > 2) then
+    print a;
+else
+    print g(5, a) + 8.3;
+endif
+
+print f(a * 2);
+```
+
+Aclaraciones:
+-   Hay sólo dos tipos: _int_ y _double_.
+-   Las condiciones del _if_ son de tipo entero (no hay tipo _booleano_).
+-   Las definiciones de las variables tienen que estar antes de todas las sentencias.
+-   Puede haber varias sentencias en cada rama del _if_.
+
+Solución:
+```cs
+programa ⟶ defVariable* sentencia*
+defVariable ⟶ nombre:string tipo
+
+intType:tipo ⟶  ε
+realType:tipo ⟶ ε
+
+escritura:sentencia ⟶ expresion
+if:sentencia ⟶ condicion:expresión cierto:sentencia* falso:sentencia*
+
+exprBinaria:expresion ⟶ left:expresión operator:string right:expresion
+invocacion:expresion ⟶ nombre:string args:expresion*
+variable:expresion ⟶ lexema:string
+literalInt:expresion ⟶ lexema:string
+literalReal:expresion ⟶ lexema:string
+```
+
+16. Dada la siguiente especificación sintáctica en ANTLR y la gramática abstracta que define los nodos del AST, añadir a la especificación de ANTLR el código que cree en AST de las entradas.
+
+```cs
+programa ⟶ definicion print;
+
+definicion ⟶ tipo nombre:string;
+
+tipoInt:tipo ⟶  ;
+tipoReal:tipo ⟶ ;
+
+print ⟶ expr:expresion;
+
+variable:expresion ⟶ nombre:string;
+literalEntero:expresion ⟶ valor:string;
+```
+
+```cs
+start
+	: definicion print EOF
+	;
+
+definicion
+	: tipo IDENT ';'
+	;
+
+tipo
+	: 'int'
+	| 'float'
+	;
+
+print
+	: 'print' expr ';'
+	;
+
+expr
+	: IDENT
+	| LITENT
+	;
+```
+Solución:
+```java
+@parser::header{
+	import ast.*
+}
+
+start returns[Programa ast]
+	: definicion print EOF { $ast = new Programa($definicion.ast, $print.ast); }
+	;
+
+definicion returns[Definicion ast]
+	: tipo IDENT ';' { $ast = new Definicion($tipo.ast, $IDENT.text); }
+	;
+
+tipo returns[Tipo ast]
+	: 'int' { $ast = new tipoInt(); }
+	| 'float' { $ast = new tipoReal(); }
+	;
+
+print returns[Print ast]
+	: 'print' expr ';' { $ast = new Print($expr.ast); }
+	;
+
+expr returns[Expresion ast]
+	: IDENT { $ast = new Variable($IDENT.text); }
+	| LITENT { $ast = new LiteralEntero($LITENT.text); }
+	;
+```
+
+17. Dada la gramática en ANTLR y la gramática abstracta siguientes, añadir al fichero de ANTLR las acciones que construyan el AST.
+
+```java
+start
+    : sentences EOF
+    ;
+
+sentences
+    : sentence*
+    ;
+
+sentence
+    : 'print' expr ';'
+    | left=expr '=' right=expr ';'
+    ;
+
+expr
+    : left=expr op=('*' | '/') right=expr
+    | left=expr op=('+' | '-') right=expr
+    | '(' expr ')'
+    | IDENT
+    ;
+```
+
+```cs
+program → sentences:sentence*;
+
+print:sentence → expression;
+assignment:sentence → left:expresión right:expression;
+
+arithmetic:expression → left:expresión operator:string right:expression;
+variable:expression → name:string;
+```
+
+Solución:
+```java
+start returns[Program ast]
+    : sentences EOF { $ast = new Program($sentences.list); }
+    ;
+
+sentences returns[List<Sentence> list = new ArrayList<Sentence>()]
+    : (sentence { $list.add($sentence.ast); })*
+    ;
+
+sentence returns[Sentence ast]
+    : 'print' expr ';' { $ast = new Print($expr.ast); }
+    | left=expr '=' right=expr ';' { $ast = new Assignment($left.ast, $right.ast); }
+    ;
+
+expr returns[Expression ast]
+    : left=expr op=('*' | '/') right=expr { $ast = new Arithmetic($left.ast, $op.text, $right.ast); }
+    | left=expr op=('+' | '-') right=expr { $ast = new Arithmetic($left.ast, $op.text, $right.ast); }
+    | '(' expr ')' { $ast = $expr.ast; }
+    | IDENT { $ast = new Variable($IDENT.text); }
+    ;
+```
 
 ---
 

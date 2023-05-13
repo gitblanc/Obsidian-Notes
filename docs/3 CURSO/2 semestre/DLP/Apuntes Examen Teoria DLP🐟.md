@@ -973,7 +973,279 @@ expr : NUM
 ```
 Ahora, sí que ANTLR interpretaría la entrada de la forma correcta dando más prioridad al '*' y se formaría el árbol de la derecha.
 
-Mirar ejercicios en [[Ejercicios Examen Teoria DLP🐲#Sintáctico]]
+## Problemas del árbol concreto
+- Es redundante
+- Está acoplado a la gramática
+
+### Ejemplo de redundancia
+Supóngase la siguiente gramática.
+
+```
+programa ⟶ sentencia | sentencia programa       (1+ss)
+
+sentencia ⟶ escritura
+            | while
+
+escritura ⟶ PRINT ID ‘;’
+
+while ⟶ WHILE ID ‘{‘ programa ‘}’
+```
+
+Lo siguiente sería una entrada válida.
+
+```java
+print a;
+while a {
+    print b;
+}
+```
+
+Y el árbol concreto de la misma sería el siguiente.
+![[slide_6.7664baa9.png]]
+En este árbol hay tres grupos de símbolos redundantes. En la imagen posterior se identifican dichos símbolos:
+
+-   Sobran los tokens que ayudaron a _identificar_ una estructura (tokens _PRINT_ y _WHILE_ — tachados en rojo). Ya no son necesarios ya que su nodo padre ya indican qué estructuras son (_escritura_ y _while_ respectivamente).
+-   Sobran los tokens que ayudan a _delimitar_ las estructuras (las llaves y los punto y coma — tachados en azul). Las llaves, por ejemplo, se utilizaban para indicar qué va dentro del _while_ y qué va fuera. Ahora ya no son necesarias, ya que la propia estructura del árbol deja claro qué sentencias están dentro del mismo.
+-   Sobran los no-terminales necesarios para definir las producciones de la gramática pero que son redundantes en el árbol (_sentencia_ y algunos _programa_ — tachados en amarillo). Por ejemplo, no aporta nada que encima de un nodo _escritura_ haya otro nodo indicando que es una _sentencia_.
+![[slide_7.450ab5f5.png]]
+Este es el primer problema de utilizar un árbol concreto. Hay mucho nodo innecesario que:
+-   Si se elimina, no va a suponer una pérdida de información para las fases posteriores del traductor.
+-   Pero si se deja supone:
+    -   Un gasto de memoria.
+    -   Y, lo que es más importante, complicaría la implementación de las siguientes fases, ya que tienen que implementar recorridos de más nodos de los necesarios.
+
+### Ejemplo de acoplamiento
+En la siguiente imagen se puede ver una gramática, una entrada válida y el árbol concreto que se crearía para ella.
+![[slide_8.165bca62.png]]
+Supóngase que el sintáctico, en vez de pasar un AST, les pasara el árbol concreto a las fases posteriores. Por tanto, todas las fases posteriores del traductor se implementarían en función de dicha estructura de árbol.
+
+Supóngase que, una vez implementadas las demás fases, se decide refactorizar la gramática (recuérdese que de un mismo lenguaje existen infinitas gramáticas equivalentes). Por tanto, sin cambiar el lenguaje a reconocer, se opta por reconocerlo con una nueva gramática. En la siguiente imagen se ve a la izquierda la gramática _antigua_ con el árbol concreto que generaba y a la derecha la _nueva_ gramática con el árbol concreto que genera para la misma entrada.
+![[slide_9.c6ef7020.png]]
+El lenguaje no se ha cambiado. Y se debería esperar que las consecuencias del cambio sean nulas para las siguientes fases. Sin embargo, dado el **acoplamiento** que tiene el árbol concreto con la gramática (ya que usa los mismos símbolos y estructura que esta), el árbol que se genera es distinto. Por ejemplo, ahora aparece un nodo _mt_ que antes no estaba. Esto supone que habría que cambiar _todas_ las fases posteriores del traductor ya que ha cambiado el árbol y hay que adaptarlas para que recorran los nuevos nodos (y que dejen de recorrer los que desaparezcan).
+
+Si el lenguaje no ha cambiado, no debería cambiar tampoco la estructura del árbol — aunque se hubiera cambiado la gramática. Las reglas que utilice un sintáctico debería ser un asunto interno del mismo que no debería afectar a otras fases. No tiene sentido dividir el trabajo de un traductor en fases si luego tienen un acoplamiento tan grande con el sintáctico. Este es el principal problema de usar un árbol concreto.
+
+## Árbol de Sintaxis Abstracto (AST)
+- Se crea en lugar del árbol concreto debido a los problemas que éste presenta.
+- El AST es el árbol mínimo que preserva la semántica de entrada. No tiene los problemas del árbol concreto:
+	- No tiene nodos redundantes, pues deja en ellos la información mínima
+	- Aunque cambie la gramática, si el lenguaje no cambia, el AST generado para una misma entrada sigue siendo el mismo, pues no se basa en símbolos de la gramática para crear los nodos
+
+### ¿Cómo se obtiene?
+- El AST tiene que tener como nodos los símbolos de la gramática. Han de estar identificados y definidos y tienen que ser:
+	- *suficientes* nodos como para que se pueda representar en forma de árbol cualquier entrada válida del lenguaje
+	- y *solamente esos nodos* (que no haya nodos que se pudieran eliminar sin perder información)
+- El AST no se obtiene a partir del árbol concreto. Sus nodos no tienen ninguna relación.
+- Se debe diseñar el AST con el objetivo de que facilite al máximo las tareas que tengan que realizar las fases que lo van a utilizar. Por tanto, hay que determinar:
+	- Qué nodos/objetos se necesitan
+	- Con qué propiedades
+	- Qué relaciones hay entre los nodos (padre-hijo, composición...)
+
+### Ejemplo
+Supóngase la siguiente entrada:
+
+```java
+print a;
+while a {
+    print b;
+}
+```
+
+¿Cuál es la información mínima que representa lo que hace dicho programa? Una forma de averiguarlo, por ejemplo, sería plantearse qué es lo único que necesitan saber de esa entrada las demás fases (por ejemplo, el generador de código). En el caso de la entrada anterior, la esencia de dicha entrada es:
+
+-   Que hay dos sentencias: una _escritura_ y un bucle _while_.
+-   La _escritura_ imprime el valor de _a_ (no aporta nada el punto y coma para generar el código).
+-   La condición del _while_ es el valor de la _a_ y, si se cumple, imprime _b_.
+
+Pues esa esencia es lo único que debe incluir el AST de dicha entrada.
+![[slide_11.c6a7c0ec.png]]
+
+## Comparativa AST vs. Árbol concreto
+Se pueden comparar el árbol concreto y el AST de la misma entrada.
+![[slide_12.57d5cc3a.png]]
+Como puede observarse:
+-   El AST es mucho más pequeño y fácil de entender.
+-   El AST no está acoplado a la gramática, ya que la estructura del árbol no se basa en la forma de las producciones de ésta.
+
+## Diseño de un AST
+Supóngase que se quiere diseñar el AST para un lenguaje del cual la siguiente entrada es un ejemplo.
+
+```java
+a = 2;
+while (a < 100) {
+	 read b;
+	 a = a + b ;
+}
+```
+
+La especificación informal del lenguaje es:
+-   No tiene definición de variables.
+-   Sólo tienen las sentencias que se ven en el ejemplo.
+-   Los operadores aritméticos son los cuatro básicos (suma, resta, multiplicación y división). Los relacionales son el _mayor_, _menor_ e _igual_.
+
+## Proceso de diseño de un AST
+1. Identificar los nodos necesarios del lenguaje
+2. Determinar los hijos de cada uno
+
+### Identificar nodos
+Según el enunciado anterior, para modelar cualquier entrada serán necesarios los siguientes nodos. Con _ExprBin_ (expresión binaria) se representarán tanto las operaciones aritméticas como las relacionales
+![[slide_14.455239fd.png]]
+
+### Identificar hijos
+Hay que determinar qué hijos tendrá cada nodo. Por cada hijo se crea una rama. Además, a cada rama se le asocia un tipo — el tipo que deben tener los nodos que se quieran conectar en dicha rama. Si no se le pusiera ningún tipo significaría que en dicha rama se podría poner como hijo cualquier nodo. El tipo supone, por tanto, una forma de expresar las restricciones a la hora de conectar nodos.
+![[slide_15.577ccb07.png]]
+A la hora de elegir un tipo para una rama habrá que elegir uno de entre los tres casos siguientes:
+1.  El tipo es otro **nodo**.
+2.  El tipo es una **categoría sintáctica**. Cuando un nodo pueda tener como hijo a nodos de distintos tipos, en vez de indicar cada uno en la rama, se define una _categoría sintáctica_ con todos ellos y es el nombre de ésta la que se pone como tipo de la rama (es decir, es un atajo para poner varios tipos).
+3.  El tipo es un tipo **propio** del lenguaje de implementación del AST. La mayoría de las veces será el tipo _string_ del lenguaje.
+
+Además, si en una rama es _multivaluada_ (puede haber varios hijos en ella) se pondrá un '*' en el tipo para indicarlo. Adelantándonos a la implementación, que se verá más tarde, ya se puede intuir que esta rama se implementará como una lista.
+
+Con lo anterior, quedaría el siguiente diseño de nodos.
+![[slide_16.1de30fb3 1.png]]
+
+## Gramáticas Abstractas
+- Metalenguaje para documentar los AST.
+- Se define una regla por cada nodo
+- Sigue la siguiente estructura:
+	- Comienza por el nombre del nodo
+	- Si pertenece a categorías sintácticas, se ponen todas ellas detrás del nombre separadas por dos puntos
+	- A continuación, separados por una flecha, aparecen los tipos de los hijos del nodo
+```
+<nodo>:<categorías> -> <tipos hijos>
+```
+En el capítulo anterior se llegó al siguiente diseño de nodos expresado de forma gráfica:
+![[slide_16.1de30fb3 1.png]]
+Se describen ahora dichos nodos usando la notación de las gramáticas abstractas:
+![[slide_17.24bb82b1.png]]
+Nótese que lo obligatorio es poner el tipo de los hijos (no el nombre). Sin embargo, cuando varios hijos tienen el mismo tipo, puede ser de ayuda asignar nombres a los hijos para facilitar la lectura de la gramática. Para poner un nombre a un hijo basta con ponerlo delante del tipo separándolos con dos puntos. La siguiente gramática es el resultado de añadir nombres (en gris) a ciertos hijos para facilitar su comprensión.
+![[slide_18.9e760d3e.png]]
+Aclaraciones adicionales:
+-   No confundir el operador `'*'` con el uso que se da a dicho carácter en EBNF y en las _expresiones regulares_. En estas últimas, dicho operador indica la repetición de cero o más elementos. Aquí simplemente significa que dicha rama, en vez de un sólo nodo, debe tener una lista de ellos. Por tanto, no hay — y no se necesita — el operador '+'. Una vez indicado que dicha rama es una lista, no es relevante si en esa lista habrá al menos un elemento o no.
+-   Todo hijo es opcional. Si no se usa el `'*'`, se crea una referencia a un nodo en vez de una lista. Es asunto ya de la implementación que dicha referencia se use o no. Por tanto, no se necesita operador para indicar opcionalidad ('?').
+-   Recuérdese que, tal y como se dijo en el capítulo anterior, el tipo no es texto libre, sino que debe ser un _nodo_, una _categoría sintáctica_ o un tipo _propio_ del lenguaje de implementación
+
+## GLC vs. Gramática Abstracta
+
+![[slide_20.823351cf.png]]
+
+- La **GLC** determina cómo tiene que ser la entrada del sintáctico. Describe la estructura de textos. Es la forma de indicar al usuario del compilador cómo debe escribir una entrada válida.
+- La **gramática abstracta** es la que determina cómo va a ser la salida del sintáctico. Describe la estructura de árboles. Es la forma de indicar a los diseñadores de las demás fases del traductor cómo van a ser los árboles que reciban.
+
+> Ver el ejercicio 15 en [[Ejercicios Examen Teoria DLP🐲#Sintáctico]]
+
+## Implementación del AST. Implementación de los Nodos
+- Hay que seguir las indicaciones de la gramática abstracta
+- Hay que seguir el siguiente proceso:
+	-  Se crea un interfaz AST que será el tipo común de todos los nodos.
+	-  Por cada categoría sintáctica se crea un interfaz con el mismo nombre. Dicho interfaz derivará del interfaz AST.
+	-  Por cada regla (es decir, por cada nodo) se crea una clase del mismo nombre que el nodo.    Dicha clase implementará los interfaces de las categorías sintácticas a las que pertenezca (o AST si no pertenece a ninguna).
+	-  La parte derecha de cada regla indica los atributos que debe tener la clase Java creada para dicha regla.
+	- Por cada hijo, se crea una propiedad Java del tipo del mismo.
+	- Si no se indica el nombre de un hijo (ya que sólo su tipo es obligatorio), se puede poner cualquier nombre suficientemente explicativo.
+	-  Si el hijo tiene `'*'` asociado a su tipo, se crea una _lista_ de dicho tipo. En caso contrario, se añade simplemente una referencia a un sólo objeto.
+Por ejemplo, supóngase la siguiente gramática abstracta.
+
+```cs
+programa ⟶ sentencias*
+
+asigna:sentencia ⟶ variable expr
+while:sentencia ⟶ expr sentencias*
+lectura:sentencia ⟶ variable
+
+exprBinaria:expr ⟶ left:expr operador:string right:expr
+variable:expr ⟶ nombre:string
+literalEntero:expr ⟶ valor:string
+```
+
+Su implementación sería:
+
+```java
+interface AST { }
+
+interface Sentencia extends AST  { }
+interface Expr extends AST  { }
+
+class Programa implements AST {
+    List<Sentencia> sentencias;
+}
+
+class Asigna implements Sentencia {
+    Variable variable;
+    Expr expr;
+}
+
+class While implements Sentencia {
+    Expr expr;
+    List<Sentencia> sentencias;
+}
+
+class Lectura implements Sentencia {
+    Variable variable;
+}
+
+class ExprBinaria implements Expr {
+    Expr left;
+    String operador;
+    Expr right;
+}
+
+class Variable implements Expr {
+    String nombre;
+}
+
+class LiteralEntero implements Expr {
+    String valor;
+}
+```
+
+## Creación del AST
+Crear el AST implica hacer los _new_ de los distintos nodos del árbol en algún punto del analizador sintáctico. Se trata ahora de determinan dichos puntos.
+
+El AST debe reflejar lo que se ha ido encontrando en la entrada ¿Cuándo se querrá crear, por ejemplo, un nodo que represente a una sentencia _print_? Pues _después_ de haber encontrado todos los símbolos de dicha estructura en la entrada.
+![[slide_32.9558a1f1.png]]
+
+### En ANTLR
+Enlazar nodos
+```java
+print: PRINT expr ';' { ... = new Print(...); } ;
+```
+Devolución de valores
+```java
+print returns[Print ast]
+	: 'print' expr ';' { $ast = new Print(...); }
+	;
+
+expr returns[Expresion ast]
+	: ...
+	;
+```
+Obtención de valores
+```java
+print returns[Print ast]
+	: 'print' expr ';' { $ast = new Print($expr.ast); }
+	;
+
+expr returns[Expresion ast]
+	: ... { $ast = ... }
+	;
+```
+
+La directiva _returns_ sirve para dos cosas:
+
+1.  Para indicar el tipo de retorno que debe tener el método que ANTLR implemente a partir de dicha regla.
+2.  Para crear una variable (en este caso _ast_) donde las acciones podrán dejar el valor de retorno de la función (ya que no pueden usar la sentencia _return_ de Java). Para usar esta variable en las acciones, ANTLR exige prefijar su nombre con el carácter _(por eso en la acción se asigna a $ast_).
+
+> Ver el ejercicio 16 en [[Ejercicios Examen Teoria DLP🐲#Sintáctico]]
+
+## Creación de Listas
+Una vez que tenemos _aisladas_ las reglas que implementan los patrones, a la hora de crear los nodos de un AST, ¿qué acciones Java hay que añadir a dichas reglas-patrones? En la siguiente tabla se muestra _qué_ acciones hay que añadir y _dónde_ en función del patrón que representa la regla:
+![[Pasted image 20230513181319.png]]
+
+> Ver el ejercicio 17 en [[Ejercicios Examen Teoria DLP🐲#Sintáctico]]
+
+
+Mirar más ejercicios en [[Ejercicios Examen Teoria DLP🐲#Sintáctico]]
 
 ---
 # Análisis semántico

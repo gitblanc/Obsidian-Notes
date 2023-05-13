@@ -31,7 +31,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -97,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/3 CURSO/2 semestre/DLP/Ejercicios Examen Teoria DLP🐲.md",
+                "file": "docs/3 CURSO/2 semestre/DLP/Apuntes Examen Teoria DLP🐟.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -124,21 +125,20 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "2ec08de0a7a5a048",
+  "active": "4a264e92de32e699",
   "lastOpenFiles": [
-    "docs/3 CURSO/2 semestre/DLP/img/gui_0450.6d3f4c4b.svg",
-    "docs/3 CURSO/2 semestre/DLP/Apuntes Examen Teoria DLP🐟.md",
     "docs/3 CURSO/2 semestre/DLP/Ejercicios Examen Teoria DLP🐲.md",
-    "docs/3 CURSO/2 semestre/DLP/img/a.22136359.svg",
-    "docs/3 CURSO/2 semestre/DLP/img/slide_17.542a11e0.png",
-    "docs/3 CURSO/2 semestre/DLP/img/WhatsApp Image 2023-05-13 at 12.38.03.jpeg",
-    "Untitled.jpg",
-    "docs/3 CURSO/2 semestre/DLP/img/slide_34b.d7a69780.png",
-    "docs/3 CURSO/2 semestre/DLP/img/Pasted image 20230513120526.png",
-    "docs/3 CURSO/2 semestre/DLP/img/slide_2b.795fd935.png",
-    "docs/3 CURSO/2 semestre/DLP/img/slide_45.bf90962d.png",
-    "docs/3 CURSO/2 semestre/DLP/img/slide_44.fe240e55.png",
-    "docs/3 CURSO/2 semestre/DLP/img/slide_43.a3d56383.png",
+    "docs/3 CURSO/2 semestre/DLP/Apuntes Examen Teoria DLP🐟.md",
+    "docs/3 CURSO/2 semestre/DLP/img/Pasted image 20230513181319.png",
+    "docs/3 CURSO/2 semestre/DLP/img/slide_32.9558a1f1.png",
+    "docs/3 CURSO/2 semestre/DLP/img/slide_20.823351cf.png",
+    "docs/3 CURSO/2 semestre/DLP/img/slide_18.9e760d3e.png",
+    "docs/3 CURSO/2 semestre/DLP/img/slide_17.24bb82b1.png",
+    "docs/3 CURSO/2 semestre/DLP/img/slide_16.1de30fb3 1.png",
+    "docs/3 CURSO/2 semestre/DLP/img/slide_16.1de30fb3.png",
+    "docs/3 CURSO/2 semestre/DLP/img/slide_15.577ccb07.png",
+    "docs/3 CURSO/2 semestre/DLP/img/slide_14.455239fd.png",
+    "docs/3 CURSO/2 semestre/DLP/img/slide_12.57d5cc3a.png",
     "README.md",
     "docs/README.md",
     "docs/3 CURSO/2 semestre/DLP/img",
