@@ -1,4 +1,20 @@
 
+*Ejemplo 110:*
+La entrada a traducir es la siguiente, implementada en un lenguaje ficticio al estilo _C_.
+```c
+int x, y;
+y = x + (int) 3.14;
+```
+- **Léxico**: encontrar todos los tokens
+![[slide_79.5d489f92.png]]
+- **Sintáctico**: una vez tenemos los tokens, mostrar el AST
+![[slide_81.36db6838.png]]
+- **Semántico**: validar el AST
+![[slide_82.e7b1f579.png]]
+- **Generación de código**: generar el código resultante
+![[slide_84.4acd89fd.png]]
+![[slide_85.c066df4e.png]]
+
 # Léxico
 1. 
 ![[Pasted image 20230510111324.png]]
@@ -63,7 +79,8 @@ IDENT: [a-zA-Z]*[a-zA-Z0-9]*;
 
 STRING: '"' (~[\r\n])* '"';
 
-COMMENT: '#'.*? '\n' -> Skip;
+COMMENT: '#'.*? '\n' -> Skip; //CON EL OPERADOR NON-GREEDY
+COMMENT: '#' ~[\r\n]* -> Skip; //SIN EL OPERADOR NON-GREEDY
 
 WS: [ \t\r\n]+ -> skip;
 ```
