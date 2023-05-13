@@ -1,4 +1,4 @@
-# Clase 1 - Conceptos básicos
+# Conceptos básicos
 
 ## Fases de un traductor
 - Si se clasifican por su **función** se dividen en: **Fases de análisis y Síntesis**
@@ -196,7 +196,10 @@ Mirar ejercicios en [[Ejercicios Examen Teoria DLP🐲#Léxico]]
 ---
 # Sintáctico
 
-- Se encarga de que los tokens estén en el orden adecuado.
+- Se encarga de que los tokens estén en el orden adecuado. Para ello:
+	- Identifica estructuras
+	- Construye un árbol
+![[slide_2b.795fd935.png]]
 
 Ejemplo:
 Supóngase este programa:
@@ -210,34 +213,493 @@ Ahora, el analizador sintáctico forma un árbol que muestra la composición del
 ![[slide_30.82dae4fa.png]]
 
 ## Reglas
+Supóngase que se quiere establecer en lenguaje natural las reglas que dicten cómo es una expresión aritmética como la siguiente:
+```java
+(3 + 4) * 5
+```
+Las reglas podrían ser:
 - Las expresiones usan notación infija
-- El número de paréntesis abiertos es siempre igual al de paréntesis cerrados
+- El número de paréntesis abiertos es siempre mayor o igual al de paréntesis cerrados excepto al final de la expresión, donde tendrán que ser iguales
+Aunque parecen suficientemente claras, podría plantearse una entrada como la siguiente:
+```java
+3 (+ 4 *) 5
+```
+La entrada anterior se pretendía que fuera inválida. Sin embargo, cumple ambas reglas. Por tanto, habría que replantearse las mismas.
+Por ello, se recurrirá de nuevo a los metalenguajes: lenguajes que nos sirven para definir de forma _precisa_ (sin ambiguedades) y _concisa_ las reglas de un lenguaje. En concreto, los metalenguajes que se usarán en esta fase son las Gramáticas Libres de Contexto (GLC) en notación BNF y EBNF y, cuando se llegue a la construcción del árbol, las Gramáticas Abstractas (GAb).
 
-==Mayúscula --> TOKEN --> Z
-minúscula --> no terminal --> a==
+## Gramáticas libres de contexto (GLC)
+- Una GLC es un conjunto de 4 elementos:
+```
+G = { VT, VN, s, P }
+```
+Dichos elementos son:
+- **VT**: es un conjunto de símbolos terminales (tokens del analizador léxico)
+- **VN**: es un conjunto de símbolos no-terminales. Son las estructuras que hay en el lenguaje (que se formarán a partir de símbolos terminales y de otras estructuras)
+- **s**: es un símbolo no-terminal, es el *símbolo inicial*. Es la estructura superior que incluirá a todas las demás.
+- **P**: es un conjunto de reglas de producción (o producciones) formadas por un símbolo no-terminal en el **antecedente** (a la izquierda de la flecha) y una secuencia de símbolos (terminales y/o no-terminales) en el **consecuente**. Las reglas son las que nos dicen cómo se forman los símbolos no terminales de VN a partir de otros símbolos.
+Un ejemplo de GLC sería la gramática G siguiente:
+```
+G   = { VT, VN, programa, P }
+```
+Donde a continuación se describen cada uno de sus componentes:
+```
+VT = { IDENT IF THEN ELSE = (  ) NUM  +  * }
+
+VN = { programa, instrucciones, instr, expr }
+
+P = {
+    programa ⟶ instrucciones
+
+    instrucciones ⟶ instr
+                  | instrucciones instr
+
+    instr ⟶ IDENT = expr
+          | IDENT ( expr )
+          | IF expr THEN instr ELSE instr
+
+    expr ⟶ NUM
+         | expr + expr
+         | expr * expr
+}
+```
+En el no-terminal _instrucciones_ puede observarse que, dado que las GLC _no tienen_ los operadores de repetición que se vieron en el analizador léxico ('+' y ``'*'``), la solución equivalente aquí es utilizar la **recursividad** para indicar repetición de elementos (en concreto, la gramática indica que _instrucciones_ es una secuencia de una o más _instr_)
+
+> Nota: 📌 Se utiliza el separador `|` para definir de una forma más compacta varias reglas que compartan el mismo antecedente.
+
+```
+a ⟶ b
+   | c
+```
+
+Pero lo anterior sigue siendo la definición de dos reglas (no de una), ya que es equivalente a:
+
+```
+a ⟶ b
+a ⟶ c
+```
+
+## Notación BNF
+- Es la notación más común para representar gramáticas libres de contexto. En ella no se definen expresamente cada uno de los elementos de la gramática, sino que sólo se incluyen las reglas de producción y el resto de los conjuntos se deducen de ellas.
+La gramática anterior en BNF sería:
+```
+programa ⟶ instrucciones
+
+instrucciones ⟶ instr
+              | instrucciones instr
+
+instr ⟶ IDENT '=' expr
+      | IDENT '(' expr ')'
+      | IF expr THEN instr ELSE instr
+
+expr ⟶ NUM
+     | expr '+' expr
+     | expr '*' expr
+```
+
+De ahí se deducen el resto de los elementos de la GLC:
+- **VT**, los tokens, que son aquellos símbolos que estén en mayúsculas o entrecomillados (IDENT, =, (, ), IF, THEN, ELSE, NUM)
+- **VN**, los no-terminales (estructuras), son todos aquellos símbolos en los antecedentes de las reglas (*programa, instrucciones, instr* y *expr*)
+- **s**, el símbolo inicial, será el antecedente de la primera regla (*programa*)
+
+## Notación EBNF
+- Es una extensión de la BNF que añade 4 operadores:
+![[Pasted image 20230513120526.png]]
+
+La gramática anterior, expresada en EBNF, podría simplificar las dos primeras reglas de la gramática (_instr_ y _expr_ seguirán igual):
+
+```
+programa ⟶ instr+
+
+instr ⟶ IDENT '=' expr
+      | IDENT '(' expr ')'
+      | IF expr THEN instr ELSE instr
+
+expr ⟶ NUM
+     | expr '+' expr
+     | expr '*' expr
+```
+
+## Validación de entradas. Definiciones
+## Transformación
+- **Transformación** (o paso de derivación): acción de coger uno de los símbolos no-terminales de una cadena y sustituirlo por la parte derecha de una regla que tenga como antecedente a dicho símbolo.
+Supóngase una gramática G:
+
+```
+s ⟶ a b Z
+a ⟶ Y a
+a ⟶ X a
+a ⟶ ε
+b ⟶ ε
+b ⟶ W b
+```
+Supóngase ahora la cadena `X a b Z`. Si se toma el símbolo `a` de dicha cadena y, aplicando la segunda regla `a ⟶ Y a`, se sustituye dicho símbolo por la parte derecha de la regla, se obtiene la cadena `X Y a b Z`.
+
+Se dice entonces que la cadena `X Y a b Z` es una transformación de `X a b Z` y se expresa con la siguiente notación (nótese que se lee al revés de cómo se escribe):
+
+```
+X a b Z ⟹ X Y a b Z
+```
+
+>Nota:📌 Nótese la forma de las dos flecha que han aparecido en este tema:
+>
+>-   Se utiliza `⟶` para definir una regla o producción de una gramática.
+>-   Se utiliza `⟹` indica que a la cadena de su izquierda se le ha aplicado una regla para obtener la cadena de la derecha (que se ha realizado una _transformación_).
+
+## Derivación
+- **Derivación**: es cualquiera de las cadenas que se obtienen a partir de ella aplicando una o más transformaciones (pasos de derivación)
+
+Supóngase una gramática G:
+
+```
+s ⟶ a b Z
+a ⟶ Y a
+a ⟶ X a
+a ⟶ ε
+b ⟶ ε
+b ⟶ W b
+```
+
+Serían ejemplos de derivaciones de la cadena `X a b Z` todas las cadenas que están a su derecha en el siguiente ejemplo:
+
+```
+X a b Z ⟹ X Y a b Z ⟹ X Y b Z ⟹ X Y W b Z
+```
+
+Se indica que una cadena es una derivación de otra con el símbolo ![](http://di002.edv.uniovi.es/~ric/sites/apuntes_dlp/iconos/flecha_asterisco.svg) (que indica que se han producido cero o más transformaciones). Por ejemplo, para indicar que la cadena `X Y W b Z` es una _derivación_ de `X a b Z` se expresa de la siguiente manera (nótese que, de nuevo, se lee al revés de cómo se escribe):
+
+`X a b Z` ![](http://di002.edv.uniovi.es/~ric/sites/apuntes_dlp/iconos/flecha_asterisco.svg) `X Y W b Z`
+
+De hecho, en el ejemplo anterior, se pueden ver también las siguientes derivaciones de la misma cadena:
+
+`X a b Z` ![](http://di002.edv.uniovi.es/~ric/sites/apuntes_dlp/iconos/flecha_asterisco.svg) `X Y a b Z`
+
+`X a b Z` ![](http://di002.edv.uniovi.es/~ric/sites/apuntes_dlp/iconos/flecha_asterisco.svg) `X Y b Z`
+
+## Sentencia
+- **Sentencia**: caso particular de derivación. 
+
+>**Nota**: Se dice que una cadena `t` es una sentencia de la gramática G si cumple dos condiciones:
+	1. Está formada únicamente por símbolos terminales (en mayúsculas)
+	2. Es una derivación del símbolo inicial s de la gramática (_s_ ![](http://di002.edv.uniovi.es/~ric/sites/apuntes_dlp/iconos/flecha_asterisco.svg) _t_).
+
+Como ejemplo, supóngase la gramática G:
+
+```
+s ⟶ a b Z
+a ⟶ Y a
+a ⟶ X a
+a ⟶ ε
+b ⟶ ε
+b ⟶ W b
+```
+
+Para saber si la cadena `X W Z` es una sentencia de G, habría que comprobar las dos condiciones anteriores.
+
+-   La primera la cumple ya que la cadena esta formada sólo por terminales.
+-   La segunda la cumple por ser una derivación de `s` (es decir, que se puede partir de dicho símbolo y, haciendo transformaciones, se puede llegar a la cadena). Esta sería la secuencia de transformaciones que lo demuestran:
+    
+```
+    s ⟹ a b Z       (por regla 1)
+      ⟹ X a b Z     (por regla 3)
+      ⟹ X b Z       (por regla 4)
+      ⟹ X W b Z     (por regla 6)
+      ⟹ X W Z       (por regla 5)
+```
+
+Por tanto, la cadena `X W Z` es una sentencia de la gramática G.
 
 ## Lenguaje
 - Es el conjunto de todas las sentencias de una gramática, es decir, el conjunto de todos los posibles programas
 
-## Tipos de algoritmos
+Es decir, el lenguaje generado por una gramática G es el conjunto de todas las cadenas formadas por terminales a las que se puede llegar a partir del símbolo inicial _s_.
+
+Supóngase una gramática G:
+
+```
+s ⟶ X a
+a ⟶ Y b
+a ⟶ ε
+b ⟶ W
+b ⟶ ε
+```
+
+Su lenguaje L(G) estaría formado por las tres sentencias que se pueden formar:
+
+```
+L(G) = { X, X Y, X Y W }
+```
+
+En este caso, que es una gramática sencilla, ha salido un conjunto finito. Sin embargo, lo habitual en un lenguaje práctico es que sea un conjunto infinito de sentencias.
+
+## Gramáticas equivalentes
+
+Supónganse la dos gramáticas G1 y G2 siguientes:
+
+```
+// Gramática G1
+s ⟶ s + s
+s ⟶ X
+```
+
+```
+// Gramática G2
+s ⟶ X mt
+mt ⟶ + X mt
+mt ⟶ ε
+```
+
+Si se calculan sus respectivos lenguajes, se obtiene lo siguiente:
+
+```
+L(G1) = { X, X + X, X + X + X, X + ... + X }
+
+L(G2) = { X, X + X, X + X + X, X + ... + X }
+```
+
+Por tanto, puede verse que ambas gramáticas, aunque son distintas, generan el mismo lenguaje: una o más _X_ sumadas.
+
+## Validez de una entrada
+- Recopilando todas las definiciones anteriores, se puede llegar a la conclusión de que una entrada será válida si pertenece al lenguaje que genera la gramática, es decir, si es una sentencia del mismo. Y para averiguar si *es una sentencia*, vamos comprobando si se puede llegar desde el símbolo inicial **s** hasta dicha cadena.
+
+## Árbol Concreto (o de Análisis Gramatical)
+- Árbol que se construye a la vez que se realizan las transformaciones.
+
+Por ejemplo, supóngase la siguiente gramática G:
+
+```
+s ⟶ e
+e ⟶ e + e
+e ⟶ e * e
+e ⟶ LITENT
+```
+
+Supóngase que se quiere saber si la entrada `3 + 4 * 5` es válida según dicha gramática. Para ello, se encuentra la derivación de _s_ que lleva a dicha cadena (a la izquierda de la imagen). Lo que se hace en el árbol de la derecha es ir anotando qué símbolo se ha sustituido por qué otros en cada transformación:
+
+![[slide_34b.d7a69780.png]]
+De esta manera, se obtiene el árbol concreto correspondiente a la entrada.
+
+Nótese que **en un árbol concreto se cumple** que:
+-   La raíz del árbol será el símbolo raíz de la gramática.
+-   Todo nodo terminal será un token.
+-   En todo subárbol formado por un padre y sus hijos:
+    -   El padre será el antecedente de una producción de la gramática.
+    -   Los hijos serán el consecuente de dicha producción.
+
+## Parsers
+- Algoritmo que recibe unas reglas en forma de gramática que indican qué entradas son válidas y una entrada en forma de tokens, que encuentra la regla adecuada a usar en cada paso para llegar desde el símbolo inicial a dicha entrada (si existe ese camino). Es decir, busca una combinación de transformaciones que lleve del símbolo inicial a la cadena.
+- Hay varios algoritmos con distintos grados de compromiso
+
+## Características de los parsers
+Hay que conocer unos términos que derivan cómo trata un parser las siguientes situaciones:
+- En qué dirección realiza el reconocimiento de la cadena de entrada
+- Cómo selecciona las reglas a la hora de realizar una transformación
+
+## Tipos de algoritmos. Clasificación por dirección y selección de reglas
 ![[Pasted image 20230510114850.png]]
-**Dirección**
+**Dirección de reconocimiento**
 - **Descendentes**: son aquellos que realizan el proceso a partir del símbolo inicial e intentan llegar a la cadena de entrada (lo que se ha visto en clase)
 - **Ascendente**s: realizan el proceso a la inversa. Parten de la cadena de entrada y haciendo transformaciones a la inversa (sustituyendo la parte derecha de una regla por la parte izquierda), intentan llegar al símbolo inicial. Estas transformaciones a la inversa se llaman **reducciones**.
 
-Selección
+**Selección de reglas**
 - **Backtracking** (No determinista): se elige una regla, y si no se llega a la cadena final, se retrocede a un punto en el que se hubiera podido seguir otra regla.
 - **Predictivo** (determinista): cuando se presenta la situación de tener que elegirr entre varias reglas candidatas, se asegura de coger la adecuada. Nunca retrocede.
-	- **Clasificación de parsers predictivos**
-		- **LL(1)**: aquellos que miran como máximo un token de entrada
-		- **LL(2)**: aquellos que miran como máximo dos token de entrada
 
-## Tipos de gramáticas
+## Clasificación de parsers predictivos. LL y LR
+A un parser que realiza el reconocimiento de manera ***descendente***, se le denomina **LL**. Los LL también se carazterizan porque realizan siempre la sustitución del símbolo más a la izquierda de la cadena primero. Si además de ser ***descendente***, es ***predictivo***, se le denomina parser **LL(k)**, donde k es el número máximo de tokens que puede mirar de la entrada. Así, serán parsers LL(k):
+- **LL(1)**: aquellos que miran como máximo un token de entrada
+- **LL(2)**: aquellos que miran como máximo dos token de entrada
+- ...
+
+Se denomina **LR** a un parser que realiza el reconocimiento de manera ascendente realizando siempre la sustitución del símbolo más a la derecha (el último). Si además de ***ascendente***, es ***predictivo***, se le denomina parser **LR(K)**, donde k es el número máximo de tokens que puede mirar de la entrada. Ejemplos de parsers LR(k) serían:
+-   Los parsers LR(1), es decir, aquellos que miran como máximo, un token de la entrada.
+-   Los parsers LR(2), es decir, aquellos que miran como máximo, dos token de la entrada.
+- ...
+
+## Clasificación de las gramáticas
 - Las gramáticas reciben el nombre directamente del parser con el que pueden ser tratadas, es decir, el nombre de la gramática indica con qué parser se puede o no implementar.
+	- **LL(1)**: gramática que puede ser reconocida por un parser LL(1). Es decir, puede ser reconocida de manera predictiva (sin backtracking) sin que en ninguna situación vaya a ser necesario mirar más de un token para saber qué regla elegir
+	- **LR(1)**: gramática que puede ser reconocida con un parser LR(1). Es decir, de manera predictiva y en dirección ascendente sin que nunca vaya a ser necesario mirar más de un token
+- Toda gramática LL(n) también es LL(n+1), pero se usa como nombre de la misma el del parser que mire **menos** tokens hacia delante.
 ![[Pasted image 20230510114912.png]]
 - **LL(k):** reconocida con un parser LL(k) de manera predictiva sin backtracking y en dirección descendente
 - **LR(k)**: reconocida con un parser LR(k) de manera predictiva y en dirección ascendente
+
+## Implementación de un parser recursivo descendente
+
 ![[Pasted image 20230510120757.png]]
+
+Antes de empezar la implementación, se necesita la siguiente infraestructura que es común a cualquier parser independientemente de la gramática a implementar.
+
+```java
+public class RecursiveParser {
+
+    private Lexicon lex;
+
+    public RecursiveParser(Lexicon lexico) throws ParseException {
+        lex = lexico;
+        advance();
+    }
+
+    // ------------------------------------------------------------------------
+    // ------ Miembros auxiliares para todo parser recursivo descendente
+    private Token token;
+
+    private void advance() {
+        token = lex.nextToken();
+    }
+
+    private void error() throws ParseException {
+        throw new ParseException("Error sintáctico en " + token.getLine() + ":"
+         + token.getCharPositionInLine() + ". Lexema = " + token.getText());
+    }
+
+    void match(int tokenType) throws ParseException {
+        if (token.getType() == tokenType)
+            advance();
+        else
+            error();
+    }
+
+    // # ------------------------------------------------------------------------
+    // # Aquí comienza el Analizador Sintáctico
+    // #
+    public void start() throws ParseException {
+        ...
+    }
+
+}
+```
+
+La infraestructura consiste en:
+-   Un método **_advance_** que lea el siguiente token.
+-   Un método **_error_** donde se centraliza el procesamiento de los errores sintácticos.
+-   Un método **_match_** que compruebe si el token actual es el indicado en el parámetro. Si es así, pasa al siguiente token. En caso contrario, notifica de que la entrada no es válida.
+
+Debajo de estos métodos, empezarían ya los métodos propios de la gramática
+
+### Implementación de una regla
+La técnica recursiva descendente se basa en implementar un método por cada regla de la gramática, siendo el consecuente de la misma el que indique su implementación.
+
+Por ejemplo, supóngase la siguiente gramática:
+
+```
+start ⟶ IDENT a NUM
+a ⟶ NUM IDENT
+```
+
+Con la anterior gramática, sería válida una entrada como:
+
+```
+hola 24 mundo 48
+```
+
+Lo primero que hay que hacer es especificar e implementar el léxico necesario para dicha gramática:
+
+```g4
+lexer grammar Lexicon;
+
+NUM : [0-9]+;
+IDENT : [a-zA-Z][a-zA-Z0-9_]*;
+
+WS : [ \t\r\n]+ -> skip;
+```
+
+Ahora ya se podría hacer la implementación de la gramática:
+
+```java
+public class RecursiveParser {
+    ...
+
+    // start ⟶ IDENT a NUM
+    public void start() throws ParseException {
+        match(Lexicon.IDENT);
+        a();
+        match(Lexicon.NUM);
+
+        match(Lexicon.EOF);
+    }
+
+    // a ⟶ NUM IDENT
+    public void a() throws ParseException {
+        match(Lexicon.NUM);
+        match(Lexicon.IDENT);
+    }
+}
+```
+A destacar:
+-   Dado que hay dos reglas en la gramática, hay dos métodos en la clase _RecursiveParser_ con el mismo nombre.
+-   La implementación de un método consiste en implementar cada uno de los símbolos del consecuente de la regla en el mismo orden.
+    -   Si el símbolo es un _terminal_, hay que invocar al método _match_ con dicho token. Es decir, hay que comprobar que es el token actual de la entrada y pasar al siguiente.
+    -   Si el símbolo es un _no-terminal_, hay que invocar al método que implementa la regla de dicho _no-terminal_. Es decir, simplemente hay que poner el símbolo seguido de paréntesis.
+-   En la implementación de la regla del símbolo inicial (`start()`), hay que hacer un último `match(Lexicon.EOF)` para comprobar que, al acabar el análisis, no haya más tokens a la entrada (lo cual indicaría que hay una entrada inválida, ya que se debería haber acabado la entrada).
+
+### Reglas con antecedente común
+Supóngase la siguiente gramática:
+
+```
+start ⟶ IDENT a
+
+a ⟶ NUM b IDENT
+    | IDENT b IDENT
+
+b ⟶ IDENT
+```
+
+A la hora de implementarla, habría que crear un método por cada regla con el nombre del antecedente de la misma. Sin embargo, en la gramática anterior se tiene dos reglas con el mismo antecedente (_a_).
+
+En este caso, el mismo método implementará ambas reglas añadiendo código que decida por cual de ellas ir en función de los _símbolos directores_ de cada una. Los _símbolos directores_ de una regla (definido de manera muy informal, ya que no se dispone del tiempo para definirlos formalmente), son los tokens que, de estar a la entrada, indicarían que dicha regla es la que hay que seleccionar para realizar la siguiente transformación (por la que hay que ir para encontrar el camino).
+
+En las dos reglas anteriores, los _símbolos directores_ de cada una serían:
+
+-   En `a ⟶ NUM b IDENT`, serían { `NUM`}.
+-   En `a ⟶ IDENT b IDENT`, serían { `IDENT`}
+
+Por tanto, la implementación final sería:
+
+```java
+public class RecursiveParser {
+
+    ...
+
+    // start ⟶ IDENT a
+    public void start() throws ParseException {
+        match(Lexicon.IDENT);
+        a();
+        match(Lexicon.EOF);
+    }
+
+    public void a() throws ParseException {
+        if (token.getType() == Lexicon.NUM) {
+            // a ⟶ NUM b IDENT
+            match(Lexicon.NUM);
+            b();
+            match(Lexicon.IDENT);
+
+        } else if (token.getType() == Lexicon.IDENT) {
+            // a ⟶ IDENT b IDENT
+            match(Lexicon.IDENT);
+            b();
+            match(Lexicon.IDENT);
+
+        } else  // No olvidar esta rama
+            error();
+    }
+
+    // b ⟶ IDENT
+    public void b() throws ParseException {
+        match(Lexicon.IDENT);
+    }
+}
+```
+El cálculo de los _símbolos directores_ en este caso ha sido trivial, ya que las reglas eran muy sencillas. Sin embargo, en general, es necesario seguir un procedimiento que las calcule (a mano o con herramienta) ya que, a poco que la gramática se complique con derivaciones a vacío, no serán tan evidentes de ver a ojo.
+
+## Implementación con ANTLR. Características de ANTLR
+- Admite reglas tanto en EBNF como BNF
+- Genera un parser utilizando básicamente la técnica recursiva descendente. Es decir:
+	- Es descendente
+	- Es predictivo (no hace backtracking)
+	- Cada regla se implementa como un método. La implementación de ese método se corresponde con los símbolos de su consecuente.
+
 
 ![[Pasted image 20230510121625.png]]
 
@@ -246,6 +708,9 @@ Selección
 - ANTLR es una herramienta ascendente o descendente? ==descendente==
 - Una gramática L(1) puede usar recursividad iszuierda? ==no==
 - Si una gramática no pasa únicamente el algoritmo L(1), ¿es ambigua? ==no==
+
+## Creación de gramáticas
+FALTA
 
 ## Tipos de listas
 |Tipo de Lista|Cadenas que genera|

@@ -105,6 +105,8 @@ WS: [ \t\r\n]+ -> skip;
 
 4. Decir si es una sentencia válida
 ![[Pasted image 20230510114513.png]] ![[Pasted image 20230510114550.png]]
+Si realizamos las correspondientes transformaciones:
+![[WhatsApp Image 2023-05-13 at 12.38.03.jpeg]]
 ![[Pasted image 20230510114612.png]]
 ![[Pasted image 20230510114704.png]]
 
