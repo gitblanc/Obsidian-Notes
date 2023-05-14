@@ -765,6 +765,10 @@ Solución:
 (3) expression1.lvalue = true //lo pone en el enunciado
 ```
 
+Versión a mano:
+![[WhatsApp Image 2023-05-14 at 15.16.59.jpeg]]
+![[WhatsApp Image 2023-05-14 at 15.17.13.jpeg]]
+
 3. 
 ![[Pasted image 20230510153801.png]]
 Solución:
