@@ -826,6 +826,9 @@ Nota: las que no se incluyen es porque no requieren nada
 (2) expression.mustPromoteTo(statement.returnType)//comprueba si un entero se puede convertir a un double (si promociona)
 ```
 
+9. Comprobar que las funciones tengan **return** en la siguiente gramática. Crear la AG correspondiente:
+![[WhatsApp Image 2023-05-14 at 14.55.43.jpeg]]
+
 ---
 # Generación de código
 
