@@ -828,6 +828,7 @@ Nota: las que no se incluyen es porque no requieren nada
 
 9. Comprobar que las funciones tengan **return** en la siguiente gramática. Crear la AG correspondiente:
 ![[WhatsApp Image 2023-05-14 at 14.55.43.jpeg]]
+> Nota: falta poner que los dos atributos añadidos tienen **dominio booleano**
 
 ---
 # Generación de código
