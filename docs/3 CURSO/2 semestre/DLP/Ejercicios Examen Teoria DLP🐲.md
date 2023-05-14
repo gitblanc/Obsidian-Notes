@@ -773,6 +773,11 @@ Versión a mano:
 ![[Pasted image 20230510153801.png]]
 Solución:
 ![[Pasted image 20230510153921.png]]
+Versión a mano:
+![[WhatsApp Image 2023-05-14 at 15.57.18.jpeg]]
+![[WhatsApp Image 2023-05-14 at 15.57.31 1.jpeg]]
+![[WhatsApp Image 2023-05-14 at 15.58.01.jpeg]]
+![[WhatsApp Image 2023-05-14 at 15.58.11.jpeg]]
 
 4. ¿Cuál es el tipo Java de esta tabla de símbolos?
 ![[Pasted image 20230510154648.png]]
