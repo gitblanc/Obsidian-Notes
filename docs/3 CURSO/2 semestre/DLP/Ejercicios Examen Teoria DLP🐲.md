@@ -878,6 +878,7 @@ pusha 2
 pusha 0
 loadi
 i2f
+pushf 3.4
 mulf
 pushi 7
 i2f
