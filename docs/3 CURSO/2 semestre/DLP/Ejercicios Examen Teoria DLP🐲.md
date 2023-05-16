@@ -980,6 +980,7 @@ code y pushValue
 ![[Pasted image 20230510212323.png]]
 Solución:
 ![[Pasted image 20230510212525.png]]
+![[Untitled.jpg]]
 
 11. 
 ![[Pasted image 20230510213031.png]]
