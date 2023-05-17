@@ -993,3 +993,16 @@ Solucion:
 12. 
 ![[Pasted image 20230510213806.png]]
 ![[Pasted image 20230510213829.png]]
+
+13. Hacer la plantilla de código execute de una sentencia while
+Solución:
+![[Pasted image 20230517142029.png]]
+![[Pasted image 20230517142416.png]]
+
+14. Hacer la plantilla de código execute para una sentencia do/while
+![[Pasted image 20230517142504.png]]
+![[Pasted image 20230517142518.png]]
+
+15. Especificar la plantilla de código execute para el bucle for
+![[Pasted image 20230517142610.png]]
+![[Pasted image 20230517142630.png]]
