@@ -151,7 +151,30 @@ typedef ⟶ TYPE IDENT restoIdents
 Solución:
 ```java
 public class RecursiveParser {
-    ...
+    private Lexicon lex;
+    private Token token;
+	
+	public RecursiveParser(Lexicon lex) throws ParseException{
+		this.lex = lex;
+		advance();
+	}
+
+	private void advance(){
+		tokent = lex.nextToken();
+	}
+
+	private void error() throws ParseException{
+		throw new ParseException("Error sintáctico.");
+	}
+
+	void match(int tokenType) throws ParseException{
+		if(token.getType() == tokenType)
+			advance();
+		else
+			error();
+	}
+
+	//--------
 
     public void prog() throws ParseException {
         decl();
