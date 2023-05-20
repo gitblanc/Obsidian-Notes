@@ -4,28 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "fdbd0e0644480226",
+        "id": "48fac79faced9a30",
         "type": "tabs",
         "children": [
           {
-            "id": "2ec08de0a7a5a048",
+            "id": "24bd5a5937dabed4",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/3 CURSO/2 semestre/DLP/Ejercicios Examen Teoria DLP🐲.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "18b93221e92930b6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "docs/3 CURSO/2 semestre/DLP/Apuntes Examen Teoria DLP🐟.md",
+                "file": "docs/3 CURSO/2 semestre/SDI/Examen Teoría Nodejs 🚁.md",
                 "mode": "source",
                 "source": false
               }
@@ -97,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/3 CURSO/2 semestre/DLP/Ejercicios Examen Teoria DLP🐲.md",
+                "file": "docs/3 CURSO/2 semestre/SDI/Examen Teoría Nodejs 🚁.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -124,11 +112,14 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "2ec08de0a7a5a048",
+  "active": "24bd5a5937dabed4",
   "lastOpenFiles": [
+    "docs/3 CURSO/2 semestre/SDI/Examen Teoría Nodejs 🚁.md",
+    "docs/3 CURSO/2 semestre/SDI/Laboratorios 🌠.md",
+    "docs/3 CURSO/2 semestre/SDI/Examen Teoría Spring 🩳.md",
     "docs/3 CURSO/2 semestre/DLP/Apuntes Examen Teoria DLP🐟.md",
-    "docs/3 CURSO/2 semestre/DLP/img/Pasted image 20230517142630.png",
     "docs/3 CURSO/2 semestre/DLP/Ejercicios Examen Teoria DLP🐲.md",
+    "docs/3 CURSO/2 semestre/DLP/img/Pasted image 20230517142630.png",
     "docs/3 CURSO/2 semestre/DLP/img/Pasted image 20230517142610.png",
     "docs/3 CURSO/2 semestre/DLP/img/Pasted image 20230517142518.png",
     "docs/3 CURSO/2 semestre/DLP/img/Pasted image 20230517142504.png",
