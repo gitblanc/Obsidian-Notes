@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "48fac79faced9a30",
+        "id": "cfae38997bbd3834",
         "type": "tabs",
         "children": [
           {
-            "id": "24bd5a5937dabed4",
+            "id": "116114ec19c2ca0a",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -112,8 +112,9 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "24bd5a5937dabed4",
+  "active": "116114ec19c2ca0a",
   "lastOpenFiles": [
+    "docs/Cybersecurity/TryHackMe/Web Hacking 🎁/Authentication bypass 🔑.md",
     "docs/3 CURSO/2 semestre/SDI/Examen Teoría Nodejs 🚁.md",
     "docs/3 CURSO/2 semestre/SDI/Laboratorios 🌠.md",
     "docs/3 CURSO/2 semestre/SDI/Examen Teoría Spring 🩳.md",

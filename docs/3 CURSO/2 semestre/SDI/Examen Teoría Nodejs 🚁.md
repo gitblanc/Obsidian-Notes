@@ -65,5 +65,25 @@
 - ==XML==
 31. En una aplicación Nodejs, el fichero package.json contiene:
 - ==La configuración, las dependencias y los metadatos de la aplicación==
+32. En MongoDB, la información se almacena en formato:
+- ==BSON==
+33. Un documento contiene:
+- ==Un objeto BSON con atributos que pueden tomar diferentes valores==
+34. Desventajas de MongoDB:
+- ==No es adecuada para aplicaciones con transacciones==
+- ==No soporta transacciones ACID==
+- ==Sin garantía de integridad de datos==
+- ==Menos soporte para consultas complejas==
+- ==Uso intensivo de recursos==
+35. En MongoDB:
+- ==Los documentos se almacenan en colecciones==
+- ==Una colección es la carpeta donde se almacenan los documentos==
+- ==La colección no define la estructura de documentos (no es una tabla)==
+- ==Cada documento puede seguir una estructura diferente==
+- ==La estructura de un documento puede ser modificada dinámicamente==
+36. La función del enrutador puede:
+- ==Ejecutar cualquier lógica de negocio==
+- ==Dejar correr la petición==
+- ==Cortar la petición==
 
 ---
