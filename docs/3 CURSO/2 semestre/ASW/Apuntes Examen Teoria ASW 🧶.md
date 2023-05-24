@@ -203,5 +203,105 @@ Nota: El CCD es la suma de dependencias de todos los componentes (cada component
 - ==La aplicación se genera automáticamente a partir de objetos de dominio==
 100. En el estilo hexagonal
 - ==La base de datos y frameworks está en el exterior==
+101. Una ventaja del estilo batch es
+- ==Bajo acoplamiento==
+102. En el estilo pipes and filters
+- ==Se admite la ejecución concurrente de hilos==
+103. Backpressure ocurre cuando
+- ==Los consumidores reciben más datos de los que pueden procesar==
+104. ¿Cuál es una de las ventajas de pipes and filters con una interfaz uniforme?
+- ==Reconfigurabilidad==
+105. Uno de los beneficios de Master-slave es
+- ==Computación paralela==
+106. Una ventaja de MVC
+- ==Facilidad para crear nuevas vistas y controladores==
+107. En PAC
+- ==Se utiliza una jerarquía de agentes==
+108. ¿Cuál puede ser un reto a resolver en el estilo Datos compartidos?
+- ==Punto de fallo único==
+109. En el estilo Blackboard se utilizan
+- ==Fuentes de conocimiento que resuelven parcialmente un problema==
+110. Una de las ventajas de los sistemas basados en reglas es
+- ==La utilización de conocimiento declarativo de expertos de dominio==
+111. Una restricción del estilo cliente-servidor es
+- ==Los clientes se comunican con el servidor, no al revés==
+112. En la variante cliente-servidor sin estado
+- ==Ante la misma petición se devuelve siempre la misma respuesta==
+113. En Event-driven architecture
+- ==Un evento es algo que ha sucedido==
+114. Publish-subscribe es una variante de 
+- ==Modelos basados en eventos==
+115. Una ventaja de los modelos de actores es
+- ==Paralelismo==
+116. CQRS separa el interfaz en
+- ==Comandos que realizan acciones y consultas que leen datos==
+117. Event sourcing captura los cambios de estado mediante
+- ==Eventos inmutables==
+118. Una ventaja de Event sourcing es que
+- ==Si aparecen errores se puede reconstruir la Base de datos==
+119. Una ventaja de utilizar plugins es
+- ==La adaptación del sistema a recursos impredecibles en el futuro==
+120. Un problema del estilo Microkernel es
+- ==Punto de fallo único==
+121. Reflection permite
+- ==Realizar cambios al sistema sin detener la ejecución==
+122. ¿Cuál de las siguientes NO es una ventaja de los DSLs?
+- ==Rendimiento==
+123. Código móvil
+- ==Es código que se transfiere de una máquina a otra para que lo ejecute==
+124. Habitualmente, código bajo demanda
+- ==Es código que se transmite del servidor al cliente==
+125. Los agentes móviles consisten en
+- ==Código y datos que se envía de una máquina a otra para su ejecución==
+126. ¿Cuál de las siguientes NO es una falacia de la computación distribuida?
+- ==La invocación a un procedimiento remoto puede pasar parámetros==
+127. Hub and spoke
+- ==Es una topología de mensajería con un bróker central==
+128. Una consecuencia del patrón Bróker es
+- ==Separación de incumbencias==
+129. Una consecuencia de Peer-to-peer es
+- ==Evita el single point of failure==
+130. ¿Cuál de las siguientes NO es una ventaja de SOA?
+- ==Seguridad==
+131. En `WS-*`
+- ==Se proponía UDDI como páginas amarillas para publicar servicios web==
+132. En REST, la operación DELETE
+- ==Es idempotente pero no segura==
+133. HATEOAS
+- ==Incluye URIs en respuestas con más opciones del estado de la aplicación==
+134. En las arquitecturas basadas en servicios
+- ==Existen varios frameworks disponibles para facilitar el time-to-market==
+135. En la propuesta de microservicios
+- ==Cada microservicio gestiona su propia base de datos==
+136. Un microservicio trabaja
+- ==Con un dominio acotado==
+137. El deterioro estructural de microservicios puede aparecer al utilizar
+- ==Demasiadas librerías compartidas entre microservicios==
+138. En la propuesta Serverless
+- ==Se persigue escalabilidad automática==
+139. ¿Cuál de las siguientes NO es una ventaja de Serverless?
+- ==Vendor lock-in==
+140. Los tipos de la función map y reduce en MapReduce son:
+- ==`map: (K1,V1) => [(K2, V2)] reduce: (K2,[V2]) => (K2,V2)`==
+141. MapReduce
+- ==Utiliza un sistema de ficheros distribuido con replicación==
+142. La arquitectura Lambda
+- ==Permite procesar big data en tiempo real==
+143. En la arquitectura lambda, la serving layer
+- ==Combina las vistas en tiempo real con las vistas precomputadas batch==
+144. La arquitectura Kappa utiliza
+- ==Un log distribuido y replicado como almacenamiento de eventos==
+145. En la arquitectura Kappa
+- ==Un reto son requisitos de espacio al duplicarse el log y la base de datos==
+146. Una desventaja de la coordinación mediante transferencia de ficheros es
+- ==Bajo acoplamiento porque productor y consumidor pueden ser independientes==
+147. ETL
+- ==Consiste en 3 fases: extracción, transformación y carga==
+148. En la coordinación mediante Mensajería
+- ==Se suele utilizar una comunicación asíncrona==
+149. La escalabilidad en aplicaciones microservicios puede conseguirse mediante
+- ==Distribución de microservicios en servidores y replicación bajo demanda==
+150. Una variante peer-to-peer es
+- ==El uso de super-peers==
 
 ---
