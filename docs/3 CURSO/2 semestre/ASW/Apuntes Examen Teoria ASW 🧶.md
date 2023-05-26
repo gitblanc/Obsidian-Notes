@@ -543,4 +543,187 @@ Nota: El CCD es la suma de dependencias de todos los componentes (cada component
 - Se almacena la lista de mejores arquitectos de software
 - No es necesario utilizar identificadores únicos
 
+## Preguntas examen 2021/22
+250. CQRS separa el interfaz en 
+- peticiones y respuestas
+- ==comandos que realizan acciones y consultas que leen datos==
+- comandos que realizan acciones y consultas que escriben datos
+
+251. MTBF y MTTR 
+- ==Son tiempo medio entre fallos y tiempo medio de recuperación ==
+- Son dos técnicas utilizadas para identificar stakeholders 
+- Se utilizan para medir la complejidad ciclomática
+
+252. El conacimiento entre 2 elementos puede hacer que 
+- un cambio en uno obliga a crear el otro para que el sistema sea correcto 
+- ==un cambio en uno obliga a un cambio en otro para mantener sistema correcto ==
+- sea necesario crear ambos al mismo tiempo
+
+253. En Event-driven architecture 
+- Los consumidores de eventos esperan que los productores envíen eventos 
+- Los eventos son invocaciones síncronas 
+- ==Un evento es algo que ha sucedido==
+
+254. La arquitectura Kappa utiliza 
+- ==un log distribuido y replicado como almacenamiento de eventos ==
+- una capa batch para almacenar los logs distribuidos 
+- un log de eventos que pueden modificarse durante la ejecución
+
+255. En las compañías basadas en producto en dominios diferentes del software 
+- El software es lo más importante de la empresa 
+- La inversión suele ser realizada por business angels o capital riesgo 
+- ==Se produce un compromiso entre departamento IT interno o outsourcing==
+
+256. La Vista de bloques de construcción de Arc42 
+- Se basa en diagramas de despliegue de UML 
+- Contiene un único diagrama que combina cajas blancas y negras 
+- ==Puede contener varios diagramas de cajas blancas y cajas negras combinados==
+
+257. El modelo de capas de docker 
+- ==Permite definir imágenes a partir de otras imágenes ==
+- Permite que los contenedores estén aislados 
+- Permite crear un dockerd a partir de una imagen
+
+258. ¿Quién dijo que los pilares de una buena arquitectura eran Utilidad, durabilidad y elegancia? 
+- Martin Fowler en el s. XX 
+- ==Vitruvio en 15 al 30 a. de C. ==
+- Aristóteles en 300 a. de C.
+
+259. Una solución basada en "steady state" o estado estacionario es 
+- Crear una réplica del servidor 
+- Utilizar un monitor que limite las peticiones que ocupan mucho tiempo 
+- ==Limpiar recursos del sistema automáticamente==
+
+260. Las líneas de producto software requieren 
+- técnicas de análisis del comportamiento del código 
+- ==identificar soluciones genéricas a problemas comunes de varios productos ==
+- crear sistemas que evolucionan con el tiempo
+
+261. Se recomienda que los registros de decisiones arquitectónicas sean 
+- Revisados y actualizados continuamente 
+- Actualizados en cada etapa del desarrollo 
+- ==Inmutables==
+
+262. En las arquitecturas de microservicios, cuando hay varios nodos computacionales, la escalabilidad se obtiene 
+- replicando todos los microservicios en cada nodo 
+- ==replicando cada microservicio de forma independiente en diferentes nodos ==
+- utilizando la ley de Conway
+
+263. La Ley de Lehman de Crecimiento Continuo establece que 
+- El número de usuarios de un sistema software aumenta con el tiempo 
+- ==La funcionalidad de un sistema aumenta para satisfacer a los usuarios ==
+- El número de desarrolladores de un sistema software aumenta con el tiempo
+
+264. En REST, la operación PUT 
+- No es ni idempotente ni segura 
+- ==Es idempotente pero no segura ==
+- Es idempotente y segura
+
+265. Los mapas de Wardley representan 
+- en un eje la capacidad computacional y en otro la época 
+- ==en un eje el valor para el usuario y en otro la evolución ==
+- tipos de arquitecturas basadas en serverless
+
+266. La diferencia entre "npm install paquete" y "npm install -g paquete" 
+- El segundo instala dependencias en carpeta node_modules 
+- ==El primero instala dependencias en carpeta node_modules ==
+- El primero instala paquetes en node y el segundo en docker
+
+267. En los escenarios de calidad 
+- se identifican stakeholders 
+- se crean diagramas de cajas blancas/negras relacionando componentes con nodos computacionales 
+- ==se definen estímulos, respuestas y medidas esperadas de dichas respuestas==
+
+268. Según la ley de Conway, las organizaciones que diseñan sistemas... 
+- producen diseños que copian el resto de organizaciones 
+- ==producen diseños que son copias de las estructuras de estas organizaciones ==
+- producen diseños basados en 3 capas
+
+269. Una restricción en Domain Driven Design es 
+- ==Que los Objetos valor sean inmutables ==
+- Que los aspectos capturen crosscutting concerns 
+- Que el modelo de dominio sea independiente del sistema de persistencia
+
+## Preguntas examen 2018/19
+
+270. La arquitectura serverless 
+- Propone aplicaciones descentralizadas en las que no exista un servidor único 
+- Consiste en que los desarrolladores gestionan la escalabilidad de las aplicaciones 
+- ==Se conoce también como function-as-a-service==
+
+271. La especificación ISO25010: 
+- ...define una lista de restricciones que toda arquitectura del software debe satisfacer 
+- ==...define un modelo de calidad que incluye una lista de atributos de calidad ==
+- ...define la lista de requisitos funcionales del sistema
+
+272. Un escenario de calidad debe especificar: 
+- Las restricciones del software 
+- ==Una medida de la respuesta ==
+- El patrón arquitectónico que se va a utilizar
+
+273. La deuda técnica… 
+- …es una restricción impuesta por los stakeholders 
+- …consiste en utilizar arquitecturas de referencia 
+- ==…es el efecto de tomar una decisión de diseño equivocada==
+
+274. Un profiler 
+- Es un sistema de control de versiones con integración continua 
+- ==Es una herramienta que informa sobre el uso de recursos durante la ejecución de un software ==
+- Es una herramienta utilizada para BDD
+
+275. Utilizar canary releases consiste en: 
+- Desarrollar versiones de software en ramas que puedan ser borradas posteriormente 
+- ==Introducir nuevas versiones mostrando cambios lentamente a un subconjunto de los usuarios== 
+- Utilizar integración continua para producir versiones de forma continua con pruebas de aceptación
+
+276. La ley de Conway dice que… 
+- ..."es necesario definir módulos que sean liberales en lo que aceptan de otros y conservadores en lo que envían" 
+- ==..."las organizaciones que diseñan sistemas acaban produciendo sistemas que son copias de las estructuras de comunicación de dichas organizaciones" ==
+- ..."los subtipos deben seguir el contrato de los supertipos"
+
+277. ¿Cuál de los siguientes sistemas tiene un estilo arquitectónico peer-to-peer? 
+- Asciidoctor 
+- Mocha 
+- ==IPFS==
+
+278. Una ventaja del estilo arquitectónico Batch es: 
+- ==Acoplamiento débil entre componentes ==
+- Interactividad 
+- Concurrencia
+
+279. ¿Cuál de las siguientes frases es correcta?: 
+- ==Todos los atributos de calidad son buenos. ==
+- Los atributos de calidad tienen un valor booleano, o se cumplen o no. 
+- Los atributos de calidad son independientes entre sí.
+
+280. La ingeniería del caos…
+- …es un antipatrón de arquitectura del software que puede surgir al no utilizar control de versiones 
+- ==…propone inyectar fallos adrede en sistemas distribuidos para comprobar la resiliencia ==
+- …consiste en realizar pruebas de carga hasta que el sistema no tenga más capacidad
+
+281. Un WMS: 
+- Es un sistema de balanceo de carga en aplicaciones Web 
+- Es un sistema de gestión del conocimiento de una empresa 
+- ==Es un tipo de software que permite gestionar almacenes==
+
+282. Gherkin
+- ==Es un lenguaje utilizado para definir historias de usuario==
+- Es un sistema de integración continua 
+- Es una herramienta para realizar pruebas de navegación en aplicaciones Web
+
+283. En Arc42, una vista estática del sistema formada por una jerarquía de cajas blancas y negras es la… 
+- Vista en tiempo de ejecución ó runtime view 
+- ==Vista de bloques de construcción ó building block view ==
+- Vista de despliegue ó deployment view
+
+284. Un escenario de calidad… 
+- …es una restricción del sistema planteada por uno de los stakeholders 
+- …es también conocido como deuda técnica o technical debt 
+- ==…describe qué debería ocurrir cuando llega un estímulo==
+
+285. ATAM 
+- ==Es un método de evaluación de arquitecturas del software ==
+- Es un patrón arquitectónico 
+- Es una metodología de desarrollo de software ágil
+
 ---

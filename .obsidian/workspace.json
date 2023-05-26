@@ -4,17 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "48c108f679920e98",
+        "id": "77cba41be80018e6",
         "type": "tabs",
         "children": [
           {
-            "id": "a5760c7e5486bf3a",
+            "id": "840bafdb6bffed44",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "docs/3 CURSO/2 semestre/ASW/Apuntes Examen Teoria ASW 🧶.md",
-                "mode": "preview",
+                "mode": "source",
                 "source": false
               }
             }
@@ -112,27 +112,22 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "a5760c7e5486bf3a",
+  "active": "840bafdb6bffed44",
   "lastOpenFiles": [
+    "docs/3 CURSO/2 semestre/SDI/Examen Teoría Nodejs 🚁.md",
     "docs/3 CURSO/2 semestre/ASW/img/de140175-b50a-4cf9-9380-23e508bca089.webp",
+    "docs/3 CURSO/2 semestre/ASW/img/45b05519-05d5-411d-917f-703a551aa258.webp",
     "docs/3 CURSO/2 semestre/ASW/img/0de5b610-4eb4-4e5b-8528-fb104c20a5cf.webp",
     "docs/3 CURSO/2 semestre/ASW/img/06391517-648c-4323-8534-e896cc98d38a.webp",
-    "docs/3 CURSO/2 semestre/ASW/img/45b05519-05d5-411d-917f-703a551aa258.webp",
-    "docs/3 CURSO/2 semestre/ASW/Presentación 🚼.md",
     "docs/3 CURSO/2 semestre/ASW/Apuntes Examen Teoria ASW 🧶.md",
-    "docs/Cybersecurity/HackBySecurity/Creación de exploits 🍹.md",
     "docs/Cybersecurity/img/Pasted image 20230522202547.png",
     "docs/Cybersecurity/img/Pasted image 20230522201607.png",
     "docs/Cybersecurity/img/Pasted image 20230522201438.png",
     "docs/Cybersecurity/img/Pasted image 20230522201342.png",
     "docs/Cybersecurity/img/Pasted image 20230522201048.png",
     "docs/Cybersecurity/img/Pasted image 20230522201033.png",
-    "docs/Cybersecurity/img/Pasted image 20230522200924.png",
-    "docs/3 CURSO/2 semestre/SDI/Examen Teoría Nodejs 🚁.md",
+    "docs/Cybersecurity/HackBySecurity/Creación de exploits 🍹.md",
     "docs/Cybersecurity/HackBySecurity",
-    "docs/Cybersecurity/TryHackMe/Web Hacking 🎁/Authentication bypass 🔑.md",
-    "docs/3 CURSO/2 semestre/SDI/Laboratorios 🌠.md",
-    "docs/3 CURSO/2 semestre/SDI/Examen Teoría Spring 🩳.md",
     "docs/3 CURSO/2 semestre/DLP/Apuntes Examen Teoria DLP🐟.md",
     "docs/3 CURSO/2 semestre/DLP/Ejercicios Examen Teoria DLP🐲.md",
     "README.md",
@@ -142,6 +137,7 @@
     "docs/3 CURSO/2 semestre/SSI/SSI apuntes Examen 1 Teoría 🦥.md",
     "docs/3 CURSO/2 semestre/SSI/SSI apuntes Examen 2 Teoría 🥇.md",
     "docs/3 CURSO/2 semestre/ASW/ASW 🥋.md",
+    "docs/3 CURSO/2 semestre/ASW/Presentación 🚼.md",
     "docs/3 CURSO/2 semestre/ASW/Conf 1 ASW 🌊.md",
     "docs/3 CURSO/2 semestre/ASW/ASW Seminarios 💎.md",
     "docs/3 CURSO/2 semestre/ASW/Conf 2 ASW 🌿.md",
