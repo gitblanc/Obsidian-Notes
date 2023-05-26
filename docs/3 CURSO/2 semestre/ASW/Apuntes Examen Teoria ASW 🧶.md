@@ -303,5 +303,244 @@ Nota: El CCD es la suma de dependencias de todos los componentes (cada component
 - ==Distribución de microservicios en servidores y replicación bajo demanda==
 150. Una variante peer-to-peer es
 - ==El uso de super-peers==
+151. Cuando la computación se realiza "on premises"
+- ==Es necesario invertir en hardware, licencias, espacios...==
+152. En un diagrama de despliegue
+- ==Se asocian artefactos a cajas que representan nodos computacionales==
+153. Cuando la computación se realiza en la nube
+- ==Se facilita el acceso a hardware caro==
+154. La metáfora "pets vs cattle"
+- ==Identifica a los servidores tradicionales como mascotas==
+155. Edge computing
+- ==Pretende mejorar la latencia y el ancho de banda==
+156. Los multi-armed bandits
+- ==Ajustan dinámicamente el tráfico para ofrecer buenas alternativas==
+157. ¿Cuál de los siguientes sistemas puede utilizarse para realizar pruebas de carga?
+- ==Gatling==
+158. ¿Cuál de las siguientes frases es verdadera?
+- ==Docker se basa en el aislamiento de procesos a nivel de kernel==
+159. La arquitectura de alto nivel de docker 
+- ==Se basa en cliente-servidor==
+160. Una imagen docker es
+- ==Una plantilla de sólo lectura con instrucciones para crear 1 contenedor==
+161. El modelo de capas de docker
+- ==Permite crear imágenes a partir de otras imágenes==
+162. El concepto de infraestructura inmutable permite
+- ==Describir los estados deseados de una infraestructura en imágenes==
+163. Una ventaja de utilizar contenedores es
+- ==Rendimiento==
+164. ¿Cuál de las siguientes frases es verdadera?
+- ==Kubernetes puede utilizarse para la orquestación de contenedores==
+165. El concepto de "deployment pipeline" promueve
+- ==la automatización de las tareas de construcción, despliegue, pruebas, etc==
+166. El lema del "continuous deployment" es
+- ==Si duele, hazlo más frecuentemente==
+167. El patrón timeout añade un limitador temporal a
+- ==las peticiones para detenerlas y, a veces, reintentarlas==
+168. En el patrón circuit breaker, cuando se producen...
+- ==demasiados errores se deja de atender peticiones x tiempo==
+169. Con el patrón bulkhead se pretende
+- ==seguir el funcionamiento aunque una parte falle==
+170. Una solución basada en "steady state" o estado estacionario es
+- ==Limpiar los recursos del sistema automáticamente==
+171. El patrón "Fail fast" promueve chequear
+- ==que recursos necesarios estén disponibles para no realizar trabajo inútil==
+172. Alguna de las condiciones para que se pueda aplicar el patrón "Let it crash" es
+- ==Que los componentes puedan sustituirse rápidamente por otros==
+173. El patrón Handshaking
+- ==Permite realizar un control cooperativo de las demandas computacionales==
+174. ¿Cuál de las siguientes NO es una estrategia para backpressure?
+- ==Balanceo de carga==
+175. En el patrón Governor se puede
+- ==ralentizar la velocidad de acciones automatizadas para permitir acción humana==
+176. Las propuestas de Ingeniería del caos
+- ==introducen fallos en un sistema a propósito para probar resiliencia==
+177. Un "canary release" consiste en
+- ==introducir nuevas releases progresivamente a subconjuntos de usuarios==
+178. El uso de "Feature toggles" permite
+- ==modificar comportamiento del sistema sin cambiar código==
+179. ¿Cuál de las siguientes es una expectativa sobre un arquitecto de software?
+- ==Comprender y navegar la política empresarial==
+180. ¿Cuál de los siguientes NO forma parte del rol del arquitecto de software?
+- ==Definir la estrategia empresarial y de negocio==
+181. En las compañías basadas en producto en dominios diferentes del software
+- ==Se produce un compromiso entre departamento IT interno o outsourcing==
+182. Un arquitecto empresarial
+- ==da soporte a la estrategia de negocio y soluciones TI==
+183. El marco Zachman
+- ==Es una técnica de arquitectura empresarial basada en un modelo==
+184. TOGAF
+- ==Es un marco y metodología de arquitecturas empresariales==
+185. La parte superior de la curva en las representaciones de Gartner
+- ==Es el pico de expectativas sobredimensionadas==
+186. Una posible ventaja de adoptar ERP para una empresa
+- ==Calidad y eficiencia utilizando mejores prácticas==
+187. ABAP
+- ==Es un lenguaje de dominio específico utilizado en SAP==
+188. El software que gestiona los calls centers se enmarca en la categoría
+- ==CRM==
+189. ¿Qué tipo de software puede utilizarse para control de inventario?
+- ==SCM==
+190. ¿Qué tipo de software puede utilizarse para la gestión automatizada de almacenes?
+- ==WMS==
+191. Los gestores documentales se enmarcan en
+- ==ECM==
+192. BPM
+- ==Se utiliza para gestionar el ciclo de vida de procesos de negocio==
+193. OLAP
+- ==Son herramientas de inteligencia de negocios con análisis multidimensional==
+194. BPMN
+- ==Es una notación visual para la definición de procesos de negocio==
+195. PLM 
+- ==Engloba herramientas que gestionan el ciclo de vida de productos==
+196. EAI
+- ==Engloba herramientas de integración de software empresarial==
+197. Las líneas de producto software requieren
+- ==Identificar soluciones genéricas a problemas comunes de varios productos==
+198. ¿Cuál de las siguientes afirmaciones es correcta?
+- ==Un SLO es un objeto para un SLI==
+199. La ley de cambio continuo de Lehman dice que
+- ==Un sistema debe adaptarse continuamente o cada vez es menos satisfactorio==
+200. Refactorizar consiste en
+- ==Modificar la estructura de software preservando su comportamiento externo==
+201. Un proyecto "legacy"
+- ==Suele ser software valioso que se tiene miedo a cambiar==
+202. Un "hotspot" en el análisis de comportamiento de software es+
+- ==Un componente complejo que cambia frecuentemente==
+203. Las funciones de encaje
+- ==Se utilizan en las arquitecturas evolutivas para analizar la evolución==
+204. ¿En qué año se acuñó el término hipertexto?
+- ==1965==
+205. ¿En qué año se inventó la web?
+- ==1989==
+206. ¿En qué año nace el World Wide Web Consortium?
+- ==1994==
+207. ¿En qué año nace Javascript?
+- ==1995==
+208. ¿En qué año nace Amazon?
+- ==1995==
+209. ¿Cuáles son los 3 pilares de la web?
+- ==Protocolo HTTP, URIs y lenguajes de representación==
+210. ¿Cómo se denomina el tipo asociado a los recursos en la Web?
+- ==MIME==
+211. curl es una herramienta que permite
+- ==navegar por la web sin navegador==
+212. ¿Qué es el árbol DOM?
+- ==Una representación en memoria del contenido de una página web==
+213. HTML nació como un vocabulario de...
+- ==SGML==
+214. ¿Cuál es la etiqueta que permite en HTML indicar un elemento de cabecera de primer nivel?
+- ==h1==
+215. Las declaraciones CSS están formadas por...
+- ==selector de elementos y lista de propiedades y valores==
+216. ¿En cuál de los siguientes lenguajes podemos definir nuestro propio vocabulario de etiquetas?
+- ==XML==
+217. Los documentos XML pueden ser validados mediante
+- ==DTDs o XML Schema==
+218. ¿Cuál de los siguientes es un vocabulario XML?
+- ==SVG==
+219. Un archivo JSON
+- ==Representa un objeto Javascript==
+220. Javascript
+- ==Se usa para computación en el cliente y servidor==
+221. express
+- ==Es un framework javascript sobre nodejs==
+222. En el fichero package.json
+- ==Se declaran dependencias que srán resueltas al ejecutar npm install==
+223. Para la computación en el servidor
+- ==Hay mucha libertasd para elegir lenguajes y frameworks==
+224. NodeJs
+- ==Es un entorno de ejecución de Javascript en servidor==
+225. npm 
+- ==Es un gestor de paquetes para NodeJs==
+226. REST
+- ==Es un estilo de arquitectura basado en el uso de recursos==
+227. La operación DELETE
+- ==Es idempotente pero no segura==
+228. Una buena práctica al hacer code-review es...
+- ==Centrarse en el código==
+229. ¿Cuál de los siguientes aspectos puede considerarse deuda técnica?
+- ==Errores detectados que cuya solución se pospone==
+230. La U de propuesta CUPID consiste en
+- ==proponer seguir filosofía UNIX==
+231. ¿Qué dos modelos existen de infraestructura como código?
+- ==Imperativos o declarativos==
+232. ¿Cuál de las siguientes herramientas se utiliza para análisis de comportamiento de código?
+- ==CodeScene==
+233. La ley de Lehman de Crecimiento continuo establece que
+- ==La funcionalidad de un sistema aumenta para satisfacer a los usuarios==
+234. Los micro-frontends son aplicaciones...
+- ==de front-end entregadas independientemente y se componen para generar otra==
+235. ¿Cuál de los siguientes puede ser un problema de los sistemas serverless?
+- ==Cold-start==
+236. ¿Cuál de las siguientes es una de las 4 métricas claves?
+- ==Tiempo medio de recuperación==
+237. En la propuesta reciente de Web3
+- ==se sustituye el backend por persistencia basada en blockchain==
+238. Los mapas Wardley representan
+- ==en un eje el valor para el usuario y en otro la evolución==
+239. ¿Cuál de los siguientes es un patrón de Microservicios?
+- ==El patrón "Estrangulador"==
+
+## Preguntas de seminarios
+240. ¿Cuál de los siguientes puede formar parte de la deuda técnica?
+- ==Todo el código, incluido el código de pruebas==
+- Sólo el código que forma parte del ejecutable
+- Sólo el código que aparece en la cobertura de código
+- Sólo el código de las dependencias
+
+241. ¿Qué lenguaje usa internamente la librería libCurl?
+- ==PHP==
+- C
+- Java
+- Rust
+
+242. ¿Cuál de las siguientes sirve para mejorar la productividad de los desarrolladores?
+- ==DX==
+- UX
+- XML
+- RDF
+
+243. Según John Ousterhout, una buena descomposición modular utiliza módulos...
+- ==profundos, con poca interfaz y mucha funcionalidad==
+- anchos, con poca interfaz y mucha funcionalidad
+- redondos, con muchas dependencias cíclicas
+- concretos y estables
+
+244. ¿Cuál de las siguientes es una falacia de la computación distribuida?
+- ==La latencia es cero==
+- La latencia aumenta con el tiempo
+- La latencia disminuye con el tiempo
+- La latencia es negativa
+
+245. Un ejemplo de antipatrón DevOps es:
+- ==Fatiga por alerta==
+- Cultura por consenso
+- Caja de herramientas completa
+- Cortocircuito
+
+246. Disponer de una capacidad para cometer errores cumpliendo con los SLOs se conoce como
+- ==Presupuesto de error (Error budget)==
+- SLA
+- SLI
+- Error de latencia
+
+247. Un ejemplo de sistema que cumple con la arquitectura inmutable sería
+- ==Blockchain==
+- Bases de datos relacionales
+- Linux
+- Windows
+
+248. El software con el que se implementó eBay
+- ==Se re-escribió varias veces en varios lenguajes==
+- Se diseñó usando arquitectura de microservicios
+- Es un ejemplo de arquitectura basada en 3 capas
+- Está implementado en PHP
+
+249. En el proyecto Software Heritage Archive
+- ==Se utiliza un identificador único intrínseco para cada objeto==
+- Se utiliza un registro de identificadores extrínsecos
+- Se almacena la lista de mejores arquitectos de software
+- No es necesario utilizar identificadores únicos
 
 ---
