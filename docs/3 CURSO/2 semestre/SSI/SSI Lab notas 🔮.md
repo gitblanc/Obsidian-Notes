@@ -378,7 +378,295 @@ oscap xccdf eval --datastream-id scap_org.open-scap_datastream_from_xccdf_ssg-ub
 		- Agregar eth0 con `sudo firewall-cmd --zone=public --change-interface=eth0`
 		- Agregar eth1 con `sudo firewall-cmd --zone=work --change-interface=eth1`
 		- Asegúrate de que la zona work tenga habilitado el servicio **ssh**
-- Para bloquear ips individuales o redes completas para que no puedan acceder aa tu máquina:
-	- FALTA
+
+# Lab8-9 ⚱️
+## Nivel 1
+## Simple puesta en marcha
+- Escaneos más típicos de Nmap:
+	- **Escaneo de múltiples objetivos**: `nmap <obj1> <obj2> ... <objn>` `nmap 192.168.2.1 192.168.2.100 scanme.nmap.org`
+	- **Escaneado de un rango de IPs**: `nmap 192.168.2.1-100`
+	- **Escaneado de una red completa**: `nmap 192.168.0.0/24`
+	- **Escaneado de una red completa excluyendo ciertos hosts:** `nmap 192.168.0.0/24 --exclude 192.168.2.10`
+	- **Identificar el sistema operativo de las máquinas activas**: `nmap -O 192.168.0.0/24`
+	- **Escanear sólo un rango de puertos**: `nmap -p 22-80 192.168.0.0/24`
+
+-  Para realizar un escaneo básico de la red y ver todas las máquinas vivas del laboratorio: `nmap 192.168.8.13-74`
+- Para realizar un análisis rápido de los servicios en ejecución de una máquina viva: `nmap --top-ports 20 --open <ip_addr>`
+	- En lugar de dar una sóla ip puedes dar una lista de IPs en un archivo con la opción `-iL`
+- Para detectar el sistema operativo rápidamente usar la opción: `-A`
+- Para variar la velocidad del escaneo usar: `T0, T1, T2, T3, T4, T5`
+- Para detectar las versiones estándar de servicios/daemons usar: `-sV`
+- Para realizar una exploración lenta y detallada usar:
+	- `-sS`: análisis TCP SYN, más capaz de evadir *firewalls*
+	- `-A`: detecta versiones de servicios y sistemas operativos, realiza un `traceroute` y ejecuta algunos scripts de análisis 
+	- `-sV`: investiga puertos para determinar qué servicio y versión se están ejecutando
+	- `-O`: activa la detección de la versión y tipo del sistema operativo
+	- `-p -`: escanea un rango de puertos (`-` significa todos los puertos)
+	- Ejemplo: `sudo nmap -sS -A -sV -O –p – <IP objetivo>`
+
+## Tratar con puertos
+
+- **Nmap** escanea por defecto hasta 1000 de los puertois estadísticamente más usados en todo el mundo en orden aleatorio, lo que equivale a hacer un `-top-ports 1000`
+- Ejemplos:
+	- `nmap –p 80,443 scanme.nmap.org`: solo escanea x puertos (80 y 443)
+	- `nmap –p 100-2000 scanme.nmap.org`: escaneo de puertos aleatorio del 100 al 2000
+	- `nmap –p -2000 scanme.nmap.org`: escaneo de puertos aleatorios pero del 1 al 2000
+	- `nmap –p 100- scanme.nmap.org`: escaneo de puertos aleatorio pero del 100 al 65536 (nada recomendable)
+	- Se pueden usar protocolos concretos asociados a cualquier número de puerto usando letras (`T` TCP, `U` UDP, `S` SCTP, `P` IP). Ej: `nmap -p U:53,11,13,T:22-25,80,443,8080 scanme.nmap.org`
+	- También hay dos modificadores adicionales
+		- `-F` (escaneo rápido): en lugar de 1000, escanea los 100 puertos más utilizados aleatoriamente
+		- `-r`: en lugar de usar un orden aleatorio, usa uno secuencial ascendente
+
+- Estado de los puertos:
+	- **Open**: hay un servicio esperando una conexión en este puerto
+	- **Closed**: ningún servicio parece estar esperando conexiones en ese puerto
+	- **Filtered**: los paquetes Nmap no se reciben en ese puerto, por lo que su estado es desconocido
+	- **Unfiltered**: los paquetes Nmap se reciben en ese puerto, pero alguna razón impide que Nmap sepa en qué estado está el puerto
+	- **Open/Filtered**: Nmap no puede decidir en cuál de los dos estados está el puerto
+	- **Closed/Filtered**: Nmap no puede decidir en cuál de los dos estados está el puerto
+
+## Usar el motor de scripting de "usar y tirar" (escaneo con scripts por defecto)
+
+- Útil si no deseas conocer detalles de dichos scripts
+
+- Usar la opción `-sC`: `nmap -sV -sC 192.168.8.8`
+
+## Nivel 2
+## Protocolo TCP
+
+- Las conexiones TCP se componen de 3 etapas:
+	- Establecimiento de la conexión (3-way handshake)
+	- Transferencia de datos
+	- Fin de la conexión
+
+### Establecimiento de la conexión
+Aunque es posible que un par de entidades finales comiencen una conexión entre ellas simultáneamente,  normalmente una de ellas abre un socket en un determinado puerto TCP y se queda a la escucha de nuevas  conexiones. Es común referirse a esto como apertura pasiva, y determina el lado servidor de una conexión. 
+- El lado cliente de una conexión realiza una apertura activa de un puerto enviando un paquete **SYN** inicial al  servidor como parte de la negociación en tres pasos. En el lado del servidor (este receptor también puede ser una PC o alguna estación terminal) se comprueba si el puerto está abierto, es decir, si existe algún proceso escuchando en ese puerto, pues se debe verificar que el dispositivo de destino tenga este servicio activo y esté aceptando peticiones en el número de puerto que el cliente intenta usar para la sesión. En caso de no estarlo, se envía al cliente un paquete de respuesta con el bit RST activado, lo que significa el rechazo del intento de conexión. 
+- En caso de que sí se encuentre abierto el puerto, el lado servidor respondería a la petición **SYN** válida con un paquete **SYN/ACK**.  
+- Finalmente, el cliente debería responderle al servidor con un **ACK**, completando así la negociación en tres pasos (SYN, SYN/ACK y ACK) y la fase de establecimiento de conexión. Es interesante notar que existe un  número de secuencia generado por cada lado, ayudando de este modo a que no se puedan establecer conexiones falseadas (**spoofing**)."
+![[Pasted image 20230530150222.png]]
+
+### Estructura de un paquete TCP
+Esta es la estructura de un paquete TCP. Aparte de los datos, otros campos importantes a recordar son los **puertos de origen y destino** (que indican qué puertos son el origen y el destino de la transmisión de datos), los seis flags (URG, ACK...) que se utilizan en algunos tipos de análisis, y el **tamaño de ventana**, que también se utiliza en otro tipo de análisis.
+![[Pasted image 20230530150346.png]]
+
+## Tipos de descubrimiento de hosts avanzados de Nmap
+- **Cheatsheet Nmap**:
+![[Pasted image 20230530150451.png]]
+
+- **El motor de scripting (`--script=<nombre de script y parámetros>`)**: hay una categoría de scripts (**broadcast**) dedicada a descubrir diferentes tipos de servicios en una red (se puede ver en la cheatsheet). Más info en: https://nmap.org/nsedoc/categories/broadcast.html
+- Técnicas avanzadas de **detección**: se describen a continuación y expanden la cheatsheet anterior. Estas técnicas funcionan para los protocolos TCP e IP (y relacionados):
+	- **`-PS` (TCP SYN):** Útil cuando los firewalls bloquean las solicitudes ICMP. Acepta lista de puertos. Es una secuencia de inicio de conexión TCP para determinar si un host está activo
+	- **`-PA` (TCP SYN/ACK):** útil cuando los firewalls bloquean las solicitudes ICMP. Acepta lista de puertos. Emula la respuesta ACK de una (falsa) conexión TCP. La respuesta a esto determinará si el destino existe
+	- **`-PY` (Descubrimiento UDP):** Acepta lista de puertos. Envía un ping UDP al destino para ver si hay alguna respuesta
+	- **`-Pn` (Don't ping):** útil si sabemos que hay cortafuegos bloqueando pings o pensamos que los objetivos están vivos. Omite la detección de hosts pero analiza sus puertos
+	- **`PE` (ICMP echo):** generalmente se filtra, por lo que sólo funciona en algunas LAN. Usa los servicios de eco del protocolo ICMP para provocar una respuesta
+	- **`-PP` (ICMP timestamp Ping):** puede evadir los cortafuegos si sólo filtran los paquetes ICMP Echo. Usa los servicios del protocolo ICMP para provocar una respuesta
+	- **`-PO[lista de protocolos]` (IP Protocol Ping):** si no se especifica ninguno, se usa ICMP, IGMP e IP-in-IP. Puede evadir cortafuegos. Envía paquetes en un protocolo IP
+	- **`-PM` (PM Address Mask Ping):** puede evadir los cortafuegos si sólo filtran los paquetes ICMP Echo. Usa los servicios del ICMP para provocar una respuesta
+	- **`-sL` (Lista):** puede resolver el DNS de las direcciones IP que se le pasan. Simplemente enumera los objetivos a escanear
+	- **`-PR` (Descubrimiento ARP Ping):** muy rápido, pero sólo funciona en redes LAN (las únicas que usan ARP). Usan el protocolo ARP para detectar objetivos
+	- **`-sn` (Descubrimiento ping):** forma típica de detectar rápidamente hosts vivos. No escanea ningún puerto, sólo determina si está vivo
+	- **`--traceroute` (Descubrimiento Traceroute):** si la ruta es correcta, el host existe. Obtiene una ruta al host
+	- **`--system-dns` (Usar el DNS del sistema operativo):** hace la resolución de nombres DNS del objetivo mediante el DNS por defecto configurado en el sistema
+	- **`-R` (Resolución obligatoria de DNS):** el valor predeterminado es hacer algunas resoluciones DNS. Siempre devuelve el nombre (`predeterminado` a veces)
+	- **`-n` (Sin resolución DNS):** puede acelerar los análisis si los nombres DNS no son importantes. Nunca realiza la resolución DNS
+	- **`--dns-servers <serv1[,serv2], ...>` (Especificar servidores personalizados):** realiza la resolución de nombres DNS de destino mediante el servidor DNS que se especifique
+	- **`-PU` (Descubrimiento SCTP):** acepta listas de puertos. Usa el protocolo SCTP para tratar de provocar respuestas en los objetivos y ver si existen
+
+## Tipos de escaneo Nmap y evasión básica de firewalls
+
+- Útil si queremos descubrir hosts protegidos por un firewall, tratando de saltarse la protección del mismo
+- Cheatsheet:
+![[Pasted image 20230530154833.png]]
+
+Este cheatsheet nos muestra nos muestra dos formas de escaneo avanzadas:
+- El motor de script de Nmap, pero con otras categorías:
+	- **discovery**: https://nmap.org/nsedoc/categories/discovery.html
+	- **external**: https://nmap.org/nsedoc/categories/external.html
+	- **version**: https://nmap.org/nsedoc/categories/version.html
+- Técnicas avanzadas de análisis de puertos: trata de usar las técnicas más sigilosas para evitar ser bloqueado (no usar la opción `-O`)
+
+- La siguientes técnicas son una extensión de las técnicas de escaneo del cheatsheet anterior:
+	- **`-sA` (ACK scan)**: no determina si un puerto está abierto o cerrado. Sirve para saber si hay un firewall activo en el destino. Cualquier puerto independientemente de su estado responderá con un paquete RST. Si hay cortafuegos no habrá respuesta
+	- **`-sl` (Idle scan)**: muy avanzado y sigiloso
+	- **`-sO` (IP protocol scan)**: muy lento, identifica protocolos compatibles. Si responden con *unreachable* es que está cerrado el puerto
+	- **`-sT` (TCP Connect)**: lento, ALTAMENTE DETECTABLE. Responde con puerto abierto o cerrado
+	- **`-sS` (TCP SYN)**: la más popular. Rápido, BASTANTE SIGILOSO y no sobrecarga al objetivo. El equipo envía SYN y el remoto responde con puerto abierto o puerto cerrado
+	- **`-sU` (UDP Scan)**: muy lento. Envía paquetes UDP a cada uno de los puertos destino. Que no haya respuesta no significa que el puerto esté cerrado
+	- **`-sW` (Window scan)**: método POCO FIABLE. Usa el campo "Tamaño de ventana" del paquete TCP para determinar el tipo de sistema operativo
+	- **`-sZ` (COOKIE-ECHO Scan)**: no se puede distinguir realmente entre puertos abiertos y puertos filtrados. Para entornos SCTP
+	- **`-sY` (SCTP INIT Scan)**: rápido y SIGILOSO para el protocolo SCTP
+	- **`--scanflags<flags>` (Custom TCP Scan Flags)**: posibles nombres de bits: URG, ACK, PSH, RST, SYN y FIN (`--scanflags URGACKPSHRSTSYNFIN` activa todos)
+	- **`-sM` (Maimon Scan)**: alternativa al escaneo XMAS
+	- **`-sF` (TCP FIN)**: se habilita el flag FIN del paquete TCP
+	- **`-sN` (TCP Null)**: no se habilita ningún paquete del TCP
+	- **`-sX` (TCP XMAS)**: Se habilitan los flag FIN, PSH y URG del paquete TCP
+	- **`-b usuario:password@<Servidor_FTP>:21 <destino>` (Escaneo FTP bounce)**: se conecta al servidor FTP y envía archivos al destino
+	- `-sR` (Exploración RPC): sólo si esperamos encontrar llamadas RPC en el sistema de destino
+	- `-A` (Escaneo agresivo): lo más probable es que se filtre. EVITARLO
+	- `-sC` (Análisis de script predeterminado): equivalente a `--script-default`. Arranca los scripts adecuados para cada puerto pertenecientes a la categoría NSE default
+	- `-O` (Análisis de detección del SO): lo más probable es que se filtre. EVITARLO
+	- `-sV` (Análisis de versiones): sondea puertos para determinar información.
+![[Pasted image 20230530160934.png]]
+
+## Ejemplos más avanzados de Nmap
+
+- Para controlar los tiempos y su timing
+
+- Ejemplos:
+	- **Escaneo TCP SYN y UDP (requiere privilegios de root):** `nmap -sS -sU -Pn 192.168.13.37`
+	- **Escaneo TCP SYN y UDP para todos los puertos reservados (requiere privilegios de root)**: `nmap -sS -sU -PN -p 1-1024 192.168.13.37`
+	- **TCP Connect Scan**: `nmap -sT 192.168.13.37` DESACONSEJADO
+	- **Análisis rápido:** `nmap -T4 -F 192.168.13.37` (-F escanea solo 100 puertos y rápido)
+	- **Verbose:** `nmap -T4 -A -v 192.168.13.37`
+
+![[Pasted image 20230530161707.png]]
+
+## Detección de tipo de sistema operativo sin "ruido"
+
+- Averiguar el SO de un objetivo sin ser detectado
+
+- Para evitar ser detectados, hay que jugar con el TTL (tiempo de vida) de los paquetes que enviamos al sistema mediante `ping` de la forma: `ping -c 1 <IP o nombre del destino>`. Recibiremos una respuesta que indica un valor **ttl** y lo comprobamos en la siguiente tabla:
+![[Pasted image 20230530162300.png]]
+
+## Formatos de salida de Nmap
+
+Hay 3 formatos:
+- **Formato Nmap (`-oN <fichero>`):** estructura tradicional
+- **Formato "Grepeable"(`-oG <fichero>`):** transforma la salida para usarla con `grep`
+- **Formato XML (`-oX <fichero>`)**: formato en XML para ser importada en Metasploit.
+
+## Nivel 3
+## Nmap Scripting Engine (NSE)
+
+- Tiene más de 600 scripts diferentes. Documentación en: https://nmap.org/nsedoc/
+- Los scripts se instalan en `/usr/share/nmap/scripts` y los que hay disponibles en un momento se pueden enumerar mediante `locate *.nse*` -> `sudo apt install locate`
+- Para fines de enumeración se recomiendan las siguientes categorías:
+	- **discovery**: intentan descubrir de forma activa sobre la red consultando registros públicos, dispositivos que soportan el protocolo SNMP, servicios de directorio y similares. Ejemplos: `html-title`, `smb-enum-shares` (recursos compartidos con samba) y `snmp-sysdescr` (extrae detalles de sistemas remotos a través del protocolo SNMP)
+	- **external**: pueden enviar datos a bases de datos de terceros u otros recursos de red. Ejemplo: `whois-ip`, que hace una conexión a los servidores WHOIS para saber más de la dirección del objetivo
+	- **version**: son una extensión de la característica de detección de versiones de productos. Se ejecutan automáticamente sólo si se solicitó la detección de versiones (`-sV`). Ejemplos: `skypev2-version`, `pptp-version` e `iax2-version`
+
+- Si no queremos examinar el contenido de cada categoría, podemos localizar scripts con el comando `locate` seguido de un `grep` para el servicio que deseamos buscar. Por ejemplo: 
+	- `locate *.nse | grep smb`. Nota: si no funciona hacer `sudo updatedb`
+	- `ls | grep smb` (en la carpeta contenedora de los scripts)
+![[Pasted image 20230530164556.png]]
+
+- No obstante, cada script tiene su propio conjunto de argumentos , por lo que hay que mirar su documentación.
+
+## Técnicas de recopilación de información
+
+### Métodos de autenticación SSH
+- El script `ssh-auth-methods` localiza los métodos de autenticación aceptados por un servicio SSH de un objetivo. Uso recomendado: `sudo nmap -p22 --script ssh-auth-methods <IP-objetivo>`
+![[Pasted image 20230530165622.png]]
+
+### Fuerza bruta a servidores DNS
+- El script `dns-brute.nse` encontrará registros DNS `A` válidos probando una lista de subdominios comunes y buscando los que se resuelven correctamente. Encuentra subdominios asociados con un dominio principal de una organización, que pueden revelar nuevos objetivos sobre los que realizar evaluaciones de seguridad. Ejemplo: `nmap -p 80 --script dns-brute.nse <IP_OBJETIVO>`
+![[Pasted image 20230530170308.png]]
+
+### Buscar hosts en una IP
+- Encontrar hosts virtuales en la misma dirección IP (varios sitios web alojados en el mismo servidor). Esto se puede hacer mediante los scripts de `hostmap-*`. Ejemplo: `nmap -p 80 --script hostmap-bfk.nse <IP_OBJETIVO>`
+![[Pasted image 20230530170753.png]]
+
+### Geolocalización con traceroute
+- El script `traceroute-geolocation.nse` realiza un `traceroute` a la IP de destino y proporciona datos de geolocalización de cada salto de esa ruta. Esto hace que se puedan correlacionar los nombres DNS inversos de los enrutadores en dicha ruta con ubicaciones físicas. Ejemplo: `sudo nmap --traceroute --script traceroute-geolocation.nse -p 80 <IP_objetivo>`
+![[Pasted image 20230530171104.png]]
+
+### Geolocalización con bases de datos/servicios externos
+- Hay una serie de scripts que ayudan a geolocalizar una IP mediante bases de datos o servicios externos. Ejmplo: `ip-geolocation-geoplugin` https://nmap.org/nsedoc/scripts/ip-geolocation-geoplugin.html ---- http://www.geoplugin.com
+![[Pasted image 20230530172048.png]]
+
+## Recopilación de información HTTP
+### Métodos HTTP
+- Descubre qué métodos HTTP admite un servidor enviando la petición `OPTIONS`. Enumera métodos HTTP potencialmente peligrosos https://nmap.org/nsedoc/scripts/http-methods.html. Ej: `sudo nmap -p80 --script http-methods <IP objetivo>`
+
+### Captura del *banner* HTTP
+- Una de las formas típicas de determinar los tipos de servicios y sus versiones es preguntarles directamente qué son. Esto lo hacen leyendo la información del servicio que proporcionan cuando se conecta con ellos, lo que se conoce como "*banner grabbing*" Ejemplo: `nmap --script banner <IP_OBJETIVO>`
+![[Pasted image 20230530173155.png]]
+
+### Rutas comunes HTTP
+- El script `http-enum.nse`  encuentra rutas válidas en un servidor web por fuerza bruta para descubrir aplicaciones web que estén en uso. Ejemplos: `nmap --script http-enum <URL o IP objetivo>`, `nmap --script http-enum --script-args http-enum.basepath'pub/' <URL de destino o IP>`
+
+### Títulos de servicios HTTP
+- Este script agrega los títulos de las páginas web a los resultados de un análisis de Nmap para que se pueda tener un mejor contexto de un host que ejecuta servicios HTTP. Esto permite identificar fácilmente el propósito principal del servidor web y si ese servidor es un destino de ataque potencial. Ejemplo: `nmap --script http-title -sV -p 80 <red objetivo>
+
+### Exploración de registros WHOIS
+- Estos registros pueden tener información interesante, como el nombre real del propietario de un dominio, datos de contacto... aunque con frecuencia estos datos pertenecen a una empresa de hosting. Más información: https://nmap.org/nsedoc/scripts/whois-ip.html. Sintaxis: `nmap --script whois-ip <URL o IP de destino>`  
+- Este script utiliza los datos de la IANA para encontrar una base de datos WHOIS y localizar la información que queremos. También podemos especificar el orden de servicios WHOIS que queremos utilizar: `nmap --script whois-ip –script-args whois.whodb-arin+ripe+afrinic <target IP>`. Podemos obtener más información en: https://nmap.org/nsedoc/scripts/whois-ip.html
+![[Pasted image 20230530174538.png]]
+
+## Malware y vulnerabilidades
+### Malware
+- Otra utilidad del NSE es saber si un host ha sido identificado como fuente de malware o distribuidor de phishing. Esto es gracias a la API de Safe Browsing de Google ya que el script `http-google malware` pide a ese servicio este tipo de información. Tenemos que crearnos una API key en http://code.google.com/apis/safebrowsing/key_signup.html. Una vez registrados: `nmap -p80 --script http-google-malware --script-args http-google-malware.api-<API key> <IP o dirección del objetivo>`
+- Browsing de Google y VirusTotal también: `nmap -sV --script http-malware-host <URL o IP del objetivo>`
+![[Pasted image 20230530175233.png]]
+
+### Detección CVE  mediante Nmap. Scripts de terceros
+- El script `--script vuln` ejecuta una prueba de vulnerabilidades completa contra nuestro objetivo. Ejemplo: `nmap -Pn --script vuln <URL o OP_OBJETIVO>`. Es algo lento y es mejor volcar su salida a un fichero
+- Hay un script de terceros que mejora la salida (`nmap-vulners`).
+- Para utilizar cualquier script de terceros sigue este procedimiento:
+	- Descargar la carpeta o el archivo .nse del script en la carpeta de scripts NSE  (`/usr/share/nmap/scripts`). En nuestro caso concreto sería hacer `git clone https://github.com/vulnersCom/nmap-vulners.git` una vez estemos en dicha carpeta.  
+	- Actualizar la base de datos de scripts nmap con `nmap --script-updatedb`
+- Ejecuta el script con: `sudo nmap -sV --script=nmap-vulners/ <ip>`
+![[Pasted image 20230530180707.png]]
+
+## Nmap y Metasploit Framework (MSF)
+- Integrar los resultados de un escaneo Nmap con Metasploit
+
+- Es posible cargar cualquier escaneo de nmap en msf siempre que lo hayamos guardado en **xml**.
+
+- Instala metasploit: `curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall && chmod 755 msfinstall && ./msfinstall`
+
+- Ejecuta metasploit con estos pasos:
+	- Inicia la base de datos de MSF: `service postgresql start`
+	- Inicia MSF: `msfdb init`
+	- Arranca la consola de MSF: `msfconsole -q`
+
+- Ahora puedes usar los siguientes comandos:
+	- **db_import**: importar una salida de nmap en xml
+	- **db_nmap:** esel propio nmap
+	- **hosts**: máquinas identificadas 
+	- **hosts -c address,purpose**: hosts mostrados en una columna de datos
+	- **hosts -u**: mostrará sólo los hosts vivos
+	- **services**: mostrará todos los servicios escaneados
+	- **services -p 80**: sólo para los puertos indicados
+	- **services -p tcp:** sólo para los protocolos indicados
+
+
+## Escaneando en busca de archivos concretos
+
+- Descargar el archivo phpinfo.php del rango IP 156.35.90.0 - 156.35.99.255:
+```bash
+#!/bin/bash
+for ip_address in 156.35.9{0..9}.{0..255}; do
+	wget -t 1 -T 5 http://${ip_address}/phpinfo.php;
+done&
+```
+- Para descargar el fichero robots.txt de las direcciones 156.35.94.1 a 156.35.94.10 usaremos este script:
+```bash
+#!/bin/bash
+for ip_address in 156.35.94.{1..10}; do
+	wget -t 1 -T 5 http://${ip_address}/phpinfo.php;
+done&
+```
+- Hay que darle permisos de ejecución y ya.
+
+## Endpoints de servicios enarchivos JavaScript
+- Para localizar servicios a los que se referencia desde el código JavaScript de una página web
+
+- Los endpoints de servicios en archivos JavaScript son sitios típicos en los que la seguridad se relaja. Podemos utilizar el **tool photon** para extraer información de endpoints y mucho más que se guardará de un modo organizado:
+	- URLs tanto dentro y fuera del ámbito así como direcciones URL con parámetros
+	- Archivos JavaScript y endpoints presentes en ellos
+	- Cadenas basadas en un patrón Ne personalizado
+	- Datos de OSINT
+	- Ficheros extraídos
+
+- Para usar **photon** descargar en: https://github.com/s0md3v/Photon
+	- Descargar dos librerías: `pip3 install tld requests`
+
+
+## Github
+- Para localizar secretos en repositorios públicos de Github
+![[Pasted image 20230530185932.png]]
 
 ---
