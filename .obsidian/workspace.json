@@ -69,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 314.5
+    "width": 314.5,
+    "collapsed": true
   },
   "right": {
     "id": "1b2d980ad4b04eb7",
@@ -114,17 +115,17 @@
   },
   "active": "317e254f1c7bfd77",
   "lastOpenFiles": [
+    "docs/3 CURSO/2 semestre/SSI/img/Pasted image 20230531132912.png",
+    "docs/3 CURSO/2 semestre/SSI/img/Pasted image 20230531132705.png",
+    "docs/3 CURSO/2 semestre/SSI/img/Pasted image 20230531132037.png",
+    "docs/3 CURSO/2 semestre/SSI/img/Pasted image 20230531130651.png",
+    "docs/3 CURSO/2 semestre/SSI/img/Pasted image 20230531130555.png",
+    "docs/3 CURSO/2 semestre/SSI/img/Pasted image 20230531122345.png",
     "docs/3 CURSO/2 semestre/SSI/img/Pasted image 20230530185932.png",
     "docs/3 CURSO/2 semestre/SSI/img/Pasted image 20230530180707.png",
     "docs/3 CURSO/2 semestre/SSI/img/Pasted image 20230530175233.png",
     "docs/3 CURSO/2 semestre/SSI/img/Pasted image 20230530174538.png",
     "docs/3 CURSO/2 semestre/SSI/img/Pasted image 20230530173155.png",
-    "docs/3 CURSO/2 semestre/SSI/img/Pasted image 20230530172048.png",
-    "docs/3 CURSO/2 semestre/SSI/img/Pasted image 20230530171104.png",
-    "docs/3 CURSO/2 semestre/SSI/img/Pasted image 20230530170753.png",
-    "docs/3 CURSO/2 semestre/SSI/img/Pasted image 20230530170308.png",
-    "docs/3 CURSO/2 semestre/SSI/img/Pasted image 20230530165622.png",
-    "docs/3 CURSO/2 semestre/SSI/img/Pasted image 20230530164556.png",
     "Untitled.md",
     "docs/3 CURSO/2 semestre/SSI/SSI Lab notas 🔮.md",
     "docs/3 CURSO/2 semestre/ASW/Apuntes Examen Teoria ASW 🧶.md",

@@ -379,6 +379,7 @@ oscap xccdf eval --datastream-id scap_org.open-scap_datastream_from_xccdf_ssg-ub
 		- Agregar eth1 con `sudo firewall-cmd --zone=work --change-interface=eth1`
 		- Asegúrate de que la zona work tenga habilitado el servicio **ssh**
 
+---
 # Lab8-9 ⚱️
 ## Nivel 1
 ## Simple puesta en marcha
@@ -668,5 +669,146 @@ done&
 ## Github
 - Para localizar secretos en repositorios públicos de Github
 ![[Pasted image 20230530185932.png]]
+
+---
+# Lab10 ⚱️
+
+## Apache2 instalado como un proxy inverso
+
+- Para aislar un servidor web de accesos desde el exterior de forma que haya un servicio accesible sin exponer el servidor real
+
+- Uno de los principales componentes de una infraestructura son los **proxies inversos (reverse proxies)**. Son una barrera entre los clientes y los servicios prestados por la infraestructura.
+	- De esta forma los clientes sólo pueden acceder a los servicios que se han creado para ser públicos. El resto de servicios no pueden ser localizados por ningún cliente. Los proxies inversos actúan como **puertas** a partes públicas de una infraestructura potencialmente mucho más compleja
+	- Tenemos un único punto de defensa para múltiples servidores defendidos, ahorrando tiempo y haciendo especialización de recursos. De esta forma las máquinas defendidas sólo deben preocuparse por servir contenido
+
+- Para instalar un apache2: `sudo apt install apache2`
+- Para instalar un módulo para proxies: `sudo a2enmod proxy`
+- Para instalar un módulo para proxies: `sudo a2enmod proxy_http`
+- Para configurar Apache2 para que sirva como proxy inverso, editar el archivo `/etc/apache2/sites-enabled/000-default.conf` para que cada solicitud realizada desde "el frente" a este servidor proxy se redirija a cada servidor web "detrás" dependiendo de la URL especificada
+- Para garantizar un proxy inverso **transparente** de las máquinas necesitamos utilizar las directivas `ProxyPass` y `ProxyPassReverse` sobre las IPs de la red interna. Ambos deben apuntar a la misma IP del servidor correspondiente. Por tanto, hay que crear dos entradas `Location` dentro del bloque `VirtualHost`:
+```bash
+<Location “/<URL>”> # Por ejemplo: “/eii”  
+	ProxyPass “http://<Server IP>/”  
+	ProxyPassReverse “http://<Server IP>/”  
+</Location>
+```
+- Guarda y cierra el archivo y reinicia Apache2: `service apache2 restart`
+
+## Instalación de un WAF
+
+- Para proteger tus aplicaciones web contra varios tipos de amenazas sin cambiar el código fuente de la aplicación
+
+- Instalar el WAF (Web Application Firewall) **mod_security2**: `sudo apt install libapache2-mod-security2`, para interceptar solicitudes entrantes dirigidas a nuestros sistemas protegidos.
+- Ahora hay que configurar las reglas adecuadas para que el WAF funcione
+
+### Instalar un OWASP ModSecurity Core Rule Set (CRS) actualizado
+- Mover y cambiar el nombre de este archivo de ModSecurity: `sudo mv /etc/modsecurity/modsecurity.conf-recommended /etc/modsecurity/modsecurity.conf`
+- Desde la MV descargamos la última versión de OWASP ModSecurity CRS: `git clone https://github.com/SpiderLabs/owasp-modsecurity-crs.git`
+- Copia la carpeta descargada a `volume_datga/rules` de la infraestructura del lab10 (`/rules`)
+- Una vez dentro del proxy, ve al directorio donde están las reglas descargadas y copia y cambia el nombre `crs-setup.conf.example` a `crs-setup.conf`
+- Copia el directorio `rules/` también con su contenido:
+	- `cd owasp-modsecurity-crs`
+	- `cp crs-setup.conf.example /etc/modsecurity/crs-setup.conf`
+	- `cp -r rules/ /etc/modsecurity/`
+- Modificar el fichero `/etc/apache2/mods-available/security2.conf` para que coincida con la ruta de archivos descargados:
+```bash
+<IfModule security2_module>  
+	# Default Debian dir for modsecurity's persistent data  
+	SecDataDir /var/cache/modsecurity  
+	
+	# Include all the *.conf files in /etc/modsecurity.  
+	# Keeping your local configuration in that directory  
+	# will allow for an easy upgrade of THIS file and  
+	# make your life easier  
+	IncludeOptional /etc/modsecurity/*.conf  
+	Include /etc/modsecurity/rules/*.conf  
+</IfModule>
+```
+- Reinicia Apache2: `service apache2 restart`
+
+### Comprueba que el WAF está funcionando
+
+Para comprobar si ModSecurity en el proxy está dando protección a los servidores en el back-end, podemos realizar las siguientes pruebas:  
+- Vete hasta la configuración predeterminada de Apache2 y agrega dos directivas adicionales en el archivo de configuración del sitio web predeterminado (`/etc/apache2/sites-enabled/000-default.conf`).  
+	- La primera directiva habilita **ModSecurity** en modo de intercepción (**On** detecta amenazas entrantes y las bloquea) en lugar del modo de detección (**DetectionOnly** detecta amenazas entrantes pero **solo las registra en un log**, lo cual es útil cuando se prueba que el WAF no está bloqueando solicitudes legítimas).  
+	- La segunda directiva agrega una nueva regla de prueba a ModSecurity que se incorporará al conjunto de reglas CRS. Esta regla es muy simple, y se activa cuando alguien usa el parámetro **testarg** en una URL con un valor que contiene la cadena **ssi**. La respuesta del WAF es denegar (**deny**) la solicitud que sirve una página de error con el estado HTTP 403 (status:403), registrando el incidente con el mensaje **"regla de prueba SSI disparada!"**. Este es solo un ejemplo simple de cómo se crean las reglas WAF, que también verifica que el motor de reglas funciona correctamente.
+```bash
+<VirtualHost *:80>  
+	<Location ...>  
+	... # Proxy configuration  
+	</Location>  
+		ServerAdmin webmaster@localhost  
+		DocumentRoot /var/www/html  
+		ErrorLog ${APACHE_LOG_DIR}/error.log  
+		CustomLog ${APACHE_LOG_DIR}/access.log combined  
+		...  
+		SecRuleEngine On  
+		SecRule ARGS:testarg "@contains ssi" "id:1234,deny,status:403,msg:'regla de prueba SSI disparada!'"  
+</VirtualHost>
+```
+- Reinicia Apache2 y accede a la página. Si se carga correctamente, activa intencionadamente la regla para terminar esta parte del ejercicio.
+- La segunda prueba que vamos a hacer es comprobar que las reglas CRS se están leyendo. Para ello, activamos aposta una advertencia de ataque de ejecución remota de comandos (RCE), creando una petición que coincida con las reglas CRS que evitan este tipo de ataques, como pasar un parámetro cualquiera con valor **/bin/bash**
+
+### WAF contra "el mal"
+- Cheatsheet para el **tool Nikto**:
+![[Pasted image 20230531122345.png]]
+- Otra prueba que podemos hacer es usar algunos de los scripts HTTP nmap NSE que probamos en el laboratorio anterior contra el proxy, y ver si el resultado cambia o los intentos son registrados por ModSecurity.
+
+## WAF contra ataques web
+- Para comprobar si el WAF está realmente bloqueando las peticiones
+
+### XSS
+- En lugar de pasar el ataque usando GET pondremos el payload del ataque como parámetro **POST** gracias a la opción `-d` del comando `curl` Para activar el WAF pasaremos una cadena de prueba XSS típica: `<script>alert('test')</alert>` con `curl <proxy IP>/-d "<script>alert('test')</script>"`
+![[Pasted image 20230531130555.png]]
+
+### Inyección SQL
+- Pasamos como parámetro **POST** a los usuarios de la cadena `DROP DATABASE;` Comprueba que sólo identifica la sintaxis SQL correcta introduciendo errores tipográficos en la cadena proporcionada para ver si la captura o no
+![[Pasted image 20230531130651.png]]
+
+## NIDS Suricata
+
+- Para detectar amenazas potenciales en tu red para que luego puedas tomar medidas contra ellas
+
+- Las implementaciones serias usan infraestructuras y software mucho más complejo como **Security Onion**
+
+### Security Onion y Suricata
+- El **tool Suricata** monitoriza el tráfico de red y busca eventos de seguridad que puedan indicar un ataque o un compromiso. Suricata también forma parte de una distribución de Linux mucho más completa llamada **Security Onion** (https://securityonionsolutions.com/software/).
+
+- Para usar Suricata:
+	- Añadir los repositorios: `sudo add-apt-repository ppa:oisf/suricata-stable`
+	- Actualizar los paquetes disponibles: `sudo apt update`
+	- Instalarla: `sudo apt install suricata`
+
+### Instalar y configurar Suricata
+- **Suricata** es un sistema de detección de intrusos (IDS) basado en firmas, por lo que el siguiente paso es conseguir las reglas que le enseñen a lidiar con el tráfico. Para ello podemos utilizar las reglas Emerging Threats http://rules.emergingthreats.net/ . Es un repositorio gratuito de reglas Suricata. Para ello, hay que descargarse en la carptea `/volume_data/rules`:
+	- `wget http://rules.emergingthreats.net/open/suricata/emerging.rules.tar.gz`
+	- Descomprímelas: `tar zxvf emerging.rules.tar.gz`
+	- Datos interesantes:
+		- **Archivos de configuración de Suricata**: `/etc/suricata/`. El principal que modificaremos es `/etc/suricata/suricata.yaml`
+		- **Carpeta predeterminada de archivos de reglas de Suricata**: `/etc/suricata/rules/`
+		- **Archivos de log de Suricata** (para ver qué amenazas identifica): `/var/log/suricata/`. El archivo `fast.log` contiene las reglas activadas. `eve.json` también es importante
+
+### Configurar Suricata
+
+- Modificar el fichero: `/etc/suricata/suricata.yaml`
+	- Asegurarnos de que la IP a proteger es la que aparece en la variable `HOME_NET`
+	- Cambiar el valor de esta variable a la IP de proxy que está en la misma red que el contenedor Kali atacante (lab10_front_net)
+	- ![[Pasted image 20230531132037.png]]
+	- Asegurate de que la interfaz de red que debe ser vigilada por Suricata es la correcta 
+- Habilitar las reglas que Suricata va a utilizar para examinar el tráfico:
+	- En el archivo anterior, el parámetro `default-rule-path` tiene como valor a la carpeta en la que copiamos las reglas Emerging Threats `default-rule-path: /var/lib/suricata/rules`
+	 ![[Pasted image 20230531132705.png]]
+	- Elegir las reglas que queremos activar y enumerarlas en una línea diferente (procedida por `-`) debajo de la entrada `rule-files` 
+	 ![[Pasted image 20230531132912.png]]
+
+### Probar la funcionalidad de Suricata
+1. Conexión sospechosa desde el proxy al exterior del mismo (la máquina Ubuntu). Condiciones de la conexión:
+	- **Necesita un destino de conexión**: crear uno fácilmente en nuestra máquina con `sudo apt install apache2`
+	- **Falsifica una solicitud de un troyano conocido**: *ChilkatUpload* modificando el User-Agent de la solicitud. Ejecuta: `curl -A "ChilkatUpload" 198.168.102.1`
+2. Realiza una solicitud desde fuera del proxy al propio proxy con un nmap ruidoso
+
+## SCA y SAST
+
+- Mirar en el guión 10
 
 ---
