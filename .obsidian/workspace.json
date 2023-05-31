@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "b1dfe55be408a6cf",
+        "id": "d2bedb7a933026c9",
         "type": "tabs",
         "children": [
           {
-            "id": "f0816f2438e31656",
+            "id": "0fc5b51c180cb19d",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -113,21 +113,21 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "317e254f1c7bfd77",
+  "active": "0fc5b51c180cb19d",
   "lastOpenFiles": [
-    "docs/3 CURSO/2 semestre/SSI/img/Pasted image 20230531132912.png",
-    "docs/3 CURSO/2 semestre/SSI/img/Pasted image 20230531132705.png",
-    "docs/3 CURSO/2 semestre/SSI/img/Pasted image 20230531132037.png",
-    "docs/3 CURSO/2 semestre/SSI/img/Pasted image 20230531130651.png",
-    "docs/3 CURSO/2 semestre/SSI/img/Pasted image 20230531130555.png",
-    "docs/3 CURSO/2 semestre/SSI/img/Pasted image 20230531122345.png",
-    "docs/3 CURSO/2 semestre/SSI/img/Pasted image 20230530185932.png",
-    "docs/3 CURSO/2 semestre/SSI/img/Pasted image 20230530180707.png",
-    "docs/3 CURSO/2 semestre/SSI/img/Pasted image 20230530175233.png",
-    "docs/3 CURSO/2 semestre/SSI/img/Pasted image 20230530174538.png",
-    "docs/3 CURSO/2 semestre/SSI/img/Pasted image 20230530173155.png",
-    "Untitled.md",
+    "docs/3 CURSO/2 semestre/SSI/img/Pasted image 20230531235248.png",
+    "docs/3 CURSO/2 semestre/SSI/img/Pasted image 20230531234850.png",
+    "docs/3 CURSO/2 semestre/SSI/img/Pasted image 20230531234255.png",
+    "docs/3 CURSO/2 semestre/SSI/img/Pasted image 20230531233246.png",
+    "docs/3 CURSO/2 semestre/SSI/img/Pasted image 20230531232648.png",
+    "docs/3 CURSO/2 semestre/SSI/img/Pasted image 20230531232009.png",
+    "docs/3 CURSO/2 semestre/SSI/img/Pasted image 20230531231745.png",
+    "docs/3 CURSO/2 semestre/SSI/img/Pasted image 20230531230407.png",
+    "docs/3 CURSO/2 semestre/SSI/img/Pasted image 20230531230351.png",
+    "docs/3 CURSO/2 semestre/SSI/img/Pasted image 20230531230046.png",
+    "docs/3 CURSO/2 semestre/SSI/img/Pasted image 20230531230035.png",
     "docs/3 CURSO/2 semestre/SSI/SSI Lab notas 🔮.md",
+    "Untitled.md",
     "docs/3 CURSO/2 semestre/ASW/Apuntes Examen Teoria ASW 🧶.md",
     "docs/3 CURSO/2 semestre/SDI/Examen Teoría Nodejs 🚁.md",
     "docs/Cybersecurity/HackBySecurity/Creación de exploits 🍹.md",

