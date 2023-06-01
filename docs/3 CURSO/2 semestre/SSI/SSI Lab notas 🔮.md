@@ -1023,4 +1023,14 @@ set LPORT 4444
 - Para iniciar sesión en una: `sessions -i <ID_SESSION>` ![[Pasted image 20230601131435.png]]
 - Ahora ya podemos ejecutar comandos como en un shell normal: ![[Pasted image 20230601131513.png]] ![[Pasted image 20230601131609.png]]
 
+## Escalada de privilegios a través de trabajos cron: Exfiltración de información privada (Scheduled Task/Job)
+
+- Para extraer información privilegiada de un sistema remoto abusando de la funcionalidad cron del SO
+
+	- El daemon `cron` ejecuta tareas programadas para realizar mantenimiento del sistema, copias de seguridad, etc. Las tareas programadas de todo el sistema se pueden consultar en el archivo `/etc/crontab`. Sin embargo, este daemon también se puede usar para hacer escalada de privilegios
+	- Vamos a usar esta vulnerabilidad como vector para exfiltrar información privada:
+		- Inicia sesión en la máquina objetivo
+		- Da permisos o+r a `/tmp/integrity_check.py`
+		- Comprueba el contenido del archivo `/etc/crontab` ![[Pasted image 20230601232751.png]] Para interpretar su información visita: https://ostechnix.com/a-beginners-guide-to-cron-jobs/
+
 ---
