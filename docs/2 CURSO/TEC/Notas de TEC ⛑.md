@@ -70,3 +70,25 @@
 
 
 ---
+
+# Algunas definiciones
+
+## Fototransistor
+- Transistor sensible a la luz. La luz incide sobre la región de base y genera portadores en ella. El fototransistor es más sensible que el fotodiodo por la ganancia en corriente del transistor.
+
+## Optoacoplador
+- Combina un diodo LED y un fototransistor. El dispositivo funciona como un interruptor activado mediante la luz emitida por el diodo LED. Si el LED emite luz,  satura (cortocircuita) el fototransistor. Se utiliza para aislar eléctricamente dos circuitos pues la conexión entre ambos es óptica. Se encapsula como un circuito integrado DIP.
+
+## Puertas lógicas
+![[Pasted image 20230612115145.png]]
+
+## Propiedades de los sistemas digitales
+- Circuitos electrónicos que manejan señales discretas
+- Las entradas y salidas toman valores binarios y se representan físicamente por magnitudes eléctricas dentro de un margen de valores
+- La salida binaria es función de las entradas binarias (función lógica)
+- Los valores de tensión a las entradas se regeneran a la salida
+- Los cambios en las salidas no deben afectar a las entradas (unidireccional)
+- La salida de una puerta debe ser capaz de excitar a otras puertas del mismo tipo
+
+---
+
