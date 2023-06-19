@@ -345,4 +345,122 @@ expr returns[Expression ast]
 
 # Semántico
 
+1. 
+![[Pasted image 20230510151010.png]]
+![[Pasted image 20230510151037.png]]
+![[Pasted image 20230510151109.png]]
+
+![[Pasted image 20230619140704.png]]
+
+2. Dada la siguiente CFG, definir una gramática atribuida para realizar la fase de Identificación. Nota, se puede usar el objeto **st** del ejercicio anterior.
+**(G):**
+![[Pasted image 20230510155120.png]]
+
+![[IMG_3617.jpeg]]
+
+3. ![[Pasted image 20230510163627.png]]
+
+![[IMG_3618.jpeg]]
+
+4.  Comprobar que las funciones tengan **return** en la siguiente gramática. Crear la AG correspondiente:
+![[WhatsApp Image 2023-05-14 at 14.55.43.jpeg]]
+
+Solución:
+![[IMG_3619.jpeg]]
+
 # Generación de código
+
+1. Dado el siguiente programa de alto nivel:
+```java
+a = 3;
+b = a;
+```
+Escribir el código destino MAPL.
+Suponer que:
+- Las direcciones de memoria de a y b son 0 y 2
+- Ambas son variables enteras
+
+```assembly
+PUSHA 0 //meto una direccion
+PUSHI 3 //meto un 3 ocupando 2 bytes
+STOREI //escribo un 3 ocupando 2 porciones de memoria
+PUSHA 2
+PUSHA 0
+LOADI //va a la dirección 0 y lo deja en el tope de la pila
+STOREI
+```
+
+2. ![[Pasted image 20230510171309.png]]
+
+```assembly
+//read myInteger;
+pusha 0
+ini
+storei
+
+//real = myInteger * 3.4 -7;
+pusha 2
+pusha 0
+loadi
+i2f
+pushf 3.4
+mulf
+pushi 7
+i2f
+subf
+storef
+
+//write real;
+pusha 2
+loadf
+outf
+```
+
+3. ![[Pasted image 20230510204201.png]]
+
+![[IMG_3620.jpeg]]
+
+4. ![[Pasted image 20230510204717.png]]
+
+![[IMG_3621.jpeg]]
+
+5. ![[Pasted image 20230510205821.png]]
+
+![[IMG_3623.jpeg]]
+
+6. Implementar las plantillas de código para las asignaciones. Usar la (G) del ejercicio anterior.
+![[Pasted image 20230619150553.png]]
+
+7. Define las plantillas de código para apilar el valor de las siguientes expresiones:
+![[Pasted image 20230619150902.png]]
+
+![[IMG_3625.jpeg]]
+
+8. Especificar las plantillas de código de los arrays.
+![[Pasted image 20230619151934.png]]
+
+![[IMG_3626.jpeg]]
+
+Estas plantillas vienen de esta explicación:
+![[Pasted image 20230619152402.png]]
+
+9. Especificar las plantillas de código para calcular las direcciones de memoria de los campos de los registros
+![[Pasted image 20230619152925.png]]
+![[IMG_3627.jpeg]]
+
+10. Escribir la plantilla de código de un bucle While.
+![[IMG_3629.jpeg]]
+
+11. Escribir la plantilla de código de un bucle Do/While.
+![[IMG_3630.jpeg]]
+
+12. Escribir la plantilla de código de un bucle For.
+![[IMG_3631.jpeg]]
+
+13. Escribir la plantilla de código de un If/Else.
+![[IMG_3632.jpeg]]
+
+14. Escribir las plantillas de código para la invocación de funciones.
+![[IMG_3633.jpeg]]
+
+---
