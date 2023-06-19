@@ -4,22 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "2698cdb523380c1d",
+        "id": "7d5d43a116ed5a86",
         "type": "tabs",
         "children": [
           {
-            "id": "98ba4355966183ad",
+            "id": "32f5115248dda8b6",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/2 CURSO/TEC/Métodos de solución de problemas TEC🚼.md",
+                "file": "docs/3 CURSO/2 semestre/DLP/Ejercicios Examen Teoria DLP🐲.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "6fdd931ed67e94c5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "docs/3 CURSO/2 semestre/DLP/Resumen Ejercicios Teoria DLP 💎.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -69,7 +82,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 314.5
+    "width": 319.5
   },
   "right": {
     "id": "1b2d980ad4b04eb7",
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/2 CURSO/TEC/Métodos de solución de problemas TEC🚼.md",
+                "file": "docs/3 CURSO/2 semestre/DLP/Resumen Ejercicios Teoria DLP 💎.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,23 +125,24 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "98ba4355966183ad",
+  "active": "6fdd931ed67e94c5",
   "lastOpenFiles": [
-    "docs/2 CURSO/TEC/Varios ejercicios resueltos TEC♻️.md",
-    "docs/2 CURSO/TEC/Notas de TEC ⛑.md",
+    "docs/3 CURSO/2 semestre/DLP/Ejercicios Examen Teoria DLP🐲.md",
+    "docs/3 CURSO/2 semestre/DLP/Resumen Ejercicios Teoria DLP 💎.md",
+    "docs/3 CURSO/2 semestre/DLP/img/IMG_3615.jpeg",
+    "docs/3 CURSO/2 semestre/DLP/img/IMG_3611.jpeg",
+    "docs/3 CURSO/2 semestre/DLP/img/IMG_3610.jpeg",
+    "docs/3 CURSO/2 semestre/DLP/img/IMG_3609 1.jpeg",
+    "docs/3 CURSO/2 semestre/DLP/img/IMG_3609.jpeg",
     "docs/2 CURSO/TEC/Métodos de solución de problemas TEC🚼.md",
+    "docs/2 CURSO/TEC/Notas de TEC ⛑.md",
+    "docs/2 CURSO/TEC/Varios ejercicios resueltos TEC♻️.md",
     "docs/2 CURSO/TEC/img/Pasted image 20230612115145.png",
     "docs/2 CURSO/TEC/img/IMG_3370.jpeg",
     "docs/2 CURSO/TEC/img/IMG_3384.jpeg",
     "docs/2 CURSO/TEC/img/IMG_3383.jpeg",
     "docs/2 CURSO/TEC/img/IMG_3382.jpeg",
-    "docs/2 CURSO/TEC/img/IMG_3381.jpeg",
-    "docs/2 CURSO/TEC/img/IMG_3380.jpeg",
-    "docs/2 CURSO/TEC/img/IMG_3379.jpeg",
-    "docs/2 CURSO/TEC/img/IMG_3378.jpeg",
-    "docs/2 CURSO/TEC/img/IMG_3377.jpeg",
     "docs/3 CURSO/2 semestre/SSI/SSI Lab notas 🔮.md",
-    "docs/3 CURSO/2 semestre/DLP/Ejercicios Examen Teoria DLP🐲.md",
     "docs/3 CURSO/2 semestre/ASW/Apuntes Examen Teoria ASW 🧶.md",
     "docs/3 CURSO/2 semestre/SDI/Examen Teoría Nodejs 🚁.md",
     "docs/Cybersecurity/HackBySecurity/Creación de exploits 🍹.md",
