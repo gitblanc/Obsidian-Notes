@@ -463,4 +463,87 @@ Estas plantillas vienen de esta explicación:
 14. Escribir las plantillas de código para la invocación de funciones.
 ![[IMG_3633.jpeg]]
 
+15. Switch:
+```java
+/**
+     * execute[[Switch: statement -> expression statement* case*]]() =
+     * int labelFinal = cg.getLabel() //finalSwitch
+     * case*.forEach(c -> {
+     *     int labelCase = cg.getLabel()
+     *     c.labelCase = labelCase
+     *     <label> labelCase
+     *     value[[expression]]
+     *     execute[[c]]
+     *     c.labelFinalSwitch = labelFinal
+     * });
+     * int label1 = cg.getLabel() //default
+     * <label> label1
+     * statement*.forEach(s -> execute[[s]])
+     * <label> labelFinal
+     * @param e
+     * @param t
+     * @return
+     */
+    @Override
+    public Void visit(Switch e, FuncDefinition t) {
+        cg.newLineComment(e.row);
+        int labelFinalSwitch = cg.getLabel();
+        for(Case c: e.cases){
+            int labelCase = cg.getLabel();
+            c.labelCase = labelCase;
+            cg.label(Integer.toString(labelCase));
+            e.expression.accept(this.valueVisitor,t);
+            c.accept(this,t);
+            c.labelFinalSwitch = labelFinalSwitch;
+        }
+        int labelDefault = cg.getLabel();
+        cg.label(Integer.toString(labelDefault));
+        for(Statement s: e.defaultStatements){
+            s.accept(this,t);
+        }
+        cg.label(Integer.toString(labelFinalSwitch));
+        return null;
+    }
+
+
+    /**
+     * execute[[Case: case -> expression statement* BREAK?]]() =
+     * Type superType = expression.type.superType(expression.type)
+     * cg.convertTo(expression.type,superType)
+     * value[[expression]]
+     * cg.convertTo(expression.type,superType)
+     * <eq> superType.suffix()
+     * <jz> case.labelCase+1
+     * statement*.forEach(s -> execute[[s]])
+     * if(case.break)
+     *      <jmp> case.labelFinalSwitch
+     *
+     *
+     * @param e
+     * @param t
+     * @return
+     */
+    @Override
+    public Void visit(Case e, FuncDefinition t) {
+        cg.newLineComment(e.row);
+        Type superType = e.expression.getType().superType(e.expression.getType());
+        cg.convertTo(e.expression.getType(),superType);
+        e.expression.accept(this.valueVisitor,t);
+        cg.convertTo(e.expression.getType(),superType);
+        cg.comparationOperation(superType,"==");
+        cg.jz(Integer.toString(e.labelCase+1));
+        for(Statement s: e.statements){
+            s.accept(this,t);
+        }
+        if(e.breakPoint)
+            cg.jmp(Integer.toString(e.labelFinalSwitch));
+        return null;
+    }
+
+
+
+}
+```
+
+
 ---
