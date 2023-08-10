@@ -13,13 +13,13 @@
 	- `dirb <ipaddr> <wordlist
 	- `gobuster dir --url <ipaddr> -w <wordlist>`
 
-![[robots.png]]
-![[favicon 1.png]]
-![[favicon 2.png]]
-![[sitemap.png]]
-![[headers.png]]
-![[framework stack.png]]
-![[google dorking.png]]
-![[s3 amazon.png]]
-![[automated 1.png]]
-![[automated 2.png]]
+![](./img/robots.png)
+![](./img/favicon%201.png)
+![](./img/favicon%202.png)
+![](./img/sitemap.png)
+![](./img/headers.png)
+![](./img/framework%20stack.png)
+![](./img/google%20dorking.png)
+![](./img/s3%20amazon.png)
+![](./img/automated%201.png)
+![](./img/automated%202.png)

@@ -164,5 +164,5 @@ a[accesskey] /*Especificidad 011*/
 - Uso de variables locales y globales en JavaScript
 	- **==var y let==** en el interior de una función hace que la variable sea **local**, mientras que en el exterior de una función es **global**
 - Lenguajes derivados de XML:
-![[Pasted image 20221217153849.png]]
+![](./img/Pasted%20image%2020221217153849.png)
 ---

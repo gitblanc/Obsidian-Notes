@@ -837,7 +837,7 @@ node_modules
 	6. On image copy the url of the repository where all was store (ecr)
 		1. Go back to ecr
 		2. Copy the image uri of your latest repository
-		3. ![[Pasted image 20230304140349.png]]
+		3. ![](./img/Pasted%20image%2020230304140349.png)
 		4. Keep default soft Limit (128)
 		5. Put port 3000 on port maps with protocol tcp
 		6. Leave blank the rest and create
@@ -861,6 +861,6 @@ node_modules
 		3. Listener set to HTTP on port 80 (Create a target group if not exists)
 		4. Select the default vpc and select all the subnets
 20. Refresh the tasks view (1~2mis)
-![[Pasted image 20230304142754.png]]
+![](./img/Pasted%20image%2020230304142754.png)
 
 

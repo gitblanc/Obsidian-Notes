@@ -11,54 +11,54 @@
 	- **Firewalls de software**: sólo ejecutan un programa de firewall en su PC
 
 - **Packet-filtering** (PF): examina datos de cada paquete de red recibido. Los paquetes se examinan uno por uno y se descartan si no cumplen las reglas
-![[Pasted image 20230509134004.png|500]]
+![](./img/Pasted%20image%2020230509134004.png|500)
 - **Stateful Packet Inspection** (SPI): firewalls de filtrado de paquetes dinámico con una tabla que rastrea todas las conexiones abiertas
-![[Pasted image 20230509134259.png|500]]
+![](./img/Pasted%20image%2020230509134259.png|500)
 - **Proxy firewall**: proporciona filtrado en la capa de aplicación
-![[Pasted image 20230509134418.png|500]]
+![](./img/Pasted%20image%2020230509134418.png|500)
 - **Next-Generation Firewalls** (NGFW): firewalls que usan un enfoque de varias capas. Un ejemplo es Fortinet
-![[Pasted image 20230509134534.png|500]]
+![](./img/Pasted%20image%2020230509134534.png|500)
 
 ### Reglas de un Firewall
 - **Permitidas** (ALLOW)
 - **Rechazadas** (REJECT)
 - **Descartadas** (DROP) - no avisan al cliente
-![[Pasted image 20230509134725.png|500]]
+![](./img/Pasted%20image%2020230509134725.png|500)
 
 - Las reglas de un firewall operan con tripletas (IP, puerto, protocolo)
-![[Pasted image 20230509134832.png]]
+![](./img/Pasted%20image%2020230509134832.png)
 - Cuando los firewalls pueden restringir las conexiones entre diferentes redes o zonas se denominan **firewalls perimetrales** (son una primera línea de defensa).
 
 ## Demilitarized Zones (DMZs)
 - Son zonas de red aisladas dentro de la red interna de una empresa
 - Deben contener todos los recursos que sean accesibles desde internet
 - Se implementan con cortafuegos perimetrales
-![[Pasted image 20230509135410.png|500]]
+![](./img/Pasted%20image%2020230509135410.png|500)
 - Los firewalls son necesarios para implementar una DMZ
 - Recomendaciones con el tráfico de red que proviene y va hacia los distintos segmentos de red:
-![[Pasted image 20230509135552.png|500]]
-![[Pasted image 20230509135612.png|500]]
+![](./img/Pasted%20image%2020230509135552.png|500)
+![](./img/Pasted%20image%2020230509135612.png|500)
 - Se usan firewalls para aumentar la seguridad de las redes:
-![[Pasted image 20230509140001.png|500]]
+![](./img/Pasted%20image%2020230509140001.png|500)
 
 ## Ficheros HOST
 - Archivo local para la traducción de nombres de dominio a IPs
 	- Todo lo que se pone en este archivo será consultado y resuelto primero
 	- Bloqueador de URL maliciosas: https://github.com/StevenBlack/hosts
-![[Pasted image 20230509140205.png|500]]
+![](./img/Pasted%20image%2020230509140205.png|500)
 
 ## Ataques en red: Man in the middle
-![[Pasted image 20230509140343.png]]
+![](./img/Pasted%20image%2020230509140343.png)
 
 ## DNS Poisoning
-![[Pasted image 20230509140822.png]]
+![](./img/Pasted%20image%2020230509140822.png)
 
 ## DDoS
 - Lanzados habitualmente desde botnets
-![[Pasted image 20230509140916.png]]
+![](./img/Pasted%20image%2020230509140916.png)
 
 ## Botnet
-![[Pasted image 20230509140944.png]]
+![](./img/Pasted%20image%2020230509140944.png)
 
 ## Principios de diseño general de redes seguras
 ### Ataques actuales de red
@@ -70,7 +70,7 @@
 ## Zero Trust
 - Sistema de seguridad que sólo admite dispositivos que cumplen con unas condiciones
 - Comprueba los dispositivos continuamente
-![[Pasted image 20230509143544.png|500]]
+![](./img/Pasted%20image%2020230509143544.png|500)
 
 ## ¿Qué hacer contra los ataques de hoy?
 - Detección de endpoints
@@ -88,21 +88,21 @@
 - Dos LAN internas con doble cortafuegos SPI/NGFW
 - Una política común de ubicación de los puertos de servicios
 - Todos los puertos que no se usen deben estar cerrados
-![[Pasted image 20230509144215.png]]
+![](./img/Pasted%20image%2020230509144215.png)
 
 ## HoneyPot
 - Captura intentos de ataque de usuarios o herramientas de ataque automatizadas, bloqueando sus IPs
 - Podemos derivar intentos de conexión al honeypot
 - Más recursos sobre honeypots: https://github.com/paralax/awesome-honeypots
-![[Pasted image 20230509144315.png]]
+![](./img/Pasted%20image%2020230509144315.png)
 
 ## IDS & IPS
 - Intrusion Detection System
 - Intrusion Prevention System
-![[Pasted image 20230509144617.png]]
+![](./img/Pasted%20image%2020230509144617.png)
 
 ## Security Operations Center (SOC)
-![[Pasted image 20230509144854.png]]
+![](./img/Pasted%20image%2020230509144854.png)
 
 ## Introducción al Pentesting de red
 
@@ -120,11 +120,11 @@
 	- Servicios que se ejecutan tras esos puertos
 	- Información extendida de ese servicio
 Cheat Sheet:
-![[Pasted image 20230509145554.png]]
+![](./img/Pasted%20image%2020230509145554.png)
 Puertos comunes:
-![[Pasted image 20230509145732.png]]
+![](./img/Pasted%20image%2020230509145732.png)
 Interpretando los resultados de Nmap:
-![[Pasted image 20230509145903.png]]
+![](./img/Pasted%20image%2020230509145903.png)
 Si el objetivo tiene servicios HTTPS en ejecución, hay una serie de **tools** que podemos usar para enumerarlos:
 - Proxy Burp
 - dirb
@@ -139,7 +139,7 @@ Si el objetivo tiene servicios HTTPS en ejecución, hay una serie de **tools** q
 - A veces se usa para evitar que los motores de búsqueda indexen contenido privado
 
 ## Listado de directorios
-![[Pasted image 20230509150646.png]]
+![](./img/Pasted%20image%2020230509150646.png)
 
 # Tema 6 Introducción a la seguridad de aplicaciones
 
@@ -161,7 +161,7 @@ Si el objetivo tiene servicios HTTPS en ejecución, hay una serie de **tools** q
 
 ## Filosofía pushing left
 - Cuanto más tarde se descubra un problea de seguridad, más caro será solucionarlo
-![[Pasted image 20230509162944.png]]
+![](./img/Pasted%20image%2020230509162944.png)
 
 ## Requisitos de cifrado
 - Las claves y la información sensible nunca se guardan en texto plano
@@ -190,7 +190,7 @@ Si el objetivo tiene servicios HTTPS en ejecución, hay una serie de **tools** q
 	- Algo que **SABEN**, como una clave o PIN de una cuenta
 	- Algo que **TIENEN**, como un dispositivo físico o una aplicación que genera OTPs
 	- Algo que **SON**, una característica biológica única como una huella, la voz o la retina
-![[Pasted image 20230509164357.png|500]]
+![](./img/Pasted%20image%2020230509164357.png|500)
 
 ## Cuentas de servicio
 - Si una aplicación necesita acceder a un servicio externo, debe hacerlo a través de una cuenta de servicio (que no sea la de un usuario REAL capaz de hacer login)
@@ -201,10 +201,10 @@ Si el objetivo tiene servicios HTTPS en ejecución, hay una serie de **tools** q
 
 ## Dark patterns
 - Diseñar programas para engañar a los usuarios y que hagan cosas que no quieren hacer
-![[Pasted image 20230509170415.png|500]]
+![](./img/Pasted%20image%2020230509170415.png|500)
 
 ## Web languages vulnerabilities
-![[Pasted image 20230509171210.png]]
+![](./img/Pasted%20image%2020230509171210.png)
 
 ## Ataques típicos
 
@@ -212,23 +212,23 @@ Si el objetivo tiene servicios HTTPS en ejecución, hay una serie de **tools** q
 - Ocurre cuando un atacante inyecta código ejecutable en alguna parte de la petición HTTP
 - No es persistente
 - https://portswigger.net/web-security/cross-site-scripting/cheat-sheet
-![[Pasted image 20230509171555.png]]
+![](./img/Pasted%20image%2020230509171555.png)
 
 ## Stored XSS
 - Es persistente
 - No tiene por qué conllevar una acción por parte de otros usuarios para afectarles
-![[Pasted image 20230509171856.png]]
+![](./img/Pasted%20image%2020230509171856.png)
 
 ## SQL Injection
-![[Pasted image 20230509171959.png|500]]
+![](./img/Pasted%20image%2020230509171959.png|500)
 
 ## CSRF (Cross Site Request Forgery)
 - Ataque que obliga a usuarios autenticados a ejecutar acciones no deseadas
-![[Pasted image 20230509172318.png|500]]
+![](./img/Pasted%20image%2020230509172318.png|500)
 
 # Tema 7 Introducción a técnicas de Red Team
 
 ## Valid Accounts - CEWL
 - Usar el tool **CEWL** para explorar una web y crear un diccionario de palabras de su contenido
 - Útil para nombres de usuario o contraseñas
-![[Pasted image 20230509172927.png]]
+![](./img/Pasted%20image%2020230509172927.png)

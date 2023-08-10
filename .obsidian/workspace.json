@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/3 CURSO/2 semestre/DLP/Resumen Ejercicios Teoria DLP 💎.md",
+                "file": "docs/3 CURSO/2 semestre/SSI/SSI Lab notas 🔮.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/3 CURSO/2 semestre/DLP/Resumen Ejercicios Teoria DLP 💎.md",
+                "file": "docs/3 CURSO/2 semestre/SSI/SSI Lab notas 🔮.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -125,8 +125,13 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "317e254f1c7bfd77",
+  "active": "ad2c56e58f6d9655",
   "lastOpenFiles": [
+    "docs/3 CURSO/2 semestre/DLP/Ejercicios Examen Teoria DLP🐲.md",
+    "docs/2 CURSO/Algoritmia/Seminarios ALG 🛼.md",
+    "docs/2 CURSO/Algoritmia/ALG Segunda parte 🧼.md",
+    "docs/3 CURSO/2 semestre/SSI/SSI Lab notas 🔮.md",
+    "docs/3 CURSO/2 semestre/DLP/Resumen Ejercicios Teoria DLP 💎.md",
     "docs/3 CURSO/2 semestre/DLP/img/IMG_3633.jpeg",
     "docs/3 CURSO/2 semestre/DLP/img/IMG_3632.jpeg",
     "docs/3 CURSO/2 semestre/DLP/img/IMG_3631.jpeg",
@@ -134,17 +139,13 @@
     "docs/3 CURSO/2 semestre/DLP/img/IMG_3629.jpeg",
     "docs/3 CURSO/2 semestre/DLP/img/IMG_3627.jpeg",
     "docs/3 CURSO/2 semestre/DLP/img/Pasted image 20230619152925.png",
-    "docs/3 CURSO/2 semestre/DLP/Ejercicios Examen Teoria DLP🐲.md",
-    "docs/3 CURSO/2 semestre/DLP/Resumen Ejercicios Teoria DLP 💎.md",
     "docs/3 CURSO/2 semestre/DLP/img/Pasted image 20230619152402.png",
     "docs/3 CURSO/2 semestre/DLP/img/IMG_3626.jpeg",
     "docs/3 CURSO/2 semestre/DLP/img/Pasted image 20230619151934.png",
-    "docs/3 CURSO/2 semestre/DLP/img/IMG_3625.jpeg",
     "IMG_3616.heic",
     "docs/2 CURSO/TEC/Métodos de solución de problemas TEC🚼.md",
     "docs/2 CURSO/TEC/Notas de TEC ⛑.md",
     "docs/2 CURSO/TEC/Varios ejercicios resueltos TEC♻️.md",
-    "docs/3 CURSO/2 semestre/SSI/SSI Lab notas 🔮.md",
     "docs/3 CURSO/2 semestre/ASW/Apuntes Examen Teoria ASW 🧶.md",
     "docs/3 CURSO/2 semestre/SDI/Examen Teoría Nodejs 🚁.md",
     "docs/Cybersecurity/HackBySecurity/Creación de exploits 🍹.md",

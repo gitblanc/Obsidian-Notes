@@ -3,12 +3,12 @@
 - **Logic Flaw** -> is when a typical logical path of an application is either bypassed or manipulated by a hacker.
 - **Plain text, hashing and encoding** -> search https://crackstation.net that keeps databases of billions of hashes and their original strings. For base64 search on https://www.base64decode.org.
 
-![[auth1.png]]
-![[auth2.png]]
-![[auth3.png]]
-![[auth4.png]]
-![[auth5.png]]
-![[auth6.png]]
-![[auth7.png]]
-![[auth8.png]]
-![[auth9.png]]
+![](./img/auth1.png)
+![](./img/auth2.png)
+![](./img/auth3.png)
+![](./img/auth4.png)
+![](./img/auth5.png)
+![](./img/auth6.png)
+![](./img/auth7.png)
+![](./img/auth8.png)
+![](./img/auth9.png)

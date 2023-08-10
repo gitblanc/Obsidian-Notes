@@ -16,8 +16,8 @@
 	- **TDD** (Test Driven Development), muy buena herramienta para autodocumentar el código, pues cada test es un contrato implícito de cada parte del código
 - Hoy en día no hay prácticamente sistemas con microservicios, sino que hay sistemas **monolitos distribuidos** (varios servicios que usan una misma BBDD por ejemplo).
 Monolito vs microservicios:
-![[Pasted image 20230215122942.png]]
+![](./img/Pasted%20image%2020230215122942.png)
 Monolito distribuido vs microservicios:
-![[Pasted image 20230215123004.png|400]]
+![](./img/Pasted%20image%2020230215123004.png|400)
 
 ---

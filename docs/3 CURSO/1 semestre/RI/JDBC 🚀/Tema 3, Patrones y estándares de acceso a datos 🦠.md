@@ -14,7 +14,7 @@ La clave para crear código de calidad es bajo acoplamiento y alta cohesión.
 - **Cohesión**: responsabilidad única
 
 ## Patrón arquitectónico: Separación en capas
-![[separacion en capas.png|600]]
+![](./img/separacion%20en%20capas.png|600)
 Ventajas:
 - **Reutilización**: una vez hecha una capa, se puede usar por muchos clientes distintos
 - **Cohesión**: cada capa se ocupa de una responsabilidad
@@ -29,12 +29,12 @@ Desventajas:
 - Colocar en la capa business y en la de persistencia para que la capa correspondiente sólo tenga dependencias de la capa de debajo.
 
 ## Patrón Fachada
-![[patron fachada.png|500]]
+![](./img/patron%20fachada.png|500)
 - Además oculta los detalles detrás de la interfaz.
 
 ## Factoría
 - Clase que crea instancias de interfaces ocultándole al cliente cómo las crea
-![[factoria.png|500]]
+![](./img/factoria.png|500)
 
 ---
 #  6 Octubre 2022 🫐
@@ -49,9 +49,9 @@ Desventajas:
 ## Table Data Gateway
 - Es un DAO implementado uno para cada tabla
 
-![[gateway.png]]
-![[organizacion base de datos.png|700]] 
-![[organizacion base de datos png.png]]
+![](./img/gateway.png)
+![](./img/organizacion%20base%20de%20datos.png|700) 
+![](./img/organizacion%20base%20de%20datos%20png.png)
 
 ## Patrones para la capa de negocio
 

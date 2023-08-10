@@ -13,20 +13,20 @@
 	- Una **abstracción** lambda  **λx.M** (M , N , M1 , M2)
 	- Una **aplicación** **M N** donde M y N son expresiones lambda
 - Ejemplos (**función identidad** y **función doble**):
-![[lamda.png]]
+![](./img/lamda.png)
 
 ---
 ## Aplicación (reducción β)
 - La aplicación de una función representa su invocación
 - **reducción-β** o **sustitución** ejemplos:
-![[reduccion beta.png]]
+![](./img/reduccion%20beta.png)
 
 ---
 ## Teorema de Church-Rosser
 - Establece que el orden en el que se hagan las reducciones no afecta al resultado final
 - Los **paréntesis** se usan normalmente para **delimitar términos lambda**, no indican precedencias
 
-![[church rosser.png]]
+![](./img/church%20rosser.png)
 
 ---
 ## Variables libres y ligadas, conversión-α
@@ -35,13 +35,13 @@
 	- La variable y es **libre** (free)
 - En la sustitución sólo se sustituyen las variables libres
 - En la conversión-α todas las apariciones de una variable **ligada** en una misma abstracción se pueden renombrar a una **nueva** variable
-![[variables libres.png]]
+![](./img/variables%20libres.png)
 
 ---
 ## Conversión-α
 - Gracias a ella, podemos aplicar funciones a sí mismas
 - Ejemplos:
-![[ejemplos conversion.png]]
+![](./img/ejemplos%20conversion.png)
 
 ---
 ## Lógica booleana
@@ -50,8 +50,8 @@
 - Y **false** como:
 	fasle = λt.λf.f
 Representan una función que devuelve dos parámetros
-![[ej 1 sem 3.png]]
-![[ej 1 sem 3 res.png]]
+![](./img/ej%201%20sem%203.png)
+![](./img/ej%201%20sem%203%20res.png)
 
 ---
 ## Problema de la parada
@@ -63,7 +63,7 @@ Representan una función que devuelve dos parámetros
 ## Isomorfismo (Curry-Howard)
 - Establece una relación directa entre programas software y demostraciones matemáticas
 - Correspondencia entre tipos y proposiciones:
-![[curry howard.png]]
+![](./img/curry%20howard.png)
 
 ---
 ## Funciones, Entidades Primer Orden
@@ -90,18 +90,18 @@ Y hacer uso del delegado del siguiente modo:
 if(comparacion(vector[i], vector[j]) > 0)
 	...
 ````
-![[sortpeople.png]]
+![](./img/sortpeople.png)
 - Función doble aplicación:
-![[funcion doble.png]]
+![](./img/funcion%20doble.png)
 
 ---
 ## Patrón Observer
 - Es un patrón de diseño para el uso de delegados
-![[observer.png]]
+![](./img/observer.png)
 - Una instancia de un delegado puede coleccionar un conjunto de métodos
 - Cuando se invoca a un delegado se producirá una invocación a todos los suscriptores registrados en ese delegado
-![[observer 2.png]]
-![[observer 3.png]]
+![](./img/observer%202.png)
+![](./img/observer%203.png)
 
 ---
 ## Tipos delegados predefinidos
@@ -113,26 +113,26 @@ if(comparacion(vector[i], vector[j]) > 0)
 	- `Predicate<T>`: método que retorna un bool y recibe un T
 
 Operaciones suma y resta con delegados:
-![[del 1.png]]
-![[del 2.png]]
+![](./img/del%201.png)
+![](./img/del%202.png)
 
 Operaciones suma y resta con función que recibe 2 parámetros y devuelve un entero:
-![[del 4.png]]
+![](./img/del%204.png)
 
 Operación doble aplicación, es par, imprimir en rojo y devolver personas mayores de edad:
-![[del 3 1.png]]
-![[double.png]]
-![[red.png]]
-![[personas.png]]
+![](./img/del%203%201.png)
+![](./img/double.png)
+![](./img/red.png)
+![](./img/personas.png)
 
 ---
 ## Delegados anónimos
 - En funcional, es común escribir la función únicamente en el momento de pasarla
 - La primera aproximación fueron los delegados anónimos
 - Mala sintaxis
-![[del anonim.png]]
-![[del anonim 2.png]]
-![[del anonim 3.png]]
+![](./img/del%20anonim.png)
+![](./img/del%20anonim%202.png)
+![](./img/del%20anonim%203.png)
 
 ---
 ## Expresiones lambda
@@ -147,13 +147,13 @@ Operación doble aplicación, es par, imprimir en rojo y devolver personas mayor
 	- Si el cuerpo tiene varias sentencias se separan por `;`
 	- En el cuerpo se usa `return` para devolver valores
 	- Si el cuerpo es una única sentencia no es necesario escribir `return` ni llaves
-![[expresiones lambda.png]]
+![](./img/expresiones%20lambda.png)
 
 - Los tipos de las expresiones lambda promocionan a los tipos de delegados predefinidos (Func, Predicate y Action)
-![[lamda 2.png]]
-![[lamda 3.png]]
+![](./img/lamda%202.png)
+![](./img/lamda%203.png)
 
-![[funcional 4.png]]
+![](./img/funcional%204.png)
 
 ---
 ## Bucles y recursividad
@@ -163,41 +163,41 @@ Operación doble aplicación, es par, imprimir en rojo y devolver personas mayor
 ---
 ## Combinador de punto fijo
 - Es una función de orden superior que cumple lo siguiente (**función fix**)
-![[combinador.png]]
+![](./img/combinador.png)
 Factorial:
-![[factorial.png]]
+![](./img/factorial.png)
 
 ## Cláusulas
 - Una **cláusula** (closure) es una función de primer orden junto con su ámbito: una tabla que guarda las referencias a sus variables libres
-![[clausula.png]]
+![](./img/clausula.png)
 - Pueden representar objetos
 - Pueden representar estructuras de control
-![[closure 1.png]]
-![[closure 2.png]]
-![[closure 3.png]]
-![[closure 4.png]]
-![[closure 5.png]]
-![[closure 6.png]]
-![[closures 7.png]]
+![](./img/closure%201.png)
+![](./img/closure%202.png)
+![](./img/closure%203.png)
+![](./img/closure%204.png)
+![](./img/closure%205.png)
+![](./img/closure%206.png)
+![](./img/closures%207.png)
 
 ---
 ## Currificación
 - Es la técnica para transformar una función de varios parámetros en una función que recibe un único parámetro
 	- La función recibe un parámetro y retorna otra función que se puede llamar con el segundo parámetro
 - Su principal beneficio es la **aplicación parcial**
-![[currification.png]]
-![[currification 2.png]]
-![[currification 3.png]]
+![](./img/currification.png)
+![](./img/currification%202.png)
+![](./img/currification%203.png)
 
 ## Aplicación parcial
 - Cuando las funciones están currificadas es posible realizar su aplicación (invocación) parcial
 - La aplicación parcial consiste en pasar un número menor de parámetros en la invocación de una función
-![[2 CURSO/TPP/img/app parcial.png]]
-![[app parcial 2.png]]
-![[app parcial 3.png]]
+![](./img/2%20CURSO/TPP/img/app%20parcial.png)
+![](./img/app%20parcial%202.png)
+![](./img/app%20parcial%203.png)
 
 - La aplicación parcial nos permite ahorrar mucho código y reutilizarlo
-![[currificada version.png]]
+![](./img/currificada%20version.png)
 
 ---
 ## Continuaciones
@@ -212,21 +212,21 @@ Factorial:
 - Es más eficiente
 - Un generador es una función que se comporta como un iterador
 - C# implementa los generadores mediante `yield`
-![[generadores.png]]
-![[generadores 2.png]]
-![[fibonaccis.png]]
-![[fibonaccis 2.png]]
+![](./img/generadores.png)
+![](./img/generadores%202.png)
+![](./img/fibonaccis.png)
+![](./img/fibonaccis%202.png)
 
 ---
 ## Evaluación perezosa
 - La **evaluación perezosa** (lazy) es la técnica por la que se demora la evaluación de una expresión hasta que ésta es utilizada
 	- Es lo contrario a la **evaluación ansiosa** (eager)
-![[eager lazy.png]]
+![](./img/eager%20lazy.png)
 - Ofrecen menor consumo de memoria, mayor rendimiento, posibilidad de crear estructuras de datos infinitas
 - Podemos generar colecciones infinitas con `yield` y hacer uso de los métodos extensores:
 	- `Skip`: para saltarse un conjunto de elementos, devolviendo los restantes
 	- `Take` : para devolver un número concreto de elementos contiguos desde el inicio de una secuencia
-![[lazy prime number+.png]]
+![](./img/lazy%20prime%20number+.png)
 
 ---
 ## Transparencia referencial
@@ -253,15 +253,15 @@ Factorial:
 	- Si la expresión es una función pura, ésta puede sustituirse por el valor de retorno
 	- La primera vez que se invoca se retorna el valor guardándolo en una caché
 	- En sucesivas invocaciones se retornará el valor de la caché, sin ejecutar la función
-![[fibo mem.png]]
-![[fibo mem 2.png]]
-![[fibo mem 3.png]]
+![](./img/fibo%20mem.png)
+![](./img/fibo%20mem%202.png)
+![](./img/fibo%20mem%203.png)
 
 ---
 ## Pattern matching
 - Es el acto de comprobar si la secuencia de un conjunto de elementos siguen algún patrón determinado
-![[p match 1.png]]
-![[p match 2.png]]
+![](./img/p%20match%201.png)
+![](./img/p%20match%202.png)
 
 ---
 ## Funciones de orden superior típicas
@@ -279,39 +279,39 @@ Factorial:
 - `Map` -> Select
 - `Reduce` -> Aggregate
 
-![[funciones linq.png]]
+![](./img/funciones%20linq.png)
 
 - Ejemplos de `Select`-> Map
-![[select map.png]]
+![](./img/select%20map.png)
 
 - Ejemplos de `Where` -> Filter
-![[where filter.png]]
+![](./img/where%20filter.png)
 
 - Ejemplos de 	`Aggregate` -> Reduce
-![[agregate reduce.png]]
+![](./img/agregate%20reduce.png)
 
 ---
 ## Otras funciones
-![[otras funciones.png]]
+![](./img/otras%20funciones.png)
 
 ---
 ## Listas por comprensión y LINQ
 - Las listas por comprensión son una característica de un lenguaje que permite crear listas basándose en listas existentes. Esto se puede realizar usando LINQ:
-![[listas comprension.png]]
-![[listas comprension 2.png]]
+![](./img/listas%20comprension.png)
+![](./img/listas%20comprension%202.png)
 
 ---
 ## Comparación Paradigma Orientado a Objetos vs Funcional
-![[poof1.png]]
-![[poof2.png]]
-![[poof3.png]]
-![[poof4.png]]
-![[poof5.png]]
-![[poof6.png]]
-![[poof7.png]]
-![[poof8.png]]
-![[poof9.png]]
-![[poof10.png]]
+![](./img/poof1.png)
+![](./img/poof2.png)
+![](./img/poof3.png)
+![](./img/poof4.png)
+![](./img/poof5.png)
+![](./img/poof6.png)
+![](./img/poof7.png)
+![](./img/poof8.png)
+![](./img/poof9.png)
+![](./img/poof10.png)
 
 ---
 Siguiente lección -> [[Fundamentos de la Programación Concurrente y Paralela 🦋]]

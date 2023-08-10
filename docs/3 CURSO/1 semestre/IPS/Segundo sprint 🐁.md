@@ -1,13 +1,13 @@
 # 3 Octubre 2022 🌏
 ---
 - Vamos a utilizar diagramas de interacción
-![[diag interaccion 1.png|500]]
+![](./img/diag%20interaccion%201.png|500)
 - Y diagramas de estado
-![[diagrama de estado.png|600]]
+![](./img/diagrama%20de%20estado.png|600)
 - Segundo diseño modelo de clases de dominio
-![[diseño 2.png|500]]
+![](./img/diseño%202.png|500)
 - Segundo modelo evolucionado 
-![[modelo 2 evolucionado.png|500]]
+![](./img/modelo%202%20evolucionado.png|500)
 
 ---
 # 10 Octubre 2022 🏐
@@ -27,7 +27,7 @@
 ## Mapa de pantallas
 - Organización de cómo se moverá el usuario por la aplicación
 
-![[mapa de pantallas.png|500]]
+![](./img/mapa%20de%20pantallas.png|500)
 
 ---
 # 17 Octubre 2022 🌠
@@ -77,8 +77,8 @@
 # 7 Noviembre 2022 🦑
 - El backlog nos indica lo que tenemos que hacer
 - Visión de los requisitos funcionales del producto
-![[backlog.png|500]]
-![[backlog 2.png|500]]
+![](./img/backlog.png|500)
+![](./img/backlog%202.png|500)
 
 ## Pruebas 
 - **TDD**: Test-Driven Development

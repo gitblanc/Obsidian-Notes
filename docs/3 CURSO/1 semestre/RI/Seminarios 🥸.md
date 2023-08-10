@@ -1,14 +1,14 @@
 # 16 Sept 2022
 ---
-![[ej seminario 1.png]]
+![](./img/ej%20seminario%201.png)
 Corregido ✓
 
 ---
 Ampliación car workshop tarea:
-![[tarea 2 seminario.png]]
-![[ampliacion completa.png]]
+![](./img/tarea%202%20seminario.png)
+![](./img/ampliacion%20completa.png)
 
-![[ej resuelto 2.jpeg]]
+![](./img/ej%20resuelto%202.jpeg)
 ---
 # 14 Octubre 2022 🗿
 
@@ -30,7 +30,7 @@ Ampliación car workshop tarea:
 ---
 # 11 Noviembre 2022 🧠
 
-![[ej 1 11 nov.png|500]]
+![](./img/ej%201%2011%20nov.png|500)
 - **Vocabulario**: cada una de las palabras de todas las frases
 - **Estematización**: consiste reducir a la raíz
 - **Overstemming**: cuando aglutinas términos que no tienen nada que ver entre sí. (**univers**o y **univers**idad)
@@ -40,6 +40,6 @@ Ampliación car workshop tarea:
 Página para procesamiento de textos -> http://text-processing.com/demo/stem
 
 Fórmula idf-> inverse document frequency
-![[formula idf.png|500]]
+![](./img/formula%20idf.png|500)
 
 ---

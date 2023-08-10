@@ -58,18 +58,18 @@ init y destroy, doGet, doPost
 - ==Interfaz simple para un subsistema capa / compleja
 - ==Reducir el acoplamiento==
 
-11. ![[Pasted image 20230217163822.png|600]]
+11. ![](./img/Pasted%20image%2020230217163822.png|600)
 - ==Fachada==
 
-12. ![[Pasted image 20230217164056.png|600]]
+12. ![](./img/Pasted%20image%2020230217164056.png|600)
 - ==Presentación y persistencia no pueden comunicarse entre ellas==
 
-13. ![[Pasted image 20230217164159.png|600]]
+13. ![](./img/Pasted%20image%2020230217164159.png|600)
 14. ¿Quién recibe antes una petición, un controlador o un interceptor?
 	- ==El interceptor recibirá antes la petición==
 - ¿Cuál es la función del LocaleChangeInterceptor en los sistemas de internacionalización?
 	- ==Se utiliza para detectar si las peticiones incluyen el parámetro que indica el idioma, ej Lang=es==
-15. ![[Pasted image 20230217164639.png|600]]
+15. ![](./img/Pasted%20image%2020230217164639.png|600)
 16. ¿Según la siguiente configuración que se requiere para que una petición pueda acceder a la URL /barco/eliminar?, razona la respuesta.
 http .authorizeRequests ()
 ==.antMatchers ("/barco/add") .authenticated ()==
@@ -77,13 +77,13 @@ vantMatchera ("/barco") .hasAuthority ("ROLE USUARIO")
 .antMatchers (*/barco/as*) .hasAuthority ("ROLE ADMIN")
 anyRequest () . permitAlI ()
 
-17. ![[Pasted image 20230217164834.png|600]]
+17. ![](./img/Pasted%20image%2020230217164834.png|600)
 18. ¿Qué dos tipos de validaciones de datos de entrada podríamos aplicar? Nombralos y explícalos brevemente. ¿Cuáles son más seguras?
 - ==cliente: utilizan código de script que valida los datos de entrada en el propio navegador del diente antes de enviar los datos al servidor
 - ==servidor: son comprobaciones en el servidor sobre los datos enviados por el cliente.
 - ==Las validaciones en el servidor son más seguras.==
 
-19. ![[Pasted image 20230217165205.png]]
+19. ![](./img/Pasted%20image%2020230217165205.png)
 
 20. 1) ¿Qué es el objeto sesión? 2) Pon un ejemplo de uso común.
 - ==Es un objeto propio de cada cliente / usuario
@@ -92,17 +92,17 @@ anyRequest () . permitAlI ()
 - ==Almacenar productos temporalmente en el carrito de la compra==
 
 21. Completa el siguiente código, se debe utiliza HttpSession para guardar la fecha del último inicio de cada usuario:
-![[Pasted image 20230217165522.png]]
+![](./img/Pasted%20image%2020230217165522.png)
 22. ¿Cómo afectaría a los formularios de la aplicación incluir protección contra ataques CSRF
 - ==deberían incluir un parámetro nuevo con el token CSRF
 - ==El token es generado por la aplicación==
 
-23. ![[Pasted image 20230217165803.png]]
+23. ![](./img/Pasted%20image%2020230217165803.png)
 - ==asignaturasRepository.findOne solo recibe el ID de la nota
 - ==El repositorio debería recibir también una referencia al usuario==
 
-24. ![[Pasted image 20230217165938.png]]
-26. ![[Pasted image 20230217170015.png]]
+24. ![](./img/Pasted%20image%2020230217165938.png)
+26. ![](./img/Pasted%20image%2020230217170015.png)
 - ==De esta no tengo la solución==
 
 ---

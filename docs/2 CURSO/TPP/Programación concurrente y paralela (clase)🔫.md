@@ -406,7 +406,7 @@ Código en tasks/task.exception
 # Paso asíncrono de mensajes
 - Cada mensaje crea un nuevo hilo
 - En C# esta funcionalidad se obtiene mediante delegados
-![[paso asincrono.png]]
+![](./img/paso%20asincrono.png)
 ````
 Código en delegates/sequential
 ````
@@ -424,7 +424,7 @@ Código en delegates/sequential
 - Un método **async** devuelve una Task o una Task-Result-
 - El operador **await**se usa sobre la Task devuelta
 - Para conocer su uso ver el enlace ->https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/async/task-asynchronous-programming-model
-![[await async.png]]
+![](./img/await%20async.png)
 - Como es una ejecución asíncrona, el hilo pricipal puede continuar(método GetUrlContentLengthAsync())
 
 **Ejemplos de uso**
@@ -482,7 +482,7 @@ var numberOfImgsInUniovi = await taskGetImagesUniovi;
 # Lock
 - Consigue que únicamente un hilo pueda ejecutar una sección crítica simultáneamente (exclusión mutua).
 - Requiere especificar un objeto (referencia) como parámetro
-![[lock.png]]
+![](./img/lock.png)
 - No se puede acceder a la seccion crítica 1 y a la 2 por separado, ya que hacen referencia al mismo objeto.
 ---
 # Asignaciones
@@ -508,7 +508,7 @@ Código en synchronization/semaphores
 # Interbloqueo
 - Se produceentre un conjunto de tareas si todas y cada una de ellas están esperando por un evento que sólo otra puede causar. Todas se bloquean de forma permanente.
 - El caso más común es el acceso a recursos compartidos.
-![[interbloqueo.png]]
+![](./img/interbloqueo.png)
 ````
 Código en deadlock/
 ````
@@ -533,7 +533,7 @@ foreach (string s in items) {
 ## Implementación EEDD Thread-Safe
 - **Composición:** Si tenemos A composición B. A no puede vivir sin B. Es una relación más fuerte.
 - **Agregación:** Si tenemos A agrega B, A tiene un objeto de tipo B. A y B son objetos independientes. Es una relación más débil.
-![[thread safe.png]]
+![](./img/thread%20safe.png)
 - En este caso, se trata de una composición
 - La clase de la izquierda usa a la clase de la derecha.
 
@@ -548,7 +548,7 @@ foreach (string s in items) {
 ````
 Código en ReaderWiterLockSlim
 ````
-![[readerwriterlock.png]]
+![](./img/readerwriterlock.png)
 
 ---
 ## TPL y PLINQ 🍉
@@ -561,7 +561,7 @@ Ventajas:
 - Tareas independientes.
 https://docs.microsoft.com/es-es/dotnet/standard/parallel-programming/task-parallel-library-tpl
 ---
-![[pregunta paralelo.png]]
+![](./img/pregunta%20paralelo.png)
 ```c#
 vector.Select(x => x^2).Sum().Math.sqrt()
 ```
