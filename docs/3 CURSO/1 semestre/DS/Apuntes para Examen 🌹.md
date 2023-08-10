@@ -19,8 +19,8 @@
 - **Enlace dinámico**: asociación en tiempo de ejecución que tiene lugar entre la petición a un objeto y una de sus operaciones, lo que permite el **polimorfismo**
 	- **Polimorfismo**: cualquier objeto que implemente una interfaz concreta podrá ser reemplazado por otro que implemente esa misma interfaz
 - **Polimorfismo**: capacidad de dos o más tipos de objetos de responder al mismo mensaje, cada uno a su manera. Nos permite tener una lista de figuras y dibujarlas todas sin conocerlas:
-![[Pasted image 20221214170838.png]]
-![[Pasted image 20221214170906.png]]
+![](./img/Pasted%20image%2020221214170838.png)
+![](./img/Pasted%20image%2020221214170906.png)
 - La **clase** es una de las formas de crear tipos en Java
 - Se dice que un objeto es una **instancia** de una clase
 - El operador "**new**" crea un nuevo objeto y devuelve una referencia a él
@@ -35,11 +35,11 @@
 - **Opción**: forma de operar con los operandos. Pueden variar a medida que la clase evolucione
 
 - Los parámetros de un método deben ser sólo operandos
-![[Pasted image 20221214171825.png]]
-![[Pasted image 20221214171840.png]]
-![[Pasted image 20221214171859.png]]
-![[Pasted image 20221214172008.png]]
-![[Pasted image 20221214172019.png]]
+![](./img/Pasted%20image%2020221214171825.png)
+![](./img/Pasted%20image%2020221214171840.png)
+![](./img/Pasted%20image%2020221214171859.png)
+![](./img/Pasted%20image%2020221214172008.png)
+![](./img/Pasted%20image%2020221214172019.png)
 
 - **Estado de un objeto**: combinación de los valores de los atributos de un objeto. Guardar el estado de un objeto supone guardar la suficiente información para que al recuperarla se obtengan exacmtamente las mismas respuestas ante la misma secuencia infinita de mensajes tanto del original como del objeto recuperado. Generalmente basta con guardar los atributos
 - Normalmente no se debe dar acceso a los datos internos de un objeto (**encapsulación**), sino que se deben de usar **métodos de acceso**, es decir, getters y setters. Permite controlar las modificaciones del atributo.
@@ -68,15 +68,15 @@
 
 # 2 Interfaces y clases abstractas
 ---
-![[Pasted image 20221214173858.png]]
-![[Pasted image 20221214173933.png]]
+![](./img/Pasted%20image%2020221214173858.png)
+![](./img/Pasted%20image%2020221214173933.png)
 
 ## Interfaces
 - Permiten comunicar objetos que ==no se conocen==
 - Un objeto que quiera ser contratado debe cumplir con el contrato (es decir implementar la interfaz en cuestión)
-![[Pasted image 20221214174122.png]]
+![](./img/Pasted%20image%2020221214174122.png)
 - La revisión del contrato se hará de manera estática (se sabe en tiempo de compilación)
-![[Pasted image 20221214174230.png]]
+![](./img/Pasted%20image%2020221214174230.png)
 
 ## Herencia
 ### Tipos
@@ -90,9 +90,9 @@
 
 ## Clases abstractas
 - Evitan la duplicación de código en clases que hacen prácticamente lo mismo
-![[Pasted image 20221214174842.png]]
-![[Pasted image 20221214174855.png]]
-![[Pasted image 20221214174911.png]]
+![](./img/Pasted%20image%2020221214174842.png)
+![](./img/Pasted%20image%2020221214174855.png)
+![](./img/Pasted%20image%2020221214174911.png)
 
 - Uno de sus usos es factorizar código propio
 - AbstractAdepto se denomina clase base abstracta
@@ -102,25 +102,25 @@
 	- Entonces se denomina **clase base concreta**
 	- Pueden instanciarse directamente
 - Otro de sus usos es facilitar la extensión
-![[Pasted image 20221214175323.png]]
+![](./img/Pasted%20image%2020221214175323.png)
 
 ### Uso práctico de las clases abstractas
 - A la hora de implementar una interfaz, miraremos primero qué implementaciones nos vienen ya preparadas (escoger la más cercana)
-![[Pasted image 20221214175540.png]]![[Pasted image 20221214175554.png]]
+![](./img/Pasted%20image%2020221214175540.png)![](./img/Pasted%20image%2020221214175554.png)
 
 Una clase abstracta puede:
 - Dejar un método sin implementación para que lo implementen las clases derivadas
 - Dar la implementación completa del mensaje
 
 ¿Cómo conseguimos que cambie solo parte de la implementación?
-![[Pasted image 20221214175815.png]]
+![](./img/Pasted%20image%2020221214175815.png)
 - Aquí es donde aparecen los métodos abstractos
 - Se separa la parte común y la parte específica de la implementación
 	- La clase base contendrá la parte obligatoria
 	- Las clases derivadas aportarán la parte específica en nuevos mensajes
 	- ¡Para esto sirve el **protected**!
 	- Indica que hay que completar una implementación parcial
-![[Pasted image 20221214180040.png]]
+![](./img/Pasted%20image%2020221214180040.png)
 
 ## Resumen
 
@@ -141,23 +141,23 @@ Una clase abstracta puede:
 - Normalmente los clientes interactuarán con los objetos a través de dicha interfaz
 
 ## Jerarquías de interfaces
-![[Pasted image 20221214180824.png]]
-![[Pasted image 20221214180930.png]]
+![](./img/Pasted%20image%2020221214180824.png)
+![](./img/Pasted%20image%2020221214180930.png)
 
 - ¡No hace falta tener jerarquías para que un diseño sea orientado a objetos!
 - Las interfaces surgen por la necesidad de declarar unas responsabilidades
 - Por tanto, ==nunca debe surgir una jerarquía como mera clasificación==
 	- No hay que buscar un árbol equilibrado, tan sólo hay que comprobar que todas las interfaces tengan al menos un cliente que la use
-![[Pasted image 20221214181225.png]]
+![](./img/Pasted%20image%2020221214181225.png)
 
 ## Jerarquías de clases abstractas
-![[Pasted image 20221214181319.png]]
+![](./img/Pasted%20image%2020221214181319.png)
 
 - ¿De dónde salen las clases abstractas?
 	- Del implementador de la interfaz
 	- Del implementador de las clases concretas mediante **refactoring**
-![[Pasted image 20221214181445.png]]
-![[Pasted image 20221214181508.png]]
+![](./img/Pasted%20image%2020221214181445.png)
+![](./img/Pasted%20image%2020221214181508.png)
 
 - Una jerarquía de implementación de clases abstractas no es esencial que sea estable:
 	- El cliente sólo conoce la interfaz
@@ -180,8 +180,8 @@ programador)
 - Qué hacen con respecto a las operaciones de sus ancestros
 	- Añadir, redefinir, eliminar
 - Impacto en el resto del diseño si cambiamos unas u otras
-![[Pasted image 20221214182147.png]]
-![[Pasted image 20221214182358.png]]
+![](./img/Pasted%20image%2020221214182147.png)
+![](./img/Pasted%20image%2020221214182358.png)
 
 # 3 Principios de diseño
 ---
@@ -208,7 +208,7 @@ Síntomas de un diseño pobre:
 - Una responsabilidad es una razón para el cambio
 	- Si podemos pensar en más de un motivo por el que la clase debería cambiar, dicha clase tiene más de una responsabilidad
 
-![[Pasted image 20221214185841.png]]
+![](./img/Pasted%20image%2020221214185841.png)
 No es un buen diseño, porque viola el principio de responsabilidad única:
 - La clase Rectangle tiene dos responsabilidades
 	- Si una de las dos aplicaciones requiriese un cambio en rectangle, afectaría a la otra
@@ -216,8 +216,8 @@ No es un buen diseño, porque viola el principio de responsabilidad única:
 ## OCP: Principio de abierto-cerrado
 - **Las clases deberían estar abiertas para la extensión, pero cerradas para la modificación**
 - La idea es que los cambios se hagan añadiendo código nuevo, no modificando el anterior que ya funcionaba
-![[Pasted image 20221214190233.png]]
-![[Pasted image 20221214190250.png]]
+![](./img/Pasted%20image%2020221214190233.png)
+![](./img/Pasted%20image%2020221214190250.png)
 
 ## LSP: Principio de sustitución de Liskov
 - **Los subtipos deben poder sustituir a sus tipos base** / **Las funciones que usan referencias a una clase base deberían poder usar un objeto de cualquier clase derivada sin saberlo**
@@ -230,9 +230,9 @@ No es un buen diseño, porque viola el principio de responsabilidad única:
 ## DIP: Principio de inversión de dependencias
 - **Los módulos de alto nivel no deben depender de los de bajo nivel, ambos deben depender de abstracciones**
 - **Las abstracciones no deben depender de los detalles, sino éstos de las abstracciones**
-![[Pasted image 20221214190912.png]]
+![](./img/Pasted%20image%2020221214190912.png)
 La dependencia en un programa orientado a objetos bien diseñado suele ser a la inversa:
-![[Pasted image 20221214191034.png]]
+![](./img/Pasted%20image%2020221214191034.png)
 
 ## Principio de Hollywood
 - **Hay que depender de abstracciones, no de implementaciones concretas**, es decir, **programar para una interfaz, no para una implemenetación**
@@ -242,13 +242,13 @@ La dependencia en un programa orientado a objetos bien diseñado suele ser a la 
 - ISP sugiere: **los clientes no deberían tratar con la clase original, sino sólo con la interfaz correspondiente**
 - Es mejor muchas interfaces específicas para cada cliente que una sóla interfaz de propósito general, es decir, los clientes no deberían depender de métodos que no usan.
 
-![[Pasted image 20221214191652.png]]
-![[Pasted image 20221214191707.png]]
-![[Pasted image 20221214191721.png]]
-![[Pasted image 20221214191740.png]]
-![[Pasted image 20221214191751.png]]
-![[Pasted image 20221214191805.png]]
-![[Pasted image 20221214191817.png]]
+![](./img/Pasted%20image%2020221214191652.png)
+![](./img/Pasted%20image%2020221214191707.png)
+![](./img/Pasted%20image%2020221214191721.png)
+![](./img/Pasted%20image%2020221214191740.png)
+![](./img/Pasted%20image%2020221214191751.png)
+![](./img/Pasted%20image%2020221214191805.png)
+![](./img/Pasted%20image%2020221214191817.png)
 
 ## Patrones/Principios GRASP
 - Principios generales para asignar responsabilidades
@@ -265,7 +265,7 @@ La dependencia en un programa orientado a objetos bien diseñado suele ser a la 
 - Los métodos se definen para llevar a cabo responsabilidades
 - Las responsabilidades se implementan mediante métodos que o actúan sólos o colaboran con otros métodos u objetos
 - Los diagramas de interacción reflejan las decisiones de diseño en la asignación de responsabilidades
-![[Pasted image 20221214192353.png]]
+![](./img/Pasted%20image%2020221214192353.png)
 
 ## GRASP 1º: Experto en información
 - Uno de los principios más generales para asignar responsabilidades a los objetos
@@ -273,7 +273,7 @@ La dependencia en un programa orientado a objetos bien diseñado suele ser a la 
 
 ## GRASP 2º: Creador
 - ¿Quién debería ser el responsable de la creación de una nueva instancia de una clase?
-![[Pasted image 20221214193005.png]]
+![](./img/Pasted%20image%2020221214193005.png)
 - Si se asignan bien las responsabilidades, el diseño tendrá un bajo acoplamiento, mayor claridad, encapsulamiento y reutilización
 - A veces la creación de objetos requiere una cierta complejidad
 	- En esos casos es conveniente delegar la creación a una clase de fabricación auxiliar (MUCHO OJO CON ABUSAR DE LAS FACTORÍAS)
@@ -297,38 +297,38 @@ La dependencia en un programa orientado a objetos bien diseñado suele ser a la 
 - Una clase con baja cohesión hace muchas cosas no relacionadas o hace demasiado trabajo
 
 ## Acomplamiento, cohesión y el cambio
-![[Pasted image 20221214194344.png]]
-![[Pasted image 20221214194428.png]]
-![[Pasted image 20221214194444.png|500]]
-![[Pasted image 20221214194456.png||500]]
+![](./img/Pasted%20image%2020221214194344.png)
+![](./img/Pasted%20image%2020221214194428.png)
+![](./img/Pasted%20image%2020221214194444.png|500)
+![](./img/Pasted%20image%2020221214194456.png||500)
 
 ## Suficiencia, completitud y ser primitivo
 - **Suficiente**: el componente representa suficientes características de una abstracción como para permitir una asbtracción significativa con el componente
 - **Completo**: la interfaz del componente representa todas las características de la abstracción
 - **Primitivo**: si todas las operaciones que realiza un componente pueden implementarse fácil y eficientemente necesitando acceder a la representación interna del componente
 
-![[Pasted image 20221214194827.png]]
+![](./img/Pasted%20image%2020221214194827.png)
 
 ## GRASP 5º: Controlador
 - ¿Quién debe ser el responsable de gestionar un evento de entrada al sistema?
-![[Pasted image 20221214194951.png]]
+![](./img/Pasted%20image%2020221214194951.png)
 
 ## GRASP 6º: Polimorfismo
 - ¿Cómo manejar las alternativas basadas en el tipo?¿Cómo crear componentes software conectables?
-![[Pasted image 20221214195115.png]]
+![](./img/Pasted%20image%2020221214195115.png)
 - Hay que intentar huír de la lógica condicional con respecto al tipo (if, instanceof, switch)
 
 ## GRASP 7º: Fabricación pura
 - ¿Qué objetos deberían tener la responsabilidad cuando no se quiere violar los principios de alta cohesión y bajo acoplamiento pero, sin embargo, las solouciones que ofrece el experto no son adecuadas?
-![[Pasted image 20221214195326.png]]
+![](./img/Pasted%20image%2020221214195326.png)
 
 ## GRASP 8º: Indirección
 - ¿Dónde asignar una responsabilidad, para evitar el acoplamiento directo entre dos o más elementos?
-![[Pasted image 20221214195604.png]]
+![](./img/Pasted%20image%2020221214195604.png)
 
 ## GRASP 9º: Variaciones protegidas
 - ¿Cómo diseñar objetos, subsistemas y sistemas de manera que las variaciones o inestabilidades en estos elementos no tengan un impacto no deseable en otros elementos?
-![[Pasted image 20221214195725.png]]
+![](./img/Pasted%20image%2020221214195725.png)
 
 ## ¿Qué es un buen diseño?
 - Un sistema está bien diseñado si:
@@ -406,7 +406,7 @@ La dependencia en un programa orientado a objetos bien diseñado suele ser a la 
 - Patrones relacionados
 
 ==Hay un total de 23 patrones de diseño a estudiar==
-![[Pasted image 20221214204207.png]]
+![](./img/Pasted%20image%2020221214204207.png)
 
 ## ¿Cómo seleccionar un patrón de diseño?
 - Examinar la sección Intent (Propósito)
@@ -473,7 +473,7 @@ La dependencia en un programa orientado a objetos bien diseñado suele ser a la 
 - Define una familia de algoritmos, encapsula cada uno y los hace intercambiables. Permite que el algoritmo varíe de forma independiente a los clientes que lo usan.
 
 - Es un **patrón de comportamiento** también conocido como **Policy**
-![[Pasted image 20221214222810.png]]
+![](./img/Pasted%20image%2020221214222810.png)
 
 ### Aplicabilidad
 - Permite configurar una clase con un comportamiento determinado de entre varios
@@ -482,7 +482,7 @@ La dependencia en un programa orientado a objetos bien diseñado suele ser a la 
 	- El patrón Strategy permite mover cada rama de esos condicionales anidados a su propia clase
 
 ### Estructura
-![[Pasted image 20221214222957.png]]
+![](./img/Pasted%20image%2020221214222957.png)
 
 ### Participantes
 - **Strategy (Compositor)**: declara una interfaz común
@@ -505,8 +505,8 @@ Consecuencias
 	- Evita la explosión de subclases
 	- Hace que el contexto sea más fácil de entender, modificar y mantener
 	- Se puede cambiar dinámicamente
-![[Pasted image 20221214223631.png]]
-![[Pasted image 20221214223643.png]]
+![](./img/Pasted%20image%2020221214223631.png)
+![](./img/Pasted%20image%2020221214223643.png)
 - Sin embargo, crece el número de objetos
 
 ### Posibles usos
@@ -516,23 +516,23 @@ Consecuencias
 # 6. Factory Method y Abstract Factory 
 ---
 - ¿Qué pasa con new()?
-![[Pasted image 20221214224846.png]]
-![[Pasted image 20221214224954.png]]
+![](./img/Pasted%20image%2020221214224846.png)
+![](./img/Pasted%20image%2020221214224954.png)
 - Es decir, tenemos una serie de clases concretas que instancias, y la decisión de cuál debe ser sólo se puede tomar en tiempo de ejecución
 - Cada vez que aparecen nuevas clases o se eliminan, hay que modificar el código
 - Tenemos que identificar aquellos aspectos que varían y separarlos de lo que tiende a permanecer igual
-![[Pasted image 20221214225257.png]]
-![[Pasted image 20221214225322.png]]
-![[Pasted image 20221214225404.png]]
-![[Pasted image 20221214225427.png]]
+![](./img/Pasted%20image%2020221214225257.png)
+![](./img/Pasted%20image%2020221214225322.png)
+![](./img/Pasted%20image%2020221214225404.png)
+![](./img/Pasted%20image%2020221214225427.png)
 ¿Qué ocurre si añadimos o eliminamos algún tipo de pizza?
 - Que tenemos que modificar el código
-![[Pasted image 20221214225538.png]]
-![[Pasted image 20221214225603.png]]
-![[Pasted image 20221214225631.png]]
-![[Pasted image 20221214225721.png]]
-![[Pasted image 20221214225750.png]]
-![[Pasted image 20221214225856.png]]
+![](./img/Pasted%20image%2020221214225538.png)
+![](./img/Pasted%20image%2020221214225603.png)
+![](./img/Pasted%20image%2020221214225631.png)
+![](./img/Pasted%20image%2020221214225721.png)
+![](./img/Pasted%20image%2020221214225750.png)
+![](./img/Pasted%20image%2020221214225856.png)
 
 ### Aclaración:
 - Un método de creación es cualquier método (estático o no) que devuelve una instancia de un objeto
@@ -541,10 +541,10 @@ Consecuencias
 
 Ahora resulta que queremos añadir dos estilos de pizzerías (estilo New York y estilo Chicago)
 - Tendremos que crear un framework para la pizzería:
-![[Pasted image 20221214230908.png]]
-![[Pasted image 20221214230227.png|500]]
-![[Pasted image 20221214230339.png]]
-![[Pasted image 20221214230355.png]]
+![](./img/Pasted%20image%2020221214230908.png)
+![](./img/Pasted%20image%2020221214230227.png|500)
+![](./img/Pasted%20image%2020221214230339.png)
+![](./img/Pasted%20image%2020221214230355.png)
  ¿Quién es el responsable de decidir qué objeto Pizza se crea?
  - Las subclases (usando el patrón **Factory Method**)
 
@@ -562,7 +562,7 @@ Ahora resulta que queremos añadir dos estilos de pizzerías (estilo New York y 
 	- Hay clases que delegan responsabilidades en una o varias subclases y queremos localizar el conocimiento de qué subclase es el delegado
 
 ### Estructura
-![[Pasted image 20221214230816.png]]
+![](./img/Pasted%20image%2020221214230816.png)
 En Java:
 - Podemos pasarle el nombre de la clase al método de fabricación y crear ésta mediante reflectividad
 - Más común:
@@ -572,11 +572,11 @@ En Java:
 ## Abstract Factory
 ### Propósito
 - Define una interfaz para crear familias de objetos relacionados sin especificar sus clases concretas
-![[Pasted image 20221214233742.png]]
-![[Pasted image 20221214233811.png]]
+![](./img/Pasted%20image%2020221214233742.png)
+![](./img/Pasted%20image%2020221214233811.png)
 
 ### Estructura
-![[Pasted image 20221214233900.png]]
+![](./img/Pasted%20image%2020221214233900.png)
 
 ### Consecuencias
 - Aísla las clases concretas
@@ -598,7 +598,7 @@ En Java:
 		- Se pierde la comprobación estática de tipos
 
 ## Diferencias entre Factory, Factory Method y Abstract Factory
-![[Pasted image 20221214234702.png]]
+![](./img/Pasted%20image%2020221214234702.png)
 
 ### Encapsular clases con Factory
 - Hacer los constructores privados y dejar que los clientes creen objetos de ellas usando una factoría
@@ -612,12 +612,12 @@ En Java:
 ### Motivación
 Un editor de dibujo permite realizar dibujos compuestos de elementos simples (líneas, rectángulos...) u otros dibujos.
 - ¿Cómo evitamos que los clientes tengan que distinguir entre unos y otros?
-![[Pasted image 20221215112521.png]]
-![[Pasted image 20221215112540.png]]
+![](./img/Pasted%20image%2020221215112521.png)
+![](./img/Pasted%20image%2020221215112540.png)
 
 ### Estructura
-![[Pasted image 20221215112613.png]]
-![[Pasted image 20221215112649.png]]
+![](./img/Pasted%20image%2020221215112613.png)
+![](./img/Pasted%20image%2020221215112649.png)
 
 ### Participantes
 - **Component**: 
@@ -640,7 +640,7 @@ Un editor de dibujo permite realizar dibujos compuestos de elementos simples (l�
 
 ### Implementación
 - Maximizar la interfaz de Component
-![[Pasted image 20221215113242.png]]
+![](./img/Pasted%20image%2020221215113242.png)
 
 
 ## State
@@ -649,8 +649,8 @@ Un editor de dibujo permite realizar dibujos compuestos de elementos simples (l�
 - Permite a un objeto alterar su comportamiento cuando cambia su estado interno en tiempo de ejecución. Parecerá como si el objeto hubiera cambiado su clase.
 
 ### Motivación
-![[Pasted image 20221215114813.png]]
-![[Pasted image 20221215114835.png]]
+![](./img/Pasted%20image%2020221215114813.png)
+![](./img/Pasted%20image%2020221215114835.png)
 
 ### Aplicabilidad
 Úsese cuando:
@@ -660,8 +660,8 @@ Un editor de dibujo permite realizar dibujos compuestos de elementos simples (l�
 	- El patrón mueve cada rama de la lógica condicional a una clase aparte
 
 ### Estructura
-![[Pasted image 20221215115047.png]]
-![[Pasted image 20221215115101.png]]
+![](./img/Pasted%20image%2020221215115047.png)
+![](./img/Pasted%20image%2020221215115101.png)
 
 ### Participantes
 - **Context**: 
@@ -684,14 +684,14 @@ Un editor de dibujo permite realizar dibujos compuestos de elementos simples (l�
 	- Este patrón no sería necesario en lenguajes que permiten cambiar la clase de un objeto en tiempo de ejecución
 - Puede venir bien añadir métodos de entrada (entry) y de salida (exit) a la interfaz de State
 
-![[Pasted image 20221215115954.png]]
+![](./img/Pasted%20image%2020221215115954.png)
 
 
 ### ¿En qué se diferencia del Strategy?
 
 - Strategy es seleccionado por un agente externo o por el contexto. Strategy tiende a tener un único método de inicio que llama al resto. Hay **mucha cohesión** entre los métodos de Strategy
 - State  normalmente cambia el estado de su contexto. Un state suele tener muchos métodos no relacionados (**baja cohesión**)
-![[Pasted image 20221215120513.png]]
+![](./img/Pasted%20image%2020221215120513.png)
 
 
 ## Template Method
@@ -705,8 +705,8 @@ Un editor de dibujo permite realizar dibujos compuestos de elementos simples (l�
 - Para controlar el modo en el que las subclases extienden de la clase base
 
 ### Estructura
-![[Pasted image 20221215122415.png]]
-![[Pasted image 20221215122458.png]]
+![](./img/Pasted%20image%2020221215122415.png)
+![](./img/Pasted%20image%2020221215122458.png)
 
 ### Participantes
 - **AbstractClass**: 
@@ -727,8 +727,8 @@ Un editor de dibujo permite realizar dibujos compuestos de elementos simples (l�
 		- Normalmente protegidas, tienen una implementación vacía en la clase abstracta que las subclases podrán redefinir. Son como operaciones opcionales
 
 ### Operaciones de enganche
-![[Pasted image 20221215123103.png]]
-![[Pasted image 20221215123128.png]]
+![](./img/Pasted%20image%2020221215123103.png)
+![](./img/Pasted%20image%2020221215123128.png)
 
 ### Implementación
 - Hacer a las operaciones primitivas llamadas por el método de plantilla **protected**
@@ -749,7 +749,7 @@ Un editor de dibujo permite realizar dibujos compuestos de elementos simples (l�
 - Es un patrón estructural
 ### Propósito
 - Convierte la interfaz de una clase en otra que es la que esperan los clientes. Permite que trabajen juntas clases que de otro modo no podrían por tener interfaces incompatibles
-![[Pasted image 20221215130354.png]]
+![](./img/Pasted%20image%2020221215130354.png)
 - Muchas veces el adaptador tendrá que implementar funcionalidad que la clase adaptada no hace
 
 ### Aplicabilidad
@@ -759,10 +759,10 @@ Un editor de dibujo permite realizar dibujos compuestos de elementos simples (l�
 	- Un adaptador de objetos puede adaptar la interfaz de su clase padre
 
 ### Estructura
-![[Pasted image 20221215130806.png]]
-![[Pasted image 20221215130843.png]]
-![[Pasted image 20221215130911.png]]
-![[Pasted image 20221215130933.png]]
+![](./img/Pasted%20image%2020221215130806.png)
+![](./img/Pasted%20image%2020221215130843.png)
+![](./img/Pasted%20image%2020221215130911.png)
+![](./img/Pasted%20image%2020221215130933.png)
 
 ### Participantes
 - **Target**: define la interfaz específica del dominio (usada por los clientes)
@@ -789,8 +789,8 @@ Un editor de dibujo permite realizar dibujos compuestos de elementos simples (l�
 ### Motivación
 - La clave de este patrón es una interfaz **Command** que define una operación **execute**
 - Son las subclases concretas quienes implementan la operación y especifican el receptor de la orden
-![[Pasted image 20221215133007.png]]
-![[Pasted image 20221215133020.png]]
+![](./img/Pasted%20image%2020221215133007.png)
+![](./img/Pasted%20image%2020221215133020.png)
 - Lo que permite el patrón Command es desacoplar el objeto que invoca a la operación de aquél que tiene el conocimiento necesario para realizarla
 
 ### Aplicabilidad
@@ -805,8 +805,8 @@ Un editor de dibujo permite realizar dibujos compuestos de elementos simples (l�
 	- Usar transacciones (como en RI)
 
 ### Estructura
-![[Pasted image 20221215133428.png]]
-![[Pasted image 20221215133450.png]]
+![](./img/Pasted%20image%2020221215133428.png)
+![](./img/Pasted%20image%2020221215133450.png)
 
 ### Participantes
 - **Command**: define una interfaz para ejecutar una operación
@@ -822,12 +822,12 @@ Un editor de dibujo permite realizar dibujos compuestos de elementos simples (l�
 - Un objeto **Invoker** guarda el objeto **ConcreteCommand**
 - Aquél llama a la operación de este último
 - El objeto **ConcreteCommand** se vale de las operaciones de su receptor para llevar a cabo la acción
-![[Pasted image 20221215134101.png]]
+![](./img/Pasted%20image%2020221215134101.png)
 
 ### Consecuencias
 - Resulta sencillo añadir nuevas acciones, al no tener que tocar las clases existentes
-![[Pasted image 20221215134157.png]]
-![[Pasted image 20221215134241.png]]
+![](./img/Pasted%20image%2020221215134157.png)
+![](./img/Pasted%20image%2020221215134241.png)
 
 # 9. Decorator y Observer
 ---
@@ -839,9 +839,9 @@ Un editor de dibujo permite realizar dibujos compuestos de elementos simples (l�
 - También conocido como Wrapper
 
 ### Estructura
-![[Pasted image 20221215145648.png]]
-![[Pasted image 20221215145818.png]]
-![[Pasted image 20221215145834.png]]
+![](./img/Pasted%20image%2020221215145648.png)
+![](./img/Pasted%20image%2020221215145818.png)
+![](./img/Pasted%20image%2020221215145834.png)
 
 ### Aspectos clave
 - Los decoradores tienen el mismo tipo que los objetos que decoran
@@ -855,14 +855,14 @@ Un editor de dibujo permite realizar dibujos compuestos de elementos simples (l�
 - Una solución más flexible que la herencia sería envolver el componente en otro objeto envoltorio que realice una operación (el decorador)
 - La presencia del decorador es transparente para los clientes del componente
 - El decorador puede llevar a cabo acciones adicionales
-![[Pasted image 20221215150356.png]]
+![](./img/Pasted%20image%2020221215150356.png)
 
 ### Aplicabilidad
 - Para añadir responsabilidades a otros objetos dinámicamente y de forma transparente
 - Cuando no se puede heredar o no resulta práctico
 
 ### Estructura
-![[Pasted image 20221215150513.png]]
+![](./img/Pasted%20image%2020221215150513.png)
 
 ### Participantes
 - **Component**: define la interfaz de los objetos a los que se les puede añadir responsabilidades dinámicamente
@@ -879,7 +879,7 @@ Un editor de dibujo permite realizar dibujos compuestos de elementos simples (l�
 	- Un decorador y sus componentes no son idénticos
 	- Muchos objetos pequeños
 
-![[Pasted image 20221215151101.png]]
+![](./img/Pasted%20image%2020221215151101.png)
 
 ### Patrones relacionados
 - **Adapter**
@@ -890,8 +890,8 @@ Un editor de dibujo permite realizar dibujos compuestos de elementos simples (l�
 - **Strategy**
 	- Un decorator cambia la piel del objeto, un Strategy sus tripas
 
-![[Pasted image 20221215151445.png]]
-![[Pasted image 20221215151456.png]]
+![](./img/Pasted%20image%2020221215151445.png)
+![](./img/Pasted%20image%2020221215151456.png)
 
 ## Observer
 - Patrón de comportamiento de objetos
@@ -899,7 +899,7 @@ Un editor de dibujo permite realizar dibujos compuestos de elementos simples (l�
 ### Propósito
 - Define una dependencia de uno a muchos entre objetos, de modo que cuando un objeto cambia su estado, todos los demás objetos dependientes se modifican y actualizan su estado automáticamente
 - También conocido como Publicar-Suscribir
-![[Pasted image 20221215153322.png]]
+![](./img/Pasted%20image%2020221215153322.png)
 
 ### Aplicabilidad
 - Una abstracción tiene dos aspectos, uno de los cuales depende del otro
@@ -908,9 +908,9 @@ Un editor de dibujo permite realizar dibujos compuestos de elementos simples (l�
 - Un objeto necesita notificar a otros cambios en su estado sin hacer presunciones sobre quiénes son dichos objetos (cuando no queremos que estén fuertemente acoplados)
 
 ### Estructura
-![[Pasted image 20221215153542.png]]
-![[Pasted image 20221215153616.png]]
-![[Pasted image 20221215153649.png]]
+![](./img/Pasted%20image%2020221215153542.png)
+![](./img/Pasted%20image%2020221215153616.png)
+![](./img/Pasted%20image%2020221215153649.png)
 
 ### Participantes 
 - **Subject**:
@@ -926,7 +926,7 @@ Un editor de dibujo permite realizar dibujos compuestos de elementos simples (l�
 	- Guarda el estado que debería permanecer sincronizado con el objeto observado
 	- Implementa la interfaz Observer para mantener su estado consistente con el objeto observado
 
-![[Pasted image 20221215154200.png]]
+![](./img/Pasted%20image%2020221215154200.png)
 
 ### Consecuencias
 - No se especifica el receptor de una actualización, se envía a todos los interesados
@@ -954,7 +954,7 @@ Un buen ejemplo serían los Eventos de Java y los Listener
 ### Propósito
 - Especifica los tipos de objetos a crear usando una instancia prototípica y crea nuevos objetos copiando dicho prototipo
 
-![[Pasted image 20221215203949.png]]
+![](./img/Pasted%20image%2020221215203949.png)
 
 ### Aplicabilidad 
 - Usese el patrón Prototype cuando un sistema no pueda (o no deba) conocer cómo se crean, componen y representan los productos, y si además se da alguna de estas circunstancias:
@@ -963,8 +963,8 @@ Un buen ejemplo serían los Eventos de Java y los Listener
 	- cuando las instancias de una clase puedan tener sólo unos pocos posibles estados, y pueda resultar más convincente crear los objetos correspondientes como prototipos y clonarlos, en vez de instanciar manualmente la clase, cada vez con el estado necesario
 
 ### Estructura
-![[Pasted image 20221215204259.png]]
-![[Pasted image 20221215204327.png]]
+![](./img/Pasted%20image%2020221215204259.png)
+![](./img/Pasted%20image%2020221215204327.png)
 
 ### Participantes
 - **Prototype**: declara la interfaz para clonarse (suele ser una única operación)
@@ -989,10 +989,10 @@ Inconvenientes:
 
 ### Propósito
 - Representa una operación a realizar sobre una estructura de objetos. Permite definir nuevas operaciones sin modificar las clases de los elementos sobre los que opera
-![[Pasted image 20221215205904.png]]
-![[Pasted image 20221215205954.png]]
-![[Pasted image 20221215210008.png]]
-![[Pasted image 20221215210045.png]]
+![](./img/Pasted%20image%2020221215205904.png)
+![](./img/Pasted%20image%2020221215205954.png)
+![](./img/Pasted%20image%2020221215210008.png)
+![](./img/Pasted%20image%2020221215210045.png)
 
 - En Java, el enlace dinámico no se aplica a los parámetros, sino sólo al receptor del mensaje
 
@@ -1003,8 +1003,8 @@ Debería aplicarse cuando:
 	- El **Visitor**  permite mantener juntas operaciones relacionadas definiéndolas en una clase
 
 ### Estructura
-![[Pasted image 20221215211855.png]]
-![[Pasted image 20221215211917.png]]
+![](./img/Pasted%20image%2020221215211855.png)
+![](./img/Pasted%20image%2020221215211917.png)
 
 ### Participantes
 - **Visitor**:

@@ -16,7 +16,7 @@
 - **Segmentación:** se siguen criterios lógicos (se tiene en cuenta el contenido del proceso).
 ---
 ### Memoria virtual, paginación
-![[paginacion.png]]
+![](./img/paginacion.png)
 
 ---
 ---
@@ -137,7 +137,7 @@ NOTAS:
 ---
 - Es importante que el sistema operativo generalice la aceptación de dispositivos (diversidad).
 - Partes de los dispositivos:
-![[partes dispositivos.png | 500]]
+![](./img/partes%20dispositivos.png%20|%20500)
 
 - Un controlador tiene las siguientes partes:
 	- Registro de control
@@ -149,7 +149,7 @@ NOTAS:
 # 31 Marzo 2022 🛩
 ---
 - Cómo podría planificarse un sistema de entrada salida:
-![[funcionamiento Entrada salida.png]]
+![](./img/funcionamiento%20Entrada%20salida.png)
 - **IORB**-> Input Output Request Block, forma de funcionar el manejador independiente de dispositivo.
 - **Manejador independiente:**: verifica los parámetros, crea el IORB y avisa al manejador dependiente del dispositivo (hay uno en el sistema).
 - **Manejador dependiente del dispositivo (driver):** Hay uno por cada dispositivo o tipo de dispositivo. Es el driver del dispositivo. Da las órdenes para cumplir la petición (hay uno por cada dispositivo).
@@ -171,7 +171,7 @@ NOTAS:
 	- Pistas
 	- Sectores
 	- Cilindros
-   ![[disco.png|400]]
+   ![](./img/disco.png|400)
    ¿Cómo funciona un disco? -> https://www.youtube.com/watch?v=kdmLvl1n82U
    - El disco sabe leer y escribir un sector.
    
@@ -194,14 +194,14 @@ Pretende:
 - Evitar inanición de peticiones
 ---
 - **FCFS(First Come First Served)**, igual que la FIFO
-![[fcfs.png|400]]
+![](./img/fcfs.png|400)
  - **SSTF (Shortest Seek Time First)**, óptimo en rendimiento, pero discrimina peticiones
- ![[sstf.png|400]]
+ ![](./img/sstf.png|400)
  - **Scan y Look**, también conocida como política del ascensor. 
  Diferencia entre scan y look: El scan siempre hace barridos completos, llega hasta el final, mientras que el loop se ahorra el tramo en el que no quedan peticiones.
- ![[scan look.png|400]]
+ ![](./img/scan%20look.png|400)
  - **Scan Circular (C-Scan) y C-look**, en lugar de dar la vuelta mirando las peticiones, al llegar al final se vuelve al principio.
- ![[scan circular.png|400]]
+ ![](./img/scan%20circular.png|400)
  - NO ESTÁ EN DIAPOS-> **Scan o loop N-Pasos**, empieza el recorrido partiendo la cola en dos. Se trata la primera mitad de peticiones en primer lugar. Cuando se termina esa partición, se comienza un nuevo recorrido con otra partición. No hay posibilidad de inanicion.
  ---
 # Tema 6, Gestión de ficheros ⛵️
@@ -240,15 +240,15 @@ Pretende:
 ### Asignación no contigua
 - Rendimiento pobre.
 	#### Asignación enlazada
-	![[enlazada.png|500]]
+	![](./img/enlazada.png|500)
 	#### Asignación con FAT
 	- Usado en dispositivos externos (SD, usb).
 	- Cada entrada es de 32 bits.
-  ![[fat.png|500]]
+  ![](./img/fat.png|500)
 	#### Asignación indexada con tabla de índices
-  ![[indexada.png|500]]
+  ![](./img/indexada.png|500)
 	#### Asignación indexada con árboles equilibrados
-	![[arboles.png|500]]
+	![](./img/arboles.png|500)
 ---
 ## Directorios
 - Asocia los nombres que el usuario le da al fichero con el descriptor interno usado por el sistema operativo.

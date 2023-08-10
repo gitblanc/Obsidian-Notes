@@ -3,11 +3,11 @@
 ## Programación dinámica
 - Tenemos un array donde guardamos resultados intermedios para calcular el resultado final.
 - Es un método iterativo, cuyo origen es una función recursiva. Sustituimos las llamadas recursiva por accesos a las posiciones del array.
-![[funcion recursiva.png|300]]
+![](./img/funcion%20recursiva.png|300)
 - Se repiten operaciones, por tanto se guardan las calculadas en un array para no recalcularlas varias veces.
 ---
 ## Problema del cambio
-![[problema cambio.jpeg]]
+![](./img/problema%20cambio.jpeg)
 Lo que no se ve son 10 céntimos :-)
 - Buscar el mínimo para no pasarse, usando la moneda de la iteración o de iteraciones anteriores.
 ---
@@ -15,9 +15,9 @@ Lo que no se ve son 10 céntimos :-)
 - **Problema de las 8 reinas:** colocar 8 reinas en un tablero sin que se coman.
 - **Backtracking** explora el grafo, va desarrollando estados hasta que encuentra una solución. Es un *algoritmo de fuerza bruta*, puesto que lo que hace es desarrollar estados de forma rápida hasta encontrar una solución.
 - Técnica ineficiente, con complejidades exponenciales.
-![[recorrido en profundidad.png]]
+![](./img/recorrido%20en%20profundidad.png)
 - **Grafo implícito:** grafo que se desarrolla a medida que se va recorriendo. Ahorra tiempo de ejecución y espacio en memoria.
-![[grafo implicito.png]]
+![](./img/grafo%20implicito.png)
 
 #### Esquema Backtracking
 ```java
@@ -53,8 +53,8 @@ public static void backtracking(Estado e) {
 - Backtracking tiene complejidad explonencial.
 ---
 ### Ejercicio formar palabras a partir de un conjunto de letras
-![[formar palabras planteo.png]]
-![[formar palabras.png]]
+![](./img/formar%20palabras%20planteo.png)
+![](./img/formar%20palabras.png)
 ```java
  public static void backtracking (int nivel) {
 
@@ -82,8 +82,8 @@ public static void backtracking(Estado e) {
 ```
 ---
 ### Problema de la asignación de tareas a agentes
-![[tareas agentes.png]]
-![[tareas agente res.png]]
+![](./img/tareas%20agentes.png)
+![](./img/tareas%20agente%20res.png)
 ```java
  static void backtracking (int nivel) {  
 	if (nivel==n) { //hay ya una asignación completa
@@ -174,16 +174,16 @@ Diferencias de poda con backtracking:
 - Desarrollo de los nodos en anchura.
 - Aplicamos heuristico para seleccionar cuál de ellos vamos a desarrollar.
 
-![[ramificacion.png|500]]
+![](./img/ramificacion.png|500)
 
-![[ramifica asignacion.png|500]]
+![](./img/ramifica%20asignacion.png|500)
 MALA FORMA, sirve para hallar una solución. Para hallar la solución óptima es malo.
 
-![[ramifica asignacion good.png|500]]
+![](./img/ramifica%20asignacion%20good.png|500)
 
 ---
 # 19 Abril 2022 ⏰
 ---
 - El heurístico de ramificación permite saber los nodos que llevan a la solución final
 - El heurístico de poda permite ir eliminando aquellos nodos que superen la cota.
-![[nreinas.png||500]]
+![](./img/nreinas.png||500)

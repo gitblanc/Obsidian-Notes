@@ -16,12 +16,12 @@
 - **Allow List** -> it is used to permit only certain inputs
 - **Open Redirect** -> allows to bypass strict rules
 
-![[ssrf1.png]]
-![[ssrf2.png]]
-![[ssrf3.png]]
-![[ssrf4.png]]
-![[ssrf5.png]]
-![[ssrf6.png]]
-![[ssrf7.png]]
-![[ssrf8.png]]
-![[ssrf9.png]]
+![](./img/ssrf1.png)
+![](./img/ssrf2.png)
+![](./img/ssrf3.png)
+![](./img/ssrf4.png)
+![](./img/ssrf5.png)
+![](./img/ssrf6.png)
+![](./img/ssrf7.png)
+![](./img/ssrf8.png)
+![](./img/ssrf9.png)

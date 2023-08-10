@@ -5,14 +5,14 @@
 - Note: we can bypass a number filter with hexadecimal values.
 -  **Command injection CHEAT SHEET** -> https://github.com/payloadbox/command-injection-payload-list
 
-![[ci1.png]]
-![[ci2.png]]
-![[ci3.png]]
-![[ci4.png]]
-![[ci5.png]]
-![[ci6.png]]
-![[ci7.png]]
-![[ci8.png]]
-![[ci9.png]]
-![[ci10.png]]
-![[ci11.png]]
+![](./img/ci1.png)
+![](./img/ci2.png)
+![](./img/ci3.png)
+![](./img/ci4.png)
+![](./img/ci5.png)
+![](./img/ci6.png)
+![](./img/ci7.png)
+![](./img/ci8.png)
+![](./img/ci9.png)
+![](./img/ci10.png)
+![](./img/ci11.png)

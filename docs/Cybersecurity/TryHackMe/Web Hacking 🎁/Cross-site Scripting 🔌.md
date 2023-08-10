@@ -10,25 +10,25 @@
 - **onload event** -> executes the code of your choosing once the image specified is the src attribute has loaded onto the webpage.
 - **Polyglots** -> is a string of text which can escape attributes, tags, bypass filters all in one.
 
-![[xss1.png]]
-![[xss2.png]]
-![[xss3.png]]
-![[xss4.png]]
-![[xss5.png]]
-![[xss6.png]]
-![[xss7.png]]
-![[xss8.png]]
-![[xss9.png]]
-![[xss10.png]]
-![[xss11.png]]
-![[xss12.png]]
-![[xss13.png]]
-![[xss14.png]]
-![[xss15.png]]
-![[xss16.png]]
-![[xss17.png]]
-![[xss18.png]]
-![[xss19.png]]
-![[xss20.png]]
-![[xss21.png]]
-![[xss22.png]]
+![](./img/xss1.png)
+![](./img/xss2.png)
+![](./img/xss3.png)
+![](./img/xss4.png)
+![](./img/xss5.png)
+![](./img/xss6.png)
+![](./img/xss7.png)
+![](./img/xss8.png)
+![](./img/xss9.png)
+![](./img/xss10.png)
+![](./img/xss11.png)
+![](./img/xss12.png)
+![](./img/xss13.png)
+![](./img/xss14.png)
+![](./img/xss15.png)
+![](./img/xss16.png)
+![](./img/xss17.png)
+![](./img/xss18.png)
+![](./img/xss19.png)
+![](./img/xss20.png)
+![](./img/xss21.png)
+![](./img/xss22.png)

@@ -6,24 +6,24 @@
 - **NULL Byte** -> %00
 - **Remote File Inclusion (RFI)** -> technique to include remote files into a vulnerable application. It has one requirement: `allow_url_fopen` must be on.
 
-![[file1.png]]
-![[file2.png]]
-![[file3.png]]
-![[file4.png]]
-![[file5.png]]
-![[file6.png]]
-![[file7.png]]
-![[file8.png]]
-![[file9.png]]
-![[file10.png]]
-![[file11.png]]
-![[file12.png]]
-![[file13.png]]
-![[file14.png]]
-![[file15.png]]
-![[file16.png]]
-![[file17.png]]
-![[file18.png]]
+![](./img/file1.png)
+![](./img/file2.png)
+![](./img/file3.png)
+![](./img/file4.png)
+![](./img/file5.png)
+![](./img/file6.png)
+![](./img/file7.png)
+![](./img/file8.png)
+![](./img/file9.png)
+![](./img/file10.png)
+![](./img/file11.png)
+![](./img/file12.png)
+![](./img/file13.png)
+![](./img/file14.png)
+![](./img/file15.png)
+![](./img/file16.png)
+![](./img/file17.png)
+![](./img/file18.png)
 
 CHALLENGES
 - To get the first flag, we can put this in terminal: `curl -X POST https://MACHINEIP/challenges/chall1.php -d 'method=GET&file=/etc/flag1'`

@@ -1,13 +1,13 @@
 # 4 Febrero 2022
 ---
-![[seminario 1.1.png]]
-![[seminario 1.2.png]]
+![](./img/seminario%201.1.png)
+![](./img/seminario%201.2.png)
 
 ---
 # 1 Abril 2022
 ---
-![[Clausulas Seminario 5.png]]
-![[Ej 1 Seminario 5.png]]
+![](./img/Clausulas%20Seminario%205.png)
+![](./img/Ej%201%20Seminario%205.png)
 ```c#
 //Ejercicio 1
 var c = Contador();
@@ -16,7 +16,7 @@ int i = 0;
 new int[1000]().Map(x => i++);
 ```
 ---
-![[Ej 2 Seminario 5.png]]
+![](./img/Ej%202%20Seminario%205.png)
 - Para que sea un bucle infinito -> () => true
 - Para que no sea siempre un bucle infinito -> () => x >= 100
 ```c#
@@ -28,7 +28,7 @@ static int Suma(int[] a){
 }
 ```
 ---
-![[Ej 3 Seminario 5.png]]
+![](./img/Ej%203%20Seminario%205.png)
 - Elementos de switch:
 	- Switch (IEnumerable< (Func< bool>,Func< T>)>)
 ```c#
@@ -40,14 +40,14 @@ T Switch (IEnumerable<(Func<bool>,Func<T>)>){
 }
 ```
 ---
-![[Ej 4 Seminario 5.png]]
+![](./img/Ej%204%20Seminario%205.png)
 
 ---
 # 22 Abril 2022, Seminario 6 🥖
 ---
 ### Ej 1
-![[ej1 s6.png||500]]
-![[ej 1 s6 2.png||500]]
+![](./img/ej1%20s6.png||500)
+![](./img/ej%201%20s6%202.png||500)
 Solución: 
 ```c#
 public void Ejecutar(){
@@ -61,7 +61,7 @@ public void Ejecutar(){
 ```
 
 ### Ej 2
-![[ej 2 s6.png||500]]
+![](./img/ej%202%20s6.png||500)
 ```c#
 [namespace TPP.Seminarios.Concurrente.Seminario6 {  
 /// <summary>  

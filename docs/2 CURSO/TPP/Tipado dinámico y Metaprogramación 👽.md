@@ -18,14 +18,14 @@
 - Cualquier tipo se puede convertir a `dynamic`
 - `dynamic` se puede convertir a cualquier tipo
 
-![[dinamic.png]]
+![](./img/dinamic.png)
 
 ---
 ## Duck Typing
 - Propiedad de la mayoría de lenguajes con tipado dinámico
 - Significa que el estado dinámico de un objeto determina qué operaciones pueden realizarse con él
 
-![[duckyduck.png]]
+![](./img/duckyduck.png)
 
 --
 ## Multiple Dispatch

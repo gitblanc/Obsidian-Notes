@@ -4,35 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "7d5d43a116ed5a86",
+        "id": "ba11b297d17c54d4",
         "type": "tabs",
         "children": [
           {
-            "id": "32f5115248dda8b6",
+            "id": "468934245fc5b98a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/3 CURSO/2 semestre/DLP/Ejercicios Examen Teoria DLP🐲.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "ad2c56e58f6d9655",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "docs/3 CURSO/2 semestre/DLP/Resumen Ejercicios Teoria DLP 💎.md",
+                "file": "README 🇪🇸.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/3 CURSO/2 semestre/DLP/Resumen Ejercicios Teoria DLP 💎.md",
+                "file": "README 🇪🇸.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -125,33 +112,39 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "317e254f1c7bfd77",
+  "active": "468934245fc5b98a",
   "lastOpenFiles": [
-    "docs/3 CURSO/2 semestre/DLP/img/IMG_3633.jpeg",
-    "docs/3 CURSO/2 semestre/DLP/img/IMG_3632.jpeg",
-    "docs/3 CURSO/2 semestre/DLP/img/IMG_3631.jpeg",
-    "docs/3 CURSO/2 semestre/DLP/img/IMG_3630.jpeg",
-    "docs/3 CURSO/2 semestre/DLP/img/IMG_3629.jpeg",
-    "docs/3 CURSO/2 semestre/DLP/img/IMG_3627.jpeg",
-    "docs/3 CURSO/2 semestre/DLP/img/Pasted image 20230619152925.png",
+    "README 🇺🇸.md",
+    "README 🇪🇸.md",
+    "docs/3 CURSO/2 semestre/DLP/Apuntes Examen Teoria DLP🐟.md",
     "docs/3 CURSO/2 semestre/DLP/Ejercicios Examen Teoria DLP🐲.md",
+    "docs/Cybersecurity/Open Webinars (Ebroker)/1. Introducción al hacking ético 🦇/Brute Force 🚘.md",
+    "docs/General data/Mac useful commands and customizations .md",
+    "docs/General data/img/Pasted image 20230220230941.png",
+    "docs/General data/img/Pasted image 20230220230910.png",
+    "docs/General data/img/Pasted image 20230220230831.png",
+    "docs/General data",
+    "docs/README.md",
+    "docs/3 CURSO/2 semestre/SSI/SSI Lab notas 🔮.md",
+    "docs/General data/img/Pasted image 20230310153038.png",
+    "docs/General data/img/Pasted image 20230310152931.png",
+    "docs/General data/img/Pasted image 20230304142754.png",
+    "docs/General data/img/Pasted image 20230304140349.png",
+    "docs/General data/img/Pasted image 20230220231413.png",
+    "docs/General data/img/Pasted image 20230220231402.png",
+    "docs/General data/img/Pasted image 20230220231348.png",
+    "docs/General data/img",
+    "docs/2 CURSO/Algoritmia/Seminarios ALG 🛼.md",
+    "docs/2 CURSO/Algoritmia/ALG Segunda parte 🧼.md",
     "docs/3 CURSO/2 semestre/DLP/Resumen Ejercicios Teoria DLP 💎.md",
-    "docs/3 CURSO/2 semestre/DLP/img/Pasted image 20230619152402.png",
-    "docs/3 CURSO/2 semestre/DLP/img/IMG_3626.jpeg",
-    "docs/3 CURSO/2 semestre/DLP/img/Pasted image 20230619151934.png",
-    "docs/3 CURSO/2 semestre/DLP/img/IMG_3625.jpeg",
     "IMG_3616.heic",
     "docs/2 CURSO/TEC/Métodos de solución de problemas TEC🚼.md",
     "docs/2 CURSO/TEC/Notas de TEC ⛑.md",
     "docs/2 CURSO/TEC/Varios ejercicios resueltos TEC♻️.md",
-    "docs/3 CURSO/2 semestre/SSI/SSI Lab notas 🔮.md",
     "docs/3 CURSO/2 semestre/ASW/Apuntes Examen Teoria ASW 🧶.md",
     "docs/3 CURSO/2 semestre/SDI/Examen Teoría Nodejs 🚁.md",
     "docs/Cybersecurity/HackBySecurity/Creación de exploits 🍹.md",
     "docs/Cybersecurity/HackBySecurity",
-    "docs/3 CURSO/2 semestre/DLP/Apuntes Examen Teoria DLP🐟.md",
-    "README.md",
-    "docs/README.md",
     "docs/3 CURSO/2 semestre/DLP/img",
     "docs/3 CURSO/2 semestre/DLP",
     "docs/3 CURSO/2 semestre/SSI/SSI apuntes Examen 1 Teoría 🦥.md",
@@ -162,7 +155,6 @@
     "docs/3 CURSO/2 semestre/ASW/ASW Seminarios 💎.md",
     "docs/3 CURSO/2 semestre/ASW/Conf 2 ASW 🌿.md",
     "docs/3 CURSO/2 semestre/ASW/Meetings Lab 🩻.md",
-    "docs/3 CURSO/2 semestre/SSI/SSI 🥤.md",
-    "docs/3 CURSO/2 semestre/SDI/SDI 🍯.md"
+    "docs/3 CURSO/2 semestre/SSI/SSI 🥤.md"
   ]
 }

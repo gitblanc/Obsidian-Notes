@@ -8,7 +8,7 @@
 
 ## Arquitectura JDBC
 
-![[jdbc arch.png|500]]
+![](./img/jdbc%20arch.png|500)
 
 ## Proceso de desarrollo (no en las diapos.)
 - **Instalar el driver**

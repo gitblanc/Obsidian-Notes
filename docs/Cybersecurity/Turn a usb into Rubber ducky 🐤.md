@@ -1,5 +1,5 @@
 # Turning a Regular USB Flash Drive into a USB Rubber Ducky
-![[Pasted image 20221031100943.png]]
+![](./img/Pasted%20image%2020221031100943.png)
 # Prerequisites
 
 A USB is a really universal interface. Just think how many devices we connect it to and how many devices it works with! Mouses, keyboards, printers, scanners, gamepads, modems, access points, web cameras, telephones, etc. Without thinking, we plug the USB into the socket and the OS automatically determines the type of device and loads the required drivers.
@@ -10,7 +10,7 @@ But how does it do it?
 
 In fact, the OS knows nothing about the connected device. It has to wait until the device tells it what kind it is. Let's consider a simple example. When we plug a USB flash drive into a USB socket, the flash drive informs the operating system of its type and volume. It is worth remembering our shrewd Chinese colleagues, who learned how to produce higher capacity flash drives (some almost 2 TB). To figure out how this is possible, let's remember (or learn) how the OS recognizes USB devices.
 
-![[Pasted image 20221031101043.png]]
+![](./img/Pasted%20image%2020221031101043.png)
 
 A USB flash drive without its pretty case
 
@@ -20,7 +20,7 @@ The purpose of USB devices is defined by class codes communicated to the USB hos
 
 A regular USB flash drive will have class code 08h (Mass Storage Device — MSD), while a web camera equipped with a microphone will have two codes: 01h (Audio) and 0Eh (Video Device Class).
 
-![[Pasted image 20221031101113.png]]
+![](./img/Pasted%20image%2020221031101113.png)
 
 Device classes
 
@@ -28,7 +28,7 @@ When connected, the USB device is registered, receives an address and sends its 
 
 If you open the body of a USB flash drive, in addition to the mass storage visible to the user, there is a controller responsible for the above-described actions.
 
-![[Pasted image 20221031101139.png]]
+![](./img/Pasted%20image%2020221031101139.png)
 
 # Bad USB or some history
 
@@ -155,7 +155,7 @@ So, be careful when you plug in a USB device and keep your eyes open.
 ## HINT
 
 If the experiments have gone wrong and the USB flash drive behaves in a weird way, you can try to bring it back to life by manually switching it into boot mode and using the utility to restore the original firmware. To do this, before you connect it, you need to close contacts 1 and 2 (sometimes 2 and 3) of the controller, which are located diagonally from the point (see image). Then you can try to bring the device back to life by using the official utility [MPAL](http://goo.gl/J3Jvz0)
-![[Pasted image 20221031101249.png]]
+![](./img/Pasted%20image%2020221031101249.png)
 Switching a USB flash drive into boot mode by closing the shown contacts
 
 ---
