@@ -11,8 +11,12 @@
             "id": "468934245fc5b98a",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "README 🇺🇸.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "README 🇺🇸.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -107,8 +112,10 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "317e254f1c7bfd77",
+  "active": "468934245fc5b98a",
   "lastOpenFiles": [
+    "README 🇪🇸.md",
+    "README 🇺🇸.md",
     "docs/3 CURSO/2 semestre/DLP/Apuntes Examen Teoria DLP🐟.md",
     "docs/3 CURSO/2 semestre/DLP/Ejercicios Examen Teoria DLP🐲.md",
     "docs/Cybersecurity/Open Webinars (Ebroker)/1. Introducción al hacking ético 🦇/Brute Force 🚘.md",
@@ -118,7 +125,6 @@
     "docs/General data/img/Pasted image 20230220230831.png",
     "docs/General data",
     "docs/README.md",
-    "README.md",
     "docs/3 CURSO/2 semestre/SSI/SSI Lab notas 🔮.md",
     "docs/General data/img/Pasted image 20230310153038.png",
     "docs/General data/img/Pasted image 20230310152931.png",
@@ -149,7 +155,6 @@
     "docs/3 CURSO/2 semestre/ASW/ASW Seminarios 💎.md",
     "docs/3 CURSO/2 semestre/ASW/Conf 2 ASW 🌿.md",
     "docs/3 CURSO/2 semestre/ASW/Meetings Lab 🩻.md",
-    "docs/3 CURSO/2 semestre/SSI/SSI 🥤.md",
-    "docs/3 CURSO/2 semestre/SDI/SDI 🍯.md"
+    "docs/3 CURSO/2 semestre/SSI/SSI 🥤.md"
   ]
 }
