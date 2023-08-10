@@ -13,7 +13,7 @@
 ## ¡Donate me!
 - If you pay me a skewer for my breaks at the University, know that I love you ❤
 
-<img src="https://github.com/gitblanc/Preguntator/assets/87705461/12bd82a5-71a1-499a-b88a-c2e9f60becb9" width="2%" height="2%"> : bc1qjf9gc0n03g4zw9nxc4fwvv5zklnextj8wge4zk ❤️
+![](https://img.shields.io/badge/Bitcoin-000000?style=for-the-badge&logo=bitcoin&logoColor=white) : bc1qjf9gc0n03g4zw9nxc4fwvv5zklnextj8wge4zk ❤️
 <a href="https://www.buymeacoffee.com/gitblanc"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a pincho&emoji=🥪&slug=gitblanc&button_colour=BD5FFF&font_colour=ffffff&font_family=Lato&outline_colour=000000&coffee_colour=FFDD00" /></a>
 
 ---
