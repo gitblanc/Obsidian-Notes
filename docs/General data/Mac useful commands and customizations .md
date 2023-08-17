@@ -247,3 +247,51 @@ If you made a mistake and the symlink didn't work, or you want to go back to sto
 As previously stated, we strongly recommend _not_ backing up your mobile devices via Mac. Instead, consider using [iCloud](https://www.imore.com/how-back-your-iphone-or-ipad) to keep copies of your iPhone or iPad files. iCloud works seamlessly with all of your Apple devices and can keep everything tidy and organized. There are even other [cloud storage apps](https://www.imore.com/best-cloud-storage-apps-iphone-ipad) and sites if you don't prefer iCloud, but want something like OneDrive instead. However, if you're still committed to going old-school, the above steps will help.
 
 ---
+
+# Bloquear las conexiones al Mac con un cortafuegos
+
+El firewall puede proteger el Mac del contacto no deseado que inicien otros ordenadores cuando estás conectado a internet o a una red. No obstante, el Mac continuará permitiendo el acceso a través del firewall a algunos servicios y apps. Por ejemplo:
+
+- Si activas uno de los servicios de compartición, como el de compartir archivos, macOS abrirá un puerto específico para permitir la comunicación de dicho servicio.
+    
+- Una app o un servicio de otro sistema pueden solicitar y obtener acceso a través del firewall, o puede tener un [certificado](https://support.apple.com/es-es/guide/mac-help/aside/glos7ef2c002/13.0/mac/13.0) de confianza gracias al cual se le garantiza el acceso.
+    
+
+Para obtener un mayor control, puedes seleccionar apps y servicios, y especificar si quieres garantizarles acceso a través del firewall.
+
+## Activar la protección del firewall
+
+1. En el Mac, selecciona el menú Apple ![](https://help.apple.com/assets/63BCA927AAE78C58DD7FBE35/63BCA92EAAE78C58DD7FBE76/es_ES/2f77cc85238452e25cb517130188bf99.png) > Ajustes del Sistema, haz clic en Red ![](https://help.apple.com/assets/63BCA927AAE78C58DD7FBE35/63BCA92EAAE78C58DD7FBE76/es_ES/8cfb53953fdf6e7e49ac94510557df95.png) en la barra lateral y selecciona Firewall. (Es posible que tengas que desplazarte hacia abajo).
+    
+2. Activa Firewall.
+    
+3. Para especificar ajustes de seguridad adicionales, haz clic en Opciones y realiza cualquiera de las aciones siguientes:
+    
+    - _Permitir solo la conexión de las apps y los servicios especificados:_ Haz clic en el botón Añadir ![](https://help.apple.com/assets/63BCA927AAE78C58DD7FBE35/63BCA92EAAE78C58DD7FBE76/es_ES/a2ef32e34a5573d192b10d340a4f46b1.png) y selecciona la app o el servicio en el cuadro de diálogo que aparece.
+        
+    - _Permitir solo la conexión de las apps y los servicios esenciales:_ Activa “Bloquear todas las conexiones entrantes”.
+        
+    - _Permitir automáticamente que el software integrado reciba conexiones entrantes:_ Activa la opción “Permitir automáticamente que el software integrado reciba conexiones entrantes”.
+        
+    - _Permitir automáticamente que el software firmado descargado reciba conexiones entrantes:_ Activa la opción “Permitir automáticamente que el software firmado descargado reciba conexiones entrantes”.
+        
+    - _Hacer que resulte más difícil a los piratas informáticos y al software malicioso encontrar tu Mac:_ Selecciona “Activar modo encubierto”.
+        
+
+## Configurar el acceso a través del firewall de servicios y apps
+
+1. En el Mac, selecciona el menú Apple ![](https://help.apple.com/assets/63BCA927AAE78C58DD7FBE35/63BCA92EAAE78C58DD7FBE76/es_ES/2f77cc85238452e25cb517130188bf99.png) > Ajustes del Sistema, haz clic en Red ![](https://help.apple.com/assets/63BCA927AAE78C58DD7FBE35/63BCA92EAAE78C58DD7FBE76/es_ES/8cfb53953fdf6e7e49ac94510557df95.png) en la barra lateral y selecciona Firewall. (Es posible que tengas que desplazarte hacia abajo).
+    
+2. Haz clic en Opciones.
+    
+    Si está desactivado el botón Opciones, activa primero la opción Firewall.
+    
+3. Haz clic en el botón Añadir ![](https://help.apple.com/assets/63BCA927AAE78C58DD7FBE35/63BCA92EAAE78C58DD7FBE76/es_ES/a2ef32e34a5573d192b10d340a4f46b1.png) situado debajo de la lista de servicios y, a continuación, selecciona los servicios o apps que quieras agregar. Después de añadir una app, haz clic en las flechas arriba y abajo ![](https://help.apple.com/assets/63BCA927AAE78C58DD7FBE35/63BCA92EAAE78C58DD7FBE76/es_ES/8c6fdd1201cd425ade9aa0f02812192b.png) y selecciona si quieres permitir o bloquear las conexiones a través del firewall.
+    
+    El bloqueo del acceso de una app a través del firewall puede interferir en el funcionamiento de la app o de otro software que dependa de esta.
+    
+    **Importante:** Algunos servicios y apps que no figuran en la lista podrían tener acceso a través del firewall. Estas pueden incluir apps del sistema, servicios y procesos, así como apps firmadas digitalmente que se abran automáticamente mediante otras apps. Para bloquear estos programas, añádelos a la lista.
+    
+    Si el Mac detecta un intento de conexión a una app que no has añadido a la lista y a la que no has concedido acceso, aparecerá un mensaje de aviso preguntándole si quieres permitir o denegar la conexión a través de la red o de internet. Mientras no lleves a cabo ninguna acción, el mensaje seguirá mostrándose y se denegará cualquier intento de conexión a la app.
+
+---
