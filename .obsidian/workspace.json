@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/General data/Mac useful commands and customizations .md",
+                "file": "docs/Cybersecurity/Linux commands 🟡.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/General data/Mac useful commands and customizations .md",
+                "file": "docs/Cybersecurity/Linux commands 🟡.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,12 +114,18 @@
   },
   "active": "468934245fc5b98a",
   "lastOpenFiles": [
+    "docs/General data/Mac useful commands and customizations .md",
+    "docs/Cybersecurity/CISCO/Introducción a la Ciberseguridad 🔓.md",
+    "docs/Cybersecurity/CISCO/img/Pasted image 20230817141735.png",
+    "docs/Cybersecurity/CISCO/img/Pasted image 20230817141221.png",
+    "docs/Cybersecurity/CISCO/img",
+    "docs/Cybersecurity/CISCO/img/Pasted image 20230817140913.png",
+    "docs/Cybersecurity/CISCO",
     "README.md",
     "README 🇺🇸.md",
     "docs/3 CURSO/2 semestre/DLP/Apuntes Examen Teoria DLP🐟.md",
     "docs/3 CURSO/2 semestre/DLP/Ejercicios Examen Teoria DLP🐲.md",
     "docs/Cybersecurity/Open Webinars (Ebroker)/1. Introducción al hacking ético 🦇/Brute Force 🚘.md",
-    "docs/General data/Mac useful commands and customizations .md",
     "docs/General data/img/Pasted image 20230220230941.png",
     "docs/General data/img/Pasted image 20230220230910.png",
     "docs/General data/img/Pasted image 20230220230831.png",
@@ -130,9 +136,6 @@
     "docs/General data/img/Pasted image 20230310152931.png",
     "docs/General data/img/Pasted image 20230304142754.png",
     "docs/General data/img/Pasted image 20230304140349.png",
-    "docs/General data/img/Pasted image 20230220231413.png",
-    "docs/General data/img/Pasted image 20230220231402.png",
-    "docs/General data/img/Pasted image 20230220231348.png",
     "docs/General data/img",
     "docs/2 CURSO/Algoritmia/Seminarios ALG 🛼.md",
     "docs/2 CURSO/Algoritmia/ALG Segunda parte 🧼.md",
@@ -153,8 +156,6 @@
     "docs/3 CURSO/2 semestre/ASW/Presentación 🚼.md",
     "docs/3 CURSO/2 semestre/ASW/Conf 1 ASW 🌊.md",
     "docs/3 CURSO/2 semestre/ASW/ASW Seminarios 💎.md",
-    "docs/3 CURSO/2 semestre/ASW/Conf 2 ASW 🌿.md",
-    "docs/3 CURSO/2 semestre/ASW/Meetings Lab 🩻.md",
-    "docs/3 CURSO/2 semestre/SSI/SSI 🥤.md"
+    "docs/3 CURSO/2 semestre/ASW/Conf 2 ASW 🌿.md"
   ]
 }

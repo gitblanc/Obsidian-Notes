@@ -294,3 +294,14 @@ https://behacker.pro/que-es-volatility-y-como-instalarloinstalacion-no-standalon
 ![](./img/volatility_commands.png)
 
 ---
+## How to verify integrity of an iso image
+- On Windows:
+	- Download the iso
+	- Generate the checksum using this command: `certutil -hashfile /path/to/os.iso sha256`
+	- Compare the official sha256 with the generated
+- On Linux:
+	- Download the iso
+	- Generate the checksum using this command: `sha256sum /path/to/os.iso`
+	- Compare the official sha256 with the generated
+
+---
