@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/Cybersecurity/CSRF attack 🫀.md",
+                "file": "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Principles of Security 🔒.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,7 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 319.5
+    "width": 301.5
   },
   "right": {
     "id": "1b2d980ad4b04eb7",
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/Cybersecurity/CSRF attack 🫀.md",
+                "file": "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Principles of Security 🔒.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,34 +112,42 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "d29e938655374008",
+  "active": "317e254f1c7bfd77",
   "lastOpenFiles": [
+    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/img/Pasted image 20230823232704.png",
+    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/img/Pasted image 20230823232201.png",
+    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/img/Pasted image 20230823231411.png",
+    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/img/Pasted image 20230823231337.png",
+    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/img/Pasted image 20230823230649.png",
+    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/img/Pasted image 20230823225903.png",
+    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Pentesting fundamentals 🧃.md",
+    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Principles of Security 🔒.md",
+    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/img/Pasted image 20230823224056.png",
+    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/img/Pasted image 20230823223750.png",
+    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/img/Pasted image 20230823223504.png",
+    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/img/Pasted image 20230823223320.png",
+    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/img/Pasted image 20230823222954.png",
+    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Careers in CyberSecurity 📂.md",
+    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Intro to Defensive Security 🖥️.md",
+    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Intro to Offensive Security ⚔️.md",
+    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/img",
     "docs/Cybersecurity/CSRF attack 🫀.md",
+    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥",
     "docs/3 CURSO/2 semestre/SSI/SSI Lab notas 🔮.md",
     "HOME.md",
     "README.md",
     "docs/General data/img/banner.jpg.crdownload",
-    "docs/General data/img/banner.jpg",
     "docs/Cybersecurity/Linux commands 🟡.md",
     "docs/General data/Mac useful commands and customizations .md",
     "docs/Cybersecurity/CISCO/Introducción a la Ciberseguridad 🔓.md",
-    "docs/Cybersecurity/CISCO/img/Pasted image 20230817141735.png",
-    "docs/Cybersecurity/CISCO/img/Pasted image 20230817141221.png",
     "docs/Cybersecurity/CISCO/img",
-    "docs/Cybersecurity/CISCO/img/Pasted image 20230817140913.png",
     "docs/Cybersecurity/CISCO",
     "README 🇺🇸.md",
     "docs/3 CURSO/2 semestre/DLP/Apuntes Examen Teoria DLP🐟.md",
     "docs/3 CURSO/2 semestre/DLP/Ejercicios Examen Teoria DLP🐲.md",
     "docs/Cybersecurity/Open Webinars (Ebroker)/1. Introducción al hacking ético 🦇/Brute Force 🚘.md",
-    "docs/General data/img/Pasted image 20230220230941.png",
-    "docs/General data/img/Pasted image 20230220230910.png",
-    "docs/General data/img/Pasted image 20230220230831.png",
     "docs/General data",
     "docs/README.md",
-    "docs/General data/img/Pasted image 20230310153038.png",
-    "docs/General data/img/Pasted image 20230310152931.png",
-    "docs/General data/img/Pasted image 20230304142754.png",
     "docs/General data/img",
     "docs/2 CURSO/Algoritmia/Seminarios ALG 🛼.md",
     "docs/2 CURSO/Algoritmia/ALG Segunda parte 🧼.md",
@@ -150,14 +158,7 @@
     "docs/2 CURSO/TEC/Varios ejercicios resueltos TEC♻️.md",
     "docs/3 CURSO/2 semestre/ASW/Apuntes Examen Teoria ASW 🧶.md",
     "docs/3 CURSO/2 semestre/SDI/Examen Teoría Nodejs 🚁.md",
-    "docs/Cybersecurity/HackBySecurity/Creación de exploits 🍹.md",
     "docs/Cybersecurity/HackBySecurity",
-    "docs/3 CURSO/2 semestre/DLP/img",
-    "docs/3 CURSO/2 semestre/DLP",
-    "docs/3 CURSO/2 semestre/SSI/SSI apuntes Examen 1 Teoría 🦥.md",
-    "docs/3 CURSO/2 semestre/SSI/SSI apuntes Examen 2 Teoría 🥇.md",
-    "docs/3 CURSO/2 semestre/ASW/ASW 🥋.md",
-    "docs/3 CURSO/2 semestre/ASW/Presentación 🚼.md",
-    "docs/3 CURSO/2 semestre/ASW/Conf 1 ASW 🌊.md"
+    "docs/3 CURSO/2 semestre/DLP/img"
   ]
 }
