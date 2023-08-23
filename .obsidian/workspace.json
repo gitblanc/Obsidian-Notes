@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "ba11b297d17c54d4",
+        "id": "67956516ebd5a526",
         "type": "tabs",
         "children": [
           {
-            "id": "468934245fc5b98a",
+            "id": "d29e938655374008",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "HOME.md",
+                "file": "docs/Cybersecurity/CSRF attack 🫀.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "HOME.md",
+                "file": "docs/Cybersecurity/CSRF attack 🫀.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,10 +112,12 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "317e254f1c7bfd77",
+  "active": "d29e938655374008",
   "lastOpenFiles": [
-    "README.md",
+    "docs/Cybersecurity/CSRF attack 🫀.md",
+    "docs/3 CURSO/2 semestre/SSI/SSI Lab notas 🔮.md",
     "HOME.md",
+    "README.md",
     "docs/General data/img/banner.jpg.crdownload",
     "docs/General data/img/banner.jpg",
     "docs/Cybersecurity/Linux commands 🟡.md",
@@ -135,7 +137,6 @@
     "docs/General data/img/Pasted image 20230220230831.png",
     "docs/General data",
     "docs/README.md",
-    "docs/3 CURSO/2 semestre/SSI/SSI Lab notas 🔮.md",
     "docs/General data/img/Pasted image 20230310153038.png",
     "docs/General data/img/Pasted image 20230310152931.png",
     "docs/General data/img/Pasted image 20230304142754.png",
