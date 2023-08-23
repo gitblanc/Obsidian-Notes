@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/Cybersecurity/Linux commands 🟡.md",
+                "file": "HOME.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/Cybersecurity/Linux commands 🟡.md",
+                "file": "HOME.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,8 +112,13 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "468934245fc5b98a",
+  "active": "317e254f1c7bfd77",
   "lastOpenFiles": [
+    "README.md",
+    "HOME.md",
+    "docs/General data/img/banner.jpg.crdownload",
+    "docs/General data/img/banner.jpg",
+    "docs/Cybersecurity/Linux commands 🟡.md",
     "docs/General data/Mac useful commands and customizations .md",
     "docs/Cybersecurity/CISCO/Introducción a la Ciberseguridad 🔓.md",
     "docs/Cybersecurity/CISCO/img/Pasted image 20230817141735.png",
@@ -121,7 +126,6 @@
     "docs/Cybersecurity/CISCO/img",
     "docs/Cybersecurity/CISCO/img/Pasted image 20230817140913.png",
     "docs/Cybersecurity/CISCO",
-    "README.md",
     "README 🇺🇸.md",
     "docs/3 CURSO/2 semestre/DLP/Apuntes Examen Teoria DLP🐟.md",
     "docs/3 CURSO/2 semestre/DLP/Ejercicios Examen Teoria DLP🐲.md",
@@ -135,7 +139,6 @@
     "docs/General data/img/Pasted image 20230310153038.png",
     "docs/General data/img/Pasted image 20230310152931.png",
     "docs/General data/img/Pasted image 20230304142754.png",
-    "docs/General data/img/Pasted image 20230304140349.png",
     "docs/General data/img",
     "docs/2 CURSO/Algoritmia/Seminarios ALG 🛼.md",
     "docs/2 CURSO/Algoritmia/ALG Segunda parte 🧼.md",
@@ -154,8 +157,6 @@
     "docs/3 CURSO/2 semestre/SSI/SSI apuntes Examen 2 Teoría 🥇.md",
     "docs/3 CURSO/2 semestre/ASW/ASW 🥋.md",
     "docs/3 CURSO/2 semestre/ASW/Presentación 🚼.md",
-    "docs/3 CURSO/2 semestre/ASW/Conf 1 ASW 🌊.md",
-    "docs/3 CURSO/2 semestre/ASW/ASW Seminarios 💎.md",
-    "docs/3 CURSO/2 semestre/ASW/Conf 2 ASW 🌿.md"
+    "docs/3 CURSO/2 semestre/ASW/Conf 1 ASW 🌊.md"
   ]
 }
