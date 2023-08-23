@@ -7,5 +7,6 @@
     "margin": "1",
     "downscalePercent": 100
   },
-  "alwaysUpdateLinks": true
+  "alwaysUpdateLinks": true,
+  "useMarkdownLinks": true
 }

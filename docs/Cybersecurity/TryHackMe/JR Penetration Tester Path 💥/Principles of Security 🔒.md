@@ -9,7 +9,7 @@ This history is because the security of information (information security) does 
 
 Consisting of three sections: **C**onfidentiality, **I**ntegrity and **A**vailability (**CIA**), this model has quickly become an industry standard today. This model should help determine the value of data that it applies to, and in turn, the attention it needs from the business.
 
-![[./img/Pasted image 20230823225903.png]]
+![](./img/Pasted%20image%2020230823225903.png)
 
 The CIA triad is unlike a traditional model where you have individual sections; instead, it is a continuous cycle. Whilst the three elements to the CIA triad can arguably overlap, if even just one element is not met, then the other two are rendered useless (similar to the fire triangle). If a security policy does not answer these three sections, it is seldom an effective security policy.
 
@@ -71,7 +71,7 @@ The model works by granting access to pieces of data (called objects) on a stric
 |Policies in this model can be replicated to real-life organisations hierarchies (and vice versa)|Even though a user may not have access to an object, they will know about its existence -- so it's not confidential in that aspect.|
 |Simple to implement and understand, and has been proven to be successful.|The model relies on a large amount of trust within the organisation.|
 
-![[./img/Pasted image 20230823231337.png]]
+![](./img/Pasted%20image%2020230823231337.png)
 
 The Bell LaPadula Model is popular within organisations such as governmental and military. This is because members of the organisations are presumed to have already gone through a process called vetting. Vetting is a screening process where applicant's backgrounds are examined to establish the risk they pose to the organisation. Therefore, applicants who are successfully vetted are assumed to be trustworthy - which is where this model fits in.
 
@@ -89,7 +89,7 @@ Let's compare some advantages and disadvantages of this model in the table below
 |This model is simple to implement.|There will be many levels of access and objects. Things can be easily overlooked when applying security controls.|
 |Resolves the limitations of the Bell-La Padula model by addressing both confidentiality and data integrity.|Often results in delays within a business. For example, a doctor would not be able to read the notes made by a nurse in a hospital with this model.|
 
-  ![[./img/Pasted image 20230823231411.png]]
+  ![](./img/Pasted%20image%2020230823231411.png)
 
 The Biba model is used in organisations or situations where integrity is more important than confidentiality. For example, in software development, developers may only have access to the code that is necessary for their job. They may not need access to critical pieces of information such as databases, etc.
 
@@ -105,7 +105,7 @@ The threat modelling process is very similar to a risk assessment made in workpl
 - Mitigations
 - Review
 
-![[./img/Pasted image 20230823232201.png]]
+![](./img/Pasted%20image%2020230823232201.png)
 
 It is, however, a complex process that needs constant review and discussion with a dedicated team. An effective threat model includes:
 
@@ -129,7 +129,7 @@ A breach of security is known as an incident. And despite all rigorous threat mo
 
 Incidents are classified using a rating of urgency and impact. Urgency will be determined by the type of attack faced, where the impact will be determined by the affected system and what impact that has on business operations.
 
-![[./img/Pasted image 20230823232704.png]]
+![](./img/Pasted%20image%2020230823232704.png)
 
 An incident is responded to by a **C**omputer **S**ecurity **I**ncident **R**esponse **T**eam (**CSIRT**) which is prearranged group of employees with technical knowledge about the systems and/or current incident. To successfully solve an incident, these steps are often referred to as the six phases of Incident Response that takes place, listed in the table below:
 
@@ -142,4 +142,3 @@ An incident is responded to by a **C**omputer **S**ecurity **I**ncident **R**esp
 |Eradication|Remove the active threat.|
 |Recovery|Perform a full review of the impacted systems to return to business as usual operations.|
 |Lessons Learned|What can be learnt from the incident? I.e. if it was due to a phishing email, employees should be trained better to detect phishing emails.|
-
