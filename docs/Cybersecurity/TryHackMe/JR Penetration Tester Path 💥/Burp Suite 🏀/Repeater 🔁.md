@@ -84,3 +84,115 @@ The other sections available for viewing and/or editing are:
 
 These components can all be found as text within the request and response sections; however, it can be nice to see them in the tabular format offered by Inspector. It is well worth adding, removing, and editing headers in Inspector to get a feel for how the raw version changes as you do so.
 
+# Sqli with Repeater
+This task contains an extra-mile challenge, which means that it is a slightly harder, real-world application for Burp Repeater. If you feel comfortable performing a manual SQL Injection by yourself, you may skip to the last question and try this as a blind challenge; otherwise a guide will be given below.  
+
+Before we start on this challenge: if you don't already know the principles of SQLi, then it would be well worth your time checking out the [room on the topic](https://tryhackme.com/jr/sqlinjectionlm); however, full steps will be provided, so you do not need in-depth knowledge of the principles behind SQL Injection to complete this task.
+
+---
+
+The brief is as follows:
+
+_There is a Union SQL Injection vulnerability in the ID parameter of the_ `/about/ID` _endpoint. Find this vulnerability and execute an attack to retrieve_ _the notes about the CEO stored in the database._
+
+We know that there is a vulnerability, and we know where it is. Now we just need to exploit it!
+
+Let's start by capturing a request to `http://10.10.213.11/about/2` in the Burp Proxy. Once you have captured the request, send it to Repeater with `Ctrl + R` or by right-clicking and choosing "Send to Repeater".
+
+Now that we have our request primed, let's confirm that a vulnerability exists. Adding a single apostrophe (`'`) is usually enough to cause the server to error when a simple SQLi is present, so, either using Inspector or by editing the request path manually, add an apostrophe after the "2" at the end of the path and send the request:
+
+```
+GET /about/2' HTTP/1.1
+Host: 10.10.213.11
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:80.0) Gecko/20100101 Firefox/80.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Connection: close
+Upgrade-Insecure-Requests: 1
+```
+
+You should see that the server responds with a "500 Internal Server Error", indicating that we successfully broke the query:
+
+```html
+HTTP/1.1 500 INTERNAL SERVER ERROR<
+Server: nginx/1.18.0 (Ubuntu)
+Date: Mon, 16 Aug 2021 23:05:21 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 3101
+```
+
+If we look through the body of the server's response, we see something very interesting at around line 40. The server is telling us the query we tried to execute:
+
+```html
+<h2>
+    <code>Invalid statement: 
+        <code>SELECT firstName, lastName, pfpLink, role, bio FROM people WHERE id = 2'</code>
+    </code>
+</h2>
+```
+
+This is an extremely useful error message which the server should absolutely not be sending us, _but_ the fact that we have it makes our job significantly more straightforward.
+
+The message tells us a couple of things that will be invaluable when exploiting this vulnerability:
+- The database table we are selecting from is called people.
+- The query is selecting _five_ columns from the table: `firstName`, `lastName`, `pfpLink`, `role`, and `bio`. We can guess where these fit into the page, which will be helpful for when we choose where to place our responses.
+
+With this information, we can skip over the query column number and table name enumeration steps.
+
+Although we have managed to cut out a lot of the enumeration required here, we still need to find the name of our target column.
+
+As we know the table name and the number of rows, we can use a union query to select the column names for the `people` table from the `columns` table in the `information_schema` default database.
+
+A simple query for this is as follows:  
+`/about/0 UNION ALL SELECT column_name,null,null,null,null FROM information_schema.columns WHERE table_name="people"`  
+
+This creates a union query and selects our target then four null columns (to avoid the query erroring out). Notice that we also changed the ID that we are selecting from `2` to `0`. By setting the ID to an invalid number, we  ensure that we don't retrieve anything with the original (legitimate) query; this means that the first row returned from the database will be our desired response from the injected query.
+
+Looking through the returned response, we can see that the first column name (`id`) has been inserted into the page title:
+
+```html
+HTTP/1.1 200 OK
+Server: nginx/1.18.0 (Ubuntu)
+Date: Mon, 16 Aug 2021 22:12:36 GMT
+Content-Type: text/html; charset=utf-8
+Connection: close
+Front-End-Https: on
+Content-Length: 3360
+
+
+<!DOCTYPE html>
+<html lang=en>
+    <head>
+        <title>
+            About | id None
+        </title>
+-----
+```
+
+We have successfully pulled the first column name out of the database, but we now have a problem. The page is only displaying the _first_ matching item -- we need to see _all_ of the matching items.
+
+Fortunately, we can use our SQLi to group the results. We can still only retrieve one result at a time, but by using the `group_concat()` function, we can amalgamate all of the column names into a single output:  
+`/about/0 UNION ALL SELECT group_concat(column_name),null,null,null,null FROM information_schema.columns WHERE table_name="people"`  
+
+This process is shown in below:
+
+![](./img/Pasted%20image%2020230825123813.png)
+
+We have successfully identified eight columns in this table: `id`, `firstName`, `lastName`, `pfpLink`, `role`, `shortRole`, `bio`, and `notes`.
+
+Considering our task, it seems a safe bet that our target column is `notes`.
+
+Finally, we are ready to take the flag from this database -- we have all of the information that we need:
+- The name of the table: `people`.
+- The name of the target column: `notes`.
+- The ID of the CEO is `1`; this can be found simply by clicking on Jameson Wolfe's profile on the `/about/` page and checking the ID in the URL.
+
+Let's craft a query to extract this flag:  
+`0 UNION ALL SELECT notes,null,null,null,null FROM people WHERE id = 1   `
+
+Hey presto, we have a flag!
+
+![](./img/Pasted%20image%2020230825123841.png)
+
+
