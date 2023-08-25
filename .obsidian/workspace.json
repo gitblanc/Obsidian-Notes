@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Introduction to Web Hacking 😀/SQL Injection 💽.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Introduction to Web Hacking 😀/SQL Injection 💽.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,8 +114,9 @@
   },
   "active": "ab4236d3e39a33e5",
   "lastOpenFiles": [
-    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Introduction to Web Hacking 😀/Command Injection 💉.md",
+    "HOME.md",
     "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Introduction to Web Hacking 😀/SQL Injection 💽.md",
+    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Introduction to Web Hacking 😀/Command Injection 💉.md",
     "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Introduction to Web Hacking 😀/img/Pasted image 20230825090325.png",
     "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Introduction to Web Hacking 😀/img/Pasted image 20230825090300.png",
     "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Introduction to Web Hacking 😀/img/Pasted image 20230825090211.png",
@@ -147,7 +148,6 @@
     "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/img",
     "docs/Cybersecurity/CSRF attack 🫀.md",
     "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥",
-    "HOME.md",
     "README.md",
     "docs/General data/img/banner.jpg.crdownload",
     "docs/Cybersecurity/Linux commands 🟡.md",
