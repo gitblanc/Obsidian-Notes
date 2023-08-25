@@ -189,3 +189,43 @@ Which, once you've cycled through all the characters, you will confirm the exist
 Cycling through all the characters, you'll discover the password is 3845.
 
 # Blind SQLi - Time Based
+A time-based blind SQL Injection is very similar to the above Boolean based, in that the same requests are sent, but there is no visual indicator of your queries being wrong or right this time. Instead, your indicator of a correct query is based on the time the query takes to complete. This time delay is introduced by using built-in methods such as **SLEEP(x)** alongside the UNION statement. The SLEEP() method will only ever get executed upon a successful UNION SELECT statement. 
+
+So, for example, when trying to establish the number of columns in a table, you would use the following query:
+
+`admin123' UNION SELECT SLEEP(5);--`
+
+If there was no pause in the response time, we know that the query was unsuccessful, so like on previous tasks, we add another column:
+
+`admin123' UNION SELECT SLEEP(5),2;--`
+
+This payload should have produced a 5-second time delay, which confirms the successful execution of the UNION statement and that there are two columns.
+
+You can now repeat the enumeration process from the Boolean based SQL Injection, adding the **SLEEP()** method into the **UNION SELECT** statement.
+
+If you're struggling to find the table name the below query should help you on your way:
+
+`referrer=admin123' UNION SELECT SLEEP(5),2 where database() like 'u%';--`
+
+# Out-pf-Band SQLi
+Out-of-Band SQL Injection isn't as common as it either depends on specific features being enabled on the database server or the web application's business logic, which makes some kind of external network call based on the results from an SQL query.  
+  
+An Out-Of-Band attack is classified by having two different communication channels, one to launch the attack and the other to gather the results. For example, the attack channel could be a web request, and the data gathering channel could be monitoring HTTP/DNS requests made to a service you control.
+
+1) An attacker makes a request to a website vulnerable to SQL Injection with an injection payload.
+2) The Website makes an SQL query to the database which also passes the hacker's payload.
+3) The payload contains a request which forces an HTTP request back to the hacker's machine containing data from the database.
+
+![](./img/Pasted%20image%2020230825102349.png)
+
+# Remediation
+As impactful as SQL Injection vulnerabilities are, developers do have a way to protect their web applications from them by following the below advice:
+
+**Prepared Statements (With Parameterized Queries):**
+In a prepared query, the first thing a developer writes is the SQL query and then any user inputs are added as a parameter afterwards. Writing prepared statements ensures that the SQL code structure doesn't change and the database can distinguish between the query and the data. As a benefit, it also makes your code look a lot cleaner and easier to read.
+
+**Input Validation:**
+Input validation can go a long way to protecting what gets put into an SQL query. Employing an allow list can restrict input to only certain strings, or a string replacement method in the programming language can filter the characters you wish to allow or disallow. 
+
+**Escaping User Input:**
+Allowing user input containing characters such as ' " $ \ can cause SQL Queries to break or, even worse, as we've learnt, open them up for injection attacks. Escaping user input is the method of prepending a backslash (**\**) to these characters, which then causes them to be parsed just as a regular string and not a special character.

@@ -38,5 +38,6 @@ Aquí te dejo una lista de repositorios que pueden serte de ayuda o inspiración
 |[DLP](https://github.com/gitblanc/DLP)|Repositorio para DLP|
 |[Mi Github](https://github.com/gitblanc)|Entra aquí para más asignaturas :)|
 
+---
 
-
+![Snake animation](https://github.com/gitblanc/gitblanc/blob/output/github-contribution-grid-snake-dark.svg)

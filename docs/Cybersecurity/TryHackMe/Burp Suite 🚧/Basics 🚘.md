@@ -1,1 +1,0 @@
-- In your browser go to Settings->proxy->set manual->put 127.0.0.1 with port 8080
