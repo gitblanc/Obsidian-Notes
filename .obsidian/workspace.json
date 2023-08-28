@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "255a1c12400104d5",
+        "id": "ba11b297d17c54d4",
         "type": "tabs",
         "children": [
           {
-            "id": "a33a8d928d8df8c3",
+            "id": "468934245fc5b98a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Network Security 🩻/Passive Reconnaissance 🧿.md",
+                "file": "HOME.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,7 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 323.5
+    "width": 319.5
   },
   "right": {
     "id": "1b2d980ad4b04eb7",
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Network Security 🩻/Passive Reconnaissance 🧿.md",
+                "file": "HOME.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,53 +112,53 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "317e254f1c7bfd77",
+  "active": "468934245fc5b98a",
   "lastOpenFiles": [
+    "docs/Cybersecurity/Linux commands 🟡.md",
+    "docs/General data/img/banner.jpg",
     "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Network Security 🩻/img/Pasted image 20230828143413.png",
-    "Pasted image 20230828142806.png",
     "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Network Security 🩻/img/Pasted image 20230828142634.png",
-    "Pasted image 20230828142628.png",
     "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Network Security 🩻/img/Pasted image 20230828142609.png",
     "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Network Security 🩻/img/Pasted image 20230828135544.png",
     "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Network Security 🩻/img/Pasted image 20230828135501.png",
-    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Burp Suite 🏀/Extender ➡️.md",
-    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Network Security 🩻/Passive Reconnaissance 🧿.md",
+    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Introduction to Web Hacking 😀/img/Pasted image 20230825102349.png",
+    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Introduction to Web Hacking 😀/img/Pasted image 20230825090325.png",
+    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Introduction to Web Hacking 😀/img/Pasted image 20230825090300.png",
+    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Introduction to Web Hacking 😀/img/Pasted image 20230825090211.png",
     "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Network Security 🩻/img",
-    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Network Security 🩻",
-    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Burp Suite 🏀/img/Pasted image 20230828134850.png",
-    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Burp Suite 🏀/img/Pasted image 20230828134604.png",
-    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Burp Suite 🏀/img/Pasted image 20230828134545.png",
-    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Burp Suite 🏀/img/Pasted image 20230828134020.png",
+    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Network Security 🩻/Passive Reconnaissance 🧿.md",
+    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Introduction to Web Hacking 😀/img",
+    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Introduction to Web Hacking 😀/Walking an application 🫥.md",
+    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Introduction to Web Hacking 😀/Subdomain Enumeration 👁️‍🗨️.md",
+    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Introduction to Web Hacking 😀/SSRF 🧱.md",
+    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Introduction to Web Hacking 😀/SQL Injection 💽.md",
+    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Introduction to Web Hacking 😀/IDOR 📳.md",
+    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Introduction to Web Hacking 😀/File Inclusion 🗂️.md",
+    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Introduction to Web Hacking 😀/Cross-Site Scripting (XSS) ❎.md",
+    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Introduction to Web Hacking 😀/Content Discovery 🔎.md",
+    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Introduction to Web Hacking 😀/Command Injection 💉.md",
+    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Introduction to Web Hacking 😀/Authentication Bypass 🛑.md",
+    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Burp Suite 🏀/img",
+    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Burp Suite 🏀/The Basics ✅.md",
+    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Burp Suite 🏀/Repeater 🔁.md",
     "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Burp Suite 🏀/Other modules 🤪.md",
     "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Burp Suite 🏀/Intruder 🍬.md",
-    "docs/Cybersecurity/TryHackMe/Tools I use 🦠/Tools 🧩.md",
-    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Pentesting fundamentals 🧃.md",
-    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Burp Suite 🏀/Repeater 🔁.md",
-    "HOME.md",
-    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Burp Suite 🏀/The Basics ✅.md",
-    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Burp Suite 🏀/img",
-    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Introduction to Web Hacking 😀/SQL Injection 💽.md",
-    "docs/Cybersecurity/TryHackMe/Intro to Cybersecurity 👋",
-    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Burp Suite 🏀",
-    "README.md",
-    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Introduction to Web Hacking 😀/Command Injection 💉.md",
-    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Introduction to Web Hacking 😀/Cross-Site Scripting (XSS) ❎.md",
-    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Introduction to Web Hacking 😀/SSRF 🧱.md",
-    "img/Pasted.md",
-    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Introduction to Web Hacking 😀/File Inclusion 🗂️.md",
-    "docs/3 CURSO/2 semestre/SSI/SSI Lab notas 🔮.md",
-    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Introduction to Web Hacking 😀/IDOR 📳.md",
-    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Introduction to Web Hacking 😀/Authentication Bypass 🛑.md",
-    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Introduction to Web Hacking 😀/Subdomain Enumeration 👁️‍🗨️.md",
-    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Introduction to Web Hacking 😀/Content Discovery 🔎.md",
-    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Introduction to Web Hacking 😀/Walking an application 🫥.md",
-    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Introduction to Web Hacking 😀/img",
-    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Introduction to Web Hacking 😀",
+    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Burp Suite 🏀/Extender ➡️.md",
+    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/img",
     "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Principles of Security 🔒.md",
+    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Pentesting fundamentals 🧃.md",
+    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Network Security 🩻",
+    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Introduction to Web Hacking 😀",
     "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Intro to Offensive Security ⚔️.md",
     "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Intro to Defensive Security 🖥️.md",
-    "img",
-    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/img",
-    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥"
+    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Careers in CyberSecurity 📂.md",
+    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Burp Suite 🏀",
+    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥",
+    "docs/Cybersecurity/CSRF attack 🫀.md",
+    "HOME.md",
+    "docs/General data/Mac useful commands and customizations .md",
+    "docs/Cybersecurity/CISCO/Introducción a la Ciberseguridad 🔓.md",
+    "docs/Cybersecurity/CISCO/img",
+    "docs/Cybersecurity/CISCO"
   ]
 }
