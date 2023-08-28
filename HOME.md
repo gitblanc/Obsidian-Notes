@@ -5,7 +5,6 @@ banner_y: 0.68
 ---
 
 ![](https://img.shields.io/badge/Markdown-000000?style=for-the-badge&logo=markdown&logoColor=white)![](https://img.shields.io/badge/Made%20with-Obsidian-blueviolet)[![HitCount](https://hits.dwyl.com/gitblanc/Obsidian-Notes.svg?style=flat-square)](http://hits.dwyl.com/gitblanc/Obsidian-Notes) ![Visitors](https://api.visitorbadge.io/api/daily?path=https%3A%2F%2Fgithub.com%2Fgitblanc%2FObsidian-Notes%2F&label=Visitors%20today&countColor=%2337d67a&style=plastic&labelStyle=upper)
-<script src="https://tryhackme.com/badge/943872"></script>
 
 # ¡Bienvenid@!
 - Si te gusta esta página, déjame una 🌟 en [el repositorio de Github](https://github.com/gitblanc/Obsidian-Notes) :)
