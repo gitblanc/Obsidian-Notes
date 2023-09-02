@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Metasploit 💦/Exploitation 🍕.md",
+                "file": "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Metasploit 💦/Meterpreter 🎃.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Metasploit 💦/Exploitation 🍕.md",
+                "file": "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Metasploit 💦/Meterpreter 🎃.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,11 +114,12 @@
   },
   "active": "3c69a58313dfda74",
   "lastOpenFiles": [
+    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Metasploit 💦/Exploitation 🍕.md",
+    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Metasploit 💦/Meterpreter 🎃.md",
     "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Metasploit 💦/img/Pasted image 20230902135256.png",
     "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Metasploit 💦/img/Pasted image 20230902135238.png",
     "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Metasploit 💦/img/Pasted image 20230902135221.png",
     "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Metasploit 💦/Introduction 💝.md",
-    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Metasploit 💦/Exploitation 🍕.md",
     "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Metasploit 💦/img/Pasted image 20230901191514.png",
     "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Metasploit 💦/img/Pasted image 20230901190047.png",
     "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Vunerability research 🦑/Exploit vulnerabilities 🐊.md",
@@ -134,7 +135,6 @@
     "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Network Security 🩻/Nmap Live Host Discovery 🛸.md",
     "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Network Security 🩻/Protocols & Servers 2 👿.md",
     "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Network Security 🩻/img/Pasted image 20230831143230.png",
-    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Network Security 🩻/img/Pasted image 20230831142240.png",
     "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Network Security 🩻/Protocols & Servers 2 🛡️.md",
     "HOME.md",
     "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Vunerability research 🦑/img",
