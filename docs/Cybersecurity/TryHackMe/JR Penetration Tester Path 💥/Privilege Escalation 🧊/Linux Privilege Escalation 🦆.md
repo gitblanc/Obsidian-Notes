@@ -479,4 +479,144 @@ The incoming reverse shell connection has root privileges:
 
 ![](./img/Pasted%20image%2020230905174353.png)
 
+# Privilege Escalation: PATH
+
+If a folder for which your user has write permission is located in the path, you could potentially hijack an application to run a script. PATH in Linux is an environmental variable that tells the operating system where to search for executables. For any command that is not built into the shell or that is not defined with an absolute path, Linux will start searching in folders defined under PATH. (PATH is the environmental variable we're talking about here, path is the location of a file).  
+  
+Typically the PATH will look like this:
+
+![](./img/Pasted%20image%2020230906004153.png)
+
+If we type “thm” to the command line, these are the locations Linux will look in for an executable called thm. The scenario below will give you a better idea of how this can be leveraged to increase our privilege level. As you will see, this depends entirely on the existing configuration of the target system, so be sure you can answer the questions below before trying this.
+
+1. What folders are located under $PATH
+2. Does your current user have write privileges for any of these folders?
+3. Can you modify $PATH?
+4. Is there a script/application you can start that will be affected by this vulnerability?
+
+For demo purposes, we will use the script below:
+
+![](./img/Pasted%20image%2020230906004211.png)
+
+```c
+#include<unistd.h>
+void main()
+{
+ setuid(0);
+ setgid(0);
+ system("pwned");
+}
+```
+
+This script tries to launch a system binary called “thm” but the example can easily be replicated with any binary.
+
+We compile this into an executable and set the SUID bit.
+
+![](./img/Pasted%20image%2020230906004230.png)
+
+Our user now has access to the “path” script with SUID bit set.
+
+![](./img/Pasted%20image%2020230906004248.png)
+
+Once executed “path” will look for an executable named “thm” inside folders listed under PATH.
+
+If any writable folder is listed under PATH we could create a binary named thm under that directory and have our “path” script run it. As the SUID bit is set, this binary will run with root privilege
+
+A simple search for writable folders can done using the “`find / -writable 2>/dev/null`” command. The output of this command can be cleaned using a simple cut and sort sequence.
+
+![](./img/Pasted%20image%2020230906004307.png)
+
+Some CTF scenarios can present different folders but a regular system would output something like we see above.
+
+Comparing this with PATH will help us find folders we could use.
+
+![](./img/Pasted%20image%2020230906004328.png)
+
+We see a number of folders under /usr, thus it could be easier to run our writable folder search once more to cover subfolders.
+
+![](./img/Pasted%20image%2020230906004349.png)
+
+An alternative could be the command below.
+
+`find / -writable 2>/dev/null | cut -d "/" -f 2,3 | grep -v proc | sort -u`
+
+We have added “grep -v proc” to get rid of the many results related to running processes.
+
+Unfortunately, subfolders under /usr are not writable
+
+The folder that will be easier to write to is probably /tmp. At this point because /tmp is not present in PATH so we will need to add it. As we can see below, the “`export PATH=/tmp:$PATH`” command accomplishes this.
+
+![](./img/Pasted%20image%2020230906004426.png)
+
+At this point the path script will also look under the /tmp folder for an executable named “thm”.
+
+Creating this command is fairly easy by copying /bin/bash as “thm” under the /tmp folder.
+
+![](./img/Pasted%20image%2020230906004443.png)
+
+We have given executable rights to our copy of /bin/bash, please note that at this point it will run with our user’s right. What makes a privilege escalation possible within this context is that the path script runs with root privileges.
+
+![](./img/Pasted%20image%2020230906004501.png)
+
+- To get the flag I did:
+	- `cd /home/murdoch`
+	- `ls -a`
+	- I saw 2 files, so I checked what they where:
+		- `file test`
+		- `file thm.py`
+		- `cat thm.py`
+	- I create the thm file: `touch thm`
+	- I add the command I want to execute to the thm file: `echo "cat /home/matt/flag6.txt" > thm`
+	- `chmod +x thm`
+	- Export the `/home/murdoch` directory to the PATH: `export PATH=/home/murdoch:$PATH`
+	- Execute the binary: `./test`
+
+# Privilege Escalation: NFS
+
+Privilege escalation vectors are not confined to internal access. Shared folders and remote management interfaces such as SSH and Telnet can also help you gain root access on the target system. Some cases will also require using both vectors, e.g. finding a root SSH private key on the target system and connecting via SSH with root privileges instead of trying to increase your current user’s privilege level.  
+  
+Another vector that is more relevant to CTFs and exams is a misconfigured network shell. This vector can sometimes be seen during penetration testing engagements when a network backup system is present.  
+  
+NFS (Network File Sharing) configuration is kept in the /etc/exports file. This file is created during the NFS server installation and can usually be read by users.
+
+![](./img/Pasted%20image%2020230906011405.png)
+
+The critical element for this privilege escalation vector is the “no_root_squash” option you can see above. By default, NFS will change the root user to nfsnobody and strip any file from operating with root privileges. If the “no_root_squash” option is present on a writable share, we can create an executable with SUID bit set and run it on the target system.  
+  
+We will start by enumerating mountable shares from our attacking machine.
+
+![](./img/Pasted%20image%2020230906011425.png)
+
+We will mount one of the “no_root_squash” shares to our attacking machine and start building our executable.
+
+![](./img/Pasted%20image%2020230906011714.png)
+
+As we can set SUID bits, a simple executable that will run /bin/bash on the target system will do the job.
+
+![](./img/Pasted%20image%2020230906011734.png)
+
+```c
+//Enter into nano and save as nfs.c
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+
+int main(void)
+{
+   setuid(0);
+   setgid(0);
+   system("/bin/bash");
+   return 0;
+}
+```
+
+Once we compile the code we will set the SUID bit.
+
+![](./img/Pasted%20image%2020230906011750.png)
+
+You will see below that both files (nfs.c and nfs are present on the target system. We have worked on the mounted share so there was no need to transfer them).
+
+![](./img/Pasted%20image%2020230906011808.png)
+
+Notice the nfs executable has the SUID bit set on the target system and runs with root privileges.
 
