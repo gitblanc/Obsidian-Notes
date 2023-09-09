@@ -37,3 +37,8 @@ hydra -l user -P passwords.txt ftp://<target-ip>
 dirb http://10.10.233.35/ /usr/share/wordlists/dirb/common.txt 
 ````
 
+# Tac for print and read files
+- Use the tool tac for printing files when cat, vi, vim... are blocked or not permitted:
+````shell
+tac /home/file.txt
+````
