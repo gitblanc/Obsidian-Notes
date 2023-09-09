@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "8aa0edff347b3706",
+        "id": "84bc136daf37d695",
         "type": "tabs",
         "children": [
           {
-            "id": "c2b2cb724b8ec6f4",
+            "id": "2cdb1eb09ad3c54b",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "python awe",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -112,8 +112,9 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "c2b2cb724b8ec6f4",
+  "active": "2cdb1eb09ad3c54b",
   "lastOpenFiles": [
+    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Privilege Escalation 🧊/Linux Privilege Escalation 🦆.md",
     "docs/Cybersecurity/Interesting hack commands and things 🍔.md",
     "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Privilege Escalation 🧊/Windows Privilege Escalation ☢️.md",
     "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Privilege Escalation 🧊/img/Pasted image 20230906213928.png",
@@ -127,7 +128,6 @@
     "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Privilege Escalation 🧊/img/Pasted image 20230906205140.png",
     "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Privilege Escalation 🧊/img/Pasted image 20230906205122.png",
     "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Privilege Escalation 🧊/img/Pasted image 20230906205029.png",
-    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Privilege Escalation 🧊/Linux Privilege Escalation 🦆.md",
     "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Privilege Escalation 🧊/What the Shell 🦍.md",
     "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Nessus 🐡.md",
     "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Privilege Escalation 🧊/img",
