@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "f034ba389351ec5a",
+        "id": "8b6e8299d938bb1f",
         "type": "tabs",
         "children": [
           {
-            "id": "8b3999229c735387",
+            "id": "b24f86cfdc3f1a6f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/4 CURSO/SI/Tema 2. Búsqueda en Espacios de Estados 🐂.md",
+                "file": "docs/2 CURSO/ED/1. Diseño y Algoritmia 🧢.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/4 CURSO/SI/Tema 2. Búsqueda en Espacios de Estados 🐂.md",
+                "file": "docs/2 CURSO/ED/1. Diseño y Algoritmia 🧢.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,31 +112,35 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "8b3999229c735387",
+  "active": "317e254f1c7bfd77",
   "lastOpenFiles": [
-    "img/Pasted image 20230911185620.png.md",
+    "docs/2 CURSO/ED/img/D00F1FD2-D431-425A-86EB-AA713314EE22.jpeg",
+    "docs/2 CURSO/ED/img/Pasted image 20230912161221.png",
+    "docs/2 CURSO/ED/img/Pasted image 20230912160549.png",
+    "docs/2 CURSO/ED/img/Pasted image 20230912154614.png",
+    "docs/2 CURSO/ED/img/Pasted image 20230912154543.png",
+    "docs/2 CURSO/ED/Presentación ED 🐬.md",
+    "docs/2 CURSO/ED/1. Diseño y Algoritmia 🧢.md",
+    "docs/2 CURSO/ED/img",
+    "docs/2 CURSO/ED",
+    "docs/Cybersecurity/Interesting hack commands and things 🍔.md",
     "docs/4 CURSO/SI/Tema 2. Búsqueda en Espacios de Estados 🐂.md",
-    "DS/Teoría/visitor.pdf",
-    "DS/Teoría/template_method.pdf",
-    "DS/Teoría/state.pdf",
-    "DS/Teoría/prototype.pdf",
-    "DS/Teoría/decorator.pdf",
-    "DS/Teoría/observer.pdf",
-    "DS/Teoría/composite.pdf",
-    "DS/Teoría/command.pdf",
-    "DS/Teoría/adapter.pdf",
-    "DS/Teoría/6_factorias.pdf",
-    "DS/README.md",
-    "DS/Práctica/P9/p9.png",
-    "DS/Práctica/P8/p8.png",
-    "DS/Práctica/P7/p7.png",
-    "DS/Práctica/P6/p6.png",
-    "DS/Práctica/P5/p5.png",
-    "DS/Práctica/P11/simulacro_examen_alumnos/simulacro_examen_editor_de_texto_alumnos/Entregar/MyJHotDraw5.1.b/sources/CH/ifa/draw/samples/javadraw/sampleimages/view.gif",
-    "DS/Práctica/P11/simulacro_examen_alumnos/simulacro_examen_editor_de_texto_alumnos/Entregar/MyJHotDraw5.1.b/sources/CH/ifa/draw/samples/javadraw/sampleimages/rain.gif",
-    "DS/Práctica/P11/simulacro_examen_alumnos/simulacro_examen_editor_de_texto_alumnos/Entregar/MyJHotDraw5.1.b/sources/CH/ifa/draw/samples/javadraw/sampleimages/joe.surf.yellow.small.gif",
+    "DS/Práctica/P11/simulacro_examen_alumnos/simulacro_examen_editor_de_texto_alumnos/Entregar/MyJHotDraw5.1.b/sources/CH/ifa/draw/samples/pert/images/PERT2.gif",
+    "DS/Práctica/P11/simulacro_examen_alumnos/simulacro_examen_editor_de_texto_alumnos/Entregar/MyJHotDraw5.1.b/sources/CH/ifa/draw/samples/pert/images/PERT3.gif",
     "DS/Práctica/P11/simulacro_examen_alumnos/simulacro_examen_editor_de_texto_alumnos/Entregar/MyJHotDraw5.1.b/sources/CH/ifa/draw/samples/javadraw/sampleimages/javacentral.gif",
-    "DS/Práctica/P11/simulacro_examen_alumnos/simulacro_examen_editor_de_texto_alumnos/Entregar/MyJHotDraw5.1.b/sources/CH/ifa/draw/samples/javadraw/sampleimages/bg1.gif",
+    "DS/Práctica/P11/simulacro_examen_alumnos/simulacro_examen_editor_de_texto_alumnos/Entregar/MyJHotDraw5.1.b/sources/CH/ifa/draw/samples/pert/images/PERT1.gif",
+    "DS/Práctica/P11/simulacro_examen_alumnos/simulacro_examen_editor_de_texto_alumnos/Entregar/MyJHotDraw5.1.b/sources/CH/ifa/draw/samples/javadraw/sampleimages/joe.surf.yellow.small.gif",
+    "DS/Práctica/P11/simulacro_examen_alumnos/simulacro_examen_editor_de_texto_alumnos/Entregar/MyJHotDraw5.1.b/sources/CH/ifa/draw/samples/javadraw/sampleimages/view.gif",
+    "DS/Práctica/P11/simulacro_examen_alumnos/simulacro_examen_editor_de_texto_alumnos/Entregar/MyJHotDraw5.1.b/sources/CH/ifa/draw/samples/javadraw/FollowURLTool.java",
+    "DS/Práctica/P11/simulacro_examen_alumnos/simulacro_examen_editor_de_texto_alumnos/Entregar/MyJHotDraw5.1.b/sources/CH/ifa/draw/samples/nada/NadaApp.java",
+    "DS/Práctica/P11/simulacro_examen_alumnos/simulacro_examen_editor_de_texto_alumnos/Entregar/MyJHotDraw5.1.b/sources/CH/ifa/draw/samples/pert/PertDependency.java",
+    "DS/Práctica/P11/simulacro_examen_alumnos/simulacro_examen_editor_de_texto_alumnos/Entregar/MyJHotDraw5.1.b/sources/CH/ifa/draw/samples/net/NodeFigure.java",
+    "DS/Práctica/P11/simulacro_examen_alumnos/simulacro_examen_editor_de_texto_alumnos/Entregar/MyJHotDraw5.1.b/sources/CH/ifa/draw/samples/net/NetApp.java",
+    "DS/Práctica/P11/simulacro_examen_alumnos/simulacro_examen_editor_de_texto_alumnos/Entregar/MyJHotDraw5.1.b/sources/CH/ifa/draw/samples/pert/images",
+    "DS/Práctica/P11/simulacro_examen_alumnos/simulacro_examen_editor_de_texto_alumnos/Entregar/MyJHotDraw5.1.b/sources/CH/ifa/draw/samples/pert/PertFigure.java",
+    "DS/Práctica/P11/simulacro_examen_alumnos/simulacro_examen_editor_de_texto_alumnos/Entregar/MyJHotDraw5.1.b/sources/CH/ifa/draw/samples/pert/PertFigureCreationTool.java",
+    "DS/README.md",
+    "img/Pasted image 20230911185620.png.md",
     "docs/4 CURSO/SI/Tema 1. Definición, Objetivos y Aplicaciones de la Inteligencia Artificial 🐊.md",
     "docs/4 CURSO/SI/Presentación SI 🪼.md",
     "docs/General data/Mac useful commands and customizations .md",
@@ -155,9 +159,6 @@
     "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Network Security 🩻/Passive Reconnaissance 🧿.md",
     "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Network Security 🩻/Nmap Post Port Scans 🌼.md",
     "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Network Security 🩻/Nmap Live Host Discovery 🛸.md",
-    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Network Security 🩻/Nmap Basic Port Scans 🌐.md",
-    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Network Security 🩻/Nmap Advanced Port Scans 🦫.md",
-    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Network Security 🩻/Active Reconnaissance ♿.md",
-    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Introduction to Web Hacking 😀/Walking an application 🫥.md"
+    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Network Security 🩻/Nmap Basic Port Scans 🌐.md"
   ]
 }
