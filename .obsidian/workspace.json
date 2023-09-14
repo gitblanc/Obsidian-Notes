@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/4 CURSO/SI/Tema 3. Búsqueda heurística 🦝.md",
+                "file": "docs/2 CURSO/ED/Notas laboratorio ED 🍄.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/4 CURSO/SI/Tema 3. Búsqueda heurística 🦝.md",
+                "file": "docs/2 CURSO/ED/Notas laboratorio ED 🍄.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,11 +112,12 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "317e254f1c7bfd77",
+  "active": "b24f86cfdc3f1a6f",
   "lastOpenFiles": [
+    "docs/4 CURSO/SI/Tema 3. Búsqueda heurística 🦝.md",
+    "docs/2 CURSO/ED/Notas laboratorio ED 🍄.md",
     "docs/4 CURSO/SI/img/Pasted image 20230913174646.png",
     "Pasted image 20230913174613.png",
-    "docs/4 CURSO/SI/Tema 3. Búsqueda heurística 🦝.md",
     "Pasted image 20230913174619.png",
     "Pasted image 20230913174516.png",
     "docs/4 CURSO/SI/img/Pasted image 20230913171222.png",
@@ -128,7 +129,6 @@
     "docs/4 CURSO/SI/img/Pasted image 20230913164435.png",
     "HOME.md",
     "docs/4 CURSO/SI/img/Pasted image 20230913164413.png",
-    "docs/4 CURSO/SI/img/Pasted image 20230913164340.png",
     "docs/4 CURSO/IR/Tema 1. Fundamentos de la Ingeniería de Requisitos 🐸.md",
     "docs/2 CURSO/ED/1. Diseño y Algoritmia 🧢.md",
     "docs/4 CURSO/IR/Presentación IR 🐸.md",
