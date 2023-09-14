@@ -19,3 +19,13 @@
 
 - Es muy importante definir bien el caso base
 
+## Iterativo vs. Recursivo
+
+- Iterativo: `5^4 = 5 * 5 * 5 * 5`
+- Recursivo:
+	- `5^4 = 5^3 * 5`
+	- `5^3 = 5^2 * 5`
+	- `5^2 = 5 * 5`
+	- ...
+
+
