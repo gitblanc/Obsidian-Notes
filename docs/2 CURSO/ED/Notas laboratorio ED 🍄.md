@@ -1,4 +1,7 @@
-# Ejemplos de reursividad
+# Introducción
+
+- En esta nota se expondrán diversas notas tomadas en los laboratorios de Estructuras de Datos
+# Ejemplos de recursividad
 
 - **Caso base**: aquel en que para el método recursivo
 - **Caso general**: solución a la recursividad
