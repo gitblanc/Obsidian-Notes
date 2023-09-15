@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/2 CURSO/ED/Notas laboratorio ED 🍄.md",
+                "file": "docs/4 CURSO/IR/Notas de Lab de IR 🐿️.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/2 CURSO/ED/Notas laboratorio ED 🍄.md",
+                "file": "docs/4 CURSO/IR/Notas de Lab de IR 🐿️.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,10 +112,12 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "b24f86cfdc3f1a6f",
+  "active": "317e254f1c7bfd77",
   "lastOpenFiles": [
-    "docs/4 CURSO/SI/Tema 3. Búsqueda heurística 🦝.md",
+    "docs/4 CURSO/IR/img/IMG_5083.jpeg",
     "docs/2 CURSO/ED/Notas laboratorio ED 🍄.md",
+    "docs/4 CURSO/IR/Notas de Lab de IR 🐿️.md",
+    "docs/4 CURSO/SI/Tema 3. Búsqueda heurística 🦝.md",
     "docs/4 CURSO/SI/img/Pasted image 20230913174646.png",
     "Pasted image 20230913174613.png",
     "Pasted image 20230913174619.png",
@@ -157,8 +159,6 @@
     "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Privilege Escalation 🧊/Windows Privilege Escalation ☢️.md",
     "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Privilege Escalation 🧊/What the Shell 🦍.md",
     "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Privilege Escalation 🧊/Linux Privilege Escalation 🦆.md",
-    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Principles of Security 🔒.md",
-    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Pentesting fundamentals 🧃.md",
-    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Network Security 🩻/Protocols & Servers 🌲.md"
+    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Principles of Security 🔒.md"
   ]
 }
