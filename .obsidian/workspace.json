@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/4 CURSO/IR/Seminarios IR 🍙.md",
+                "file": "docs/4 CURSO/CVVS/Seminarios CVVS 🥐.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/4 CURSO/IR/Seminarios IR 🍙.md",
+                "file": "docs/4 CURSO/CVVS/Seminarios CVVS 🥐.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,12 +112,15 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "317e254f1c7bfd77",
+  "active": "b24f86cfdc3f1a6f",
   "lastOpenFiles": [
+    "docs/4 CURSO/CVVS/Seminarios CVVS 🥐.md",
+    "docs/4 CURSO/IR/Seminarios IR 🍙.md",
+    "docs/4 CURSO/CVVS/img",
+    "docs/4 CURSO/CVVS",
     "docs/4 CURSO/IR/img/Pasted image 20230915164018.png",
     "docs/4 CURSO/IR/img/Pasted image 20230915161926.png",
     "docs/4 CURSO/IR/Notas de Lab de IR 🐿️.md",
-    "docs/4 CURSO/IR/Seminarios IR 🍙.md",
     "docs/4 CURSO/IR/img/IMG_5083.jpeg",
     "docs/2 CURSO/ED/Notas laboratorio ED 🍄.md",
     "docs/4 CURSO/SI/Tema 3. Búsqueda heurística 🦝.md",
@@ -129,7 +132,6 @@
     "docs/4 CURSO/SI/img/Pasted image 20230913171154.png",
     "docs/4 CURSO/SI/img/Pasted image 20230913170317.png",
     "docs/4 CURSO/SI/Tema 2. Búsqueda en Espacios de Estados 🐂.md",
-    "Pasted image 20230913165752.png",
     "Untitled.md",
     "HOME.md",
     "docs/4 CURSO/IR/Tema 1. Fundamentos de la Ingeniería de Requisitos 🐸.md",
@@ -145,8 +147,6 @@
     "DS/Práctica/P11/simulacro_examen_alumnos/simulacro_examen_editor_de_texto_alumnos/Entregar/MyJHotDraw5.1.b/sources/CH/ifa/draw/samples/nada/NadaApp.java",
     "DS/Práctica/P11/simulacro_examen_alumnos/simulacro_examen_editor_de_texto_alumnos/Entregar/MyJHotDraw5.1.b/sources/CH/ifa/draw/samples/pert/PertDependency.java",
     "DS/Práctica/P11/simulacro_examen_alumnos/simulacro_examen_editor_de_texto_alumnos/Entregar/MyJHotDraw5.1.b/sources/CH/ifa/draw/samples/net/NodeFigure.java",
-    "DS/Práctica/P11/simulacro_examen_alumnos/simulacro_examen_editor_de_texto_alumnos/Entregar/MyJHotDraw5.1.b/sources/CH/ifa/draw/samples/net/NetApp.java",
-    "DS/Práctica/P11/simulacro_examen_alumnos/simulacro_examen_editor_de_texto_alumnos/Entregar/MyJHotDraw5.1.b/sources/CH/ifa/draw/samples/pert/images",
     "DS/README.md",
     "img/Pasted image 20230911185620.png.md",
     "docs/4 CURSO/SI/Tema 1. Definición, Objetivos y Aplicaciones de la Inteligencia Artificial 🐊.md",
