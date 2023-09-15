@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/4 CURSO/IR/Notas de Lab de IR 🐿️.md",
+                "file": "docs/4 CURSO/IR/Seminarios IR 🍙.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/4 CURSO/IR/Notas de Lab de IR 🐿️.md",
+                "file": "docs/4 CURSO/IR/Seminarios IR 🍙.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,9 +114,12 @@
   },
   "active": "317e254f1c7bfd77",
   "lastOpenFiles": [
+    "docs/4 CURSO/IR/img/Pasted image 20230915164018.png",
+    "docs/4 CURSO/IR/img/Pasted image 20230915161926.png",
+    "docs/4 CURSO/IR/Notas de Lab de IR 🐿️.md",
+    "docs/4 CURSO/IR/Seminarios IR 🍙.md",
     "docs/4 CURSO/IR/img/IMG_5083.jpeg",
     "docs/2 CURSO/ED/Notas laboratorio ED 🍄.md",
-    "docs/4 CURSO/IR/Notas de Lab de IR 🐿️.md",
     "docs/4 CURSO/SI/Tema 3. Búsqueda heurística 🦝.md",
     "docs/4 CURSO/SI/img/Pasted image 20230913174646.png",
     "Pasted image 20230913174613.png",
@@ -128,9 +131,7 @@
     "docs/4 CURSO/SI/Tema 2. Búsqueda en Espacios de Estados 🐂.md",
     "Pasted image 20230913165752.png",
     "Untitled.md",
-    "docs/4 CURSO/SI/img/Pasted image 20230913164435.png",
     "HOME.md",
-    "docs/4 CURSO/SI/img/Pasted image 20230913164413.png",
     "docs/4 CURSO/IR/Tema 1. Fundamentos de la Ingeniería de Requisitos 🐸.md",
     "docs/2 CURSO/ED/1. Diseño y Algoritmia 🧢.md",
     "docs/4 CURSO/IR/Presentación IR 🐸.md",
@@ -158,7 +159,6 @@
     "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Vunerability research 🦑/Exploit vulnerabilities 🐊.md",
     "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Privilege Escalation 🧊/Windows Privilege Escalation ☢️.md",
     "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Privilege Escalation 🧊/What the Shell 🦍.md",
-    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Privilege Escalation 🧊/Linux Privilege Escalation 🦆.md",
-    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Principles of Security 🔒.md"
+    "docs/Cybersecurity/TryHackMe/JR Penetration Tester Path 💥/Privilege Escalation 🧊/Linux Privilege Escalation 🦆.md"
   ]
 }
