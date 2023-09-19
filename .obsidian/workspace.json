@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/4 CURSO/IR/Tema 2. Proceso de la Ingeniería de Requisitos 🍖.md",
+                "file": "docs/4 CURSO/IR/Tema 3. Técnicas de obtención de requisitos 🏹.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/4 CURSO/IR/Tema 2. Proceso de la Ingeniería de Requisitos 🍖.md",
+                "file": "docs/4 CURSO/IR/Tema 3. Técnicas de obtención de requisitos 🏹.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,8 +112,11 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "317e254f1c7bfd77",
+  "active": "5a627c96c73a1527",
   "lastOpenFiles": [
+    "docs/4 CURSO/IR/Tema 1. Fundamentos de la Ingeniería de Requisitos 🐸.md",
+    "docs/4 CURSO/IR/Tema 3. Técnicas de obtención de requisitos 🏹.md",
+    "docs/4 CURSO/IR/Tema 2. Proceso de la Ingeniería de Requisitos 🍖.md",
     "docs/4 CURSO/IR/img/Pasted image 20230919184257.png",
     "docs/4 CURSO/IR/img/Pasted image 20230919184140.png",
     "docs/4 CURSO/IR/img/Pasted image 20230919183951.png",
@@ -122,11 +125,9 @@
     "docs/4 CURSO/IR/img/Pasted image 20230919183219.png",
     "docs/4 CURSO/IR/img/Pasted image 20230919181051.png",
     "docs/2 CURSO/ED/2. Estructuras de datos en Red 🍔.md",
-    "docs/4 CURSO/IR/Tema 2. Proceso de la Ingeniería de Requisitos 🍖.md",
     "docs/2 CURSO/ED/img/Pasted image 20230919163640.png",
     "docs/2 CURSO/ED/img/Pasted image 20230919163534.png",
     "docs/2 CURSO/ED/img/Pasted image 20230919163422.png",
-    "docs/2 CURSO/ED/img/Pasted image 20230919163325.png",
     "docs/2 CURSO/ED/1. Diseño y Algoritmia 🧢.md",
     "docs/4 CURSO/SI/Tema 3. Búsqueda heurística y Diseño de heurísticos 🦝.md",
     "docs/4 CURSO/SI/Tema 2. Búsqueda en Espacios de Estados 🐂.md",
@@ -138,7 +139,6 @@
     "docs/2 CURSO/ED/Notas laboratorio ED 🍄.md",
     "Untitled.md",
     "HOME.md",
-    "docs/4 CURSO/IR/Tema 1. Fundamentos de la Ingeniería de Requisitos 🐸.md",
     "docs/4 CURSO/IR/Presentación IR 🐸.md",
     "docs/4 CURSO/IR/img",
     "docs/4 CURSO/IR",

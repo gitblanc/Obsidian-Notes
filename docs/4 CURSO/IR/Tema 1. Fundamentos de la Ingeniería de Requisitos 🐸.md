@@ -28,7 +28,7 @@
 - **Requisitos de negocio**: idea del negocio del cliente
 - **Requisitos de usuario**: lo que el usuario puede realizar en el sistema (casos de uso, historias de usuario...)
 - **Requisitos funcionales**: describen qué deben implementar los desarrolladores para satisfacer los requisitos de usuario
-	- Documentados en una Especificación de Requisitos de Usuario (SRS)
+	- Documentados en una ==Especificación de Requisitos Software== (SRS) <-- error diapos
 - **Requisitos del sistema**: describen un producto compuesto de varios subsistemas
 - **Reglas de negocio**: política, legislación...
 - **Atributos de calidad**: describen características y propiedades del sistema de diversas dimensiones e importancia
