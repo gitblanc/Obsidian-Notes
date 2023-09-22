@@ -100,4 +100,26 @@
 
 ![](./img/Pasted%20image%2020230918193753.png)
 
----
+## Aplicación del método de la Relajación del problema al problema TSP
+
+![](./img/Pasted%20image%2020230922160951.png)
+
+- TSP = problema del viajante de comercio
+- Esto es el problema que representa un estado intermedio
+
+## Aplicación al problema TSP (forma de las soluciones del problema real y de los problemas relajados)
+
+![](./img/Pasted%20image%2020230922162253.png)
+
+- El grafo residual es el grafo de conexiones quitando las ciudades visitadas intermedias y los lazos entre medias (los azules oscuros representan el grafo relajado)
+- Estamos pensando en estados
+- El problema que representa un estado es ir desde la ciudad final hasta el inicial 
+- Las líneas rojas son los caminos de coste mínimo
+
+## Aprendizaje de heurísticos
+
+![](./img/Pasted%20image%2020230922165229.png)
+
+## Ejemplo de uso de regresión en el 15-puzzle
+
+![](./img/Pasted%20image%2020230922165448.png)
