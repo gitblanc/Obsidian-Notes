@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/4 CURSO/SI/Tema 3. Búsqueda heurística y Diseño de heurísticos 🦝.md",
+                "file": "docs/2 CURSO/ED/Seminarios ED 🚗.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/4 CURSO/SI/Tema 3. Búsqueda heurística y Diseño de heurísticos 🦝.md",
+                "file": "docs/2 CURSO/ED/Seminarios ED 🚗.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,8 +112,10 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "317e254f1c7bfd77",
+  "active": "6bc19a1eea01b0a5",
   "lastOpenFiles": [
+    "docs/4 CURSO/SI/Tema 3. Búsqueda heurística y Diseño de heurísticos 🦝.md",
+    "docs/2 CURSO/ED/Seminarios ED 🚗.md",
     "docs/4 CURSO/SI/img/Pasted image 20230922165448.png",
     "docs/4 CURSO/SI/img/Pasted image 20230922165229.png",
     "docs/4 CURSO/SI/img/Pasted image 20230922162253.png",
@@ -132,9 +134,7 @@
     "docs/2 CURSO/TEC/img/Pasted image 20230920182637.png",
     "docs/4 CURSO/CVVS/img/Pasted image 20230920182345.png",
     "docs/4 CURSO/SI/Notas Lab SI 🧊.md",
-    "docs/4 CURSO/SI/img/Pasted image 20230920175226.png",
     "docs/4 CURSO/SI/Tema 2. Búsqueda en Espacios de Estados 🐂.md",
-    "docs/4 CURSO/SI/Tema 3. Búsqueda heurística y Diseño de heurísticos 🦝.md",
     "docs/4 CURSO/SI/Tema 1. Definición, Objetivos y Aplicaciones de la Inteligencia Artificial 🐊.md",
     "docs/4 CURSO/IR/Tema 3. Técnicas de obtención de requisitos 🏹.md",
     "docs/4 CURSO/IR/Tema 1. Fundamentos de la Ingeniería de Requisitos 🐸.md",
