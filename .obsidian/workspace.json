@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "a699869252757df0",
+        "id": "5c14017d373ab91f",
         "type": "tabs",
         "children": [
           {
-            "id": "139b1e92dc074a3a",
+            "id": "198cec3414b8727e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/2 CURSO/ED/2. Estructuras de datos en Red 🍔.md",
+                "file": "docs/4 CURSO/IR/Tema 3. Técnicas de obtención de requisitos 🏹.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/2 CURSO/ED/2. Estructuras de datos en Red 🍔.md",
+                "file": "docs/4 CURSO/IR/Tema 3. Técnicas de obtención de requisitos 🏹.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -122,20 +122,22 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "139b1e92dc074a3a",
+  "active": "198cec3414b8727e",
   "lastOpenFiles": [
+    "docs/4 CURSO/IR/img/Pasted image 20230926185026.png",
+    "docs/4 CURSO/IR/img/Pasted image 20230926185003.png",
+    "docs/4 CURSO/IR/img/Pasted image 20230926184926.png",
+    "img/asted image 20230926184851.png.md",
+    "img",
+    "docs/4 CURSO/IR/img/Pasted image 20230926184851.png",
+    "docs/4 CURSO/IR/img/Pasted image 20230926184834.png",
+    "docs/4 CURSO/IR/img/Pasted image 20230926184106.png",
+    "docs/2 CURSO/ED/2. Estructuras de datos en Red 🍔.md",
     "docs/2 CURSO/ED/img/Pasted image 20230926162250.png",
     "docs/2 CURSO/ED/img/Pasted image 20230926162233.png",
     "docs/2 CURSO/ED/img/Pasted image 20230926162219.png",
     "docs/2 CURSO/ED/img/Pasted image 20230926162202.png",
     "docs/2 CURSO/ED/img/Pasted image 20230926162145.png",
-    "docs/2 CURSO/ED/img/Pasted image 20230926162129.png",
-    "docs/2 CURSO/ED/img/Pasted image 20230926161553.png",
-    "docs/2 CURSO/ED/img/Pasted image 20230926161535.png",
-    "docs/2 CURSO/ED/img/Pasted image 20230926161313.png",
-    "docs/2 CURSO/ED/img/Pasted image 20230926161252.png",
-    "docs/2 CURSO/ED/img/Pasted image 20230926161231.png",
-    "docs/2 CURSO/ED/2. Estructuras de datos en Red 🍔.md",
     "docs/2 CURSO/ED/Notas laboratorio ED 🍄.md",
     "docs/4 CURSO/SI/Tema 4. Otros tipos de búsqueda - Algoritmos Evolutivos ♟️.md",
     "docs/4 CURSO/SI/Tema 3. Búsqueda heurística y Diseño de heurísticos 🦝.md",
@@ -163,12 +165,10 @@
     "docs/4 CURSO/IR/Presentación IR 🐸.md",
     "docs/4 CURSO/IR/img",
     "docs/4 CURSO/IR",
-    "docs/2 CURSO/ED/Presentación ED 🐬.md",
     "docs/2 CURSO/ED/img",
     "docs/2 CURSO/ED",
     "DS/Práctica/P11/simulacro_examen_alumnos/simulacro_examen_editor_de_texto_alumnos/Entregar/MyJHotDraw5.1.b/sources/CH/ifa/draw/samples/javadraw/FollowURLTool.java",
     "DS/Práctica/P11/simulacro_examen_alumnos/simulacro_examen_editor_de_texto_alumnos/Entregar/MyJHotDraw5.1.b/sources/CH/ifa/draw/samples/nada/NadaApp.java",
-    "DS/Práctica/P11/simulacro_examen_alumnos/simulacro_examen_editor_de_texto_alumnos/Entregar/MyJHotDraw5.1.b/sources/CH/ifa/draw/samples/pert/PertDependency.java",
-    "DS/Práctica/P11/simulacro_examen_alumnos/simulacro_examen_editor_de_texto_alumnos/Entregar/MyJHotDraw5.1.b/sources/CH/ifa/draw/samples/net/NodeFigure.java"
+    "DS/Práctica/P11/simulacro_examen_alumnos/simulacro_examen_editor_de_texto_alumnos/Entregar/MyJHotDraw5.1.b/sources/CH/ifa/draw/samples/pert/PertDependency.java"
   ]
 }
