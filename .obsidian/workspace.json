@@ -4,24 +4,28 @@
     "type": "split",
     "children": [
       {
-        "id": "9d3b7a73b028b234",
+        "id": "a699869252757df0",
         "type": "tabs",
         "children": [
           {
-            "id": "4008ce028ae4245f",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
-            }
-          },
-          {
-            "id": "9b2d19e3f9288b5f",
+            "id": "139b1e92dc074a3a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/4 CURSO/SI/Tema 4. Otros tipos de búsqueda - Algoritmos Evolutivos ♟️.md",
+                "file": "docs/2 CURSO/ED/2. Estructuras de datos en Red 🍔.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "f224ef1c9187b4d4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "docs/2 CURSO/ED/Notas laboratorio ED 🍄.md",
                 "mode": "source",
                 "source": false
               }
@@ -94,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/4 CURSO/SI/Tema 4. Otros tipos de búsqueda - Algoritmos Evolutivos ♟️.md",
+                "file": "docs/2 CURSO/ED/Notas laboratorio ED 🍄.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,6 +106,16 @@
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "aae496f772dc8fff",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency"
               }
             }
           }
@@ -121,21 +135,21 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "317e254f1c7bfd77",
+  "active": "f224ef1c9187b4d4",
   "lastOpenFiles": [
-    "docs/4 CURSO/SI/img/Pasted image 20230925194825.png",
-    "docs/4 CURSO/SI/img/Pasted image 20230925194739.png",
-    "docs/4 CURSO/SI/img/Pasted image 20230925194713.png",
-    "docs/4 CURSO/SI/img/Pasted image 20230925194639.png",
-    "docs/4 CURSO/SI/img/Pasted image 20230925194326.png",
-    "docs/4 CURSO/SI/img/Pasted image 20230925194214.png",
-    "docs/4 CURSO/SI/img/Pasted image 20230925192919.png",
-    "docs/4 CURSO/SI/img/Pasted image 20230925192609.png",
-    "docs/4 CURSO/SI/img/Pasted image 20230925192524.png",
-    "docs/4 CURSO/SI/img/Pasted image 20230925191245.png",
-    "docs/4 CURSO/SI/img/Pasted image 20230925191217.png",
-    "docs/4 CURSO/SI/Tema 3. Búsqueda heurística y Diseño de heurísticos 🦝.md",
+    "docs/2 CURSO/ED/2. Estructuras de datos en Red 🍔.md",
+    "docs/2 CURSO/ED/img/Pasted image 20230926152700.png",
+    "docs/2 CURSO/ED/img/Pasted image 20230926152629.png",
+    "docs/2 CURSO/ED/img/Pasted image 20230926152600.png",
+    "docs/2 CURSO/ED/img/Pasted image 20230926152526.png",
+    "docs/2 CURSO/ED/img/Pasted image 20230926152513.png",
+    "docs/2 CURSO/ED/img/Pasted image 20230926152458.png",
+    "docs/2 CURSO/ED/img/Pasted image 20230926152433.png",
+    "docs/2 CURSO/ED/img/Pasted image 20230926152247.png",
+    "docs/2 CURSO/ED/img/Pasted image 20230926151652.png",
+    "docs/2 CURSO/ED/img/Pasted image 20230926151428.png",
     "docs/4 CURSO/SI/Tema 4. Otros tipos de búsqueda - Algoritmos Evolutivos ♟️.md",
+    "docs/4 CURSO/SI/Tema 3. Búsqueda heurística y Diseño de heurísticos 🦝.md",
     "docs/4 CURSO/IR/Notas de Lab de IR 🐿️.md",
     "docs/2 CURSO/ED/1. Diseño y Algoritmia 🧢.md",
     "docs/2 CURSO/ED/Notas laboratorio ED 🍄.md",
@@ -153,7 +167,6 @@
     "docs/4 CURSO/IR/Tema 3. Técnicas de obtención de requisitos 🏹.md",
     "docs/4 CURSO/IR/Tema 1. Fundamentos de la Ingeniería de Requisitos 🐸.md",
     "docs/4 CURSO/IR/Tema 2. Proceso de la Ingeniería de Requisitos 🍖.md",
-    "docs/2 CURSO/ED/2. Estructuras de datos en Red 🍔.md",
     "docs/4 CURSO/CVVS/Seminarios CVVS 🥐.md",
     "docs/4 CURSO/IR/Seminarios IR 🍙.md",
     "docs/4 CURSO/CVVS/img",

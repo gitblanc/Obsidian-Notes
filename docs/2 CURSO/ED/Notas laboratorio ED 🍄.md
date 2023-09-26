@@ -45,3 +45,48 @@
 - Los gráficos tienen que tener título, nombres en los ejes y leyenda
 - Número para lanzar: carga 1-10 mínimo, 5 veces cada uno de ellos por cada carga de trabajo: 5-1-10
 
+````java
+public class TestBench {
+
+	// className: Nombre clase
+	// methodName:Nombre mÃ©todo
+	// n: parÃ¡metro que pasamos al mÃ©todo (carga de trabajo)
+	public static Object testAlgorithm(String className, String methodName, int n) {
+		try {
+			Object obj = Class.forName(className).getDeclaredConstructor().newInstance();
+			Method method = obj.getClass().getMethod(methodName, int.class);
+			return method.invoke(obj, n);
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+			e.printStackTrace();
+		}
+		return null;
+	}
+
+	// CronÃ³metro
+	public static void test(String output, int times, int startN, int endN, String className, String methodName)
+			throws IOException {
+		FileWriter file = null;
+		PrintWriter pw;
+		try {
+			file = new FileWriter(output);
+			pw = new PrintWriter(file);
+			for (int workLoad = startN; workLoad < endN; workLoad++) {
+				long startTime = System.currentTimeMillis();
+
+				for (int time = 0; time < times; time++)
+					testAlgorithm(className, methodName, workLoad);
+
+				long finalTime = System.currentTimeMillis();
+				long timeResult = ((finalTime - startTime) / times);
+				
+				pw.println(workLoad + ";" + timeResult);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			if (file != null)
+				file.close();
+		}
+	}
+````
