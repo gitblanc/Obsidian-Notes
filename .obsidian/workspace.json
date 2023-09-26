@@ -18,21 +18,8 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "f224ef1c9187b4d4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "docs/2 CURSO/ED/Notas laboratorio ED 🍄.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/2 CURSO/ED/Notas laboratorio ED 🍄.md",
+                "file": "docs/2 CURSO/ED/2. Estructuras de datos en Red 🍔.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -135,24 +122,24 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "f224ef1c9187b4d4",
+  "active": "139b1e92dc074a3a",
   "lastOpenFiles": [
+    "docs/2 CURSO/ED/img/Pasted image 20230926154648.png",
     "docs/2 CURSO/ED/2. Estructuras de datos en Red 🍔.md",
+    "Pasted image 20230926154621.png",
+    "docs/2 CURSO/ED/img/Pasted image 20230926154543.png",
+    "docs/2 CURSO/ED/img/Pasted image 20230926153454.png",
+    "docs/2 CURSO/ED/Notas laboratorio ED 🍄.md",
     "docs/2 CURSO/ED/img/Pasted image 20230926152700.png",
     "docs/2 CURSO/ED/img/Pasted image 20230926152629.png",
     "docs/2 CURSO/ED/img/Pasted image 20230926152600.png",
     "docs/2 CURSO/ED/img/Pasted image 20230926152526.png",
     "docs/2 CURSO/ED/img/Pasted image 20230926152513.png",
     "docs/2 CURSO/ED/img/Pasted image 20230926152458.png",
-    "docs/2 CURSO/ED/img/Pasted image 20230926152433.png",
-    "docs/2 CURSO/ED/img/Pasted image 20230926152247.png",
-    "docs/2 CURSO/ED/img/Pasted image 20230926151652.png",
-    "docs/2 CURSO/ED/img/Pasted image 20230926151428.png",
     "docs/4 CURSO/SI/Tema 4. Otros tipos de búsqueda - Algoritmos Evolutivos ♟️.md",
     "docs/4 CURSO/SI/Tema 3. Búsqueda heurística y Diseño de heurísticos 🦝.md",
     "docs/4 CURSO/IR/Notas de Lab de IR 🐿️.md",
     "docs/2 CURSO/ED/1. Diseño y Algoritmia 🧢.md",
-    "docs/2 CURSO/ED/Notas laboratorio ED 🍄.md",
     "docs/2 CURSO/Algoritmia/ALG Segunda parte 🧼.md",
     "docs/2 CURSO/Algoritmia/Seminarios ALG 🛼.md",
     "docs/2 CURSO/ED/Seminarios ED 🚗.md",
