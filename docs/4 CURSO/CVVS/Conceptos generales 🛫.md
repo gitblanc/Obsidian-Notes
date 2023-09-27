@@ -114,5 +114,60 @@
 	-  No basta con que las pruebas se ejecuten de forma automática
 	- Deben ser BUENAS pruebas (Importancia del uso de técnicas)
 
+- **Condición de entrada**: se obtienen examinando entradas o salidas de la aplicación
+
+# Partición en Clases de Equivalencia
+
+![](./img/Pasted%20image%2020230927183119.png)
+
+## Problema 1
+
+![](./img/Pasted%20image%2020230927184900.png)
+
+- Condición de prueba y de entrada: importe
+- Las clases de equivalencia serían 
+	- < 10.000
+	- entre 10.000 y 50.000
+	- > 50.000
+	- < 0 (Clase de equivalencia inválida)
+	- = 0 (Clase de equivalencia inválida)
+
+## Problema 2
+
+![](./img/Pasted%20image%2020230927184919.png)
+
+- Condición de prueba y de entrada: saldo
+- Las clases de equivalencia serían:
+	- < 10.000
+	- entre 10.000 y 50.000
+	- > 50.000
+
+## Problema 1b
+
+![](./img/Pasted%20image%2020230927185949.png)
+
+- Casos de prueba:
+
+![](./img/Pasted%20image%2020230927190022.png)
+
+- Los **casos de prueba lógicos** describen como son las entradas y las salidas, pero no nos dan valores concretos (Salidas)
+
+- La diferencia entre los casos de prueba físicos y lógicos es que los físicos dan valores concretos y los lógicos no
+
+# Clases de equivalencias de las salidas
+
+![](./img/Pasted%20image%2020230927190708.png)
+
+# Las condiciones de entrada no son necesariamente los parámetros de un programa
+
+![](./img/Pasted%20image%2020230927192148.png)
+
+![](./img/Pasted%20image%2020230927192520.png)
+
+# Análisis de valores límite
+
+![](./img/Pasted%20image%2020230927193937.png)
+
+![](./img/Pasted%20image%2020230927194004.png)
 
 
