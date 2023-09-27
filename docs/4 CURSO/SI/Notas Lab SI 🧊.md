@@ -1,6 +1,6 @@
 # 1. Bloque de búsqueda
 
-# Clase 1
+# Lab 1
 
 ## Guía para instalar aima-python
 
@@ -116,4 +116,8 @@ NODES_EXPANDED += 1
 
 ![](./img/Pasted%20image%2020230920175226.png)
 
----
+# Lab 2
+
+![](./img/Pasted%20image%2020230927170000.png)
+
+
