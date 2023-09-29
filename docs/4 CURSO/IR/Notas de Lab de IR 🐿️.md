@@ -35,4 +35,5 @@
 	-  **Excepción**: Si el cliente indica restricciones de diseño.
 - **Flexibles**: Los parámetros del sistema deben ser configurables sin necesidad de modificar el código. Evita el Hardcoding.
 
+# Taller 2
 

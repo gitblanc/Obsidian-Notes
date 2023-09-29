@@ -36,3 +36,56 @@
 |Gestión de cuentas de usuario|||||||
 
 Ir marcando los stakeholders interesados con una x.
+
+# Seminario 2
+
+## Requisitos no funcionales
+
+- **Requisitos no funcionales**: Son restricciones a las funcionalidades que ofrece el sistema
+
+## Requisitos de producto
+
+- De Usabilidad
+- De Eficiencia
+- De Dependencia
+- De Seguridad
+
+## Ejercicio clasificar requisitos de producto
+
+- RNF1: usabilidad
+- RNF2: seguridad
+- RNF3: dependencia
+- RNF4: eficiencia
+- RNF5: dependencia
+- RNF6: dependencia
+- RNF7: eficiencia
+- RNF8: usabilidad
+
+## Requisitos organizacionales
+
+- Derivan de políticas de la empresa cliente y de la empresa desarrolladora
+
+- De entorno
+- Operacionales
+- De desarrollo
+
+## Requisitos externos
+
+- Derivados de factores externos al sistema
+
+- Regulatorios
+- Éticos
+- Legislativos
+
+## Ejercicio clasificación requisitos
+
+- RNF9: organizacional - desarrollo
+- RNF10: externo - ético
+- RNF11: organizacional - entorno
+
+## Ejercicio: Identificar requisitos no funcionales
+
+- RNF1: El mensaje le tiene que llegar al otro usuario en un tiempo menor a 2 segundos
+- RNF2: El sistema hará una copia de seguridad de los datos periódica
+- RNF3: El sistema debe permitir autenticación 2FA con datos biométricos
+
