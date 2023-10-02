@@ -91,6 +91,22 @@
 
 ![](./img/Pasted%20image%2020230913164435.png)
 
+# Otros algoritmos de Búsqueda Heurística
+
+![](./img/Pasted%20image%2020231002181105.png)
+
+## Algoritmos e-admisibles
+
+![](./img/Pasted%20image%2020231002181239.png)
+
+## Algoritmos no admisibles
+
+![](./img/Pasted%20image%2020231002181432.png)
+
+## Algoritmos de búsqueda heurística en árboles
+
+![](./img/Pasted%20image%2020231002182803.png)
+
 ---
 
 

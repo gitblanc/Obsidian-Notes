@@ -26,3 +26,41 @@ Pruebas a realizar:
 |Dos lados iguales -> 1,2,2|"isosceles"|
 |Tres lados iguales -> 2,2,2|"equilatero"|
 
+# Seminario 2
+
+## Condiciones de entrada o prueba del ejercicio del triángulo
+
+- Número de entradas
+	- 1 entrada
+	- 2 entradas
+	- 3 entradas
+	- más entradas
+- Tipo del lado
+	- número
+	- entero
+	- real
+	- no número
+- tipo del lado 2
+- tipo del lado 3
+- longitud del lado 1
+	- <0
+	- >0
+	- =0
+- longitud del lado 2
+- longitud del lado 3
+- tipo de lado del triángulo
+	- isósceles
+	- escaleno
+	- equilátero
+	- error
+- número de lados iguales
+	- 3
+	- 2
+	- ninguno
+- relación entre los lados
+	- todos son iguales
+	- 2 son iguales
+	- ninguno es igual
+	- no forman un triángulo
+		- línea
+		- figura abierta
