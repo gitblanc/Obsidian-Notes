@@ -119,5 +119,8 @@ NODES_EXPANDED += 1
 # Lab 2
 
 ![](./img/Pasted%20image%2020230927170000.png)
+# Lab 3
 
-
+- El elitismo consiste en conservar los mejores que tengamos (no perder una mejor solución, sino mantenerla)
+	- Lo que pretende conseguir es que las diferencias entre los buenos y los malos sean más grandes
+	- Para escalar el fitness podemos elevar dos números a una potencia muy grande, para que su diferencia sea mayor (por ejemplo)
