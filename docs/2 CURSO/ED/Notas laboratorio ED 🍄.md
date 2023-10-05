@@ -92,3 +92,10 @@ public class TestBench {
 ````
 
 # Lab 3
+
+# Lab 4
+
+- vector D (de costes)
+- vector P (de rutas)
+
+- Hay un vector de booleanos de tamaño grafo.size para marcar los que están visitados (y no volver a ellos)
