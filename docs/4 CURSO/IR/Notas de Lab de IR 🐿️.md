@@ -37,3 +37,30 @@
 
 # Taller 2
 
+# Taller 3
+
+# Taller 4
+
+- Funcionalidad: **Gestión de Monedero**
+- Requisito de alto nivel: 
+	- GM1 Ingresar dinero 
+	- GM2 Sacar dinero
+	- GM3 Ver saldo
+	- GM4 Ver histórico de movimientos
+
+## Funcionalidades de IRBet
+
+- Primarias
+	- Gestión de Monedero
+	- Registro de usuarios
+	- Identificación de usuarios
+	- Jugar a la primitiva 
+	- Jugar al joker
+	- Gestión de sorteos (Ver premios, gestión de recaudación, gestionar pagos y gestión escrutinio)
+	- Categorización de premios de la primitiva
+	- Categorización de premios del joke
+
+- Secundarias
+	- Gestión de informes
+	- Gestión de estadísticas
+
