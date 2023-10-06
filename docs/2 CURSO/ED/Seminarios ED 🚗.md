@@ -56,3 +56,16 @@ public int sumaVector(int[] vector, int n){
 	else return vector[n] + sumaVector(vector, n-1)
 }
 ````
+
+# Seminario 2
+
+## Ejercicio grafos
+
+![](./img/Pasted%20image%2020231006194328.png)
+
+## Ejercicio Dijkstra
+
+![](./img/Pasted%20image%2020231006194404.png)
+
+![](./img/Pasted%20image%2020231006195200.png)
+
