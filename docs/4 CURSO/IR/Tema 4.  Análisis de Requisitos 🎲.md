@@ -215,3 +215,149 @@ Pasos propuestos para la elaboración de casos de uso:
 # Mapas de diálogo
 
 ![](./img/Pasted%20image%2020231003194028.png)
+
+# Árboles de decisión
+
+![](./img/Pasted%20image%2020231010181054.png)
+
+![](./img/Pasted%20image%2020231010181113.png)
+
+# Diagramas E-R
+
+![](./img/Pasted%20image%2020231010181150.png)
+
+- **Entidades**. Representan elementos materiales o conjuntos de datos relevantes para el negocio/sistema.
+	- Tomando como referencia el DFD, tanto los actores como los almacenes de datos se convierten en entidades en el E-R.
+	- Se definen en base a una serie de atributos que deberían especificarse aparte.
+	- En el diseño de BD, se suelen convertir en tablas.
+
+- **Relaciones**. Conexiones lógicas entre pares de entidades. 
+	- Recomendable etiquetarlos con un infinitivo.  
+	- Es posible expresar la cardinalidad (1-1, 1-M, M-M).
+
+![](./img/Pasted%20image%2020231010181308.png)
+
+# Diagramas de clase
+
+- En comparación con los E-R, aquí especificamos los atributos
+
+![](./img/Pasted%20image%2020231010181612.png)
+
+![](./img/Pasted%20image%2020231010181642.png)
+
+# Matrices CRUD
+
+![](./img/Pasted%20image%2020231010181746.png)
+
+![](./img/Pasted%20image%2020231010181804.png)
+
+# Atributos de calidad
+## Análisis de atributos de calidad
+
+![](./img/Pasted%20image%2020231010182048.png)
+
+- Rendimiento, seguridad y usabilidad son comunes a todos
+
+![](./img/Pasted%20image%2020231010182545.png)
+
+## Lista de atributos de calidad
+
+![](./img/Pasted%20image%2020231010182615.png)
+
+## Disponibilidad
+
+- Medida del tiempo durante el que el sistema es completamente operacional. 
+	- Tiempo disponible/Tiempo total.  
+	- Tiempo medio entre fallos/Tiempo medio entre fallos + Tiempo medio de reparación.
+
+- Relevante en aplicaciones web y, en general, sistemas de uso global. 
+- Estrechamente relacionada con la fiabilidad y la mantenibilidad.
+
+![](./img/Pasted%20image%2020231010182742.png)
+
+![](./img/Pasted%20image%2020231010182843.png)
+
+- Nunca un 100% de disponibilidad
+
+## Fiabilidad
+
+![](./img/Pasted%20image%2020231010183019.png)
+
+![](./img/Pasted%20image%2020231010183048.png)
+
+## Instalabilidad
+
+![](./img/Pasted%20image%2020231010183722.png)
+
+## Integridad
+
+![](./img/Pasted%20image%2020231010183748.png)
+
+- [Redondeo de misiles patriot](http://www.cs.unc.edu/~smp/COMP205/LECTURES/ERROR/lec23/node4.html)
+
+![](./img/Pasted%20image%2020231010184604.png)
+
+## Interoperabilidad
+
+![](./img/Pasted%20image%2020231010184628.png)
+
+## Rendimiento
+
+![](./img/Pasted%20image%2020231010184934.png)
+
+## Robustez
+
+![](./img/Pasted%20image%2020231010184958.png)
+
+## Seguridad (safety)
+
+### Safety
+
+![](./img/Pasted%20image%2020231010185103.png)
+
+### Seguridad
+
+![](./img/Pasted%20image%2020231010185315.png)
+
+![](./img/Pasted%20image%2020231010185400.png)
+
+## Usabilidad
+
+![](./img/Pasted%20image%2020231010190706.png)
+
+## Eficiencia
+
+![](./img/Pasted%20image%2020231010190741.png)
+
+## Escalabilidad
+
+![](./img/Pasted%20image%2020231010191336.png)
+
+## Modificabilidad
+
+![](./img/Pasted%20image%2020231010191357.png)
+
+- Un programador de mantenimiento con al menos un año de experiencia podrá modificar los algoritmos de cálculo de impuestos para adaptarlos a cambios en la normativa tributaria en un máximo de 10 horas de trabajo.
+
+## Portabilidad
+
+![](./img/Pasted%20image%2020231010191445.png)
+
+## Reusabilidad
+
+![](./img/Pasted%20image%2020231010191534.png)
+
+## Verificabilidad
+
+![](./img/Pasted%20image%2020231010191603.png)
+
+## Priorización de atributos de calidad
+
+![](./img/Pasted%20image%2020231010191721.png)
+
+## Concreción de atributos de calidad
+
+![](./img/Pasted%20image%2020231010192744.png)
+
+![](./img/Pasted%20image%2020231010192855.png)
+
