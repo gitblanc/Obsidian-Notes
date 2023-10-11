@@ -99,3 +99,7 @@ public class TestBench {
 - vector P (de rutas)
 
 - Hay un vector de booleanos de tamaño grafo.size para marcar los que están visitados (y no volver a ellos)
+
+# Lab 5
+
+- floyd y printpath de floyd
