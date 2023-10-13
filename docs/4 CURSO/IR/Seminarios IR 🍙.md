@@ -89,3 +89,21 @@ Ir marcando los stakeholders interesados con una x.
 - RNF2: El sistema hará una copia de seguridad de los datos periódica
 - RNF3: El sistema debe permitir autenticación 2FA con datos biométricos
 
+# Seminario 3. Casos de uso
+
+- Un caso de uso es la descripción de una funcionalidad
+
+- Cada caso de uso está asociado con el objetivo de un actor
+
+## Stakeholders vs actores
+
+- Todos los stakeholders son actores, pero no todos los stakeholders interactúan con el sistema
+
+## Ejercicio Caso de uso
+
+![](./img/IMG_5474.jpeg)
+
+![](./img/IMG_5475.jpeg)
+
+
+
