@@ -64,3 +64,50 @@
 	- Gestión de informes
 	- Gestión de estadísticas
 
+# Taller 5
+
+## Requisitos funcionales:
+
+(hay que completar con los datos)
+
+- **Gestionar sorteos**
+	- Crear el sorteo
+	- Modificar sorteo
+	- Eliminar el sorteo
+	- Generar informe de apuestas realizadas destinada a la Junta Superior de Control
+	- Generar informe de dinero recaudado
+	- El sistema permitirá a los usuarios empleados de SELAE añadir números agraciados al sistema
+	- Hacer Escrutinio
+	- Generar informe para la Junta superior de control donde se almacene la información de apuestas ganadoras por categoría de premio
+	- Pagar las apuestas premiadas a los usuarios ganadores
+	- Generar un informe resumen a la Agencia Tributaria
+- **Cálculo de premios**
+	- asignar el porcentaje destinado a premios
+	- distribución de dicho porcentaje entre las diferentes categorías
+- **Jugar a la lotería primitiva**
+	- Cumplimentación del boleto
+	- Pago del boleto
+	- Generación del reintegro
+	- Generación del resguardo de haber apostado
+- **Jugar al joker** (igual que la loteria)
+- **Gestión del Monedero** 
+	- Meter dinero
+	- Sacar dinero
+	- Configuración del saldo del monedero
+		- Límite de 2500€
+		- Cada jugador puede configurar su monedero para poner un saldo máximo diario, semanal y mensual
+	- Ver movimientos
+	- Permitir al usuario pagar una o varias apuestas (compulsar apuesta)
+- **Registro de usuarios**
+	- solicitar datos al usuario (no incluir la palabra formulario)
+	- comprobar que el usuario no esté en la lista de ludópatas
+	- guardar en la base de datos al usuario
+	- el sistema envia un correo electrónico conforme a que se creo la cuenta correctamente
+	- si el usuario es ludópata, el sistema envía al usuario un mensaje explicandole por que no puede jugar
+	- si el sistema falla, indicarlo mediante mensaje
+- **Identificación de usuarios**
+	- permitir a usuario no identificado jugador iniciar sesion
+	- permitir a un usuario identificado cerrar sesión
+	- permitirle recuperar la contraseña
+	- debe permitir a un usuario no identificado empleado de selae identificarse (tendrá que ir a una pantalla distinta que un usuario sin privilegios)
+	- realizar la validacion de si el usuario es o no ludópata
