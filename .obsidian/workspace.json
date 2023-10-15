@@ -13,7 +13,19 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/4 CURSO/IR/Seminarios IR 🍙.md",
+                "file": "docs/4 CURSO/SI/Ejercicios SI 🚕.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "a49a57c8f15dae0c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "docs/4 CURSO/SI/Pequeños apuntes particulares 🧤.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/4 CURSO/IR/Seminarios IR 🍙.md",
+                "file": "docs/4 CURSO/SI/Ejercicios SI 🚕.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -124,19 +136,23 @@
   },
   "active": "5cf4d29af15ef769",
   "lastOpenFiles": [
+    "docs/4 CURSO/SI/img/Pasted image 20231015200349.png",
+    "docs/4 CURSO/SI/Pequeños apuntes particulares 🧤.md",
+    "docs/4 CURSO/SI/Ejercicios SI 🚕.md",
+    "docs/4 CURSO/SI/img/Pasted image 20231015194732.png",
+    "docs/4 CURSO/SI/img/Pasted image 20231015194702.png",
+    "docs/4 CURSO/CVVS/Conceptos generales 🛫.md",
+    "docs/4 CURSO/CVVS/Seminarios CVVS 🥐.md",
+    "docs/4 CURSO/IR/Seminarios IR 🍙.md",
     "docs/4 CURSO/IR/img/IMG_5475.jpeg",
     "docs/4 CURSO/IR/img/IMG_5474.jpeg",
     "docs/4 CURSO/IR/Notas de Lab de IR 🐿️.md",
-    "docs/4 CURSO/SI/Pequeños apuntes particulares 🧤.md",
     "docs/4 CURSO/SI/img/Pasted image 20231013114640.png",
     "docs/4 CURSO/SI/img/Pasted image 20231013114233.png",
     "Pasted image 20231013114218.png",
     "Pasted image 20231013114212.png",
     "docs/4 CURSO/SI/img/Pasted image 20231013113608.png",
     "docs/4 CURSO/SI/img/Pasted image 20231013113230.png",
-    "docs/4 CURSO/SI/img/Pasted image 20231013113215.png",
-    "docs/4 CURSO/SI/img/Pasted image 20231013112725.png",
-    "docs/4 CURSO/SI/img/Pasted image 20231013110450.png",
     "docs/2 CURSO/ED/Notas laboratorio ED 🍄.md",
     "docs/4 CURSO/IR/Tema 4.  Análisis de Requisitos 🎲.md",
     "docs/4 CURSO/IR/Tema 5. Diseño e implementación 🏝️.md",
@@ -144,19 +160,15 @@
     "docs/2 CURSO/ED/2. Estructuras de datos en Red 🍔.md",
     "docs/3 CURSO/1 semestre/DS/Notas Lab DS 🛥️.md",
     "HOME.md",
-    "docs/4 CURSO/SI/Ejercicios SI 🚕.md",
     "docs/4 CURSO/SI/Notas Lab SI 🧊.md",
     "docs/4 CURSO/SI/Presentación SI 🪼.md",
     "docs/4 CURSO/SI/Seminarios SI 🎹.md",
     "docs/2 CURSO/ED/Seminarios ED 🚗.md",
     "Untitled.md",
-    "docs/4 CURSO/CVVS/Seminarios CVVS 🥐.md",
     "docs/4 CURSO/SI/Tema 4. Otros tipos de búsqueda - Algoritmos Evolutivos ♟️.md",
     "docs/4 CURSO/IR/Tema 3. Técnicas de obtención de requisitos 🏹.md",
     "docs/4 CURSO/SI/Tema 2. Búsqueda en Espacios de Estados 🐂.md",
-    "docs/4 CURSO/IR/Seminarios IR 🍙.md",
     "docs/2 CURSO/ED/1. Diseño y Algoritmia 🧢.md",
-    "docs/4 CURSO/CVVS/Conceptos generales 🛫.md",
     "docs/4 CURSO/CVVS/Preguntas Cuestionarios.md",
     "img/asted image 20230926184851.png.md",
     "img",

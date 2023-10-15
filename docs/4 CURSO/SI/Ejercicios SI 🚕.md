@@ -24,9 +24,15 @@
 
 ![](./img/Pasted%20image%2020231006161016.png)
 
+![](./img/Pasted%20image%2020231015194702.png)
+
+![](./img/Pasted%20image%2020231015194732.png)
+
 ## Ejercicio 2
 
 ![](./img/Pasted%20image%2020231006162028.png)
+
+![](./img/Pasted%20image%2020231015200349.png)
 
 ## Ejercicio 3
 
