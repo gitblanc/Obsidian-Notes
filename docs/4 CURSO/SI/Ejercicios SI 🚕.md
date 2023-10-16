@@ -53,6 +53,8 @@
 
 ![](./img/Pasted%20image%2020231016120436.png)
 
+![](./img/Pasted%20image%2020231016132405.png)
+
 ## Ejercicio 6
 
 ![](./img/Pasted%20image%2020231016120505.png)
