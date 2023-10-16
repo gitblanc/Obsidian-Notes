@@ -16,7 +16,7 @@
 
 - Para ayudarnos a hacer trazas, usar herramienta [AIspace](http://www.aispace.org)
 
-# Ficha de problemas de clase
+# Problemas de clase
 ## Ejercicio 1
 
 - Se trata de un ejercicio de propiedades formales de A* en un problema abstracto
