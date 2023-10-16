@@ -8,18 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "5cf4d29af15ef769",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "docs/4 CURSO/SI/Ejercicios SI 🚕.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "a49a57c8f15dae0c",
             "type": "leaf",
             "state": {
@@ -30,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "4882593ba3f5389d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "docs/4 CURSO/SI/Ejercicios SI 🚕.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -134,25 +135,26 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "5cf4d29af15ef769",
+  "active": "4882593ba3f5389d",
   "lastOpenFiles": [
-    "docs/4 CURSO/SI/img/Pasted image 20231015200349.png",
+    "docs/4 CURSO/SI/img/Pasted image 20231016120813.png",
+    "docs/4 CURSO/SI/img/Pasted image 20231016120748.png",
+    "docs/4 CURSO/SI/img/Pasted image 20231016120726.png",
+    "docs/4 CURSO/SI/img/Pasted image 20231016120707.png",
+    "docs/4 CURSO/SI/img/Pasted image 20231016120643.png",
+    "docs/4 CURSO/SI/img/Pasted image 20231016120619.png",
+    "docs/4 CURSO/SI/img/Pasted image 20231016120559.png",
+    "docs/4 CURSO/SI/img/Pasted image 20231016120522.png",
+    "docs/4 CURSO/SI/img/Pasted image 20231016120505.png",
+    "docs/4 CURSO/SI/img/Pasted image 20231016120436.png",
+    "docs/4 CURSO/SI/img/Pasted image 20231016120413.png",
     "docs/4 CURSO/SI/Pequeños apuntes particulares 🧤.md",
     "docs/4 CURSO/SI/Ejercicios SI 🚕.md",
-    "docs/4 CURSO/SI/img/Pasted image 20231015194732.png",
-    "docs/4 CURSO/SI/img/Pasted image 20231015194702.png",
+    "img/Pasted image 20231016111322.png.md",
     "docs/4 CURSO/CVVS/Conceptos generales 🛫.md",
     "docs/4 CURSO/CVVS/Seminarios CVVS 🥐.md",
     "docs/4 CURSO/IR/Seminarios IR 🍙.md",
-    "docs/4 CURSO/IR/img/IMG_5475.jpeg",
-    "docs/4 CURSO/IR/img/IMG_5474.jpeg",
     "docs/4 CURSO/IR/Notas de Lab de IR 🐿️.md",
-    "docs/4 CURSO/SI/img/Pasted image 20231013114640.png",
-    "docs/4 CURSO/SI/img/Pasted image 20231013114233.png",
-    "Pasted image 20231013114218.png",
-    "Pasted image 20231013114212.png",
-    "docs/4 CURSO/SI/img/Pasted image 20231013113608.png",
-    "docs/4 CURSO/SI/img/Pasted image 20231013113230.png",
     "docs/2 CURSO/ED/Notas laboratorio ED 🍄.md",
     "docs/4 CURSO/IR/Tema 4.  Análisis de Requisitos 🎲.md",
     "docs/4 CURSO/IR/Tema 5. Diseño e implementación 🏝️.md",
@@ -172,7 +174,6 @@
     "docs/4 CURSO/CVVS/Preguntas Cuestionarios.md",
     "img/asted image 20230926184851.png.md",
     "img",
-    "docs/4 CURSO/SI/Tema 3. Búsqueda heurística y Diseño de heurísticos 🦝.md",
     "docs/4 CURSO/CVVS/img",
     "docs/4 CURSO/CVVS",
     "docs/4 CURSO/IR/img",

@@ -16,6 +16,7 @@
 
 - Para ayudarnos a hacer trazas, usar herramienta [AIspace](http://www.aispace.org)
 
+# Ficha de problemas de clase
 ## Ejercicio 1
 
 - Se trata de un ejercicio de propiedades formales de A* en un problema abstracto
@@ -38,7 +39,47 @@
 
 ![](./img/Pasted%20image%2020231006162205.png)
 
+![](./img/Pasted%20image%2020231016111322.png)
+
 ## Ejercicio 4
 
 ![](./img/Pasted%20image%2020231006162225.png)
+
+![](./img/Pasted%20image%2020231016120204.png)
+
+## Ejercicio 5
+
+![](./img/Pasted%20image%2020231016120413.png)
+
+![](./img/Pasted%20image%2020231016120436.png)
+
+## Ejercicio 6
+
+![](./img/Pasted%20image%2020231016120505.png)
+
+![](./img/Pasted%20image%2020231016120522.png)
+
+## Ejercicio 7
+
+![](./img/Pasted%20image%2020231016120559.png)
+
+![](./img/Pasted%20image%2020231016120619.png)
+
+## Ejercicio 8
+
+![](./img/Pasted%20image%2020231016120643.png)
+
+## Ejercicio 9
+
+![](./img/Pasted%20image%2020231016120707.png)
+
+![](./img/Pasted%20image%2020231016120726.png)
+
+## Ejercicio 10
+
+![](./img/Pasted%20image%2020231016120748.png)
+
+![](./img/Pasted%20image%2020231016120813.png)
+
+
 
