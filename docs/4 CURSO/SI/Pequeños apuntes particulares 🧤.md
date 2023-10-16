@@ -15,14 +15,14 @@
 
 ## Propiedades de un heurístico
 
-- Debe estar bien construido/definido
+- Debe estar bien **construido**/**definido**
 	- h(n) >= 0 para cualquier nodo
 	- h(n) = 0 en los nodos objetivo
-- Ha de ser admisible
+- Ha de ser **admisible**
 	- h(n) <= h* para todo n
 	- *Pequeño truco: sabemos el coste óptimo desde un principio, porque es un problema pequeño*
 	- *Si el heurístico no fuese admisible, no se puede garantizar que siempre nos lleve a la solución óptima*
-- Ha de ser monótono
+- Ha de ser **monótono**/**consistente**(si hay varios costes diferentes entre caminos)
 	- h(n1) <= h(n2) + C(n1, n2) para todo n1,n2
 	- *C(n1, n2) es el coste de ir del nodo 1 al nodo 2*
 
