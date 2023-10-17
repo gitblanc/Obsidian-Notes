@@ -61,6 +61,8 @@
 
 ![](./img/Pasted%20image%2020231016120522.png)
 
+![](./img/Pasted%20image%2020231017111433.png)
+
 ## Ejercicio 7
 
 ![](./img/Pasted%20image%2020231016120559.png)
@@ -70,6 +72,8 @@
 ## Ejercicio 8
 
 ![](./img/Pasted%20image%2020231016120643.png)
+
+![](./img/Pasted%20image%2020231017114421.png)
 
 ## Ejercicio 9
 
