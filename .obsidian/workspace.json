@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/2 CURSO/ED/3. Estructuras jerárquicas.md",
+                "file": "docs/4 CURSO/SI/Pequeños apuntes particulares 🧤.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/2 CURSO/ED/3. Estructuras jerárquicas.md",
+                "file": "docs/4 CURSO/SI/Pequeños apuntes particulares 🧤.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -124,6 +124,7 @@
   },
   "active": "eb1c89bd7b6fda3f",
   "lastOpenFiles": [
+    "docs/2 CURSO/ED/3. Estructuras jerárquicas.md",
     "docs/2 CURSO/ED/img/Pasted image 20231017165100.png",
     "docs/2 CURSO/ED/img/Pasted image 20231017165046.png",
     "docs/2 CURSO/ED/img/Pasted image 20231017165030.png",
@@ -134,7 +135,6 @@
     "docs/2 CURSO/ED/img/Pasted image 20231017164859.png",
     "docs/2 CURSO/ED/img/Pasted image 20231017164845.png",
     "docs/2 CURSO/ED/img/Pasted image 20231017164832.png",
-    "docs/2 CURSO/ED/img/Pasted image 20231017164747.png",
     "docs/4 CURSO/SI/Pequeños apuntes particulares 🧤.md",
     "docs/4 CURSO/SI/Ejercicios SI 🚕.md",
     "docs/4 CURSO/IR/Notas de Lab de IR 🐿️.md",
@@ -146,7 +146,6 @@
     "docs/2 CURSO/ED/Notas laboratorio ED 🍄.md",
     "docs/4 CURSO/IR/Tema 4.  Análisis de Requisitos 🎲.md",
     "docs/4 CURSO/IR/Tema 5. Diseño e implementación 🏝️.md",
-    "docs/2 CURSO/ED/3. Estructuras jerárquicas.md",
     "docs/2 CURSO/ED/2. Estructuras de datos en Red 🍔.md",
     "docs/3 CURSO/1 semestre/DS/Notas Lab DS 🛥️.md",
     "HOME.md",

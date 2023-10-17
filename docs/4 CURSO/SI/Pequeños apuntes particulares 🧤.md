@@ -38,16 +38,16 @@
 
 ## Condición de expansión
 
-- `h(n) + C*(n) <= C*`, cumple la condición **necesaria pero no suficiente** para que se pueda expandir
-- `h(n) + C*(n) < C*`, cumple la condición **suficiente** de expansión
+- `h(n) + g*(n) <= C*`, cumple la condición **necesaria pero no suficiente** para que se pueda expandir
+- `h(n) + g*(n) < C*`, cumple la condición **suficiente** de expansión
 
-- La función que decide si un nodo se expande: `f(n) = C*(n) + h(n)`
+- La función que decide si un nodo se expande: `f(n) = g*(n) + h(n)`
 
 ## Resumen Condición de expansión
 
-- Si `h(n) + C*(n) > C*` *NO SE EXPANDE*
-- Si `h(n) + C*(n) <= C*` *IGUAL SE EXPANDE*
-- Si `h(n) + C*(n) < C*` *SE EXPANDE SEGURO*
+- Si `h(n) + g*(n) > C*` *NO SE EXPANDE*
+- Si `h(n) + g*(n) <= C*` *IGUAL SE EXPANDE*
+- Si `h(n) + g*(n) < C*` *SE EXPANDE SEGURO*
 
 # Algoritmos Genéticos
 
