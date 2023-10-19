@@ -16,3 +16,9 @@
 - contraseña: 3sol
 # Lab 4
 
+- Solución: aplicar patrón **Strategy** (la primera parte hasta ValidadorPredefinido) y el patrón **Composite** para el resto de validaciones
+	- Es un poco mejor la solución de Raúl
+- Contraseña: solval
+
+# Lab 5
+
