@@ -111,3 +111,11 @@
 	- permitirle recuperar la contraseña
 	- debe permitir a un usuario no identificado empleado de selae identificarse (tendrá que ir a una pantalla distinta que un usuario sin privilegios)
 	- realizar la validacion de si el usuario es o no ludópata
+
+# Taller 6
+
+- ==Pregunta que va a caer en el primer parcial==
+	- **Diagrama de casos de uso** (habría que hacerlo)
+
+- usar sistema de persistencia en lugar de base de datos
+- para la contraseña no hay que explicar su formato
