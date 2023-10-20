@@ -119,3 +119,6 @@
 
 - usar sistema de persistencia en lugar de base de datos
 - para la contraseña no hay que explicar su formato
+
+- [Cómo hacer Diagramas de casos de uso](https://emctwo.home.blog/2022/10/22/)
+
