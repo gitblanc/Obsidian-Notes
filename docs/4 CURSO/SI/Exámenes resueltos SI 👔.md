@@ -38,3 +38,8 @@
 
 ![](./img/IMG_5612.jpeg)
 
+# Junio 2019 - extraordinaria
+
+![](./img/IMG_5627.jpeg)
+
+![](./img/IMG_5628.jpeg)
