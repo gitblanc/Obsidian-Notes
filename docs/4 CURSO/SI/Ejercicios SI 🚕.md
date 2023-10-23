@@ -89,25 +89,25 @@
 
 # Ejercicios SBR (Sistemas Basados en Reglas)
 
-# Ejercicio 1
+## Ejercicio 1
 
 ![](./img/Pasted%20image%2020231023144305.png)
 
 ![](./img/IMG_5638.jpeg)
 
-# Ejercicio 2
+## Ejercicio 2
 
 ![](./img/Pasted%20image%2020231023144336.png)
 
 ![](./img/IMG_5639.jpeg)
 
-# Ejercicio 3
+## Ejercicio 3
 
 ![](./img/Pasted%20image%2020231023144355.png)
 
 ![](./img/IMG_5640.jpeg)
 
-# Ejercicio 4
+## Ejercicio 4
 
 ![](./img/Pasted%20image%2020231023144412.png)
 
@@ -115,6 +115,6 @@
 
 ![](./img/IMG_5642.jpeg)
 
-# Ejercicio 5
+## Ejercicio 5
 
 ![](./img/Pasted%20image%2020231023144429.png)
