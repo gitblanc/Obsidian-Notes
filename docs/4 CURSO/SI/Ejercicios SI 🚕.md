@@ -16,7 +16,7 @@
 
 - Para ayudarnos a hacer trazas, usar herramienta [AIspace](http://www.aispace.org)
 
-# Problemas de clase
+# Ejercicios Búsqueda Heurística
 ## Ejercicio 1
 
 - Se trata de un ejercicio de propiedades formales de A* en un problema abstracto
@@ -87,4 +87,34 @@
 
 ![](./img/Pasted%20image%2020231016120813.png)
 
+# Ejercicios SBR (Sistemas Basados en Reglas)
 
+# Ejercicio 1
+
+![](./img/Pasted%20image%2020231023144305.png)
+
+![](./img/IMG_5638.jpeg)
+
+# Ejercicio 2
+
+![](./img/Pasted%20image%2020231023144336.png)
+
+![](./img/IMG_5639.jpeg)
+
+# Ejercicio 3
+
+![](./img/Pasted%20image%2020231023144355.png)
+
+![](./img/IMG_5640.jpeg)
+
+# Ejercicio 4
+
+![](./img/Pasted%20image%2020231023144412.png)
+
+![](./img/IMG_5641.jpeg)
+
+![](./img/IMG_5642.jpeg)
+
+# Ejercicio 5
+
+![](./img/Pasted%20image%2020231023144429.png)
