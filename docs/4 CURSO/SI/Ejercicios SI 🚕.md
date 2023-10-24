@@ -69,6 +69,10 @@
 
 ![](./img/Pasted%20image%2020231016120619.png)
 
+![](./img/IMG_5650.jpeg)
+
+![](./img/IMG_5651.jpeg)
+
 ## Ejercicio 8
 
 ![](./img/Pasted%20image%2020231016120643.png)
