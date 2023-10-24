@@ -118,3 +118,9 @@
 ## Ejercicio 5
 
 ![](./img/Pasted%20image%2020231023144429.png)
+
+![](./img/IMG_5648.jpeg)
+
+# Torres de Hanói
+
+![](./img/IMG_5643.jpeg)
