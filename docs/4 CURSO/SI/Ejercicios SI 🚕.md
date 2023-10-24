@@ -128,3 +128,7 @@
 # Torres de Hanói
 
 ![](./img/IMG_5643.jpeg)
+
+# Ejercicio A* y 8-puzzle
+
+![](./img/IMG_5657.jpeg)
