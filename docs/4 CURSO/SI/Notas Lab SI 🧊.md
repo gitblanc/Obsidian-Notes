@@ -124,3 +124,13 @@ NODES_EXPANDED += 1
 - El elitismo consiste en conservar los mejores que tengamos (no perder una mejor solución, sino mantenerla)
 	- Lo que pretende conseguir es que las diferencias entre los buenos y los malos sean más grandes
 	- Para escalar el fitness podemos elevar dos números a una potencia muy grande, para que su diferencia sea mayor (por ejemplo)
+
+# Lab 4
+
+# Lab 5 
+
+## Ejercicio 1
+
+- La probabilidad de que tenga cáncer de pulmón es 48,87%
+- Como ha viajado al extranjero, ahora la probabilidad es un 37,15%
+	- Se ha decrementado porque ha aumentado la probabilidad de que tenga tuberculosis debido a su viaje en el extranjero

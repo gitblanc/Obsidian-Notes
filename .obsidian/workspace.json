@@ -11,8 +11,12 @@
             "id": "079096dbed0e8d20",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "docs/4 CURSO/SI/Notas Lab SI 🧊.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "docs/4 CURSO/SI/Notas Lab SI 🧊.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
