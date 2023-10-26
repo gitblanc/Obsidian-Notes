@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/4 CURSO/SI/Notas Lab SI 🧊.md",
+                "file": "docs/3 CURSO/1 semestre/DS/Notas Lab DS 🛥️.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/4 CURSO/SI/Notas Lab SI 🧊.md",
+                "file": "docs/3 CURSO/1 semestre/DS/Notas Lab DS 🛥️.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -124,6 +124,7 @@
   },
   "active": "079096dbed0e8d20",
   "lastOpenFiles": [
+    "docs/4 CURSO/SI/Notas Lab SI 🧊.md",
     "docs/4 CURSO/IR/Notas de Lab de IR 🐿️.md",
     "docs/4 CURSO/IR/Tema 4.  Análisis de Requisitos 🎲.md",
     "docs/4 CURSO/IR/Tema 5. Diseño e implementación 🏝️.md",
@@ -158,7 +159,6 @@
     "docs/4 CURSO/CVVS/Conceptos generales 🛫.md",
     "docs/2 CURSO/ED/Notas laboratorio ED 🍄.md",
     "HOME.md",
-    "docs/4 CURSO/SI/Notas Lab SI 🧊.md",
     "docs/4 CURSO/SI/Presentación SI 🪼.md",
     "docs/4 CURSO/SI/Seminarios SI 🎹.md",
     "Untitled.md",

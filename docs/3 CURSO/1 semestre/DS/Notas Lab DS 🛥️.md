@@ -22,3 +22,13 @@
 
 # Lab 5
 
+Solución: patrón **Command**. Sabe el cuándo pero no el qué. El qué le pasa un comando al cuándo.
+
+Al Command lo caracteriza el tiempo entre que se crea y se ejecuta.
+
+````java
+new CommandX().execute() //<-- suspenso directo xd
+````
+
+- contraseña: csol
+# Lab 6
