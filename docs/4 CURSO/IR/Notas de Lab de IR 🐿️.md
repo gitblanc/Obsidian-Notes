@@ -122,3 +122,15 @@
 
 - [Cómo hacer Diagramas de casos de uso](https://emctwo.home.blog/2022/10/22/)
 
+# Taller 7
+
+- Mejor decir usuario registrado jugador
+- Configuración Monedero. <--- Extends:
+	- Importe semanal
+	- Diario
+	- Mensual
+	- Configuración de juego responsable
+	- Configuración carga de monedero
+
+- NOTA: un monedero no paga el premio, pero sí lo recibirá
+
