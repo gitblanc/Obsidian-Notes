@@ -134,3 +134,7 @@ NODES_EXPANDED += 1
 - La probabilidad de que tenga cáncer de pulmón es 48,87%
 - Como ha viajado al extranjero, ahora la probabilidad es un 37,15%
 	- Se ha decrementado porque ha aumentado la probabilidad de que tenga tuberculosis debido a su viaje en el extranjero
+
+![](./img/IMG_5699.jpeg)
+
+![](./img/IMG_5700.jpeg)
