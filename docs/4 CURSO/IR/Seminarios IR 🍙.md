@@ -108,4 +108,6 @@ Ir marcando los stakeholders interesados con una x.
 
 # Seminario 4. Diagramas de estado
 
+![](./img/IMG_5701.jpeg)
 
+![](./img/IMG_5704.jpeg)
