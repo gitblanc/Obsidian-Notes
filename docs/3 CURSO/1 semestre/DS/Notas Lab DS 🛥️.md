@@ -1,4 +1,6 @@
-*Nota: las soluciones de una práctica están en la siguiente*
+*Nota: las soluciones de una práctica están en la siguiente o en la misma* 
+
+Si se quiere mirar ejemplos de cualquier lenguaje de un patrón de diseño, consultar la página [Refactoring Guru](https://refactoring.guru/es)
 # Lab 1
 - Solución: aplicar un **Strategy**
 # Lab 2
@@ -22,9 +24,9 @@
 
 # Lab 5
 
-Solución: patrón **Command**. Sabe el cuándo pero no el qué. El qué le pasa un comando al cuándo.
+- Solución: patrón **Command**. Sabe el cuándo pero no el qué. El qué le pasa un comando al cuándo.
 
-Al Command lo caracteriza el tiempo entre que se crea y se ejecuta.
+- Al Command lo caracteriza el tiempo entre que se crea y se ejecuta.
 
 ````java
 new CommandX().execute() //<-- suspenso directo xd
@@ -32,3 +34,19 @@ new CommandX().execute() //<-- suspenso directo xd
 
 - contraseña: csol
 # Lab 6
+
+- Solución: patrón **Adapter**.
+- Contraseña: solc
+- Para la extensión del miniformulario, crear una interfaz Editable con los métodos correspondientes (getters y setters de la interfaz *Editable*: primer valor, segundo valor, primer nombre, segundo nombre). El main quedará tal que:
+````java
+for (Foto foto : db.selectFotos()) {
+	map.add(new FotoAdapterEditable(foto));
+}
+````
+
+- No hay que crear un adaptador para todo
+	- Crear un adaptador para cada cosa específica
+
+# Lab 7
+
+- Para la solución inicial (clase 7 mejorada) -> patrón Strategy
