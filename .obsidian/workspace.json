@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "0e30a64b853b9a00",
+        "id": "f84a4d692ab8c6e8",
         "type": "tabs",
         "children": [
           {
-            "id": "0b51de2bbb994bd5",
+            "id": "67ca2a01608f69f2",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/3 CURSO/1 semestre/DS/Notas Lab DS 🛥️.md",
+                "file": "docs/2 CURSO/ED/Notas laboratorio ED 🍄.md",
                 "mode": "source",
                 "source": false
               }
@@ -96,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/3 CURSO/1 semestre/DS/Notas Lab DS 🛥️.md",
+                "file": "docs/2 CURSO/ED/Notas laboratorio ED 🍄.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -133,8 +133,9 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "0b51de2bbb994bd5",
+  "active": "67ca2a01608f69f2",
   "lastOpenFiles": [
+    "docs/3 CURSO/1 semestre/DS/Notas Lab DS 🛥️.md",
     "docs/2 CURSO/ED/3. Estructuras jerárquicas.md",
     "docs/2 CURSO/ED/img/Pasted image 20231031164554.png",
     "docs/2 CURSO/ED/img/IMG_5767.jpeg",
@@ -155,7 +156,6 @@
     "Excalidraw/Drawing 2023-10-27 14.42.48.excalidraw.md",
     "Excalidraw",
     "docs/2 CURSO/ED/Notas laboratorio ED 🍄.md",
-    "docs/3 CURSO/1 semestre/DS/Notas Lab DS 🛥️.md",
     "docs/4 CURSO/IR/Tema 4.  Análisis de Requisitos 🎲.md",
     "docs/4 CURSO/IR/Tema 5. Diseño e implementación 🏝️.md",
     "docs/4 CURSO/CVVS/Seminarios CVVS 🥐.md",
