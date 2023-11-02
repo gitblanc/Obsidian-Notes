@@ -138,3 +138,21 @@ NODES_EXPANDED += 1
 ![](./img/IMG_5699.jpeg)
 
 ![](./img/IMG_5700.jpeg)
+
+# Lab 6
+
+- Media MB se refiere a Markov Blanket
+
+- Hacer para cada una de las redes **5 veces**:
+	- Generar evidencia random
+	- Generar variables de interes aleatorias
+	- Hacer  para cada algoritmo la misma evidencia y la misma variable de interés
+- Hacer la media de las 5 veces por cada
+- Usar método setSampleSize(10000) <- para indicar cuántas muestras se usen para los cálculos
+- Usar setSeed() para establecer la misma ejecucion
+
+- Hacerlo para: HuginPropagation, LogicSampling y LikelihoodWeighting
+
+- Con diabetes **no hacer VEPropagation** porque tarda pila
+
+![](./img/Pasted%20image%2020231102174957.png)
