@@ -68,7 +68,7 @@ Amperio.hora -> Culombios
 ![](./img/Pasted%20image%2020231104113341.png)
 
 ## Ejercicios Tema 1
-# Ejercicio 1
+## Ejercicio 1
 
 ![](./img/Pasted%20image%2020231104113531.png)
 
