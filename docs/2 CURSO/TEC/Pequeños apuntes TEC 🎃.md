@@ -1,4 +1,4 @@
-# Tema 1
+# Tema 1. Magnitudes eléctricas
 ## Potencia
 ### Generada vs consumida
 
@@ -118,6 +118,86 @@ Amperio.hora -> Culombios
 
 ![](./img/Pasted%20image%2020231104115820.png)
 
+# Tema 2. Componentes pasivos
 
+## Resistencia
+## Representación V-I
 
+![](./img/Pasted%20image%2020231104120647.png)
+
+## Cortocircuito
+- Representa un cable
+- No tiene voltage V = 0
+- No tiene resistencia R = 0
+- Pasa corriente
+## Representación V-I
+
+![](./img/Pasted%20image%2020231104120923.png)
+
+## Circuito abierto
+- Tiene voltage (a determinar por el circuito)
+- La corriente es nula I = 0
+- La resistencia es infinita
+
+## Representación V-I
+
+![](./img/Pasted%20image%2020231104121049.png)
+
+## Tipos de resistencias
+
+![](./img/Pasted%20image%2020231104121140.png)
+
+## Condensador
+## Fases
+
+![](./img/Pasted%20image%2020231104121303.png)
+
+## Serie vs paralelo
+
+![](./img/Pasted%20image%2020231104121417.png)
+
+- **Impedancia**: concepto relacionado con el comportamiento de un dispositivo en régimen permanente ante excitaciones de señales alternas senoidales. Expresa la oposición del elemento al paso de la corriente
+
+## Aplicaciones del condensador
+
+- **Acoplamiento**: bloquea la continua y deja pasar la corriente de alterna
+- **Desacoplo**: absorbe los cambios bruscos de energía manteniendo estable la tensión
+- **Filtrado**: reducen componentes de alterna no deseados o el ruido provocado por la conmutación de circuitos
+
+## Bobina
+
+- Dispositivo que implementa la inductancia eléctrica como elemento de un circuito
+- Se opone a cambios bruscos de la corriente (la corriente no puede sufrir discontinuidades)
+- En continua a frecuencia cero la impedancia es 0
+- Su unidad es el Henrio *H*
+
+![](./img/Pasted%20image%2020231104122114.png)
+
+## Serie vs paralelo
+
+![](./img/Pasted%20image%2020231104122152.png)
+
+## Fuente de tensión ideal
+
+- Tiene una corriente (que depende del circuito)
+- Tiene una tensión fija
+
+## Característica V-I
+
+![](./img/Pasted%20image%2020231104122410.png)
+
+## Fuente de corriente ideal
+
+- Tiene una tensión (que depende del circuito)
+- Tiene una corriente fija
+
+## Característica V-I
+
+![](./img/Pasted%20image%2020231104122521.png)
+
+## Preguntas Repaso Tema 2
+
+![](./img/Pasted%20image%2020231104122806.png)
+
+![](./img/Pasted%20image%2020231104122823.png)
 
