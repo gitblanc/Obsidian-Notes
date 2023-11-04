@@ -201,3 +201,70 @@ Amperio.hora -> Culombios
 
 ![](./img/Pasted%20image%2020231104122823.png)
 
+# Tema 3. Diodos
+
+## Diodo
+
+- Conduce en un solo sentido
+
+![](./img/Pasted%20image%2020231104123647.png)
+
+![](./img/Pasted%20image%2020231104123712.png)
+
+## Característica V-I
+
+![](./img/Pasted%20image%2020231104123746.png)
+
+![](./img/Pasted%20image%2020231104123914.png)
+
+## ¿Cómo resolverlos?
+- Proponer una hipótesis:
+	- Funciona como circuito abierto (I = 0, V = ?)
+		- Comprobar que V del diodo > 0
+	- Funciona como cortocircuito (cable, I = ?, V = 0)
+		- Comprovar que el I del diodo sea > 0
+
+## Diodo Zener
+
+- Puede funcionar como una fuente de tensión
+
+![](./img/Pasted%20image%2020231104124304.png)
+
+## Característica V-I
+
+![](./img/Pasted%20image%2020231104124335.png)
+
+![](./img/Pasted%20image%2020231104124401.png)
+
+## ¿Cómo los resolvemos?
+
+- Proponer una hipótesis:
+	- Funciona como circuito abierto (I = 0, V = ?)
+		- Comprobar que -Vz < Vd < 0
+	- Funciona como cortocircuito (cable, I = ?, V = 0)
+		- Comprovar que el I del diodo sea > 0
+	- Funciona como fuente de tensión (I = ?, V = Vz)
+		- Comprobar que Iz sea > 0
+
+![](./img/Pasted%20image%2020231104124628.png)
+
+## Ejercicios Tema 3
+
+## Ejercicio 1
+
+![](./img/Pasted%20image%2020231104124718.png)
+
+![](./img/IMG_5817.jpeg)
+
+## Ejercicio 2
+
+![](./img/Pasted%20image%2020231104125420.png)
+
+![](./img/IMG_5821.jpeg)
+
+## Preguntas de repaso
+
+![](./img/Pasted%20image%2020231104131124.png)
+
+![](./img/Pasted%20image%2020231104131143.png)
+

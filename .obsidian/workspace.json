@@ -18,6 +18,18 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "e897f99bc74a472a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "docs/2 CURSO/TEC/Métodos de solución de problemas TEC🚼.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ]
       }
@@ -135,19 +147,21 @@
   },
   "active": "67ca2a01608f69f2",
   "lastOpenFiles": [
-    "docs/2 CURSO/TEC/img/Pasted image 20231104122823.png",
-    "docs/2 CURSO/TEC/img/Pasted image 20231104122806.png",
-    "docs/2 CURSO/TEC/img/Pasted image 20231104122601.png",
-    "docs/2 CURSO/TEC/img/Pasted image 20231104122521.png",
-    "docs/2 CURSO/TEC/img/Pasted image 20231104122410.png",
-    "docs/2 CURSO/TEC/img/Pasted image 20231104122152.png",
-    "docs/2 CURSO/TEC/img/Pasted image 20231104122114.png",
-    "Pasted image 20231104121715.png",
-    "docs/2 CURSO/TEC/img/Pasted image 20231104121417.png",
-    "docs/2 CURSO/TEC/img/Pasted image 20231104121303.png",
-    "docs/2 CURSO/TEC/img/Pasted image 20231104121140.png",
-    "docs/2 CURSO/TEC/Notas de TEC ⛑.md",
+    "docs/2 CURSO/TEC/img/Pasted image 20231104131143.png",
+    "docs/2 CURSO/TEC/img/Pasted image 20231104131124.png",
+    "docs/2 CURSO/TEC/img/IMG_5821.jpeg",
+    "docs/2 CURSO/TEC/Métodos de solución de problemas TEC🚼.md",
+    "docs/2 CURSO/TEC/Varios ejercicios resueltos TEC♻️.md",
     "docs/2 CURSO/TEC/Pequeños apuntes TEC 🎃.md",
+    "docs/2 CURSO/TEC/img/Pasted image 20231104125420.png",
+    "docs/2 CURSO/TEC/img/IMG_5817.jpeg",
+    "docs/2 CURSO/TEC/Notas de TEC ⛑.md",
+    "docs/2 CURSO/TEC/img/Pasted image 20231104124718.png",
+    "docs/2 CURSO/TEC/img/Pasted image 20231104124628.png",
+    "docs/2 CURSO/TEC/img/Pasted image 20231104124401.png",
+    "docs/2 CURSO/TEC/img/Pasted image 20231104124335.png",
+    "docs/2 CURSO/TEC/img/Pasted image 20231104124304.png",
+    "docs/2 CURSO/TEC/img/Pasted image 20231104123914.png",
     "docs/4 CURSO/SI/Notas Lab SI 🧊.md",
     "docs/2 CURSO/ED/Notas laboratorio ED 🍄.md",
     "docs/3 CURSO/1 semestre/DS/Notas Lab DS 🛥️.md",
@@ -174,8 +188,6 @@
     "docs/4 CURSO/SI/Exámenes resueltos SI 👔.md",
     "docs/2 CURSO/ED/Seminarios ED 🚗.md",
     "docs/2 CURSO/ED/2. Estructuras de datos en Red 🍔.md",
-    "img/Pasted image 20231016111322.png.md",
-    "img/asted image 20230926184851.png.md",
     "docs/4 CURSO/CVVS/img",
     "docs/4 CURSO/CVVS",
     "docs/4 CURSO/IR/img",
