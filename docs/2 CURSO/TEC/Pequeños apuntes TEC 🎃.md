@@ -337,3 +337,38 @@ Amperio.hora -> Culombios
 ![](./img/Pasted%20image%2020231105114619.png)
 
 ![](./img/Pasted%20image%2020231105114635.png)
+
+# Tema 5. Transistor MOSFET
+
+- MOSFET: Metal Oxid Semiconductor Field Effect Transistor
+
+## Estructura del MOSFET
+## Canal N
+
+![](./img/Pasted%20image%2020231105120716.png)
+
+## Canal P
+
+![](./img/Pasted%20image%2020231105120738.png)
+
+## Física del MOSFET
+
+- No existe corriente de puerta al estar aislada del canal: Ig = 0
+- Sólo existe una corriente: Id = Is
+- La mínima tensión Vgs para que exista el canal es Vt
+- Es necesario aplicar una tensión Vds positiva (canal N) para que se produzca la corriente Id
+- En los transistores de canal P todas las corrientes y tensiones son de signo contrario
+
+## Característica V-I
+
+![](./img/Pasted%20image%2020231105121141.png)
+
+## Canal N Condiciones
+
+![](./img/Pasted%20image%2020231105121256.png)
+
+## Ejemplo 1
+
+![](./img/Pasted%20image%2020231105121420.png)
+
+![](./img/IMG_5835.jpeg)
