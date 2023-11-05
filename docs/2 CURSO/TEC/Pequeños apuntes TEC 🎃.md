@@ -268,3 +268,72 @@ Amperio.hora -> Culombios
 
 ![](./img/Pasted%20image%2020231104131143.png)
 
+# Tema 4. Materiales semiconductores
+
+## Clasificación
+
+- **Conductores**: grafeno, plata cobre
+- **Semiconductores**: silicio, germanio
+- **Aislantes**: vidrio, mica
+
+## Semiconductores
+## Tipo N
+- Los electrones se denominan **portadores mayoritarios**
+- Los huecos se denominan **portadores minoritarios**
+- Las impurezas introducidas se denominan **impurezas donadoras** o **pentavalentes**
+- A temperatura ambiente todas las impurezas se ionizan
+- El material es eléctricamente neutro
+- La corriente eléctrica se realiza básicamente por electrones, aunque también hay huecos generados térmicamente como parejas e-h
+
+## Tipo P
+- Los huecos se denominan **portadores mayoritarios**
+- Los electrones se denominan **portadores minoritarios**
+- Las impurezas introducidas se denominan **impurezas aceptoras**
+- A temperatura ambiente todas las impurezas se consideran ionizadas
+- El material es eléctricamente neutro
+- La corriente eléctrica se realiza básicamente por huecos, aunque también hay electrones libres generados térmicamente como parejas e-h
+
+## Diodo de unión PN
+### Directa
+
+![](./img/Pasted%20image%2020231105113747.png)
+
+### Inversa
+
+![](./img/Pasted%20image%2020231105113822.png)
+
+## Fotodiodos
+
+- Se polarizan en inversa
+
+## Diodos LED
+
+- Se polarizan en directa
+
+## Aplicaciones de Diodos LED y Fotodiodos
+
+![](./img/Pasted%20image%2020231105114102.png)
+
+![](./img/Pasted%20image%2020231105114217.png)
+
+## Fototransistor
+
+- Transistor sensible a la luz
+- La luz incide sobre la región base y genera portadores en ella
+- Se comporta como un interruptor entre los terminales C y E
+
+## Optoacoplador
+
+- Combina un diodo led y un fototransistor
+- Funciona como un interruptor activado mediante la luz emitida por el diodo led
+- Si el led emite lud (satura) cortocircuita el fototransistor
+- Se usa para aislar eléctricamente dos circuitos
+- Se encapsula como un circuito DIP (*Dual Inline Package*)
+
+## Preguntas de repaso
+
+![](./img/Pasted%20image%2020231105114559.png)
+
+![](./img/Pasted%20image%2020231105114619.png)
+
+![](./img/Pasted%20image%2020231105114635.png)
