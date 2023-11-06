@@ -59,3 +59,8 @@
 
 # Generación de lotes
 
+
+## TestCel
+
+- Hay que hacer que el cuadrado de la derecha tenga números altos y el de la izquiera 1 o como muchísimo 2 (pero muy ocasionalmente)
+- Tasas: ponerlo fuera de la jerarquía (junto con morosidad)

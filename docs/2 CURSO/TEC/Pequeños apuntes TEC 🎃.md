@@ -220,7 +220,7 @@ Amperio.hora -> Culombios
 ## ¿Cómo resolverlos?
 - Proponer una hipótesis:
 	- Funciona como circuito abierto (I = 0, V = ?)
-		- Comprobar que V del diodo > 0
+		- Comprobar que V del diodo < 0
 	- Funciona como cortocircuito (cable, I = ?, V = 0)
 		- Comprovar que el I del diodo sea > 0
 
