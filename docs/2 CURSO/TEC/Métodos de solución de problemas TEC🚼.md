@@ -35,3 +35,35 @@
 
 ## Margen de ruido
 ![](./img/IMG_3369.jpeg)
+
+# Algunas preguntas raras
+
+## Aproximaciones de diodos
+
+![](./img/Pasted%20image%2020231108112837.png)
+
+## Aplicaciones de un diodo
+## Rectificador de media onda
+
+![](./img/Pasted%20image%2020231108113017.png)
+
+## Rectificador de onda completa
+
+![](./img/Pasted%20image%2020231108113054.png)
+
+## Condensador de filtro
+
+- Rectificador de onda + filtro por condensador
+
+![](./img/Pasted%20image%2020231108113128.png)
+
+## Fuente conmutada
+
+![](./img/Pasted%20image%2020231108113241.png)
+
+## Limitadores
+
+![](./img/Pasted%20image%2020231108113447.png)
+
+![](./img/Pasted%20image%2020231108113508.png)
+
