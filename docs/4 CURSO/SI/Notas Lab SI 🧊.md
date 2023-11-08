@@ -156,3 +156,33 @@ NODES_EXPANDED += 1
 - Con diabetes **no hacer VEPropagation** porque tarda pila
 
 ![](./img/Pasted%20image%2020231102174957.png)
+
+# Lab 7
+
+## Ejercicio 1
+
+- Depende del dominio en el que estemos.
+	- Parece asumible (porque es un dominio médico)
+
+## Ejercicio 2
+
+- Son bastante parecidos (39% - 28%)
+- Estas diferencias se deben a las muestras de la prueba, no al algoritmo
+
+## Ejercicio 3
+
+- Usar la seccion de filtro de excel
+1. 15,4%
+2. 39,47%
+
+## Ejercicio 4
+
+- Como la probabilidad es muy pequeña, el error es muy grande (y en ponderación es unas 4 veces menor)
+	- Ponderación de la verosimilitud es mejor que muestreo estocástico
+
+## Ejercicio 5
+
+- Hay dos valores distintos: 0,0098 y 0,0049
+
+- Se nos va a preguntar sobre el punto 3 Aprendizaje de redes
+
