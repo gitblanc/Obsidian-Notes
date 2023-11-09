@@ -110,3 +110,7 @@ public class TestBench {
 
 # Lab 8
 
+# Lab 9
+
+- La complejidad de los árboles AVL es siempre log2(n)
+
