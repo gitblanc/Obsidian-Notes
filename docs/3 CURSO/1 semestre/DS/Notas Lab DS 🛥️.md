@@ -50,3 +50,9 @@ for (Foto foto : db.selectFotos()) {
 # Lab 7
 
 - Para la solución inicial (clase 7 mejorada) -> patrón Strategy
+- Solución: **patrón Decorator**
+- Contraseña: decorator
+
+# Lab 8
+
+- La clase UserInterface no se toca
