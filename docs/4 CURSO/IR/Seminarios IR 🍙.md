@@ -111,3 +111,14 @@ Ir marcando los stakeholders interesados con una x.
 ![](./img/IMG_5701.jpeg)
 
 ![](./img/IMG_5704.jpeg)
+
+# Seminario 5. Verificación y validación
+
+|Requisito|Defecto|Acciones recomendadas|
+|---|---|---|
+|R1.|No conciso|Se debería separar el requisito en tres, uno para añadir usuarios, otro para eliminar, y para actualizar|
+|RNF1.|Incompleto|Especificar navegadores|
+|RNF2.|Incompleto, ambiguo, no verificable|Se debe especificar qué es fácil de usar|
+|RNF3.|Inconsistente|Modificar RNF1 o eliminar RNF3|
+|RNF4.|No conciso|Se ha de especificar una medida de respuesta|
+|RNF5.|Ambiguo||
