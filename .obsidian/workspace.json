@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/4 CURSO/IR/Seminarios IR 🍙.md",
+                "file": "docs/2 CURSO/ED/4. Estructuras Diccionario 🐿️.md",
                 "mode": "source",
                 "source": false
               }
@@ -80,7 +80,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 271.5
+    "width": 284.5
   },
   "right": {
     "id": "1b2d980ad4b04eb7",
@@ -96,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/4 CURSO/IR/Seminarios IR 🍙.md",
+                "file": "docs/2 CURSO/ED/4. Estructuras Diccionario 🐿️.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -135,21 +135,23 @@
   },
   "active": "50539d8cefa1dc99",
   "lastOpenFiles": [
+    "docs/2 CURSO/ED/3. Estructuras jerárquicas 🦔.md",
+    "docs/2 CURSO/ED/4. Estructuras Diccionario 🐿️.md",
+    "docs/2 CURSO/ED/img/IMG_6015.jpeg",
+    "docs/2 CURSO/ED/img/Pasted image 20231114154822.png",
+    "docs/2 CURSO/ED/img/Pasted image 20231114154430.png",
+    "docs/2 CURSO/ED/img/Pasted image 20231114154402.png",
+    "docs/2 CURSO/ED/img/Pasted image 20231114154344.png",
+    "docs/2 CURSO/ED/img/Pasted image 20231114154325.png",
+    "docs/2 CURSO/ED/img/Pasted image 20231114154251.png",
+    "docs/2 CURSO/ED/img/Pasted image 20231114154237.png",
+    "docs/2 CURSO/ED/img/Pasted image 20231114154205.png",
+    "docs/2 CURSO/ED/img/Pasted image 20231114154150.png",
+    "docs/4 CURSO/IR/Seminarios IR 🍙.md",
     "docs/2 CURSO/ED/Notas laboratorio ED 🍄.md",
     "docs/3 CURSO/1 semestre/DS/Notas Lab DS 🛥️.md",
     "docs/2 CURSO/TEC/Métodos de solución de problemas TEC🚼.md",
     "docs/4 CURSO/SI/Notas Lab SI 🧊.md",
-    "docs/2 CURSO/TEC/img/Pasted image 20231108113508.png",
-    "docs/2 CURSO/TEC/img/Pasted image 20231108113447.png",
-    "docs/2 CURSO/TEC/img/Pasted image 20231108113241.png",
-    "docs/2 CURSO/TEC/img/Pasted image 20231108113128.png",
-    "docs/2 CURSO/TEC/img/Pasted image 20231108113054.png",
-    "docs/2 CURSO/TEC/img/Pasted image 20231108113017.png",
-    "docs/2 CURSO/TEC/img/Pasted image 20231108112837.png",
-    "docs/2 CURSO/ED/3. Estructuras jerárquicas.md",
-    "docs/2 CURSO/ED/img/Pasted image 20231107165154.png",
-    "docs/2 CURSO/ED/img/IMG_5876.jpeg",
-    "docs/2 CURSO/ED/img/Pasted image 20231107164949.png",
     "docs/4 CURSO/CVVS/Notas Lab CVVS 🦺.md",
     "docs/2 CURSO/TEC/Pequeños apuntes TEC 🎃.md",
     "docs/2 CURSO/TEC/Ejercicios Seminario TEC 🪷.md",
@@ -157,7 +159,6 @@
     "docs/2 CURSO/TEC/Notas de TEC ⛑.md",
     "docs/Cybersecurity/Interesting hack commands and things 🍔.md",
     "docs/4 CURSO/IR/Notas de Lab de IR 🐿️.md",
-    "docs/4 CURSO/IR/Seminarios IR 🍙.md",
     "Excalidraw/Drawing 2023-10-27 14.45.19_0.excalidraw.md",
     "Excalidraw/Drawing 2023-10-27 14.45.19.excalidraw.md",
     "Excalidraw/Drawing 2023-10-27 14.42.48.excalidraw.md",
