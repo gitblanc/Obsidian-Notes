@@ -56,3 +56,9 @@ for (Foto foto : db.selectFotos()) {
 # Lab 8
 
 - La clase UserInterface no se toca
+- Solución: patrón **Observer** y **Decorator** para la encapsulación
+- Contraseña: FALTA -> pedir a raúl
+# Lab 9
+
+- Solución: patrón **Visitor**
+
