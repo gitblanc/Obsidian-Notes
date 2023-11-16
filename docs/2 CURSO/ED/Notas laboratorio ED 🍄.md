@@ -114,3 +114,12 @@ public class TestBench {
 
 - La complejidad de los árboles AVL es siempre log2(n)
 
+# Lab 10
+
+Sobre un proyecto nuevo (copia del avl) hacer:
+1. Dada una clave (etiqueta), que devuelva el padre
+	- *Pasar un parámetro extra a un método devolverPadre() muy similar al searchNode()*
+2. Dadas dos claves, que devuelva el número de aristas entre ellas
+	- *Sacar el ancestro*
+3. Cambiar el factor de balance, ahora se calcula como rama izquierda menos rama derecha
+	- *Aquí hay que modificar el cálculo del factor de balance en el nodo y luego el updateBFHeight() en el AVLTree de la forma correspondiente* 

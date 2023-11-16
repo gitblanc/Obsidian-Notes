@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/3 CURSO/1 semestre/DS/Notas Lab DS 🛥️.md",
+                "file": "docs/2 CURSO/ED/Notas laboratorio ED 🍄.md",
                 "mode": "source",
                 "source": false
               }
@@ -96,7 +96,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/3 CURSO/1 semestre/DS/Notas Lab DS 🛥️.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -133,8 +132,10 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "50539d8cefa1dc99",
+  "active": "4851b110d405dd3c",
   "lastOpenFiles": [
+    "docs/2 CURSO/ED/Notas laboratorio ED 🍄.md",
+    "docs/3 CURSO/1 semestre/DS/Notas Lab DS 🛥️.md",
     "docs/2 CURSO/ED/4. Estructuras Diccionario 🐿️.md",
     "docs/2 CURSO/ED/img/Pasted image 20231114165227.png",
     "docs/2 CURSO/ED/img/Pasted image 20231114165211.png",
@@ -148,8 +149,6 @@
     "docs/2 CURSO/ED/img/Pasted image 20231114164934.png",
     "docs/2 CURSO/ED/3. Estructuras jerárquicas 🦔.md",
     "docs/4 CURSO/IR/Seminarios IR 🍙.md",
-    "docs/2 CURSO/ED/Notas laboratorio ED 🍄.md",
-    "docs/3 CURSO/1 semestre/DS/Notas Lab DS 🛥️.md",
     "docs/2 CURSO/TEC/Métodos de solución de problemas TEC🚼.md",
     "docs/4 CURSO/SI/Notas Lab SI 🧊.md",
     "docs/4 CURSO/CVVS/Notas Lab CVVS 🦺.md",
