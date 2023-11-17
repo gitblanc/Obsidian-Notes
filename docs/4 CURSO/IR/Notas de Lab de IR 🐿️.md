@@ -134,3 +134,8 @@
 
 - NOTA: un monedero no paga el premio, pero sí lo recibirá
 
+# Taller 9
+
+- Hacer los UML de las funcionalidades que faltan
+- **Perspectiva de producto**: el software que yo estoy haciendo como encaja en el sistema de la compañía (como encaja con el sistema antiguo)
+- **Requisitos de interfaces externas**: sistemas que ya son de terceros, que no forman parte del sistema de loterías

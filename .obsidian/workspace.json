@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/2 CURSO/ED/Notas laboratorio ED 🍄.md",
+                "file": "docs/4 CURSO/IR/Notas de Lab de IR 🐿️.md",
                 "mode": "source",
                 "source": false
               }
@@ -96,6 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "docs/4 CURSO/IR/Notas de Lab de IR 🐿️.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -132,7 +133,7 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "4851b110d405dd3c",
+  "active": "50539d8cefa1dc99",
   "lastOpenFiles": [
     "docs/2 CURSO/ED/Notas laboratorio ED 🍄.md",
     "docs/3 CURSO/1 semestre/DS/Notas Lab DS 🛥️.md",
