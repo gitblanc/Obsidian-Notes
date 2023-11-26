@@ -118,3 +118,144 @@ El operador de selección tiene un gran influencia en en el fenómeno de converg
 3. **En un paso intermedio de la ejecución de un algoritmo A* que emplea un heurístico admisible h, ABIERTA contiene un nodo n tal que, en ese momento, f(n) > C*. ¿Podemos asegurar que el nodo n no se va a expandir?**
 
 No podemos asegurar que el nodo n no se va a expandir. El motivo es que n se podría rectificar en etapas posteriores de la búsqueda, haciendo que g(n) se reduzca y que f(n) = g(n) + h(n) <= C* por lo que el nodo n se podría expandir, al ser h un heurístico admisible.
+
+# Redes bayesianas
+
+## ¿Qué entra en esta parte?
+
+1. Hacer una red bayesiana
+2. Dependencias (será D dependiente de A...)
+3. Muestreo estocástico
+4. Calcular alguna probabilidad sencilla
+5. Condición de Markov (independencia)
+6. Criterio de d-separación
+
+## Probabilidad condicionada
+
+![](./img/Pasted%20image%2020231126124850.png)
+
+## Criterios de independencia
+## Manto de Markov
+
+![](./img/IMG_6150.jpeg)
+
+- Viene dado por sus padres, hijos y padres de los hijos
+
+## Condición de Markov
+
+![](./img/IMG_6151.jpeg)
+
+- Si conocemos sus padres, el nodo es independiente de todos sus descendientes
+
+## Criterio de d-separación
+
+- Dos nodos son independientes si todos los caminos que los unen están bloqueados en algún punto
+
+![](./img/IMG_6152.jpeg)
+
+- Dos variables son **independientes** si todos los caminos que las unen están bloqueados en algún punto
+- Dos variables son **condicionalmente dependientes** si conocemos a alguno de sus descendientes
+- Dos variables son **marginalmente independientes** y **dependientes** si:
+
+![](./img/IMG_6153.jpeg)
+
+### Ejercicio
+
+- A y B son marginalmente independientes
+- A y C son condicionalmente independientes dada C
+- D y E son condicionalmente independientes dada A
+- A y B son condicionalmente dependientes dada E
+
+![](./img/IMG_6156.jpeg)
+### Aclaración
+
+![](./img/IMG_6154.jpeg)
+
+## Muestreo estocástico
+
+- Consiste en sacar una serie de muestras al azar, donde sólo una parte de las muestras son útiles
+
+## Muestreo con ponderación de la verosimilitud
+
+- Todas las muestras son útiles
+- Hay que hacer la muestra en orden topológico
+
+![](./img/IMG_6155.jpeg)
+
+## Aprendizaje automático
+
+- Hay dos tipos:
+	- **Supervisado**: tenemos datos como guía
+	- **No supervisado**: nuevos datos
+- **Supervisado**: 
+	- **Clasificación**: hacer una frontera de división y clasificar
+	- **Regresión**: elaborar un modelo en función de variables para hacer una aproximación lo mejor posible
+- **No supervisado**:
+	- **Clustering**: dividir muchos datos en grupos similares
+
+- **Sobreajuste**: tienes unos datos muy concretos y cuando llega un dato nuevo al modelo falla.
+	- El sobreajuste no lo podemos justificar cuando el error de entrenamiento es mayor que el de test
+	- Existe sobreajuste si el error de test es mayor que el de entrenamiento
+
+- El aprendizaje automático se divide en dos fases:
+	- Creación de los modelos
+	- Evaluación (cómo es de bueno el modelo), por la que se suele empezar
+
+## ¿Cómo cuantificar la bondad de un modelo?
+
+- Hay que saber construir la matriz de confusión (que sirve para cosas binarias y problemas de clasificación)
+- Después, para cada clase hay que obtener:
+	- **TP**: los que el clasificador *clasifica* como X y acierta (Predicho = Real)
+	- **FP**: los que el clasificador *clasifica* como X y falla (Predicho != Real)
+	- **TN**: los que el clasificador *no clasifica* como X y no son X
+	- **FN**: los que el clasificador *no clasifica* como X y son X
+
+![](./img/IMG_6157.jpeg)
+
+- Una vez obtenida, podemos sacar las siguientes métricas:
+	- **Accuracy**: *(TP + TN)/(TP + TN + FP + FN)*
+	- **Sensitivity o recall**: *TP/(TP + FN)*
+	- **Specificity**: *TN/(TN + FP)*
+	- **Precision**: *TP/(TP + FP)*
+
+![](./img/IMG_6158.jpeg)
+
+## Curva ROC
+
+- Se encaja en un cuadrado de 1x1
+
+![](./img/IMG_6159.jpeg)
+
+## Ejercicio raro de curva ROC
+
+![](./img/IMG_6160.jpeg)
+
+## Árboles de decisión
+
+- Lo importante es saber el orden en el que metemos las variables
+- Para ello existe la entropía, que se calcula:
+
+![](./img/IMG_6161.jpeg)
+
+- Vamos a generar una serie de métricas:
+	- Ganancia de información
+	- Gain ratio
+	- Índice de GINI
+
+![](./img/IMG_6162.jpeg)
+
+- Recordar los algoritmos C.4 y el ID3
+
+- Entropía: probabilidad de error que tú tienes sabiendo lo que es verdad (haciendo trampa)
+
+````java
+AAAAAAAAA //entropía baja
+AAAAABBBB //entropía alta
+AAAABBBB //entropía alta
+AAAABBBBB //entropía alta
+````
+
+## Ejercicio árboles de decisión
+
+![](./img/IMG_6163.jpeg)
+
