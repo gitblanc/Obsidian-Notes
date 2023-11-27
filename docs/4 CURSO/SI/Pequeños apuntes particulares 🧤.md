@@ -259,3 +259,34 @@ AAAABBBBB //entropía alta
 
 ![](./img/IMG_6163.jpeg)
 
+# Redes neuronales
+
+- La neurona más simple es el **perceptrón**
+- El perceptrón consta de una serie de entradas y una única salida
+
+![](./img/IMG_6170.jpeg)
+
+- Cada una de las entradas tiene un peso (el w0, w1...)
+- La salida va a ser una función con la suma de cada uno de los pesos por el valor de la variable:
+
+![](./img/IMG_6171.jpeg)
+
+- Una **red neuronal** está construida por una serie de perceptrones donde cada uno de ellos forma una capa. Tenemos:
+	- Capa de entrada
+	- Capa(s) oculta(s) (que reciben 1 o varias entradas)
+	- Unidad de salida
+
+![](./img/IMG_6172.jpeg)
+
+- El perceptrón está limitado al uso de funciones booleanas (como AND, OR...). Sólo sirve para problemas linealmente separables.
+
+## Ejercicio: simular la función AND con un perceptrón
+
+- Sólo se necesita un perceptrón
+
+![](./img/IMG_6173.jpeg)
+
+## Función sigmoidea
+
+![](./img/IMG_6174.jpeg)
+
