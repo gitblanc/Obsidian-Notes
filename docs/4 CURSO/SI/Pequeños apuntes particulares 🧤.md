@@ -290,3 +290,14 @@ AAAABBBBB //entropía alta
 
 ![](./img/IMG_6174.jpeg)
 
+## Algoritmo de propagación hacia atrás
+## Ejercicio 1 de propagación hacia atrás
+
+![](./img/IMG_6186.jpeg)
+
+![](./img/IMG_6187.jpeg)
+
+## Ejercicio 2 propagación hacia atrás
+
+![](./img/IMG_6188.jpeg)
+
