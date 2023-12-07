@@ -4,28 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "f163f3b50f8f32c6",
+        "id": "7a9a37ed21f36a02",
         "type": "tabs",
         "children": [
           {
-            "id": "50539d8cefa1dc99",
+            "id": "74760cce07bb06e2",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/4 CURSO/IR/Apuntes de Seminario IR 🐸.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "d5c56981f833766e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "docs/4 CURSO/IR/Seminarios IR 🍙.md",
+                "file": "docs/4 CURSO/IR/Apuntes Examen Teoría IR 🎷.md",
                 "mode": "source",
                 "source": false
               }
@@ -108,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/4 CURSO/IR/Apuntes de Seminario IR 🐸.md",
+                "file": "docs/4 CURSO/IR/Apuntes Examen Teoría IR 🎷.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -145,23 +133,24 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "4851b110d405dd3c",
+  "active": "74760cce07bb06e2",
   "lastOpenFiles": [
-    "docs/4 CURSO/IR/img/Pasted image 20231204145831.png",
-    "docs/4 CURSO/IR/img/Pasted image 20231204145723.png",
-    "docs/4 CURSO/IR/img/Pasted image 20231204145654.png",
-    "Pasted image 20231204145647.png",
-    "docs/4 CURSO/IR/img/Pasted image 20231204145559.png",
-    "docs/4 CURSO/IR/img/Pasted image 20231204145517.png",
-    "docs/4 CURSO/IR/img/Pasted image 20231204145502.png",
-    "docs/4 CURSO/IR/img/Pasted image 20231204145345.png",
-    "docs/4 CURSO/IR/img/Pasted image 20231204145325.png",
-    "docs/4 CURSO/IR/img/Pasted image 20231204145220.png",
-    "docs/4 CURSO/IR/img/Pasted image 20231204145153.png",
-    "docs/4 CURSO/IR/Seminarios IR 🍙.md",
-    "docs/4 CURSO/IR/Apuntes de Seminario IR 🐸.md",
-    "docs/3 CURSO/1 semestre/DS/Notas Lab DS 🛥️.md",
+    "docs/4 CURSO/IR/img/Pasted image 20231207153531.png",
+    "docs/4 CURSO/IR/img/Pasted image 20231207153452.png",
+    "docs/4 CURSO/IR/img/Pasted image 20231207153417.png",
+    "docs/4 CURSO/IR/img/Pasted image 20231207153358.png",
+    "docs/4 CURSO/IR/img/Pasted image 20231207153304.png",
+    "docs/4 CURSO/IR/img/Pasted image 20231207145010.png",
+    "docs/4 CURSO/IR/img/Pasted image 20231207144857.png",
+    "docs/4 CURSO/IR/img/Pasted image 20231207144717.png",
+    "docs/4 CURSO/IR/img/Pasted image 20231207144632.png",
+    "docs/4 CURSO/IR/img/Pasted image 20231207143304.png",
+    "docs/4 CURSO/IR/img/Pasted image 20231207143151.png",
+    "docs/4 CURSO/IR/Apuntes Examen Teoría IR 🎷.md",
     "docs/4 CURSO/SI/Pequeños apuntes particulares 🧤.md",
+    "docs/4 CURSO/IR/Apuntes de Seminario IR 🐸.md",
+    "docs/4 CURSO/IR/Seminarios IR 🍙.md",
+    "docs/3 CURSO/1 semestre/DS/Notas Lab DS 🛥️.md",
     "docs/2 CURSO/ED/4. Estructuras Diccionario 🐿️.md",
     "docs/4 CURSO/IR/Notas de Lab de IR 🐿️.md",
     "docs/2 CURSO/ED/Notas laboratorio ED 🍄.md",
@@ -183,7 +172,6 @@
     "docs/4 CURSO/CVVS/Seminarios CVVS 🥐.md",
     "docs/4 CURSO/SI/Ejercicios SI 🚕.md",
     "docs/2 CURSO/CN/Notas generales CN 📈.md",
-    "img/2 CURSO/CN/img/ej 1.png.md",
     "img/2 CURSO/CN/img",
     "img/2 CURSO/CN",
     "img/2 CURSO",

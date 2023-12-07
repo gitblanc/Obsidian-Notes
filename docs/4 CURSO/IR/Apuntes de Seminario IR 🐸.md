@@ -193,5 +193,116 @@
 
 ![](./img/Pasted%20image%2020231204145831.png)
 
+# Seminario 4. Diagramas de estado
 
+## ¿Qué es un diagrama de estado?
+
+- Es un diagrama donde se representan los posibles estados de un sistema u objeto
+
+## ¿Qué es un estado?
+
+- Describe el estado en el que se encuentra un objeto en un momento concreto de su ciclo de vida
+
+![](./img/Pasted%20image%2020231206151946.png)
+
+## Transición
+## Externa
+- Representa la transición entre dos estados. En la imagen, es una transición externa
+
+![](./img/Pasted%20image%2020231206152044.png)
+
+- Evento (e): evento que dispara el cambio de estado
+- Condición (c): condición booleana que permite el cambio de estado
+- Actividades (A): actividades que se ejecutan durante un cambio de estado
+
+## Interna
+
+- Se maneja la aparición de un evento dentro de un estado
+- Como el evento nunca sale de dicho estado, las actividades en entrada y salida no se ejecutan
+
+![](./img/Pasted%20image%2020231206152515.png)
+
+## Auto-transición
+
+- Transición en la que el estado fuente y el objetivo son el mismo
+
+![](./img/Pasted%20image%2020231206152602.png)
+
+## Equivalencias
+
+![](./img/Pasted%20image%2020231206152633.png)
+
+![](./img/Pasted%20image%2020231206152720.png)
+
+![](./img/Pasted%20image%2020231206152859.png)
+
+## Explicar el orden de ejecución
+
+![](./img/Pasted%20image%2020231206152939.png)
+
+![](./img/Pasted%20image%2020231206153000.png)
+
+![](./img/Pasted%20image%2020231206153021.png)
+
+![](./img/Pasted%20image%2020231206153118.png)
+
+![](./img/Pasted%20image%2020231206153150.png)
+
+![](./img/Pasted%20image%2020231206153318.png)
+
+## Pseudoestados
+
+![](./img/Pasted%20image%2020231206153414.png)
+
+![](./img/Pasted%20image%2020231206153431.png)
+
+## ¿Es correcto este diagrama?
+
+![](./img/Pasted%20image%2020231206153516.png)
+
+![](./img/Pasted%20image%2020231206153542.png)
+
+## Hacer el diagrama de estado
+### Estudiante en una asignatura
+
+![](./img/Pasted%20image%2020231206153612.png)
+
+![](./img/Pasted%20image%2020231206153640.png)
+
+### Asientos de cine
+
+![](./img/Pasted%20image%2020231206153723.png)
+
+![](./img/Pasted%20image%2020231206153811.png)
+
+# Seminario 5. Verificación de requisitos
+
+## Verificación y validación
+
+- **Validación**: comprobar si los requisitos cumplen las necesidades de los stakeholders
+- **Verificación**: comprobar si los requisitos cumplen con los criterios de calidad
+
+## Criterios de calidad: de cada requisito
+
+![](./img/Pasted%20image%2020231206154201.png)
+
+## Criterios de calidad: del SRS
+
+![](./img/Pasted%20image%2020231206154240.png)
+
+## Formato para la revisión de requisitos
+
+![](./img/Pasted%20image%2020231206154308.png)
+
+![](./img/Pasted%20image%2020231206154329.png)
+
+![](./img/Pasted%20image%2020231206154422.png)
+
+## Ejercicio extra Anexo 1
+
+![](./img/Pasted%20image%2020231206154536.png)
+
+![](./img/Pasted%20image%2020231206154559.png)
+
+![](./img/Pasted%20image%2020231206154622.png)
 
