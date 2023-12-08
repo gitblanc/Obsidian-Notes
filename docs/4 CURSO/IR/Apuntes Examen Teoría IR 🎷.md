@@ -217,5 +217,176 @@
 
 ![](./img/Pasted%20image%2020231207153531.png)
 
+# Tema 4. Análisis de requisitos
 
+## Modelos visuales
+
+### Diagramas de casos de uso
+
+![](./img/Pasted%20image%2020231208120245.png)
+
+### Diagramas de actividad
+
+![](./img/Pasted%20image%2020231208120317.png)
+
+### Diagramas de flujo de datos
+
+- Adecuados para sistemas de procesamiento de transacciones
+- Describen el movimiento de datos de un sistema
+- Útiles para extraer requisitos de datos
+- A menudo usados en **entrevistas**
+
+![](./img/Pasted%20image%2020231208120406.png)
+
+### Diagramas swimlane
+
+- Representan las operaciones a realizar para ejecutar un proceso del sistema
+
+![](./img/Pasted%20image%2020231208120629.png)
+
+### Diagramas de estado
+
+- Describen los cambios de estado de un sistema bajo unas condiciones determinadas
+- Uso típico en sistemas de tiempo real y en la gestión de pedidos, inventarios y similares
+
+![](./img/Pasted%20image%2020231208120806.png)
+
+### Mapas de diálogo
+
+- Describen la interfaz de usuario a un nivel de abstracción alto
+- Permite explorar el flujo de interacciones entre usuarios y sistema sin entrar en detalles de los procesos o cuestiones de diseño de IU
+
+![](./img/Pasted%20image%2020231208120939.png)
+
+### Árboles de decisión
+
+- Representan una secuencia lógica de acciones a tomar por el sistema bajo unas condiciones determinadas
+- Adecuados para documentar restricciones de negocio
+
+![](./img/Pasted%20image%2020231208121052.png)
+
+### Diagramas entidad-relación
+
+- Representa entidades y relaciones entre ellas
+- Se emplean para definir Bases de datos (BD)
+
+![](./img/Pasted%20image%2020231208121227.png)
+
+### Diagramas de clase
+
+- Alternativa a los diagramas Entidad-Relación
+- Los atributos que un E-R obviaba, aquí se especifican
+
+![](./img/Pasted%20image%2020231208121328.png)
+
+### Matrices CRUD
+
+- Relaciona acciones del sistema y datos para estudiar cuando estos se crean, leen, actualizan o eliminan (CRUD)
+
+![](./img/Pasted%20image%2020231208121454.png)
+
+## Atributos de calidad
+
+![](./img/Pasted%20image%2020231208121528.png)
+
+## Atributos de calidad internos vs externos
+
+- **Externos**: características observadas durante la ejecución del sistema, que influencian al usuario y su experiencia.
+- **Internos**: propiedades percibidas por el equipo técnico durante su interacción con el sistema, que pueden afectar indirectamente a los usuarios
+
+![](./img/Pasted%20image%2020231208121735.png)
+
+## Disponibilidad
+
+![](./img/Pasted%20image%2020231208121818.png)
+
+Ejemplo: *El sistema estará disponible un 99% del tiempo entre las 6.00 y las 24:00.*
+
+## Fiabilidad
+
+![](./img/Pasted%20image%2020231208121904.png)
+
+Ejemplo: *El tiempo medio entre fallos del subsistema X será de 42 días.*
+
+## Instalabilidad
+
+![](./img/Pasted%20image%2020231208121948.png)
+
+## Integridad
+
+![](./img/Pasted%20image%2020231208122016.png)
+
+Ejemplo: *El sistema no redondeará el tiempo transcurrido desde el arranque del sistema al registrar el valor medido.*
+
+## Interoperabilidad
+
+![](./img/Pasted%20image%2020231208122243.png)
+
+Ejemplo: *El sistema podrá importar cualquier modelo 3D exportado de la herramienta Autodesk 3ds Max (versión 2021 o anterior).*
+
+## Rendimiento
+
+![](./img/Pasted%20image%2020231208122329.png)
+
+Ejemplo: *El sistema situará la placa giratoria en la posición indicada por el usuario en un máximo de TIEMPO_MAXIMO_GIRO segundos.*
+
+## Robustez
+
+![](./img/Pasted%20image%2020231208122401.png)
+
+Ejemplo: *Si el editor de imágenes se cierra antes de que el usuario guarde el archivo, la próxima vez que el usuario inicie el editor el sistema recuperará los contenidos del archivo de, como máximo, TIEMPO_MAXIMO_RECUPERACIÓN antes del fallo.*
+
+## Seguridad (safety)
+
+![](./img/Pasted%20image%2020231208122435.png)
+
+Ejemplo: *El sistema finalizará inmediatamente el proceso de radiación ionizante si detecta niveles de radiación anómalos.*
+
+## Seguridad (security)
+
+![](./img/Pasted%20image%2020231208122525.png)
+
+Ejemplo: *El sistema no permitirá a los usuarios reutilizar contraseñas que haya empleado previamente.*
+
+## Usabilidad
+
+![](./img/Pasted%20image%2020231208122608.png)
+
+Ejemplo: *Un usuario con, al menos, tres meses de experiencia será capaz de solicitar una miniatura en un tiempo medio de 5 minutos y un máximo de 10 minutos.*
+
+## Eficiencia
+
+![](./img/Pasted%20image%2020231208122644.png)
+
+Ejemplo: *El 33% de la memoria RAM disponible para el sistema se dejará libre durante los períodos de máxima carga previstos.*
+
+## Escalabilidad
+
+![](./img/Pasted%20image%2020231208122720.png)
+
+Ejemplo: *La capacidad del sistema debe ser capaz de incrementarse de 420 transacciones al día a 1500 transacciones al día en un máximo de 24 horas.*
+
+## Modificabilidad
+
+![](./img/Pasted%20image%2020231208122812.png)
+
+Ejemplo: *Un programador de mantenimiento con al menos un año de experiencia podrá modificar los algoritmos de cálculo de impuestos para adaptarlos a cambios en la normativa tributaria en un máximo de 10 horas de trabajo.*
+
+## Portabilidad
+
+![](./img/Pasted%20image%2020231208122855.png)
+
+Ejemplo: *El sistema permitirá importar las características del perfil entre IoS y Android.*
+
+## Reusabilidad
+
+![](./img/Pasted%20image%2020231208122930.png)
+
+Ejemplo: *Los algoritmos de cálculo de impuestos serán reusables en futuras aplicaciones de compra-venta.*
+
+## Verificabilidad
+
+![](./img/Pasted%20image%2020231208123020.png)
+
+Ejemplo: *La máxima complejidad ciclomáticade un módulo del sistema será de 21.*
 
