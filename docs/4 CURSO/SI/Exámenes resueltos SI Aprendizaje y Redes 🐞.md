@@ -48,3 +48,32 @@
 
 # 22 Enero 2021
 
+![](./img/Pasted%20image%2020231209135903.png)
+
+![](./img/Pasted%20image%2020231209135919.png)
+
+![](./img/Pasted%20image%2020231209135934.png)
+
+![](./img/Pasted%20image%2020231209135951.png)
+
+![](./img/IMG_6346.jpeg)
+
+![](./img/Pasted%20image%2020231209140010.png)
+
+![](./img/IMG_6347.jpeg)
+
+![](./img/Pasted%20image%2020231209140025.png)
+
+![](./img/IMG_6348.jpeg)
+
+![](./img/Pasted%20image%2020231209140049.png)
+
+![](./img/IMG_6349.jpeg)
+
+![](./img/Pasted%20image%2020231209140110.png)
+
+![](./img/Pasted%20image%2020231209140128.png)
+
+![](./img/Pasted%20image%2020231209140146.png)
+
+![](./img/IMG_6350.jpeg)

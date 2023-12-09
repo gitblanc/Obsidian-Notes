@@ -31,7 +31,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -108,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/4 CURSO/SI/Pequeños apuntes particulares 🧤.md",
+                "file": "docs/4 CURSO/SI/Exámenes resueltos SI Aprendizaje y Redes 🐞.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -145,20 +146,21 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "74760cce07bb06e2",
+  "active": "50c70474ec452d42",
   "lastOpenFiles": [
-    "docs/4 CURSO/SI/Exámenes resueltos SI Aprendizaje y Redes 🐞.md",
+    "docs/4 CURSO/SI/img/Pasted image 20231209140146.png",
+    "docs/4 CURSO/SI/img/Pasted image 20231209140128.png",
+    "docs/4 CURSO/SI/img/Pasted image 20231209140110.png",
+    "docs/4 CURSO/SI/img/Pasted image 20231209140049.png",
+    "docs/4 CURSO/SI/img/Pasted image 20231209140025.png",
+    "docs/4 CURSO/SI/img/Pasted image 20231209140010.png",
+    "docs/4 CURSO/SI/img/Pasted image 20231209135951.png",
+    "docs/4 CURSO/SI/img/Pasted image 20231209135934.png",
+    "docs/4 CURSO/SI/img/Pasted image 20231209135919.png",
+    "docs/4 CURSO/SI/img/Pasted image 20231209135903.png",
+    "docs/4 CURSO/SI/img/IMG_6350.jpeg",
     "docs/4 CURSO/SI/Pequeños apuntes particulares 🧤.md",
-    "docs/4 CURSO/SI/img/Pasted image 20231209130312.png",
-    "docs/4 CURSO/SI/img/Pasted image 20231209130255.png",
-    "docs/4 CURSO/SI/img/Pasted image 20231209130236.png",
-    "docs/4 CURSO/SI/img/Pasted image 20231209130216.png",
-    "docs/4 CURSO/SI/img/Pasted image 20231209130153.png",
-    "docs/4 CURSO/SI/img/Pasted image 20231209130052.png",
-    "docs/4 CURSO/SI/img/IMG_6344.jpeg",
-    "docs/4 CURSO/SI/img/IMG_6343.jpeg",
-    "docs/4 CURSO/SI/img/IMG_6342.jpeg",
-    "docs/4 CURSO/SI/img/IMG_6341.jpeg",
+    "docs/4 CURSO/SI/Exámenes resueltos SI Aprendizaje y Redes 🐞.md",
     "docs/4 CURSO/IR/Apuntes Examen Teoría IR 🎷.md",
     "docs/4 CURSO/IR/Apuntes de Seminario IR 🐸.md",
     "docs/4 CURSO/IR/Seminarios IR 🍙.md",
