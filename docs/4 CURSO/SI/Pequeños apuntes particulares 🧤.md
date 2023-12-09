@@ -175,6 +175,16 @@ No podemos asegurar que el nodo n no se va a expandir. El motivo es que n se pod
 
 - Consiste en sacar una serie de muestras al azar, donde sólo una parte de las muestras son útiles
 
+## Pregunta sobre muestreo estocástico
+
+![](./img/Pasted%20image%2020231209130216.png)
+
+Para realizar el proceso de muestreo, primero hay que establecer un orden topológico. Para esta red, un posible orden sería {A, E, B, D, C, F, G}. Con este orden hay que muestrear cada variable según su tabla de probabilidad condicional teniendo en cuenta el valor de sus padres, si los tiene, que ya han sido asignados para la muestra actual.
+
+La aproximación de la probabilidad pedida es la proporción de las muestras en las que se cumple que E es cierto, C es falso y G es cierto (valor Ns), en relación con las muestras en las que G es cierto (valor Nc), es decir:
+
+![](./img/IMG_6341.jpeg)
+
 ## Muestreo con ponderación de la verosimilitud
 
 - Todas las muestras son útiles
@@ -182,7 +192,7 @@ No podemos asegurar que el nodo n no se va a expandir. El motivo es que n se pod
 
 ![](./img/IMG_6155.jpeg)
 
-## Aprendizaje automático
+# Aprendizaje automático
 
 - Hay dos tipos:
 	- **Supervisado**: tenemos datos como guía
@@ -200,6 +210,18 @@ No podemos asegurar que el nodo n no se va a expandir. El motivo es que n se pod
 - El aprendizaje automático se divide en dos fases:
 	- Creación de los modelos
 	- Evaluación (cómo es de bueno el modelo), por la que se suele empezar
+
+## Pregunta sobre Bootstrap
+
+![](./img/Pasted%20image%2020231209130236.png)
+
+El esquema de validación Bootstrap consiste en usar el mismo número de instancias para el entrenamiento que el número total de las que se disponen. Sin embargo, para tener la posibilidad de validar el modelo entrenado con instancias no usadas en el entrenamiento, se realiza un muestreo con reemplazo de forma que varias instancias aparecerán repetidas.
+
+Como con este esquema se usan para el aprendizaje el mismo número de instancias que el total, es muy complicado para situaciones en las que el conjunto de datos es pequeño.
+
+Algunas de las variantes que pueden usar el esquema bootstrap son:
+- Validar solamente con las instancias que no se usaron para entrenar
+- Usar todas las instancias originales, pero ponderadas de forma que las instancias usadas en el entrenamiento tendrán menos peso que las que no
 
 ## ¿Cómo cuantificar la bondad de un modelo?
 
