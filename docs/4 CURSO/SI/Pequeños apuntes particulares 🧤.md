@@ -217,7 +217,7 @@ La aproximación de la probabilidad pedida es la proporción de las muestras en 
 
 El esquema de validación Bootstrap consiste en usar el mismo número de instancias para el entrenamiento que el número total de las que se disponen. Sin embargo, para tener la posibilidad de validar el modelo entrenado con instancias no usadas en el entrenamiento, se realiza un muestreo con reemplazo de forma que varias instancias aparecerán repetidas.
 
-Como con este esquema se usan para el aprendizaje el mismo número de instancias que el total, es muy complicado para situaciones en las que el conjunto de datos es pequeño.
+Como con este esquema se usan para el aprendizaje el mismo número de instancias que el total, es muy indicado para situaciones en las que el conjunto de datos es pequeño.
 
 Algunas de las variantes que pueden usar el esquema bootstrap son:
 - Validar solamente con las instancias que no se usaron para entrenar
