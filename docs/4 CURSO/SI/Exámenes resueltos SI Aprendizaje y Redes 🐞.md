@@ -110,3 +110,30 @@
 
 ![](./img/IMG_6370.jpeg)
 
+# Enero 2020
+
+![](./img/Pasted%20image%2020231210124040.png)
+
+![](./img/Pasted%20image%2020231210124058.png)
+
+![](./img/Pasted%20image%2020231210124122.png)
+
+![](./img/IMG_6371.jpeg)
+
+![](./img/Pasted%20image%2020231210124142.png)
+
+![](./img/IMG_6372.jpeg)
+
+![](./img/Pasted%20image%2020231210124200.png)
+
+![](./img/IMG_6373.jpeg)
+
+![](./img/Pasted%20image%2020231210124219.png)
+
+![](./img/Pasted%20image%2020231210124239.png)
+
+![](./img/IMG_6374.jpeg)
+
+![](./img/Pasted%20image%2020231210124259.png)
+
+![](./img/IMG_6375.jpeg)
