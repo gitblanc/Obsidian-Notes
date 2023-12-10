@@ -390,3 +390,5 @@ Ejemplo: *Los algoritmos de cálculo de impuestos serán reusables en futuras ap
 
 Ejemplo: *La máxima complejidad ciclomáticade un módulo del sistema será de 21.*
 
+# Tema 5. Especificación de Requisitos Software
+
