@@ -392,3 +392,37 @@ Ejemplo: *La máxima complejidad ciclomáticade un módulo del sistema será de 
 
 # Tema 5. Especificación de Requisitos Software
 
+## Estándar IEEE 830
+
+![](./img/Pasted%20image%2020231210172029.png)
+
+## Cualidades deseables de los requisitos
+
+- Según BABOK
+	- Atómicos
+	- Completos
+	- Comprensibles
+	- Consistentes
+	- Factibles
+	- No ambiguos
+	- Priorizados
+	- Verificables
+- Según Hull
+	- Abstractos
+	- Atómicos
+	- Claros
+	- Factibles
+	- Legales
+	- Precisos
+	- Únicos
+	- Verificables
+- Según Weagers y Beatty
+	- Completos
+	- Correctos
+	- Consistentes
+	- Factibles
+	- Necesarios
+	- No ambiguos
+	- Priorizados
+	- Verificables
+
