@@ -505,3 +505,88 @@ Primero se hace la verificación y después la validación
 
 ![](./img/Pasted%20image%2020231216154624.png)
 
+# Tema 7. Gestión de Requisitos
+
+## Desarrollo y gestión de requisitos
+
+![](./img/Pasted%20image%2020231216154848.png)
+
+## Gestión
+
+![](./img/Pasted%20image%2020231216155129.png)
+
+## Línea base de requisitos
+
+![](./img/Pasted%20image%2020231216155334.png)
+
+![](./img/Pasted%20image%2020231216155401.png)
+
+## Categorías del proceso de gestión
+
+- Control de versiones
+- Control de cambios
+- Seguimiento del estado de los requisitos
+- Trazado de los requisitos
+
+## Control de versiones
+
+![](./img/Pasted%20image%2020231216155548.png)
+
+## Seguimiento del estado de los requisitos
+
+![](./img/Pasted%20image%2020231216155633.png)
+
+![](./img/Pasted%20image%2020231216155719.png)
+
+![](./img/Pasted%20image%2020231216155736.png)
+
+![](./img/Pasted%20image%2020231216155803.png)
+
+## Gestión de problemas
+
+![](./img/Pasted%20image%2020231216155843.png)
+
+## Control de cambios
+
+![](./img/Pasted%20image%2020231216155919.png)
+
+## Corrupción del alcance
+
+![](./img/Pasted%20image%2020231216160006.png)
+
+![](./img/Pasted%20image%2020231216160030.png)
+
+![](./img/Pasted%20image%2020231216160104.png)
+
+## Política de control de cambios
+
+![](./img/Pasted%20image%2020231216160132.png)
+
+## Proceso de control de cambios
+
+![](./img/Pasted%20image%2020231216160246.png)
+
+## Comité de control de cambios
+
+![](./img/Pasted%20image%2020231216160322.png)
+
+## Métrica de cambios
+
+![](./img/Pasted%20image%2020231216160423.png)
+
+## Estabilidad de cambios
+
+![](./img/Pasted%20image%2020231216160511.png)
+
+## Impacto de cambios
+
+![](./img/Pasted%20image%2020231216160758.png)
+
+## Trazado de requisitos
+
+![](./img/Pasted%20image%2020231216160842.png)
+
+![](./img/Pasted%20image%2020231216160930.png)
+
+![](./img/Pasted%20image%2020231216161002.png)
+
