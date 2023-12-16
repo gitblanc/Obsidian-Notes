@@ -590,3 +590,53 @@ Primero se hace la verificación y después la validación
 
 ![](./img/Pasted%20image%2020231216161002.png)
 
+# Tema 8. Ingeniería de requisitos en los Métodos Ágiles
+
+## Métodos Ágiles
+
+![](./img/Pasted%20image%2020231216161724.png)
+
+![](./img/Pasted%20image%2020231216161745.png)
+
+## Proceso de IR en metodologías ágiles
+
+![](./img/Pasted%20image%2020231216161830.png)
+
+## Historias de Usuario
+
+![](./img/Pasted%20image%2020231216162406.png)
+
+![](./img/Pasted%20image%2020231216162432.png)
+
+![](./img/Pasted%20image%2020231216162524.png)
+
+## Obtención 
+
+![](./img/Pasted%20image%2020231216162607.png)
+
+## Análisis
+
+![](./img/Pasted%20image%2020231216162628.png)
+
+![](./img/Pasted%20image%2020231216162727.png)
+
+## Especificación
+
+![](./img/Pasted%20image%2020231216162754.png)
+
+![](./img/Pasted%20image%2020231216162836.png)
+
+![](./img/Pasted%20image%2020231216163058.png)
+
+## Validación
+
+![](./img/Pasted%20image%2020231216163146.png)
+
+## Línea base
+
+![](./img/Pasted%20image%2020231216163219.png)
+
+## Gestión
+
+![](./img/Pasted%20image%2020231216163251.png)
+
