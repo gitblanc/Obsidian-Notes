@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "7a9a37ed21f36a02",
+        "id": "07f5af63f646eda6",
         "type": "tabs",
         "children": [
           {
-            "id": "50c70474ec452d42",
+            "id": "9af6e18fe85a0b0e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/4 CURSO/IR/Apuntes Examen Teoría IR 🎷.md",
+                "file": "docs/2 CURSO/TEC/Pequeños apuntes de TEC - 2 examen 🦷.md",
                 "mode": "source",
                 "source": false
               }
@@ -96,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/4 CURSO/IR/Apuntes Examen Teoría IR 🎷.md",
+                "file": "docs/2 CURSO/TEC/Pequeños apuntes de TEC - 2 examen 🦷.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -133,23 +133,25 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "50c70474ec452d42",
+  "active": "9af6e18fe85a0b0e",
   "lastOpenFiles": [
-    "docs/4 CURSO/IR/img/Pasted image 20231210172029.png",
-    "docs/4 CURSO/SI/Exámenes resueltos SI Aprendizaje y Redes 🐞.md",
-    "docs/4 CURSO/SI/img/IMG_6379.jpeg",
-    "docs/4 CURSO/SI/img/IMG_6378.jpeg",
-    "docs/4 CURSO/SI/img/IMG_6377.jpeg",
-    "docs/4 CURSO/SI/img/IMG_6376.jpeg",
-    "docs/4 CURSO/SI/img/Pasted image 20231210134328.png",
-    "docs/4 CURSO/SI/img/Pasted image 20231210134309.png",
-    "docs/4 CURSO/SI/img/Pasted image 20231210134217.png",
-    "docs/4 CURSO/SI/img/Pasted image 20231210134143.png",
-    "docs/4 CURSO/SI/img/Pasted image 20231210134114.png",
-    "docs/4 CURSO/SI/img/IMG_6375.jpeg",
-    "docs/4 CURSO/SI/Pequeños apuntes particulares 🧤.md",
-    "docs/4 CURSO/IR/Apuntes Examen Teoría IR 🎷.md",
+    "docs/2 CURSO/TEC/img/Pasted image 20231216103936.png",
+    "docs/2 CURSO/TEC/img/Pasted image 20231216103914.png",
+    "docs/2 CURSO/TEC/img/IMG_6458.jpeg",
+    "docs/2 CURSO/TEC/img/Pasted image 20231216100720.png",
+    "docs/2 CURSO/TEC/img/Pasted image 20231216095727.png",
+    "docs/2 CURSO/TEC/img/Pasted image 20231216095658.png",
+    "docs/2 CURSO/TEC/img/Pasted image 20231216095633.png",
+    "docs/2 CURSO/TEC/img/Pasted image 20231216095530.png",
+    "docs/2 CURSO/TEC/img/Pasted image 20231216095339.png",
+    "docs/2 CURSO/TEC/img/Pasted image 20231216095248.png",
+    "docs/2 CURSO/TEC/img/Pasted image 20231216095145.png",
+    "docs/2 CURSO/TEC/Pequeños apuntes TEC - 1 examen 🎃.md",
+    "docs/2 CURSO/TEC/Pequeños apuntes de TEC - 2 examen 🦷.md",
     "docs/4 CURSO/IR/Apuntes de Seminario IR 🐸.md",
+    "docs/4 CURSO/IR/Apuntes Examen Teoría IR 🎷.md",
+    "docs/4 CURSO/SI/Exámenes resueltos SI Aprendizaje y Redes 🐞.md",
+    "docs/4 CURSO/SI/Pequeños apuntes particulares 🧤.md",
     "docs/4 CURSO/IR/Seminarios IR 🍙.md",
     "docs/3 CURSO/1 semestre/DS/Notas Lab DS 🛥️.md",
     "docs/2 CURSO/ED/4. Estructuras Diccionario 🐿️.md",
@@ -159,7 +161,6 @@
     "docs/2 CURSO/TEC/Métodos de solución de problemas TEC🚼.md",
     "docs/4 CURSO/SI/Notas Lab SI 🧊.md",
     "docs/4 CURSO/CVVS/Notas Lab CVVS 🦺.md",
-    "docs/2 CURSO/TEC/Pequeños apuntes TEC 🎃.md",
     "docs/2 CURSO/TEC/Ejercicios Seminario TEC 🪷.md",
     "docs/2 CURSO/TEC/Varios ejercicios resueltos TEC♻️.md",
     "docs/2 CURSO/TEC/Notas de TEC ⛑.md",
@@ -171,7 +172,6 @@
     "docs/4 CURSO/IR/Tema 4.  Análisis de Requisitos 🎲.md",
     "docs/4 CURSO/IR/Tema 5. Diseño e implementación 🏝️.md",
     "docs/4 CURSO/CVVS/Seminarios CVVS 🥐.md",
-    "docs/4 CURSO/SI/Ejercicios SI 🚕.md",
     "img/2 CURSO/CN/img",
     "img/2 CURSO/CN",
     "img/2 CURSO",
