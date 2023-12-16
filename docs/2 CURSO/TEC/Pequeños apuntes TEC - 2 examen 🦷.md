@@ -108,3 +108,17 @@
 
 ![](./img/Pasted%20image%2020231216110012.png)
 
+# Tema 7. Operacionales
+
+## Amplificadores
+
+![](./img/Pasted%20image%2020231216110540.png)
+
+## Funcionamiento del convertidor A/D
+
+![](./img/Pasted%20image%2020231216110419.png)
+
+## Problema 1
+
+![](./img/Pasted%20image%2020231216110614.png)
+
