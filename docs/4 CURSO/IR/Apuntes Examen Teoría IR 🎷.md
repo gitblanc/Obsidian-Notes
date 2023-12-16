@@ -426,3 +426,82 @@ Ejemplo: *La máxima complejidad ciclomáticade un módulo del sistema será de 
 	- Priorizados
 	- Verificables
 
+# Tema 6. Validación de requisitos
+
+## Validación
+
+- Consiste en comprobar que los requisitos obtenidos son adecuados para construir un producto que satisfaga los requisitos de negocio
+
+## Validación vs Verificación
+
+- **Validación**: determinar si los requisitos satisfacen las necesidades de los stakeholders
+- **Verificación**: determinar si los requisitos satisfacen los criterios de calidad
+
+Primero se hace la verificación y después la validación
+
+## Criterios de calidad
+
+- Cada requisito individual debería ser:
+	- Completo
+	- Conciso
+	- Correcto
+	- No ambiguo
+	- Factible
+	- Necesario
+	- Priorizado
+	- Verificable
+- El SRS en su conjunto debería de ser:
+	- Completo
+	- Consistente
+	- Conforme a los estándares
+	- No redundante
+	- Organizado
+	- Trazable
+
+![](./img/Pasted%20image%2020231216153543.png)
+
+## Técnicas de validación y verificación
+
+- Revisiones (importantes para la verificación)
+- Generación de casos de prueba
+- Prototipado
+- Criterios de aceptación
+
+## Revisiones 
+
+![](./img/Pasted%20image%2020231216153732.png)
+
+## Revisiones formales
+
+![](./img/Pasted%20image%2020231216153810.png)
+
+![](./img/Pasted%20image%2020231216153825.png)
+
+## Revisiones técnicas
+
+![](./img/Pasted%20image%2020231216153958.png)
+
+## Revisiones: checklists
+
+![](./img/Pasted%20image%2020231216154059.png)
+
+## Generación de casos de prueba
+
+![](./img/Pasted%20image%2020231216154304.png)
+
+## Prototipado
+
+![](./img/Pasted%20image%2020231216154409.png)
+
+![](./img/Pasted%20image%2020231216154426.png)
+
+![](./img/Pasted%20image%2020231216154446.png)
+
+![](./img/Pasted%20image%2020231216154505.png)
+
+## Criterios de aceptación
+
+![](./img/Pasted%20image%2020231216154556.png)
+
+![](./img/Pasted%20image%2020231216154624.png)
+
