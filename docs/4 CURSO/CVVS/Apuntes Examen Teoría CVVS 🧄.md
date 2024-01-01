@@ -363,3 +363,89 @@ Ver si hace lo que no debería hacer. Ejercitar la funcionalidad que trata con 
 
 ![](./img/Pasted%20image%2020240101175900.png)
 
+# Técnicas basadas en la Especificación. Caminos y transiciones
+
+## State Transition Testing
+
+*Problema 1: En un sistema de compra online cuando un cliente selecciona un item para añadir al carrito de la compra, se debe comprobar si existe ya un carrito asociado al cliente, creándose uno nuevo en caso contrario. En cualquier caso se añadirá el nuevo item al carrito. A continuación el cliente decidirá si acepta éste, en cuyo caso el proceso de compra continuará, o si cancela la operación.*
+
+- Qué decisiones o clases de equivalencia se pueden determinar? 
+- Qué casos de prueba se pueden realizar?
+
+## Pruebas de Caminos Simples
+
+![](./img/Pasted%20image%2020240101211722.png)
+
+![](./img/Pasted%20image%2020240101211827.png)
+
+## Pruebas de Caminos Pares
+
+![](./img/Pasted%20image%2020240101211929.png)
+
+![](./img/Pasted%20image%2020240101211947.png)
+
+## Modelo
+
+- Diferentes formas de modelar la especificación
+	- Estados
+	- Actividades
+	- Diagrama de flujo
+- Aplicable en ámbitos diferentes
+	- Formularios y navegación
+	- Sistemas de control
+	- Procesos de negocio
+- En cualquier caso, el modelo identificará:
+	- Estados/actividades
+	- Transiciones/caminos/flujos
+	- Condiciones/acciones (si aplicable)
+
+## Combinaciones con otras técnicas
+
+![](./img/Pasted%20image%2020240101212218.png)
+
+![](./img/Pasted%20image%2020240101212240.png)
+
+## Pruebas negativas
+
+![](./img/Pasted%20image%2020240101212344.png)
+
+![](./img/Pasted%20image%2020240101212404.png)
+
+![](./img/Pasted%20image%2020240101212440.png)
+
+![](./img/Pasted%20image%2020240101212502.png)
+
+## Pruebas basadas en escenarios
+
+- Modelo de las secuencias de interacciones del objeto de prueba y otros sistemas o usuarios
+	- Escenario principal: secuencia típica
+	- Escenarios alternativos
+- Forma típica de prueba de escenarios: prueba de casos de uso
+
+## Pruebas del interfaz de usuario
+
+- El interfaz o parte se puede modelar como estados y transiciones
+	- En una única pantalla
+	- En la navegación entre varias pantallas
+- En el problema anterior
+
+![](./img/Pasted%20image%2020240101212829.png)
+
+![](./img/Pasted%20image%2020240101212850.png)
+
+## Resumen
+
+- Diferentes intensidades (Test completion criteria) según ISO 29119:
+	- Estados: Cubrir todos los del modelo.
+	- Transiciones (0switch-coverage): Cubrir todas las transiciones válidas.
+	- Pares de transiciones (1switch-coverage): Cubrir todos los pares de transiciones secuenciales válidas en el modelo.
+	 - N-switch coverage: cubrir N+1 transiciones secuenciales válidas.
+	- All transitions: Cubrir toda transición, válida e inválida.
+- Caso de prueba contiene:
+	- Estado inicial: Carrito con 1 producto.
+	- Secuencia de pasos: Entradas + salidas esperadas.
+- Múltiples denominaciones: caminos/transición de estados.
+	- Múltiples formas de modelar: Diagramas de flujo, de procesos, transiciones...
+	- Diferentes niveles de detalle: Proceso negocio, caso de uso, estados de objeto...
+- Combinable con otras técnicas (condiciones).
+- Incluir también pruebas negativas.
