@@ -288,3 +288,78 @@ La inicialización consiste siempre en obtener instancia del driver (iniciar se
 	- Cuando hay IU puede haber CP compuestos por varios pasos (no abusar).  
 	- En general, No situaciones > no casos > no BD.
 
+# Técnicas basadas en la estructura. Condiciones
+
+- Utiliza la estructura de las decisiones lógicas que se definen explícita o implícitamente en la especificación
+	- Elementos básicos:
+		- Condición: Expresión lógica primitiva, sin operadores lógicos (A>B).
+		- Decisión: Expresión lógica compuesta por varias (o una) condiciones (ej. A>B AND C>D)
+
+## Ejemplo de Prueba de Decisiones y Prueba de Condiciones
+
+*Problema 1: La remuneración especial de las cuentas corrientes (que ofrece un tipo de interés superior al habitual) se aplica solamente cuando se ha mantenido la cuenta abierta al menos dos años a los clientes menores de 21 años y a los que han mantenido un saldo medio anual como mínimo de 50K euros durante el último año*
+
+- Cuál es la decisión y las condiciones?
+
+- **Prueba de decisiones**
+	- Derivamos situaciones a cubrir de modo que cada decisión tome valores V y F
+
+![](./img/Pasted%20image%2020240101174054.png)
+
+- **Prueba de condiciones**
+	- Derivamos situaciones a cubrir de forma que cada condición tome los valores V y F
+
+![](./img/Pasted%20image%2020240101174305.png)
+
+- Prueba de Decisión/Condición
+	- Derivamos pruebas de modo que cada decisión y condición tome los valores V y F
+
+![](./img/Pasted%20image%2020240101174616.png)
+
+## Prueba de múltiple condición
+
+Derivamos pruebas de modo que se ejercite cada una de las combinaciones lógicas de las condiciones. Tiene un crecimiento exponencial: 8 combinaciones para 3 condiciones, 16, 32...
+
+## Prueba de Condición/Decisión Modificada (MCDC)
+
+Derivamos situaciones a cubrir de forma que cada condición afecta de forma independiente al resultado de la decisión. *Variar cada condición manteniendo inalteradas al resto*
+
+![](./img/Pasted%20image%2020240101174854.png)
+
+## Variantes de MCDC
+
+Habitualmente, de n condiciones resultan n+1 combinaciones. Pero a veces, si existen variables que estén en varias condiciones, es difícil de conseguir.
+- Unique Cause MCDC. Ejemplo anterior. 1 y 4 mantienen los valores de las 2 primeras condiciones, la salida cambia al cambiar la tercera condición.
+- Masking MCDC. Relaja el requisito, sólo requiere que las subexpresiones mantengan el valor. Ej: 1 con 4, 4’, 4’’ cumplen Masking; en todas e<21 OR s>=50 es TRUE.
+
+![](./img/Pasted%20image%2020240101175429.png)
+
+## Masking MCDC
+
+Usar cuando no es posible mantener Unique Cause. Por defecto, al hablar de MCDC nos referimos a Unique-Cause.
+
+![](./img/Pasted%20image%2020240101175533.png)
+
+## Pruebas Negativas
+
+Ver si hace lo que no debería hacer. Ejercitar la funcionalidad que trata con fallos/rechazo de entradas, excepciones, etc. Incluir pruebas/valores/condiciones para determinar valores que NO influyen en la salida.
+
+![](./img/Pasted%20image%2020240101175650.png)
+
+## Resumen
+
+-  Aplicar valores límite en las condiciones cuando sea posible.
+- Grandes grupos de técnicas de prueba.
+	- Basadas en la especificación. (P.e. partición en clases de eq.)
+	-  Basadas en la estructura. (P.e. basadas en condiciones).
+- Tradicionalmente denominadas como:
+	- Basadas en la estructura. Técnicas de caja blanca. INCORRECTO.
+	- Basadas en la especificación. Técnicas de caja negra.
+	- Conceptos ortogonales. Tipo de técnica vs caja blanca/negra.
+- Independientemente de la técnica, lo habitual será partir de la especificación.
+- La prueba se realiza ejecutando casos de prueba (test cases).
+- Hay que determinar qué es lo que hay que probar (test conditions) y qué situaciones se probarán (test coverage items) apoyándose en el uso de técnicas de prueba.
+- La cobertura es el porcentaje de situaciones cubiertas por los CP.
+
+![](./img/Pasted%20image%2020240101175900.png)
+
