@@ -449,3 +449,123 @@ Ver si hace lo que no debería hacer. Ejercitar la funcionalidad que trata con 
 	- Diferentes niveles de detalle: Proceso negocio, caso de uso, estados de objeto...
 - Combinable con otras técnicas (condiciones).
 - Incluir también pruebas negativas.
+
+# Técnicas basadas en la Especificación: Clases de Equivalencia. Parte 3. Otras técnicas y combinatoria
+
+## Each Choice
+
+![](./img/Pasted%20image%2020240102125334.png)
+
+## Multiple Combination
+
+![](./img/Pasted%20image%2020240102125403.png)
+
+## Base Choice
+
+![](./img/Pasted%20image%2020240102125437.png)
+
+## Combinaciones parciales
+
+![](./img/Pasted%20image%2020240102125513.png)
+
+## Combinaciones con Tablas de Decisión
+
+![](./img/Pasted%20image%2020240102125636.png)
+
+- Útiles para probar reglas de negocio complejas en función de combinaciones de diferentes valores
+- Cada regla será una situación a cubrir (test coverage item)
+- Tabla de decisión para el problema anterior:
+
+![](./img/Pasted%20image%2020240102125911.png)
+
+- Cada condición no es necesariamente binaria: En problema 1b de parte 1 (interés crédito-importe ppal.+edad) si contemplamos clases para entradas y salidas
+- Realizamos una combinación completa de las clases para entradas
+- Tabla de decisión (incluyendo sólo clases válidas)
+
+![](./img/Pasted%20image%2020240102130215.png)
+
+## Árbol de clasificación
+
+- El problema de las tablas de decisiones es que se hacen muy grandes cuando hay muchas reglas
+- Elementos de un Classification Tree Method (CT):
+	- Clasificaciones
+	- Clases
+	- Casos (Test Coverage Items)
+	- Cómo combinar
+		- Mínima
+		- Máxima (foto de abajo)
+- Es muy útil cuando hay muchas entradas
+
+![](./img/Pasted%20image%2020240102130525.png)
+
+- Ejemplo reserva de vuelos
+
+![](./img/Pasted%20image%2020240102130654.png)
+
+![](./img/Pasted%20image%2020240102130722.png)
+
+![](./img/Pasted%20image%2020240102130848.png)
+
+**Técnicas combinatorias**  
+- En general tenemos pares P-V (Parámetro condición, clasificación; valor clase, VL)
+	- Each Choice/1-wise (mínima): cada V es probado al menos una vez.
+	- Base Choice: para cada P se elige un V (base). Formar combinaciones donde todos los P - 1 permanecen en su valor base.
+	- Pair-wise: para cada par de condiciones, deben aparecer todas las posibles combinaciones de sus valores. Reduce significativamente las combinaciones.
+	- N-wise: generalización.
+	-  All combinations: cada combinación P-V es probada.
+
+![](./img/Pasted%20image%2020240102131054.png)
+
+## Combinaciones Pair-Wise
+
+- Cada valor de cada parámetro se ha combinado con todos los valores del resto de parámetro.
+- Combinación muy compleja, detecta problemas debidos a influencia de parejas de parámetro.
+
+![](./img/Pasted%20image%2020240102131220.png)
+
+![](./img/Pasted%20image%2020240102131251.png)
+
+## Resumen
+
+- Técnica básica: clases de equivalencia. Derivadas:
+	- Valores Límite. Tablas de decisión.
+	- Árbol de clasificación: jerarquizar lo anterior.
+	- Combinatorias: cómo combinar lo anterior.
+- Test Conditions: condiciones de entrada/salida, lo que hay que probar.
+- Test Coverage Items: situaciones a cubrir, lo que se va a probar.
+	- Clases o valores límite.
+	- Si combinamos dentro de la jerarquía, dichas combinaciones. 
+- Cobertura.
+	- Cuántas de las situaciones definidas se han probado. 
+- Habilidad del Tester.
+	- Determinar las test conditions, técnicas y método de combinación a aplicar en el contexto de cada problema (coste/beneficio).
+
+## Validación de Datos
+
+- Clave: separar el proceso de negocio del interfaz.
+	- Pruebas para el procesamiento. 
+		- Tener en cuenta valores límite.
+	- Pruebas para la validación de datos. 
+		- Típicamente se usarán clases de equivalencia.
+- Algunas clases de equivalencia típicas para la validación.
+	- Presencia/ausencia de valor.
+	- Contenido.
+		- Rangos permitidos/no permitidos
+		- Formatos inválidos.
+	- Datos/opciones visibles/invisibles según estado de formulario.
+	- Cambios en listas de selección.
+
+Por ejemplo:  
+- Importe (numérico)
+	- Campo vacío (inválida).
+	- Negativo/Cero/Valor muy grande (inválido)
+	- Sin/con decimales...
+	- Separador de millares convenio inglés (inválido)
+	- Texto (inválida)
+- Fecha
+	- Campo vacío.
+	- Muy antigua/futura (inválida)
+	- Separadores de fecha.
+	- Fechas tipo dd-mm y mm-dd.
+	- Valores alfabéticos válidos e inválidos.
+	- Número, texto (inválida).
