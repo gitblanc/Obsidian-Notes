@@ -818,3 +818,5 @@ prácticas
 
 ![](./img/Pasted%20image%2020240104172357.png)
 
+# Pruebas en entornos ágiles
+
