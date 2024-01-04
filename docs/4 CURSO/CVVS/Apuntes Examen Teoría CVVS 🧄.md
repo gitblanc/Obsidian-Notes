@@ -820,3 +820,165 @@ prácticas
 
 # Pruebas en entornos ágiles
 
+## Proceso general
+
+![](./img/Pasted%20image%2020240104174415.png)
+
+![](./img/Pasted%20image%2020240104174434.png)
+
+## Múltiples dimensiones
+
+![](./img/Pasted%20image%2020240104174519.png)
+
+## Niveles de prueba
+
+- Organizadas y gestionadas en conjunto
+	- **Unitarias/componentes**: por separado, principalmente funcionalidad
+	- **Integración**: interfaces entre componentes, interacciones con otras partes del sistema
+	- **Sistema**: comportamiento del sistema/producto global, funcional y no funcional
+	- **Aceptación**: determinar si el sistema está listo para ser liberado
+
+## Tipos de pruebas
+
+- **Funcionales**
+- **No funcionales**
+	- Interoperabilidad
+	- Seguridad
+	- Rendimiento
+	- ...
+- **Relativas a cambios**
+	- Confirmación (retest): defectos han sido solucionados
+	- Regresión: los cambios no han afectado a otras partes
+
+## Técnicas
+
+![](./img/Pasted%20image%2020240104175005.png)
+
+## Scripted testing
+
+- Las acciones a realizar por el tester son prescritas en el caso de prueba. Separación clara entre
+	- Preparación (diseño e implementación)
+	- Ejecución
+- Requiere tener claros los requisitos/criterios de aceptación
+- Diferencias en escala temporal
+	- No Agile. Ejecución distante de preparación.
+	- Agile. Ejecución cercana de preparación.
+- Script
+	- Para ejecución automática
+
+## Pruebas exploratorias
+
+- Diseño, ejecución y aprendizaje simultáneo
+	- Planificación previa (test charter): declaración breve del alcance y objetivos para una prueba en una ventana de tiempo limitado
+	- Diseño y ejecución se realizan en paralelo
+		- Se profundiza en el conocimiento del sistema según se ejecuta
+		- Se aplican técnicas, aunque no siempre se documenta
+		- Se registra lo que se prueba y los problemas encontrados
+	- Otros aspectos
+		- No es test ad-hoc o improvisado
+		- Necesita personal muy experimentado
+		- Session-Based Testing: Más estructurado
+
+## Desarrollo Dirigido por las Pruebas
+
+- TDD (Test Driven Development)
+	- Definir las pruebas antes de codificar
+	- Incremental al extremo
+- Características
+	- Requiere disciplina
+	- Requiere automatización
+	- Muy útil para mejorar la calidad de los programas
+
+## Desarrollo dirigido por el comportamiento
+
+- BDD Behaviour Driven Development
+	- Similar a TDD, pero las pruebas son de más alto nivel
+	- Definir el comportamiento deseado que se traduce a pruebas ejecutables
+	- Lenguaje cercano al cliente
+		- Facilita colaboración
+		- Casos de prueba autodocumentados
+		- Dudosa efectividad si no se colabora con el cliente
+	- Las pruebas siguen un patrón: Dado... Cuando... Entonces...
+- Cucumber/Gherkin (herramientas)
+
+## Cucumber. Herramienta BDD
+
+![](./img/Pasted%20image%2020240104180119.png)
+
+![](./img/Pasted%20image%2020240104180214.png)
+
+## ¿Quién hace las pruebas?
+
+- Papel del tester:
+	- Habilidades diferentes de las del programador
+	- Centrado en asegurar que se entrega el producto con la calidad que precisan los usuarios
+	- Añadir valor al equipo
+- Diferentes modelos
+	- Solo programador + usuario/cliente
+	- + Tester (a tiempo parcial)
+	- + Tester(s) (a tiempo completo)
+	- Equipo especializado
+- Ideal: el tester es uno más del equipo de desarrollo
+
+## "The Three Amigos"
+
+- Son reuniones entre:
+	- Analista de Negocio y/o Dueño del Producto
+	- Desarrollador(es)
+	- Tester(s)
+- Objetivo relacionado con la planificación del sprint, pero grupo pequeño y bajo demanda. Más Kanban que Scrum
+	- Discutir características nuevas y revisar la especificación
+	- Entendimiento y vocabulario compartido
+	- Identificación de requisitos no definidos y definición de pruebas
+	- Antes de que la característica se considere lista para el desarrollo y asignada en un sprint
+
+## ¿Cuándo se hacen las pruebas?
+
+![](./img/Pasted%20image%2020240104180813.png)
+
+- **Release Planning**
+	- Aunque no se pueda planificar con gran precisión, hay que dimensionar recursos y plazos
+	- Preparar un plan de pruebas
+		- Riesgos, estrategia (tipos y niveles, enfoques para mitigarlos), requisitos de documentación
+		- Grado de automatización, entorno(s), datos, herramientas
+		- Recursos, reporting, métricas
+		- Story/task board: ej. por hacer, desarrollo, testing, hecho
+		- Brevedad y concisión
+- **Sprint Planning**:
+	- Definir ejemplos y a escribir las historias con sus criterios de aceptación
+	- Dimensionar las historias (no olvidar el esfuerzo necesario para las pruebas)
+	- Otros aspectos: integración, impacto en el sistema
+	- Y posiblemente comenzar a diseñar las pruebas de las historias
+	- Nota: criterio de aceptación != test de aceptación
+- **Dentro del Sprint (unitario, componente)**:
+	- Test unitario
+	- Test de historias
+		- Confirmar el comportamiento del sistema a alto nivel
+		- Tester ayuda o realiza
+		- Automatizados si es posible, ejercitar lógica de negocio
+		- No son los únicos test de aceptación
+- **Dentro del sprint, más allá de una historia individual (sistema, integración, aceptación)**:
+	- Test exploratorio: tester
+	- Test de escenarios complejos, workflows
+	- Aceptación de usuario: el usuario
+	- Otros test de sistema, no funcionales: tester, equipo especializado
+	- Tareas o historias "técnicas" específicas
+- **Antes de la entrega de la release**:
+	- Muchos test ya se han ejecutado (regresión)
+	- Puede ser necesario incluir sprints adicionales
+		- Test de sistema (funcionales y no funcionales)
+		- Integraciones
+		- Conversión/actualización de datos
+		- Aceptación de Usuario
+		- Rework y retest
+	- Cuanto mejores pruebas se realicen en los sprints de desarrollo, menos será necesario aquí
+
+## Conclusión
+
+- Las pruebas son **parte integral** del proceso de desarrollo ágil
+- Considerar las pruebas desde un **punto de vista global** (no solo unitarias y de componentes o historias)
+- La inclusión de testers aporta gran **valor añadido** al integrarse en el equipo
+- Automatizar la ejecución de pruebas valorando la relación **coste/beneficio**
+- Adaptarse al **contexto**. Cada organización y proyecto tiene sus particularidades y necesidades
+- Pruebas **efectivas** y **eficientes**
+
