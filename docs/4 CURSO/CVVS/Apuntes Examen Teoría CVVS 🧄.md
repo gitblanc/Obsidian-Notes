@@ -569,3 +569,252 @@ Por ejemplo:
 	- Fechas tipo dd-mm y mm-dd.
 	- Valores alfabéticos válidos e inválidos.
 	- Número, texto (inválida).
+
+# Pruebas en el Contexto de un Proyecto
+
+## Técnicas estáticas
+
+- El testing puede ser:
+	- Dinámico: requiere la ejecución del software
+	- Estático: no requiere la ejecución del software
+		- Pueden realizarse muy pronto
+		- Detección temprana de defectos: reducción coste
+- Dos grandes grupos de testing estático
+	- Revisiones
+	- Análisis estático
+
+## Técnicas estáticas. Revisiones
+
+- Tipos de revisiones
+	- **Revisión de gestión** (Management Review): monitorización de progreso, estado de planes, etc
+	- **Recorrido** (Walkthrough): presentación del documento por parte del autor para obtener un conocimiento común, comentarios...
+	- **Revisión técnica** (Technical Review): discusión detallada para determinar consenso/discrepancias en los contenidos técnicos
+	- **Inspección** (Inspection): la más formal, con un procedimiento muy definido para detectar defectos
+	- **Auditoría** (Audit): independiente, para determinar conformidad con especificaciones, estándares u otros criterios
+- **Peer review** (revisión por pares): revisión por pares
+- **Revisión formal**, actividades típicas:
+	- Planificación. Asignación de moderador, chequeo inicial.
+	- Kick-off meeting. Introducir objetivos de la revisión y objeto a revisar.
+	- Preparación. Individual: detección de defectos, preguntas...
+	- Reunión de revisión. Exposición de defectos encontrados y clasificación.
+	- Rework. Mejorar el objeto de revisión.
+	- Follow up. Confirmación de que las acciones a tomar lo han sido.
+- **Herramientas**
+	- Proceso manual, soportado por procesadores de texto
+	- Para la revisión de código, típicamente los Pull Requests de repositorios
+
+## Técnicas estáticas. Revisiones en Pull Request con forked repo
+
+## Análisis estático
+
+- Analizar artefactos para buscar defectos 
+	- Mediante herramientas automáticas 
+	- Muchas veces antes de las revisiones realizadas manualmente 
+	- Comprobación de requisitos y trazabilidad, estándares de codificación, métricas de código o estructura de código, vulnerabilidades… 
+- Ejemplos de herramientas: 
+	- Calidad del Código: SonarQube 
+	- Vulnerabilidades en dependencias: OWASP Dependency Check 
+	- Herramientas incluidas en los repositorios Git
+
+## Modelo en V
+
+![](./img/Pasted%20image%2020240102134909.png)
+
+## Niveles y Tipos de Prueba
+
+- **Nivel de prueba**: grupo de actividades de prueba organizadas y gestionadas en conjunto
+	- *Ej: integración, sistema, aceptación*
+- **Tipo de prueba**: grupo de actividades de prueba para un componente o sistema enfocadas en un objetivo específico de prueba
+	- Un tipo de prueba puede usarse en uno o más niveles de prueba
+	- Característica de calidad. *Ej: funcional, rendimiento...*
+	- Relativo a cambios. Ej: *regresión*
+
+![](./img/Pasted%20image%2020240102135234.png)
+
+## Niveles de prueba
+
+- **Componentes**: por separado, principalmente funcionalidad
+- **Integración**: interfaces entre componentes, interacciones con otras partes del sistema
+	- A nivel de componentes
+	- A nivel de sistema
+- **Sistema**: comportamiento del sistema/producto global, funcional y no funcional, suele ser el último paso de verificación
+- **Aceptación**: determinar si el sistema está listo para ser liberado (validación)
+	- Aceptación de usuario: principalmente funcional
+	- Aceptación operacional: recuperación de desastres, tareas de mantenimiento...
+	- FAT (Factory Acceptance Testing) y SAT (Site Acceptance Testing)
+	- En COTS: alpha/beta
+
+## Tipos de prueba
+
+-  Funcionales.
+- No funcionales. Otros atributos de calidad.
+	-  Interoperabilidad.
+	-  Seguridad.
+	-  Rendimiento. Carga esperada, estrés del sistema.
+	- Usabilidad, Accesibilidad.
+	- Fiabilidad.
+	- Eficiencia.
+	- Portabilidad.
+- Relativas a cambios.
+	- Confirmación. Retest. Defectos han sido solucionados.
+	- Regresión. Los cambios no han afectado a otras partes.
+
+## Pirámide de test
+
+Concepto de Mike Cohn, referido a los tests automatizados: *es una metáfora que nos indica agrupar pruebas de software en cubos de diferente granularidad. Da una idea del no de pruebas en cada grupo.*
+
+![](./img/Pasted%20image%2020240102140011.png)
+
+Diferentes formas, mezclando en cada capa de la pirámide:
+- Niveles de prueba.
+- Tipos de prueba.
+- Grado de automatización.
+No olvidar que tipo, nivel, grado de automatización son conceptos ortogonales.
+
+![](./img/Pasted%20image%2020240102140107.png)
+
+Cuando la pirámide no se aplica correctamente. Se entiende como un concepto físico: no se prueba nada en una capa hasta que la anterior esté completa.
+
+## Pruebas de rendimiento
+
+- Planificación y Análisis
+	- Infraestructura (sistema y herramientas) y objetivos de la prueba:
+		- Límites del sistema (aumentar usuarios hasta saturación/fallo)
+		- Carga (a porcentajes dados del límite)
+		- Estrés (ej: aumento muy rápido de usuarios)
+	- Determinar principales funcionalidades y escenarios a probar
+- Diseño e implementación
+	- Definir número de Usuarios, ritmo de entrada, tiempo de espera entre cada acción 
+	- Establecer escenarios combinados con los parámetros anteriores
+	- Registrar sesiones con un usuario
+	- Crear scripts para ejecución automática para varios usuarios y carga
+- Ejecución
+	- Introducir carga en el sistema, no olvidar volumen de datos
+	- Medir: tiempos de respuesta, memoria, cursores abiertos y errores producidos
+
+## Procesos genéricos
+
+- Planificación
+	- Priorizar y estimar
+	- Realizar plan
+- Preparación
+	- Diseño e implementación
+- Realización
+	- Ejecución
+	- Reporting
+- Monitorización y Control
+	- Medir
+	- Aplicar acciones
+
+## Plan de pruebas
+
+- Resumen:
+	- Contexto de la prueba: identificar el proyecto y las partes interesadas, test ítems y características a ser probadas
+	- Comunicación entre testing y resto de organización
+	- Riesgos (de producto y de proyecto)
+	- Estrategia de prueba
+		- Niveles y tipos de prueba que realizarán, entregables, técnicas a utilizar, criterios de finalización, métricas
+		- Requisitos del entorno de test y de los datos
+		- Pruebas de regresión y retest. Criterios de suspensión/reanudación
+	- Actividades de prueba, estimaciones, personal, necesidades de formación y contratación
+	- Planificación temporal
+
+## Reporting - Proceso
+
+- Para cada problema detectado:
+	- Ejecutar y anotar resultado provisional (pasa, falla y lo que se observa)
+	- Verificar qué es realmente un fallo, reproducir, aislar
+	- Incorporar información útil para resolución
+	- Comprobar duplicados. No perder credibilidad
+	- Determinar causa probable (aplicación, especificación, entorno de prueba)
+	- Determinar severidad provisional, título (impacto sobre todo el sistema)
+- Otras pruebas
+	- Anotar fallos no buscados explícitamente
+	- Explorar con más detalle las zonas problemáticas
+- Revisar resultados (completitud y precisión) e informar (reporting)
+
+- El reporte incluye:
+	- Su último objetivo es que los problemas se solucionen. Hay que vender el report (Bug advocacy)
+	- Título corto
+	- Resumen conciso del problema
+	- Detalles sobre el proceso llevado a cabo para reproducir el problema y lo que se observa  frente a lo que debería.
+	- Máxima información con mínimas palabras
+	- Información adicional (configuración, datos para reproducción, volcados...)
+	- Nunca usar genericidades como "no funciona", porque podemos obtener respuestas como "a mí si"
+
+## Ejemplo Reporting
+
+![](./img/Pasted%20image%2020240104170153.png)
+
+## Medición
+
+- Monitorizar el progreso de las actividades de prueba
+	- Realimentación de lo que está ocurriendo
+	- Visibilidad sobre los resultados de pruebas
+	- Obtener información para estimaciones futuras
+- Mediciones
+	- Progreso de las actividades de pruebas
+	- Progreso de la cobertura de los requisitos por las pruebas
+	- Evolución de los resultados de las pruebas
+	- Defectos encontrados/solucionados
+	- Casos de prueba planificados/ejecutados con sus resultados
+- Cobertura es siempre RELATIVO a algo (requisitos, situaciones a cubrir, líneas de código...)
+
+## Notas sobre documentación
+
+- El plan de pruebas no es una lista de casos de prueba
+	- Hay que decidir qué es lo más prioritario
+	- Incluir los objetos de la prueba con niveles y tipos aplicables
+	- Indicar qué pruebas se automatizarán y con qué herramientas
+	- No se trata de teorizar sobre las pruebas, sino describir las pruebas que se han realizado
+- No dejar las pruebas para el final
+	- En pruebas funcionales, es más importante un diseño de las situaciones a cubrir/probar que una lista de casos de prueba inefectivos
+	- Las pruebas automatizadas con JUnit deben autodocumentarse, salvo casos excepcionales
+
+# El nuevo estándar internacional para pruebas de software
+
+## Estándares
+
+Conjunto de requisitos de obligado cumplimiento establecidos por consenso y
+mantenido por un organismo reconocido para prescribir un uniforme disciplinado
+abordar o especificar un producto, es decir, convenciones obligatorias y
+prácticas
+
+## Problemas de los estándares
+
+- Definiciones en conflicto, procesos y procedimientos
+
+## ¿Qué estándar seguir?
+
+- ISO/IEC/IEEE 29119
+
+![](./img/Pasted%20image%2020240104171838.png)
+
+## Modelo de Procesos de pruebas
+
+![](./img/Pasted%20image%2020240104171929.png)
+
+## Especificación pruebas de la organización
+
+![](./img/Pasted%20image%2020240104172022.png)
+
+## Procesos de Gestión
+
+![](./img/Pasted%20image%2020240104172048.png)
+
+## Documentación
+
+- Define plantillas que pueden ser utilizadas para generar documentación
+- Versiones diferentes para proyectos ágiles y tradicionales
+- Mapeo a otros estándares
+
+## Clasificación de las técnicas de diseño de las pruebas
+
+![](./img/Pasted%20image%2020240104172249.png)
+
+![](./img/Pasted%20image%2020240104172329.png)
+
+## Medición de la cobertura alcanzada
+
+![](./img/Pasted%20image%2020240104172357.png)
+

@@ -18,6 +18,18 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "5eff616e7cd82f1d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "docs/4 CURSO/SI/Exámenes resueltos SI Búsqueda 👔.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ]
       }
@@ -135,27 +147,29 @@
   },
   "active": "9af6e18fe85a0b0e",
   "lastOpenFiles": [
-    "docs/4 CURSO/CVVS/img/Pasted image 20240102131251.png",
-    "docs/4 CURSO/CVVS/img/Pasted image 20240102131220.png",
-    "docs/4 CURSO/CVVS/img/Pasted image 20240102131054.png",
-    "docs/4 CURSO/CVVS/img/Pasted image 20240102130848.png",
-    "docs/4 CURSO/CVVS/img/Pasted image 20240102130722.png",
-    "docs/4 CURSO/CVVS/img/Pasted image 20240102130654.png",
-    "docs/4 CURSO/CVVS/img/Pasted image 20240102130525.png",
-    "docs/4 CURSO/CVVS/img/Pasted image 20240102130215.png",
-    "docs/4 CURSO/CVVS/img/Pasted image 20240102125911.png",
-    "docs/4 CURSO/CVVS/img/Pasted image 20240102125636.png",
-    "docs/4 CURSO/CVVS/img/Pasted image 20240102125513.png",
-    "docs/4 CURSO/IR/Apuntes Examen Teoría IR 🎷.md",
+    "docs/4 CURSO/CVVS/img/Pasted image 20240104172357.png",
+    "docs/4 CURSO/CVVS/img/Pasted image 20240104172329.png",
+    "docs/4 CURSO/CVVS/img/Pasted image 20240104172249.png",
+    "docs/4 CURSO/CVVS/img/Pasted image 20240104172048.png",
+    "docs/4 CURSO/CVVS/img/Pasted image 20240104172022.png",
+    "docs/4 CURSO/CVVS/img/Pasted image 20240104171929.png",
+    "docs/4 CURSO/CVVS/img/Pasted image 20240104171838.png",
+    "docs/4 CURSO/CVVS/img/Pasted image 20240104170153.png",
+    "docs/4 CURSO/SI/Exámenes resueltos SI Búsqueda 👔.md",
+    "docs/4 CURSO/SI/Exámenes resueltos SI Aprendizaje y Redes 🐞.md",
+    "docs/4 CURSO/SI/Pequeños apuntes particulares 🧤.md",
     "docs/4 CURSO/CVVS/Apuntes Examen Teoría CVVS 🧄.md",
+    "docs/4 CURSO/CVVS/img/Pasted image 20240102140107.png",
+    "docs/4 CURSO/CVVS/img/Pasted image 20240102140011.png",
+    "Untitled.md",
+    "docs/4 CURSO/CVVS/img/Pasted image 20240102135234.png",
+    "docs/4 CURSO/IR/Apuntes Examen Teoría IR 🎷.md",
     "docs/2 CURSO/TEC/Pequeños apuntes TEC - 2 examen 🦷.md",
     "docs/2 CURSO/TEC/Varios ejercicios resueltos TEC♻️.md",
     "docs/2 CURSO/TEC/Exámenes de TEC 🚨.md",
     "README.md",
     "docs/2 CURSO/TEC/Pequeños apuntes TEC - 1 examen 🎃.md",
     "docs/4 CURSO/IR/Apuntes de Seminario IR 🐸.md",
-    "docs/4 CURSO/SI/Exámenes resueltos SI Aprendizaje y Redes 🐞.md",
-    "docs/4 CURSO/SI/Pequeños apuntes particulares 🧤.md",
     "docs/4 CURSO/IR/Seminarios IR 🍙.md",
     "docs/3 CURSO/1 semestre/DS/Notas Lab DS 🛥️.md",
     "docs/2 CURSO/ED/4. Estructuras Diccionario 🐿️.md",
@@ -169,8 +183,6 @@
     "docs/2 CURSO/TEC/Notas de TEC ⛑.md",
     "docs/Cybersecurity/Interesting hack commands and things 🍔.md",
     "Excalidraw/Drawing 2023-10-27 14.45.19_0.excalidraw.md",
-    "Excalidraw/Drawing 2023-10-27 14.45.19.excalidraw.md",
-    "Excalidraw/Drawing 2023-10-27 14.42.48.excalidraw.md",
     "Excalidraw",
     "img/2 CURSO/CN/img",
     "img/2 CURSO/CN",
