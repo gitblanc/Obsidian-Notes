@@ -293,5 +293,5 @@ Para obtener un mayor control, puedes seleccionar apps y servicios, y especifica
     **Importante:** Algunos servicios y apps que no figuran en la lista podrían tener acceso a través del firewall. Estas pueden incluir apps del sistema, servicios y procesos, así como apps firmadas digitalmente que se abran automáticamente mediante otras apps. Para bloquear estos programas, añádelos a la lista.
     
     Si el Mac detecta un intento de conexión a una app que no has añadido a la lista y a la que no has concedido acceso, aparecerá un mensaje de aviso preguntándole si quieres permitir o denegar la conexión a través de la red o de internet. Mientras no lleves a cabo ninguna acción, el mensaje seguirá mostrándose y se denegará cualquier intento de conexión a la app.
-
+    
 ---
