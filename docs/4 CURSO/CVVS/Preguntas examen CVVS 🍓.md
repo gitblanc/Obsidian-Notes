@@ -1,3 +1,5 @@
+# Preguntas de exámenes
+
 1. ***Diferencia entre fallo, error y defecto. ¿Con qué tipo de pruebas se relacionan?***
 
 - **Error**: acción humana que produce un resultado incorrecto. Las pruebas no son capaces de detectarlos
@@ -217,17 +219,58 @@ Con dos caminos recorremos todos los pares de transiciones
 
 28. ***Aplicar MCDC a la expresión: (a AND b OR c) AND d***
 
-![](IMG_6897.jpeg)
+![](./img/IMG_6897.jpeg)
 
 NOTA: la V es un True, que se me coló `-_^`
 
 29. ***Aplicar MCDC a la expresión: a OR b AND c OR d***
 
-![](IMG_6898.jpeg)
+![](./img/IMG_6898.jpeg)
 
 30. ***Aplicar MCDC y Valores límite: a=1 AND (b=2 OR c<4) AND d > 4***
 
-![](IMG_6899.jpeg)
+![](./img/IMG_6899.jpeg)
+
+31. ***Di qué tipos de prueba existen***
+
+- Funcionales
+- No funcionales (otros atributos de calidad)
+	- Interoperabilidad
+	- Seguridad
+	- Rendimiento, carga, estrés
+	- Usabilidad, accesibilidad
+	- Fiabilidad, Eficiencia, Portabilidad
+- Relativas a cambios
+	- Confirmación (retest): defectos han sido solucionados
+	- Regresión: los cambios no han afectado a otras partes
+
+# Preguntas de cuestionarios
 
 
+1. ![](./img/Pasted%20image%2020240106173734.png)
 
+
+2. ![](./img/Pasted%20image%2020240106173840.png)
+
+Con el menor esfuerzo:
+- S0-S1-S2-S4-S1-S2-S3-S1-S4
+
+3. ![](./img/Pasted%20image%2020240106174050.png)
+
+
+4. ![](./img/Pasted%20image%2020240106174134.png)
+
+5. ![](./img/Pasted%20image%2020240106174224.png)
+
+- Ninguna es correcta
+
+6. ![](./img/Pasted%20image%2020240106174325.png)
+
+- Aunque es una práctica más de Kanban, es útil utilizarla en Scrum
+- Se puede usar, entre otros, para realizar el "Backlog Grooming"
+
+7. ![](./img/Pasted%20image%2020240106174508.png)
+
+8. ![](./img/Pasted%20image%2020240106174528.png)
+
+- Ninguna es cierta
