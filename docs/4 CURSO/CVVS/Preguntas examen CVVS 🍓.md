@@ -225,5 +225,9 @@ NOTA: la V es un True, que se me coló `-_^`
 
 ![](IMG_6898.jpeg)
 
+30. ***Aplicar MCDC y Valores límite: a=1 AND (b=2 OR c<4) AND d > 4***
+
+![](IMG_6899.jpeg)
+
 
 
