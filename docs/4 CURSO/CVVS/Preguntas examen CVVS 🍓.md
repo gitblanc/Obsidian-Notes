@@ -1,10 +1,8 @@
 1. ***Diferencia entre fallo, error y defecto. ¿Con qué tipo de pruebas se relacionan?***
 
-- **Error**: acción humana que produce un resultado incorrecto
-- **Defecto**: manifestación de un error. Desperfecto en un componente o sistema que puede causar que el software no realice su función requerida
-- **Fallo**: desviación en un componente o sistema de su comportamiento esperado
-
-CREO: se relacionan con pruebas de rendimiento.
+- **Error**: acción humana que produce un resultado incorrecto. Las pruebas no son capaces de detectarlos
+- **Defecto**: manifestación de un error. Desperfecto en un componente o sistema que puede causar que el software no realice su función requerida. Se identifican mediante pruebas de carácter estático
+- **Fallo**: desviación en un componente o sistema de su comportamiento esperado. Se identifican mediante pruebas de carácter dinámico
 
 2. ***Di que está mal o incompleto en la siguiente afirmación: "La denominada pirámide de test sirve para representar los diferentes niveles de prueba, de forma que tenemos que completar todas las pruebas de un nivel para comenzar con el siguiente"***
 
@@ -35,7 +33,7 @@ CREO: se relacionan con pruebas de rendimiento.
 
 6. ***Además de defectos, ¿qué buscan las pruebas de software?***
 
-CREO: Buscan encontrar fallos, además de determinar que el sistema satisface la especificación de requisitos y cumple con su propósito
+Buscan encontrar fallos, además de determinar que el sistema satisface la especificación de requisitos y cumple con su propósito (satisface las necesidades y expectativas del cliente)
 
 7. ***Diferencia entre Verificación y Validación***
 
@@ -149,9 +147,11 @@ FALSO. Las técnicas anteriores son dinámicas, que se usan tanto para verificac
 
 - Debería satisfacer todas las metas apropiadas del área o conjunto de áreas de proceso que son objeto de la mejora
 
-23. ***Además de BDD y TDD ¿qué otras pruebas se realizan en Scrum y cuándo?***
+23. ***Además de BDD y TDD ¿qué otras pruebas se realizan en Scrum y cuándo? Explica en qué consisten***
 
 - Scripted Testing y Explanatory Testing. Se usan antes de entregar la release
+- **Scripted Testing**: las acciones a realizar por el tester son prescritas en el caso de prueba. La preparación (diseño e implementación) están claramente separadas de la ejecución
+- **Explanatory Testing**: el aprendizaje, diseño y ejecución son simultáneos. Es necesario personal muy experimentado. No tienen por qué documentarse todas las técnicas, aunque sí se registrarán los resultados
 
 24. ***¿En qué consiste el estándar ISO/IEC 29119?***
 
@@ -160,4 +160,70 @@ FALSO. Las técnicas anteriores son dinámicas, que se usan tanto para verificac
 	- Soluciona la dispersión existente actual
 	- Cubre los huecos no cubiertos por otros estándares existentes
 	- Adoptado por los comités de normalización nacionales
+
+25. ***¿Qué dos técnicas se usan? Explícalo con tus propias palabras***
+
+![](./img/Pasted%20image%2020240106165516.png)
+
+En primer lugar, cobertura de transiciones. Vemos el modelo e identificamos las transiciones, de manera que los casos de prueba cubras las transiciones. De ahí sacaríamos dos casos de prueba.
+
+Ahora, si aplicamos MCDC:
+
+|a=0|b=0|a=0 AND b=0|SALIDA|
+|--|--|--|--|--|
+|T|T|T|1-3|MODELO DE TRANSICIONES|
+|T|F|F|1-4|MCDC|
+|F|T|F|2-4x|MODELO DE TRANSICIONES|
+
+Con MCDC podemos sacar el caso extra
+
+26. ***Probar todos los pares de caminos usando todos los casos de prueba necesarios mínimos***
+
+![](./img/Pasted%20image%2020240106170056.png)
+
+Pares de transiciones:
+- S0-S1-S2
+- S1-S4-S5
+- S4-S5-S1
+- S5-S1-S2
+- S5-S1-S4
+- S1-S2-S3
+- S1-S2-S5
+
+Caminos:
+- S0-S1-S4-S5-S1-S2-S3
+- S0-S1-S2-S5-S1-S4-S5-S1-S2-S3
+
+Con dos caminos se recorren todos los pares de transiciones
+
+27. Probar todos los pares de transiciones usando todos los casos de prueba necesarios/mínimos
+
+![](./img/Pasted%20image%2020240106170454.png)
+
+Pares de transiciones:
+- S0-S1-S2
+- S0-S1-S4
+- S1-S4-S5
+- S4-S5-S1
+- S5-S1-S2
+- S5-S1-S4
+- S1-S2-S3
+
+Caminos:
+- S0-S1-S4-S5-S1-S2-S3
+- S0-S1-S2-S3
+
+Con dos caminos recorremos todos los pares de transiciones
+
+28. ***Aplicar MCDC a la expresión: (a AND b OR c) AND d***
+
+![](IMG_6897.jpeg)
+
+NOTA: la V es un True, que se me coló `-_^`
+
+29. ***Aplicar MCDC a la expresión: a OR b AND c OR d***
+
+![](IMG_6898.jpeg)
+
+
 
