@@ -166,7 +166,7 @@
 
 ![](./img/Pasted%20image%2020231210134143.png)
 
-![](./img/IMG_6377.jpeg)
+![](./img/IMG_6937.jpeg)
 
 ![](./img/Pasted%20image%2020231210134217.png)
 
@@ -174,10 +174,11 @@
 
 ![](./img/Pasted%20image%2020231210134309.png)
 
-![](./img/IMG_6379.jpeg)
+![](./img/IMG_6939.jpeg)
 
 ![](./img/Pasted%20image%2020231210134328.png)
 
 *Nota: es el mismo ejercicio que el ej 8 del examen de Mayo de 2021*
 
-![](./img/IMG_6369.jpeg)
+![](./img/IMG_6940.jpeg)
+
