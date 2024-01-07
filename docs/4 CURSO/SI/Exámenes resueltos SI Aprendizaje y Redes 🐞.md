@@ -142,7 +142,7 @@
 
 ![](./img/Pasted%20image%2020231210124142.png)
 
-![](./img/IMG_6372.jpeg)
+![](./img/IMG_6931.jpeg)
 
 ![](./img/Pasted%20image%2020231210124200.png)
 
@@ -152,7 +152,7 @@
 
 ![](./img/Pasted%20image%2020231210124239.png)
 
-![](./img/IMG_6374.jpeg)
+![](./img/IMG_6933.jpeg)
 
 ![](./img/Pasted%20image%2020231210124259.png)
 
