@@ -1,3 +1,45 @@
+# Parcial Diciembre 2023
+
+![](./img/Pasted%20image%2020240107125941.png)
+
+![](./img/IMG_6952.jpeg)
+
+![](./img/Pasted%20image%2020240107130054.png)
+
+![](./img/IMG_6953.jpeg)
+
+![](./img/IMG_6954.jpeg)
+
+![](./img/Pasted%20image%2020240107130237.png)
+
+![](./img/IMG_6955.jpeg)
+
+![](./img/Pasted%20image%2020240107130311.png)
+
+![](./img/IMG_6956.jpeg)
+
+*NOTA: Este no sé si está bien*
+
+![](./img/Pasted%20image%2020240107130457.png)
+
+![](./img/IMG_6957.jpeg)
+
+![](./img/Pasted%20image%2020240107130544.png)
+
+![](./img/IMG_6958.jpeg)
+
+![](./img/Pasted%20image%2020240107130632.png)
+
+![](./img/IMG_6959.jpeg)
+
+![](./img/Pasted%20image%2020240107130713.png)
+
+![](./img/IMG_6960.jpeg)
+
+![](./img/Pasted%20image%2020240107130820.png)
+
+![](./img/IMG_6961.jpeg)
+
 # Enero 2022
 
 ![](./img/Pasted%20image%2020240107122117.png)
