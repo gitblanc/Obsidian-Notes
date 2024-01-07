@@ -54,6 +54,12 @@
 
 # 22 Enero 2021
 
+![](./img/Pasted%20image%2020240107122837.png)
+
+![](./img/Pasted%20image%2020240107123145.png)
+
+![](./img/Pasted%20image%2020240107123309.png)
+
 ![](./img/Pasted%20image%2020231209135903.png)
 
 ![](./img/Pasted%20image%2020231209135919.png)
@@ -86,6 +92,12 @@
 
 # Mayo 2021
 
+![](./img/Pasted%20image%2020240107123524.png)
+
+![](./img/IMG_6923.jpeg)
+
+![](./img/IMG_6924.jpeg)
+
 ![](./img/Pasted%20image%2020231210114425.png)
 
 ![](./img/Pasted%20image%2020231210114449.png)
@@ -94,7 +106,9 @@
 
 ![](./img/Pasted%20image%2020231210114529.png)
 
-![](./img/IMG_6366.jpeg)
+![](./img/IMG_6925.jpeg)
+
+![](./img/IMG_6926.jpeg)
 
 ![](./img/Pasted%20image%2020231210114552.png)
 
@@ -114,7 +128,7 @@
 
 ![](./img/Pasted%20image%2020231210114730.png)
 
-![](./img/IMG_6370.jpeg)
+![](./img/IMG_6929.jpeg)
 
 # Enero 2020
 
