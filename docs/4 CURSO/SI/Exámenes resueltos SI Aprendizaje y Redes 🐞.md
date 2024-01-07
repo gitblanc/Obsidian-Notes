@@ -1,24 +1,30 @@
 # Enero 2022
 
+![](./img/Pasted%20image%2020240107122117.png)
+
+![](./img/IMG_6908.jpeg)
+
+![](./img/IMG_6909.jpeg)
+
 ![](./img/Pasted%20image%2020231209121317.png)
 
 ![](./img/IMG_6334.jpeg)
 
 ![](./img/Pasted%20image%2020231209121705.png)
 
-![](./img/IMG_6335.jpeg)
+![](./img/IMG_6911.jpeg)
 
 ![](./img/Pasted%20image%2020231209121727.png)
 
-![](./img/IMG_6336.jpeg)
+![](./img/IMG_6912.jpeg)
 
 ![](./img/Pasted%20image%2020231209121747.png)
 
-![](./img/IMG_6337.jpeg)
+![](./img/IMG_6913.jpeg)
 
 ![](./img/Pasted%20image%2020231209121805.png)
 
-![](./img/IMG_6338.jpeg)
+![](./img/IMG_6915.jpeg)
 
 # Parcial Diciembre 2021
 
