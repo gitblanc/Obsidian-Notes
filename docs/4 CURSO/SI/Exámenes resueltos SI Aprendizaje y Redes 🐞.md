@@ -182,3 +182,31 @@
 
 ![](./img/IMG_6940.jpeg)
 
+# Enero 2019
+
+![](./img/Pasted%20image%2020240107124953.png)
+
+![](./img/Pasted%20image%2020240107125014.png)
+
+![](./img/Pasted%20image%2020240107125034.png)
+
+![](./img/IMG_6941.jpeg)
+
+![](./img/Pasted%20image%2020240107125135.png)
+
+![](./img/IMG_6942.jpeg)
+
+![](./img/Pasted%20image%2020240107125205.png)
+
+*NOTA: lo de SVM no entra*
+
+![](./img/IMG_6943.jpeg)
+
+![](./img/Pasted%20image%2020240107125324.png)
+
+![](./img/IMG_6944.jpeg)
+
+![](./img/Pasted%20image%2020240107125404.png)
+
+![](./img/IMG_6945.jpeg)
+
