@@ -323,3 +323,20 @@ AAAABBBBB //entropía alta
 
 ![](./img/IMG_6188.jpeg)
 
+# Redes convolucionales
+
+![](./img/Pasted%20image%2020240108153641.png)
+
+## Fórmula para calcular la salida de un filtro
+
+![](./img/IMG_6979.jpeg)
+
+## Ejercicio
+
+Si la entrada de una CNN es 200x200x128 y aplicamos un filtro de 7x7x128. ¿Cuál es la dimensión de la salida?
+
+1. Con padding 0 y stride 1
+2. Con padding 2 filas 2 columnas y stride 1
+3. Con padding 2 filas 2 columnas y stride 2
+
+![](./img/IMG_6980.jpeg)
