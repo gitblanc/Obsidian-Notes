@@ -244,6 +244,35 @@ NOTA: la V es un True, que se me coló `-_^`
 	- Confirmación (retest): defectos han sido solucionados
 	- Regresión: los cambios no han afectado a otras partes
 
+32. ***Di qué niveles de prueba existen***
+
+NOTA: recordar CISA
+
+- **Componente**: por separado, funcionalidades individuales
+- **Integración**: interfaces entre componentes e interacciones intrasistema
+- **Sistema**: comportamiento del sistema global, funcional y no funcional
+- **Aceptación**: determinar si el sistema está listo para funcionar
+
+33. ***Estrategias para los casos de prueba***
+
+- **Minimizada (each choice)**: por defecto. Implica no combinar. Se cubren todas las situaciones con el menor número de casos de prueba
+- **Base choice**: permite probar la sensibilidad ante pequeños cambios. Se elige una combinación base y el resto son iguales salvo un cambio en las situaciones
+- **Combinaciones parciales**: algunas condiciones de prueba son más importantes que otras
+- **Multiple combination**: fuerza bruta. Se combina todo con todo
+
+34. ***Explica la diferencia entre caso de prueba lógico y físico***
+
+- **Lógico**: describe en términos lógicos las circunstancias en las que se probará el comportamiento del sistema, incluyendo las situaciones a cubrir
+- **Físico**: elaboración concreta del caso lógico. Valores exactos de entradas, salidas y configuración
+
+35. ***Dibuja la pirámide de test***
+
+![](./img/Pasted%20image%2020240111165313.png)
+
+36. ¿Para qué se usan los Mocks?
+
+Se usan cuando tenemos que probar un sistema con un servicio externo que aún no está implementado, o cuando queremos probar la lógica de negocio independiente a ese servicio. El Mock se usa para sustituir a ese componente o API
+
 # Preguntas de cuestionarios
 
 
