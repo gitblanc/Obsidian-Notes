@@ -269,7 +269,7 @@ NOTA: recordar CISA
 
 ![](./img/Pasted%20image%2020240111165313.png)
 
-36. ¿Para qué se usan los Mocks?
+36. ***¿Para qué se usan los Mocks?***
 
 Se usan cuando tenemos que probar un sistema con un servicio externo que aún no está implementado, o cuando queremos probar la lógica de negocio independiente a ese servicio. El Mock se usa para sustituir a ese componente o API
 
