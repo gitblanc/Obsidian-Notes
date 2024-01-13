@@ -75,3 +75,78 @@
 ![](./img/IMG_7077.jpeg)
 
 # Seminario 4
+
+## BST. Ejercicio 1
+
+Insertar 50, 25, 75, 18, 28, 100, 32, 80, 30, 40, 29, 31, 90, 95
+
+![](./img/Pasted%20image%2020240113154356.png)
+
+## BST. Ejercicio 2
+
+Recorrido inOrden del BST anterior
+
+*NOTA: el recorrido inOrden consiste: izquierda, raíz, derecha*
+
+**Solución inOrder**: 18-25-28-29-30-31-32-40-50-75-80-90-95-100
+
+## BST. Ejercicio 3
+
+Recorrido preOrden del BST anterior
+
+*NOTA: el recorrido preOrden consiste: raíz, izquierda, derecha*
+
+**Solución preOrder**: 50-25-18-28-32-30-29-31-40-75-100-80-90-95
+
+## BST. Ejercicio 4
+
+Recorrido postOrden del BST anterior
+
+*NOTA: el recorrido postOrden consiste: izquierda, derecha, raíz*
+
+**Solución postOrder**: 18-29-31-30-40-32-28-25-95-90-80-100-75-50
+
+## BST. Ejercicio 5
+
+Borrar del árbol del ejercicio 1 el 32, 100, 50, 80, 40, 28
+
+![](./img/Pasted%20image%2020240113155916.png)
+
+![](./img/Pasted%20image%2020240113155934.png)
+
+![](./img/Pasted%20image%2020240113155951.png)
+
+![](./img/Pasted%20image%2020240113160005.png)
+
+![](./img/Pasted%20image%2020240113160023.png)
+
+![](./img/Pasted%20image%2020240113160040.png)
+
+![](./img/Pasted%20image%2020240113155844.png)
+
+## AVL. Ejercicio 1
+
+Insertar 10, 95, 60, 30, 2, 1, 70, 90, 23, 43, 65, 13, 99, 97, 49, 7, 40, 50, 20, 15, 3
+
+Notas:
+- **Rotación doble derecha:** bf: 2, -1
+	- Hacer RSI sobre el getRight() del nodo con bf 2
+	- Hacer RSD sobre el nodo con bf 2
+- **Rotación doble izquierda:** bf: -2, 1
+	- Hacer RSD sobre el getLeft() del nodo con bf -2
+	- Hacer RSI sobre el nodo con bf -2
+- **Rotación simple derecha:** bf: 2, 1
+	- aux=nodo.right 
+	- nodo.right=aux.left 
+	- aux.left=nodo
+- **Rotación simple izquierda:** bf: -2, -1
+	- aux=nodo.left 
+	- nodo.left=aux.right 
+	- aux.right=nodo
+
+![](./img/IMG_7084.jpeg)
+
+![](./img/IMG_7085.jpeg)
+
+![](./img/IMG_7086.jpeg)
+
