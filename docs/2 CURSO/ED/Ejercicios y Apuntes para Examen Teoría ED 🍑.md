@@ -150,3 +150,58 @@ Notas:
 
 ![](./img/IMG_7086.jpeg)
 
+# Seminario 5
+
+## Árboles B
+
+- Los nodos se llaman páginas
+- Cada página puede contener 2n claves y 2n+1 hijos
+- La raíz puede tener como mínimo una clave y como máximo 2n claves
+- Cualquier página que no sea la raíz puede tener como mínimo n claves y como máximo 2n claves
+- **Insertar**: mayores a la derecha del padre y menores a la izquierda
+- **Borrar**: se busca el menor del subárbol derecho
+- El árbol sólo puede crecer hacia arriba siempre y cuando el nivel tenga ya el máximo número de hijos posibles
+
+## Árboles B. Ejercicio 1
+
+Partiendo de un árbol B de orden 2 vacío, inserta las siguientes claves en el orden que aparecen: 190, 57, 89, 90, 121, 170, 35, 48, 91, 22, 126, 132, 80
+
+![](./img/IMG_7087.jpeg)
+
+## Árboles B. Ejercicio 2
+
+Partiendo de un árbol B de orden 2 anterior, borrar las siguientes claves en el orden que aparecen: 80, 91, 57, 170, 48, 126, 22, 90, 89
+
+![](./img/IMG_7088.jpeg)
+
+## Árboles B. Ejercicio 3
+
+Partiendo de un árbol B de orden 2 insertar las siguientes claves en el orden que aparecen: 60, 40, 80, 20, 55, 65, 63, 51, 75, 2, 4, 90, 95, 100, 41, 42, 50, 22, 30, 25, 31, 32, 33, 36, 38, 39
+
+![](./img/IMG_7089.jpeg)
+
+![](./img/IMG_7090.jpeg)
+
+## Árboles B. Ejercicio 4
+
+Partiendo del árbol B de orden 2 anterior, borrar las siguientes claves en el orden que aparecen: 100, 60, 65, 63
+
+![](./img/IMG_7091.jpeg)
+
+## Montículo binario de mínimos
+
+- Vector de n elementos
+- **Insertar**: se inserta el nuevo elemento al final y se realiza un filtrado ascendente
+- **Sacar**: se mueve el último elemento de la raíz y se realiza un filtrado descendente
+- **Borrar**: se mueve el último elemento a la posición del elemento a borrar y se realiza un filtrado descendente
+
+- El padre está en la posición: `(i-1)/2`
+- El hijo izquierdo está en la posición: `(2*i)+1`
+- El hijo derecho está en la posición: `(2*i)+2`
+
+## Montículos. Ejercicio 1
+
+Insertar las siguientes claves en un montículo binario de mínimos: 60, 40, 80, 20, 55, 65, 63, 51, 75, 2, 4, 90, 95, 99, 41, 42, 50, 22, 30, 25, 31, 32, 33, 36, 38, 39
+
+![](./img/IMG_7092.jpeg)
+
