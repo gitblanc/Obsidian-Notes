@@ -36,3 +36,42 @@
 
 # Seminario 3. Grafos
 
+## Floyd-Warshall
+
+- Algoritmo que calcula todos los caminos de coste mínimo entre cualquier par de nodos del grafo
+- Características del grafo:
+	- Ponderado
+	- Conexo
+	- Dirigido
+
+## Floyd-Warshall. Ejercicio 1
+
+![](./img/Pasted%20image%2020240113121557.png)
+
+![](./img/IMG_7073.jpeg)
+
+## Floyd-Warshall. Ejercicio 2
+
+![](./img/Pasted%20image%2020240113123340.png)
+
+![](./img/IMG_7074.jpeg)
+
+## Floyd-Warshall. Ejercicio 3
+
+![](./img/Pasted%20image%2020240113125545.png)
+
+![](./img/IMG_7075.jpeg)
+
+## Floyd-Warshall. Ejercicio 4
+
+![](./img/Pasted%20image%2020240113131935.png)
+
+![](./img/IMG_7076.jpeg)
+
+## Prim. Ejercicio 5
+
+![](./img/Pasted%20image%2020240113133543.png)
+
+![](./img/IMG_7077.jpeg)
+
+# Seminario 4
