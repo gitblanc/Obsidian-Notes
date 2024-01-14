@@ -211,3 +211,53 @@ En el montículo generado en el ejercicio anterior borrar las siguientes claves:
 
 ![](./img/IMG_7098.jpeg)
 
+# Seminario 6. De todo un poco
+
+## Grafos
+
+![](./img/Pasted%20image%2020240114115828.png)
+
+![](./img/IMG_7099.jpeg)
+
+## Árboles B
+
+![](./img/Pasted%20image%2020240114115852.png)
+
+![](./img/IMG_7101.jpeg)
+
+![](./img/IMG_7102.jpeg)
+
+## Árboles AVL
+
+![](./img/Pasted%20image%2020240114115914.png)
+
+![](./img/IMG_7103.jpeg)
+
+![](./img/IMG_7104.jpeg)
+
+![](./img/IMG_7105.jpeg)
+
+## Colas de prioridad
+
+![](./img/Pasted%20image%2020240114115937.png)
+
+![](./img/IMG_7108.jpeg)
+
+## Tablas Hash
+
+- **Exploración Lineal**: `(h(x)+i) mod B`
+	- h(x) es la posición origen de la colisión
+	- i es el número de intentos (0, 1, 2, 3...)
+	- B es el tamaño de la tabla hash (número primo)
+- **Exploración Cuadrática**: `(h(x)+i^2) mod B`
+- **Dispersión doble**: `(h(x)+i*H(x)) mod B`
+	- H(x) es una función de cálculo de salto. Se recomienda: 
+		- `H(x)= R - h(x) % R`
+		- R es el número primo antecesor de B
+
+- **Redispersión**: LF > 0.5
+- **Redispersión inversa**: LF < 0.16
+
+![](./img/Pasted%20image%2020240114120004.png)
+
+![](./img/IMG_7109.jpeg)
