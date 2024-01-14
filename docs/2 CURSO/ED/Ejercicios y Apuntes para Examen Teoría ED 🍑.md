@@ -205,3 +205,9 @@ Insertar las siguientes claves en un montículo binario de mínimos: 60, 40, 80,
 
 ![](./img/IMG_7092.jpeg)
 
+## Montículos. Ejercicio 2
+
+En el montículo generado en el ejercicio anterior borrar las siguientes claves: 99, 38, 22, 2
+
+![](./img/IMG_7098.jpeg)
+
