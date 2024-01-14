@@ -3,13 +3,25 @@
 
 ![](./img/Pasted%20image%2020240114170557.png)
 
+![](./img/IMG_7112.jpeg)
+
 ![](./img/Pasted%20image%2020240114170615.png)
+
+![](./img/IMG_7113.jpeg)
 
 ![](./img/Pasted%20image%2020240114170631.png)
 
+![](./img/IMG_7114.jpeg)
+
 ![](./img/Pasted%20image%2020240114170653.png)
 
+![](./img/IMG_7115.jpeg)
+
+![](./img/IMG_7116.jpeg)
+
 ![](./img/Pasted%20image%2020240114170716.png)
+
+![](./img/IMG_7117.jpeg)
 
 # Junio 2020
 
