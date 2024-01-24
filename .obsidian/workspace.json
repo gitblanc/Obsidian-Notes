@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/2 CURSO/ED/Exámenes de Teoría ED 🍅.md",
+                "file": "docs/4 CURSO/DPPI/Notas de teoría DPPI 🏖️.md",
                 "mode": "source",
                 "source": false
               }
@@ -96,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/2 CURSO/ED/Exámenes de Teoría ED 🍅.md",
+                "file": "docs/4 CURSO/DPPI/Notas de teoría DPPI 🏖️.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -135,19 +135,22 @@
   },
   "active": "e4df7556333f0c32",
   "lastOpenFiles": [
+    "docs/4 CURSO/DPPI/img/Pasted image 20240124155747.png",
+    "docs/4 CURSO/DPPI/img",
+    "docs/2 CURSO/ED/Exámenes de Teoría ED 🍅.md",
+    "docs/4 CURSO/DPPI/Notas de teoría DPPI 🏖️.md",
+    "docs/4 CURSO/DPPI",
     "docs/2 CURSO/ED/img/IMG_7130.jpeg",
     "docs/2 CURSO/ED/img/IMG_7129.jpeg",
     "docs/2 CURSO/ED/img/IMG_7128.jpeg",
     "docs/2 CURSO/ED/img/IMG_7127.jpeg",
     "docs/2 CURSO/ED/img/IMG_7126.jpeg",
     "docs/2 CURSO/ED/Notas laboratorio ED 🍄.md",
-    "docs/2 CURSO/ED/Exámenes de Teoría ED 🍅.md",
     "docs/2 CURSO/ED/img/IMG_7124.jpeg",
     "docs/2 CURSO/ED/img/IMG_7123.jpeg",
     "docs/2 CURSO/ED/img/IMG_7120.jpeg",
     "docs/2 CURSO/ED/img/IMG_7117.jpeg",
     "docs/2 CURSO/ED/img/IMG_7116.jpeg",
-    "docs/2 CURSO/ED/img/IMG_7115.jpeg",
     "docs/2 CURSO/ED/Ejercicios y Apuntes para Examen Teoría ED 🍑.md",
     "docs/2 CURSO/ED/3. Estructuras jerárquicas 🦔.md",
     "docs/2 CURSO/ED/Seminarios ED 🚗.md",
@@ -170,7 +173,6 @@
     "docs/2 CURSO/ED/4. Estructuras Diccionario 🐿️.md",
     "docs/4 CURSO/IR/Notas de Lab de IR 🐿️.md",
     "docs/2 CURSO/TEC/Métodos de solución de problemas TEC🚼.md",
-    "docs/4 CURSO/SI/Notas Lab SI 🧊.md",
     "Excalidraw",
     "img/2 CURSO/CN/img",
     "img/2 CURSO/CN",
@@ -178,8 +180,6 @@
     "img",
     "docs/4 CURSO/CVVS/img",
     "docs/4 CURSO/CVVS",
-    "docs/4 CURSO/IR/img",
-    "docs/4 CURSO/IR",
-    "docs/2 CURSO/ED/img"
+    "docs/4 CURSO/IR/img"
   ]
 }
