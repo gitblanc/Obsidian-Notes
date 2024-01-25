@@ -32,7 +32,7 @@ Código en dynamic.typing/dynamic
 	
 ---
 	
-![](./img/atributos.png)
+![](atributos.png)
 
 ---
 ## Generación dinámica de código

@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "07f5af63f646eda6",
+        "id": "5bf650f7e75980b7",
         "type": "tabs",
         "children": [
           {
-            "id": "e4df7556333f0c32",
+            "id": "a4d0f75c5e47bbef",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/4 CURSO/DPPI/Notas de teoría DPPI 🏖️.md",
+                "file": "docs/2 CURSO/TPP/Notas de teoría TPP 🗿.md",
                 "mode": "source",
                 "source": false
               }
@@ -96,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/4 CURSO/DPPI/Notas de teoría DPPI 🏖️.md",
+                "file": "docs/2 CURSO/TPP/Notas de teoría TPP 🗿.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -133,12 +133,19 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "e4df7556333f0c32",
+  "active": "18776e4c52d6b962",
   "lastOpenFiles": [
+    "docs/2 CURSO/TPP/notas antiguas/Actividades previas al paradigma orientado a objetos 🦄.md",
+    "docs/2 CURSO/TPP/Notas de teoría TPP 🗿.md",
+    "docs/2 CURSO/TPP/img",
+    "docs/2 CURSO/TPP/notas antiguas",
+    "docs/4 CURSO/ASLEPI/Notas de teoría ASLEPI 🛰️.md",
+    "docs/4 CURSO/ASLEPI/img",
+    "docs/4 CURSO/ASLEPI",
+    "docs/4 CURSO/DPPI/Notas de teoría DPPI 🏖️.md",
     "docs/4 CURSO/DPPI/img/Pasted image 20240124155747.png",
     "docs/4 CURSO/DPPI/img",
     "docs/2 CURSO/ED/Exámenes de Teoría ED 🍅.md",
-    "docs/4 CURSO/DPPI/Notas de teoría DPPI 🏖️.md",
     "docs/4 CURSO/DPPI",
     "docs/2 CURSO/ED/img/IMG_7130.jpeg",
     "docs/2 CURSO/ED/img/IMG_7129.jpeg",
@@ -150,7 +157,6 @@
     "docs/2 CURSO/ED/img/IMG_7123.jpeg",
     "docs/2 CURSO/ED/img/IMG_7120.jpeg",
     "docs/2 CURSO/ED/img/IMG_7117.jpeg",
-    "docs/2 CURSO/ED/img/IMG_7116.jpeg",
     "docs/2 CURSO/ED/Ejercicios y Apuntes para Examen Teoría ED 🍑.md",
     "docs/2 CURSO/ED/3. Estructuras jerárquicas 🦔.md",
     "docs/2 CURSO/ED/Seminarios ED 🚗.md",
@@ -171,15 +177,9 @@
     "docs/4 CURSO/IR/Seminarios IR 🍙.md",
     "docs/3 CURSO/1 semestre/DS/Notas Lab DS 🛥️.md",
     "docs/2 CURSO/ED/4. Estructuras Diccionario 🐿️.md",
-    "docs/4 CURSO/IR/Notas de Lab de IR 🐿️.md",
-    "docs/2 CURSO/TEC/Métodos de solución de problemas TEC🚼.md",
     "Excalidraw",
     "img/2 CURSO/CN/img",
     "img/2 CURSO/CN",
-    "img/2 CURSO",
-    "img",
-    "docs/4 CURSO/CVVS/img",
-    "docs/4 CURSO/CVVS",
-    "docs/4 CURSO/IR/img"
+    "img/2 CURSO"
   ]
 }
