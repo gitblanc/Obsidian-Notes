@@ -1,6 +1,6 @@
 # Primer Programa
 
-```c#
+```cs
 using System;
 
 namespace TPP.ObjectOrientation.Basic {
@@ -47,7 +47,7 @@ namespace TPP.ObjectOrientation.Basic {
 ![](./img/Pasted%20image%2020240129124438.png)
 
 - Los namespace se definen entre {}
-```c#
+```cs
 namespace TPP.OrientacionObjetos.Basico {
 …
 }
@@ -101,7 +101,7 @@ namespace TPP.OrientacionObjetos.Basico {
 - Los métodos `Write` y `WriteLine` permiten mostrar texto con formato `{índiceParámetro[,alineación][:formato]}`
 - La salida está internacionalizada
 
-```c#
+```cs
 using System;
 
 namespace TPP.ObjectOrientation.Basic {
@@ -134,7 +134,7 @@ namespace TPP.ObjectOrientation.Basic {
 - Definen **un nuevo tipo** con su propio grado de ocultación
 - Es posible asignarles explícitamente valores enteros:
 
-```c#
+```cs
 enum Colores {
 	azul, verde=3, rojo, amarillo
 }
@@ -190,7 +190,7 @@ class Enumerados {
 	- Se asegura su ejecución pero no de un modo determinista (no sabemos exactamente cuándo se ejecutará)
 	- El recolector de basura ejecutará el destructor de un objeto cuando éste se libere
 
-```c#
+```cs
 class Clase {
 	public Clase(parámetros) {
 		//asignación de recursos adicionales
@@ -247,7 +247,7 @@ class Clase {
 	- Ser abstractas
 	- Sobreescribirse (enlace dinámico)
 
-```c#
+```cs
 /// <summary>
     /// Properties demo
     /// </summary>
@@ -280,7 +280,7 @@ class Clase {
 	}
 ```
 
-```c#
+```cs
 class Persona {
 	string Nombre { get; set; }
 	string Apellido { get; set; }
@@ -311,7 +311,7 @@ class Persona {
 - Los objetos de tipo `string` son inmutables: no se puede cambiar o modificar su estado
 - Si queremos modificar su estado, debe usarse la clase `StringBuilder`
 
-```c#
+```cs
 using System;
 using System.Text;
 
