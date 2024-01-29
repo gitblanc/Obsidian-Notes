@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/2 CURSO/TPP/Notas de teoría TPP 🗿.md",
+                "file": "docs/2 CURSO/TPP/Notas de C sharp 🍉.md",
                 "mode": "source",
                 "source": false
               }
@@ -80,7 +80,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 284.5
+    "width": 207.5
   },
   "right": {
     "id": "1b2d980ad4b04eb7",
@@ -96,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/2 CURSO/TPP/Notas de teoría TPP 🗿.md",
+                "file": "docs/2 CURSO/TPP/Notas de C sharp 🍉.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +113,9 @@
             "state": {
               "type": "all-properties",
               "state": {
-                "sortOrder": "frequency"
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
               }
             }
           }
@@ -133,10 +135,19 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "18776e4c52d6b962",
+  "active": "a4d0f75c5e47bbef",
   "lastOpenFiles": [
-    "docs/2 CURSO/TPP/notas antiguas/Actividades previas al paradigma orientado a objetos 🦄.md",
+    "docs/2 CURSO/TPP/img/Pasted image 20240129132132.png",
+    "docs/2 CURSO/TPP/img/Pasted image 20240129132101.png",
+    "docs/2 CURSO/TPP/img/Pasted image 20240129132037.png",
+    "docs/2 CURSO/TPP/img/Pasted image 20240129130257.png",
+    "docs/2 CURSO/TPP/img/Pasted image 20240129124736.png",
+    "docs/2 CURSO/TPP/img/Pasted image 20240129124438.png",
+    "docs/2 CURSO/TPP/img",
+    "docs/2 CURSO/TPP/img/Pasted image 20240129124408.png",
     "docs/2 CURSO/TPP/Notas de teoría TPP 🗿.md",
+    "docs/2 CURSO/TPP/Notas de C sharp 🍉.md",
+    "docs/2 CURSO/TPP/notas antiguas/Actividades previas al paradigma orientado a objetos 🦄.md",
     "docs/2 CURSO/TPP/img",
     "docs/2 CURSO/TPP/notas antiguas",
     "docs/4 CURSO/ASLEPI/Notas de teoría ASLEPI 🛰️.md",
@@ -150,13 +161,7 @@
     "docs/2 CURSO/ED/img/IMG_7130.jpeg",
     "docs/2 CURSO/ED/img/IMG_7129.jpeg",
     "docs/2 CURSO/ED/img/IMG_7128.jpeg",
-    "docs/2 CURSO/ED/img/IMG_7127.jpeg",
-    "docs/2 CURSO/ED/img/IMG_7126.jpeg",
     "docs/2 CURSO/ED/Notas laboratorio ED 🍄.md",
-    "docs/2 CURSO/ED/img/IMG_7124.jpeg",
-    "docs/2 CURSO/ED/img/IMG_7123.jpeg",
-    "docs/2 CURSO/ED/img/IMG_7120.jpeg",
-    "docs/2 CURSO/ED/img/IMG_7117.jpeg",
     "docs/2 CURSO/ED/Ejercicios y Apuntes para Examen Teoría ED 🍑.md",
     "docs/2 CURSO/ED/3. Estructuras jerárquicas 🦔.md",
     "docs/2 CURSO/ED/Seminarios ED 🚗.md",
@@ -175,11 +180,8 @@
     "docs/2 CURSO/TEC/Pequeños apuntes TEC - 1 examen 🎃.md",
     "docs/4 CURSO/IR/Apuntes de Seminario IR 🐸.md",
     "docs/4 CURSO/IR/Seminarios IR 🍙.md",
-    "docs/3 CURSO/1 semestre/DS/Notas Lab DS 🛥️.md",
-    "docs/2 CURSO/ED/4. Estructuras Diccionario 🐿️.md",
     "Excalidraw",
     "img/2 CURSO/CN/img",
-    "img/2 CURSO/CN",
-    "img/2 CURSO"
+    "img/2 CURSO/CN"
   ]
 }
