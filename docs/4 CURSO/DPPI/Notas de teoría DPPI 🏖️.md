@@ -68,6 +68,8 @@
 - Métodos modernos
 	- Métrica V3
 	- RUP
+	- Extreme Programming (XP)
+	- Scrum
 
 
 
