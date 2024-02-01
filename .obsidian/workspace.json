@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "5bf650f7e75980b7",
+        "id": "e8d42f1dc7d3a53b",
         "type": "tabs",
         "children": [
           {
-            "id": "a4d0f75c5e47bbef",
+            "id": "4866bda663284f8f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/4 CURSO/ASLEPI/Notas de teoría ASLEPI 🛰️.md",
+                "file": "docs/2 CURSO/TPP/Notas de teoría TPP 🗿.md",
                 "mode": "source",
                 "source": false
               }
@@ -96,11 +96,11 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/4 CURSO/ASLEPI/Notas de teoría ASLEPI 🛰️.md",
+                "file": "docs/2 CURSO/TPP/Notas de teoría TPP 🗿.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
-                "showSearch": false,
+                "showSearch": true,
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
@@ -113,7 +113,9 @@
             "state": {
               "type": "all-properties",
               "state": {
-                "sortOrder": "frequency"
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
               }
             }
           }
@@ -133,8 +135,9 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "a4d0f75c5e47bbef",
+  "active": "18776e4c52d6b962",
   "lastOpenFiles": [
+    "docs/4 CURSO/ASLEPI/Notas de teoría ASLEPI 🛰️.md",
     "docs/4 CURSO/DPPI/Seminarios DPPI 🛺.md",
     "docs/4 CURSO/DPPI/Notas de teoría DPPI 🏖️.md",
     "docs/4 CURSO/DPPI/Notas de Lab DPPI 🪙.md",
@@ -153,7 +156,6 @@
     "docs/2 CURSO/TPP/notas antiguas/Actividades previas al paradigma orientado a objetos 🦄.md",
     "docs/2 CURSO/TPP/img",
     "docs/2 CURSO/TPP/notas antiguas",
-    "docs/4 CURSO/ASLEPI/Notas de teoría ASLEPI 🛰️.md",
     "docs/4 CURSO/ASLEPI/img",
     "docs/4 CURSO/ASLEPI",
     "docs/4 CURSO/DPPI/img",
