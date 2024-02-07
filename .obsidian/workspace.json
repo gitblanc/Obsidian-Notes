@@ -4,28 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "e8d42f1dc7d3a53b",
+        "id": "7e45e50844da269f",
         "type": "tabs",
         "children": [
           {
-            "id": "4866bda663284f8f",
+            "id": "cef0d07ca6fc70b7",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/2 CURSO/TPP/Seminarios TPP 🍎.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "3f647a64a9835b3c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "docs/2 CURSO/TPP/Notas de teoría TPP 🗿.md",
+                "file": "docs/4 CURSO/DPPI/Notas de teoría DPPI 🏖️.md",
                 "mode": "source",
                 "source": false
               }
@@ -108,11 +96,11 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/2 CURSO/TPP/Seminarios TPP 🍎.md",
-                "collapseAll": false,
+                "file": "docs/4 CURSO/DPPI/Notas de teoría DPPI 🏖️.md",
+                "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
-                "showSearch": true,
+                "showSearch": false,
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
@@ -147,13 +135,13 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "4866bda663284f8f",
+  "active": "18776e4c52d6b962",
   "lastOpenFiles": [
+    "docs/2 CURSO/TPP/Notas de teoría TPP 🗿.md",
+    "docs/2 CURSO/TPP/Seminarios TPP 🍎.md",
     "docs/2 CURSO/TPP/img/Pasted image 20240202193709.png",
     "docs/2 CURSO/TPP/img/Pasted image 20240202191207.png",
     "docs/2 CURSO/TPP/img/Pasted image 20240202191146.png",
-    "docs/2 CURSO/TPP/Notas de teoría TPP 🗿.md",
-    "docs/2 CURSO/TPP/Seminarios TPP 🍎.md",
     "docs/4 CURSO/ASLEPI/Notas de teoría ASLEPI 🛰️.md",
     "docs/4 CURSO/DPPI/Seminarios DPPI 🛺.md",
     "docs/4 CURSO/DPPI/Notas de teoría DPPI 🏖️.md",
@@ -165,7 +153,6 @@
     "docs/2 CURSO/TPP/img/Pasted image 20240129172815.png",
     "docs/2 CURSO/TPP/img/Pasted image 20240129172701.png",
     "docs/2 CURSO/TPP/img/Pasted image 20240129132132.png",
-    "docs/2 CURSO/TPP/img/Pasted image 20240129132101.png",
     "docs/2 CURSO/TPP/Notas de C sharp 🍉.md",
     "docs/2 CURSO/TPP/notas antiguas/Actividades previas al paradigma orientado a objetos 🦄.md",
     "docs/2 CURSO/TPP/img",

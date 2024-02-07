@@ -71,6 +71,15 @@
 	- Extreme Programming (XP)
 	- Scrum
 
+# Tema 2. Medición y estimación
+
+- **Métricas formales**: unidades de medida, de tiempo... No son medidas arbitrarias
+
+## Técnica de los Puntos Función
+
+- Dos pasos:
+	- Contar las funciones de usuario
+	- Ajustar el sistema según la complejidad
 
 
 
