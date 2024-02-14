@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/2 CURSO/TPP/Notas de teoría TPP 🗿.md",
+                "file": "docs/2 CURSO/TPP/Notas de C sharp 🍉.md",
                 "mode": "source",
                 "source": false
               }
@@ -96,13 +96,13 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/2 CURSO/TPP/Notas de teoría TPP 🗿.md",
-                "collapseAll": true,
-                "extraContext": false,
+                "file": "docs/2 CURSO/TPP/Notas de C sharp 🍉.md",
+                "collapseAll": false,
+                "extraContext": true,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
-                "backlinkCollapsed": false,
+                "backlinkCollapsed": true,
                 "unlinkedCollapsed": true
               }
             }
@@ -137,10 +137,16 @@
   },
   "active": "cef0d07ca6fc70b7",
   "lastOpenFiles": [
+    "docs/2 CURSO/TPP/img/Pasted image 20240214232850.png",
+    "docs/2 CURSO/TPP/img/Pasted image 20240214232422.png",
+    "docs/2 CURSO/TPP/img/Pasted image 20240214232405.png",
+    "docs/2 CURSO/TPP/img/Pasted image 20240214232345.png",
+    "docs/2 CURSO/TPP/img/Pasted image 20240214230353.png",
+    "docs/2 CURSO/TPP/Notas de C sharp 🍉.md",
+    "docs/2 CURSO/TPP/Notas de teoría TPP 🗿.md",
     "docs/2 CURSO/TPP/img/Pasted image 20240208160029.png",
     "docs/2 CURSO/TPP/img/Pasted image 20240208154910.png",
     "docs/4 CURSO/DPPI/Notas de teoría DPPI 🏖️.md",
-    "docs/2 CURSO/TPP/Notas de teoría TPP 🗿.md",
     "docs/2 CURSO/TPP/Seminarios TPP 🍎.md",
     "docs/2 CURSO/TPP/img/Pasted image 20240202193709.png",
     "docs/2 CURSO/TPP/img/Pasted image 20240202191207.png",
@@ -149,12 +155,6 @@
     "docs/4 CURSO/DPPI/Seminarios DPPI 🛺.md",
     "docs/4 CURSO/DPPI/Notas de Lab DPPI 🪙.md",
     "docs/4 CURSO/DPPI/img/Pasted image 20240130170845.png",
-    "docs/2 CURSO/TPP/img/Pasted image 20240129173942.png",
-    "docs/2 CURSO/TPP/img/Pasted image 20240129173215.png",
-    "docs/2 CURSO/TPP/img/Pasted image 20240129173148.png",
-    "docs/2 CURSO/TPP/img/Pasted image 20240129172815.png",
-    "docs/2 CURSO/TPP/img/Pasted image 20240129172701.png",
-    "docs/2 CURSO/TPP/Notas de C sharp 🍉.md",
     "docs/2 CURSO/TPP/notas antiguas/Actividades previas al paradigma orientado a objetos 🦄.md",
     "docs/2 CURSO/TPP/img",
     "docs/2 CURSO/TPP/notas antiguas",

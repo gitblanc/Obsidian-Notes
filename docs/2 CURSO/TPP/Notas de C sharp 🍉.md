@@ -1,3 +1,4 @@
+*NOTA: Todo este contenido ha sido extraído de los apuntes proporcionados en la asignatura Tecnologías y Paradigmas de la Programación (TPP) de la Universidad de Oviedo, curso 2023-2024.*
 # Primer Programa
 
 ```cs
@@ -697,3 +698,263 @@ static void Main(string[] args) {
 }
 ```
 
+# Clases y Métodos Abstractos
+
+- En `C#` se emplea la palabra reservada `abstract`
+- Todo método abstracto ofrece enlace dinámico
+	- No hay que especificar que es `virtual`
+- Toda clase que posea un método o más abtracto, será una **clase abstracta**
+
+# Interfaces
+
+## Sintaxis
+
+```cs
+[public|internal] interface Nombre[:interfaces-base]{
+	...
+}
+```
+
+- Es común iniciar los identificadores de las interfaces con la letra `I`
+- Todos los mensajes son públicos, virtuales y abstractos (no se pone `public` ni `virtual` ni `abstract`)
+- Una interfaz puede heredar de cualquier número de interfaces
+- No pueden tener miembros `static`
+
+# IDisposable
+
+- Del namespace `System`
+- Libera los recursos adicionales gestionados por el objeto
+- Método `void Dispose()`
+
+## IDisposable y Destructores
+
+- Una clase que defina un destructor, comúnmente implementará IDisposable
+
+```cs
+classFichero: IDisposable{
+	privatestringnombreFichero;
+	privateboolestaAbierto;
+	publicFichero(stringnombreFichero) {
+		this.nombreFichero= nombreFichero;
+		this.estaAbierto= true;
+		Console.WriteLine("Abriendo el fichero {0}.", nombreFichero);
+	}
+	publicvoidDispose() {
+		if(this.estaAbierto) {
+			this.estaAbierto= false;
+			Console.WriteLine("Cerrando el fichero {0}.", nombreFichero);
+		}
+	}
+	~Fichero() { this.Dispose(); }
+	...
+```
+
+## IDisposable y using
+
+- El invocar explícitamente a un método para liberar recursos es susceptible de ser olvidado
+- Puede ser muy tedioso debido al uso de **excepciones**
+- Por ello, `C#` usa la palabra reservada `using` para asegurar la liberación de los recursos adicionales de un objeto `IDisposable`
+	- Incluso si se lanza una excepción y no se maneja
+
+```cs
+using(Ficherofichero= newFichero("entrada.txt")) {
+	stringlínea = fichero.LeerLínea();
+	// Lanza una excepción DivideByZeroException
+	fichero.EscribirLínea(línea + línea.Length/"".Length);
+} // Se cierra el fichero
+```
+
+## Ejemplo completo
+
+```cs
+static void Main() {
+    string line;
+
+    using (File file1 = new File("input1.txt")) { // Shows "opening input1.txt"
+        line = file1.ReadLine();   // Shows "reading line"
+        file1.WriteLine(line);  // Shows "writing line"
+    } // * Shows "closing file"
+    Console.WriteLine();
+
+    File file2 = new File("input2.txt"); // Shows "opening input2.txt"
+    line = file2.ReadLine();      // Shows "reading line"
+    file2.WriteLine(line);     // Shows "writing line"
+    // If the application does not end abnormally (exception or assert),
+    // it will eventually show "closing input2.txt", but we don't know when
+
+    // If we want explicitly close the file, we can call Dispose
+    file2.Dispose();
+    Console.WriteLine();
+
+    using (File file3 = new File("input3.txt")) { // Shows "opening input3.txt"
+        line = file3.ReadLine(); // Shows "reading line"
+        file3.WriteLine(line + line.Length/"".Length);  // Throws a DiviceByZero exception
+    } // * Shows "closing input3.txt" (aún incluso se haya lanzado la excepción)
+
+    Console.WriteLine("This is not shown in the console."); // Because an exception was thrown
+}
+```
+
+# Implementación explícita de interfaces
+
+![](./img/Pasted%20image%2020240214230353.png)
+
+# Composición vs Herencia
+
+- [Leer el siguiente artículo de artima.com](https://www.artima.com/articles/composition-versus-inheritance)
+
+# Excepciones
+
+- En `C#` sólo se pueden lanzar excepciones del tipo `System.Exception`
+	- No se pueden lanzar excepciones *Value Types* (objetos en pila)
+- La clase `System.ApplicationException` supone un medio para crear excepciones definidas por aplicaciones
+	- No deben representar un error grave
+- La clase `System.SystemException` proporciona un medio para separar las excepciones del sistema de las excepciones definidas por aplicaciones
+
+## Lanzando excepciones en `C#`
+
+- Se usa la palabra reservada `throw`
+	- Tiene que ir seguida de un objeto del tipo `Exception`
+- En `C#` no es obligatorio manejar ninguna excepción
+
+## Capturando excepciones
+
+- Utilizar `try` y `catch`
+- Si queremos que, en cualquier caso, se ejecute un código, éste podrá ubicarse en un bloque `finally`
+
+```cs
+class ExceptionsDemo {
+
+    /// <summary>
+    /// A method that can throw 3 different exceptions
+    /// </summary>
+    /// <param name="n">A parameter used to select the exception to be thrown</param>
+    static void ThrowException(int n) {
+        switch (n) {
+            case 1:
+                int a = 0;
+                Console.WriteLine(n / a); // * DivideByZeroException 
+                break;
+            case 2:
+                String s=null;
+                s.Clone(); // *  NullReferenceException
+                break;
+            default:
+                throw new ApplicationException("Another exception");
+        }
+    }
+
+
+    static void Main(string[] args) {
+        // * Here, the IndexOutOfRange exception could be thrown
+        // * if no parameters have been passed to the Main method
+        int option = Int32.Parse(args[0]);
+
+        // * We execute code that can throw exceptions
+        try {
+            ThrowException(option);
+        } catch (NullReferenceException e) {
+            Console.Error.WriteLine(e.Message);
+            // * The finally block is executed
+        } catch (Exception e) {
+            // * The two other exceptions are handled here, due to polymorphism.
+            Console.Error.WriteLine(e.Message+"\n"+e.Source+"\n"+e.StackTrace);
+            // * The finally block is executed
+        } finally {
+            Console.WriteLine("This setence is always executed.");
+        }
+        Console.WriteLine("The application has handled its exceptions and it keeps running.");
+    }
+}
+```
+
+## Manejando cualquier excepción
+
+- Poner un `catch` sin parámetros
+- También se puede poner un `throw` sin parámetros
+
+```cs
+public static void m(strings) {
+	switch(s) {
+	case"1": throw new Exception(s);
+	case"2": throw new ApplicationException(s);
+	case"3": throw new SystemException(s);
+	} 
+}
+public static void Main(string[] args) {
+try{m(args[0]); }
+catch{
+	Console.Error.WriteLine("La manejamos y la volvemos a lanzar.");
+throw; }}
+```
+
+## Excepciones no manejadas
+
+- Su salida es el tipo de excepción + su propiedad `Message` + su propiedad `StackTrace`
+
+# Gestión de recursos en `C#`
+
+![](./img/Pasted%20image%2020240214232345.png)
+
+![](./img/Pasted%20image%2020240214232405.png)
+
+![](./img/Pasted%20image%2020240214232422.png)
+
+- Los destructores en `C#` son invocados cuando se liberan los objetos por el recolector de basura
+- Es posible que los destructores de `C#` sean válidos para liberar determinados recursos
+	- Sin embargo en ocasiones es necesario una liberación determinista: especificar el momento exacto en el que queremos liberar el recurso
+		- Por ejemplo, si ese recurso se va a usar en una rutina posterior
+
+# Asertos en `C#`
+
+- **Aserto** (aserción): construcción del lenguaje de programación para asegurar que una condición deba ser siempre cierta
+	- Si ésta fuese falsa, se trataría de un error de programación (parando la ejecución
+	- Están orientados al proceso de desarrollo
+	- Se pueden desactivar para la entrega (Release)
+- La técnica más usada para implementar asertos está basada en **compilación condicional**
+
+![](./img/Pasted%20image%2020240214232850.png)
+
+# Precondiciones en `C#`
+
+- Pueden ser de dos tipos:
+	1. El método invocado **no se puede ejecutar para determinados valores de los parámetros** (ej: factorial de un número negativo)
+	2. El método invocado **no se puede ejecutar para un determinado estado del objeto implícito** (ej: sacar un elemento de una pila vacía)
+- Para ambos casos, existen las siguientes excepciones dentro del namespace `System`
+	- `ArgumentException` para los argumentos
+	- `InvalidOperationException` para los estados de los objetos
+
+## Programación por contrato. Pre/Postcondiciones e invariantes
+
+```cs
+public void AddUser(string userName, string plainPassword, UserData data) //no throws clause!!{
+	//INVARIANT : Always at the beginning of a method (except constructors). Is object consistent?
+	Invariant();
+	int previousUserCount = GetUserCount();
+	//PRECONDITIONS are not always wrong parameters: object can be in an invalid state. InvalidOperationException is used
+	if (UserFileIsLocked())
+		throw new InvalidOperationException("The file is temporally inaccessible");
+	//If arguments have an incorrect value, ArgumentException is used.
+	if (!ValidUserName(userName))
+		throw new ArgumentException("User name is invalid: please use a non-existing, non-null user name");
+	if (plainPassword.Length < 10)
+		throw new ArgumentException("The password size must be at least 10");
+	if (!PasswordWithEnoughComplexity(plainPassword))
+		throw new ArgumentException("Password must have at least one upper and lowercase char, number and symbol");
+	if (data == null)
+		throw new ArgumentException(("Extra user data cannot be null");
+	...
+	//TIP: We can create our own exceptions (inheriting from the Exception class) for this, but normally
+	//ArgumentException and InvalidOperationException are enough for most cases
+	//Do the work: add user name and data, encrypting the password
+	_AddUser(userName, plainPassword, data);
+	//POSTCONDITION of this method (invariants are object-scoped, postconditions are method-scoped)
+	Debug.Assert(GetUserCount() == previousUserCount + 1);
+	//INVARIANT check: Also, always end of a method (leave object consistent)
+	Invariant();
+}
+private void Invariant(){
+	//User file cannot get corrupt during the whole execution
+	Debug.Assert(CheckUserFileIntegrity());
+}
+```
