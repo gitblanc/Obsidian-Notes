@@ -81,3 +81,29 @@ Puedes llamar a -> v[0].getEdad, v[0].getNombre()...
 Puedes llamar a -> v[0].compareTo(...) exclusivamente
 ````
 
+# Paradigma funcional
+
+- El tipo de una función es su tipo de retorno + el tipo de sus parámetros
+
+## Expresiones Lambda
+
+- `λx.M` (x son los parámetros y M es el retorno)
+
+## Reducción ß
+
+`(λx.M)N` -> `M[x:=N]`
+
+- Para `(λx.x+x)(3)`
+	- M es lo que va dentro de la función (x+x)
+	- N es el valor que va a recibir (3)
+
+- Ejemplo de **retorno**:
+	- Se devuelve un resultado `(λx.x+x)3` -> `3+3`
+	- Se devuelve otra función:`(λx.x)λy.y*2` -> `λy.y*2`
+
+## Conversión α
+
+- Calcular el doble del doble de n: `(λf.(λx.f(fx)) (λx.x+x)n` -> `(λf.(λx.(λy.y+y) ((λy.y+y)x)n` -> `(λx.(λy.y+y) ((λz.z+z)x)n` -> `(λy.y+y) ((λz.z+z)x)n` -> `((λz.z+z)n) ((λz.z+z)x)n` -> `(n+n) + (λx.x+x)n)` -> `(n+n)+(n+n)`
+
+
+
