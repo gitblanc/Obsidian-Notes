@@ -70,3 +70,36 @@ public class ComparadorNIF implements Comparador{
 }
 ````
 
+# Seminario 2. Genericidad
+
+## Ejercicio 1
+
+````cs
+public interface IComparable<T> 
+{
+	int CompareTo(T obj);
+}
+
+//Genericidad acotada (el where)
+void Sort<T>(T[] vector) where T : IComparable<T>
+{
+	...
+}
+````
+
+## Ejercicio 2
+
+````cs
+public interface IIgualado<T>
+{
+	bool Equals(T o);
+}
+
+//Genericidad acotada (el where)
+int IndexOf<T>(T[] vector, T obj) where T : IIgualado<T>
+{
+	foreach...
+		elem.Equals(o);
+		return i;
+}
+````
