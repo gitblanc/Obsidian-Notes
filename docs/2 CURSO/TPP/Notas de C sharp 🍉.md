@@ -958,3 +958,423 @@ private void Invariant(){
 	Debug.Assert(CheckUserFileIntegrity());
 }
 ```
+
+# Genericidad
+
+- Propiedad que permite construiir abstracciones modelo para otras abstracciones
+- Beneficios:
+	- Mayor **robustez** (detección de errores en tiempo de compilación)
+	- Mayor **rendimiento**
+
+## `default(T)`
+
+- En `C#`, un tipo genérico puede ser cualquier tipo del lenguaje, incluyendo los tipos simples
+- En ocasiones queremos asignar o retornar el valor por omisión de un tipo `T`
+	- La asignación `variable = null` no sería válida, porque `T` también podría ser un *Value Type* (**int**, **char**...)
+		- *Literalmente DLP* :^ wtf
+- Para ello se utiliza la palabra reservada `default`
+- La expresión `default(T)` devuelve
+	- `null` si `T` es de tipo objeto
+	- `0`, `'\0'` o `false`, si `T` es de tipo simple
+
+## Métodos Genéricos
+
+- Un ejemplo de código:
+
+```cs
+class Generics {
+
+    /// <summary>
+    /// Generic method that returns a reference with the appropriate type
+    /// or null if the cast is not valid
+    /// </summary>
+    /// <typeparam name="T">The type we want to cast the parameter</typeparam>
+    /// <param name="reference">The expression to be cast</param>
+    /// <returns>The expression with the new type, or null if the cast was not valid</returns>
+    public static T ConvertReference<T>(Object reference) {
+        if (!(reference is T))
+            return default(T); // default value of T type (e.g., 0 for int, double, short...; null for references; false for bool...)
+        return (T)reference;
+    }
+
+    public static void Main() {
+        Object myString = "hello", myInteger = 3;
+        // Correct conversions
+        Console.WriteLine(ConvertReference<String>(myString));
+        Console.WriteLine(ConvertReference<int>(myInteger));
+        // Wrong conversions
+        Console.WriteLine(ConvertReference<int>(myString));
+        Console.WriteLine(ConvertReference<String>(myInteger));
+    }
+}
+```
+
+## Clases Genéricas
+
+- Un ejemplo de código:
+
+```cs
+/// <summary>
+/// Generic wrapper class
+/// </summary>
+/// <typeparam name="T">The type of the object to be wrapped</typeparam>
+class GenericClass<T> {
+	private T field;
+
+	public GenericClass(T field) {
+		this.field = field;
+	}
+
+	public T get() {
+		return field;
+	}
+
+	public void set(T field) {
+		this.field = field;
+	}
+
+}
+
+class Run {
+	public static void Main() {
+		GenericClass<int> myInteger = new GenericClass<int>(3);
+		Console.WriteLine(myInteger.get());
+		GenericClass<string> myString = new GenericClass<string>("hello");
+		Console.WriteLine(myString.get());
+	}
+}
+```
+
+# Genericidad Acotada
+
+- Realmente los elementos genéricos son `Objects`
+- La **genericidad acotada** (*bounded*) permite hacer más específico estos tipos
+	- Ejemplo: *se puede hacer un método de ordenación donde se puedan ordenar objetos `IComparable<T>`*
+
+![](./img/Pasted%20image%2020240221101732.png)
+
+- *NOTA*: La **genericidad acotada** se indica con el `where T: IComparable<T>`
+
+```cs
+public static class Algorithms {
+	// La genericidad acotada se indica con el "where T: IComparable<T>"
+    static public void Sort<T>(T[] vector) where T: IComparable<T> {
+        for (int i=0; i<vector.Length; i++)
+            for (int j = vector.Length-1; j > i; j--)
+                if (vector[i].CompareTo(vector[j]) >0) {
+                    T aux = vector[i];
+                    vector[i] = vector[j];
+                    vector[j] = aux;
+                }
+    }
+
+}
+
+ class Program {
+
+     static void Main() {
+         // Creates a vector
+         const uint NUMBER_ELEMENTS = 50;
+         int[] vector = new int[NUMBER_ELEMENTS];
+
+         // Random values are assigned
+         Random random = new Random();
+         for (int i = 0; i < vector.Length; i++)
+             vector[i] = random.Next(Int32.MinValue, Int32.MaxValue);
+
+         // We sort it (Int32 implements Comparable<Int32>)
+         Algorithms.Sort(vector);
+
+         // We check that the vector is sorted
+         for (int i = 0; i < vector.Length - 1; i++)
+             Debug.Assert(vector[i] <= vector[i + 1]);
+     }
+
+ }
+```
+
+# `IEnumerable<T>`
+
+- Esta interfaz representa una colección de elementos (genérica)
+	- No tiene por qué ser un contenedor (ejemplo: *la generación de la serie Fibonacci*)
+- Deriva del interfaz polimórfico (no genérico) `IEnumerable`
+- Un objeto que implemente `IEnumerable` se puede recorrer con un `foreach`
+- Los arrays derivan de `Array` e implementan `IEnumerable<T>`
+
+```cs
+int[] arrayEnteros = new int[] { 10, 99, 50 }; 
+Array a = arrayEnteros; 
+IEnumerable enumerable = arrayEnteros; 
+IEnumerable enumerablei = arrayEnteros;
+```
+
+- La interfaz `IEnumerable<T>` sólo posee un método `GetEnumerator` (también `IEnumerable`)
+- El método `GetEnumerator` es un *factory method* (patrón de diseño) encargado de construir un iterador
+	- El `IEnumerator` es un *bridge* (patrón de diseño) para ser independiente de la implementación del iterador
+	- El iterador suele implementarse como una clase anidada de la colección
+
+![](./img/Pasted%20image%2020240221102502.png)
+
+- Ejemplo de código:
+
+```cs
+class Fibonacci: IEnumerable<int> {
+
+    /// <summary>
+    /// Number of elements in the sequence
+    /// </summary>
+    private int numberOfElements;
+
+    public Fibonacci(int numberOfElements) {
+        this.numberOfElements = numberOfElements;
+    }
+
+    /// <summary>
+    /// Explicit implementation of the generic interface.
+    /// Notice that IEnumerable<int>.GetEnumerator is used instead of IEnumerable.GetEnumerator,
+    /// because there are two versions of GetEnumerator (the one in IEnumerable<T> and the one in IEnumerable)
+    /// </summary>
+    IEnumerator<int> IEnumerable<int>.GetEnumerator() {
+        return new FibonacciEnumerator(numberOfElements);
+    }
+
+    /// <summary>
+    /// Explicit implementation of the polymorphic interface.
+    /// Notice that IEnumerable.GetEnumerator is used instead of IEnumerable<T>.GetEnumerator,
+    /// because there are two versions of GetEnumerator (the one in IEnumerable<T> and the one in IEnumerable)
+    /// </summary>
+    IEnumerator IEnumerable.GetEnumerator() {
+        return new FibonacciEnumerator(numberOfElements);
+    }
+
+} //  Fibonacci class
+
+internal class FibonacciEnumerator : IEnumerator<int> {
+    /// <summary>
+    /// Index is the position of the term in the sequence.
+    /// FirstTerm and secondTerm store the two last terms.
+    /// SecondTerm is the current term.
+    /// </summary>
+    int index, firstTerm, secondTerm;
+
+    /// <summary>
+    /// Maximum number of elements in this enumerator (iterator).
+    /// </summary>
+    int elements;
+
+    public FibonacciEnumerator(int elements) {
+        this.elements = elements;
+        Reset();
+    }
+
+    /// <summary>
+    /// The current term (generic version)
+    /// </summary>
+    int IEnumerator<int>.Current {
+        get { return secondTerm; }
+    }
+
+    /// <summary>
+    /// The current term (polymorphic method)
+    /// </summary>
+    object IEnumerator.Current {
+        get { return secondTerm; }
+    }
+
+    /// <summary>
+    /// Increments the enumerator (iterator) going to the following term
+    /// </summary>
+    /// <returns>True if the increment was successful; false if the end was reached</returns>
+    public bool MoveNext() {
+        if (index >= this.elements)
+            return false;
+        if (++index > 2) {
+            int temp = secondTerm;
+            secondTerm += firstTerm;
+            firstTerm = temp;
+        }
+        return true;
+    }
+
+    /// <summary>
+    /// Resets the enumerator (iterator), setting it to the begining of the sequence
+    /// </summary>
+    public void Reset() {
+        index = 0;
+        firstTerm = secondTerm = 1;
+    }
+
+    /// <summary>
+    /// This method is called when the object is destroyed.
+    /// It is used to free its resources (nothing in this case).
+    /// It must be implemented, though, because it is part of the IEnumerator.
+    /// </summary>
+    public void Dispose() {
+    }
+
+} // FibonacciEnumerator
+
+class Program {
+
+    static public void ShowWithForEach<T>(IEnumerable<T> enumerable,TextWriter output) {
+        output.Write("[ ");
+        foreach (T item in enumerable)
+            output.Write("{0} ",item);
+        output.WriteLine("]");
+    }
+
+    static public void ShowWithEnumerator<T>(IEnumerable<T> enumerable, TextWriter output) {
+        IEnumerator<T> iterador = enumerable.GetEnumerator();
+        output.Write("[ ");
+        while (iterador.MoveNext())
+            output.Write("{0} ", iterador.Current);
+        output.WriteLine("]");
+    }
+
+    static public void Main() {
+        string[] array = { "How", "are", "you", "doing", "?" };
+        ShowWithForEach(array, Console.Out);
+        ShowWithEnumerator(array, Console.Out);
+
+        Fibonacci fibonacci = new Fibonacci(10);
+        ShowWithForEach(fibonacci, Console.Out);
+        ShowWithEnumerator(fibonacci, Console.Out);
+    }
+}
+```
+
+# Tipos anulables
+
+- En ocasiones, se quiere representar que un tipo simple pueda no poseer valor (**null**)
+- El mejor ejemplo es una base de datos con un campo de tipo simple anulable
+- En `C#` estos tipos se representan añadiendo el sufijo `?` al tipo simple: `int?`. `double?`, `bool?`...
+- Estos tipos derivan del struct `Nullable<T>`
+- Sus principales miembros son las propiedades:
+	- `HasValue:bool` (sólo lectura), nos indica si el valor no es nulo
+	- `Value:T` (lectura y escritura) en el caso de que no sea nulo nos devuelve su valor, sino `default(T)`
+- También se ha añadido el operador `??`
+
+- Ejemplo de código:
+
+```cs
+ public class Person {
+     public string FirstName { get; set; }
+     public string Surname { get; set; }
+
+     /// <summary>
+     /// Age of the person.
+     /// Let's suppose it is taken from a database, and that it can be nullable (in the DB).
+     /// </summary>
+     public int? Age { get; set; }
+
+     public string IDNumber { get; set; }
+
+     public override string ToString() {
+         if (this.Age.HasValue)
+             // * We show the age because it is defined
+             return string.Format("{0} {1}, {2} years old and IDNumber {3}.",
+                 this.FirstName, this.Surname, this.Age.Value, this.IDNumber);
+         else
+             // * No age is defined
+             return string.Format("{0} {1}, IDNumber {2}.", this.FirstName, this.Surname, this.IDNumber);
+     }
+ }
+
+/// <summary>
+/// Printout of person, using nullable types
+/// </summary>
+public class PersonPrintout {
+
+    // * To generate random people
+    private static string[] names = { "María", "Juan", "Pepe", "Luis", "Carlos", "Miguel", "Cristina" };
+    private static string[] surnames = { "Díaz", "Pérez", "Hevia", "García", "Rodríguez", "Pérez", "Sánchez" };
+    private static int numberPeople = 100;
+
+    /// <summary>
+    /// Person printout
+    /// </summary>
+    private Person[] printout;
+
+    public PersonPrintout() {
+        printout = new Person[numberPeople];
+        Random random = new Random();
+        for (int i = 0; i < numberPeople; i++)
+            printout[i] = new Person {
+                FirstName = names[random.Next(0, names.Length)],
+                Surname = surnames[random.Next(0, surnames.Length)],
+                // * The random age can also be null
+                Age = random.Next() % 2 == 0 ? null : (int?)random.Next(2, 30),
+                IDNumber = "" + random.Next(9000000, 90000000) + "-" + (char)random.Next('A', 'Z'),
+            };
+    }
+
+    /// <summary>
+    /// A filter of people by age
+    /// <param name="ageGreaterOrEqualThan">The minimum age required to a person to not be filtered.
+    /// null means no filter.</param>
+    /// </summary>
+    public Person[] Filter(int? ageGreaterOrEqualThan) {
+        // * Is there any filter?
+        if (!ageGreaterOrEqualThan.HasValue)
+            return printout;
+        Person[] toReturn = new Person[printout.Length];
+        int numberOfFilteredPeople = 0;
+        foreach (Person person in printout)
+            // * Value obtains the age (if any)
+            if (person.Age.HasValue && person.Age.Value >= ageGreaterOrEqualThan.Value)
+                toReturn[numberOfFilteredPeople++] = person;
+        Array.Resize(ref toReturn, numberOfFilteredPeople);
+        return toReturn;
+    }
+
+class Program {
+    static void Show(IEnumerable<Person> people) {
+        foreach (Person person in people) {
+            Console.WriteLine(person);
+        }
+        Console.WriteLine();
+    }
+
+    static void Main() {
+        PersonPrintout printout = new PersonPrintout();
+        // * Shows all the people
+        Console.WriteLine("All the people:");
+        Show(printout.Filter(null));
+        // * Only those 18 or beyond
+        Console.WriteLine("\n18 or beyond:");
+        Show(printout.Filter(18));
+        // * Shows the summation of all the ages (including people without
+        //   a value in their age)
+        Console.WriteLine("\nSumatorio de las edades: {0}.", printout.AgeSummation());
+    }
+}
+```
+
+# Colecciones
+
+- En la mayoría de las aplicaciones es necesario tener una abstracción que facilita el acceso de varios objetos (vectores, pilas, colas, diccionarios...)
+- Este tipo de abstracciones se suele denominar **contenedores**
+- `C#`ofrece:
+	- Objetos de tipo *array* (vector)
+	- Colecciones (`System.Collections`)
+	- Hay 2 tipos de colecciones:
+		- Polimórficos (versión 1): usan polimorfismo (`object`) para coleccionar elementos: `System.Collections`
+		- Genéricos (versión 2): coleccionan elementos mediante genericidad: `System.Collections.Generic`
+- Cuando sea posible, mejor usar los genéricos porque:
+	- El código es más eficiente
+	- Se producen menos errores en tiempo de ejecución
+	- El código es más legible y se evitan numerosos casts
+
+## `System.Collections.Generic`
+
+- Las clases más importantes son:
+	- `List<T>`: vector cuyo tamaño es variable dinámicamente
+	- `Dictionary<Key,Value>`: colección de pares clave/contenido organizados mediante *hashing* de la clave
+	- `HashSet<T>`: colección en la que los elementos no pueden estar repetidos (conjuntos)
+	- `LinkedList<T>`: lista doblemente enlazada
+	- `Queue<T>`: colección con política FIFO (cola)
+	- `Stack<T>`: colección con política LIFO (pila)
+	- `SortedDictionary<T>`: colección de pares clave/contenido ordenados por clave
+- [Documentación oficial](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic)
+
+
