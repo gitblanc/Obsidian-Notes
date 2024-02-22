@@ -106,4 +106,44 @@ Puedes llamar a -> v[0].compareTo(...) exclusivamente
 - Calcular el doble del doble de n: `(λf.(λx.f(fx)) (λx.x+x)n` -> `(λf.(λx.(λy.y+y) ((λy.y+y)x)n` -> `(λx.(λy.y+y) ((λz.z+z)x)n` -> `(λy.y+y) ((λz.z+z)x)n` -> `((λz.z+z)n) ((λz.z+z)x)n` -> `(n+n) + (λx.x+x)n)` -> `(n+n)+(n+n)`
 
 
+# Tipos delegados predefinidos
+
+- `Func<T>` o `Func<T1,T2>`: siempre devuelve algo (no tiene por qué tener parámetros)
+- `Action` o `Action<T>`: método que no devuelve nunca nada (puede tener o no parámetros)
+- `Predicate<T>`: método que retorna un `bool` y recibe un `T`
+
+# Expresiones Lambda
+
+![](./img/Pasted%20image%2020240222153315.png)
+
+```cs
+IDictionary > calculadoraFuncional = new Dictionary>(); calculadoraFuncional["add"] = (op1, op2) => op1 + op2; calculadoraFuncional["sub"] = (op1, op2) => op1 - op2; calculadoraFuncional["mul"] = (op1, op2) => op1 * op2; calculadoraFuncional["div"] = (op1, op2) => op1 / op2; calculadoraFuncional[“add"](3, 4); // 7 
+IList> condiciones = new List>(); 
+condiciones.Add(s => s.Length < 5); 
+condiciones.Add(s => !s.StartsWith("F")); 
+condiciones.Add(s => s.EndsWith(“i")); string str = “Hi"; 
+foreach (var cond in condiciones) { if (!cond(str)) {…} }
+```
+
+# Bucles y Recursividad
+
+![](./img/Pasted%20image%2020240222155753.png)
+
+![](./img/Pasted%20image%2020240222160334.png)
+
+## Combinador de Punto Fijo
+
+![](./img/Pasted%20image%2020240222160542.png)
+
+![](./img/Pasted%20image%2020240222160601.png)
+
+# Currificación
+
+![](./img/Pasted%20image%2020240222164215.png)
+
+![](./img/Pasted%20image%2020240222164648.png)
+
+# Aplicación parcial
+
+![](./img/Pasted%20image%2020240222164929.png)
 
