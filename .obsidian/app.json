@@ -8,5 +8,6 @@
     "downscalePercent": 100
   },
   "alwaysUpdateLinks": true,
-  "useMarkdownLinks": true
+  "useMarkdownLinks": true,
+  "newLinkFormat": "relative"
 }
