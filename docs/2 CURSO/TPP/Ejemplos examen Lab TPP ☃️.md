@@ -26,5 +26,3 @@
             return result;
         }
 ````
-
-![](img/Pasted%20image%2020240227180210.png)
