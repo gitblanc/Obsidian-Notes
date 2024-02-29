@@ -147,3 +147,33 @@ foreach (var cond in condiciones) { if (!cond(str)) {…} }
 
 ![](./img/Pasted%20image%2020240222164929.png)
 
+# Transparencia referencial
+
+- Si un lenguaje ofrece clausuras, ¿puede ofrecer transparencia referencial?
+	- Si
+
+# Memoización
+
+- Si una expresión posee trasparencia referencial, se puede optimizar mediante memoización
+	- La primera vez que se invoca, se guarda en una caché
+
+```cs
+static class FibonacciMemoizacion {
+	private static IDictionary<int, int> valores = new Dictionary<int, int>();
+	internal static int Fibonacci(int n) {
+		if (valores.Keys.Contains(n))
+			return valores[n];
+		int valor = n <= 2 ? 1 : Fibonacci(n - 2) + Fibonacci(n - 1);
+		valores.Add(n, valor);
+		return valor;
+	}
+}
+```
+
+- Tiene como ventaja ahorrar secuencias de fibonacci previamente calculadas
+
+```python
+eval("10 + 20")
+# returns 30
+```
+
