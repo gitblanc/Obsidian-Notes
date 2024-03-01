@@ -103,3 +103,68 @@ int IndexOf<T>(T[] vector, T obj) where T : IIgualado<T>
 		return i;
 }
 ````
+
+# Seminario 3. Cálculo lambda
+
+- Recordatorio de cálculo Lambda
+
+![](img/Pasted%20image%2020240301170956.png)
+
+- Lenguaje universal:
+
+![](img/Pasted%20image%2020240301171026.png)
+
+- Lógica  booleana:
+
+![](img/Pasted%20image%2020240301171053.png)
+
+- Representan dos funciones que reciben dos parámetros y devuelven una función
+	- **true** devuelve el primer parámetro
+	- **false** devuelve el segundo parámetro
+
+```cs
+true (3) (4) -> 3
+false (3) (4) -> 4
+```
+
+## Ejercicio 1
+
+![](img/Pasted%20image%2020240301171613.png)
+
+- El if else es equivalente al *operador ternario*
+- Recibirá 3 parámetros: `[  ]?[  ]:[  ]`
+
+```cs
+if-else = λcond.λparte_true.λparte_false.M
+(if-else)(x > 100)(3)(4)
+			|
+			v
+if-else = (λcond.λparte_true.λparte_false. cond parte_true parte_false)
+// Los λ son los parámetros de la función lambda y el resto es el cuerpo de la función
+```
+
+- Función **máximo**:
+
+```cs
+maximo = λnum1.λnum2. (if-else) (num1 > num2) (num1) (num2)
+maximo = λnum1.λnum2. (num1 > num2) (num1) (num2) //la lógica booleana ya implementa la función if-else, por lo que no es necesaria especificarla
+```
+
+## Ejercicio 2
+
+![](img/Pasted%20image%2020240301173855.png)
+
+```cs
+operator_and = λcond1.λcond2. (cond1) (cond2) (false)
+```
+
+![](img/Pasted%20image%2020240301174553.png)
+
+```cs
+operator_or = λcond1.λcond2. (cond1) (true) (cond2)
+```
+
+```cs
+operator_not = λcond. (cond) (false) (true)
+```
+
