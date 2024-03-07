@@ -177,3 +177,50 @@ eval("10 + 20")
 # returns 30
 ```
 
+# Pattern matching `F#`
+
+![](img/Pasted%20image%2020240307153145.png)
+
+- Función de Orden superior: Es un Map
+- Como característica usa el Pattern Matching
+- La principal diferencia es que no se usa recursividad
+- Para el +, se aplica aplicación parcial
+- Imprimiría `2 3 4 5`, pues se va sumando 1 a cada elemento
+
+```cs
+f(a,b)
+f(a)(b) //como está currificada, f(a) devuelve otra función a la que se le pasa b
+f(a) //aplicación parcial, para no tener que pasar el parámetro b, creando así una nueva función distinta a la f(a) original
+```
+
+## Pattern Matching en `C#`
+
+![](img/Pasted%20image%2020240307154548.png)
+
+# Funciones de Orden Superior
+
+- Una función currificada es una función de orden superior, pues devuelve otra función
+
+- Funciones y su equivalente en Linq:
+	- Filter -> Where
+	- Map -> Select
+	- Reduce -> Aggregate
+
+![](img/Pasted%20image%2020240307155739.png)
+
+## Ejemplos de Select
+
+![](img/Pasted%20image%2020240307160151.png)
+
+## Ejemplos de Where
+
+![](img/Pasted%20image%2020240307160237.png)
+
+## Ejemplos de Reduce
+
+![](img/Pasted%20image%2020240307160301.png)
+
+## Otras funciones
+
+![](img/Pasted%20image%2020240307160706.png)
+

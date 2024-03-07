@@ -31,7 +31,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -108,7 +109,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/2 CURSO/TPP/Seminarios TPP 🍎.md",
+                "file": "docs/2 CURSO/TPP/Notas de teoría TPP 🗿.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -147,24 +148,24 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "8c7194bf4a2d4439",
+  "active": "9979b0f90fb2f48b",
   "lastOpenFiles": [
+    "docs/2 CURSO/TPP/img/Pasted image 20240307160706.png",
+    "docs/2 CURSO/TPP/img/Pasted image 20240307160301.png",
+    "docs/2 CURSO/TPP/img/Pasted image 20240307160237.png",
+    "docs/2 CURSO/TPP/img/Pasted image 20240307160151.png",
+    "docs/2 CURSO/TPP/img/Pasted image 20240307155739.png",
+    "docs/2 CURSO/TPP/img/Pasted image 20240307154548.png",
+    "docs/2 CURSO/TPP/img/Pasted image 20240307153145.png",
+    "docs/2 CURSO/TPP/Seminarios TPP 🍎.md",
     "docs/2 CURSO/TPP/img/Pasted image 20240301174553.png",
     "docs/2 CURSO/TPP/img/Pasted image 20240301173855.png",
     "docs/2 CURSO/TPP/Notas de teoría TPP 🗿.md",
-    "docs/2 CURSO/TPP/Seminarios TPP 🍎.md",
     "docs/2 CURSO/TPP/notas antiguas/Seminarios TPP 🎀.md",
     "docs/2 CURSO/TPP/img/Pasted image 20240301171613.png",
     "docs/2 CURSO/TPP/img/Pasted image 20240301171053.png",
-    "docs/2 CURSO/TPP/img/Pasted image 20240301171026.png",
-    "docs/2 CURSO/TPP/img/Pasted image 20240301170956.png",
     "docs/2 CURSO/TPP/Ejemplos examen Lab TPP ☃️.md",
-    "docs/2 CURSO/TPP/img/Pasted image 20240222164929.png",
-    "docs/2 CURSO/TPP/img/Pasted image 20240227180210.png",
     "docs/2 CURSO/TPP/IList & IDictionary 🤠.md",
-    "docs/2 CURSO/TPP/img/Pasted image 20240222164648.png",
-    "docs/2 CURSO/TPP/img/Pasted image 20240222164215.png",
-    "docs/2 CURSO/TPP/img/Pasted image 20240222160601.png",
     "docs/2 CURSO/TPP/Notas de C sharp 🍉.md",
     "docs/4 CURSO/DPPI/Notas de teoría DPPI 🏖️.md",
     "docs/4 CURSO/ASLEPI/Notas de teoría ASLEPI 🛰️.md",
