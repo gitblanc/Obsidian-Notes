@@ -4,35 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "e384eaf7c02e0e92",
+        "id": "5fe0dc66b7209605",
         "type": "tabs",
         "children": [
           {
-            "id": "8c7194bf4a2d4439",
+            "id": "91ad91abb22d190d",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "docs/2 CURSO/TPP/Seminarios TPP 🍎.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "9979b0f90fb2f48b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "docs/2 CURSO/TPP/Ejemplos examen Lab TPP ☃️.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -109,7 +92,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/2 CURSO/TPP/Ejemplos examen Lab TPP ☃️.md",
+                "file": "docs/2 CURSO/BD/BD Primera parte 💿.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -148,11 +131,18 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "9979b0f90fb2f48b",
+  "active": "4851b110d405dd3c",
   "lastOpenFiles": [
-    "docs/2 CURSO/TPP/Seminarios TPP 🍎.md",
-    "docs/2 CURSO/TPP/Ejemplos examen Lab TPP ☃️.md",
+    "docs/4 CURSO/PE/img/Pasted image 20240314150726.png",
+    "docs/4 CURSO/PE/img",
+    "docs/4 CURSO/PE/Notas de charlas sobre empresas y trabajo ⚛️.md",
+    "docs/4 CURSO/PE",
+    "PE/Notas de charlas sobre empresas y trabajo ⚛️.md",
+    "PE/img/Pasted image 20240314150726.png",
+    "PE/img",
+    "PE",
     "docs/2 CURSO/TPP/Notas de teoría TPP 🗿.md",
+    "docs/2 CURSO/TPP/Seminarios TPP 🍎.md",
     "docs/2 CURSO/TPP/img/Pasted image 20240307160706.png",
     "docs/2 CURSO/TPP/img/Pasted image 20240307160301.png",
     "docs/2 CURSO/TPP/img/Pasted image 20240307160237.png",
@@ -161,9 +151,8 @@
     "docs/2 CURSO/TPP/img/Pasted image 20240307154548.png",
     "docs/2 CURSO/TPP/img/Pasted image 20240307153145.png",
     "docs/2 CURSO/TPP/img/Pasted image 20240301174553.png",
-    "docs/2 CURSO/TPP/img/Pasted image 20240301173855.png",
     "docs/2 CURSO/TPP/notas antiguas/Seminarios TPP 🎀.md",
-    "docs/2 CURSO/TPP/img/Pasted image 20240301171613.png",
+    "docs/2 CURSO/TPP/Ejemplos examen Lab TPP ☃️.md",
     "docs/2 CURSO/TPP/IList & IDictionary 🤠.md",
     "docs/2 CURSO/TPP/Notas de C sharp 🍉.md",
     "docs/4 CURSO/DPPI/Notas de teoría DPPI 🏖️.md",
@@ -188,12 +177,6 @@
     "docs/4 CURSO/SI/Exámenes resueltos SI Busqueda 👔.md",
     "docs/4 CURSO/SI/Pequeños apuntes particulares 🧤.md",
     "docs/General data/Mac useful commands and customizations .md",
-    "Untitled.md",
-    "docs/4 CURSO/IR/Apuntes Examen Teoría IR 🎷.md",
-    "docs/2 CURSO/TEC/Pequeños apuntes TEC - 2 examen 🦷.md",
-    "Excalidraw",
-    "img/2 CURSO/CN/img",
-    "img/2 CURSO/CN",
-    "img/2 CURSO"
+    "Untitled.md"
   ]
 }
