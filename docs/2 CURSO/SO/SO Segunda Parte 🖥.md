@@ -16,7 +16,7 @@
 - **Segmentación:** se siguen criterios lógicos (se tiene en cuenta el contenido del proceso).
 ---
 ### Memoria virtual, paginación
-![](./img/paginacion.png)
+![](img/paginacion.png)
 
 ---
 ---
@@ -149,7 +149,7 @@ NOTAS:
 # 31 Marzo 2022 🛩
 ---
 - Cómo podría planificarse un sistema de entrada salida:
-![](./img/funcionamiento%20Entrada%20salida.png)
+![](img/funcionamiento%20Entrada%20salida.png)
 - **IORB**-> Input Output Request Block, forma de funcionar el manejador independiente de dispositivo.
 - **Manejador independiente:**: verifica los parámetros, crea el IORB y avisa al manejador dependiente del dispositivo (hay uno en el sistema).
 - **Manejador dependiente del dispositivo (driver):** Hay uno por cada dispositivo o tipo de dispositivo. Es el driver del dispositivo. Da las órdenes para cumplir la petición (hay uno por cada dispositivo).

@@ -1,7 +1,7 @@
 # The Extensions Interface
 Let's start by taking a look through the Extensions interface:
 
-![](./img/Pasted%20image%2020230828134020.png)
+![](img/Pasted%20image%2020230828134020.png)
 
 The default view in the Extensions interface gives us an overview of the extensions that we have loaded into Burp Suite. There are none in the screenshot above -- we will change this in the next few tasks. The first box (towards the top of the interface) provides us with a list of extensions that we have installed and allows us to activate or deactivate them for this project.
 
@@ -33,13 +33,13 @@ _**Note:** we can do the same thing with Ruby modules and the JRuby integration;
 
 First up, we need to download an up-to-date copy of the Jython JAR archive from the [Jython website](https://www.jython.org/download). We are looking for the **_Jython Standalone_** option:
 
-![](./img/Pasted%20image%2020230828134545.png)
+![](img/Pasted%20image%2020230828134545.png)
 
 Save the JAR file somewhere on your disk, then switch to the "Options" sub-tab in Extender.
 
 Scroll down to the "Python Environment" section, and set the "Location of Jython standalone JAR file" to the path of the archive:
 
-![](./img/Pasted%20image%2020230828134604.png)
+![](img/Pasted%20image%2020230828134604.png)
 
 Simple as that, we can now install Python modules from the BApp store!  
 
@@ -55,7 +55,7 @@ Extender exposes a large number of API Endpoints that new modules can hook into 
 
 We can view these in the "APIs" sub-tab:
 
-![](./img/Pasted%20image%2020230828134850.png)
+![](img/Pasted%20image%2020230828134850.png)
 
 Each item in the list on the left of this sub-tab documents a different API endpoint -- all of which can be called from within extensions. The endpoints here give developers a lot of power when writing extensions to interact seamlessly with the existing functionality of Burp Suite. As you may expect, we can interact with these endpoints in any of the languages supported by Burp Suite for use in extensions: Java (natively), Python (via Jython), and Ruby (via JRuby).  
 

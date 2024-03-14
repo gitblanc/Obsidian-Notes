@@ -216,7 +216,7 @@ An Out-Of-Band attack is classified by having two different communication channe
 2) The Website makes an SQL query to the database which also passes the hacker's payload.
 3) The payload contains a request which forces an HTTP request back to the hacker's machine containing data from the database.
 
-![](./img/Pasted%20image%2020230825102349.png)
+![](img/Pasted%20image%2020230825102349.png)
 
 # Remediation
 As impactful as SQL Injection vulnerabilities are, developers do have a way to protect their web applications from them by following the below advice:

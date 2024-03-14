@@ -16,7 +16,7 @@ When passing data from page to page either by post data, query strings, or cooki
   
 See the image below as a graphical example of this process:
 
-![](./img/Pasted%20image%2020230824114117.png)
+![](img/Pasted%20image%2020230824114117.png)
 
 # Finding IDORs in Hashed IDs
 Hashed IDs are a little bit more complicated to deal with than encoded ones, but they may follow a predictable pattern, such as being the hashed version of the integer value. For example, the Id number 123 would become 202cb962ac59075b964b07152d234b70 if md5 hashing were in use.
@@ -44,6 +44,6 @@ We'll start by investigating how this information gets pre-filled. If you open y
 
 This page returns in JSON format your user id, username and email address. We can see from the path that the user information shown is taken from the query string's id parameter (see below image).
 
-![](./img/Pasted%20image%2020230824114733.png)
+![](img/Pasted%20image%2020230824114733.png)
 
 You can try testing this id parameter for an IDOR vulnerability by changing the id to another user's id. Try selecting users with IDs 1 and 3 and then answer the questions below.

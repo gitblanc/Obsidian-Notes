@@ -26,7 +26,7 @@ Reconnaissance (recon) can be defined as a preliminary survey to gather informat
 
 In passive reconnaissance, you rely on publicly available knowledge. It is the knowledge that you can access from publicly available resources without directly engaging with the target. Think of it like you are looking at target territory from afar without stepping foot on that territory.
 
-![](Pasted%20image%2020230828135501.png)
+![](img/Pasted%20image%2020230828135501.png)
 
 Passive reconnaissance activities include many activities, for instance:
 
@@ -36,7 +36,7 @@ Passive reconnaissance activities include many activities, for instance:
 
 Active reconnaissance, on the other hand, cannot be achieved so discreetly. It requires direct engagement with the target. Think of it like you check the locks on the doors and windows, among other potential entry points.
 
-![](./img/Pasted%20image%2020230828135544.png)
+![](img/Pasted%20image%2020230828135544.png)
 
 Examples of active reconnaissance activities include:
 
@@ -181,11 +181,11 @@ To avoid such a time-consuming search, one can use an online service that offers
 
 We will search for `tryhackme.com` on DNSDumpster to give you a glimpse of the expected output. Among the results, we got a list of DNS servers for the domain we are looking up. DNSDumpster also resolved the domain names to IP addresses and even tried to geolocate them. We can also see the MX records; DNSDumpster resolved all five mail exchange servers to their respective IP addresses and provided more information about the owner and location. Finally, we can see TXT records. Practically a single query was enough to retrieve all this information.
 
-![](./img/Pasted%20image%2020230828142609.png)
+![](img/Pasted%20image%2020230828142609.png)
 
 DNSDumpster will also represent the collected information graphically. DNSDumpster displayed the data from the table earlier as a graph. You can see the DNS and MX branching to their respective servers and also showing the IP addresses.
 
-![](./img/Pasted%20image%2020230828142634.png)
+![](img/Pasted%20image%2020230828142634.png)
 
 There is currently a beta feature that allows you to export the graph as well. You can manipulate the graph and move blocks around if needed.
 
@@ -195,7 +195,7 @@ When you are tasked to run a penetration test against specific targets, as part 
 
 Shodan.io tries to connect to every device reachable online to build a search engine of connected “things” in contrast with a search engine for web pages. Once it gets a response, it collects all the information related to the service and saves it in the database to make it searchable. Consider the saved record of one of tryhackme.com’s servers.
 
-![](./img/Pasted%20image%2020230828143413.png)
+![](img/Pasted%20image%2020230828143413.png)
 
 This record shows a web server; however, as mentioned already, Shodan.io collects information related to any device it can find connected online. Searching for `tryhackme.com` on Shodan.io will display at least the record shown in the screenshot above. Via this Shodan.io search result, we can learn several things related to our search, such as:
 

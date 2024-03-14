@@ -41,17 +41,17 @@
 
 # RNF según Sommerville
 
-![](./img/Pasted%20image%2020230912185837.png)
+![](img/Pasted%20image%2020230912185837.png)
 
-![](./img/Pasted%20image%2020230912185913.png)
+![](img/Pasted%20image%2020230912185913.png)
 
 # Métricas RNF según Somerville
 
-![](./img/Pasted%20image%2020230912185944.png)
+![](img/Pasted%20image%2020230912185944.png)
 
 # Otras clasificaciones de requisitos
 
-![](./img/Pasted%20image%2020230912190026.png)
+![](img/Pasted%20image%2020230912190026.png)
 
 # Requisitos de producto y de proyecto
 
@@ -60,7 +60,7 @@
 
 # Propiedades de los requisitos
 
-![](./img/Pasted%20image%2020230912190559.png)
+![](img/Pasted%20image%2020230912190559.png)
 
 - Obligatorios los dos primeros
 

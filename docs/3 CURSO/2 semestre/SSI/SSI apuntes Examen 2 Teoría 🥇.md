@@ -26,7 +26,7 @@
 ![](./img/Pasted%20image%2020230509134725.png|500)
 
 - Las reglas de un firewall operan con tripletas (IP, puerto, protocolo)
-![](./img/Pasted%20image%2020230509134832.png)
+![](img/Pasted%20image%2020230509134832.png)
 - Cuando los firewalls pueden restringir las conexiones entre diferentes redes o zonas se denominan **firewalls perimetrales** (son una primera línea de defensa).
 
 ## Demilitarized Zones (DMZs)
@@ -48,17 +48,17 @@
 ![](./img/Pasted%20image%2020230509140205.png|500)
 
 ## Ataques en red: Man in the middle
-![](./img/Pasted%20image%2020230509140343.png)
+![](img/Pasted%20image%2020230509140343.png)
 
 ## DNS Poisoning
-![](./img/Pasted%20image%2020230509140822.png)
+![](img/Pasted%20image%2020230509140822.png)
 
 ## DDoS
 - Lanzados habitualmente desde botnets
-![](./img/Pasted%20image%2020230509140916.png)
+![](img/Pasted%20image%2020230509140916.png)
 
 ## Botnet
-![](./img/Pasted%20image%2020230509140944.png)
+![](img/Pasted%20image%2020230509140944.png)
 
 ## Principios de diseño general de redes seguras
 ### Ataques actuales de red
@@ -88,21 +88,21 @@
 - Dos LAN internas con doble cortafuegos SPI/NGFW
 - Una política común de ubicación de los puertos de servicios
 - Todos los puertos que no se usen deben estar cerrados
-![](./img/Pasted%20image%2020230509144215.png)
+![](img/Pasted%20image%2020230509144215.png)
 
 ## HoneyPot
 - Captura intentos de ataque de usuarios o herramientas de ataque automatizadas, bloqueando sus IPs
 - Podemos derivar intentos de conexión al honeypot
 - Más recursos sobre honeypots: https://github.com/paralax/awesome-honeypots
-![](./img/Pasted%20image%2020230509144315.png)
+![](img/Pasted%20image%2020230509144315.png)
 
 ## IDS & IPS
 - Intrusion Detection System
 - Intrusion Prevention System
-![](./img/Pasted%20image%2020230509144617.png)
+![](img/Pasted%20image%2020230509144617.png)
 
 ## Security Operations Center (SOC)
-![](./img/Pasted%20image%2020230509144854.png)
+![](img/Pasted%20image%2020230509144854.png)
 
 ## Introducción al Pentesting de red
 
@@ -120,11 +120,11 @@
 	- Servicios que se ejecutan tras esos puertos
 	- Información extendida de ese servicio
 Cheat Sheet:
-![](./img/Pasted%20image%2020230509145554.png)
+![](img/Pasted%20image%2020230509145554.png)
 Puertos comunes:
-![](./img/Pasted%20image%2020230509145732.png)
+![](img/Pasted%20image%2020230509145732.png)
 Interpretando los resultados de Nmap:
-![](./img/Pasted%20image%2020230509145903.png)
+![](img/Pasted%20image%2020230509145903.png)
 Si el objetivo tiene servicios HTTPS en ejecución, hay una serie de **tools** que podemos usar para enumerarlos:
 - Proxy Burp
 - dirb
@@ -139,7 +139,7 @@ Si el objetivo tiene servicios HTTPS en ejecución, hay una serie de **tools** q
 - A veces se usa para evitar que los motores de búsqueda indexen contenido privado
 
 ## Listado de directorios
-![](./img/Pasted%20image%2020230509150646.png)
+![](img/Pasted%20image%2020230509150646.png)
 
 # Tema 6 Introducción a la seguridad de aplicaciones
 
@@ -161,7 +161,7 @@ Si el objetivo tiene servicios HTTPS en ejecución, hay una serie de **tools** q
 
 ## Filosofía pushing left
 - Cuanto más tarde se descubra un problea de seguridad, más caro será solucionarlo
-![](./img/Pasted%20image%2020230509162944.png)
+![](img/Pasted%20image%2020230509162944.png)
 
 ## Requisitos de cifrado
 - Las claves y la información sensible nunca se guardan en texto plano
@@ -204,7 +204,7 @@ Si el objetivo tiene servicios HTTPS en ejecución, hay una serie de **tools** q
 ![](./img/Pasted%20image%2020230509170415.png|500)
 
 ## Web languages vulnerabilities
-![](./img/Pasted%20image%2020230509171210.png)
+![](img/Pasted%20image%2020230509171210.png)
 
 ## Ataques típicos
 
@@ -212,12 +212,12 @@ Si el objetivo tiene servicios HTTPS en ejecución, hay una serie de **tools** q
 - Ocurre cuando un atacante inyecta código ejecutable en alguna parte de la petición HTTP
 - No es persistente
 - https://portswigger.net/web-security/cross-site-scripting/cheat-sheet
-![](./img/Pasted%20image%2020230509171555.png)
+![](img/Pasted%20image%2020230509171555.png)
 
 ## Stored XSS
 - Es persistente
 - No tiene por qué conllevar una acción por parte de otros usuarios para afectarles
-![](./img/Pasted%20image%2020230509171856.png)
+![](img/Pasted%20image%2020230509171856.png)
 
 ## SQL Injection
 ![](./img/Pasted%20image%2020230509171959.png|500)
@@ -231,4 +231,4 @@ Si el objetivo tiene servicios HTTPS en ejecución, hay una serie de **tools** q
 ## Valid Accounts - CEWL
 - Usar el tool **CEWL** para explorar una web y crear un diccionario de palabras de su contenido
 - Útil para nombres de usuario o contraseñas
-![](./img/Pasted%20image%2020230509172927.png)
+![](img/Pasted%20image%2020230509172927.png)

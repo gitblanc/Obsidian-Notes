@@ -203,24 +203,24 @@ Las técnicas que estudiaremos son las siguientes:
 
 # ¿Cuándo es mejor emplear las técnicas?
 
-![](./img/Pasted%20image%2020230926184106.png)
+![](img/Pasted%20image%2020230926184106.png)
 
 # Recomendaciones: preguntas
 
-![](./img/Pasted%20image%2020230926184834.png)
+![](img/Pasted%20image%2020230926184834.png)
 
-![](./img/Pasted%20image%2020230926184851.png)
+![](img/Pasted%20image%2020230926184851.png)
 
 # Recomendaciones: uso de modelos
 
-![](./img/Pasted%20image%2020230926184926.png)
+![](img/Pasted%20image%2020230926184926.png)
 
 # Recomendaciones: obtención
 
-![](./img/Pasted%20image%2020230926185003.png)
+![](img/Pasted%20image%2020230926185003.png)
 
 # Final de la obtención
 
-![](./img/Pasted%20image%2020230926185026.png)
+![](img/Pasted%20image%2020230926185026.png)
 
 ---

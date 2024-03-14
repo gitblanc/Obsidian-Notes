@@ -141,7 +141,7 @@ OK
 
 # Piet Esoteric Language
 - This language is presented in images like this:
-![](./img/PI3T.png)
+![](img/PI3T.png)
 - To decode this image content just follow these steps:
 	- Download Gimp: `sudo apt install gimp`
 	- Open the image wit Gimp and Export it as .ppm file: `Export as > .ppm`

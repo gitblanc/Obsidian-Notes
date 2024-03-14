@@ -11,8 +11,12 @@
             "id": "91ad91abb22d190d",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "docs/2 CURSO/TPP/Notas de teoría TPP 🗿.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -92,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/2 CURSO/BD/BD Primera parte 💿.md",
+                "file": "docs/2 CURSO/TPP/Notas de teoría TPP 🗿.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -133,6 +137,8 @@
   },
   "active": "4851b110d405dd3c",
   "lastOpenFiles": [
+    "docs/2 CURSO/TPP/Ejemplos examen Lab TPP ☃️.md",
+    "docs/2 CURSO/BD/BD Primera parte 💿.md",
     "docs/4 CURSO/PE/img/Pasted image 20240314150726.png",
     "docs/4 CURSO/PE/img",
     "docs/4 CURSO/PE/Notas de charlas sobre empresas y trabajo ⚛️.md",
@@ -152,7 +158,6 @@
     "docs/2 CURSO/TPP/img/Pasted image 20240307153145.png",
     "docs/2 CURSO/TPP/img/Pasted image 20240301174553.png",
     "docs/2 CURSO/TPP/notas antiguas/Seminarios TPP 🎀.md",
-    "docs/2 CURSO/TPP/Ejemplos examen Lab TPP ☃️.md",
     "docs/2 CURSO/TPP/IList & IDictionary 🤠.md",
     "docs/2 CURSO/TPP/Notas de C sharp 🍉.md",
     "docs/4 CURSO/DPPI/Notas de teoría DPPI 🏖️.md",

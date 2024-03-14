@@ -24,11 +24,11 @@ El objetivo consiste en estudiar y detallar los requisitos de alto nivel produci
 
 # Modelado visual
 
-![](./img/Pasted%20image%2020231003182947.png)
+![](img/Pasted%20image%2020231003182947.png)
 
-![](./img/Pasted%20image%2020231003183009.png)
+![](img/Pasted%20image%2020231003183009.png)
 
-![](./img/Pasted%20image%2020231003183110.png)
+![](img/Pasted%20image%2020231003183110.png)
 
 # Casos de uso
 
@@ -64,13 +64,13 @@ El objetivo consiste en estudiar y detallar los requisitos de alto nivel produci
 		- Actor -> caso de uso: actor primario del caso, lo inicia y obtiene valor.  
 		- Caso de uso -> actor: actor secundario, interviene de algún modo.
 
-![](./img/Pasted%20image%2020231003183753.png)
+![](img/Pasted%20image%2020231003183753.png)
 
 - Los diagramas de casos de uso pueden incluir las siguientes relaciones:
 	- **Extensión**: un caso de uso añade pasos a otro caso de uso de primer nivel.
 	- **Inclusión**: un caso de uso requiere a otro caso de uso que no puede existir por sí mismo y está duplicado en varios casos de uso.
 
-![](./img/Pasted%20image%2020231003183924.png)
+![](img/Pasted%20image%2020231003183924.png)
 
 ## Casos de uso de forma textual
 
@@ -111,7 +111,7 @@ El objetivo consiste en estudiar y detallar los requisitos de alto nivel produci
 
 - Para representar los flujos usamos diagramas de actividad:
 
-![](./img/Pasted%20image%2020231003185448.png)
+![](img/Pasted%20image%2020231003185448.png)
 
 ## Casos de uso: escenarios
 
@@ -124,19 +124,19 @@ El objetivo consiste en estudiar y detallar los requisitos de alto nivel produci
 	- Extrapolar escenarios específicos a partir de un caso de uso general.  
 	- Generalizar un escenario concreto para obtener un caso de uso general.
 
-![](./img/Pasted%20image%2020231003185640.png)
+![](img/Pasted%20image%2020231003185640.png)
 
 ## Casos de uso: ejemplo
 
-![](./img/Pasted%20image%2020231003190811.png)
+![](img/Pasted%20image%2020231003190811.png)
 
-![](./img/Pasted%20image%2020231003191021.png)
+![](img/Pasted%20image%2020231003191021.png)
 
-![](./img/Pasted%20image%2020231003191441.png)
+![](img/Pasted%20image%2020231003191441.png)
 
-![](./img/Pasted%20image%2020231003191515.png)
+![](img/Pasted%20image%2020231003191515.png)
 
-![](./img/Pasted%20image%2020231003191531.png)
+![](img/Pasted%20image%2020231003191531.png)
 
 ## Casos de uso: nivel de detalle
 
@@ -151,7 +151,7 @@ El objetivo consiste en estudiar y detallar los requisitos de alto nivel produci
 
 ## Casos de uso: identificación
 
-![](./img/Pasted%20image%2020231003192015.png)
+![](img/Pasted%20image%2020231003192015.png)
 
 ## Casos de uso: elaboración
 
@@ -172,7 +172,7 @@ Pasos propuestos para la elaboración de casos de uso:
 
 ## Casos de uso: problemas
 
-![](./img/Pasted%20image%2020231003192812.png)
+![](img/Pasted%20image%2020231003192812.png)
 
 # Diagramas de flujo de datos
 
@@ -185,7 +185,7 @@ Pasos propuestos para la elaboración de casos de uso:
 - Útiles para extraer requisitos de datos. 
 - A menudo usados en entrevistas.
 
-![](./img/Pasted%20image%2020231003193029.png)
+![](img/Pasted%20image%2020231003193029.png)
 
 - Algunas convenciones a tener en cuenta:  
 	- Los datos no pueden comunicarse directamente entre entidades del mismo tipo. 
@@ -201,7 +201,7 @@ Pasos propuestos para la elaboración de casos de uso:
 
 - Similares a los diagramas de actividad, pero subdivididos en secciones que representan a los actores que realizan una serie de pasos.
 
-![](./img/Pasted%20image%2020231003193834.png)
+![](img/Pasted%20image%2020231003193834.png)
 
 # Diagramas de estado
 
@@ -210,21 +210,21 @@ Pasos propuestos para la elaboración de casos de uso:
 - Los cambios de estado se representan mediante flechas entre estados; los eventos que ocasionan dichos cambios se indican mediante etiquetas.
 - Se suele representar alternativamente mediante una tabla de estados.
 
-![](./img/Pasted%20image%2020231003193929.png)
+![](img/Pasted%20image%2020231003193929.png)
 
 # Mapas de diálogo
 
-![](./img/Pasted%20image%2020231003194028.png)
+![](img/Pasted%20image%2020231003194028.png)
 
 # Árboles de decisión
 
-![](./img/Pasted%20image%2020231010181054.png)
+![](img/Pasted%20image%2020231010181054.png)
 
-![](./img/Pasted%20image%2020231010181113.png)
+![](img/Pasted%20image%2020231010181113.png)
 
 # Diagramas E-R
 
-![](./img/Pasted%20image%2020231010181150.png)
+![](img/Pasted%20image%2020231010181150.png)
 
 - **Entidades**. Representan elementos materiales o conjuntos de datos relevantes para el negocio/sistema.
 	- Tomando como referencia el DFD, tanto los actores como los almacenes de datos se convierten en entidades en el E-R.
@@ -235,34 +235,34 @@ Pasos propuestos para la elaboración de casos de uso:
 	- Recomendable etiquetarlos con un infinitivo.  
 	- Es posible expresar la cardinalidad (1-1, 1-M, M-M).
 
-![](./img/Pasted%20image%2020231010181308.png)
+![](img/Pasted%20image%2020231010181308.png)
 
 # Diagramas de clase
 
 - En comparación con los E-R, aquí especificamos los atributos
 
-![](./img/Pasted%20image%2020231010181612.png)
+![](img/Pasted%20image%2020231010181612.png)
 
-![](./img/Pasted%20image%2020231010181642.png)
+![](img/Pasted%20image%2020231010181642.png)
 
 # Matrices CRUD
 
-![](./img/Pasted%20image%2020231010181746.png)
+![](img/Pasted%20image%2020231010181746.png)
 
-![](./img/Pasted%20image%2020231010181804.png)
+![](img/Pasted%20image%2020231010181804.png)
 
 # Atributos de calidad
 ## Análisis de atributos de calidad
 
-![](./img/Pasted%20image%2020231010182048.png)
+![](img/Pasted%20image%2020231010182048.png)
 
 - Rendimiento, seguridad y usabilidad son comunes a todos
 
-![](./img/Pasted%20image%2020231010182545.png)
+![](img/Pasted%20image%2020231010182545.png)
 
 ## Lista de atributos de calidad
 
-![](./img/Pasted%20image%2020231010182615.png)
+![](img/Pasted%20image%2020231010182615.png)
 
 ## Disponibilidad
 
@@ -273,91 +273,91 @@ Pasos propuestos para la elaboración de casos de uso:
 - Relevante en aplicaciones web y, en general, sistemas de uso global. 
 - Estrechamente relacionada con la fiabilidad y la mantenibilidad.
 
-![](./img/Pasted%20image%2020231010182742.png)
+![](img/Pasted%20image%2020231010182742.png)
 
-![](./img/Pasted%20image%2020231010182843.png)
+![](img/Pasted%20image%2020231010182843.png)
 
 - Nunca un 100% de disponibilidad
 
 ## Fiabilidad
 
-![](./img/Pasted%20image%2020231010183019.png)
+![](img/Pasted%20image%2020231010183019.png)
 
-![](./img/Pasted%20image%2020231010183048.png)
+![](img/Pasted%20image%2020231010183048.png)
 
 ## Instalabilidad
 
-![](./img/Pasted%20image%2020231010183722.png)
+![](img/Pasted%20image%2020231010183722.png)
 
 ## Integridad
 
-![](./img/Pasted%20image%2020231010183748.png)
+![](img/Pasted%20image%2020231010183748.png)
 
 - [Redondeo de misiles patriot](http://www.cs.unc.edu/~smp/COMP205/LECTURES/ERROR/lec23/node4.html)
 
-![](./img/Pasted%20image%2020231010184604.png)
+![](img/Pasted%20image%2020231010184604.png)
 
 ## Interoperabilidad
 
-![](./img/Pasted%20image%2020231010184628.png)
+![](img/Pasted%20image%2020231010184628.png)
 
 ## Rendimiento
 
-![](./img/Pasted%20image%2020231010184934.png)
+![](img/Pasted%20image%2020231010184934.png)
 
 ## Robustez
 
-![](./img/Pasted%20image%2020231010184958.png)
+![](img/Pasted%20image%2020231010184958.png)
 
 ## Seguridad (safety)
 
 ### Safety
 
-![](./img/Pasted%20image%2020231010185103.png)
+![](img/Pasted%20image%2020231010185103.png)
 
 ### Seguridad
 
-![](./img/Pasted%20image%2020231010185315.png)
+![](img/Pasted%20image%2020231010185315.png)
 
-![](./img/Pasted%20image%2020231010185400.png)
+![](img/Pasted%20image%2020231010185400.png)
 
 ## Usabilidad
 
-![](./img/Pasted%20image%2020231010190706.png)
+![](img/Pasted%20image%2020231010190706.png)
 
 ## Eficiencia
 
-![](./img/Pasted%20image%2020231010190741.png)
+![](img/Pasted%20image%2020231010190741.png)
 
 ## Escalabilidad
 
-![](./img/Pasted%20image%2020231010191336.png)
+![](img/Pasted%20image%2020231010191336.png)
 
 ## Modificabilidad
 
-![](./img/Pasted%20image%2020231010191357.png)
+![](img/Pasted%20image%2020231010191357.png)
 
 - Un programador de mantenimiento con al menos un año de experiencia podrá modificar los algoritmos de cálculo de impuestos para adaptarlos a cambios en la normativa tributaria en un máximo de 10 horas de trabajo.
 
 ## Portabilidad
 
-![](./img/Pasted%20image%2020231010191445.png)
+![](img/Pasted%20image%2020231010191445.png)
 
 ## Reusabilidad
 
-![](./img/Pasted%20image%2020231010191534.png)
+![](img/Pasted%20image%2020231010191534.png)
 
 ## Verificabilidad
 
-![](./img/Pasted%20image%2020231010191603.png)
+![](img/Pasted%20image%2020231010191603.png)
 
 ## Priorización de atributos de calidad
 
-![](./img/Pasted%20image%2020231010191721.png)
+![](img/Pasted%20image%2020231010191721.png)
 
 ## Concreción de atributos de calidad
 
-![](./img/Pasted%20image%2020231010192744.png)
+![](img/Pasted%20image%2020231010192744.png)
 
-![](./img/Pasted%20image%2020231010192855.png)
+![](img/Pasted%20image%2020231010192855.png)
 

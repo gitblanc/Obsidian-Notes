@@ -24,7 +24,7 @@
 		- DELETE -> eliminar
 		- UPDATE -> actualizar
 - **Lenguaje de definición de datos (LDD):** qué esquema conceptual se va a definir en la base de datos.
-![](./img/CREATE.png)
+![](img/CREATE.png)
 - **Niveles de abstracción:**
 	- **Físico:** cómo se guardan los datos
 	- **Conceptual:** qué es lo que se guarda

@@ -43,9 +43,9 @@ namespace TPP.ObjectOrientation.Basic {
 
 # `C#` vs Java
 
-![](./img/Pasted%20image%2020240129124408.png)
+![](img/Pasted%20image%2020240129124408.png)
 
-![](./img/Pasted%20image%2020240129124438.png)
+![](img/Pasted%20image%2020240129124438.png)
 
 - Los namespace se definen entre {}
 ```cs
@@ -59,7 +59,7 @@ namespace TPP.OrientacionObjetos.Basico {
 
 # Modularidad en `C#`
 
-![](./img/Pasted%20image%2020240129124736.png)
+![](img/Pasted%20image%2020240129124736.png)
 
 # Ocultación de la Información
 
@@ -90,7 +90,7 @@ namespace TPP.OrientacionObjetos.Basico {
 - Se ofrecen conversiones implícitas cuando no hay pérdida de información
 - La conversión explícita se lleva a cabo mediante casts
 
-![](./img/Pasted%20image%2020240129130257.png)
+![](img/Pasted%20image%2020240129130257.png)
 
 # Constantes y Consola
 
@@ -165,15 +165,15 @@ class Enumerados {
 
 # If, While y DoWhile
 
-![](./img/Pasted%20image%2020240129132037.png)
+![](img/Pasted%20image%2020240129132037.png)
 
 # For
 
-![](./img/Pasted%20image%2020240129132101.png)
+![](img/Pasted%20image%2020240129132101.png)
 
 # Switch
 
-![](./img/Pasted%20image%2020240129132132.png)
+![](img/Pasted%20image%2020240129132132.png)
 
 # Clases 
 
@@ -590,11 +590,11 @@ static class ExtensoraString {
 - El **estado** de una instancia derivada está definido por la unión (herencia) de las estructuras de las clases base y derivada
 - El conjunto de mensajes (**interfaz**) que puede aceptar un objeto derivado es la unión (herencia) de los mensajes de su clase base y derivada
 
-![](./img/Pasted%20image%2020240129172701.png)
+![](img/Pasted%20image%2020240129172701.png)
 
 ## Sintaxis
 
-![](./img/Pasted%20image%2020240129172815.png)
+![](img/Pasted%20image%2020240129172815.png)
 
 ## Invocación a Constructores Base
 
@@ -613,9 +613,9 @@ public Circunferencia(int x, int y, int radio):base(x,y) {
 - Por ello, la conversión ascendente en la jerarquía es automática
 	- **Las referencias derivadas promocionan a referencias base** (subtipado)
 
-![](./img/Pasted%20image%2020240129173148.png)
+![](img/Pasted%20image%2020240129173148.png)
 
-![](./img/Pasted%20image%2020240129173215.png)
+![](img/Pasted%20image%2020240129173215.png)
 
 - Para conocer el tipado dinámico se ofrecen los operadores `is` y `as`
 
@@ -629,7 +629,7 @@ public Circunferencia(int x, int y, int radio):base(x,y) {
 		- Poner la palabra reservada `virtual` al método que reciba el mensaje (referencia)
 		- Redefinir su funcionalidad usando la palabra reservada `override` en los métodos derivados
 
-![](./img/Pasted%20image%2020240129173942.png)
+![](img/Pasted%20image%2020240129173942.png)
 
 # Comparación de objetos
 
@@ -797,7 +797,7 @@ static void Main() {
 
 # Implementación explícita de interfaces
 
-![](./img/Pasted%20image%2020240214230353.png)
+![](img/Pasted%20image%2020240214230353.png)
 
 # Composición vs Herencia
 
@@ -894,11 +894,11 @@ throw; }}
 
 # Gestión de recursos en `C#`
 
-![](./img/Pasted%20image%2020240214232345.png)
+![](img/Pasted%20image%2020240214232345.png)
 
-![](./img/Pasted%20image%2020240214232405.png)
+![](img/Pasted%20image%2020240214232405.png)
 
-![](./img/Pasted%20image%2020240214232422.png)
+![](img/Pasted%20image%2020240214232422.png)
 
 - Los destructores en `C#` son invocados cuando se liberan los objetos por el recolector de basura
 - Es posible que los destructores de `C#` sean válidos para liberar determinados recursos
@@ -913,7 +913,7 @@ throw; }}
 	- Se pueden desactivar para la entrega (Release)
 - La técnica más usada para implementar asertos está basada en **compilación condicional**
 
-![](./img/Pasted%20image%2020240214232850.png)
+![](img/Pasted%20image%2020240214232850.png)
 
 # Precondiciones en `C#`
 
@@ -1051,7 +1051,7 @@ class Run {
 - La **genericidad acotada** (*bounded*) permite hacer más específico estos tipos
 	- Ejemplo: *se puede hacer un método de ordenación donde se puedan ordenar objetos `IComparable<T>`*
 
-![](./img/Pasted%20image%2020240221101732.png)
+![](img/Pasted%20image%2020240221101732.png)
 
 - *NOTA*: La **genericidad acotada** se indica con el `where T: IComparable<T>`
 
@@ -1113,7 +1113,7 @@ IEnumerable enumerablei = arrayEnteros;
 	- El `IEnumerator` es un *bridge* (patrón de diseño) para ser independiente de la implementación del iterador
 	- El iterador suele implementarse como una clase anidada de la colección
 
-![](./img/Pasted%20image%2020240221102502.png)
+![](img/Pasted%20image%2020240221102502.png)
 
 - Ejemplo de código:
 

@@ -1,26 +1,26 @@
 # Ejemplo: El TSP
 
-![](./img/Pasted%20image%2020230925181246.png)
+![](img/Pasted%20image%2020230925181246.png)
 
 - Se usa como algoritmo genético porque es fácil generar soluciones
 
 ## Método de resolución del TSP
 
-![](./img/Pasted%20image%2020230925181426.png)
+![](img/Pasted%20image%2020230925181426.png)
 
 ## Codificación con permutaciones para el TSP
 
-![](./img/Pasted%20image%2020230925181640.png)
+![](img/Pasted%20image%2020230925181640.png)
 
 - ***La idea de los algoritmos genéticos es***: Hay que trabajar sobre esos códigos, generar unos pocos y después de alguna forma combinarlos
 
 ## *Ejemplo de combinación no productiva*
 
-![](./img/Pasted%20image%2020230925181803.png)
+![](img/Pasted%20image%2020230925181803.png)
 
 ## *Ejemplo de combinación productiva*
 
-![](./img/Pasted%20image%2020230925182005.png)
+![](img/Pasted%20image%2020230925182005.png)
 
 # Propiedades de la codificación y de los operadores
 
@@ -35,11 +35,11 @@
 
 # Otro ejemplo: ¿Se podría pintar una réplica de Mona Lisa usando sólo polígonos semitransparentes?
 
-![](./img/Pasted%20image%2020230925182601.png)
+![](img/Pasted%20image%2020230925182601.png)
 
 ## Mona Lisa Evolutiva
 
-![](./img/Pasted%20image%2020230925182954.png)
+![](img/Pasted%20image%2020230925182954.png)
 
 # ¿Qué es un algoritmo genético?
 
@@ -50,7 +50,7 @@
 # La metáfora evolutiva
 ## El lenguaje que se usa en los algoritmos genéticos
 
-![](./img/Pasted%20image%2020230925183334.png)
+![](img/Pasted%20image%2020230925183334.png)
 
 ## Componentes principales de un algoritmo genético
 
@@ -99,7 +99,7 @@ end
 - Se ejerce **presión selectiva** (cuanto más fitness, más fuerte será la presión)
 - Un exceso de presión selectiva es malo
 
-![](./img/Pasted%20image%2020230925184218.png)
+![](img/Pasted%20image%2020230925184218.png)
 
 # El esquema de codificación
 
@@ -133,14 +133,14 @@ end
 
 # Algoritmo de decodificación
 
-![](./img/Pasted%20image%2020230925185631.png)
+![](img/Pasted%20image%2020230925185631.png)
 
 - Nos dice cómo el fenotipo se desarrolla en el problema
 - Es útil un algoritmo voraz
 
 ## Algoritmo de decodificación. Ejemplo con permutaciones
 
-![](./img/Pasted%20image%2020230925185744.png)
+![](img/Pasted%20image%2020230925185744.png)
 
 # El algoritmo Genético Simple (SGA)
 
@@ -156,41 +156,41 @@ end
 
 ## Codificación binaria
 
-![](./img/Pasted%20image%2020230925185954.png)
+![](img/Pasted%20image%2020230925185954.png)
 
 - Cualquier valor de la variable x es una **solución candidata**
 - La propia función de x es el fitness
 
 ## Cruce en un punto
 
-![](./img/Pasted%20image%2020230925190158.png)
+![](img/Pasted%20image%2020230925190158.png)
 
 ## Mutación simple
 
-![](./img/Pasted%20image%2020230925190223.png)
+![](img/Pasted%20image%2020230925190223.png)
 
 ## Selección proporcional al fitness (regla de la ruleta)
 
-![](./img/Pasted%20image%2020230925191217.png)
+![](img/Pasted%20image%2020230925191217.png)
 
 - Lo malo es que hay individuos con fitness mucho mayor al resto y siempre se escogen eso. Por ello, las siguientes generaciones son muy parecidas
 - Por ello es necesario que haya variedad de fitness
 
 ## Un ejemplo de selección, cruce y mutación
 
-![](./img/Pasted%20image%2020230925191245.png)
+![](img/Pasted%20image%2020230925191245.png)
 
 # Ejemplo de aplicación. Optimización numérica
 
-![](./img/Pasted%20image%2020230925192524.png)
+![](img/Pasted%20image%2020230925192524.png)
 
 # Visualizando el funcionamiento de una AG
 
-![](./img/Pasted%20image%2020230925192609.png)
+![](img/Pasted%20image%2020230925192609.png)
 
 # ¿Por qué un algoritmo como SGA que maneja símbolos de manera ciega puede hacer algo útil?
 
-![](./img/Pasted%20image%2020230925192919.png)
+![](img/Pasted%20image%2020230925192919.png)
 
 - Un esquema es bueno si la media de los cromosomas que pertenecen a ese esquema es alta
 
@@ -215,28 +215,28 @@ end
 
 # Convergencia de un AG
 
-![](./img/Pasted%20image%2020230925194214.png)
+![](img/Pasted%20image%2020230925194214.png)
 
 # Una de las claves: Equilibrio entre explotación y exploración
 
-![](./img/Pasted%20image%2020230925194326.png)
+![](img/Pasted%20image%2020230925194326.png)
 
 # AG para el TSP
 ## Esquema de codificación
 
-![](./img/Pasted%20image%2020230925194639.png)
+![](img/Pasted%20image%2020230925194639.png)
 
 ## Operador de cruce
 
-![](./img/Pasted%20image%2020230925194713.png)
+![](img/Pasted%20image%2020230925194713.png)
 
 ## Un ejemplo
 
-![](./img/Pasted%20image%2020230925194739.png)
+![](img/Pasted%20image%2020230925194739.png)
 
 - OX: operador basado en el orden
 
 ## Mutación, Inicialización y Evaluación
 
-![](./img/Pasted%20image%2020230925194825.png)
+![](img/Pasted%20image%2020230925194825.png)
 

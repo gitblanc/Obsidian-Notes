@@ -42,7 +42,7 @@ At the top of the page, you'll notice some code starting with `<!--` and ending 
 Links to different pages in HTML are written in anchor tags ( these are HTML elements that start with `<a` ), and the link that you'll be directed to is stored in the `href` attribute.
 
 For example, you'll see the contact page link on line 31:
-![](./img/Pasted%20image%2020230824081125.png)
+![](img/Pasted%20image%2020230824081125.png)
 If you view further down the page source, there is a hidden link to a page starting with "secr", view this link to get another flag. You obviously wouldn't get a flag in a real-world situation, but you may discover some private area used by the business for storing company/staff/customer information.  
   
 External files such as CSS, JavaScript and Images can be included using the HTML code. In this example, you'll notice that these files are all stored in the same directory. If you view this directory in your web browser, there is a configuration error. What should be displayed is either a blank page or a 403 Forbidden page with an error stating you don't have access to the directory. Instead, the directory listing feature has been enabled, which in fact, lists every file in the directory. Sometimes this isn't an issue, and all the files in the directory are safe to be viewed by the public, but in some instances, backup files, source code or other confidential information could be stored here. In this instance, we get a flag in the flag.txt file.  
@@ -66,11 +66,11 @@ On the Acme IT Support website, click into the news section, where you'll see th
 
 The first two articles are readable, but the third has been blocked with a floating notice above the content stating you have to be a premium customer to view the article. These floating boxes blocking the page contents are often referred to as paywalls as they put up a metaphorical wall in front of the content you wish to see until you pay.
 
-![](./img/Pasted%20image%2020230824082639.png)
+![](img/Pasted%20image%2020230824082639.png)
 
 Right-clicking on the premium notice ( paywall ), you should be able to select the Inspect option from the menu, which opens the developer tools either on the bottom or right-hand side depending on your browser or preferences. You'll now see the elements/HTML that make up the website ( similar to the screenshots below ).
 
-![](./img/Pasted%20image%2020230824082711.png)
+![](img/Pasted%20image%2020230824082711.png)
 
 Locate the `DIV` element with the class `premium-customer-blocker` and click on it. You'll see all the CSS styles in the styles box that apply to this element, such as `margin-top: 60px` and `text-align: center`. The style we're interested in is the `display: block`. If you click on the word `block`, you can type a value of your own choice. Try typing `none`, and this will make the box disappear, revealing the content underneath it and a flag. If the element didn't have a display field, you could click below the last style and add in your own. Have a play with the element inspector, and you'll see you can change any of the information on the website, including the content. Remember this is only edited on your browser window, and when you press refresh, everything will be back to normal.
 
@@ -85,7 +85,7 @@ Many times when viewing javascript files, you'll notice that everything is on on
 
 We can return some of the formattings by using the "Pretty Print" option, which looks like two braces { } to make it a little more readable, although due to the obfustication, it's still difficult to comprehend what is going on with the file. If you scroll to the bottom of the flash.min.js file, you'll see the line: `flash['remove']();`
 
-![](./img/Pasted%20image%2020230824083530.png)
+![](img/Pasted%20image%2020230824083530.png)
 
 This little bit of JavaScript is what is removing the red popup from the page. We can utilise another feature of debugger called **breakpoints**. These are points in the code that we can force the browser to stop processing the JavaScript and pause the current execution.
 
@@ -99,6 +99,6 @@ Try doing this on the contact page; you can press the trash can icon to delete t
 
 With the network tab open, try filling in the contact form and pressing the **Send Message** button. You'll notice an event in the network tab, and this is the form being submitted in the background using a method called AJAX. AJAX is a method for sending and receiving network data in a web application background without interfering by changing the current web page.
 
-![](./img/Pasted%20image%2020230824083952.png)
+![](img/Pasted%20image%2020230824083952.png)
 
 Examine the new entry on the network tab that the contact form created and view the page the data was sent to in order to reveal a flag.

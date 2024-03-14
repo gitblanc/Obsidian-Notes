@@ -90,12 +90,12 @@ Patrón strategy
 # 18 Noviembre 2022 🦊
 
 ## Ejercicio 1
-![](./img/ej%201%2018%20nov.png)
+![](img/ej%201%2018%20nov.png)
 ==Es un patrón composite==: Tratamos a los elementos compuestos y simples por igual
 
 ## Ejercicio 2
 
-![](./img/Ej%202%2018%20nov.png)
+![](img/Ej%202%2018%20nov.png)
 ==Es un factory method==
 
 ## Ejercicio 3

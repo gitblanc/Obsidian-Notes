@@ -291,7 +291,7 @@ netstat -nlptn
 ¿Cómo instalar tool **Volatility**?
 https://behacker.pro/que-es-volatility-y-como-instalarloinstalacion-no-standalone-en-windows-10/
 
-![](./img/volatility_commands.png)
+![](img/volatility_commands.png)
 
 ---
 ## How to verify integrity of an iso image

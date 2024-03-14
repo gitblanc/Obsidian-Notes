@@ -20,14 +20,14 @@ While browsing a web page, you can press `Ctrl+Shift+I` on a PC or `Option + 
 
 Below is a screenshot of Firefox Developer Tools. Chrome DevTools is quite similar.
 
-![](./img/Pasted%20image%2020230829085754.png)
+![](img/Pasted%20image%2020230829085754.png)
 
 There are also plenty of add-ons for Firefox and Chrome that can help in penetration testing. Here are a few examples:
 - **FoxyProxy** lets you quickly change the proxy server you are using to access the target website. This browser extension is convenient when you are using a tool such as Burp Suite or if you need to switch proxy servers regularly. You can get FoxyProxy for Firefox from [here](https://addons.mozilla.org/en-US/firefox/addon/foxyproxy-standard).
 - **User-Agent Switcher and Manager** gives you the ability to pretend to be accessing the webpage from a different operating system or different web browser. In other words, you can pretend to be browsing a site using an iPhone when in fact, you are accessing it from Mozilla Firefox. You can download User-Agent Switcher and Manager for Firefox [here](https://addons.mozilla.org/en-US/firefox/addon/user-agent-string-switcher).
 - **Wappalyzer** provides insights about the technologies used on the visited websites. Such extension is handy, primarily when you collect all this information while browsing the website like any other user. A screenshot of Wappalyzer is shown below. You can find Wappalyzer for Firefox [here](https://addons.mozilla.org/en-US/firefox/addon/wappalyzer).
 
-![](./img/Pasted%20image%2020230829085826.png)
+![](img/Pasted%20image%2020230829085826.png)
 
 Over time, you might find a few extensions that fit perfectly in your workflow.
 
@@ -96,11 +96,11 @@ On Linux and macOS, the command to use is `traceroute 10.10.207.56`, and on M
 
 There is no direct way to discover the path from your system to a target system. We rely on ICMP to “trick” the routers into revealing their IP addresses. We can accomplish this by using a small Time To Live (TTL) in the IP header field. Although the T in TTL stands for time, TTL indicates the maximum number of routers/hops that a packet can pass through before being dropped; TTL is not a maximum number of time units. When a router receives a packet, it decrements the TTL by one before passing it to the next router. The following figure shows that each time the IP packet passes through a router, its TTL value is decremented by 1. Initially, it leaves the system with a TTL value of 64; it reaches the target system with a TTL value of 60 after passing through 4 routers.
 
-![](./img/Pasted%20image%2020230829094120.png)
+![](img/Pasted%20image%2020230829094120.png)
 
 However, if the TTL reaches 0, it will be dropped, and an ICMP Time-to-Live exceeded would be sent to the original sender. In the following figure, the system set TTL to 1 before sending it to the router. The first router on the path decrements the TTL by 1, resulting in a TTL of 0. Consequently, this router will discard the packet and send an ICMP time exceeded in-transit error message. Note that some routers are configured not to send such ICMP messages when discarding a packet.
 
-![](./img/Pasted%20image%2020230829094150.png)
+![](img/Pasted%20image%2020230829094150.png)
 
 On Linux, `traceroute` will start by sending UDP datagrams within IP packets of TTL being 1. Thus, it causes the first router to encounter a TTL=0 and send an ICMP Time-to-Live exceeded back. Hence, a TTL of 1 will reveal the IP address of the first router to you. Then it will send another packet with TTL=2; this packet will be dropped at the second router. And so on. Let’s try this on live systems.
 

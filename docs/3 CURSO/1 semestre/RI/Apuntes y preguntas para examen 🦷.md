@@ -22,11 +22,11 @@
 
 ### Arquitectura JDBC
 
-![](./img/Pasted%20image%2020230103105809.png)
+![](img/Pasted%20image%2020230103105809.png)
 
 ### Proceso de desarrollo
 
-![](./img/Pasted%20image%2020230103105955.png)
+![](img/Pasted%20image%2020230103105955.png)
 
 
 - Para soliccitar la conexión a la BBDD se usa el Driver Manager:
@@ -59,7 +59,7 @@ absolute(int rowNumber); //navega a la fila indicada
 
 ### Esquema del proceso de desarrollo
 
-![](./img/Pasted%20image%2020230103112125.png)
+![](img/Pasted%20image%2020230103112125.png)
 
 ### Interfaz Statement
 
@@ -75,7 +75,7 @@ absolute(int rowNumber); //navega a la fila indicada
 	- Mejor rendimiento
 	- Mayor seguridad contra inyecciones SQL
 - **CallableStatement**
-![](./img/Pasted%20image%2020230105124507.png)
+![](img/Pasted%20image%2020230105124507.png)
 
 
 ### Tipos de ResultSet
@@ -96,17 +96,17 @@ absolute(int rowNumber); //navega a la fila indicada
 
 ### ¿Puede un objeto ResultSet ver los cambios realizados al propio ResultSet?
 
-![](./img/Pasted%20image%2020230103114830.png)
+![](img/Pasted%20image%2020230103114830.png)
 
 ### Pool de conexiones
 
 - Es una caché de objetos *Connection* cuyo objetivo es reducir la sobrecarga derivada de conectarse a la base de datos. Son reutilizables.
-![](./img/Pasted%20image%2020230103115058.png)
+![](img/Pasted%20image%2020230103115058.png)
 
 ### Transacciones
 
 - Una **transacción** es una secuencia de una o más operaciones (lectura/escritura) que refleja una única operación en el mundo real
-![](./img/Pasted%20image%2020230103115821.png)
+![](img/Pasted%20image%2020230103115821.png)
 
 - Por defecto cada sentencia SQL individual se ejecuta de forma transaccional (*AutoCommit = true*)
 - Una transacción finaliza cuando:
@@ -122,34 +122,34 @@ absolute(int rowNumber); //navega a la fila indicada
 
 ### Concurrencia, Planificación y Serialización
 
-![](./img/Pasted%20image%2020230103120921.png)
+![](img/Pasted%20image%2020230103120921.png)
 
 - **Planificación**: intercalado de operaciones de un conjunto de transacciones. El planificador decide el plan de ejecución (planificación). Hay dos tipos:  
-- ![](./img/Pasted%20image%2020230103121303.png)
-	- **Serie**: las operaciones no se intercalan, se ejecutan una tras otra ![](./img/Pasted%20image%2020230103121409.png)
+- ![](img/Pasted%20image%2020230103121303.png)
+	- **Serie**: las operaciones no se intercalan, se ejecutan una tras otra ![](img/Pasted%20image%2020230103121409.png)
 	- **Serializable**: su efecto en la BBDD es el mismo que alguna planificación serie
 
 ### Comprobar si una planificación es serializable
 
-![](./img/Pasted%20image%2020230103121811.png)
+![](img/Pasted%20image%2020230103121811.png)
 
-![](./img/Pasted%20image%2020230103122013.png)
+![](img/Pasted%20image%2020230103122013.png)
 
 ### Dirty read / Lectura sucia
 
-![](./img/Pasted%20image%2020230103122513.png)
+![](img/Pasted%20image%2020230103122513.png)
 
 ### Unrepeatable read / Lectura no repetible
 
-![](./img/Pasted%20image%2020230103122624.png)
+![](img/Pasted%20image%2020230103122624.png)
 
 ### Phantom read / Lectura fantasma
 
-![](./img/Pasted%20image%2020230103122838.png)
+![](img/Pasted%20image%2020230103122838.png)
 
 ### Inconsistent read / Lectura inconsistente
 
-![](./img/Pasted%20image%2020230103122929.png)
+![](img/Pasted%20image%2020230103122929.png)
 
 ### ¿Cómo gestionar los conflictos?
 
@@ -160,7 +160,7 @@ absolute(int rowNumber); //navega a la fila indicada
 
 ### Control de concurrencia basado en versiones
 
-![](./img/Pasted%20image%2020230103123445.png)
+![](img/Pasted%20image%2020230103123445.png)
 
 ### Niveles de aislamiento
 
@@ -170,7 +170,7 @@ absolute(int rowNumber); //navega a la fila indicada
 4. Serializable
 
 ### Anomalías vs Niveles de aislamiento
-![](./img/Pasted%20image%2020230103161028.png)
+![](img/Pasted%20image%2020230103161028.png)
 
 ### Atributos de calidad para el software
 - **Escalabilidad**: a medida que el sistema crece, qué alternativas razonables existen de lidiar con ese crecimiento
@@ -187,7 +187,7 @@ absolute(int rowNumber); //navega a la fila indicada
 - Cada capa llama a métodos de la API de la capa inferior
 	- La capa de **presentación** se ocupa del cliente
 	- La capa de **negocio** implementa las reglas del problema
-	- La capa de **acceso a datos** interactúa con los datos persistentes ![](./img/Pasted%20image%2020230103124528.png)
+	- La capa de **acceso a datos** interactúa con los datos persistentes ![](img/Pasted%20image%2020230103124528.png)
 
 #### 2. Fachada / Façade
 
@@ -195,18 +195,18 @@ absolute(int rowNumber); //navega a la fila indicada
 - Los clientes interactúan con el subsistema a través de la fachada pero ésto no impide el acceso a las clases del subsistema
 - Podría haber más de una interfaz para el mismo subsistema
 - Oculta los detalles detrás de la interfaz 
-![](./img/Pasted%20image%2020230103125048.png)
+![](img/Pasted%20image%2020230103125048.png)
 
 #### 3. Factoría simple / Class Factory
 
 - Una clase Simple Factory es una clase que crea objetos sin mostrar al cliente la lógica de creación de instancias
-![](./img/Pasted%20image%2020230103130322.png)
+![](img/Pasted%20image%2020230103130322.png)
 
 #### 4. Patrón DAO (Data Access Object)
 
 - Permite aislar la lógica de negocio de la persistencia interponiendo un interfaz abstracta. Esto permite que ambas capas evolucionen por separado sin saber nada una de la otra
 - Proporciona métodos CRUD: inserción, actualización, borrado y consulta de información
-![](./img/Pasted%20image%2020230103130636.png)
+![](img/Pasted%20image%2020230103130636.png)
 
 #### 5. Row Data Gateway
 
@@ -221,13 +221,13 @@ absolute(int rowNumber); //navega a la fila indicada
 - Un gateway para cada tabla
 - Con una única instancia se gestiona el acceso a todas las filas de una tabla
 - Getters retornan colecciones de DTO
-![](./img/Pasted%20image%2020230103131055.png)
+![](img/Pasted%20image%2020230103131055.png)
 
 #### 7. Service Layer
 
 - Define los límites de una aplicación con una capa de servicios que establece el conjunto de operaciones disponibles y coordina la respuesta de la aplicación en cada operación
 - Controla las transacciones
-![](./img/Pasted%20image%2020230103131356.png)
+![](img/Pasted%20image%2020230103131356.png)
 
 #### 8. Transaction script
 
@@ -256,23 +256,23 @@ absolute(int rowNumber); //navega a la fila indicada
 	- La **clave primaria** define la identidad (no hay dos filas con la misma clave)
 
 Hay 3 identidades:
-![](./img/Pasted%20image%2020230103155735.png)
+![](img/Pasted%20image%2020230103155735.png)
 
 ### ¿Cómo vincular la identidad de la entidad con la identidad Java y la clave primaria?
 A través de *equals()* y *hashCode()*
 
 ### Encapsulación
-![](./img/Pasted%20image%2020230103160552.png)
+![](img/Pasted%20image%2020230103160552.png)
 
 ### Asociaciones
-![](./img/Pasted%20image%2020230103155947.png)
+![](img/Pasted%20image%2020230103155947.png)
 
 ### Concurrencia
 
 Para controlar las transacciones ACID se usa una única caché por hilo y la BDD gestiona las transacciones
 
 ### Implementación de asociaciones
-![](./img/Pasted%20image%2020230103161518.png)
+![](img/Pasted%20image%2020230103161518.png)
 
 - Las cardinalidades UNO o sin especificar se interpretan como un único elemento:
 ````java
@@ -284,13 +284,13 @@ private Set<Averia> averias = new HashSet<Averia>();
 ````
 
 - Es fundamental mantener las referencias cruzadas (*link* y *unlink*)
-![](./img/Pasted%20image%2020230103161959.png)
-![](./img/Pasted%20image%2020230103162022.png)
+![](img/Pasted%20image%2020230103161959.png)
+![](img/Pasted%20image%2020230103162022.png)
 
 - Dos getters para el mismo atributo (el público y el de paquete)
-![](./img/Pasted%20image%2020230103162117.png)
+![](img/Pasted%20image%2020230103162117.png)
 - Setter restringido
-![](./img/Pasted%20image%2020230103162218.png)
+![](img/Pasted%20image%2020230103162218.png)
 
 
 ### Entidades
@@ -317,8 +317,8 @@ private String dni; //identidad natural
 - Son atributos de una entidad (dependen de la entidad de la que forman parte)
 - Son **inmutables** (no tienen setters), como los tipos básicos de Java: *Integer, Double, String...*
 
-![](./img/Pasted%20image%2020230103163112.png)
-![](./img/Pasted%20image%2020230103163126.png)
+![](img/Pasted%20image%2020230103163112.png)
+![](img/Pasted%20image%2020230103163126.png)
 
 ### Clases asociativas
 
@@ -326,27 +326,27 @@ private String dni; //identidad natural
 - Permiten añadir atributos y funcionalidad a una asociación
 - Cada instancia representa un enlace
 - Identidad compuesta por los dos extremos -> dos objetos sólo pueden estar enlazados una vez
-![](./img/Pasted%20image%2020230103163433.png)
+![](img/Pasted%20image%2020230103163433.png)
 
-![](./img/Pasted%20image%2020230103163514.png)
+![](img/Pasted%20image%2020230103163514.png)
 
 ### equals() y hashCode()
 
 - **Entidades**:
 	- Sólo son redefinidos sobre los atributos que determinan la identidad (*Si se opta por identidad artificial va sobre ese atributo*)
-	![](./img/Pasted%20image%2020230103163803.png)
+	![](img/Pasted%20image%2020230103163803.png)
 - **Value Types**:
 	- Son redefinidos sobre TODOS los atributos
-	![](./img/Pasted%20image%2020230103163740.png)
+	![](img/Pasted%20image%2020230103163740.png)
 
 ### toString()
 
 - Es útil para la depuración
 - No incluir referencias a otras entidades
-![](./img/Pasted%20image%2020230103164120.png)
+![](img/Pasted%20image%2020230103164120.png)
 
 ### Ciclo de vida de un objeto persistente
-![](./img/Pasted%20image%2020230103164347.png)
+![](img/Pasted%20image%2020230103164347.png)
 
 ### Estados de persistencia
 
@@ -361,11 +361,11 @@ private String dni; //identidad natural
 - La sesión es una caché de primer nivel que:
 	- Garantiza la identidad java y la identidad en BDD
 	- Se optimiza el SQL para minimizar tráfico a la BDD
-![](./img/Pasted%20image%2020230103164855.png)
-![](./img/Pasted%20image%2020230103164917.png)
+![](img/Pasted%20image%2020230103164855.png)
+![](img/Pasted%20image%2020230103164917.png)
 
 - La identidad sólo está garantizada dentro del contexto:
-![](./img/Pasted%20image%2020230103165331.png)
+![](img/Pasted%20image%2020230103165331.png)
 
 ### Escenarios de mapeo
 
@@ -383,28 +383,28 @@ private String dni; //identidad natural
 - Clases Java planas (POJO)
 - Constructor sin parámetros
 - La información necesaria para persistencia se añade en forma de metadatos (@Anotations, xml)
-![](./img/Pasted%20image%2020230103170246.png)
-![](./img/Pasted%20image%2020230103170358.png)
+![](img/Pasted%20image%2020230103170246.png)
+![](img/Pasted%20image%2020230103170358.png)
 
 ### Posición de @Id
-![](./img/Pasted%20image%2020230103170632.png)
+![](img/Pasted%20image%2020230103170632.png)
 
 ### Metadatos en anotaciones y XML
-![](./img/Pasted%20image%2020230103170740.png)
+![](img/Pasted%20image%2020230103170740.png)
 
 ### Categorías de anotaciones
-![](./img/Pasted%20image%2020230103170835.png)
-![](./img/Pasted%20image%2020230103170905.png)
+![](img/Pasted%20image%2020230103170835.png)
+![](img/Pasted%20image%2020230103170905.png)
 
 ### Entidades
 - Una entidad se mapea siempre a una tabla
-![](./img/Pasted%20image%2020230103171014.png)
+![](img/Pasted%20image%2020230103171014.png)
 
 ### Value Types
 - Representan conceptos adicionales del dominio
 - Su ciclo de vida depende de la entidad que los posee
 - Semántica de composición
-![](./img/Pasted%20image%2020230103171316.png)
+![](img/Pasted%20image%2020230103171316.png)
 
 @Embeddable marca una clase como ValueType
 
@@ -464,11 +464,11 @@ No siempre serán iguales las tres identidades. El período de tiempo que sí lo
 	- Para jerarquías complejas el rendimiento puede ser peor
 
 ### Consultas en JPQL
-![](./img/Pasted%20image%2020230103200537.png)
-![](./img/Pasted%20image%2020230103200706.png)
+![](img/Pasted%20image%2020230103200537.png)
+![](img/Pasted%20image%2020230103200706.png)
 
 - **getSingleResult()** sólo puede ser invocado para aquellas consultas en las que está garantizado que siempre van a devolver un único resultado. Si se usa cuando puede devolver más de un elemento, null u Optional.empty() saltará una excepción
-![](./img/Pasted%20image%2020230103201016.png)
+![](img/Pasted%20image%2020230103201016.png)
 
 - Hay que usar siempre alias
 
@@ -479,22 +479,22 @@ select u from User u where u.firstname like '\G%' escape='\'
 ````
 
 #### Funciones NOSQL
-![](./img/Pasted%20image%2020230103201349.png)
-![](./img/Pasted%20image%2020230103201408.png)
+![](img/Pasted%20image%2020230103201349.png)
+![](img/Pasted%20image%2020230103201408.png)
 
 #### ¿Cómo hacer buenas consultas?
-![](./img/Pasted%20image%2020230103201511.png)
+![](img/Pasted%20image%2020230103201511.png)
 
 #### Agrupamiento
-![](./img/Pasted%20image%2020230103201732.png)
-![](./img/Pasted%20image%2020230103201753.png)
+![](img/Pasted%20image%2020230103201732.png)
+![](img/Pasted%20image%2020230103201753.png)
 
 #### Varios SELECT
 - En JPQL los subselects sólo pueden ir dentro del WHERE
-![](./img/Pasted%20image%2020230103201847.png)
+![](img/Pasted%20image%2020230103201847.png)
 
 #### Any, all, some, in
-![](./img/Pasted%20image%2020230103201933.png)
+![](img/Pasted%20image%2020230103201933.png)
 
 ### Repositorios
 
@@ -524,7 +524,7 @@ select u from User u where u.firstname like '\G%' escape='\'
 
 ### Modelo conceptual de RI
 
-![](./img/Pasted%20image%2020230104115815.png)
+![](img/Pasted%20image%2020230104115815.png)
 
 - Los documentos de texto en bruto no se utilizan directamente para la recuperación y ranking, es necesario transformarlos durante el proceso de indexado. Cuando esto se lleva a cabo, hay una serie de decisiones que tomar:
 	1. El **vocabulario** a usar
@@ -682,7 +682,7 @@ Difieren en:
 	- Relaciones entre nodos (arcos)
 		- Unidireccionales / Bidireccionales
 		- Propiedades en relaciones
-![](./img/Pasted%20image%2020230104160936.png)
+![](img/Pasted%20image%2020230104160936.png)
 
 ### Distribución de los datos
 - Escalabilidad de datos
@@ -778,7 +778,7 @@ Difieren en:
 ==Es una implementación de diferentes clases e interfaces Java que abstraen las funciones de acceso a una base de datos para que los programas Java puedan acceder a diferentes SGBD a través de SQL==
 5. Tipos de resultset en función de su navegabilidad e (in)sensibilidad. ¿A través de qué método se establece el tipo de ResultSet a utilizar?
 ==- En función de su navegabilidad e insensibilidad==
-![](./img/Pasted%20image%2020230103114830.png)
+![](img/Pasted%20image%2020230103114830.png)
 - ==En función de su capacidad para actualizar==
 	- ==CONCUR_READ_ONLY: NO actualizable==
 	- ==CONCUR_UPDATABLE: SI actualizable==
@@ -790,7 +790,7 @@ Difieren en:
 	- ==**aIslamiento**: las transacciones no se afectan las unas a las otras==
 	- ==**Durabilidad**: los datos una vez escritos nunca se perderán==
 - ==El **aislamiento** es una propiedad de las transacciones que define cuándo y cómo los cambios producidos por una operación se hacen visibles para las demás operaciones concurrentes. Niveles de aislamiento:==
-![](./img/Pasted%20image%2020230103161028.png)
+![](img/Pasted%20image%2020230103161028.png)
 7. Problemas de una transacción concurrente
 ==A mayor concurrencia, mayor riesgo de que se produzcan efectos no deseados==
 8. Dado el siguiente esquema, completarlo:
@@ -803,26 +803,26 @@ Difieren en:
 11. ¿Qué patrón nos permite acceder a un servicio sin conocer la clase que lo implementa?
 - ==Abstract Factory==
 12. Determina si la siguiente aplicación presenta anomalías y en tal caso qué nivel(es) de aislamiento evitan que se produzcan
-![](./img/Pasted%20image%2020230105131154.png)
+![](img/Pasted%20image%2020230105131154.png)
 - ==Se produce una lectura no repetible.==
 - ==Evitaría que se produjese los niveles de lectura repetible y serializable==
 ### Dirty read / Lectura sucia
 
-![](./img/Pasted%20image%2020230103122513.png)
+![](img/Pasted%20image%2020230103122513.png)
 
 ### Unrepeatable read / Lectura no repetible
 
-![](./img/Pasted%20image%2020230103122624.png)
+![](img/Pasted%20image%2020230103122624.png)
 
 ### Phantom read / Lectura fantasma
 
-![](./img/Pasted%20image%2020230103122838.png)
+![](img/Pasted%20image%2020230103122838.png)
 
 ### Inconsistent read / Lectura inconsistente
 
-![](./img/Pasted%20image%2020230103122929.png)
+![](img/Pasted%20image%2020230103122929.png)
 13. Completa el siguiente esquema
-![](./img/Pasted%20image%2020230107141914.png)
+![](img/Pasted%20image%2020230107141914.png)
 14. Un ResultSet de tipo Scroll Insensitive puede ver:
 ==Actualizaciones internas y eliminaciones internas==
 15. ¿Cuál de las siguientes afirmaciones sobre el patrón Transaction Script es cierta?
@@ -833,7 +833,7 @@ Difieren en:
 - ==Aumenta la duplicación de código==
 - ==No es adecuado cuando el modelo de dominio es complejo==
 16. Completa el siguiente esquema con las operaciones que se realizan
-![](./img/Pasted%20image%2020230107154811.png)
+![](img/Pasted%20image%2020230107154811.png)
 17. ¿Qué patrón utilizarías para conectar la interfaz de usuario con los distintos servicios que conforman la aplicación?
 - ==Service Layer==
 18. Una serie de servicios A, B, ... cada uno de los cuales pertenece a un dominio distinto, se ejecutan en aplicaciones separadas y ofrecen cada uno APIs independientes, necesitan ser utilizados conjuntamente por parte de un cliente. Elija UNO de los siguientes patrones de diseño para orquestar su aplicación y explique su adaptación al problema. Fachada, Factory, Layering.
@@ -845,7 +845,7 @@ Difieren en:
 - ==**Entidad**: una entidad representa un concepto del dominio que se puede asociar a otras entidades y tiene un ciclo de vida independiente. Debe tener una identidad (clave primaria en BDD) que es inmutable. Mutables serían todos quellos atributos que se pudiesen modificar en un futuro y rompiesen el encapsulamiento. Los métodos *hashCode()* y *equals()* se redefinen sólo sobre los atributos que determinan la identidad.==
 - ==**ValueType**: representa un valor, no tiene identidad. Su valor es inalterable. Se suelen presentar como atributos de una entidad. Su ciclo de vida depende enteramente de la entidad a la que pertenece. Son atributos inmutables (no hay setters). Los métodos *hashCode()* y *equals()* se redefinen sobre TODOS los atributos.==
 2. Diferencias XML y anotaciones
-![](./img/Pasted%20image%2020230103170740.png)
+![](img/Pasted%20image%2020230103170740.png)
 3. ¿Cómo se debe usar el atributo @Id?
 - ==El atributo @Id se usa para comprobar si dos entidades de la base de datos son la misma: a.getId().equals(b.getId()) -> Si es true, son la misma entidad. Deberemos poner la notación @Id en el atributo de la entidad que vaya a ser clave en la tabla de la BDD.==
 4. Consulta sobre matrícula alumno y asignatura (todos los alumnos con nota mayor de 5 y matriculados en una asignatura con un código)
@@ -856,7 +856,7 @@ where a.mark >= 5 and a.subject.id = ?1
 5. ¿En qué estado están los objetos devueltos por una consulta JPQL?¿y el que devuelve el método find(...)?
 - ==Persistent==
 - ==Persistent==
-![](./img/Pasted%20image%2020230103164347.png)
+![](img/Pasted%20image%2020230103164347.png)
 
 ### Estados de persistencia
 
@@ -1027,21 +1027,21 @@ MATCH (m:Movie) WHERE NOT ((m)<-[:DIRECTED]-(:Person)) return m
 10. ¿Cuáles de los siguientes son elementos principales del teorema CAP?
 - ==Consistencia, Disponibilidad y Particionamiento==
 11. Escribe una consulta en Cypher que devuelva los actores de las películas en las que no dirige "Clint Eastwood"
-![](./img/Pasted%20image%2020230105133846.png)
+![](img/Pasted%20image%2020230105133846.png)
 ````cypher
 MATCH (p:Person)-[r:ACTED_IN]->(m:Movie) 
 WHERE NOT (p2:Person {name: "Clint Eastwood"})-[r2:DIRECTED]->(m)
 RETURN p.name
 ````
 11. Escribe una consulta en Cypher que devuelva los actores que actúan en una película cuyo director también actúa en la misma
-![](./img/Pasted%20image%2020230105133846.png)
+![](img/Pasted%20image%2020230105133846.png)
 ````cypher
 MATCH (p:Person)-[:ACTED_IN]->(m:Movie)<-[:DIRECTED]-(dir:Person)
 WHERE (dir:Person)-[:ACTED_IN]->(m)
 RETURN p
 ````
 12. Escribe una consulta en Cypher que devuelva los directores que actúan en una película que ellos mismos han dirigido
-![](./img/Pasted%20image%2020230105133846.png)
+![](img/Pasted%20image%2020230105133846.png)
 ````cypher
 MATCH (dir:Person)-[:ACTED_IN]->(m:Movie)<-[:DIRECTED]-(dir)
 RETURN dir
@@ -1053,7 +1053,7 @@ RETURN dir
 	- ==No tienen control de integridad
 - ==Atomicidad elemental sin transacciones o transacciones de bajo nivel==
 14. Escribe una consulta en Cypher que devuelva la película que más actores tiene
-![](./img/Pasted%20image%2020230105133846.png)
+![](img/Pasted%20image%2020230105133846.png)
 ````cypher
 MATCH (p:Person)-[:ACTED_IN]->(m:Movie)
 WHERE m, count(*) as counter

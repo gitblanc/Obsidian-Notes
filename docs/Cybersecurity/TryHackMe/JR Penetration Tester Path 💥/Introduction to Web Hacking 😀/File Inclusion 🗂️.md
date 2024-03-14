@@ -3,13 +3,13 @@ This note aims to equip you with the essential knowledge to exploit file inclusi
 
 In some scenarios, web applications are written to request access to files on a given system, including images, static text, and so on via parameters. Parameters are query parameter strings attached to the URL that could be used to retrieve data or perform actions based on user input. The following diagram breaks down the essential parts of a URL.
 
-![](./img/Pasted%20image%2020230824120318.png)
+![](img/Pasted%20image%2020230824120318.png)
 
 For example, parameters are used with Google searching, where `GET` requests pass user input into the search engine. `https://www.google.com/search?q=TryHackMe`. If you are not familiar with the topic, you can view the [How The Web Works](https://tryhackme.com/module/how-the-web-works) module to understand the concept.  
 
 Let's discuss a scenario where a user requests to access files from a webserver. First, the user sends an HTTP request to the webserver that includes a file to display. For example, if a user wants to access and display their CV within the web application, the request may look as follows, `http://webapp.thm/get.php?file=userCV.pdf`, where the `file` is the parameter and the `userCV.pdf`, is the required file to access.
 
-![](./img/Pasted%20image%2020230824120630.png)
+![](img/Pasted%20image%2020230824120630.png)
 
 ## Why do File inclusion vulnerabilities happen?﻿
 
@@ -26,17 +26,17 @@ Path traversal vulnerabilities occur when the user's input is passed to a funct
 
 The following graph shows how a web application stores files in `/var/www/app`. The happy path would be the user requesting the contents of userCV.pdf from a defined path `/var/www/app/CVs`.
 
-![](./img/Pasted%20image%2020230824121331.png)
+![](img/Pasted%20image%2020230824121331.png)
 
 We can test out the URL parameter by adding payloads to see how the web application behaves. Path traversal attacks, also known as the **dot-dot-slash attack**, take advantage of moving the directory one step up using the double dots `../`. If the attacker finds the entry point, which in this case `get.php?file=`, then the attacker may send something as follows, `http://webapp.thm/get.php?file=../../../../etc/passwd`
 
 Suppose there isn't input validation, and instead of accessing the PDF files at `/var/www/app/CVs` location, the web application retrieves files from other directories, which in this case `/etc/passwd`. Each .. entry moves one directory until it reaches the root directory /. Then it changes the directory to /etc, and from there, it read the passwd file.
 
-![](./img/Pasted%20image%2020230824121545.png)
+![](img/Pasted%20image%2020230824121545.png)
 
 As a result, the web application sends back the file's content to the user.
 
-![](./img/Pasted%20image%2020230824121609.png)
+![](img/Pasted%20image%2020230824121609.png)
 
 Similarly, if the web application runs on a Windows server, the attacker needs to provide Windows paths. For example, if the attacker wants to read the boot.ini file located in c:\boot.ini, then the attacker can try the following depending on the target OS version:
 
@@ -155,7 +155,7 @@ Why did this work?
 
 This works because the PHP filter only matches and replaces the first subset string ../ it finds and doesn't do another pass, leaving what is pictured below.
 
-![](./img/Pasted%20image%2020230824122543.png)
+![](img/Pasted%20image%2020230824122543.png)
 
 **4.** Finally, we'll discuss the case where the developer forces the include to read from a defined directory! For example, if the web application asks to supply input that has to include a directory such as: http://webapp.thm/index.php?lang=languages/EN.php then, to exploit this, we need to include the directory in the payload like so: ?lang=languages/../../../../../etc/passwd.
 
@@ -170,7 +170,7 @@ The risk of RFI is higher than LFI since RFI vulnerabilities allow an attacker t
 
 An external server must communicate with the application server for a successful RFI attack where the attacker hosts malicious files on their server. Then the malicious file is injected into the include function via HTTP requests, and the content of the malicious file executes on the vulnerable application server.
 
-![](./img/Pasted%20image%2020230824124536.png)
+![](img/Pasted%20image%2020230824124536.png)
 
 ## RFI steps
 

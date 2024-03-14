@@ -10,7 +10,7 @@ The Burp Suite Decoder module allows us to manipulate data. As the name suggests
 
 Let's select the Decoder tab from the top menu and take a look at the options available:
 
-![](./img/Pasted%20image%2020230828123045.png)
+![](img/Pasted%20image%2020230828123045.png)
 
 This interface offers us a number of options.
 
@@ -19,11 +19,11 @@ This interface offers us a number of options.
 3. Further down the list, we have dropdown menus to _Encode_, _Decode_ or _Hash_ the input.
 4. Finally, we have the "Smart Decode" feature, which attempts to decode the input automatically.
 
-![](./img/Pasted%20image%2020230828123108.png)
+![](img/Pasted%20image%2020230828123108.png)
 
 As we add data into the input field, the interface will duplicate itself to contain the output of our transformation. We can then choose to operate on this using the same options:
 
-![](./img/Pasted%20image%2020230828123128.png)
+![](img/Pasted%20image%2020230828123128.png)
 
 We will look at the available transformations in the upcoming tasks!
 
@@ -32,25 +32,25 @@ We will look at the available transformations in the upcoming tasks!
 ## _**Decoding/Encoding Methods:**_  
 Let's take a closer look at the manual encoding and decoding options. These are the same whether we choose the decoding or encoding menu:
 
-![](./img/Pasted%20image%2020230828123639.png)
+![](img/Pasted%20image%2020230828123639.png)
 
 - **Plain:** Plaintext is what we have before performing any transformations.
 - **URL:** URL encoding is used to make data safe to transfer in the URL of a web request. It involves exchanging characters for their ASCII character code in hexadecimal format, preceded by a percentage symbol (`%`). Url encoding is an extremely useful method to know for any kind of web application testing.  
     For example, let's encode the forward-slash character (`/`). The [ASCII character code](https://www.asciitable.com/) for a forward slash is 47. This is "2F" in hexadecimal, making the URL encoded forward-slash `%2F`. We can confirm this with Decoder by typing a forward slash in the input box, then selecting `Encode as` -> `URL`:
 
-![](./img/Pasted%20image%2020230828123704.png)
+![](img/Pasted%20image%2020230828123704.png)
 
 **HTML:** Encoding text as HTML Entities involves replacing special characters with an ampersand (`&`) followed by either a hexadecimal number or a reference to the character being escaped, then a semicolon (`;`). For example, a quotation mark has its own reference: `&quot;`. When this is inserted into a webpage, it will be replaced by a double quotation mark (`"`). This encoding method allows special characters in the HTML language to be rendered safely in HTML pages and has the added bonus of being used to prevent attacks such as [XSS](https://owasp.org/www-community/attacks/xss/) (Cross-Site Scripting).  
 When we use the HTML option in Decoder, we can encode any character as its HTML escaped format or decode captured HTML entities. For example, to decode the quotation mark we looked at before, we type in the encoded variant then choose `Decode as` -> `HTML`:
 
-![](./img/Pasted%20image%2020230828123815.png)
+![](img/Pasted%20image%2020230828123815.png)
 
 - **Base64:** Another widely used encoding method, base64 is used to encode any data in an ASCII-compatible format. It was designed to take binary data (e.g. images, media, programs) and encode it in a format that would be suitable to transfer over virtually any medium. How this works under the hood is not important at this point; however, if you are interested, you can read the maths behind it [here](https://stackabuse.com/encoding-and-decoding-base64-strings-in-python).
 - **ASCII Hex:** This option converts data between ASCII representation and hexadecimal representation. For example, the word "ASCII" can be converted into the hexadecimal number "4153434949". Each letter in the original data is taken individually and converted from numeric ASCII representation into hexadecimal. For example, the letter "A" in ASCII has a decimal [character code](https://www.asciitable.com/) of 65. In hexadecimal, this is 41. Similarly, the letter "S" can be converted to hexadecimal 53, and so on.
 - **Hex**, **Octal**, and **Binary:** These encoding methods all apply only to numeric inputs. They convert between decimal, hexadecimal, octal (base eight) and binary.
 - **Gzip:** Gzip provides a way to _compress_ data. It is widely used to reduce the size of files and pages before they are sent to your browser. Smaller pages mean faster loading times, which is highly desirable for developers looking to increase their SEO score and avoid annoying their customers. Decoder allows us to manually encode and decode gzip data, although this can be hard to process as it is often not valid ASCII/Unicode. For example:
 
-![](./img/Pasted%20image%2020230828123838.png)
+![](img/Pasted%20image%2020230828123838.png)
 
 We can layer any of these on top of each other. For example, we could take a phrase ("Burp Suite Decoder"), convert it to ASCII Hex, and then into octal:
 
@@ -65,7 +65,7 @@ As you may have noticed from the examples, each encoding/decoding method is colo
 _**Hex Format:**_  
 Inputting data in ASCII format is great, but sometimes we need to be able to edit our input byte-by-byte. For this, we can use "Hex View" by choosing "Hex" above the decoding options:
 
-![](./img/Pasted%20image%2020230828123922.png)
+![](img/Pasted%20image%2020230828123922.png)
 
 This setting allows us to view and edit our text in hexadecimal byte format -- a very useful trick if we are working with binary files or other non-ASCII data.  
 
@@ -97,13 +97,13 @@ Equally, hashes are also used to securely store passwords as (due to the one-way
 ## _**Hashing in Decoder:**_
 Decoder allows us to generate hashsums for data directly within Burp Suite; this works in much the same way as the encoding/decoding options we saw in the previous task. Specifically, we click on the "Hash" dropdown menu and select an algorithm from the list:
 
-![](./img/Pasted%20image%2020230828124837.png)
+![](img/Pasted%20image%2020230828124837.png)
 
 _**Note:**_  _this is a significantly longer list than with the encoding/decoding algorithms -- it is well worth scrolling down the list to see the many hashing algorithms available._
 
 Continuing our earlier example, let's enter "MD5sum" into the input box, then scroll down the list until we find "MD5". Applying this sends us automatically into the Hex view:
 
-![](./img/Pasted%20image%2020230828124855.png)
+![](img/Pasted%20image%2020230828124855.png)
 
 This is because the output of a hashing algorithm does not return pure ASCII/Unicode text. As such, it is common to take the resultant output of the algorithm and turn it into a hexadecimal string; this is the form of "hash" that you may be familiar with.
 
@@ -119,7 +119,7 @@ As the name suggests, _Comparer_ allows us to compare two pieces of data, either
 
 Let's start by taking a look at the interface:
 
-![](./img/Pasted%20image%2020230828125902.png)
+![](img/Pasted%20image%2020230828125902.png)
 
 This interface can be split into three main parts:
 1. On the left, we have the items being compared. When we load data into Comparer, it will appear as rows in these tables -- we would then select two datasets to compare.
@@ -130,7 +130,7 @@ As with most Burp Suite modules, we can also load data into Comparer from other 
 
 When we have loaded data in to compare, we get a pop-up window showing us the comparison:
 
-![](./img/Pasted%20image%2020230828125941.png)
+![](img/Pasted%20image%2020230828125941.png)
 
 Once again, there are three distinct parts to this window:
 1. The compared data takes up most of the window; this can be viewed in either text or hex format. The initial format is determined by whether we chose to compare by words or by bytes in the previous window, but this can be overwritten by using the buttons above the comparison boxes.
@@ -177,7 +177,7 @@ In short, Sequencer allows us to measure the _entropy_ (or randomness, in other 
 
 Let's start, as ever, by taking a look at the Sequencer interface:
 
-![](./img/Pasted%20image%2020230828130835.png)
+![](img/Pasted%20image%2020230828130835.png)
 
 There are two main methods we can use to perform token analysis with Sequencer:
 - **Live capture** is the more common of the two methods -- this is the default sub-tab for Sequencer. Live capture allows us to pass a request to Sequencer, which we know will create a token for us to analyse. For example, we may wish to pass a POST request to a login endpoint into Sequencer, as we know that the server will respond by giving us a cookie. With the request passed in, we can tell Sequencer to start a live capture: it will then make the same request thousands of times automatically, storing the generated token samples for analysis. Once we have accumulated enough samples, we stop Sequencer and allow it to analyse the captured tokens.
@@ -195,7 +195,7 @@ We will start by capturing a request to `http://10.10.192.89/admin/login/` in th
 
 Notice in the "Token Location Within Response" section we have the option to select between Cookie, Form field, and Custom location. In this instance, we are testing the `loginToken`, so select the radio button for "Form field":
 
-![](./img/Pasted%20image%2020230828131158.png)
+![](img/Pasted%20image%2020230828131158.png)
 
 We can safely leave all other options at default in this instance, so let's go ahead and click the "Start live capture" button!  
 
@@ -203,7 +203,7 @@ A new window will now pop up telling us that we are performing a live capture an
 
 Once you have around 10,000 tokens captured, click "Pause", then select the "Analyze now" button:
 
-![](./img/Pasted%20image%2020230828131219.png)
+![](img/Pasted%20image%2020230828131219.png)
 
 _**Note:** We could also have chosen to "Stop" the capture; however, by choosing to pause it instead, we leave the option resume the capture open, should the report not have enough samples to calculate the entropy of the token accurately._  
 
@@ -221,7 +221,7 @@ Burp performs dozens of tests on the token samples that it captured. We won't be
 
 The generated entropy analysis report is split into four primary sections -- the first of these being a summary of the results:
 
-![](./img/Pasted%20image%2020230828132831.png)
+![](img/Pasted%20image%2020230828132831.png)
 
 The summary gives us an overall result; the effective entropy; an analysis of the reliability of the results; and a summary of the sample taken.
 

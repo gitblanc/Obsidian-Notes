@@ -15,7 +15,7 @@ The Repeater interface can be split into six main sections -- an annotated diagr
 5. At the right-hand side of the window, we have the Inspector, which allows us to break requests apart to analyse and edit them in a slightly more intuitive way than with the raw editor. We will cover this in a later task.
 6. Finally, above the Inspector we have our target. Quite simply, this is the IP address or domain to which we are sending requests. When we send requests to Repeater from other parts of Burp Suite, this will be filled in automatically.
 
-![](./img/Pasted%20image%2020230825115317.png)
+![](img/Pasted%20image%2020230825115317.png)
 
 Don't worry if this doesn't make too much sense just now -- you will get plenty of chances to learn what it does first hand in the upcoming tasks!
 
@@ -28,15 +28,15 @@ With a request captured in the proxy, we can send to repeater either by right-cl
 
 Switching back to Repeater, we can see that our request is now available:
 
-![](./img/Pasted%20image%2020230825115743.png)
+![](img/Pasted%20image%2020230825115743.png)
 
 The target and Inspector elements are now also showing information; however, we do not yet have a response. When we click the "Send" button, the Response section quickly populates:
 
-![](./img/Pasted%20image%2020230825115804.png)
+![](img/Pasted%20image%2020230825115804.png)
 
 If we want to change anything about the request, we can simply type in the Request window and press "Send" again; this will update the Response on the right. For example, changing the "Connection" header to `open` rather than `close` results in a response "Connection" header with a value of `keep-alive`:
 
-![](./img/Pasted%20image%2020230825115822.png)
+![](img/Pasted%20image%2020230825115822.png)
 
 We could then also use the history buttons to the right of the Send button to go forwards and backwards in our modification history.
 
@@ -45,7 +45,7 @@ Repeater offers us various ways to present the responses to our requests -- thes
 
 We can see the available options by looking above the response box:
 
-![](./img/Pasted%20image%2020230825120527.png)
+![](img/Pasted%20image%2020230825120527.png)
 
 We have four display options here:
 
@@ -69,11 +69,11 @@ That said, it is a superb way to get a prettified breakdown of the requests and 
 
 Inspector can be used in the Proxy as well as Repeater. In both cases, it appears over at the very right hand side of the window and gives us a list of the components in the request and response:
 
-![](./img/Pasted%20image%2020230825120737.png)
+![](img/Pasted%20image%2020230825120737.png)
 
 Of these, the request sections can nearly always be altered, allowing us to add, edit, and delete items. For example, in the Request Attributes section, we can edit the parts of the request that deal with location, method and protocol; e.g. changing the resource we are looking to retrieve, altering the request from GET to another HTTP method, or switching protocol from HTTP/1 to HTTP/2:
 
-![](./img/Pasted%20image%2020230825120754.png)
+![](img/Pasted%20image%2020230825120754.png)
 
 The other sections available for viewing and/or editing are:  
 - **Query Parameters**, which refer to data being sent to the server in the URL. For example, in a GET request to `https://admin.tryhackme.com/?redirect=false`, there is a query parameter called "redirect" with a value of "false".  
@@ -177,7 +177,7 @@ Fortunately, we can use our SQLi to group the results. We can still only retriev
 
 This process is shown in below:
 
-![](./img/Pasted%20image%2020230825123813.png)
+![](img/Pasted%20image%2020230825123813.png)
 
 We have successfully identified eight columns in this table: `id`, `firstName`, `lastName`, `pfpLink`, `role`, `shortRole`, `bio`, and `notes`.
 
@@ -193,6 +193,6 @@ Let's craft a query to extract this flag:
 
 Hey presto, we have a flag!
 
-![](./img/Pasted%20image%2020230825123841.png)
+![](img/Pasted%20image%2020230825123841.png)
 
 

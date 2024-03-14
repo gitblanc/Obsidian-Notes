@@ -25,14 +25,14 @@ We also introduce two scanners, `arp-scan` and `masscan`, and explain how the
 
 As already mentioned, starting with this room, we will use Nmap to discover systems and services actively. Nmap was created by Gordon Lyon (Fyodor), a network security expert and open source programmer. It was released in 1997. Nmap, short for Network Mapper, is free, open-source software released under GPL license. Nmap is an industry-standard tool for mapping networks, identifying live hosts, and discovering running services. Nmap’s scripting engine can further extend its functionality, from fingerprinting services to exploiting vulnerabilities. A Nmap scan usually goes through the steps shown in the figure below, although many are optional and depend on the command-line arguments you provide.
 
-![](./img/Pasted%20image%2020230830080901.png)
+![](img/Pasted%20image%2020230830080901.png)
 
 # Subnetworks
 Let's review a couple of terms before we move on to the main tasks. A _network segment_ is a group of computers connected using a shared medium. For instance, the medium can be the Ethernet switch or WiFi access point. In an IP network, a _subnetwork_ is usually the equivalent of one or more network segments connected together and configured to use the same router. The network segment refers to a physical connection, while a subnetwork refers to a logical connection.
 
 In the following network diagram, we have four network segments or subnetworks. Generally speaking, your system would be connected to one of these network segments/subnetworks. A subnetwork, or simply a subnet, has its own IP address range and is connected to a more extensive network via a router. There might be a firewall enforcing security policies depending on each network.
 
-![](./img/Pasted%20image%2020230830081603.png)
+![](img/Pasted%20image%2020230830081603.png)
 
 The figure above shows two types of subnets:
 - Subnets with `/16`, which means that the subnet mask can be written as `255.255.0.0`. This subnet can have around 65 thousand hosts.
@@ -67,7 +67,7 @@ Let’s revisit the TCP/IP layers shown in the figure next. We will leverage the
 - TCP from Transport Layer
 - UDP from Transport Layer
 
-![](./img/Pasted%20image%2020230830083252.png)
+![](img/Pasted%20image%2020230830083252.png)
 
 Before we discuss how scanners can use each in detail, we will briefly review these four protocols. ARP has one purpose: sending a frame to the broadcast address on the network segment and asking the computer with a specific IP address to respond by providing its MAC (hardware) address.
 
@@ -110,11 +110,11 @@ Nmap done: 256 IP addresses (4 hosts up) scanned in 3.12 seconds
 
 In this case, the AttackBox had the IP address 10.10.210.6, and it used ARP requests to discover the live hosts on the same subnet. ARP scan works, as shown in the figure below. Nmap sends ARP requests to all the target computers, and those online should send an ARP reply back.
 
-![](./img/Pasted%20image%2020230830084306.png)
+![](img/Pasted%20image%2020230830084306.png)
 
 If we look at the packets generated using a tool such as tcpdump or Wireshark, we will see network traffic similar to the figure below. In the figure below, Wireshark displays the source MAC address, destination MAC address, protocol, and query related to each ARP request. The source address is the MAC address of our AttackBox, while the destination is the broadcast address as we don’t know the MAC address of the target. However, we see the target’s IP address, which appears in the Info column. In the figure, we can see that we are requesting the MAC addresses of all the IP addresses on the subnet, starting with `10.10.210.1`. The host with the IP address we are asking about will send an ARP reply with its MAC address, and that’s how we will know that it is online.
 
-![](./img/Pasted%20image%2020230830084330.png)
+![](img/Pasted%20image%2020230830084330.png)
 
 Talking about ARP scans, we should mention a scanner built around ARP queries: `arp-scan`; it provides many options to customize your scan. Visit the [arp-scan wiki](http://www.royhills.co.uk/wiki/index.php/Main_Page) for detailed information. One popular choice is `arp-scan --localnet` or simply `arp-scan -l`. This command will send ARP queries to all valid IP addresses on your local networks. Moreover, if your system has more than one interface and you are interested in discovering the live hosts on one of them, you can specify the interface using `-I`. For instance, `sudo arp-scan -I eth0 -l` will send ARP queries for all valid IP addresses on the `eth0` interface.
 
@@ -137,14 +137,14 @@ Ending arp-scan 1.9: 256 hosts scanned in 2.726 seconds (93.91 hosts/sec). 3 res
 
 Similarly, the command `arp-scan` will generate many ARP queries that we can see using tcpdump, Wireshark, or a similar tool. We can notice that the packet capture for `arp-scan` and `nmap -PR -sn` yield similar traffic patterns. Below is the Wireshark output.
 
-![](./img/Pasted%20image%2020230830084424.png)
+![](img/Pasted%20image%2020230830084424.png)
 
 # Nmap Host Discovery Using ICMP
 We can ping every IP address on a target network and see who would respond to our `ping` (ICMP Type 8/Echo) requests with a ping reply (ICMP Type 0). Simple, isn’t it? Although this would be the most straightforward approach, it is not always reliable. Many firewalls block ICMP echo; new versions of MS Windows are configured with a host firewall that blocks ICMP echo requests by default. Remember that an ARP query will precede the ICMP request if your target is on the same subnet.
 
 To use ICMP echo request to discover live hosts, add the option `-PE`. (Remember to add `-sn` if you don’t want to follow that with a port scan.) As shown in the following figure, an ICMP echo scan works by sending an ICMP echo request and expects the target to reply with an ICMP echo reply if it is online.
 
-![](./img/Pasted%20image%2020230830085613.png)
+![](img/Pasted%20image%2020230830085613.png)
 
 In the example below, we scanned the target’s subnet using `nmap -PE -sn MACHINE_IP/24`. This scan will send ICMP echo packets to every IP address on the subnet. Again, we expect live hosts to reply; however, it is wise to remember that many firewalls block ICMP. The output below shows the result of scanning the virtual machine’s class C subnet using `sudo nmap -PE -sn MACHINE_IP/24` from the AttackBox.
 
@@ -208,11 +208,11 @@ Nmap done: 256 IP addresses (8 hosts up) scanned in 8.26 seconds
 
 If you look at the network packets using a tool like Wireshark, you will see something similar to the image below. You can see that we have one source IP address on a different subnet than that of the destination subnet, sending ICMP echo requests to all the IP addresses in the target subnet to see which one will reply.
 
-![](./img/Pasted%20image%2020230830085751.png)
+![](img/Pasted%20image%2020230830085751.png)
 
 Because ICMP echo requests tend to be blocked, you might also consider ICMP Timestamp or ICMP Address Mask requests to tell if a system is online. Nmap uses timestamp request (ICMP Type 13) and checks whether it will get a Timestamp reply (ICMP Type 14). Adding the `-PP` option tells Nmap to use ICMP timestamp requests. As shown in the figure below, you expect live hosts to reply.
 
-![](./img/Pasted%20image%2020230830085835.png)
+![](img/Pasted%20image%2020230830085835.png)
 
 In the following example, we run `nmap -PP -sn MACHINE_IP/24` to discover the online computers on the target machine subnet.
 
@@ -241,11 +241,11 @@ Nmap done: 256 IP addresses (8 hosts up) scanned in 10.93 seconds
 
 If you look at the network packets using a tool like Wireshark, you will see something similar to the image below. You can see that we have one source IP address on a different subnet than that of the destination subnet, sending ICMP echo requests to all the IP addresses in the target subnet to see which one will reply.
 
-![](./img/Pasted%20image%2020230830085940.png)
+![](img/Pasted%20image%2020230830085940.png)
 
 Because ICMP echo requests tend to be blocked, you might also consider ICMP Timestamp or ICMP Address Mask requests to tell if a system is online. Nmap uses timestamp request (ICMP Type 13) and checks whether it will get a Timestamp reply (ICMP Type 14). Adding the `-PP` option tells Nmap to use ICMP timestamp requests. As shown in the figure below, you expect live hosts to reply.
 
-![](./img/Pasted%20image%2020230830090005.png)
+![](img/Pasted%20image%2020230830090005.png)
 
 In the following example, we run `nmap -PP -sn MACHINE_IP/24` to discover the online computers on the target machine subnet.
 
@@ -274,11 +274,11 @@ Nmap done: 256 IP addresses (8 hosts up) scanned in 10.93 seconds
 
 Similar to the previous ICMP scan, this scan will send many ICMP timestamp requests to every valid IP address in the target subnet. In the Wireshark screenshot below, you can see one source IP address sending ICMP packets to every possible IP address to discover online hosts.
 
-![](./img/Pasted%20image%2020230830090059.png)
+![](img/Pasted%20image%2020230830090059.png)
 
 Similarly, Nmap uses address mask queries (ICMP Type 17) and checks whether it gets an address mask reply (ICMP Type 18). This scan can be enabled with the option `-PM`. As shown in the figure below, live hosts are expected to reply to ICMP address mask requests.
 
-![](./img/Pasted%20image%2020230830090137.png)
+![](img/Pasted%20image%2020230830090137.png)
 
 In an attempt to discover live hosts using ICMP address mask queries, we run the command `nmap -PM -sn MACHINE_IP/24`. Although, based on earlier scans, we know that at least eight hosts are up, this scan returned none. The reason is that the target system or a firewall on the route is blocking this type of ICMP packet. Therefore, it is essential to learn multiple approaches to achieve the same result. If one type of packet is being blocked, we can always choose another to discover the target network and services.
 
@@ -291,19 +291,19 @@ Nmap done: 256 IP addresses (0 hosts up) scanned in 52.17 seconds
 
 Although we didn’t get any reply and could not figure out which hosts are online, it is essential to note that this scan sent ICMP address mask requests to every valid IP address and waited for a reply. Each ICMP request was sent twice, as we can see in the screenshot below.
 
-![](./img/Pasted%20image%2020230830090224.png)
+![](img/Pasted%20image%2020230830090224.png)
 
 # Nmap Host Discovery Using TCP and UDP
 ## TCP SYN Ping
 We can send a packet with the SYN (Synchronize) flag set to a TCP port, 80 by default, and wait for a response. An open port should reply with a SYN/ACK (Acknowledge); a closed port would result in an RST (Reset). In this case, we only check whether we will get any response to infer whether the host is up. The specific state of the port is not significant here. The figure below is a reminder of how a TCP 3-way handshake usually works.
 
-![](./img/Pasted%20image%2020230830093602.png)
+![](img/Pasted%20image%2020230830093602.png)
 
 If you want Nmap to use TCP SYN ping, you can do so via the option `-PS` followed by the port number, range, list, or a combination of them. For example, `-PS21` will target port 21, while `-PS21-25` will target ports 21, 22, 23, 24, and 25. Finally `-PS80,443,8080` will target the three ports 80, 443, and 8080.
 
 Privileged users (root and sudoers) can send TCP SYN packets and don’t need to complete the TCP 3-way handshake even if the port is open, as shown in the figure below. Unprivileged users have no choice but to complete the 3-way handshake if the port is open.
 
-![](./img/Pasted%20image%2020230830093621.png)
+![](img/Pasted%20image%2020230830093621.png)
 
 We will run `nmap -PS -sn MACHINE_IP/24` to scan the target VM subnet. As we can see in the output below, we were able to discover five hosts.
 
@@ -325,7 +325,7 @@ Nmap done: 256 IP addresses (5 hosts up) scanned in 17.38 seconds
 
 Let’s take a closer look at what happened behind the scenes by looking at the network traffic on Wireshark in the figure below. Technically speaking, since we didn’t specify any TCP ports to use in the TCP ping scan, Nmap used common ports; in this case, it is TCP port 80. Any service listening on port 80 is expected to reply, indirectly indicating that the host is online.
 
-![](./img/Pasted%20image%2020230830093709.png)
+![](img/Pasted%20image%2020230830093709.png)
 
 ## **TCP ACK Ping**
 
@@ -335,7 +335,7 @@ By default, port 80 is used. The syntax is similar to TCP SYN ping. `-PA` sh
 
 The following figure shows that any TCP packet with an ACK flag should get a TCP packet back with an RST flag set. The target responds with the RST flag set because the TCP packet with the ACK flag is not part of any ongoing connection. The expected response is used to detect if the target host is up.
 
-![](./img/Pasted%20image%2020230830093803.png)
+![](img/Pasted%20image%2020230830093803.png)
 
 In this example, we run `sudo nmap -PA -sn MACHINE_IP/24` to discover the online hosts on the target’s subnet. We can see that the TCP ACK ping scan detected five hosts as up.
 
@@ -357,7 +357,7 @@ Nmap done: 256 IP addresses (5 hosts up) scanned in 29.89 seconds
 
 If we peek at the network traffic as shown in the figure below, we will discover many packets with the ACK flag set and sent to port 80 of the target systems. Nmap sends each packet twice. The systems that don’t respond are offline or inaccessible.
 
-![](./img/Pasted%20image%2020230830093854.png)
+![](img/Pasted%20image%2020230830093854.png)
 
 ## UDP Ping
 
@@ -365,9 +365,9 @@ Finally, we can use UDP to discover if the host is online. Contrary to TCP SYN
 
 In the following figure, we see a UDP packet sent to an open UDP port and not triggering any response. However, sending a UDP packet to any closed UDP port can trigger a response indirectly indicating that the target is online.
 
-![](./img/Pasted%20image%2020230830093940.png)
+![](img/Pasted%20image%2020230830093940.png)
 
-![](./img/Pasted%20image%2020230830094009.png)
+![](img/Pasted%20image%2020230830094009.png)
 
 The syntax to specify the ports is similar to that of TCP SYN ping and TCP ACK ping; Nmap uses `-PU` for UDP ping. In the following example, we use a UDP scan, and we discover five live hosts.
 
@@ -389,7 +389,7 @@ Nmap done: 256 IP addresses (5 hosts up) scanned in 9.20 seconds
 
 Let’s inspect the UDP packets generated. In the following Wireshark screenshot, we notice Nmap sending UDP packets to UDP ports that are most likely closed. The image below shows that Nmap uses an uncommon UDP port to trigger an ICMP destination unreachable (port unreachable) error.
 
-![](./img/Pasted%20image%2020230830094140.png)
+![](img/Pasted%20image%2020230830094140.png)
 
 ## Masscan
 

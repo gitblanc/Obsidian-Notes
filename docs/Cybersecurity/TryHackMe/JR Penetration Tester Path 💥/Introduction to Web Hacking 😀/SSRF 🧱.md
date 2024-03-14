@@ -13,21 +13,21 @@ A successful SSRF attack can result in any of the following: 
 - Reveal authentication tokens/credentials.
 
 # SSRF Examples
-![](./img/Pasted%20image%2020230824143204.png)
-![](./img/Pasted%20image%2020230824143940.png)
-![](./img/Pasted%20image%2020230824144008.png)
+![](img/Pasted%20image%2020230824143204.png)
+![](img/Pasted%20image%2020230824143940.png)
+![](img/Pasted%20image%2020230824144008.png)
 
 # Finding an SSRF
 Potential SSRF vulnerabilities can be spotted in web applications in many different ways. Here is an example of four common places to look:
 
 **When a full URL is used in a parameter in the address bar:**
-![](./img/Pasted%20image%2020230824144437.png)
+![](img/Pasted%20image%2020230824144437.png)
 **A hidden field in a form:**
-![](./img/Pasted%20image%2020230824144455.png)
+![](img/Pasted%20image%2020230824144455.png)
 **A partial URL such as just the hostname:**
-![](./img/Pasted%20image%2020230824144512.png)
+![](img/Pasted%20image%2020230824144512.png)
 **Or perhaps only the path of the URL:**
-![](./img/Pasted%20image%2020230824144529.png)
+![](img/Pasted%20image%2020230824144529.png)
 Some of these examples are easier to exploit than others, and this is where a lot of trial and error will be required to find a working payload.
 
 If working with a blind SSRF where no output is reflected back to you, you'll need to use an external HTTP logging tool to monitor requests such as requestbin.com, your own HTTP server or Burp Suite's Collaborator client.
@@ -56,31 +56,31 @@ Begin by clicking the **Start Machine** button to launch the **Acme IT Suppor
 
 First, create a customer account and sign in. Once you've signed in, visit [https://LAB_WEB_URL.p.thmlabs.com/customers/new-account-page](https://LAB_WEB_URL.p.thmlabs.com/customers/new-account-page) to view the new avatar selection feature. By viewing the page source of the avatar form, you'll see the avatar form field value contains the path to the image. The background-image style can confirm this in the above DIV element as per the screenshot below:
 
-![](./img/Pasted%20image%2020230824145107.png)
+![](img/Pasted%20image%2020230824145107.png)
 
 If you choose one of the avatars and then click the **Update Avatar** button, you'll see the form change and, above it, display your currently selected avatar.
 
-![](./img/Pasted%20image%2020230824145128.png)
+![](img/Pasted%20image%2020230824145128.png)
 
 Viewing the page source will show your current avatar is displayed using the data URI scheme, and the image content is base64 encoded as per the screenshot below.
 
-![](./img/Pasted%20image%2020230824145147.png)
+![](img/Pasted%20image%2020230824145147.png)
 
 Now let's try making the request again but changing the avatar value to **private** in hopes that the server will access the resource and get past the IP address block. To do this, firstly, right-click on one of the radio buttons on the avatar form and select **Inspect**:
 
-![](./img/Pasted%20image%2020230824145204.png)
+![](img/Pasted%20image%2020230824145204.png)
 
 **And then edit the value of the radio button to private:**
 
-![](./img/Pasted%20image%2020230824145223.png)
+![](img/Pasted%20image%2020230824145223.png)
 
 Be sure to select the avatar you edited and then click the **Update Avatar** button. Unfortunately, it looks like the web application has a deny list in place and has blocked access to the /private endpoint.
 
-![](./img/Pasted%20image%2020230824145241.png)
+![](img/Pasted%20image%2020230824145241.png)
 
 As you can see from the error message, the path cannot start with /private but don't worry, we've still got a trick up our sleeve to bypass this rule. We can use a directory traversal trick to reach our desired endpoint. Try setting the avatar value to **x/../private**
 
-![](./img/Pasted%20image%2020230824145257.png)
+![](img/Pasted%20image%2020230824145257.png)
 
 You'll see we have now bypassed the rule, and the user updated the avatar. This trick works because when the web server receives the request for **x/../private**, it knows that the **../** string means to move up a directory that now translates the request to just **/private**.
 

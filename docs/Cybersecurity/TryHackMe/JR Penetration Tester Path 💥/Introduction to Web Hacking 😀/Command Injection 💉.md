@@ -23,7 +23,7 @@ This vulnerability exists because applications often use functions in programmin
 
 In this code snippet, the application takes data that a user enters in an input field named `$title` to search a directory for a song title. Let’s break this down into a few simple steps.
 
-![](./img/Pasted%20image%2020230825084803.png)
+![](img/Pasted%20image%2020230825084803.png)
 
 **1.** The application stores MP3 files in a directory contained on the operating system.
 
@@ -39,7 +39,7 @@ An attacker could abuse this application by injecting their own commands for the
 
 Abusing applications in this way can be possible no matter the programming language the application uses. As long as the application processes and executes it, it can result in command injection. For example, this code snippet below is an application written in Python.
 
-![](./img/Pasted%20image%2020230825084825.png)
+![](img/Pasted%20image%2020230825084825.png)
 
 Note, you are not expected to understand the syntax behind these applications. However, for the sake of reason, I have outlined the steps of how this Python application works as well.
 
@@ -118,7 +118,7 @@ In PHP, many functions interact with the operating system to execute commands vi
 
 Take this snippet below as an example. Here, the application will only accept and process numbers that are inputted into the form. This means that any commands such as `whoami` will not be processed.
 
-![](./img/Pasted%20image%2020230825090211.png)
+![](img/Pasted%20image%2020230825090211.png)
 
 1. The application will only accept a specific pattern of characters (the digits  0-9)
 2. The application will then only proceed to execute this data which is all numerical.
@@ -130,7 +130,7 @@ Sanitising any input from a user that an application uses is a great way to prev
 
 In the snippet below, the `filter_input` [PHP function](https://www.php.net/manual/en/function.filter-input.php) is used to check whether or not any data submitted via an input form is a number or not. If it is not a number, it must be invalid input.
 
-![](./img/Pasted%20image%2020230825090300.png)
+![](img/Pasted%20image%2020230825090300.png)
 
 ## Bypassing Filters
 
@@ -138,7 +138,7 @@ Applications will employ numerous techniques in filtering and sanitising data th
 
 When executed, although the data given will be in a different format than what is expected, it can still be interpreted and will have the same result.
 
-![](./img/Pasted%20image%2020230825090325.png)
+![](img/Pasted%20image%2020230825090325.png)
 
 # Practical example
 ## Command Injection Cheatsheet

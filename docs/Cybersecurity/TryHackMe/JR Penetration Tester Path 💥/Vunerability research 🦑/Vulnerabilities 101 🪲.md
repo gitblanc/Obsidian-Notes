@@ -11,7 +11,7 @@ An enormous part of penetration testing is knowing the skills and resources for 
 
 # Introduction to Vulnerabilities
 
-![](Pasted%20image%2020230831105854.png)
+![](img/Pasted%20image%2020230831105854.png)
 A vulnerability in cybersecurity is defined as a weakness or flaw in the design, implementation or behaviours of a system or application. An attacker can exploit these weaknesses to gain access to unauthorised information or perform unauthorised actions. The term “vulnerability” has many definitions by cybersecurity bodies. However, there is minimal variation between them all.
 
 For example, NIST defines a vulnerability as “weakness in an information system, system security procedures, internal controls, or implementation that could be exploited or triggered by a threat source”.
@@ -120,7 +120,7 @@ These CVEs have the formatting of `CVE-YEAR-IDNUMBER`. For example, the vulnera
 
 NVD allows you to see all the CVEs that have been confirmed, using filters by category and month of submission. For example, it is three days into August; there have already been 223 new CVEs submitted to this database.
 
-![](Pasted%20image%2020230831114406.png)
+![](img/Pasted%20image%2020230831114406.png)
 
 While this website helps keep track of new vulnerabilities, it is not great when searching for vulnerabilities for a specific application or scenario.
 
@@ -130,7 +130,7 @@ While this website helps keep track of new vulnerabilities, it is not great when
 
 We can use Exploit-DB to look for snippets of code (known as Proof of Concepts) that are used to exploit a specific vulnerability.
 
-![](Pasted%20image%2020230831114431.png)
+![](img/Pasted%20image%2020230831114431.png)
 
 # An Example of Finding a Vulnerability
 In this task, I’m going to demonstrate the process of finding one minor vulnerability, coupled with some research of the vulnerability databases leading to a much more valuable vulnerability and exploit ultimately.
@@ -141,10 +141,10 @@ Applications and software usually have a version number. This information is usu
 
 For example, in the screenshot below, we can see that the name and version number of this application is “**Apache Tomcat 9.0.17**”
 
-![](Pasted%20image%2020230831115243.png)
+![](img/Pasted%20image%2020230831115243.png)
 
 With this information in hand, let’s use the search filter on Exploit-DB to look for any exploits that may apply to “**Apache Tomcat 9.0.17**”.
 
-![](Pasted%20image%2020230831115302.png)
+![](img/Pasted%20image%2020230831115302.png)
 
 Great! After searching Exploit-DB, there are a total of five exploits that may be useful to us for this specific version of the application.

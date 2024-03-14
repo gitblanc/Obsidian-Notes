@@ -42,7 +42,7 @@
 ![](./img/Pasted%20image%2020230126154807.png|500)
 
 ## JSP
-![](./img/Pasted%20image%2020230126155427.png)
+![](img/Pasted%20image%2020230126155427.png)
 ==Pregunta examen==: los servlets resuelven los problemas de presentación
 
 ## Elementos de JSP
@@ -98,7 +98,7 @@
 	- @ComponentScan: se debe escanear la aplicación en busca de componentes implementados
 
 ## Elementos principales
-![](./img/Pasted%20image%2020230130113352.png)
+![](img/Pasted%20image%2020230130113352.png)
 
 - Todos son componentes
 - Algunos añaden funcionalidad al componente
@@ -150,12 +150,12 @@
 # 6 Febrero 2023 🪬
 - Un interceptor en un Servlet personalizado.
 - LocaleChangeInterceptor: interceptor que permite definir un parámetro para realizar cambios de localización:
-![](./img/Pasted%20image%2020230206114901.png)
+![](img/Pasted%20image%2020230206114901.png)
 - ISO 639 -> especificación del código de idiomas (es, en, it...)
 - Se suelen usar varios ficheros de propiedades, uno por cada localización:
-![](./img/Pasted%20image%2020230206115504.png)
+![](img/Pasted%20image%2020230206115504.png)
 - **antmatcher**: especificación url en los cuales pueden aparecer comodines (un sólo asterisco es un único nivel, dos son todos los niveles que queramos)
-![](./img/Pasted%20image%2020230206121920.png)
+![](img/Pasted%20image%2020230206121920.png)
 
 ---
 # 13 Febrero 2022 🍎

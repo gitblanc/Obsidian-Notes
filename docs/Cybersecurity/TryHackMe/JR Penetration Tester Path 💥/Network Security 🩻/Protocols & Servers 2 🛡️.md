@@ -18,7 +18,7 @@ From a security perspective, we always need to think about what we aim to protec
 
 Knowing that we are protecting the Confidentiality, Integrity, and Availability (CIA), an attack aims to cause Disclosure, Alternation, and Destruction (DAD). The figures below reflect this.
 
-![](./img/Pasted%20image%2020230831135912.png)
+![](img/Pasted%20image%2020230831135912.png)
 
 These attacks directly affect the security of the system. For instance, network packet capture violates confidentiality and leads to the disclosure of information. A successful password attack can also lead to disclosure. On the other hand, a Man-in-the-Middle (MITM) attack breaks the system’s integrity as it can alter the communicated data. We will focus on these three attacks in this room as these attacks are integral to the protocol design and server implementation.
 
@@ -80,7 +80,7 @@ In the terminal output above, we have removed the unimportant packets to help yo
 
 We could also use Wireshark to achieve the same results. In the Wireshark window below, we can see that we have entered `pop` in the filter field. Now that we've filtered just the traffic we're interested in, we can see a username and password were captured.
 
-![](./img/Pasted%20image%2020230831140945.png)
+![](img/Pasted%20image%2020230831140945.png)
 
 In brief, any protocol that uses cleartext communication is susceptible to this kind of attack. The only requirement for this attack to succeed is to have access to a system between the two communicating systems. This attack requires attention; the mitigation lies in adding an encryption layer on top of any network protocol. In particular, Transport Layer Security (TLS) has been added to HTTP, FTP, SMTP, POP3, IMAP and many others. For remote access, Telnet has been replaced by the secure alternative Secure Shell (SSH).
 
@@ -89,7 +89,7 @@ If you would like to learn more about Wireshark, we recommend the [Wireshark 10
 # Man-in-the-Middle (MITM) Attack
 A Man-in-the-Middle (MITM) attack occurs when a victim (A) believes they are communicating with a legitimate destination (B) but is unknowingly communicating with an attacker (E). In the figure below, we have A requesting the transfer of $20 to M; however, E altered this message and replaced the original value with a new one. B received the modified messaged and acted on it.
 
-![](./img/Pasted%20image%2020230831141658.png)
+![](img/Pasted%20image%2020230831141658.png)
 
 This attack is relatively simple to carry out if the two parties do not confirm the authenticity and integrity of each message. In some cases, the chosen protocol does not provide secure authentication or integrity checking; moreover, some protocols have inherent insecurities that make them susceptible to this kind of attack.
 
@@ -104,7 +104,7 @@ SSL (Secure Sockets Layer) started when the world wide web started to see new ap
 
 The common protocols we have covered so far send the data in cleartext; this makes it possible for anyone with access to the network to capture, save and analyze the exchanged messages. The image below shows the ISO/OSI network layers. The protocols we have covered so far in this room are on the application layer. Consider the ISO/OSI model; we can add encryption to our protocols via the presentation layer. Consequently, data will be presented in an encrypted format (ciphertext) instead of its original form.
 
-![](./img/Pasted%20image%2020230831142133.png)
+![](img/Pasted%20image%2020230831142133.png)
 
 Because of the close relation between SSL and TLS, one might be used instead of the other. However, TLS is more secure than SSL, and it has practically replaced SSL. We could have dropped SSL and just written TLS instead of SSL/TLS, but we will continue to mention the two to avoid any ambiguity because the term SSL is still in wide use. However, we can expect all modern servers to be using TLS.
 
@@ -131,7 +131,7 @@ HTTPS requires an additional step to encrypt the traffic. The new step takes pla
 
 To establish an SSL/TLS connection, the client needs to perform the proper handshake with the server. Based on [RFC 6101](https://datatracker.ietf.org/doc/html/rfc6101), the SSL connection establishment will look like the figure below.
 
-![](./img/Pasted%20image%2020230831142204.png)
+![](img/Pasted%20image%2020230831142204.png)
 
 After establishing a TCP connection with the server, the client establishes an SSL/TLS connection, as shown in the figure above. The terms might look complicated depending on your knowledge of cryptography, but we can simplify the four steps as:
 
@@ -146,7 +146,7 @@ Consequently, once an SSL/TLS handshake has been established, HTTP requests an
 
 As a final note, for SSL/TLS to be effective, especially when browsing the web over HTTPS, we rely on public certificates signed by certificate authorities trusted by our systems. In other words, when we browse to [TryHackMe](https://tryhackme.com/) over HTTPS, our browser expects the TryHackMe web server to provide a signed certificate from a trusted certificate authority, as per the example below. This way, our browser ensures that it is communicating with the correct server, and a MITM attack cannot occur.
 
-![](./img/Pasted%20image%2020230831142240.png)
+![](img/Pasted%20image%2020230831142240.png)
 
 In the figure above, we can see the following information:
 
@@ -190,7 +190,7 @@ In the example above, we issued the command `ssh mark@10.10.246.105`. Then, onc
 
 Note that if this is the first time we connect to this system, we will need to confirm the fingerprint of the SSH server’s public key to avoid man-in-the-middle (MITM) attacks. As explained earlier, MITM takes place when a malicious party, E, situates itself between A and B, and communicates with A, pretending to be B, and communicates with B pretending to be A, while A and B think that they are communicating directly with each other. In the case of SSH, we don’t usually have a third party to check if the public key is valid, so we need to do this manually. This attack is shown in the image below.
 
-![](./img/Pasted%20image%2020230831143230.png)
+![](img/Pasted%20image%2020230831143230.png)
 
 We can use SSH to transfer files using SCP (Secure Copy Protocol) based on the SSH protocol. An example of the syntax is as follows: `scp mark@10.10.246.105:/home/mark/archive.tar.gz ~`. This command will copy a file named `archive.tar.gz` from the remote system located in the `/home/mark` directory to `~`, i.e., the root of the home directory of the currently logged-in user.
 

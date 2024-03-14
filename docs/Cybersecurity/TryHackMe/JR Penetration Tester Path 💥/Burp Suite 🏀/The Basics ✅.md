@@ -47,13 +47,13 @@ The first time you open Burp Suite, you may be presented with a screen of traini
 
 If not (and in any subsequent sessions regardless), you will be presented with the slightly daunting Burp Dashboard:
 
-![](./img/Pasted%20image%2020230825104239.png)
+![](img/Pasted%20image%2020230825104239.png)
 
 Don't be alarmed if this doesn't make too much sense just yet -- it soon will!
 
 In short, the Dashboard interface is split into four quadrants:
 
-![](./img/Pasted%20image%2020230825104318.png)
+![](img/Pasted%20image%2020230825104318.png)
 
 - The Tasks menu allows us to define background tasks that Burp Suite will run whilst we use the application. The Pro version would also allow us to create on-demand scans. The default "Live Passive Crawl" (which automatically logs the pages we visit) will be more than suitable for our uses in this module.
 - The Event log tells us what Burp Suite is doing (e.g. starting the Proxy), as well as information about any connections that we are making through Burp.
@@ -61,26 +61,26 @@ In short, the Dashboard interface is split into four quadrants:
 - The Advisory section gives more information about the vulnerabilities found, as well as references and suggested remediations. These could then be exported into a report.  
     Clicking on one of the example vulnerabilities in the Issue Activity section gives us an idea of what this looks like:
 
-![](./img/Pasted%20image%2020230825104343.png)
+![](img/Pasted%20image%2020230825104343.png)
 
 Throughout the various tabs and windows of Burp Suite, you will find little help icons: a question mark within a circle.
 
 Clicking on these will open a new window containing help for the section, for example:
 
-![](./img/Pasted%20image%2020230825104415.png)
+![](img/Pasted%20image%2020230825104415.png)
 
 These are extremely useful if you're ever stuck and don't know what a feature does, so make good use of them!
 
 # Navigation
 Navigating around the Burp Suite GUI by default is done entirely using the top menu bars:
 
-![](./img/Pasted%20image%2020230825104650.png)
+![](img/Pasted%20image%2020230825104650.png)
 
 These allow you to switch between modules (along the top row of the attached image). If the selected module has more than one sub-tab, then these can be selected using a second menu bar which appears directly below the original bar (the bottom row of the image above). It is common for module-specific settings to be provided in these sub-tabs (as is the case with the Proxy Options above).  
 
 Tabs can also be popped out into separate windows should you prefer to view multiple tabs separately. This can be done by clicking "Window" in the application menu at the top of the screen, then choosing to "Detach" tabs:
 
-![](./img/Pasted%20image%2020230825104707.png)
+![](img/Pasted%20image%2020230825104707.png)
 
 These can be reattached in the same way.  
 
@@ -111,17 +111,17 @@ Many options are provided as both global settings (which are used to set a basel
 
 The Settings window can be accessed by clicking on the "Settings" button in the top navigation bar:
 
-![](./img/Pasted%20image%2020230825104912.png)
+![](img/Pasted%20image%2020230825104912.png)
 
 Clicking this button opens a separate settings window, as shown below:
 
-![](./img/Pasted%20image%2020230825104927.png)
+![](img/Pasted%20image%2020230825104927.png)
 
 On the left hand side we have a menu containing options to change the scope between all settings, user settings, and project settings, as well as search for specific settings, or select them by category.  
 
 It should be noted that many of the tools in Burp Suite offer shortcuts to specific categories of settings. For example, the Proxy tool includes a "Proxy settings" button which will open the Settings window directly to the section relevant to the proxy.
 
-![](./img/Pasted%20image%2020230825104945.png)
+![](img/Pasted%20image%2020230825104945.png)
 
 The Search feature of the settings page is a relatively new addition; however, it is absolutely invaluable, allowing us to search for settings using keywords.
 
@@ -141,7 +141,7 @@ There are a few configurations we need to make before we can use the proxy, but 
 _**Note:** You do not need to follow along with this task -- just read the information and understand what the Proxy is used for._  
 
 When we first open the Proxy tab, Burp gives us a bunch of useful information and background reading. This information is well worth reading through; however, the real magic happens after we capture a request:
-![](./img/Pasted%20image%2020230825105714.png)
+![](img/Pasted%20image%2020230825105714.png)
 
 With the proxy active, a request was made to the TryHackMe website. At this point, the browser making the request will hang, and the request will appear in the Proxy tab giving us the view shown in the screenshot above. We can then choose to forward or drop the request (potentially after editing it). We can also do various other things here, such as sending the request to one of the other Burp modules, copying it as a cURL command, saving it to a file, and many others.
 
@@ -155,7 +155,7 @@ Burp will also capture and log WebSocket communication, which, again, can be exc
 
 The logs can be viewed by going to the "HTTP history" and "WebSockets history" sub-tabs:
 
-![](./img/Pasted%20image%2020230825105739.png)
+![](img/Pasted%20image%2020230825105739.png)
 
 It is worth noting that any requests captured here can be sent to other tools in the framework by right-clicking them and choosing "Send to...". For example, we could take a previous HTTP request that has already been proxied to the target and send it to [Repeater](https://tryhackme.com/room/burpsuiterepeater).  
 
@@ -167,7 +167,7 @@ These options give us a _lot_ of control over how the proxy operates, so it is a
 
 For example, the proxy will not intercept server responses by default unless we explicitly ask it to on a per-request basis. We can override the default setting by selecting the "Intercept responses based on the following rules" checkbox and picking one or more rules. The "`Or` `Request` `Was Intercepted`" rule is good for catching responses to all requests that were intercepted by the proxy:
 
-![](./img/Pasted%20image%2020230825105759.png)
+![](img/Pasted%20image%2020230825105759.png)
 
 The "`And` `URL` `Is in target scope`" is another very good default rule; we will look at scoping later in this room.  
 
@@ -199,20 +199,20 @@ If you are using your own machine, you can download FoxyProxy Basic [here](https
 
 Once installed, a button should appear at the top right of the screen which allows you to access your proxy configurations:
 
-![](./img/Pasted%20image%2020230825110234.png)
+![](img/Pasted%20image%2020230825110234.png)
 
 There are no default configurations, so let's click on the "Options" button to create our Burp Proxy config.
 
 This will open a new browser tab with the FoxyProxy options page:
 
-![](./img/Pasted%20image%2020230825110252.png)
+![](img/Pasted%20image%2020230825110252.png)
 
 Click on the "Add" button and fill in the following values:
 - Title: `Burp` (or anything else you prefer)
 - Proxy IP: `127.0.0.1`
 - Port: `8080`
 
-![](./img/Pasted%20image%2020230825110313.png)
+![](img/Pasted%20image%2020230825110313.png)
 
 Now click "Save".
 
@@ -220,17 +220,17 @@ Now click "Save".
 
 When you click on the FoxyProxy icon at the top of the screen, you will see that that there is a configuration available for Burp:
 
-![](./img/Pasted%20image%2020230825110329.png)
+![](img/Pasted%20image%2020230825110329.png)
 
 If we click on the "Burp" config, our browser will start directing all of our traffic through `127.0.0.1:8080`. **Be warned**: if Burp Suite is not running, your browser will not be able to make any requests when this config is activated!  
 
 Activate this config now -- the icon in the menu should change to indicate that we have a proxy running:
 
-![](./img/Pasted%20image%2020230825110348.png)
+![](img/Pasted%20image%2020230825110348.png)
 
 Next, switch over to Burp Suite and make sure the Intercept is On:
 
-![](./img/Pasted%20image%2020230825110418.png)
+![](img/Pasted%20image%2020230825110418.png)
 
 Now, try accessing the homepage for `http://10.10.81.3/` in Firefox. Your browser should hang, and your proxy will populate with the request headers.
 
@@ -245,7 +245,7 @@ Great, so we can intercept HTTP traffic -- what's next?
 
 Unfortunately, there's a problem. What happens if we navigate to a site with TLS enabled? For example, `https://google.com/`:
 
-![](./img/Pasted%20image%2020230825110737.png)
+![](img/Pasted%20image%2020230825110737.png)
 
 We get an error.
 
@@ -257,13 +257,13 @@ First, with the proxy activated head to [http://burp/cert](http://burp/cert); th
 
 Next, type `about:preferences` into your Firefox search bar and press enter; this takes us to the FireFox settings page. Search the page for "certificates" and we find the option to "View Certificates":
 
-![](./img/Pasted%20image%2020230825110804.png)
+![](img/Pasted%20image%2020230825110804.png)
 
 Clicking the "View Certificates" button allows us to see all of our trusted CA certificates. We can register a new certificate for Portswigger by pressing "Import" and selecting the file that we just downloaded.
 
 In the menu that pops up, select "Trust this CA to identify websites", then click Ok:
 
-![](./img/Pasted%20image%2020230825110825.png)
+![](img/Pasted%20image%2020230825110825.png)
 
 We should now be free to visit any TLS enabled sites that we wish!
 
@@ -280,7 +280,7 @@ Whilst this may seem ideal, it is not as commonly used as the process detailed i
 
 We can start the Burp Browser with the "Open Browser" button in the proxy tab:
 
-![](./img/Pasted%20image%2020230825111318.png)
+![](img/Pasted%20image%2020230825111318.png)
 
 A Chromium window will now pop up. Any requests we make in this will go through the proxy.
 
@@ -290,7 +290,7 @@ _**Note:** There are many settings to do with the Burp Browser in the Project op
 
 If we are running on Linux as the root user (as we are with the AttackBox), Burp Suite is unable to create a sandbox environment to start the Burp Browser in, causing it to throw an error and die:
 
-![](./img/Pasted%20image%2020230825111348.png)
+![](img/Pasted%20image%2020230825111348.png)
 
 There are two simple solutions to this:
 - **The smart option:** We could create a new user and run Burp Suite under a low privilege account.
@@ -318,7 +318,7 @@ The Scope Settings window allows us to control what we are targeting by either _
 
 We just chose to disable _logging_ for out of scope traffic, but the proxy will still be intercepting everything. To turn this off, we need to go into the Proxy Options sub-tab and select "`And` `URL` `Is in target scope`" from the Intercept Client Requests section:
 
-![](./img/Pasted%20image%2020230825111555.png)
+![](img/Pasted%20image%2020230825111555.png)
 
 With this option selected, the proxy will completely ignore anything that isn't in the scope, vastly cleaning up the traffic coming through Burp.
 

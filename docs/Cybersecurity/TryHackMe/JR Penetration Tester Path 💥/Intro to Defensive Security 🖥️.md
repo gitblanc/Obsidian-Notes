@@ -24,12 +24,12 @@ A _Security Operations Center_ (SOC) is a team of cyber security professionals t
 
 Security operations cover various tasks to ensure protection; one such task is threat intelligence.
 
-![](./img/Pasted%20image%2020230823214725.png)
+![](img/Pasted%20image%2020230823214725.png)
 
 #### Threat Intelligence
 
 In this context, _intelligence_ refers to information you gather about actual and potential enemies. A _threat_ is any action that can disrupt or adversely affect a system. Threat intelligence aims to gather information to help the company better prepare against potential adversaries. The purpose would be to achieve a _threat-informed defense_. Different companies have different adversaries. Some adversaries might seek to steal customer data from a mobile operator; however, other adversaries are interested in halting the production in a petroleum refinery. Example adversaries include a nation-state cyber army working for political reasons and a ransomware group acting for financial purposes. Based on the company (target), we can expect adversaries.
-![](./img/Pasted%20image%2020230823214959.png)
+![](img/Pasted%20image%2020230823214959.png)
 Intelligence needs data. Data has to be collected, processed, and analyzed. Data collection is done from local sources such as network logs and public sources such as forums. Processing of data aims to arrange them into a format suitable for analysis. The analysis phase seeks to find more information about the attackers and their motives; moreover, it aims to create a list of recommendations and actionable steps.
 
 Learning about your adversaries allows you to know their tactics, techniques, and procedures. As a result of threat intelligence, we identify the threat actor (adversary), predict their activity, and consequently, we will be able to mitigate their attacks and prepare a response strategy.
@@ -55,7 +55,7 @@ The four major phases of the incident response process are:
 2. Detection and Analysis: The team has the necessary resources to detect any incident; moreover, it is essential to further analyze any detected incident to learn about its severity.
 3. Containment, Eradication, and Recovery: Once an incident is detected, it is crucial to stop it from affecting other systems, eliminate it, and recover the affected systems. For instance, when we notice that a system is infected with a computer virus, we would like to stop (contain) the virus from spreading to other systems, clean (eradicate) the virus, and ensure proper system recovery.
 4. Post-Incident Activity: After successful recovery, a report is produced, and the learned lesson is shared to prevent similar future incidents.
-![](./img/Pasted%20image%2020230823215234.png)
+![](img/Pasted%20image%2020230823215234.png)
 
 #### Malware Analysis
 
@@ -64,7 +64,7 @@ Malware stands for malicious software. _Software_ refers to programs, documents,
 - Virus is a piece of code (part of a program) that attaches itself to a program. It is designed to spread from one computer to another; moreover, it works by altering, overwriting, and deleting files once it infects a computer. The result ranges from the computer becoming slow to unusable.
 - Trojan Horse is a program that shows one desirable function but hides a malicious function underneath. For example, a victim might download a video player from a shady website that gives the attacker complete control over their system.
 - Ransomware is a malicious program that encrypts the user’s files. Encryption makes the files unreadable without knowing the encryption password. The attacker offers the user the encryption password if the user is willing to pay a “ransom.”
- ![](./img/Pasted%20image%2020230823215640.png)
+ ![](img/Pasted%20image%2020230823215640.png)
  Malware analysis aims to learn about such malicious programs using various means:
 
 1. Static analysis works by inspecting the malicious program without running it. Usually, this requires solid knowledge of assembly language (processor’s instruction set, i.e., computer’s fundamental instructions).

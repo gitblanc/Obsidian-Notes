@@ -59,7 +59,7 @@ return Arrays.sort({a, b, c})[0];
 
 ## Ejercicio Diseño Reloj
 
-![Créditos a Dani](./img/Pasted%20image%2020240208154910.png)
+![Créditos a Dani](img/Pasted%20image%2020240208154910.png)
 
 ## Genericidad
 
@@ -67,7 +67,7 @@ return Arrays.sort({a, b, c})[0];
 
 ### Genericidad acotada
 
-![](./img/Pasted%20image%2020240208160029.png)
+![](img/Pasted%20image%2020240208160029.png)
 
 La diferencia es que en el primero el T pueden ser de la clase Personas y además esas Personas han de implementar la interfaz IComparable, mientras que en el segundo, el vector está compuesto exclusivamente de IComparable.
 
@@ -114,7 +114,7 @@ Puedes llamar a -> v[0].compareTo(...) exclusivamente
 
 # Expresiones Lambda
 
-![](./img/Pasted%20image%2020240222153315.png)
+![](img/Pasted%20image%2020240222153315.png)
 
 ```cs
 IDictionary > calculadoraFuncional = new Dictionary>(); calculadoraFuncional["add"] = (op1, op2) => op1 + op2; calculadoraFuncional["sub"] = (op1, op2) => op1 - op2; calculadoraFuncional["mul"] = (op1, op2) => op1 * op2; calculadoraFuncional["div"] = (op1, op2) => op1 / op2; calculadoraFuncional[“add"](3, 4); // 7 
@@ -127,25 +127,25 @@ foreach (var cond in condiciones) { if (!cond(str)) {…} }
 
 # Bucles y Recursividad
 
-![](./img/Pasted%20image%2020240222155753.png)
+![](img/Pasted%20image%2020240222155753.png)
 
-![](./img/Pasted%20image%2020240222160334.png)
+![](img/Pasted%20image%2020240222160334.png)
 
 ## Combinador de Punto Fijo
 
-![](./img/Pasted%20image%2020240222160542.png)
+![](img/Pasted%20image%2020240222160542.png)
 
-![](./img/Pasted%20image%2020240222160601.png)
+![](img/Pasted%20image%2020240222160601.png)
 
 # Currificación
 
-![](./img/Pasted%20image%2020240222164215.png)
+![](img/Pasted%20image%2020240222164215.png)
 
-![](./img/Pasted%20image%2020240222164648.png)
+![](img/Pasted%20image%2020240222164648.png)
 
 # Aplicación parcial
 
-![](./img/Pasted%20image%2020240222164929.png)
+![](img/Pasted%20image%2020240222164929.png)
 
 # Transparencia referencial
 

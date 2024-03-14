@@ -299,24 +299,24 @@ Type below command in the command prompt. 
 
 **Step 2:**   
 Go into the directory where your ‘.py’ file is located.
-![](./img/Pasted%20image%2020221107103500.png)
+![](img/Pasted%20image%2020221107103500.png)
 **Step 3:**   
 Press the shift⇧ button and simultaneously right-click at the same location. You will get the below box.
-![](./img/Pasted%20image%2020221107103518.png)
+![](img/Pasted%20image%2020221107103518.png)
 **Step 4:**   
 Click on ‘Open PowerShell window here’.
-![](./img/Pasted%20image%2020221107103543.png)
+![](img/Pasted%20image%2020221107103543.png)
 You will get a window shown below.
-![](./img/Pasted%20image%2020221107103604.png)
+![](img/Pasted%20image%2020221107103604.png)
 **Step 5:**   
 Type the command given below in that PowerShell window.   
 `pyinstaller --onefile -w 'filename.py'`
 
 Here the ‘.py’ file name is ‘1’.   
 See below:
-![](./img/Pasted%20image%2020221107103639.png)
+![](img/Pasted%20image%2020221107103639.png)
 In case you get an error at this point in the PowerShell window like this:
-![](./img/Pasted%20image%2020221107103705.png)
+![](img/Pasted%20image%2020221107103705.png)
 The correction while typing the above command:   
 ```
 .\pyinstaller --onefile -w 'filename.py'
@@ -324,22 +324,22 @@ The correction while typing the above command: 
 #For any missing package:
 pyinstaller --hidden-import 'package_name' --onefile 'filename.py'
 ```
-![](./img/Pasted%20image%2020221107103800.png)
+![](img/Pasted%20image%2020221107103800.png)
 **Step 6:**   
 After typing the command ‘Hit the Enter’.   
 It will take some time to finish the process depending on the size of the file and how big is your project.   
 After the processing has been finished, the window will look as below:
-![](./img/Pasted%20image%2020221107103818.png)
+![](img/Pasted%20image%2020221107103818.png)
 **Step 7:**   
 See the directory it should look like this:
-![](./img/Pasted%20image%2020221107103834.png)
+![](img/Pasted%20image%2020221107103834.png)
 ‘build’ folder and ‘1.spec’ is of no use. You can delete these if you want, it will not affect your ‘.exe’ file.
-![](./img/Pasted%20image%2020221107103858.png)
+![](img/Pasted%20image%2020221107103858.png)
 **Step 8:**   
 Open ‘dist’ folder above. Here you will get your ‘.exe’ file.
-![](./img/Pasted%20image%2020221107103916.png)
+![](img/Pasted%20image%2020221107103916.png)
 Right-click on the file and check the properties.
-![](./img/Pasted%20image%2020221107103934.png)
+![](img/Pasted%20image%2020221107103934.png)
 
 ---
 # How to use Github from python

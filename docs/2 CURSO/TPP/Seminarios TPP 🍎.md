@@ -2,9 +2,9 @@
 
 ## Ejercicio 1
 
-![](./img/Pasted%20image%2020240202191146.png)
+![](img/Pasted%20image%2020240202191146.png)
 
-![](./img/Pasted%20image%2020240202191207.png)
+![](img/Pasted%20image%2020240202191207.png)
 
 ````cs
 public class Person implements Comparable{
@@ -41,7 +41,7 @@ public class Main{
 
 ## Ejercicio 2
 
-![](./img/Pasted%20image%2020240202193709.png)
+![](img/Pasted%20image%2020240202193709.png)
 
 ````cs
 void Sort(Comparable[] vector, Comparador c) { 

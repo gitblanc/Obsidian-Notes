@@ -11,7 +11,7 @@ The robots.txt file is a document that tells search engines which pages they are
 
 ## Favicon
 The favicon is a small icon displayed in the browser's address bar or tab used for branding a website.
-![](./img/Pasted%20image%2020230824084726.png)
+![](img/Pasted%20image%2020230824084726.png)
 Sometimes when frameworks are used to build a website, a favicon that is part of the installation gets leftover, and if the website developer doesn't replace this with a custom one, this can give us a clue on what framework is in use. OWASP host a database of common framework icons that you can use to check against the targets favicon [https://wiki.owasp.org/index.php/OWASP_favicon_database](https://wiki.owasp.org/index.php/OWASP_favicon_database). Once we know the framework stack, we can use external resources to discover more about it (see next section).
 
 **Practical Exercise:**
@@ -19,7 +19,7 @@ On the AttackBox, open firefox and enter the url [https://static-labs.tryhackm
 
 Viewing the page source you'll see line six contains a link to the images/favicon.ico file.
 
-![](./img/Pasted%20image%2020230824085121.png)
+![](img/Pasted%20image%2020230824085121.png)
 
 If you run the following command on the AttackBox, it will download the favicon and get its md5 hash value which you can then lookup on the  
 [https://wiki.owasp.org/index.php/OWASP_favicon_database](https://wiki.owasp.org/index.php/OWASP_favicon_database).
@@ -37,7 +37,7 @@ Take a look at the sitemap.xml file on the Acme IT Support website to see if the
 ## HTTP Headers
 
 When we make requests to the web server, the server returns various HTTP headers. These headers can sometimes contain useful information such as the webserver software and possibly the programming/scripting language in use. In the below example, we can see the webserver is NGINX version 1.18.0 and runs PHP version 7.4.3. Using this information, we could find vulnerable versions of software being used. Try running the below curl command against the web server, where the **-v** switch enables verbose mode, which will output the headers (there might be something interesting!).
-![](./img/Pasted%20image%2020230824085644.png)
+![](img/Pasted%20image%2020230824085644.png)
 
 ## Framework Stack
 Once you've established the framework of a website, either from the above favicon example or by looking for clues in the page source such as comments, copyright notices or credits, you can then locate the framework's website. From there, we can learn more about the software and other information, possibly leading to more content we can discover.

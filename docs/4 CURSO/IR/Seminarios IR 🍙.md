@@ -2,7 +2,7 @@
 
 ## Ejercicio 1: Identificar los stakeholders
 
-![](./img/Pasted%20image%2020230915161926.png)
+![](img/Pasted%20image%2020230915161926.png)
 
 - S1 Todo el personal médico
 - S2 Personal de administración
@@ -20,7 +20,7 @@
 
 ## Ejercicio 2
 
-![](./img/Pasted%20image%2020230915164018.png)
+![](img/Pasted%20image%2020230915164018.png)
 
 |Funcionalidad|S1|S2|S3|S4|S5...|
 |---|---|---|---|---|---|
@@ -101,16 +101,16 @@ Ir marcando los stakeholders interesados con una x.
 
 ## Ejercicio Caso de uso
 
-![](./img/IMG_5474.jpeg)
+![](img/IMG_5474.jpeg)
 
-![](./img/IMG_5475.jpeg)
+![](img/IMG_5475.jpeg)
 
 
 # Seminario 4. Diagramas de estado
 
-![](./img/IMG_5701.jpeg)
+![](img/IMG_5701.jpeg)
 
-![](./img/IMG_5704.jpeg)
+![](img/IMG_5704.jpeg)
 
 # Seminario 5. Verificación y validación
 

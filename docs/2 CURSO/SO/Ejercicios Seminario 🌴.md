@@ -1,2 +1,2 @@
-![](./img/prioridades.png)
-![](./img/operaciones.png)
+![](img/prioridades.png)
+![](img/operaciones.png)

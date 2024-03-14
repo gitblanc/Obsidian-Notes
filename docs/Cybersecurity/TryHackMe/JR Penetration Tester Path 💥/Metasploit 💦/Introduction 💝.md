@@ -541,7 +541,7 @@ The output of the `search` command provides an overview of each returned module
 
 Another essential piece of information returned is in the “rank” column. Exploits are rated based on their reliability. The table below provides their respective descriptions.
 
-![](./img/Pasted%20image%2020230901190047.png)
+![](img/Pasted%20image%2020230901190047.png)
 Source: [https://github.com/rapid7/metasploit-framework/wiki/Exploit-Ranking](https://github.com/rapid7/metasploit-framework/wiki/Exploit-Ranking)
 
 
@@ -693,7 +693,7 @@ Parameters you will often use are:
 
 - **RHOSTS:** “Remote host”, the IP address of the target system. A single IP address or a network range can be set. This will support the CIDR (Classless Inter-Domain Routing) notation (/24, /16, etc.) or a network range (10.10.10.x – 10.10.10.y). You can also use a file where targets are listed, one target per line using file:/path/of/the/target_file.txt, as you can see below.
 
-![](./img/Pasted%20image%2020230901191514.png)
+![](img/Pasted%20image%2020230901191514.png)
 
 - **RPORT:** “Remote port”, the port on the target system the vulnerable application is running on.
 - **PAYLOAD:** The payload you will use with the exploit.

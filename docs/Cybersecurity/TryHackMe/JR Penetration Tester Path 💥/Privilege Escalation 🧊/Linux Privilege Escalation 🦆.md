@@ -56,7 +56,7 @@ The “ps” command provides a few useful options.
 - `ps -A`: View all running processes
 - `ps axjf`: View process tree (see the tree formation until `ps axjf` is run below)
 
-![](./img/Pasted%20image%2020230905123508.png)
+![](img/Pasted%20image%2020230905123508.png)
 
 - `ps aux`: The `aux` option will show processes for all users (a), display the user that launched the process (u), and show processes that are not attached to a terminal (x). Looking at the ps aux command output, we can have a better understanding of the system and potential vulnerabilities.
 
@@ -64,7 +64,7 @@ The “ps” command provides a few useful options.
 
 The `env` command will show environmental variables.
 
-![](./img/Pasted%20image%2020230905123539.png)
+![](img/Pasted%20image%2020230905123539.png)
 
 The PATH variable may have a compiler or a scripting language (e.g. Python) that could be used to run code on the target system or leveraged for privilege escalation.
 
@@ -78,7 +78,7 @@ One of the common commands used in Linux is probably `ls`.
 
 While looking for potential privilege escalation vectors, please remember to always use the `ls` command with the `-la` parameter. The example below shows how the “secret.txt” file can easily be missed using the `ls` or `ls -l` commands.
 
-![](./img/Pasted%20image%2020230905123610.png)
+![](img/Pasted%20image%2020230905123610.png)
 
 ## Id
 
@@ -86,21 +86,21 @@ The `id` command will provide a general overview of the user’s privilege leve
 
 It is worth remembering that the `id` command can also be used to obtain the same information for another user as seen below.
 
-![](./img/Pasted%20image%2020230905123634.png)
+![](img/Pasted%20image%2020230905123634.png)
 
 ## /etc/passwd
 
 Reading the `/etc/passwd` file can be an easy way to discover users on the system.
 
-![](./img/Pasted%20image%2020230905123654.png)
+![](img/Pasted%20image%2020230905123654.png)
 
 While the output can be long and a bit intimidating, it can easily be cut and converted to a useful list for brute-force attacks.
 
-![](./img/Pasted%20image%2020230905123711.png)
+![](img/Pasted%20image%2020230905123711.png)
 
 Remember that this will return all users, some of which are system or service users that would not be very useful. Another approach could be to grep for “home” as real users will most likely have their folders under the “home” directory.
 
-![](./img/Pasted%20image%2020230905123728.png)
+![](img/Pasted%20image%2020230905123728.png)
 
 ## history
 
@@ -110,11 +110,11 @@ Looking at earlier commands with the `history` command can give us some idea a
 
 The target system may be a pivoting point to another network. The `ifconfig` command will give us information about the network interfaces of the system. The example below shows the target system has three interfaces (eth0, tun0, and tun1). Our attacking machine can reach the eth0 interface but can not directly access the two other networks.
 
-![](./img/Pasted%20image%2020230905123754.png)
+![](img/Pasted%20image%2020230905123754.png)
 
 This can be confirmed using the `ip route` command to see which network routes exist.
 
-![](./img/Pasted%20image%2020230905123811.png)
+![](img/Pasted%20image%2020230905123811.png)
 
 ## netstat
 
@@ -124,29 +124,29 @@ Following an initial check for existing interfaces and network routes, it is wor
 - `netstat -at` or `netstat -au` can also be used to list TCP or UDP protocols respectively.
 - `netstat -l`: list ports in “listening” mode. These ports are open and ready to accept incoming connections. This can be used with the “t” option to list only ports that are listening using the TCP protocol (below)
 
-![](./img/Pasted%20image%2020230905123832.png)
+![](img/Pasted%20image%2020230905123832.png)
 
 - `netstat -s`: list network usage statistics by protocol (below) This can also be used with the `-t` or `-u` options to limit the output to a specific protocol.
 
-![](./img/Pasted%20image%2020230905123852.png)
+![](img/Pasted%20image%2020230905123852.png)
 
 - `netstat -tp`: list connections with the service name and PID information.
 
-![](./img/Pasted%20image%2020230905123912.png)
+![](img/Pasted%20image%2020230905123912.png)
 
 This can also be used with the `-l` option to list listening ports (below)
 
-![](./img/Pasted%20image%2020230905123928.png)
+![](img/Pasted%20image%2020230905123928.png)
 
 We can see the “PID/Program name” column is empty as this process is owned by another user.
 
 Below is the same command run with root privileges and reveals this information as 2641/nc (netcat)
 
-![](./img/Pasted%20image%2020230905123947.png)
+![](img/Pasted%20image%2020230905123947.png)
 
 - `netstat -i`: Shows interface statistics. We see below that “eth0” and “tun0” are more active than “tun1”.
 
-![](./img/Pasted%20image%2020230905124011.png)
+![](img/Pasted%20image%2020230905124011.png)
 
 The `netstat` usage you will probably see most often in blog posts, write-ups, and courses is `netstat -ano` which could be broken down as follows;
 
@@ -154,7 +154,7 @@ The `netstat` usage you will probably see most often in blog posts, write-ups, 
 - `-n`: Do not resolve names
 - `-o`: Display timers
 
-![](./img/Pasted%20image%2020230905124027.png)
+![](img/Pasted%20image%2020230905124027.png)
 
 ## find Command
 
@@ -178,11 +178,11 @@ Below are some useful examples for the “find” command.
 
 This command can also be used with (+) and (-) signs to specify a file that is larger or smaller than the given size.
 
-![](./img/Pasted%20image%2020230905124051.png)
+![](img/Pasted%20image%2020230905124051.png)
 
 The example above returns files that are larger than 100 MB. It is important to note that the “find” command tends to generate errors which sometimes makes the output hard to read. This is why it would be wise to use the “find” command with “-type f 2>/dev/null” to redirect errors to “/dev/null” and have a cleaner output (below).
 
-![](./img/Pasted%20image%2020230905124109.png)
+![](img/Pasted%20image%2020230905124109.png)
 
 Folders and files that can be written to or executed from:
 
@@ -192,7 +192,7 @@ Folders and files that can be written to or executed from:
 
 The reason we see three different “find” commands that could potentially lead to the same result can be seen in the manual document. As you can see below, the perm parameter affects the way “find” works.
 
-![](./img/Pasted%20image%2020230905124129.png)
+![](img/Pasted%20image%2020230905124129.png)
 
 - `find / -perm -o x -type d 2>/dev/null` : Find world-executable folders
 
@@ -274,7 +274,7 @@ Some applications will not have a known exploit within this context. Such an app
 
 In this case, we can use a "hack" to leak information leveraging a function of the application. As you can see below, Apache2 has an option that supports loading alternative configuration files (`-f` : specify an alternate ServerConfigFile).
 
-![](./img/Pasted%20image%2020230905163359.png)
+![](img/Pasted%20image%2020230905163359.png)
 
 Loading the `/etc/shadow` file using this option will result in an error message that includes the first line of the `/etc/shadow` file.
 
@@ -282,7 +282,7 @@ Loading the `/etc/shadow` file using this option will result in an error message
 
 On some systems, you may see the LD_PRELOAD environment option.
 
-![](./img/Pasted%20image%2020230905163427.png)
+![](img/Pasted%20image%2020230905163427.png)
 
 LD_PRELOAD is a function that allows any program to use shared libraries. This [blog post](https://rafalcieslak.wordpress.com/2013/04/02/dynamic-linker-tricks-using-ld_preload-to-cheat-inject-features-and-investigate-programs/) will give you an idea about the capabilities of LD_PRELOAD. If the "env_keep" option is enabled we can generate a shared library which will be loaded and executed before the program is run. Please note the LD_PRELOAD option will be ignored if the real user ID is different from the effective user ID.  
 
@@ -312,7 +312,7 @@ We can save this code as shell.c and compile it using gcc into a shared object f
 
 `gcc -fPIC -shared -o shell.so shell.c -nostartfiles`
 
-![](./img/Pasted%20image%2020230905163505.png)
+![](img/Pasted%20image%2020230905163505.png)
 
 We can now use this shared object file when launching any program our user can run with sudo. In our case, Apache2, find, or almost any of the programs we can run with sudo can be used.
 
@@ -322,7 +322,7 @@ We need to run the program by specifying the LD_PRELOAD option, as follows;
 
 This will result in a shell spawn with root privileges.
 
-![](./img/Pasted%20image%2020230905163523.png)
+![](img/Pasted%20image%2020230905163523.png)
 
 To get the hash of another user when we do not have root access:
 - Check it here: https://gtfobins.github.io/gtfobins/nano/
@@ -343,13 +343,13 @@ You will notice these files have an “s” bit set showing their special permis
   
 `find / -type f -perm -04000 -ls 2>/dev/null` will list files that have SUID or SGID bits set.
 
-![](./img/Pasted%20image%2020230905165321.png)
+![](img/Pasted%20image%2020230905165321.png)
 
 A good practice would be to compare executables on this list with GTFOBins ([https://gtfobins.github.io](https://gtfobins.github.io/)). Clicking on the SUID button will filter binaries known to be exploitable when the SUID bit is set (you can also use this link for a pre-filtered list [https://gtfobins.github.io/#+suid](https://gtfobins.github.io/#+suid)).
 
 The list above shows that nano has the SUID bit set. Unfortunately, GTFObins does not provide us with an easy win. Typical to real-life privilege escalation scenarios, we will need to find intermediate steps that will help us leverage whatever minuscule finding we have.
 
-![](./img/Pasted%20image%2020230905165346.png)
+![](img/Pasted%20image%2020230905165346.png)
 
 The SUID bit set for the nano text editor allows us to create, edit and read files using the file owner’s privilege. Nano is owned by root, which probably means that we can read and edit files at a higher privilege level than our current user has. At this stage, we have two basic options for privilege escalation: reading the `/etc/shadow` file or adding our user to `/etc/passwd`.  
   
@@ -361,11 +361,11 @@ We see that the nano text editor has the SUID bit set by running the `find / -ty
   
 `nano /etc/shadow` will print the contents of the `/etc/shadow` file. We can now use the unshadow tool to create a file crackable by John the Ripper. To achieve this, unshadow needs both the `/etc/shadow` and `/etc/passwd` files.
 
-![](./img/Pasted%20image%2020230905165405.png)
+![](img/Pasted%20image%2020230905165405.png)
 
 The unshadow tool’s usage can be seen below; `unshadow passwd.txt shadow.txt > passwords.txt`
 
-![](./img/Pasted%20image%2020230905165435.png)
+![](img/Pasted%20image%2020230905165435.png)
 
 With the correct wordlist and a little luck, John the Ripper can return one or several passwords in cleartext. For a more detailed room on John the Ripper, you can visit [https://tryhackme.com/room/johntheripper0](https://tryhackme.com/room/johntheripper0)
 
@@ -373,15 +373,15 @@ The other option would be to add a new user that has root privileges. This would
 
 We will need the hash value of the password we want the new user to have. This can be done quickly using the openssl tool on Kali Linux.
 
-![](./img/Pasted%20image%2020230905165502.png)
+![](img/Pasted%20image%2020230905165502.png)
 
 We will then add this password with a username to the `/etc/passwd` file.
 
-![](./img/Pasted%20image%2020230905165519.png)
+![](img/Pasted%20image%2020230905165519.png)
 
 Once our user is added (please note how `root:/bin/bash` was used to provide a root shell) we will need to switch to this user and hopefully should have root privileges.
 
-![](./img/Pasted%20image%2020230905165535.png)
+![](img/Pasted%20image%2020230905165535.png)
 
 - To find the password I did:
 	- Find this: https://gtfobins.github.io/gtfobins/base64/
@@ -400,23 +400,23 @@ The capabilities man page provides detailed information on its usage and options
   
 We can use the `getcap` tool to list enabled capabilities.
 
-![](./img/Pasted%20image%2020230905172607.png)
+![](img/Pasted%20image%2020230905172607.png)
 
 When run as an unprivileged user, `getcap -r /` will generate a huge amount of errors, so it is good practice to redirect the error messages to /dev/null.  
   
 Please note that neither vim nor its copy has the SUID bit set. This privilege escalation vector is therefore not discoverable when enumerating files looking for SUID.
 
-![](./img/Pasted%20image%2020230905172624.png)
+![](img/Pasted%20image%2020230905172624.png)
 
 GTFObins has a good list of binaries that can be leveraged for privilege escalation if we find any set capabilities.  
   
 We notice that vim can be used with the following command and payload:
 
-![](./img/Pasted%20image%2020230905172641.png)
+![](img/Pasted%20image%2020230905172641.png)
 
 This will launch a root shell as seen below;
 
-![](./img/Pasted%20image%2020230905172658.png)
+![](img/Pasted%20image%2020230905172658.png)
 
 - To elevate privileges I found:
 	- https://gtfobins.github.io/gtfobins/vim/#capabilities
@@ -435,11 +435,11 @@ Any user can read the file keeping system-wide cron jobs under `/etc/crontab`
   
 While CTF machines can have cron jobs running every minute or every 5 minutes, you will more often see tasks that run daily, weekly or monthly in penetration test engagements.
 
-![](./img/Pasted%20image%2020230905174142.png)
+![](img/Pasted%20image%2020230905174142.png)
 
 You can see the `backup.sh` script was configured to run every minute. The content of the file shows a simple script that creates a backup of the prices.xls file.
 
-![](./img/Pasted%20image%2020230905174203.png)
+![](img/Pasted%20image%2020230905174203.png)
 
 As our current user can access this script, we can easily modify it to create a reverse shell, hopefully with root privileges.  
   
@@ -451,11 +451,11 @@ Two points to note;
 
 The file should look like this;
 
-![](./img/Pasted%20image%2020230905174226.png)
+![](img/Pasted%20image%2020230905174226.png)
 
 We will now run a listener on our attacking machine to receive the incoming connection.
 
-![](./img/Pasted%20image%2020230905174243.png)
+![](img/Pasted%20image%2020230905174243.png)
 
 Crontab is always worth checking as it can sometimes lead to easy privilege escalation vectors. The following scenario is not uncommon in companies that do not have a certain cyber security maturity level:
 
@@ -466,18 +466,18 @@ Crontab is always worth checking as it can sometimes lead to easy privilege esca
 
 This change management issue leads to a potential exploit leveraging cron jobs.
 
-![](./img/Pasted%20image%2020230905174305.png)
+![](img/Pasted%20image%2020230905174305.png)
 
 The example above shows a similar situation where the antivirus.sh script was deleted, but the cron job still exists.  
 If the full path of the script is not defined (as it was done for the backup.sh script), cron will refer to the paths listed under the PATH variable in the /etc/crontab file. In this case, we should be able to create a script named “antivirus.sh” under our user’s home folder and it should be run by the cron job.  
 
 The file on the target system should look familiar:
 
-![](./img/Pasted%20image%2020230905174337.png)
+![](img/Pasted%20image%2020230905174337.png)
 
 The incoming reverse shell connection has root privileges:
 
-![](./img/Pasted%20image%2020230905174353.png)
+![](img/Pasted%20image%2020230905174353.png)
 
 # Privilege Escalation: PATH
 
@@ -485,7 +485,7 @@ If a folder for which your user has write permission is located in the path, you
   
 Typically the PATH will look like this:
 
-![](./img/Pasted%20image%2020230906004153.png)
+![](img/Pasted%20image%2020230906004153.png)
 
 If we type “thm” to the command line, these are the locations Linux will look in for an executable called thm. The scenario below will give you a better idea of how this can be leveraged to increase our privilege level. As you will see, this depends entirely on the existing configuration of the target system, so be sure you can answer the questions below before trying this.
 
@@ -496,7 +496,7 @@ If we type “thm” to the command line, these are the locations Linux will loo
 
 For demo purposes, we will use the script below:
 
-![](./img/Pasted%20image%2020230906004211.png)
+![](img/Pasted%20image%2020230906004211.png)
 
 ```c
 #include<unistd.h>
@@ -512,11 +512,11 @@ This script tries to launch a system binary called “thm” but the example can
 
 We compile this into an executable and set the SUID bit.
 
-![](./img/Pasted%20image%2020230906004230.png)
+![](img/Pasted%20image%2020230906004230.png)
 
 Our user now has access to the “path” script with SUID bit set.
 
-![](./img/Pasted%20image%2020230906004248.png)
+![](img/Pasted%20image%2020230906004248.png)
 
 Once executed “path” will look for an executable named “thm” inside folders listed under PATH.
 
@@ -524,17 +524,17 @@ If any writable folder is listed under PATH we could create a binary named thm u
 
 A simple search for writable folders can done using the “`find / -writable 2>/dev/null`” command. The output of this command can be cleaned using a simple cut and sort sequence.
 
-![](./img/Pasted%20image%2020230906004307.png)
+![](img/Pasted%20image%2020230906004307.png)
 
 Some CTF scenarios can present different folders but a regular system would output something like we see above.
 
 Comparing this with PATH will help us find folders we could use.
 
-![](./img/Pasted%20image%2020230906004328.png)
+![](img/Pasted%20image%2020230906004328.png)
 
 We see a number of folders under /usr, thus it could be easier to run our writable folder search once more to cover subfolders.
 
-![](./img/Pasted%20image%2020230906004349.png)
+![](img/Pasted%20image%2020230906004349.png)
 
 An alternative could be the command below.
 
@@ -546,17 +546,17 @@ Unfortunately, subfolders under /usr are not writable
 
 The folder that will be easier to write to is probably /tmp. At this point because /tmp is not present in PATH so we will need to add it. As we can see below, the “`export PATH=/tmp:$PATH`” command accomplishes this.
 
-![](./img/Pasted%20image%2020230906004426.png)
+![](img/Pasted%20image%2020230906004426.png)
 
 At this point the path script will also look under the /tmp folder for an executable named “thm”.
 
 Creating this command is fairly easy by copying /bin/bash as “thm” under the /tmp folder.
 
-![](./img/Pasted%20image%2020230906004443.png)
+![](img/Pasted%20image%2020230906004443.png)
 
 We have given executable rights to our copy of /bin/bash, please note that at this point it will run with our user’s right. What makes a privilege escalation possible within this context is that the path script runs with root privileges.
 
-![](./img/Pasted%20image%2020230906004501.png)
+![](img/Pasted%20image%2020230906004501.png)
 
 - To get the flag I did:
 	- `cd /home/murdoch`
@@ -579,21 +579,21 @@ Another vector that is more relevant to CTFs and exams is a misconfigured networ
   
 NFS (Network File Sharing) configuration is kept in the /etc/exports file. This file is created during the NFS server installation and can usually be read by users.
 
-![](./img/Pasted%20image%2020230906011405.png)
+![](img/Pasted%20image%2020230906011405.png)
 
 The critical element for this privilege escalation vector is the “no_root_squash” option you can see above. By default, NFS will change the root user to nfsnobody and strip any file from operating with root privileges. If the “no_root_squash” option is present on a writable share, we can create an executable with SUID bit set and run it on the target system.  
   
 We will start by enumerating mountable shares from our attacking machine.
 
-![](./img/Pasted%20image%2020230906011425.png)
+![](img/Pasted%20image%2020230906011425.png)
 
 We will mount one of the “no_root_squash” shares to our attacking machine and start building our executable.
 
-![](./img/Pasted%20image%2020230906011714.png)
+![](img/Pasted%20image%2020230906011714.png)
 
 As we can set SUID bits, a simple executable that will run /bin/bash on the target system will do the job.
 
-![](./img/Pasted%20image%2020230906011734.png)
+![](img/Pasted%20image%2020230906011734.png)
 
 ```c
 //Enter into nano and save as nfs.c
@@ -612,11 +612,11 @@ int main(void)
 
 Once we compile the code we will set the SUID bit.
 
-![](./img/Pasted%20image%2020230906011750.png)
+![](img/Pasted%20image%2020230906011750.png)
 
 You will see below that both files (nfs.c and nfs are present on the target system. We have worked on the mounted share so there was no need to transfer them).
 
-![](./img/Pasted%20image%2020230906011808.png)
+![](img/Pasted%20image%2020230906011808.png)
 
 Notice the nfs executable has the SUID bit set on the target system and runs with root privileges.
 

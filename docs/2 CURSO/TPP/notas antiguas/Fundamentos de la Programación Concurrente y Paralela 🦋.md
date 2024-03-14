@@ -41,8 +41,8 @@
 
 ---
 ## Procesos e hilos en .Net
-![](procesos%202.png)
-![](hilos.png)
+![](img/procesos%202.png)
+![](img/hilos.png)
 
 ---
 # Hilos
@@ -51,20 +51,20 @@
 Existen dos escenarios:
 - **Paralelización de tareas**: tareas independientes que pueden ser ejecutadas concurrentemente
 - **Paralelización de datos**: ejecutar una misma tarea que computa porciones de los mismos datos
-![](paralel%20algs.png)
+![](img/paralel%20algs.png)
 
 ---
 ## Creación explícita de hilos
 - La clase `Thread (System.Threading)` encapsula un hilo de ejecución de forma explícita
-![](crea%20hilo.png)
+![](img/crea%20hilo.png)
 
 ---
 ## Ejemplo de programa concurrente
-![](pc1.png)
-![](pc2.png)
-![](pc3.png)
-![](pc4.png)
-![](pc5.png)
+![](img/pc1.png)
+![](img/pc2.png)
+![](img/pc3.png)
+![](img/pc4.png)
+![](img/pc5.png)
 
 ---
 ## Condición de carrera
@@ -75,7 +75,7 @@ Existen dos escenarios:
 ---
 ## Parámetros
 - Se le pueden pasar parámetros a los hilos
-![](parameters.png)
+![](img/parameters.png)
 
 ---
 ## Variables libres (free)
@@ -84,12 +84,12 @@ Existen dos escenarios:
 - Las variables locales ya declaradas serán compartidas por todos los hilos
 
 - Las alternativas son el **paso de parámetros** y la **copia de variables**:
-![](vlibres%201.png)
-![](vlibres%202.png)
+![](img/vlibres%201.png)
+![](img/vlibres%202.png)
 
 ---
 ## Excepciones asíncronas
-![](exc%20asinc.png)
+![](img/exc%20asinc.png)
 
 ---
 ## Context Switch
@@ -109,8 +109,8 @@ NOTA: cuantos más hilos usemos a partir de cierto punto, peor será el rendimie
 	- **Limitar** el número máximo de hilos creados por un proceso
 	- Minimizar el número de hilos creados (**reutilizarlos**)
 
-![](thread%20pooling%201.png)
-![](thread%20pooling%202.png)
+![](img/thread%20pooling%201.png)
+![](img/thread%20pooling%202.png)
 
 ---
 ## Foreground y Background Threads
@@ -118,7 +118,7 @@ NOTA: cuantos más hilos usemos a partir de cierto punto, peor será el rendimie
 - Hilo **background** (daemon): aquel que será terminado cuando no queden hilos foreground en ejecución. Normalmente son proveedores de servicios
 	- No confundir con hilos secundarios o workers
 
-![](daemon.png)
+![](img/daemon.png)
 
 ---
 ## Inconvenientes del uso de hilos
@@ -144,25 +144,25 @@ NOTA: cuantos más hilos usemos a partir de cierto punto, peor será el rendimie
 - La propiedad `Status` permite consultar si una tarea ha empezado a ejecutarse, se ha terminado, cancelado, ...
 - La propiedad `Wait` espera hasta que la tarea termine
 
-![](crearcion.png)
+![](img/crearcion.png)
 - Método `Run`
 
-![](metodo%20run.png)
+![](img/metodo%20run.png)
 
 - Método `WaitAll`
-![](waitall.png)
+![](img/waitall.png)
 
 - Propiedad Result: se bloquea si la tarea no ha terminado
-![](result.png)
+![](img/result.png)
 
 - Cuando se usa una expresión lambda como código de una tarea, las variables libres que ya han sido creadas son compartidas por todas las tareas que la usen
-![](expr%20lambda.png)
+![](img/expr%20lambda.png)
 
 - state object
-![](state%20object.png)
+![](img/state%20object.png)
 
 - async state
-![](async%20state.png)
+![](img/async%20state.png)
 
 ---
 ## Composición de tareas
@@ -171,8 +171,8 @@ NOTA: cuantos más hilos usemos a partir de cierto punto, peor será el rendimie
 	- `Task.WhenAny`: espera de forma asíncrona a que terminen **uno o varios** objetos `Task` o `Task<TResult>`
 	- `Task.Delay`: crea un objeto `Task` que acaba tras un tiempo determinado
 
-![](composicion%201.png)
-![](composicion%202.png)
+![](img/composicion%201.png)
+![](img/composicion%202.png)
 
 ---
 ## Manejo de excepciones con tareas
@@ -184,7 +184,7 @@ NOTA: cuantos más hilos usemos a partir de cierto punto, peor será el rendimie
 	- WaitAny
 	- Result
 
-![](exceptions.png)
+![](img/exceptions.png)
 
 ---
 ## Paso asíncrono de mensajes
@@ -192,16 +192,16 @@ NOTA: cuantos más hilos usemos a partir de cierto punto, peor será el rendimie
 - En C# esto se obtiene mediante delegados
 - **Síncrono** -> secuencial
 
-![](sinc%20asinc.png)
+![](img/sinc%20asinc.png)
 
 - Paso síncrono de mensajes:
-![](sin%201.png)
-![](sin%202.png)
+![](img/sin%201.png)
+![](img/sin%202.png)
 
 - Paso asíncrono de mensajes:
 	- Existen las palabras reservadas `async` y `await`
 	- Forma antigua:
-	![](asinc%201.png)
+	![](img/asinc%201.png)
 	
 - Un método async normalmente devuelve una `Task` o `Task<Result>` que representa el trabajo que se está realizando en el método
 - Esta tarea tiene información que puede usar quien ha invocado el método asíncrono
@@ -214,10 +214,10 @@ NOTA: cuantos más hilos usemos a partir de cierto punto, peor será el rendimie
 - El operador `await` dice al compilador que el método `async` no puede continuar la ejecución hasta que el método asíncrono esperado no haya completado su ejecución
 - Si un método `async` no usa operadores `await`, se ejecuta como un método síncrono
 
-![](async%20await.png)
+![](img/async%20await.png)
 
 - De forma concurrente:
-![](concurrent%20async.png)
+![](img/concurrent%20async.png)
 
 ---
 ## Características de los métodos Async
@@ -238,7 +238,7 @@ NOTA: cuantos más hilos usemos a partir de cierto punto, peor será el rendimie
 - Una **sección crítica** es un fragmento de código que accede a un recurso compartido que no debe ser accedido concurrentemente por más de un hilo de ejecución
 - La sincronización de hilos debe usarse para conseguir la **exclusión mutua**
 
-![](exclusion%20mutua.png)
+![](img/exclusion%20mutua.png)
 
 ---
 ## Lock
@@ -252,15 +252,15 @@ lock(referencia){
 ````
 - Si otro hilo ejecuta el lock sobre un objeto que ya está bloqueado, entonces se podrá en modo de espera y se bloqueará hasta que el objeto sea liberado
 
-![](lock%201.png)
-![](lock%202.png)
-![](lock%203.png)
+![](img/lock%201.png)
+![](img/lock%202.png)
+![](img/lock%203.png)
 
 ---
 ## Asignaciones
 - No todas las asignaciones son atómicas: 
-![](asignaciones%201.png)
-![](asignaciones%202.png)
+![](img/asignaciones%201.png)
+![](img/asignaciones%202.png)
 
 - Por tanto, las asignaciones multihilo de una misma variable deben sincronizarse
 - Una alternativa es usar **lock**
@@ -271,10 +271,10 @@ lock(referencia){
 		- Decrement
 		- Exchange
 
-![](ejecucion%201.png)
+![](img/ejecucion%201.png)
 - Mostrará un valor Random, ya que se está accediendo al recurso compartido valor
 
-![](ejecucion%202.png)
+![](img/ejecucion%202.png)
 - Mostrará 0
 
 ---
@@ -287,7 +287,7 @@ lock(referencia){
 - Los **semáforos** permiten el acceso a n procesos (o hilos) concurrentes
 	- Se suelen usar para limitar la concurrencia (acotar un número máximo de hilos/procesos)
 
-![](mutex%201.png)
+![](img/mutex%201.png)
 
 ---
 ## Interbloqueo (deadlock)
@@ -296,14 +296,14 @@ lock(referencia){
 - El caso más común es el acceso a recursos compartidos
 
 Interbloqueo:
-![](deadlock%201.png)
+![](img/deadlock%201.png)
 
 Sin interbloqueo:
-![](deadlock%202.png)
+![](img/deadlock%202.png)
 
 ---
 ## Condición de espera circular
-![](cecirc.png)
+![](img/cecirc.png)
 
 ---
 ## Evitando el interbloqueo
@@ -314,7 +314,7 @@ Sin interbloqueo:
 
 - Podemos evitar la espera circular:
 	- De forma directa:
-	![](forma%20directa.png)
+	![](img/forma%20directa.png)
 	
 ---
 ## Thread Safety
@@ -323,13 +323,13 @@ Sin interbloqueo:
 
 ---
 ## Estructuras de datos Thread-Safe
-![](estructs%20thread%20safe.png)
+![](img/estructs%20thread%20safe.png)
 
 ---
 ## Implementación EEDD Thread-Safe
-![](eedd%20safe.png)
-![](eedd%20safe%202.png)
-![](eedd%20safe%203.png)
+![](img/eedd%20safe.png)
+![](img/eedd%20safe%202.png)
+![](img/eedd%20safe%203.png)
 - En este caso, se trata de una composición
 - La clase de la izquierda usa a la clase de la derecha.
 
@@ -376,7 +376,7 @@ Sin interbloqueo:
 	- **For** crea potencialmente un hilo a partir de un **índice** de comienzo y final, no incluyendo el final
 	- Añade una sincronización para que en la siguiente instrucción todos los hilos hayan finalizado
 
-![](data%20parallelism%20tpl.png)
+![](img/data%20parallelism%20tpl.png)
 
 ---
 ## Task parallelism con TPL
@@ -385,14 +385,14 @@ Sin interbloqueo:
 	- Crea un hilo por cada Action pasado
 	- Añade una sincronización para que en la siguiente instrucción todos los hilos hayan finalizado
 
-![](task%20parallelism.png)
+![](img/task%20parallelism.png)
 
 ---
 ## Parallel LINQ
 - Es una implementación paralela de LINQ
 - Comparación PLINQ - LINQ
-![](comp%20linq.png)
-![](linq%20plinq.png)
+![](img/comp%20linq.png)
+![](img/linq%20plinq.png)
 
 ---
 ## Ley de Amdahl

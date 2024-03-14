@@ -9,7 +9,7 @@ Limitations aside, Intruder is still very useful, so it is well worth learning t
 
 Let's take a look at the Intruder interface:
 
-![](./img/Pasted%20image%2020230827210423.png)
+![](img/Pasted%20image%2020230827210423.png)
 
 The first view we get is a relatively sparse interface that allows us to choose our target. Assuming that we sent a request in from the Proxy (by using `Ctrl + I` or right-clicking and selecting "Send to Intruder"), this should already be populated for us.
 
@@ -31,7 +31,7 @@ We will take a closer look at some of these sub-tabs in the upcoming tasks. For 
 When we are looking to perform an attack with Intruder, the first thing we need to do is look at _positions._ Positions tell Intruder where to insert payloads (which we will look at in upcoming tasks).  
 Let's switch over to the Positions sub-tab:
 
-![](./img/Pasted%20image%2020230828110250.png)
+![](img/Pasted%20image%2020230828110250.png)
 
 Notice that Burp will attempt to determine the most likely places we may wish to insert a payload automatically -- these are highlighted in green and surrounded by silcrows (`§`).
 
@@ -47,7 +47,7 @@ Here is a GIF demonstrating the process of adding, clearing, and automatically r
 Select the value of the "Host" header and add it as a position.
 Your editor should look something like this:
 
-![](./img/Pasted%20image%2020230828110348.png)
+![](img/Pasted%20image%2020230828110348.png)
 
 # Introduction
 
@@ -205,7 +205,7 @@ Switch over to the "Payloads" sub-tab; this is split into four sections:
     The second dropdown in this section allows us to select a "payload type". By default, this is a "Simple list" -- which, as the name suggests, lets us load in a wordlist to use. There are many other payload types available -- some common ones include: `Recursive Grep`, `Numbers`, and `Username generator`. It is well worth perusing this list to get a feel for the wide range of options available.  
 - **Payload Options** differ depending on the payload type we select for the current payload set. For example, a "Simple List" payload type will give us a box to add and remove payloads to and from the set:
 
-![](./img/Pasted%20image%2020230828112256.png)
+![](img/Pasted%20image%2020230828112256.png)
 
 - We can do this manually using the "Add" text box, paste lines in with "Paste", or "Load..." from a file. The "Remove" button removes the currently selected line _only_. The "Clear" button clears the entire list. Be warned: loading extremely large lists in here can cause Burp to crash! By contrast, the options for a `Numbers` payload type allows us to change options such as the range of numbers used and the base that we are working with.  
 - **Payload Processing** allows us to define rules to be applied to each payload in the set before being sent to the target. For example, we could capitalise every word or skip the payload if it matches a regex. You may not use this section particularly regularly, but you will definitely appreciate it when you _do_ need it!  
@@ -253,11 +253,11 @@ Looking in the "Positions" sub-tab, we should see that the auto-selection should
 
 We also need the Attack type to be "Pitchfork":
 
-![](./img/Pasted%20image%2020230828114829.png)
+![](img/Pasted%20image%2020230828114829.png)
 
 Let's switch over to the "Payloads" sub-tab. We should find that we have two payload sets available:
 
-![](./img/Pasted%20image%2020230828114849.png)
+![](img/Pasted%20image%2020230828114849.png)
 
 Although these aren't named, we know from the fact that the username field is to the left of the password field that the first position will be for usernames, and the second position will be for passwords.
 
@@ -287,7 +287,7 @@ The next most common solution is to use the _Length_ of the responses to identif
 
 We can sort by byte length by clicking on the header for the "Length" column:
 
-![](./img/Pasted%20image%2020230828114941.png)
+![](img/Pasted%20image%2020230828114941.png)
 
 As you may have guessed, the request with the shorter response length was made with the valid credentials -- a fact we can confirm by attempting to log in with the credentials used in the successful request.
 
@@ -363,7 +363,7 @@ Configure the positions the same way as we did for bruteforcing the support logi
 - Set the attack type to be "Pitchfork".
 - Clear all of the predefined positions and select _only_ the username and password form fields. The other two positions will be handled by our macro.
 
-![](./img/Pasted%20image%2020230828120232.png)
+![](img/Pasted%20image%2020230828120232.png)
 
 Now switch over to the Payloads sub-tab and load in the same username and password wordlists we used for the support login attack.
 
@@ -390,13 +390,13 @@ Now that we have a macro defined, we need to set Session Handling rules that def
 - Still in the "Sessions" sub-tab of Project Options, scroll up to the "Session Handling Rules" section and choose to "Add" a new rule.
 - A new window will pop up with two tabs in it: "Details" and "Scope". We are in the Details tab by default.
 
-![](./img/Pasted%20image%2020230828120413.png)
+![](img/Pasted%20image%2020230828120413.png)
 
 - Fill in an appropriate description, then switch over to the Scope tab.
 - In the "Tools Scope" section, deselect every checkbox other than Intruder -- we do not need this rule to apply anywhere else.
 - In the "URL Scope" section, choose "Use suite scope"; this will set the macro to only operate on sites that have been added to the global scope (as was discussed in [Burp Basics](https://tryhackme.com/room/burpsuitebasics)). If you have not set a global scope, keep the "Use custom scope" option as default and add `http://10.10.52.70/` to the scope in this section.
 
-![](./img/Pasted%20image%2020230828120431.png)
+![](img/Pasted%20image%2020230828120431.png)
 
 Again, here is a GIF showing these steps of the process:
 

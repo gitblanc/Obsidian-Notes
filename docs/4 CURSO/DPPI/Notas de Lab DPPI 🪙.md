@@ -4,6 +4,6 @@
 
 ## Documentación de proyectos
 
-![](./img/Pasted%20image%2020240130170845.png)
+![](img/Pasted%20image%2020240130170845.png)
 
 - Para documentar usar la norma UNE

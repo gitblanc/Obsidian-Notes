@@ -16,7 +16,7 @@ In the last room, as shown in the figure below, we focus on how Nmap can be us
 - Run select Nmap scripts
 - Save the scan results in various formats
 
-![](Pasted%20image%2020230831094103.png)
+![](../Vunerability%20research%20🦑/img/Pasted%20image%2020230831094103.png)
 
 This room will focus on these steps and how to execute them after the port scan.
 

