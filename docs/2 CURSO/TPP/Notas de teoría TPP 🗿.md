@@ -224,3 +224,14 @@ f(a) //aplicación parcial, para no tener que pasar el parámetro b, creando as�
 
 ![](img/Pasted%20image%2020240307160706.png)
 
+# Fundamentos de la programación paralela y concurrente
+
+![](img/Pasted%20image%2020240314154632.png)
+
+- La fecha del 1 indica que es asíncrono
+- La flecha del 2 indica que es síncrono
+
+## `async` y `await`
+
+![](img/Pasted%20image%2020240314155944.png)
+
