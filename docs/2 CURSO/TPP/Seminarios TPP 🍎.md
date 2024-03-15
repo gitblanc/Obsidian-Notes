@@ -168,3 +168,39 @@ operator_or = λcond1.λcond2. (cond1) (true) (cond2)
 operator_not = λcond. (cond) (false) (true)
 ```
 
+# Seminario 4. Funciones de primera clase
+
+![](Pasted%20image%2020240315194231.png)
+
+- Una estructura que se puede recorrer
+- Iterar
+
+## Funciones de orden superior
+
+*Nota: como ya están hechos en los laboratorios, vamos a hacer las llamadas a los métodos*
+
+## Ejercicio 1
+
+![](Pasted%20image%2020240315194303.png)
+
+```cs
+a.Filtrar(n => n % 2 == 0);
+a.Filtrar(n => esPrimo(n));
+```
+
+## Ejercicio 2
+
+![](Pasted%20image%2020240315194313.png)
+
+```cs
+a.Map(s => s.Length);
+a.Map(f => f.Substract(DateTime.Today));
+```
+
+## Ejercicio 3
+
+![](Pasted%20image%2020240315194324.png)
+
+```cs
+a.Reduce(1, (acu,x) => acu * x); //el 1 es el opcional
+```

@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "5fe0dc66b7209605",
+        "id": "0f47a841d335bedd",
         "type": "tabs",
         "children": [
           {
-            "id": "91ad91abb22d190d",
+            "id": "7dfd8165db85933d",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "docs/2 CURSO/TPP/Seminarios TPP 🍎.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -92,6 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "docs/2 CURSO/TPP/Seminarios TPP 🍎.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -130,19 +135,21 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "91ad91abb22d190d",
+  "active": "4851b110d405dd3c",
   "lastOpenFiles": [
+    "docs/2 CURSO/TPP/img/Pasted image 20240315194324.png",
+    "docs/2 CURSO/TPP/img/Pasted image 20240315194313.png",
+    "docs/2 CURSO/TPP/img/Pasted image 20240315194303.png",
+    "docs/2 CURSO/TPP/img/Pasted image 20240315194231.png",
+    "docs/2 CURSO/TPP/img/Pasted image 20240315192629.png",
+    "docs/2 CURSO/TPP/img/Pasted image 20240315191856.png",
+    "docs/2 CURSO/TPP/Seminarios TPP 🍎.md",
+    "docs/2 CURSO/TPP/img/Pasted image 20240315190952.png",
+    "docs/2 CURSO/TPP/img/Pasted image 20240315190803.png",
+    "docs/2 CURSO/TPP/Notas de teoría TPP 🗿.md",
     "docs/General data/img/banner.jpg",
     "docs/General data/img/Pasted image 20230310153038.png",
     "docs/General data/img/Pasted image 20230310152931.png",
-    "docs/General data/img/Pasted image 20230304142754.png",
-    "docs/General data/img/Pasted image 20230304140349.png",
-    "docs/General data/img/Pasted image 20230220231413.png",
-    "docs/General data/img/Pasted image 20230220231402.png",
-    "docs/General data/img/Pasted image 20230220231348.png",
-    "docs/General data/img/Pasted image 20230220231329.png",
-    "docs/General data/img/Pasted image 20230220231314.png",
-    "docs/General data/img/Pasted image 20230220231245.png",
     "docs/General data/img",
     "docs/General data/Mac useful commands and customizations .md",
     "docs/General data/Create Desktop shortcut of an AppImage 🌎.md",
@@ -175,8 +182,6 @@
     "docs/3 CURSO/1 semestre/SEW/3. XML 💎.md",
     "docs/3 CURSO/1 semestre/SEW/2. Lenguajes de Marcado 🖲.md",
     "docs/3 CURSO/1 semestre/SEW/1. Introducción 🙀.md",
-    "docs/3 CURSO/1 semestre/DS/2. Introducción al diseño, parte 1 🚖.md",
-    "docs/3 CURSO/1 semestre/DS/Herencia vs Composición 🧦.md",
-    "docs/3 CURSO/1 semestre/DS/1. Introducción 🛎.md"
+    "docs/3 CURSO/1 semestre/DS/2. Introducción al diseño, parte 1 🚖.md"
   ]
 }
