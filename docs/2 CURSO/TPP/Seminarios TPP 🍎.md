@@ -2,9 +2,9 @@
 
 ## Ejercicio 1
 
-![](img/Pasted%20image%2020240202191146.png)
+![](Pasted%20image%2020240202191146.png)
 
-![](img/Pasted%20image%2020240202191207.png)
+![](Pasted%20image%2020240202191207.png)
 
 ````cs
 public class Person implements Comparable{
@@ -41,7 +41,7 @@ public class Main{
 
 ## Ejercicio 2
 
-![](img/Pasted%20image%2020240202193709.png)
+![](Pasted%20image%2020240202193709.png)
 
 ````cs
 void Sort(Comparable[] vector, Comparador c) { 
@@ -108,15 +108,15 @@ int IndexOf<T>(T[] vector, T obj) where T : IIgualado<T>
 
 - Recordatorio de cálculo Lambda
 
-![](img/Pasted%20image%2020240301170956.png)
+![](Pasted%20image%2020240301170956.png)
 
 - Lenguaje universal:
 
-![](img/Pasted%20image%2020240301171026.png)
+![](Pasted%20image%2020240301171026.png)
 
 - Lógica  booleana:
 
-![](img/Pasted%20image%2020240301171053.png)
+![](Pasted%20image%2020240301171053.png)
 
 - Representan dos funciones que reciben dos parámetros y devuelven una función
 	- **true** devuelve el primer parámetro
@@ -129,7 +129,7 @@ false (3) (4) -> 4
 
 ## Ejercicio 1
 
-![](img/Pasted%20image%2020240301171613.png)
+![](Pasted%20image%2020240301171613.png)
 
 - El if else es equivalente al *operador ternario*
 - Recibirá 3 parámetros: `[  ]?[  ]:[  ]`
@@ -152,13 +152,13 @@ maximo = λnum1.λnum2. (num1 > num2) (num1) (num2) //la lógica booleana ya imp
 
 ## Ejercicio 2
 
-![](img/Pasted%20image%2020240301173855.png)
+![](Pasted%20image%2020240301173855.png)
 
 ```cs
 operator_and = λcond1.λcond2. (cond1) (cond2) (false)
 ```
 
-![](img/Pasted%20image%2020240301174553.png)
+![](Pasted%20image%2020240301174553.png)
 
 ```cs
 operator_or = λcond1.λcond2. (cond1) (true) (cond2)

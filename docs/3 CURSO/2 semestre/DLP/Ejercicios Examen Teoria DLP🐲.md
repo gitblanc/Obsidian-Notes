@@ -6,19 +6,19 @@ int x, y;
 y = x + (int) 3.14;
 ```
 - **Léxico**: encontrar todos los tokens
-![](img/slide_79.5d489f92.png)
+![](slide_79.5d489f92.png)
 - **Sintáctico**: una vez tenemos los tokens, mostrar el AST
-![](img/slide_81.36db6838.png)
+![](slide_81.36db6838.png)
 - **Semántico**: validar el AST
-![](img/slide_82.e7b1f579.png)
+![](slide_82.e7b1f579.png)
 - **Generación de código**: generar el código resultante
-![](img/slide_84.4acd89fd.png)
-![](img/slide_85.c066df4e.png)
+![](slide_84.4acd89fd.png)
+![](slide_85.c066df4e.png)
 
 # Léxico
 1. 
-![](img/Pasted%20image%2020230510111324.png)
-![](img/Pasted%20image%2020230510111357.png)
+![](Pasted%20image%2020230510111324.png)
+![](Pasted%20image%2020230510111357.png)
 
 2. Supóngase un programa:
 ````java
@@ -90,25 +90,25 @@ WS: [ \t\r\n]+ -> skip;
 # Sintáctico
 
 1. 
-![](img/Pasted%20image%2020230510111456.png)
-![](img/Pasted%20image%2020230510111521.png)
+![](Pasted%20image%2020230510111456.png)
+![](Pasted%20image%2020230510111521.png)
 
 2. 
-![](img/Pasted%20image%2020230510114029.png)
-![](img/Pasted%20image%2020230510114120.png)
+![](Pasted%20image%2020230510114029.png)
+![](Pasted%20image%2020230510114120.png)
 
 3. 
-![](img/Pasted%20image%2020230510114253.png)
-![](img/Pasted%20image%2020230510114310.png)
+![](Pasted%20image%2020230510114253.png)
+![](Pasted%20image%2020230510114310.png)
 
 ==NOTA: los ejs 2 y 3 son gramáticas equivalentes==
 
 4. Decir si es una sentencia válida
-![](img/Pasted%20image%2020230510114513.png) ![](img/Pasted%20image%2020230510114550.png)
+![](Pasted%20image%2020230510114513.png) ![](Pasted%20image%2020230510114550.png)
 Si realizamos las correspondientes transformaciones:
-![](img/WhatsApp%20Image%202023-05-13%20at%2012.38.03.jpeg)
-![](img/Pasted%20image%2020230510114612.png)
-![](img/Pasted%20image%2020230510114704.png)
+![](WhatsApp%20Image%202023-05-13%20at%2012.38.03.jpeg)
+![](Pasted%20image%2020230510114612.png)
+![](Pasted%20image%2020230510114704.png)
 
 5. Dada la siguiente gramática G: ==(IGUAL QUE EL 4)==
 ```g4
@@ -130,7 +130,7 @@ int a, b;
 double x;
 ```
 Si que es válida, pues se puede llegar a la cadena realizando transformaciones a partir de **programa**
-![](img/Pasted%20image%2020230510121004.png)
+![](Pasted%20image%2020230510121004.png)
 
 6. Dada la siguiente gramática, implementar un parser de la misma utilizando la técnica _recursiva descendente_.
 ```g4
@@ -227,7 +227,7 @@ public class RecursiveParser {
 ```
 
 7. Hacer una especificación ANTLR para un lenguaje con las siguientes características:
-![](img/Pasted%20image%2020230510121917.png)
+![](Pasted%20image%2020230510121917.png)
 
 Solución:
 - Primero implementamos el léxico del lenguaje:
@@ -260,11 +260,11 @@ expr:
 ```
 
 8. 
-![](img/Pasted%20image%2020230510123020.png)
-![](img/Pasted%20image%2020230510123048.png)
+![](Pasted%20image%2020230510123020.png)
+![](Pasted%20image%2020230510123048.png)
 
 9. Describir los nodos que hay y decir qué hijos tiene cada uno. Crear la gramática abstracta para el lenguaje del ejemplo.
-![](img/Pasted%20image%2020230510123227.png)
+![](Pasted%20image%2020230510123227.png)
 Solución:
 ```g4
 programa ⟶ defVariable* sentencia*
@@ -386,7 +386,7 @@ expr: IDENT
 	| expr '=' expr //asignación simple
 	
 ```
-![](img/Pasted%20image%2020230511163635.png)
+![](Pasted%20image%2020230511163635.png)
 
 12. Hacer una gramática en BNF de un lenguaje con las siguientes características:
 -   Un conjunto está formado por uno o más elementos entre paréntesis separados por comas.
@@ -598,7 +598,7 @@ print a + 2 == 3 && a / 5 != b;
 ```
 
 Para dicha entrada, el árbol concreto que correspondería con la interpretación que hará ANTLR de la misma tal y como están ordenadas las reglas sería el siguiente.
-![](img/gui_0450.6d3f4c4b.svg)
+![](gui_0450.6d3f4c4b.svg)
 15. Crear la gramática abstracta para el lenguaje del siguiente ejemplo:
 
 ```java
@@ -767,15 +767,15 @@ expr returns[Expression ast]
 # Semántico
 
 1. 
-![](img/Pasted%20image%2020230510111647.png)
+![](Pasted%20image%2020230510111647.png)
 
 2. 
-![](img/Pasted%20image%2020230510151010.png)
-![](img/Pasted%20image%2020230510151037.png)
-![](img/Pasted%20image%2020230510151109.png)
+![](Pasted%20image%2020230510151010.png)
+![](Pasted%20image%2020230510151037.png)
+![](Pasted%20image%2020230510151109.png)
 
 Solución:
-**(G):**![](img/Pasted%20image%2020230510151037.png)
+**(G):**![](Pasted%20image%2020230510151037.png)
 **(A):**
 `{expression.lvalue} dominio=booleano`
 
@@ -789,27 +789,27 @@ Solución:
 ```
 
 Versión a mano:
-![](img/WhatsApp%20Image%202023-05-14%20at%2015.16.59.jpeg)
-![](img/WhatsApp%20Image%202023-05-14%20at%2015.17.13.jpeg)
+![](WhatsApp%20Image%202023-05-14%20at%2015.16.59.jpeg)
+![](WhatsApp%20Image%202023-05-14%20at%2015.17.13.jpeg)
 
 3. 
-![](img/Pasted%20image%2020230510153801.png)
+![](Pasted%20image%2020230510153801.png)
 Solución:
-![](img/Pasted%20image%2020230510153921.png)
+![](Pasted%20image%2020230510153921.png)
 Versión a mano:
-![](img/WhatsApp%20Image%202023-05-14%20at%2015.57.18.jpeg)
-![](img/WhatsApp%20Image%202023-05-14%20at%2015.57.31%201.jpeg)
-![](img/WhatsApp%20Image%202023-05-14%20at%2015.58.01.jpeg)
-![](img/WhatsApp%20Image%202023-05-14%20at%2015.58.11.jpeg)
+![](WhatsApp%20Image%202023-05-14%20at%2015.57.18.jpeg)
+![](WhatsApp%20Image%202023-05-14%20at%2015.57.31%201.jpeg)
+![](WhatsApp%20Image%202023-05-14%20at%2015.58.01.jpeg)
+![](WhatsApp%20Image%202023-05-14%20at%2015.58.11.jpeg)
 
 4. ¿Cuál es el tipo Java de esta tabla de símbolos?
-![](img/Pasted%20image%2020230510154648.png)
-![](img/Pasted%20image%2020230510154903.png)
+![](Pasted%20image%2020230510154648.png)
+![](Pasted%20image%2020230510154903.png)
 
 5. Dada la siguiente CFG, definir una gramática atribuida para realizar la fase de Identificación. Nota, se puede usar el objeto **st** del ejercicio anterior.
 	Una vez que se ha definido la AG, impleméntelo en Java utilizando el patrón de diseño Visitor.
 **(G):**
-![](img/Pasted%20image%2020230510155120.png)
+![](Pasted%20image%2020230510155120.png)
 Solución:
 **(A):**
 |Atributo|Afecta a|Dominio|
@@ -825,9 +825,9 @@ Nota: las que no se incluyen es porque no requieren nada
 ```
 
 6. 
-![](img/Pasted%20image%2020230510162041.png)
+![](Pasted%20image%2020230510162041.png)
 **(G):**
-![](img/Pasted%20image%2020230510162117.png)
+![](Pasted%20image%2020230510162117.png)
 **(A):**
 |Atributo|Afecta a|Dominio|
 |--|--|--|
@@ -840,14 +840,14 @@ Nota: las que no se incluyen es porque no requieren nada
 ```
 
 7. 
-![](img/Pasted%20image%2020230510163214.png)
-![](img/Pasted%20image%2020230510163326.png)
-![](img/Pasted%20image%2020230510163348.png)
-![](img/Pasted%20image%2020230510163514.png)
+![](Pasted%20image%2020230510163214.png)
+![](Pasted%20image%2020230510163326.png)
+![](Pasted%20image%2020230510163348.png)
+![](Pasted%20image%2020230510163514.png)
 8. 
-![](img/Pasted%20image%2020230510163627.png)
+![](Pasted%20image%2020230510163627.png)
 **(G):**
-![](img/Pasted%20image%2020230510163744.png)
+![](Pasted%20image%2020230510163744.png)
 **(A):**
 |Atributo|Afecta a|Dominio|
 |--|--|--|
@@ -859,14 +859,14 @@ Nota: las que no se incluyen es porque no requieren nada
 ```
 
 9. Comprobar que las funciones tengan **return** en la siguiente gramática. Crear la AG correspondiente:
-![](img/WhatsApp%20Image%202023-05-14%20at%2014.55.43.jpeg)
+![](WhatsApp%20Image%202023-05-14%20at%2014.55.43.jpeg)
 > Nota: falta poner que los dos atributos añadidos tienen **dominio booleano**
 
 ---
 # Generación de código
 
 1. Nota: un entero ocupa 2 bytes
-![](img/Pasted%20image%2020230510111746.png)
+![](Pasted%20image%2020230510111746.png)
 
 2. Dado el siguiente programa de alto nivel:
 ```java
@@ -889,7 +889,7 @@ LOADI //va a la dirección 0 y lo deja en el tope de la pila
 STOREI
 ```
 3. 
-![](img/Pasted%20image%2020230510171309.png)
+![](Pasted%20image%2020230510171309.png)
 ```assembly
 //read myInteger;
 pusha 0
@@ -915,12 +915,12 @@ outf
 ```
 
 4. (CREO QUE NO ESTÁ BIEN)
-![](img/Pasted%20image%2020230510174139.png)
-![](img/Pasted%20image%2020230510174326.png)
+![](Pasted%20image%2020230510174139.png)
+![](Pasted%20image%2020230510174326.png)
 
 5. ==EJ TIPICO EXAMEN==
-![](img/Pasted%20image%2020230510202713.png)
-![](img/Pasted%20image%2020230510202733.png)
+![](Pasted%20image%2020230510202713.png)
+![](Pasted%20image%2020230510202733.png)
 Solución:
 1. Añadir un nuevo método **getNumberOfBytes():int** a todos los tipos
 2. Hay dos estrategias para calcular los desplazamientos de los campos de registro:
@@ -944,10 +944,10 @@ bytesGlobalSum += type.numberOfBytes;
 `---FIN EJERCICIO---`
 
 6. 
-![](img/Pasted%20image%2020230510203936.png)
+![](Pasted%20image%2020230510203936.png)
 
 7. 
-![](img/Pasted%20image%2020230510204201.png)
+![](Pasted%20image%2020230510204201.png)
 **(R):**
 ```java
 (1) int LocalBytesSum = 0;
@@ -963,9 +963,9 @@ bytesGlobalSum += type.numberOfBytes;
 ```
 
 8. AGs para Generación de Código
-![](img/Pasted%20image%2020230510204717.png)
+![](Pasted%20image%2020230510204717.png)
 **(G):**
-![](img/Pasted%20image%2020230510204848.png)
+![](Pasted%20image%2020230510204848.png)
 **(A):**
 code
 **(R):**
@@ -984,9 +984,9 @@ code
 ```
 
 9. Ejercicio de contexto:
-![](img/Pasted%20image%2020230510205821.png)
+![](Pasted%20image%2020230510205821.png)
 **(G):**
-![](img/Pasted%20image%2020230510205907.png)
+![](Pasted%20image%2020230510205907.png)
 **(A):**
 code y pushValue
 **(R):**
@@ -1000,32 +1000,32 @@ code y pushValue
 ```
 
 10. 
-![](img/Pasted%20image%2020230510212323.png)
+![](Pasted%20image%2020230510212323.png)
 Solución:
-![](img/Pasted%20image%2020230510212525.png)
-![](img/Untitled.jpg)
+![](Pasted%20image%2020230510212525.png)
+![](Untitled.jpg)
 
 11. 
-![](img/Pasted%20image%2020230510213031.png)
+![](Pasted%20image%2020230510213031.png)
 Solucion:
-![](img/Pasted%20image%2020230510213105.png)
-![](img/Pasted%20image%2020230510213157.png)
-![](img/Pasted%20image%2020230510213227.png)
-![](img/Pasted%20image%2020230510213237.png)
+![](Pasted%20image%2020230510213105.png)
+![](Pasted%20image%2020230510213157.png)
+![](Pasted%20image%2020230510213227.png)
+![](Pasted%20image%2020230510213237.png)
 
 12. 
-![](img/Pasted%20image%2020230510213806.png)
-![](img/Pasted%20image%2020230510213829.png)
+![](Pasted%20image%2020230510213806.png)
+![](Pasted%20image%2020230510213829.png)
 
 13. Hacer la plantilla de código execute de una sentencia while
 Solución:
-![](img/Pasted%20image%2020230517142029.png)
-![](img/Pasted%20image%2020230517142416.png)
+![](Pasted%20image%2020230517142029.png)
+![](Pasted%20image%2020230517142416.png)
 
 14. Hacer la plantilla de código execute para una sentencia do/while
-![](img/Pasted%20image%2020230517142504.png)
-![](img/Pasted%20image%2020230517142518.png)
+![](Pasted%20image%2020230517142504.png)
+![](Pasted%20image%2020230517142518.png)
 
 15. Especificar la plantilla de código execute para el bucle for
-![](img/Pasted%20image%2020230517142610.png)
-![](img/Pasted%20image%2020230517142630.png)
+![](Pasted%20image%2020230517142610.png)
+![](Pasted%20image%2020230517142630.png)

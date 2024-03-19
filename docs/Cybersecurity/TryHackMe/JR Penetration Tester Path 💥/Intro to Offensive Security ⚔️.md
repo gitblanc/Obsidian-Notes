@@ -1,1 +1,0 @@
-- Find hidden website pages using tool Gobuster:  `gobuster -u http://fakebank.com -w wordlist.txt dir`

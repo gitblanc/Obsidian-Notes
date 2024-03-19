@@ -31,7 +31,7 @@
 
 ### Definición del problema
 
-![](img/Pasted%20image%2020230911185326.png)
+![](Pasted%20image%2020230911185326.png)
 
 El objetivo es encontrar una secuencia mínima de acciones del robot que partiendo de la situación inicial nos permitan llegar a la situación objetivo, para ello es necesario
 - Conocer lo que el agente (el robot) es capaz de entender, es decir el nivel de detalle de las acciones  
@@ -39,7 +39,7 @@ El objetivo es encontrar una secuencia mínima de acciones del robot que partie
 
 ## Modelado de Estados
 
-![](img/Pasted%20image%2020230911185620.png)
+![](Pasted%20image%2020230911185620.png)
 
 • En este caso, la descripción de los estados se puede hacer instanciando adecuadamente los siguientes predicados
 
@@ -55,11 +55,11 @@ ManoLibre ;; La mano del robot está libre
 	- **P**: condiciones a cumplir (si se cumplen, se puede llevar a cabo la regla)
 	- **E**: consecuente - resultado
 
-![](img/Pasted%20image%2020230911185907.png)
+![](Pasted%20image%2020230911185907.png)
 
 ## Espacio de búsqueda para la instancia definida por la situación inicial anterior
 
-![](img/Pasted%20image%2020230911190204.png)
+![](Pasted%20image%2020230911190204.png)
 
 - Se entiende que todos los predicados que no están instanciados están puestos a FALSE
 - Con esto tenemos definido el espacio de búsqueda
@@ -108,13 +108,13 @@ ManoLibre ;; La mano del robot está libre
 
 ## Espacio de búsqueda
 
-![](img/Pasted%20image%2020230911191637.png)
+![](Pasted%20image%2020230911191637.png)
 
 # Problema: El problema del 8-puzzle
 
 ## Espacio de búsqueda
 
-![](img/Pasted%20image%2020230911192003.png)
+![](Pasted%20image%2020230911192003.png)
   
 - Hay un total de !9 combinaciones
 

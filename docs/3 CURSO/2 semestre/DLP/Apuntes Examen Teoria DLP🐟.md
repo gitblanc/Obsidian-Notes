@@ -3,7 +3,7 @@
 ## Fases de un traductor
 - Si se clasifican por su **función** se dividen en: **Fases de análisis y Síntesis**
 - Si se clasifican por su **dependencia de la máquina destino**, se dividen en **Front-end** y **Back-end**
-![](img/slide_12.2133bc32.png)
+![](slide_12.2133bc32.png)
 ## Fases de análisis y Síntesis
 - Las **fases de análisis** tienen el objetivo de comprobar la validez de la entrada, y en caso positivo identificar su estructura. Las fases de análisis son:
 	- Análisis Léxico
@@ -38,7 +38,7 @@ print **; a**
 - Para decidir qué debería haber en el AST de un lenguaje, hay que decidir qué es lo mínimo que necesitarían saber las siguientes fases para generar el código destino. 
 Ejemplo:
 El de abajo sería el AST y el del medio un árbol concreto.
-![](img/slide_33.01b18c08.png)
+![](slide_33.01b18c08.png)
 
 # Léxico
 - Comprueba que todo lo que se ha escrito en la entrada sean secuencias de caracteres válidas.
@@ -49,12 +49,12 @@ El de abajo sería el AST y el del medio un árbol concreto.
 - Cuando no hay más tokens, se llama a una convención END (**EOF**) = 0
 
 El léxico facilita las fases posteriores creando tokens que representan dichas palabras reservadas.
-![](img/Pasted%20image%2020230513100644.png)
+![](Pasted%20image%2020230513100644.png)
 Dado que sería engorroso trabajar con números, se definen constantes para simplificar su manejo:
-![](img/Pasted%20image%2020230513100809.png)
+![](Pasted%20image%2020230513100809.png)
 
 Ejemplo de analizador léxico:
-![](img/slide_23.e6f92c05.png)
+![](slide_23.e6f92c05.png)
 
 ## Qué no hace el léxico
 - No se ocupa de que las cadenas aparezcan en el orden adecuado (eso lo hace el sintáctico)
@@ -135,7 +135,7 @@ _32
  Sin embargo, no hay un metalenguaje que sirva para todo. Hay que usar distintos metalenguajes para definir mejor cada aspecto por separado. Los dos metalenguajes más usados son **Autómatas finitos** y **expresiones regulares**
 
 ## Expresiones regulares. Operadores
-![](img/Pasted%20image%2020230513111300.png)
+![](Pasted%20image%2020230513111300.png)
 Ejemplo:
 ```java
 pa+ // pa paa paaa paaaa paaaaa...
@@ -156,7 +156,7 @@ En cada llamada al método `nextToken()`
 
 ## Notación de ANTLR. Aspectos generales
 ### Operadores
-![](img/Pasted%20image%2020230513112059.png)
+![](Pasted%20image%2020230513112059.png)
 La versión normal (_greedy_) y la versión _non-greedy_ se diferencian en el momento en el que paran de reconocer una cadena. La versión _non-greedy_ dejar de reconocer en cuanto ha encontrado un lexema válido. La versión normal (o _greedy_) sigue reconociendo por si puede formar un lexema más largo que también cumpla el patrón (si no lo consigue, devolvería lo mismo que la versión _non-greedy_). Es decir, la versión normal intenta formar el lexema más largo que cumpla el patrón.
 
 Por ejemplo, supóngase el siguiente patrón con la versión normal del '*':
@@ -179,14 +179,14 @@ En la primera llamada a _nextToken_ se formaría sólo el lexema "@hola@" (deja 
 ¿Qué pasa si una misma entrada casa con más de un patrón? Hay que conocer las reglas de prioridad de ANTLR.
 
 Supóngase la situación con el fichero de ANTLR de la izquierda y la entrada "32954".
-![](img/slide_43.a3d56383.png)
+![](slide_43.a3d56383.png)
 Cumpliendo esas reglas, se podría reconocer esa entrada de las tres formas que se muestra en la imagen: la primera devolvería dos lexemas, la segunda tres y la última sólo uno. ¿Cuál de ellas produce el método _nextToken_ generado por ANTLR?
 - ==NORMA1: Cuando una entrada puede ser reconocida por más de una regla, se elige aquella que forme el lexema más largo==
 - ANTLR elegiría la regla _T2_ ya que forma el lexema "32954" que es más largo que el lexema "32" que formaría _T1_.
-![](img/slide_44.fe240e55.png)
+![](slide_44.fe240e55.png)
 
 Supóngase ahora la siguiente situación en la que se cambia la cadena de entrada y pasa a ser "32ALJ".
-![](img/slide_45.bf90962d.png)
+![](slide_45.bf90962d.png)
 En este caso ambas reglas forman un lexema del mismo tamaño, por lo que la norma 1 no es de ayuda.
 - ==NORMA2: Cuando varias reglas forman un lexema del mismo tamaño, se elige la regla que se haya definido primero==
 - Siguiendo la norma 2, _nextToken_ devolvería ahora el token _T1_ con el lexema "32".
@@ -199,7 +199,7 @@ Mirar ejercicios en [[Ejercicios Examen Teoria DLP🐲#Léxico]]
 - Se encarga de que los tokens estén en el orden adecuado. Para ello:
 	- Identifica estructuras
 	- Construye un árbol
-![](img/slide_2b.795fd935.png)
+![](slide_2b.795fd935.png)
 
 Ejemplo:
 Supóngase este programa:
@@ -208,9 +208,9 @@ if a > b then
     print a;
 ```
 Lo que haría el analizador sintáctico, una vez recibidos los tokens, sería encontrar las estructuras resaltadas en negrita encima de los tokens:
-![](img/slide_26.6e1c24b8.png)
+![](slide_26.6e1c24b8.png)
 Ahora, el analizador sintáctico forma un árbol que muestra la composición del programa analizado. A este árbol se le denomina árbol de análisis gramatical. En estetexto se le llamará **árbol concreto**:
-![](img/slide_30.82dae4fa.png)
+![](slide_30.82dae4fa.png)
 
 ## Reglas
 Supóngase que se quiere establecer en lenguaje natural las reglas que dicten cómo es una expresión aritmética como la siguiente:
@@ -303,7 +303,7 @@ De ahí se deducen el resto de los elementos de la GLC:
 
 ## Notación EBNF
 - Es una extensión de la BNF que añade 4 operadores:
-![](img/Pasted%20image%2020230513120526.png)
+![](Pasted%20image%2020230513120526.png)
 
 La gramática anterior, expresada en EBNF, podría simplificar las dos primeras reglas de la gramática (_instr_ y _expr_ seguirán igual):
 
@@ -475,7 +475,7 @@ e ⟶ LITENT
 
 Supóngase que se quiere saber si la entrada `3 + 4 * 5` es válida según dicha gramática. Para ello, se encuentra la derivación de _s_ que lleva a dicha cadena (a la izquierda de la imagen). Lo que se hace en el árbol de la derecha es ir anotando qué símbolo se ha sustituido por qué otros en cada transformación:
 
-![](img/slide_34b.d7a69780.png)
+![](slide_34b.d7a69780.png)
 De esta manera, se obtiene el árbol concreto correspondiente a la entrada.
 
 Nótese que **en un árbol concreto se cumple** que:
@@ -495,7 +495,7 @@ Hay que conocer unos términos que derivan cómo trata un parser las siguientes 
 - Cómo selecciona las reglas a la hora de realizar una transformación
 
 ## Tipos de algoritmos. Clasificación por dirección y selección de reglas
-![](img/Pasted%20image%2020230510114850.png)
+![](Pasted%20image%2020230510114850.png)
 **Dirección de reconocimiento**
 - **Descendentes**: son aquellos que realizan el proceso a partir del símbolo inicial e intentan llegar a la cadena de entrada (lo que se ha visto en clase)
 - **Ascendente**s: realizan el proceso a la inversa. Parten de la cadena de entrada y haciendo transformaciones a la inversa (sustituyendo la parte derecha de una regla por la parte izquierda), intentan llegar al símbolo inicial. Estas transformaciones a la inversa se llaman **reducciones**.
@@ -520,13 +520,13 @@ Se denomina **LR** a un parser que realiza el reconocimiento de manera ascendent
 	- **LL(1)**: gramática que puede ser reconocida por un parser LL(1). Es decir, puede ser reconocida de manera predictiva (sin backtracking) sin que en ninguna situación vaya a ser necesario mirar más de un token para saber qué regla elegir
 	- **LR(1)**: gramática que puede ser reconocida con un parser LR(1). Es decir, de manera predictiva y en dirección ascendente sin que nunca vaya a ser necesario mirar más de un token
 - Toda gramática LL(n) también es LL(n+1), pero se usa como nombre de la misma el del parser que mire **menos** tokens hacia delante.
-![](img/Pasted%20image%2020230510114912.png)
+![](Pasted%20image%2020230510114912.png)
 - **LL(k):** reconocida con un parser LL(k) de manera predictiva sin backtracking y en dirección descendente
 - **LR(k)**: reconocida con un parser LR(k) de manera predictiva y en dirección ascendente
 
 ## Implementación de un parser recursivo descendente
 
-![](img/Pasted%20image%2020230510120757.png)
+![](Pasted%20image%2020230510120757.png)
 
 Antes de empezar la implementación, se necesita la siguiente infraestructura que es común a cualquier parser independientemente de la gramática a implementar.
 
@@ -701,7 +701,7 @@ El cálculo de los _símbolos directores_ en este caso ha sido trivial, ya que l
 	- Cada regla se implementa como un método. La implementación de ese método se corresponde con los símbolos de su consecuente.
 
 
-![](img/Pasted%20image%2020230510121625.png)
+![](Pasted%20image%2020230510121625.png)
 
 ### ==Preguntas de examen==
 
@@ -753,10 +753,10 @@ Combinando estos parámetros, se obtienen cuatro tipos de listas, donde *e* es e
 
 ## Patrones
 Tabla original de Holub con una columna EBNF, donde se muestran los patrones para obtener las reglas que generen los cuatro tipos de listas anteriores:
-![](img/Pasted%20image%2020230510122811.png)
-![](img/Pasted%20image%2020230510122833.png)
+![](Pasted%20image%2020230510122811.png)
+![](Pasted%20image%2020230510122833.png)
 
-![](img/Pasted%20image%2020230510122909.png)
+![](Pasted%20image%2020230510122909.png)
 
 ## Carácterísticas que impiden a una gramática ser LL(1)
 - Que haya **símbolos directores comunes**
@@ -892,7 +892,7 @@ A diferencia del capítulo anterior, aquí no es solución mirar más tokens hac
 -   Cambiar de _dirección_ de reconocimiento del parser.
 -   Buscar una gramática _equivalente_ sin _RI_.
 Regla para eliminar la recursividad a la izquierda
-![](img/slide_17.542a11e0.png)
+![](slide_17.542a11e0.png)
 
 ### ¿Qué hace ANTLR?
 ANTLR es un parser recursivo descendente. Por tanto, no puede implementar una gramática con recursividad a izquierda. Pero lo que sí hace, de manera automática, es transformar la gramática tal y como se acaba de ver en el apartado anterior. Y es esta _otra_ nueva gramática (que no tiene _RI_) la que realmente implementa.
@@ -957,7 +957,7 @@ print 1 + 2 * 3;
 ```
 
 Dado que la gramática anterior es ambigua, la entrada podría reconocerse de dos formas: una en que se realiza primero la suma y otra en la que se hace primero la multiplicación.
-![](img/a.22136359.svg)
+![](a.22136359.svg)
 
 Sin embargo, ANTLR usar el orden de las reglas para extraer la _regla de selección_ por la cual se quiere elegir el árbol en el que el '+' tiene mayor prioridad. Por tanto, tomaría la interpretación de la izquierda (realiza antes la suma).
 
@@ -1001,13 +1001,13 @@ while a {
 ```
 
 Y el árbol concreto de la misma sería el siguiente.
-![](img/slide_6.7664baa9.png)
+![](slide_6.7664baa9.png)
 En este árbol hay tres grupos de símbolos redundantes. En la imagen posterior se identifican dichos símbolos:
 
 -   Sobran los tokens que ayudaron a _identificar_ una estructura (tokens _PRINT_ y _WHILE_ — tachados en rojo). Ya no son necesarios ya que su nodo padre ya indican qué estructuras son (_escritura_ y _while_ respectivamente).
 -   Sobran los tokens que ayudan a _delimitar_ las estructuras (las llaves y los punto y coma — tachados en azul). Las llaves, por ejemplo, se utilizaban para indicar qué va dentro del _while_ y qué va fuera. Ahora ya no son necesarias, ya que la propia estructura del árbol deja claro qué sentencias están dentro del mismo.
 -   Sobran los no-terminales necesarios para definir las producciones de la gramática pero que son redundantes en el árbol (_sentencia_ y algunos _programa_ — tachados en amarillo). Por ejemplo, no aporta nada que encima de un nodo _escritura_ haya otro nodo indicando que es una _sentencia_.
-![](img/slide_7.450ab5f5.png)
+![](slide_7.450ab5f5.png)
 Este es el primer problema de utilizar un árbol concreto. Hay mucho nodo innecesario que:
 -   Si se elimina, no va a suponer una pérdida de información para las fases posteriores del traductor.
 -   Pero si se deja supone:
@@ -1016,11 +1016,11 @@ Este es el primer problema de utilizar un árbol concreto. Hay mucho nodo innece
 
 ### Ejemplo de acoplamiento
 En la siguiente imagen se puede ver una gramática, una entrada válida y el árbol concreto que se crearía para ella.
-![](img/slide_8.165bca62.png)
+![](slide_8.165bca62.png)
 Supóngase que el sintáctico, en vez de pasar un AST, les pasara el árbol concreto a las fases posteriores. Por tanto, todas las fases posteriores del traductor se implementarían en función de dicha estructura de árbol.
 
 Supóngase que, una vez implementadas las demás fases, se decide refactorizar la gramática (recuérdese que de un mismo lenguaje existen infinitas gramáticas equivalentes). Por tanto, sin cambiar el lenguaje a reconocer, se opta por reconocerlo con una nueva gramática. En la siguiente imagen se ve a la izquierda la gramática _antigua_ con el árbol concreto que generaba y a la derecha la _nueva_ gramática con el árbol concreto que genera para la misma entrada.
-![](img/slide_9.c6ef7020.png)
+![](slide_9.c6ef7020.png)
 El lenguaje no se ha cambiado. Y se debería esperar que las consecuencias del cambio sean nulas para las siguientes fases. Sin embargo, dado el **acoplamiento** que tiene el árbol concreto con la gramática (ya que usa los mismos símbolos y estructura que esta), el árbol que se genera es distinto. Por ejemplo, ahora aparece un nodo _mt_ que antes no estaba. Esto supone que habría que cambiar _todas_ las fases posteriores del traductor ya que ha cambiado el árbol y hay que adaptarlas para que recorran los nuevos nodos (y que dejen de recorrer los que desaparezcan).
 
 Si el lenguaje no ha cambiado, no debería cambiar tampoco la estructura del árbol — aunque se hubiera cambiado la gramática. Las reglas que utilice un sintáctico debería ser un asunto interno del mismo que no debería afectar a otras fases. No tiene sentido dividir el trabajo de un traductor en fases si luego tienen un acoplamiento tan grande con el sintáctico. Este es el principal problema de usar un árbol concreto.
@@ -1058,11 +1058,11 @@ while a {
 -   La condición del _while_ es el valor de la _a_ y, si se cumple, imprime _b_.
 
 Pues esa esencia es lo único que debe incluir el AST de dicha entrada.
-![](img/slide_11.c6a7c0ec.png)
+![](slide_11.c6a7c0ec.png)
 
 ## Comparativa AST vs. Árbol concreto
 Se pueden comparar el árbol concreto y el AST de la misma entrada.
-![](img/slide_12.57d5cc3a.png)
+![](slide_12.57d5cc3a.png)
 Como puede observarse:
 -   El AST es mucho más pequeño y fácil de entender.
 -   El AST no está acoplado a la gramática, ya que la estructura del árbol no se basa en la forma de las producciones de ésta.
@@ -1089,11 +1089,11 @@ La especificación informal del lenguaje es:
 
 ### Identificar nodos
 Según el enunciado anterior, para modelar cualquier entrada serán necesarios los siguientes nodos. Con _ExprBin_ (expresión binaria) se representarán tanto las operaciones aritméticas como las relacionales
-![](img/slide_14.455239fd.png)
+![](slide_14.455239fd.png)
 
 ### Identificar hijos
 Hay que determinar qué hijos tendrá cada nodo. Por cada hijo se crea una rama. Además, a cada rama se le asocia un tipo — el tipo que deben tener los nodos que se quieran conectar en dicha rama. Si no se le pusiera ningún tipo significaría que en dicha rama se podría poner como hijo cualquier nodo. El tipo supone, por tanto, una forma de expresar las restricciones a la hora de conectar nodos.
-![](img/slide_15.577ccb07.png)
+![](slide_15.577ccb07.png)
 A la hora de elegir un tipo para una rama habrá que elegir uno de entre los tres casos siguientes:
 1.  El tipo es otro **nodo**.
 2.  El tipo es una **categoría sintáctica**. Cuando un nodo pueda tener como hijo a nodos de distintos tipos, en vez de indicar cada uno en la rama, se define una _categoría sintáctica_ con todos ellos y es el nombre de ésta la que se pone como tipo de la rama (es decir, es un atajo para poner varios tipos).
@@ -1102,7 +1102,7 @@ A la hora de elegir un tipo para una rama habrá que elegir uno de entre los tre
 Además, si en una rama es _multivaluada_ (puede haber varios hijos en ella) se pondrá un '*' en el tipo para indicarlo. Adelantándonos a la implementación, que se verá más tarde, ya se puede intuir que esta rama se implementará como una lista.
 
 Con lo anterior, quedaría el siguiente diseño de nodos.
-![](img/slide_16.1de30fb3%201.png)
+![](slide_16.1de30fb3%201.png)
 
 ## Gramáticas Abstractas
 - Metalenguaje para documentar los AST.
@@ -1115,11 +1115,11 @@ Con lo anterior, quedaría el siguiente diseño de nodos.
 <nodo>:<categorías> -> <tipos hijos>
 ```
 En el capítulo anterior se llegó al siguiente diseño de nodos expresado de forma gráfica:
-![](img/slide_16.1de30fb3%201.png)
+![](slide_16.1de30fb3%201.png)
 Se describen ahora dichos nodos usando la notación de las gramáticas abstractas:
-![](img/slide_17.24bb82b1.png)
+![](slide_17.24bb82b1.png)
 Nótese que lo obligatorio es poner el tipo de los hijos (no el nombre). Sin embargo, cuando varios hijos tienen el mismo tipo, puede ser de ayuda asignar nombres a los hijos para facilitar la lectura de la gramática. Para poner un nombre a un hijo basta con ponerlo delante del tipo separándolos con dos puntos. La siguiente gramática es el resultado de añadir nombres (en gris) a ciertos hijos para facilitar su comprensión.
-![](img/slide_18.9e760d3e.png)
+![](slide_18.9e760d3e.png)
 Aclaraciones adicionales:
 -   No confundir el operador `'*'` con el uso que se da a dicho carácter en EBNF y en las _expresiones regulares_. En estas últimas, dicho operador indica la repetición de cero o más elementos. Aquí simplemente significa que dicha rama, en vez de un sólo nodo, debe tener una lista de ellos. Por tanto, no hay — y no se necesita — el operador '+'. Una vez indicado que dicha rama es una lista, no es relevante si en esa lista habrá al menos un elemento o no.
 -   Todo hijo es opcional. Si no se usa el `'*'`, se crea una referencia a un nodo en vez de una lista. Es asunto ya de la implementación que dicha referencia se use o no. Por tanto, no se necesita operador para indicar opcionalidad ('?').
@@ -1127,7 +1127,7 @@ Aclaraciones adicionales:
 
 ## GLC vs. Gramática Abstracta
 
-![](img/slide_20.823351cf.png)
+![](slide_20.823351cf.png)
 
 - La **GLC** determina cómo tiene que ser la entrada del sintáctico. Describe la estructura de textos. Es la forma de indicar al usuario del compilador cómo debe escribir una entrada válida.
 - La **gramática abstracta** es la que determina cómo va a ser la salida del sintáctico. Describe la estructura de árboles. Es la forma de indicar a los diseñadores de las demás fases del traductor cómo van a ser los árboles que reciban.
@@ -1203,7 +1203,7 @@ class LiteralEntero implements Expr {
 Crear el AST implica hacer los _new_ de los distintos nodos del árbol en algún punto del analizador sintáctico. Se trata ahora de determinan dichos puntos.
 
 El AST debe reflejar lo que se ha ido encontrando en la entrada ¿Cuándo se querrá crear, por ejemplo, un nodo que represente a una sentencia _print_? Pues _después_ de haber encontrado todos los símbolos de dicha estructura en la entrada.
-![](img/slide_32.9558a1f1.png)
+![](slide_32.9558a1f1.png)
 
 ### En ANTLR
 Enlazar nodos
@@ -1240,7 +1240,7 @@ La directiva _returns_ sirve para dos cosas:
 
 ## Creación de Listas
 Una vez que tenemos _aisladas_ las reglas que implementan los patrones, a la hora de crear los nodos de un AST, ¿qué acciones Java hay que añadir a dichas reglas-patrones? En la siguiente tabla se muestra _qué_ acciones hay que añadir y _dónde_ en función del patrón que representa la regla:
-![](img/Pasted%20image%2020230513181319.png)
+![](Pasted%20image%2020230513181319.png)
 
 > Ver el ejercicio 17 en [[Ejercicios Examen Teoria DLP🐲#Sintáctico]]
 
@@ -1277,17 +1277,17 @@ Se subdivide en dos fases:
 - Si volvemos al ejemplo `print v[i] + 2;` esta etapa detectaría que las variables v e i estén definidas en el programa:
 
 Ejemplo de realización de la etapa:
-![](img/slide_37.f7034af6.png)
+![](slide_37.f7034af6.png)
 Lo que hace esta etapa es recorrer el AST, y cada vez que encuentre una referencia a una variable (un nodo var), se busca si existe una definición con el mismo nombre de la variable (un nodo defVar)
-![](img/slide_38.b52611eb.png)
-![](img/slide_40.8d4b4121.png)
+![](slide_38.b52611eb.png)
+![](slide_40.8d4b4121.png)
 Una vez que se ha comprobado que todo símbolo ha sido definido, el programa quedaría validado por esta etapa.
 
 ### Enlace de definiciones
 - En esta etapa, además de comprobar que todo nodo var(n) tiene su defVar(n) hace algo más. Las fases posteriores necesitarán saber cómo se ha definido cada símbolo (tipo, ámbito...). Para que no tengan que repetir la búsqueda la definición del símbolo que ya se ha hecho aquí, esta etapa deja un enlace desde el símbolo a su definición
 
 En el ejemplo anterior añadimos el enlace:
-![](img/slide_41.0cc28050.png)
+![](slide_41.0cc28050.png)
 
 ## Etapa de Comprobación de Tipos
 - Esta etapa se encarga de comprobar toda aquella situación relativa a los tipos. Algunos ejemplos de situaciones son:
@@ -1306,7 +1306,7 @@ De los cinco errores inicialmente indicados, esta etapa sería la que detectarí
 
 ### Predicados, atributos y funciones semánticas
 Supóngase la siguiente programa entrada y su AST correspondiente:
-![](img/slide_44a.eb45116d.png)
+![](slide_44a.eb45116d.png)
 Para comprobar que las operaciones se están realizando con operandos del tipo adecuado, se asocian al AST **predicados** que detectan aquellas situaciones que no sean válidas. Son las condiciones que deben cumplir los nodos del árbol para que sean considerados válidos.
 
 Supongamos que en este lenguaje hay dos normas:
@@ -1314,18 +1314,18 @@ Supongamos que en este lenguaje hay dos normas:
 - Los operandos de una suma deben ser numéricos
 
 Estas normas se reflejan mediante predicados que se asocian a ciertos nodos del árbol:
-![](img/slide_44b.dec4d4ed.png)
+![](slide_44b.dec4d4ed.png)
 Pero esta etapa necesita algo más de información del AST, por lo que hay que añadirla. Esta información se la llama **atributos**. En este caso los atributos serían los 4 valores tipo añadidos a los nodos var, aritmetica y litReal:
-![](img/slide_44c.bd7a54b8.png)
+![](slide_44c.bd7a54b8.png)
 Para saber el valor de ese atributo están las **funciones semánticas**, que indican qué valor tiene que tomar cada atributo en cada nodo:
-![](img/slide_44d.4210003f.png)
+![](slide_44d.4210003f.png)
 
 ## Interfaz del Analizador Semántico
-![](img/Pasted%20image%2020230510143426.png)
+![](Pasted%20image%2020230510143426.png)
 
 ## Comprobaciones semánticas
 - Definición de variables y reglas de ámbito
-![](img/Pasted%20image%2020230510143700.png)
+![](Pasted%20image%2020230510143700.png)
 - **Unicidad**: entidades que deberían ser únicas (enum, cases y switch)
 - **Enlaces**: cuando el uso de una entidad debe vincularse a otra construcción (invocación de funciones)
 - **Comprobaciones pospuestas por el analizador sintáctico**: l-value obligatorio en asignaciones, al menos una sentencia return en una función...
@@ -1340,18 +1340,18 @@ Para saber el valor de ese atributo están las **funciones semánticas**, que in
 
 ## Gramáticas Libres de Contexto (CFG)
 - Se usan para especificar la sintaxis de los lenguajes de programación. Sin embargo, no pueden representar la información adicional necesaria en las siguientes fases.
-![](img/Pasted%20image%2020230510144730.png)
-![](img/Pasted%20image%2020230510144750.png)
-![](img/Pasted%20image%2020230510144927.png)
-![](img/Pasted%20image%2020230510145226.png)
-![](img/Pasted%20image%2020230510145243.png)
-![](img/Pasted%20image%2020230510145302.png)
-![](img/Pasted%20image%2020230510145421.png)
-![](img/Pasted%20image%2020230510145452.png)
+![](Pasted%20image%2020230510144730.png)
+![](Pasted%20image%2020230510144750.png)
+![](Pasted%20image%2020230510144927.png)
+![](Pasted%20image%2020230510145226.png)
+![](Pasted%20image%2020230510145243.png)
+![](Pasted%20image%2020230510145302.png)
+![](Pasted%20image%2020230510145421.png)
+![](Pasted%20image%2020230510145452.png)
 ### ==Ejemplo de AG==
 Dada la siguiente gramática abstracta:
 **(G):**
-![](img/Pasted%20image%2020230510145614.png)
+![](Pasted%20image%2020230510145614.png)
 - Añadimosun atributo booleano hasReturn a los símbolos de la gramática funcdefinition y statement
 - Calculamos sus valores mediante reglas semánticas
 
@@ -1376,7 +1376,7 @@ Definir una AG:
 	- Para cada atributo, su **dominio** debe ser especificado (ej: type debe ser int, char o double)
 	- Cuando un símbolo aparece más de una vez en una producción, se usan sufijos para referirse sin ambigüedades a sus atributos
 - **Atributos MÁS comunes**:
-![](img/Pasted%20image%2020230510150549.png)
+![](Pasted%20image%2020230510150549.png)
 
 ## Reglas semánticas
 - Especifican cómo se calcula un atributo de un símbolo a partir de los atributos de otros símbolos en la misma producción
@@ -1393,31 +1393,31 @@ Definir una AG:
 
 ## Gramáticas bien definidas
 - Una AG está bien definida (no circular) si, para cada árbol sintáctico, pueden ser evaluados todos los atributos
-![](img/Pasted%20image%2020230510152646.png)
+![](Pasted%20image%2020230510152646.png)
 
 ## Atributos sintetizados
 - Para evaluar las AGs usaremos AGs donde los atributos de los nodos padres dependen de los atributos de los nodos hijos (conocidos como atributos sintetizados)
-![](img/Pasted%20image%2020230510152901.png)
+![](Pasted%20image%2020230510152901.png)
 
 ## Atributos heredados
 - Se asigna un valor a los atributos de los nodos hijos
 
-![](img/Pasted%20image%2020230510153240.png)
-![](img/Pasted%20image%2020230510153350.png)
-![](img/Pasted%20image%2020230510153405.png)
+![](Pasted%20image%2020230510153240.png)
+![](Pasted%20image%2020230510153350.png)
+![](Pasted%20image%2020230510153405.png)
 
 ## Patrón Visitor
 - Para recorrer el ast con un **visitor**, llamaremos al método **accept** (y dentro de este sí podemos llamar a un visit)
-![](img/Pasted%20image%2020230510153653.png)
+![](Pasted%20image%2020230510153653.png)
 
 ## Tipo de las variables
 - Debe ser indicado en su definición en los lenguajes con declaración explícita de tipos
-![](img/Pasted%20image%2020230510154142.png)
+![](Pasted%20image%2020230510154142.png)
 - Por lo tanto, tenemos que almacenar el tipo de una variable en su **definición** (**varDefinition**)
 - Su tipo de puede consultar posteriormente cuando se utiliza la Variable (nodo Variable)
 - Por lo tanto, el nodo **Variable** estará **enlazado a** (decorado con) su correspondiente nodo varDefinition
 - Este trabajo lo realiza la fase de **Identificación**
-![](img/Pasted%20image%2020230510154412.png)
+![](Pasted%20image%2020230510154412.png)
 
 ## Tabla de Símbolos
 - Estructura de datos temporal donde se almacenan los nodos VarDefinition para permitir su posterior recuperación
@@ -1461,11 +1461,11 @@ Definir una AG:
 
 ## Patrón Composite
 Anotación para resolver el ejercicio 6 de Semántico -> [[Ejercicios Examen Teoria DLP🐲#Semántico]]
-![](img/Pasted%20image%2020230510162824.png)
-![](img/Pasted%20image%2020230510162842.png)
-![](img/Pasted%20image%2020230510162856.png)
-![](img/Pasted%20image%2020230510163105.png)
-![](img/Pasted%20image%2020230510163139.png)
+![](Pasted%20image%2020230510162824.png)
+![](Pasted%20image%2020230510162842.png)
+![](Pasted%20image%2020230510162856.png)
+![](Pasted%20image%2020230510163105.png)
+![](Pasted%20image%2020230510163139.png)
 
 Mirar ejercicios en [[Ejercicios Examen Teoria DLP🐲#Semántico]]
 
@@ -1482,22 +1482,22 @@ MAPL es una **representación intermedia de Medio nivel**.
 - **IP**, Instruction Pointer: dirección de la instrucción en ejecución
 - **SP**, Stack Pointer: dirección del tope de la pila
 - **BP**, Base Pointer: dirección del marco de pila activo
-![](img/Pasted%20image%2020230510170136.png)
+![](Pasted%20image%2020230510170136.png)
 
 ## MAPL: Instrucciones push y pop
-![](img/Pasted%20image%2020230510170225.png)
+![](Pasted%20image%2020230510170225.png)
 
 ## MAPL: Instrucciones load
-![](img/Pasted%20image%2020230510170327.png)
+![](Pasted%20image%2020230510170327.png)
 
 ## MAPL: Instrucciones store
-![](img/Pasted%20image%2020230510170413.png)
+![](Pasted%20image%2020230510170413.png)
 
 ## MAPL: Operaciones
-![](img/Pasted%20image%2020230510171142.png)
+![](Pasted%20image%2020230510171142.png)
 
 ## MAPL: I/0 y Conversiones
-![](img/Pasted%20image%2020230510171215.png)
+![](Pasted%20image%2020230510171215.png)
 Ver ejercicios en [[Ejercicios Examen Teoria DLP🐲#Generación de código]]
 
 ---
@@ -1517,12 +1517,12 @@ Los principales subproblemas de la generación de código son:
 - Los **tipos** en el análisis semántico se utilizan para verificar la validez de algunas construcciones sintácticas. En la generación de código incorporan el tamaño y la representación de cada variable
 
 ## Tipos
-![](img/Pasted%20image%2020230510172952.png)
-![](img/Pasted%20image%2020230510173058.png)
-![](img/Pasted%20image%2020230510173112.png)
+![](Pasted%20image%2020230510172952.png)
+![](Pasted%20image%2020230510173058.png)
+![](Pasted%20image%2020230510173112.png)
 
 El **número de bytes** para almacenar un **array** es la multiplicación de su tamaño y el número de bytes del tipo de sus elementos.
-![](img/Pasted%20image%2020230510173242.png)
+![](Pasted%20image%2020230510173242.png)
 ```java
 public int numberOfBytes(){
 	return size*elementType.numberOfBytes();
@@ -1533,7 +1533,7 @@ public int numberOfBytes(){
 - Un registro (struct) es una colección de campos de diferentes tipos donde cada campo se identifica por su nombre
 	- El **tamaño** de un registro es la suma de los tamaños de los tipos de los campos
 	- El **desplazamiento** (offset) de memoria relativo de cada campo es la suma de los tipos de los campos anteriores
-![](img/Pasted%20image%2020230510174109.png)
+![](Pasted%20image%2020230510174109.png)
 
 ## Memoria estática
 - El tamaño de la memoria estática permanece fijo durante la ejecución del programa
@@ -1541,89 +1541,89 @@ public int numberOfBytes(){
 - El tamaño del área de datos en la memoria estática permanece fijo durante todo el proceso de ejecución
 - Normalmente se accede a los datos estáticos por sus direcciones de memoria absolutas
 - Los datos comunres incluídos en la memoria estática son:
-![](img/Pasted%20image%2020230510202416.png)
+![](Pasted%20image%2020230510202416.png)
 - En MAPL los datos estáticos tienen direcciones de memoria crecientes, comenzando en cero
-![](img/Pasted%20image%2020230510202630.png)
+![](Pasted%20image%2020230510202630.png)
 
 ## Plantillas de código
 - Se basan en **semántica denotacional** (formalizar el significado de una construcción sintáctica describiendo el efecto de ejecutarla)
-![](img/Pasted%20image%2020230510210631.png)
+![](Pasted%20image%2020230510210631.png)
 
 ## Elementos de una plantilla de código
-![](img/Pasted%20image%2020230510210743.png)
+![](Pasted%20image%2020230510210743.png)
 
 ## Generación de código Inductiva
-![](img/Pasted%20image%2020230510210830.png)
+![](Pasted%20image%2020230510210830.png)
 
 ## Escribiendo el código generado
-![](img/Pasted%20image%2020230510211008.png)
+![](Pasted%20image%2020230510211008.png)
 
 ## Contexto
-![](img/Pasted%20image%2020230510211104.png)
+![](Pasted%20image%2020230510211104.png)
 
 ## Parametrización de plantillas. Alternativa 1
-![](img/Pasted%20image%2020230510211136.png)
-![](img/Pasted%20image%2020230510211326.png)
+![](Pasted%20image%2020230510211136.png)
+![](Pasted%20image%2020230510211326.png)
 
 ## Parametrización de plantillas. Alternativa 2
-![](img/Pasted%20image%2020230510211353.png)
+![](Pasted%20image%2020230510211353.png)
 - Las funciones de código que se usan son **address, value y execute**:
-![](img/Pasted%20image%2020230510211416.png)
-![](img/Pasted%20image%2020230510211532.png)
+![](Pasted%20image%2020230510211416.png)
+![](Pasted%20image%2020230510211532.png)
 
 ## Funciones de código
-![](img/Pasted%20image%2020230510211622.png)
+![](Pasted%20image%2020230510211622.png)
 
 ## Definiciones de funciones de código
-![](img/Pasted%20image%2020230510211709.png)
-![](img/Pasted%20image%2020230510211845.png)
+![](Pasted%20image%2020230510211709.png)
+![](Pasted%20image%2020230510211845.png)
 Implementación típica: usar 3 visitors -> ExecuteCGVisitor, ValueCGVisitor, AddressVisitor
-![](img/Pasted%20image%2020230510212125.png)
-![](img/Pasted%20image%2020230510212245.png)
+![](Pasted%20image%2020230510212125.png)
+![](Pasted%20image%2020230510212245.png)
 
 ## Generación de código de estructuras de datos: Definición de variable
-![](img/Pasted%20image%2020230510212918.png)
+![](Pasted%20image%2020230510212918.png)
 
 ## Generación de código de estructuras de datos: Definición de variable Local
-![](img/Pasted%20image%2020230510212946.png)
+![](Pasted%20image%2020230510212946.png)
 
 ## Generación de código de estructuras de datos: Expresiones
-![](img/Pasted%20image%2020230510213405.png)
-![](img/Pasted%20image%2020230510213417.png)
-![](img/Pasted%20image%2020230510213442.png)
+![](Pasted%20image%2020230510213405.png)
+![](Pasted%20image%2020230510213417.png)
+![](Pasted%20image%2020230510213442.png)
 
 ## Generación de código de estructuras de datos: Arrays
-![](img/Pasted%20image%2020230510213635.png)
-![](img/Pasted%20image%2020230510213700.png)
-![](img/Pasted%20image%2020230510213725.png)
+![](Pasted%20image%2020230510213635.png)
+![](Pasted%20image%2020230510213700.png)
+![](Pasted%20image%2020230510213725.png)
 ## Generación de código de estructuras de datos: Registros
-![](img/Pasted%20image%2020230510214332.png)
-![](img/Pasted%20image%2020230510214359.png)
+![](Pasted%20image%2020230510214332.png)
+![](Pasted%20image%2020230510214359.png)
 
 ## Sentencias de control de flujo. Etiquetas y saltos
-![](img/Pasted%20image%2020230510214548.png)
+![](Pasted%20image%2020230510214548.png)
 
 ## While
-![](img/Pasted%20image%2020230510214626.png)
-![](img/Pasted%20image%2020230510214643.png)
+![](Pasted%20image%2020230510214626.png)
+![](Pasted%20image%2020230510214643.png)
 
 ## Do while
-![](img/Pasted%20image%2020230510214707.png)
-![](img/Pasted%20image%2020230510214720.png)
+![](Pasted%20image%2020230510214707.png)
+![](Pasted%20image%2020230510214720.png)
 
 ## For
-![](img/Pasted%20image%2020230510214750.png)
-![](img/Pasted%20image%2020230510214831.png)
-![](img/Pasted%20image%2020230510214846.png)
+![](Pasted%20image%2020230510214750.png)
+![](Pasted%20image%2020230510214831.png)
+![](Pasted%20image%2020230510214846.png)
 
 ## If/else
-![](img/Pasted%20image%2020230510214911.png)
-![](img/Pasted%20image%2020230510214925.png)
+![](Pasted%20image%2020230510214911.png)
+![](Pasted%20image%2020230510214925.png)
 
 ## Funciones/Procedimientos
-![](img/Pasted%20image%2020230510215000.png)
-![](img/Pasted%20image%2020230510215030.png)
-![](img/Pasted%20image%2020230510215041.png)
+![](Pasted%20image%2020230510215000.png)
+![](Pasted%20image%2020230510215030.png)
+![](Pasted%20image%2020230510215041.png)
 
 ---
 

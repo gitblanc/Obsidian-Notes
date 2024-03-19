@@ -12,8 +12,8 @@
 	- Ciclos cortos (sprints de 1 a 4 semanas)
 	- Entregas tras cada ciclo
 	- Equipo multifuncional
-![](img/Pasted%20image%2020221217121532.png)
-![](img/Pasted%20image%2020221217125008.png)
+![](Pasted%20image%2020221217121532.png)
+![](Pasted%20image%2020221217125008.png)
 
 - ==**Roles**==:
 	- **SCRUM Team** = Product Owner+ Scrum Master + Development Team
@@ -81,7 +81,7 @@ Las historias de usuario constituyen el **backlog** del producto.
 		- **Filas**: las historias con sus prioridades
 	- Permite mejorar la visión del producto
 	- Es dinámico pues evoluciona con el proyecto
-![](img/Pasted%20image%2020221217131527.png)
+![](Pasted%20image%2020221217131527.png)
 
 - **==Pruebas==**: hay dos tipos:
 	- **TDD** (Test-Driven Development)

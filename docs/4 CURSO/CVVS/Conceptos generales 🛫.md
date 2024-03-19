@@ -1,6 +1,6 @@
 # Problemática general
 
-![](img/Pasted%20image%2020230920182345.png)
+![](Pasted%20image%2020230920182345.png)
 
 # Causas de los defectos en el software
 
@@ -29,7 +29,7 @@
 
 - ==Suele caer en el examen==
 
-![](img/Pasted%20image%2020230920184610.png)
+![](Pasted%20image%2020230920184610.png)
 
 # CV&V Contexto
 
@@ -37,7 +37,7 @@
 	- **Hemos hecho las cosas correctamente**: El producto satisface los requisitos: Funcionales y de rendimiento (explícitos), de Calidad (implícitos)  
 	- **Hemos hecho el sistema correcto**: Los requisitos corresponden a las necesidades del usuario
 
-![](img/Pasted%20image%2020230920184722.png)
+![](Pasted%20image%2020230920184722.png)
 
 # Definición de calidad
 
@@ -59,7 +59,7 @@
 - **Verificación**: confirmación de si el sistema cumple las **necesidades** del cliente. Debe cumplir lo que el usuario desea hacer con el sistema, esté o no en los requisitos
 # Múltiples formas
 
-![](img/Pasted%20image%2020230920190821.png)
+![](Pasted%20image%2020230920190821.png)
 
 - El **testing estático** no puede detectar fallos, porque no ejecuta la aplicación. Puede encontrar defectos
 - En **testing dinámico** encontramos fallos, porque puede ejecutar la aplicación
@@ -103,7 +103,7 @@
 
 # Proceso de pruebas dinámicas
 
-![](img/Pasted%20image%2020230920194523.png)
+![](Pasted%20image%2020230920194523.png)
 
 # Pruebas Continuas
 
@@ -118,11 +118,11 @@
 
 # Partición en Clases de Equivalencia
 
-![](img/Pasted%20image%2020230927183119.png)
+![](Pasted%20image%2020230927183119.png)
 
 ## Problema 1
 
-![](img/Pasted%20image%2020230927184900.png)
+![](Pasted%20image%2020230927184900.png)
 
 - Condición de prueba y de entrada: importe
 - Las clases de equivalencia serían 
@@ -134,7 +134,7 @@
 
 ## Problema 2
 
-![](img/Pasted%20image%2020230927184919.png)
+![](Pasted%20image%2020230927184919.png)
 
 - Condición de prueba y de entrada: saldo
 - Las clases de equivalencia serían:
@@ -144,11 +144,11 @@
 
 ## Problema 1b
 
-![](img/Pasted%20image%2020230927185949.png)
+![](Pasted%20image%2020230927185949.png)
 
 - Casos de prueba:
 
-![](img/Pasted%20image%2020230927190022.png)
+![](Pasted%20image%2020230927190022.png)
 
 - Los **casos de prueba lógicos** describen como son las entradas y las salidas, pero no nos dan valores concretos (Salidas)
 
@@ -156,18 +156,18 @@
 
 # Clases de equivalencias de las salidas
 
-![](img/Pasted%20image%2020230927190708.png)
+![](Pasted%20image%2020230927190708.png)
 
 # Las condiciones de entrada no son necesariamente los parámetros de un programa
 
-![](img/Pasted%20image%2020230927192148.png)
+![](Pasted%20image%2020230927192148.png)
 
-![](img/Pasted%20image%2020230927192520.png)
+![](Pasted%20image%2020230927192520.png)
 
 # Análisis de valores límite
 
-![](img/Pasted%20image%2020230927193937.png)
+![](Pasted%20image%2020230927193937.png)
 
-![](img/Pasted%20image%2020230927194004.png)
+![](Pasted%20image%2020230927194004.png)
 
 

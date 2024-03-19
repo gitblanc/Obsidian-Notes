@@ -2,7 +2,7 @@
 ## Potencia
 ### Generada vs consumida
 
-![](img/Pasted%20image%2020231104110327.png)
+![](Pasted%20image%2020231104110327.png)
 
 ## Magnitudes de interés
 ### Ah y Wh
@@ -10,7 +10,7 @@
 Vatio.hora -> Julios
 Amperio.hora -> Culombios
 
-![](img/Pasted%20image%2020231104110420.png)
+![](Pasted%20image%2020231104110420.png)
 
 ## Formas de onda
 
@@ -19,11 +19,11 @@ Amperio.hora -> Culombios
 - **Valor de valle**: mínimo valor que adquiere la función periódica en un tiempo
 - **Valor de cresta a valle**: diferencia entre los valores de cresta y valle en un periodo
 
-![](img/Pasted%20image%2020231104110826.png)
+![](Pasted%20image%2020231104110826.png)
 
-![](img/Pasted%20image%2020231104111608.png)
+![](Pasted%20image%2020231104111608.png)
 
-![](img/Pasted%20image%2020231104111635.png)
+![](Pasted%20image%2020231104111635.png)
 
 - **Valor medio o componente de continua**: es la media aritmética de los valores instantáneos de la función durante un periodo.
 - **Valor eficaz**: es la raíz cuadrada de la media aritmética de los cuadrados de los valores instantáneos de la función durante un periodo. No puede ser nunca negativo y siempre es mayor o igual que el valor medio
@@ -31,7 +31,7 @@ Amperio.hora -> Culombios
 ## Circuito eléctrico
 ## Esquema eléctrico
 
-![](img/Pasted%20image%2020231104112024.png)
+![](Pasted%20image%2020231104112024.png)
 
 ## Definiciones de un esquema eléctrico
 
@@ -40,7 +40,7 @@ Amperio.hora -> Culombios
 - Lazo: cualquier camino cerrado en un circuito
 - Malla: lazo que no contiene ningún nodo en su interior
 
-![](img/Pasted%20image%2020231104112228.png)
+![](Pasted%20image%2020231104112228.png)
 
 ## Tipos de circuitos eléctricos
 
@@ -54,76 +54,76 @@ Amperio.hora -> Culombios
 - Serie: tienen la misma corriente X elementos
 - Paralelo: tienen el mismo voltage X elementos
 
-![](img/Pasted%20image%2020231104113053.png)
+![](Pasted%20image%2020231104113053.png)
 
 ## Análisis de circuitos
 ## LTK
 - Ley de Tensiones de Kirchoff
 
-![](img/Pasted%20image%2020231104113213.png)
+![](Pasted%20image%2020231104113213.png)
 
 ## LCK
 - Ley de corrientes de Kirchoff
 
-![](img/Pasted%20image%2020231104113341.png)
+![](Pasted%20image%2020231104113341.png)
 
 ## Ejercicios Tema 1
 ## Ejercicio 1
 
-![](img/Pasted%20image%2020231104113531.png)
+![](Pasted%20image%2020231104113531.png)
 
-![](img/Pasted%20image%2020231104113836.png)
+![](Pasted%20image%2020231104113836.png)
 
 ## Ejercicio 2
 
-![](img/Pasted%20image%2020231104113904.png)
+![](Pasted%20image%2020231104113904.png)
 
-![](img/Pasted%20image%2020231104114035.png)
+![](Pasted%20image%2020231104114035.png)
 
 ## Ejercicio 3
 
-![](img/Pasted%20image%2020231104114142.png)
+![](Pasted%20image%2020231104114142.png)
 
-![](img/Pasted%20image%2020231104114359.png)
+![](Pasted%20image%2020231104114359.png)
 
 ## Ejercicio 4
 
-![](img/Pasted%20image%2020231104114433.png)
+![](Pasted%20image%2020231104114433.png)
 
-![](img/Pasted%20image%2020231104114811.png)
+![](Pasted%20image%2020231104114811.png)
 
 ## Ejercicio 5
 
-![](img/Pasted%20image%2020231104114839.png)
+![](Pasted%20image%2020231104114839.png)
 
-![](img/Pasted%20image%2020231104115053.png)
+![](Pasted%20image%2020231104115053.png)
 
 ## Ejercicio 6
 
-![](img/Pasted%20image%2020231104115125.png)
+![](Pasted%20image%2020231104115125.png)
 
-![](img/Pasted%20image%2020231104115319.png)
+![](Pasted%20image%2020231104115319.png)
 
 ## Ejercicio 7
 
-![](img/Pasted%20image%2020231104115348.png)
+![](Pasted%20image%2020231104115348.png)
 
-![](img/Pasted%20image%2020231104115446.png)
+![](Pasted%20image%2020231104115446.png)
 
-![](img/Pasted%20image%2020231104115504.png)
+![](Pasted%20image%2020231104115504.png)
 
 ## Ejercicio 8
 
-![](img/Pasted%20image%2020231104115605.png)
+![](Pasted%20image%2020231104115605.png)
 
-![](img/Pasted%20image%2020231104115820.png)
+![](Pasted%20image%2020231104115820.png)
 
 # Tema 2. Componentes pasivos
 
 ## Resistencia
 ## Representación V-I
 
-![](img/Pasted%20image%2020231104120647.png)
+![](Pasted%20image%2020231104120647.png)
 
 ## Cortocircuito
 - Representa un cable
@@ -132,7 +132,7 @@ Amperio.hora -> Culombios
 - Pasa corriente
 ## Representación V-I
 
-![](img/Pasted%20image%2020231104120923.png)
+![](Pasted%20image%2020231104120923.png)
 
 ## Circuito abierto
 - Tiene voltage (a determinar por el circuito)
@@ -141,20 +141,20 @@ Amperio.hora -> Culombios
 
 ## Representación V-I
 
-![](img/Pasted%20image%2020231104121049.png)
+![](Pasted%20image%2020231104121049.png)
 
 ## Tipos de resistencias
 
-![](img/Pasted%20image%2020231104121140.png)
+![](Pasted%20image%2020231104121140.png)
 
 ## Condensador
 ## Fases
 
-![](img/Pasted%20image%2020231104121303.png)
+![](Pasted%20image%2020231104121303.png)
 
 ## Serie vs paralelo
 
-![](img/Pasted%20image%2020231104121417.png)
+![](Pasted%20image%2020231104121417.png)
 
 - **Impedancia**: concepto relacionado con el comportamiento de un dispositivo en régimen permanente ante excitaciones de señales alternas senoidales. Expresa la oposición del elemento al paso de la corriente
 
@@ -171,11 +171,11 @@ Amperio.hora -> Culombios
 - En continua a frecuencia cero la impedancia es 0
 - Su unidad es el Henrio *H*
 
-![](img/Pasted%20image%2020231104122114.png)
+![](Pasted%20image%2020231104122114.png)
 
 ## Serie vs paralelo
 
-![](img/Pasted%20image%2020231104122152.png)
+![](Pasted%20image%2020231104122152.png)
 
 ## Fuente de tensión ideal
 
@@ -184,7 +184,7 @@ Amperio.hora -> Culombios
 
 ## Característica V-I
 
-![](img/Pasted%20image%2020231104122410.png)
+![](Pasted%20image%2020231104122410.png)
 
 ## Fuente de corriente ideal
 
@@ -193,13 +193,13 @@ Amperio.hora -> Culombios
 
 ## Característica V-I
 
-![](img/Pasted%20image%2020231104122521.png)
+![](Pasted%20image%2020231104122521.png)
 
 ## Preguntas Repaso Tema 2
 
-![](img/Pasted%20image%2020231104122806.png)
+![](Pasted%20image%2020231104122806.png)
 
-![](img/Pasted%20image%2020231104122823.png)
+![](Pasted%20image%2020231104122823.png)
 
 # Tema 3. Diodos
 
@@ -207,15 +207,15 @@ Amperio.hora -> Culombios
 
 - Conduce en un solo sentido
 
-![](img/Pasted%20image%2020231104123647.png)
+![](Pasted%20image%2020231104123647.png)
 
-![](img/Pasted%20image%2020231104123712.png)
+![](Pasted%20image%2020231104123712.png)
 
 ## Característica V-I
 
-![](img/Pasted%20image%2020231104123746.png)
+![](Pasted%20image%2020231104123746.png)
 
-![](img/Pasted%20image%2020231104123914.png)
+![](Pasted%20image%2020231104123914.png)
 
 ## ¿Cómo resolverlos?
 - Proponer una hipótesis:
@@ -228,13 +228,13 @@ Amperio.hora -> Culombios
 
 - Puede funcionar como una fuente de tensión
 
-![](img/Pasted%20image%2020231104124304.png)
+![](Pasted%20image%2020231104124304.png)
 
 ## Característica V-I
 
-![](img/Pasted%20image%2020231104124335.png)
+![](Pasted%20image%2020231104124335.png)
 
-![](img/Pasted%20image%2020231104124401.png)
+![](Pasted%20image%2020231104124401.png)
 
 ## ¿Cómo los resolvemos?
 
@@ -246,27 +246,27 @@ Amperio.hora -> Culombios
 	- Funciona como fuente de tensión (I = ?, V = Vz)
 		- Comprobar que Iz sea > 0
 
-![](img/Pasted%20image%2020231104124628.png)
+![](Pasted%20image%2020231104124628.png)
 
 ## Ejercicios Tema 3
 
 ## Ejercicio 1
 
-![](img/Pasted%20image%2020231104124718.png)
+![](Pasted%20image%2020231104124718.png)
 
-![](img/IMG_5817.jpeg)
+![](IMG_5817.jpeg)
 
 ## Ejercicio 2
 
-![](img/Pasted%20image%2020231104125420.png)
+![](Pasted%20image%2020231104125420.png)
 
-![](img/IMG_5821.jpeg)
+![](IMG_5821.jpeg)
 
 ## Preguntas de repaso
 
-![](img/Pasted%20image%2020231104131124.png)
+![](Pasted%20image%2020231104131124.png)
 
-![](img/Pasted%20image%2020231104131143.png)
+![](Pasted%20image%2020231104131143.png)
 
 # Tema 4. Materiales semiconductores
 
@@ -296,11 +296,11 @@ Amperio.hora -> Culombios
 ## Diodo de unión PN
 ### Directa
 
-![](img/Pasted%20image%2020231105113747.png)
+![](Pasted%20image%2020231105113747.png)
 
 ### Inversa
 
-![](img/Pasted%20image%2020231105113822.png)
+![](Pasted%20image%2020231105113822.png)
 
 ## Fotodiodos
 
@@ -312,9 +312,9 @@ Amperio.hora -> Culombios
 
 ## Aplicaciones de Diodos LED y Fotodiodos
 
-![](img/Pasted%20image%2020231105114102.png)
+![](Pasted%20image%2020231105114102.png)
 
-![](img/Pasted%20image%2020231105114217.png)
+![](Pasted%20image%2020231105114217.png)
 
 ## Fototransistor
 
@@ -332,11 +332,11 @@ Amperio.hora -> Culombios
 
 ## Preguntas de repaso
 
-![](img/Pasted%20image%2020231105114559.png)
+![](Pasted%20image%2020231105114559.png)
 
-![](img/Pasted%20image%2020231105114619.png)
+![](Pasted%20image%2020231105114619.png)
 
-![](img/Pasted%20image%2020231105114635.png)
+![](Pasted%20image%2020231105114635.png)
 
 # Tema 5. Transistor MOSFET
 
@@ -345,11 +345,11 @@ Amperio.hora -> Culombios
 ## Estructura del MOSFET
 ## Canal N
 
-![](img/Pasted%20image%2020231105120716.png)
+![](Pasted%20image%2020231105120716.png)
 
 ## Canal P
 
-![](img/Pasted%20image%2020231105120738.png)
+![](Pasted%20image%2020231105120738.png)
 
 ## Física del MOSFET
 
@@ -361,14 +361,14 @@ Amperio.hora -> Culombios
 
 ## Característica V-I
 
-![](img/Pasted%20image%2020231105121141.png)
+![](Pasted%20image%2020231105121141.png)
 
 ## Canal N Condiciones
 
-![](img/Pasted%20image%2020231105121256.png)
+![](Pasted%20image%2020231105121256.png)
 
 ## Ejemplo 1
 
-![](img/Pasted%20image%2020231105121420.png)
+![](Pasted%20image%2020231105121420.png)
 
-![](img/IMG_5835.jpeg)
+![](IMG_5835.jpeg)

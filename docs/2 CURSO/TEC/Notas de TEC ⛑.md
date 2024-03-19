@@ -16,17 +16,17 @@
 
 ## ¿Qué ocurre si no adapto la salida del sensor a la entrada del convertidor?
 - Pierdo resolución en la medida al no usar todos los códigos disponibles del A/D
-![](img/convertidor.png)
+![](convertidor.png)
 
 - Fórmula: (HIGH-LOW)/2^bits
 
 # Transistores
 
-![](img/transistores.png)
+![](transistores.png)
 
 ## Estructura del MOSFET
 
-![](img/mosfet.png)
+![](mosfet.png)
 
 
 ## Física del MOSFET
@@ -39,34 +39,34 @@
 
 ## MOSFET Característica V-I ideal
 
-![](img/vi.png)
+![](vi.png)
 
 ## ¿Cómo modelo el MOSFET ?
 
-![](img/vi%20ideal.png)
+![](vi%20ideal.png)
 
 ## Preguntas sobre MOSFET
 
-![](img/p1.png)
-![](img/p2.png)
+![](p1.png)
+![](p2.png)
 
 
 # Niveles lógicos de tensión
 
-![](img/tension.png)
+![](tension.png)
 
 - FAN-OUT: número de puertas lógicas que puedo conectar a la salida de otra puerta
 
-![](img/fan%20out.png)
+![](fan%20out.png)
 
 ## Preguntas de puertas lógicas
 
-![](img/p1%20l.png)
-![](img/p2%20l.png)
+![](p1%20l.png)
+![](p2%20l.png)
 
 # Amplificadores operacionales
 
-![](img/amplificadores.png)
+![](amplificadores.png)
 
 
 ---
@@ -80,7 +80,7 @@
 - Combina un diodo LED y un fototransistor. El dispositivo funciona como un interruptor activado mediante la luz emitida por el diodo LED. Si el LED emite luz,  satura (cortocircuita) el fototransistor. Se utiliza para aislar eléctricamente dos circuitos pues la conexión entre ambos es óptica. Se encapsula como un circuito integrado DIP.
 
 ## Puertas lógicas
-![](img/Pasted%20image%2020230612115145.png)
+![](Pasted%20image%2020230612115145.png)
 
 ## Propiedades de los sistemas digitales
 - Circuitos electrónicos que manejan señales discretas

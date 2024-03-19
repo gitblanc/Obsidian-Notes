@@ -8,9 +8,9 @@
 - Ingeniería de requisitos
 	- Es importante porque los errores no descubiertos en esta fase, implican correcciones en fases posteriores
 
-![](img/Pasted%20image%2020231207142324.png)
+![](Pasted%20image%2020231207142324.png)
 
-![](img/Pasted%20image%2020231207142424.png)
+![](Pasted%20image%2020231207142424.png)
 
 ## Problemas típicos
 
@@ -41,11 +41,11 @@
 
 ## Requisitos no funcionales (RNF) según Kotonya y Somerville
 
-![](img/Pasted%20image%2020231207143151.png)
+![](Pasted%20image%2020231207143151.png)
 
 ## Otras clasificaciones de requisitos
 
-![](img/Pasted%20image%2020231207143304.png)
+![](Pasted%20image%2020231207143304.png)
 
 ## Requisitos de producto y de proyecto
 
@@ -95,17 +95,17 @@
 
 - No es lineal, sino iterativo
 
-![](img/Pasted%20image%2020231207144632.png)
+![](Pasted%20image%2020231207144632.png)
 
-![](img/Pasted%20image%2020231207144717.png)
+![](Pasted%20image%2020231207144717.png)
 
 ## Otros procesos de IR. Pohl
 
-![](img/Pasted%20image%2020231207144857.png)
+![](Pasted%20image%2020231207144857.png)
 
 ## Kotonya y Sommerville
 
-![](img/Pasted%20image%2020231207145010.png)
+![](Pasted%20image%2020231207145010.png)
 
 ## Tema 3. Técnicas de obtención de requisitos
 
@@ -201,21 +201,21 @@
 
 ## ¿Cuándo emplear las técnicas?
 
-![](img/Pasted%20image%2020231207153304.png)
+![](Pasted%20image%2020231207153304.png)
 
 ## Recomendaciones: preguntas
 
-![](img/Pasted%20image%2020231207153358.png)
+![](Pasted%20image%2020231207153358.png)
 
-![](img/Pasted%20image%2020231207153417.png)
+![](Pasted%20image%2020231207153417.png)
 
 ## Recomendaciones: uso de modelos
 
-![](img/Pasted%20image%2020231207153452.png)
+![](Pasted%20image%2020231207153452.png)
 
 ## Recomendaciones: obtención
 
-![](img/Pasted%20image%2020231207153531.png)
+![](Pasted%20image%2020231207153531.png)
 
 # Tema 4. Análisis de requisitos
 
@@ -223,11 +223,11 @@
 
 ### Diagramas de casos de uso
 
-![](img/Pasted%20image%2020231208120245.png)
+![](Pasted%20image%2020231208120245.png)
 
 ### Diagramas de actividad
 
-![](img/Pasted%20image%2020231208120317.png)
+![](Pasted%20image%2020231208120317.png)
 
 ### Diagramas de flujo de datos
 
@@ -236,157 +236,157 @@
 - Útiles para extraer requisitos de datos
 - A menudo usados en **entrevistas**
 
-![](img/Pasted%20image%2020231208120406.png)
+![](Pasted%20image%2020231208120406.png)
 
 ### Diagramas swimlane
 
 - Representan las operaciones a realizar para ejecutar un proceso del sistema
 
-![](img/Pasted%20image%2020231208120629.png)
+![](Pasted%20image%2020231208120629.png)
 
 ### Diagramas de estado
 
 - Describen los cambios de estado de un sistema bajo unas condiciones determinadas
 - Uso típico en sistemas de tiempo real y en la gestión de pedidos, inventarios y similares
 
-![](img/Pasted%20image%2020231208120806.png)
+![](Pasted%20image%2020231208120806.png)
 
 ### Mapas de diálogo
 
 - Describen la interfaz de usuario a un nivel de abstracción alto
 - Permite explorar el flujo de interacciones entre usuarios y sistema sin entrar en detalles de los procesos o cuestiones de diseño de IU
 
-![](img/Pasted%20image%2020231208120939.png)
+![](Pasted%20image%2020231208120939.png)
 
 ### Árboles de decisión
 
 - Representan una secuencia lógica de acciones a tomar por el sistema bajo unas condiciones determinadas
 - Adecuados para documentar restricciones de negocio
 
-![](img/Pasted%20image%2020231208121052.png)
+![](Pasted%20image%2020231208121052.png)
 
 ### Diagramas entidad-relación
 
 - Representa entidades y relaciones entre ellas
 - Se emplean para definir Bases de datos (BD)
 
-![](img/Pasted%20image%2020231208121227.png)
+![](Pasted%20image%2020231208121227.png)
 
 ### Diagramas de clase
 
 - Alternativa a los diagramas Entidad-Relación
 - Los atributos que un E-R obviaba, aquí se especifican
 
-![](img/Pasted%20image%2020231208121328.png)
+![](Pasted%20image%2020231208121328.png)
 
 ### Matrices CRUD
 
 - Relaciona acciones del sistema y datos para estudiar cuando estos se crean, leen, actualizan o eliminan (CRUD)
 
-![](img/Pasted%20image%2020231208121454.png)
+![](Pasted%20image%2020231208121454.png)
 
 ## Atributos de calidad
 
-![](img/Pasted%20image%2020231208121528.png)
+![](Pasted%20image%2020231208121528.png)
 
 ## Atributos de calidad internos vs externos
 
 - **Externos**: características observadas durante la ejecución del sistema, que influencian al usuario y su experiencia.
 - **Internos**: propiedades percibidas por el equipo técnico durante su interacción con el sistema, que pueden afectar indirectamente a los usuarios
 
-![](img/Pasted%20image%2020231208121735.png)
+![](Pasted%20image%2020231208121735.png)
 
 ## Disponibilidad
 
-![](img/Pasted%20image%2020231208121818.png)
+![](Pasted%20image%2020231208121818.png)
 
 Ejemplo: *El sistema estará disponible un 99% del tiempo entre las 6.00 y las 24:00.*
 
 ## Fiabilidad
 
-![](img/Pasted%20image%2020231208121904.png)
+![](Pasted%20image%2020231208121904.png)
 
 Ejemplo: *El tiempo medio entre fallos del subsistema X será de 42 días.*
 
 ## Instalabilidad
 
-![](img/Pasted%20image%2020231208121948.png)
+![](Pasted%20image%2020231208121948.png)
 
 ## Integridad
 
-![](img/Pasted%20image%2020231208122016.png)
+![](Pasted%20image%2020231208122016.png)
 
 Ejemplo: *El sistema no redondeará el tiempo transcurrido desde el arranque del sistema al registrar el valor medido.*
 
 ## Interoperabilidad
 
-![](img/Pasted%20image%2020231208122243.png)
+![](Pasted%20image%2020231208122243.png)
 
 Ejemplo: *El sistema podrá importar cualquier modelo 3D exportado de la herramienta Autodesk 3ds Max (versión 2021 o anterior).*
 
 ## Rendimiento
 
-![](img/Pasted%20image%2020231208122329.png)
+![](Pasted%20image%2020231208122329.png)
 
 Ejemplo: *El sistema situará la placa giratoria en la posición indicada por el usuario en un máximo de TIEMPO_MAXIMO_GIRO segundos.*
 
 ## Robustez
 
-![](img/Pasted%20image%2020231208122401.png)
+![](Pasted%20image%2020231208122401.png)
 
 Ejemplo: *Si el editor de imágenes se cierra antes de que el usuario guarde el archivo, la próxima vez que el usuario inicie el editor el sistema recuperará los contenidos del archivo de, como máximo, TIEMPO_MAXIMO_RECUPERACIÓN antes del fallo.*
 
 ## Seguridad (safety)
 
-![](img/Pasted%20image%2020231208122435.png)
+![](Pasted%20image%2020231208122435.png)
 
 Ejemplo: *El sistema finalizará inmediatamente el proceso de radiación ionizante si detecta niveles de radiación anómalos.*
 
 ## Seguridad (security)
 
-![](img/Pasted%20image%2020231208122525.png)
+![](Pasted%20image%2020231208122525.png)
 
 Ejemplo: *El sistema no permitirá a los usuarios reutilizar contraseñas que haya empleado previamente.*
 
 ## Usabilidad
 
-![](img/Pasted%20image%2020231208122608.png)
+![](Pasted%20image%2020231208122608.png)
 
 Ejemplo: *Un usuario con, al menos, tres meses de experiencia será capaz de solicitar una miniatura en un tiempo medio de 5 minutos y un máximo de 10 minutos.*
 
 ## Eficiencia
 
-![](img/Pasted%20image%2020231208122644.png)
+![](Pasted%20image%2020231208122644.png)
 
 Ejemplo: *El 33% de la memoria RAM disponible para el sistema se dejará libre durante los períodos de máxima carga previstos.*
 
 ## Escalabilidad
 
-![](img/Pasted%20image%2020231208122720.png)
+![](Pasted%20image%2020231208122720.png)
 
 Ejemplo: *La capacidad del sistema debe ser capaz de incrementarse de 420 transacciones al día a 1500 transacciones al día en un máximo de 24 horas.*
 
 ## Modificabilidad
 
-![](img/Pasted%20image%2020231208122812.png)
+![](Pasted%20image%2020231208122812.png)
 
 Ejemplo: *Un programador de mantenimiento con al menos un año de experiencia podrá modificar los algoritmos de cálculo de impuestos para adaptarlos a cambios en la normativa tributaria en un máximo de 10 horas de trabajo.*
 
 ## Portabilidad
 
-![](img/Pasted%20image%2020231208122855.png)
+![](Pasted%20image%2020231208122855.png)
 
 Ejemplo: *El sistema permitirá importar las características del perfil entre IoS y Android.*
 
 ## Reusabilidad
 
-![](img/Pasted%20image%2020231208122930.png)
+![](Pasted%20image%2020231208122930.png)
 
 Ejemplo: *Los algoritmos de cálculo de impuestos serán reusables en futuras aplicaciones de compra-venta.*
 
 ## Verificabilidad
 
-![](img/Pasted%20image%2020231208123020.png)
+![](Pasted%20image%2020231208123020.png)
 
 Ejemplo: *La máxima complejidad ciclomáticade un módulo del sistema será de 21.*
 
@@ -394,7 +394,7 @@ Ejemplo: *La máxima complejidad ciclomáticade un módulo del sistema será de 
 
 ## Estándar IEEE 830
 
-![](img/Pasted%20image%2020231210172029.png)
+![](Pasted%20image%2020231210172029.png)
 
 ## Cualidades deseables de los requisitos
 
@@ -458,7 +458,7 @@ Primero se hace la verificación y después la validación
 	- Organizado
 	- Trazable
 
-![](img/Pasted%20image%2020231216153543.png)
+![](Pasted%20image%2020231216153543.png)
 
 ## Técnicas de validación y verificación
 
@@ -469,57 +469,57 @@ Primero se hace la verificación y después la validación
 
 ## Revisiones 
 
-![](img/Pasted%20image%2020231216153732.png)
+![](Pasted%20image%2020231216153732.png)
 
 ## Revisiones formales
 
-![](img/Pasted%20image%2020231216153810.png)
+![](Pasted%20image%2020231216153810.png)
 
-![](img/Pasted%20image%2020231216153825.png)
+![](Pasted%20image%2020231216153825.png)
 
 ## Revisiones técnicas
 
-![](img/Pasted%20image%2020231216153958.png)
+![](Pasted%20image%2020231216153958.png)
 
 ## Revisiones: checklists
 
-![](img/Pasted%20image%2020231216154059.png)
+![](Pasted%20image%2020231216154059.png)
 
 ## Generación de casos de prueba
 
-![](img/Pasted%20image%2020231216154304.png)
+![](Pasted%20image%2020231216154304.png)
 
 ## Prototipado
 
-![](img/Pasted%20image%2020231216154409.png)
+![](Pasted%20image%2020231216154409.png)
 
-![](img/Pasted%20image%2020231216154426.png)
+![](Pasted%20image%2020231216154426.png)
 
-![](img/Pasted%20image%2020231216154446.png)
+![](Pasted%20image%2020231216154446.png)
 
-![](img/Pasted%20image%2020231216154505.png)
+![](Pasted%20image%2020231216154505.png)
 
 ## Criterios de aceptación
 
-![](img/Pasted%20image%2020231216154556.png)
+![](Pasted%20image%2020231216154556.png)
 
-![](img/Pasted%20image%2020231216154624.png)
+![](Pasted%20image%2020231216154624.png)
 
 # Tema 7. Gestión de Requisitos
 
 ## Desarrollo y gestión de requisitos
 
-![](img/Pasted%20image%2020231216154848.png)
+![](Pasted%20image%2020231216154848.png)
 
 ## Gestión
 
-![](img/Pasted%20image%2020231216155129.png)
+![](Pasted%20image%2020231216155129.png)
 
 ## Línea base de requisitos
 
-![](img/Pasted%20image%2020231216155334.png)
+![](Pasted%20image%2020231216155334.png)
 
-![](img/Pasted%20image%2020231216155401.png)
+![](Pasted%20image%2020231216155401.png)
 
 ## Categorías del proceso de gestión
 
@@ -530,113 +530,113 @@ Primero se hace la verificación y después la validación
 
 ## Control de versiones
 
-![](img/Pasted%20image%2020231216155548.png)
+![](Pasted%20image%2020231216155548.png)
 
 ## Seguimiento del estado de los requisitos
 
-![](img/Pasted%20image%2020231216155633.png)
+![](Pasted%20image%2020231216155633.png)
 
-![](img/Pasted%20image%2020231216155719.png)
+![](Pasted%20image%2020231216155719.png)
 
-![](img/Pasted%20image%2020231216155736.png)
+![](Pasted%20image%2020231216155736.png)
 
-![](img/Pasted%20image%2020231216155803.png)
+![](Pasted%20image%2020231216155803.png)
 
 ## Gestión de problemas
 
-![](img/Pasted%20image%2020231216155843.png)
+![](Pasted%20image%2020231216155843.png)
 
 ## Control de cambios
 
-![](img/Pasted%20image%2020231216155919.png)
+![](Pasted%20image%2020231216155919.png)
 
 ## Corrupción del alcance
 
-![](img/Pasted%20image%2020231216160006.png)
+![](Pasted%20image%2020231216160006.png)
 
-![](img/Pasted%20image%2020231216160030.png)
+![](Pasted%20image%2020231216160030.png)
 
-![](img/Pasted%20image%2020231216160104.png)
+![](Pasted%20image%2020231216160104.png)
 
 ## Política de control de cambios
 
-![](img/Pasted%20image%2020231216160132.png)
+![](Pasted%20image%2020231216160132.png)
 
 ## Proceso de control de cambios
 
-![](img/Pasted%20image%2020231216160246.png)
+![](Pasted%20image%2020231216160246.png)
 
 ## Comité de control de cambios
 
-![](img/Pasted%20image%2020231216160322.png)
+![](Pasted%20image%2020231216160322.png)
 
 ## Métrica de cambios
 
-![](img/Pasted%20image%2020231216160423.png)
+![](Pasted%20image%2020231216160423.png)
 
 ## Estabilidad de cambios
 
-![](img/Pasted%20image%2020231216160511.png)
+![](Pasted%20image%2020231216160511.png)
 
 ## Impacto de cambios
 
-![](img/Pasted%20image%2020231216160758.png)
+![](Pasted%20image%2020231216160758.png)
 
 ## Trazado de requisitos
 
-![](img/Pasted%20image%2020231216160842.png)
+![](Pasted%20image%2020231216160842.png)
 
-![](img/Pasted%20image%2020231216160930.png)
+![](Pasted%20image%2020231216160930.png)
 
-![](img/Pasted%20image%2020231216161002.png)
+![](Pasted%20image%2020231216161002.png)
 
 # Tema 8. Ingeniería de requisitos en los Métodos Ágiles
 
 ## Métodos Ágiles
 
-![](img/Pasted%20image%2020231216161724.png)
+![](Pasted%20image%2020231216161724.png)
 
-![](img/Pasted%20image%2020231216161745.png)
+![](Pasted%20image%2020231216161745.png)
 
 ## Proceso de IR en metodologías ágiles
 
-![](img/Pasted%20image%2020231216161830.png)
+![](Pasted%20image%2020231216161830.png)
 
 ## Historias de Usuario
 
-![](img/Pasted%20image%2020231216162406.png)
+![](Pasted%20image%2020231216162406.png)
 
-![](img/Pasted%20image%2020231216162432.png)
+![](Pasted%20image%2020231216162432.png)
 
-![](img/Pasted%20image%2020231216162524.png)
+![](Pasted%20image%2020231216162524.png)
 
 ## Obtención 
 
-![](img/Pasted%20image%2020231216162607.png)
+![](Pasted%20image%2020231216162607.png)
 
 ## Análisis
 
-![](img/Pasted%20image%2020231216162628.png)
+![](Pasted%20image%2020231216162628.png)
 
-![](img/Pasted%20image%2020231216162727.png)
+![](Pasted%20image%2020231216162727.png)
 
 ## Especificación
 
-![](img/Pasted%20image%2020231216162754.png)
+![](Pasted%20image%2020231216162754.png)
 
-![](img/Pasted%20image%2020231216162836.png)
+![](Pasted%20image%2020231216162836.png)
 
-![](img/Pasted%20image%2020231216163058.png)
+![](Pasted%20image%2020231216163058.png)
 
 ## Validación
 
-![](img/Pasted%20image%2020231216163146.png)
+![](Pasted%20image%2020231216163146.png)
 
 ## Línea base
 
-![](img/Pasted%20image%2020231216163219.png)
+![](Pasted%20image%2020231216163219.png)
 
 ## Gestión
 
-![](img/Pasted%20image%2020231216163251.png)
+![](Pasted%20image%2020231216163251.png)
 

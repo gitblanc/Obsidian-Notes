@@ -6,14 +6,14 @@
 - Generador de tabals de markdown por medio de imports -> https://www.tablesgenerator.com/markdown_tables
 
 ## Jerarquía de directorios en Linux
-![](img/Pasted%20image%2020230208131723.png)
+![](Pasted%20image%2020230208131723.png)
 - Listado completo de comandos en Linux: https://ss64.com/bash/
 - Comandos de lINUX (versión corta)
-![](img/Pasted%20image%2020230208131838.png)
+![](Pasted%20image%2020230208131838.png)
 - **Minificación de código**: coger un cacho de código y hacerlo más pequeño pero que funcione
 - tool **GnuPG** (criptografía):
-![](img/Pasted%20image%2020230209131923.png)
+![](Pasted%20image%2020230209131923.png)
 - Algoritmos KDF:
-![](img/Pasted%20image%2020230209134835.png)
+![](Pasted%20image%2020230209134835.png)
 
 ---

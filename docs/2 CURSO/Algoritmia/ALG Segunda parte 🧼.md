@@ -7,7 +7,7 @@
 - Se repiten operaciones, por tanto se guardan las calculadas en un array para no recalcularlas varias veces.
 ---
 ## Problema del cambio
-![](img/problema%20cambio.jpeg)
+![](problema%20cambio.jpeg)
 Lo que no se ve son 10 céntimos :-)
 - Buscar el mínimo para no pasarse, usando la moneda de la iteración o de iteraciones anteriores.
 ---
@@ -15,9 +15,9 @@ Lo que no se ve son 10 céntimos :-)
 - **Problema de las 8 reinas:** colocar 8 reinas en un tablero sin que se coman.
 - **Backtracking** explora el grafo, va desarrollando estados hasta que encuentra una solución. Es un *algoritmo de fuerza bruta*, puesto que lo que hace es desarrollar estados de forma rápida hasta encontrar una solución.
 - Técnica ineficiente, con complejidades exponenciales.
-![](img/recorrido%20en%20profundidad.png)
+![](recorrido%20en%20profundidad.png)
 - **Grafo implícito:** grafo que se desarrolla a medida que se va recorriendo. Ahorra tiempo de ejecución y espacio en memoria.
-![](img/grafo%20implicito.png)
+![](grafo%20implicito.png)
 
 #### Esquema Backtracking
 ```java
@@ -53,8 +53,8 @@ public static void backtracking(Estado e) {
 - Backtracking tiene complejidad explonencial.
 ---
 ### Ejercicio formar palabras a partir de un conjunto de letras
-![](img/formar%20palabras%20planteo.png)
-![](img/formar%20palabras.png)
+![](formar%20palabras%20planteo.png)
+![](formar%20palabras.png)
 ```java
  public static void backtracking (int nivel) {
 
@@ -82,8 +82,8 @@ public static void backtracking(Estado e) {
 ```
 ---
 ### Problema de la asignación de tareas a agentes
-![](img/tareas%20agentes.png)
-![](img/tareas%20agente%20res.png)
+![](tareas%20agentes.png)
+![](tareas%20agente%20res.png)
 ```java
  static void backtracking (int nivel) {  
 	if (nivel==n) { //hay ya una asignación completa

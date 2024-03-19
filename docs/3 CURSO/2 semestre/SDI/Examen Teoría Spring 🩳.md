@@ -72,7 +72,7 @@ http.authorizeRequests()
 16. ¿Con qué propósito se usa comúnmente la anotación @Bean?
 ==Para declarar Objetos de configuración o funcionalidad transversal==
 
-17. El siguiente fragmento de código trata de utilizar un validador, para validar los datos facilitados por el usuario en la entidad “Coche” ¿Hay algún error en la implementación? Indica la respuesta correcta.![](img/image.YVQ401.png)
+17. El siguiente fragmento de código trata de utilizar un validador, para validar los datos facilitados por el usuario en la entidad “Coche” ¿Hay algún error en la implementación? Indica la respuesta correcta.![](image.YVQ401.png)
 ==El Bean del validador miValidador no ha sido inyectado==
 ==Faltan errores por mencionar==
 
@@ -181,7 +181,7 @@ anyRequest () . permitAlI ()
 - ==**servidor**: son comprobaciones en el servidor sobre los datos enviados por el cliente.
 - ==Las **validaciones en el servidor** son más seguras.==
 
-45. ![](img/Pasted%20image%2020230217165205.png)
+45. ![](Pasted%20image%2020230217165205.png)
 
 46. 1) ¿Qué es el objeto sesión? 2) Pon un ejemplo de uso común.
 - ==Es un objeto propio de cada cliente / usuario
@@ -190,19 +190,19 @@ anyRequest () . permitAlI ()
 - ==Almacenar productos temporalmente en el carrito de la compra==
 
 47. Completa el siguiente código, se debe utiliza HttpSession para guardar la fecha del último inicio de cada usuario:
-![](img/Pasted%20image%2020230217165522.png)
+![](Pasted%20image%2020230217165522.png)
 
 48. ¿Cómo afectaría a los formularios de la aplicación incluir protección contra ataques CSRF
 - ==deberían incluir un parámetro nuevo con el token CSRF
 - ==El token es generado por la aplicación==
 
-49. ![](img/Pasted%20image%2020230217165803.png)
+49. ![](Pasted%20image%2020230217165803.png)
 - ==asignaturasRepository.findOne solo recibe el ID de la nota
 - ==El repositorio debería recibir también una referencia al usuario==
 
-50. ![](img/Pasted%20image%2020230217165938.png)
+50. ![](Pasted%20image%2020230217165938.png)
 
-51. ![](img/Pasted%20image%2020230217170015.png)
+51. ![](Pasted%20image%2020230217170015.png)
 - ==El método ha de llevar la notación @Transactional==
 
 ---

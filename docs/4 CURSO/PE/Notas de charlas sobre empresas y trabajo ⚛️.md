@@ -6,7 +6,7 @@
 	- Procura hacer un CV anti ATS como en: [esta página](https://www.visualcv.com/es/plantillas-de-cv/ats/)
 - Una plantilla que a mi me pareció decente es esta:
 
-![](img/Pasted%20image%2020240314150726.png)
+![](Pasted%20image%2020240314150726.png)
 
 - Consulta salarios "reales" en esta página: [levelsfyi](https://www.levels.fyi/?compare=Google,Facebook,Microsoft&track=Software%20Engineer)
 - Consulta la puntuación de empleados y sus experiencias de la empresa en la que quieres entrar en [Glassdoor](https://www.glassdoor.es/index.htm)

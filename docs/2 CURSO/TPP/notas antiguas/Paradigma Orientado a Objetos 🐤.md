@@ -1,6 +1,6 @@
 ## Paradigma Orientado a Objetos
 - Usa los **objetos** (unión de datos y métodos) como principal abstracción, definiendo programas como interacciones entre objetos.
-![](img/objetos.png)
+![](objetos.png)
 
 ---
 ## Abstracción
@@ -18,7 +18,7 @@
 	- Se oculta el estado interno del objeto, ofreciendo un acceso indirecto mediante las propiedades (**encapsulamiento**)
 	- Es más mantenible
 - Las propiedades pueden ser de lectura y/o escritura
-![](img/propiedades.png)
+![](propiedades.png)
 
 ---
 ## Modularidad
@@ -41,23 +41,23 @@ En desarrollo del software interesa un **bajo acoplamiento** (poca dependencia e
 ## Herencia
 - Es un mecanismo de reutilización de código en la que el **estado** de una instancia está definido por la unión (herencia) de las estructuras de las clases base y la derivada              
 -> ***en resumido***: los atributos de las clases padre también están en las clases hija y además estas clases hija cuentan con más atributos que no tiene el padre
-![](img/herencia1.png)
-![](img/herencia%202.png)
+![](herencia1.png)
+![](herencia%202.png)
 
 ---
 ## Polimorfismo
 - Mecanismo de generalización que hace que una abstracción más general pueda representar abstracciones más específicas. El tipo general representa por tanto varias formas (*poli morfismo*)
-![](img/polimorfismo%201.png)
+![](polimorfismo%201.png)
 
 ---
 ## Enlace dinámico
 - Los métodos heredados se pueden especializar en las clases derivadas
-![](img/enlace%20dinamico.png)
+![](enlace%20dinamico.png)
 - Para que exista enlace dinámico en C# tenemos que:
 	- Poner la palabra reservada `virtual` al método que reciba el mensaje (al de la clase padre)
 	- Redefinir su funcionalidad usando la palabra reservada `override` en los métodos derivados (los de las clases hijas)
 - Si se trata de una coincidencia y no queremos que haya polimorfismo, ponemos la palabra `new`
-![](img/enlace%20dinamico%201.png)
+![](enlace%20dinamico%201.png)
 - En C# es **OBLIGATORIO** autorizar la redefinición poniendo o `virtual` u `override`
 
 ---
@@ -72,9 +72,9 @@ En desarrollo del software interesa un **bajo acoplamiento** (poca dependencia e
 ![](./img/2%20CURSO/TPP/img/herencia%20multiple.png)
 - Produce dos **conflictos**:
 	- **Coincidencia de nombres**
-	![](img/herencia%20multiple%202.png)
+	![](herencia%20multiple%202.png)
 	- **Herencia repetida** (se hereda de una misma clase varias veces por distintos caminos)
-	![](img/herencia%20multiple%203.png)
+	![](herencia%20multiple%203.png)
 	
 ---
 ## Interfaces
@@ -86,7 +86,7 @@ En desarrollo del software interesa un **bajo acoplamiento** (poca dependencia e
 ---
 ## Necesidad de control dinámico
 - ad hoc
-![](img/adhoc.png)
+![](adhoc.png)
 
 ---
 ## Excepciones y Asertos
@@ -103,26 +103,26 @@ En desarrollo del software interesa un **bajo acoplamiento** (poca dependencia e
 - Es la propiedad que permite construir abstracciones modelo para otras abstracciones. Ofrece una mayor robustez y un mayor rendimiento
 - Existen los siguientes elementos:
 	- Clases 
-![](img/clases%20genericas.png)
+![](clases%20genericas.png)
 	- Structs
 	- Métodos
-![](img/metodos%20genericos.png)
+![](metodos%20genericos.png)
 	- Interfaces
 	- Delegados
 
 ---
 ## Genericidad acotada (*bounded*)
-![](img/genericidad%20acotada%201.png)
+![](genericidad%20acotada%201.png)
 - **Genericidad acotada**: Permite hacer que los tipos genéricos sean más específicos
 - Método de ordenación (sort):
-![](img/sort.png)
-![](img/sort2.png)
+![](sort.png)
+![](sort2.png)
 
 ---
 ## Inferencia de tipos
 - Es la capacidad para deducir automáticamente el tipo de una expresión. Cuanta menos información de tipos provea el programador, más avanzada será la inferencia de tipos
-![](img/inferencia.png)
-![](img/inferencia%202.png)
+![](inferencia.png)
+![](inferencia%202.png)
 
 ---
 

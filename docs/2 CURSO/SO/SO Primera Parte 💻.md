@@ -2,7 +2,7 @@
 ---
 # 1 Febrero 2022 🌐
 ---
-![](img/procesador.png)
+![](procesador.png)
 
 ---
 # 3 Febrero 2022 ♿️
@@ -25,11 +25,11 @@ NOTA: cuando se produce una interrupción no tiene por qué tomar el control el 
 ## Tipos de sistemas operativos
 ---
 - **Estructurados por capas:**
- ![](img/so%20por%20capas.png)
+ ![](so%20por%20capas.png)
 - Problemas: de diseño (qué meto en cada módulo y cuantos módulos tengo), imposible de jerarquizar, y de rendimiento.
 ---
 - **Estructurado micronúcleo:** 
-![](img/micronucleo.png)
+![](micronucleo.png)
 - Ventajas: se puede "parar en caliente" (Se ejecuta menos tiempo en modo núcleo que en uno monolítico).
 - Problemas: para cualquier operación hay muchos mensajes. Para cada mensaje hay que cambiar entre usuario y núcleo. Pésimo rendimiento, peor que uno monolítico.
 ---
@@ -159,7 +159,7 @@ Colas multinivel con Prioridades dinámicas + Turno rotatorio
 - **Asíncrona:** nadie espera.
 ---
 NOTA: los procesos envían mensajes a los buzones y los reciben de buzones.
-![](img/buzones.png)
+![](buzones.png)
 
 - **Interbloqueo:** se produce cuando un proceso se encuentra esperando a un proceso que no puede ocurrir.
 - Estrategias para evitar el interbloqueo:
