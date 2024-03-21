@@ -235,3 +235,42 @@ f(a) //aplicación parcial, para no tener que pasar el parámetro b, creando as�
 
 ![](img/Pasted%20image%2020240314155944.png)
 
+## Sincronización de Hilos
+
+![](img/Pasted%20image%2020240321153406.png)
+
+![](img/Pasted%20image%2020240321153456.png)
+
+### ¿Cómo funciona el lock?
+
+```cs
+lock(Console.Out)//Es importante decidir qué objeto usar y a qué referenciase refiere (en tiempo de ejecución ha de ser la misma referencia)
+{
+	...
+}
+```
+
+- El lock **NO** impide que el objeto lockeado se use en otras partes de la aplicación
+	- Por tanto, esto nos puede conllevar a condiciones de carrera
+- El bloqueo se hace considerando el objeto en tiempo de ejecución
+
+![](img/Pasted%20image%2020240321154455.png)
+
+- No se pueden ejecutar a la vez porque apuntan al mismo objeto (misma referencia)
+
+![](img/Pasted%20image%2020240321154541.png)
+
+- Se pueden ejecutar a la vez porque cada hilo puede apuntar a un objeto distinto
+
+![](img/Pasted%20image%2020240321155103.png)
+
+![](img/Pasted%20image%2020240321155232.png)
+
+# Interbloqueo
+
+![](img/Pasted%20image%2020240321161238.png)
+
+![](img/Pasted%20image%2020240321161637.png)
+
+- El interbloqueo está en el `lock(this)`
+
