@@ -8,19 +8,19 @@ read b;
 print "fin"
 ```
 
-![](IMG_3609%201.jpeg)
+![](img/IMG_3609%201.jpeg)
 
 # Sintáctico
 
 1. Hacer el árbol AST:
-![](Pasted%20image%2020230510111456.png)
+![](img/Pasted%20image%2020230510111456.png)
 
-![](IMG_3610.jpeg)
+![](img/IMG_3610.jpeg)
 
 2. Decir si es una sentencia válida y hacer el árbol concreto:
-![](Pasted%20image%2020230510114513.png) ![](Pasted%20image%2020230510114550.png)
+![](img/Pasted%20image%2020230510114513.png) ![](img/Pasted%20image%2020230510114550.png)
 
-![](IMG_3611.jpeg)
+![](img/IMG_3611.jpeg)
 
 3. Dada la siguiente gramática, implementar un parser de la misma utilizando la técnica _recursiva descendente_.
 
@@ -118,7 +118,7 @@ public class RecursiveParser {
 
 4. Hacer una especificación ANTLR para un lenguaje con las siguientes características:
 - Una entrada tendrá sólo una única sentencia 'print' seguida de una expresión y un punto y coma.
-![](Pasted%20image%2020230510121917.png)
+![](img/Pasted%20image%2020230510121917.png)
 
 - Primero implementamos el léxico del lenguaje:
 ```java
@@ -150,7 +150,7 @@ expr:
 ```
 
 5. Crear la gramática abstracta para el lenguaje del ejemplo.
-![](Pasted%20image%2020230510123227.png)
+![](img/Pasted%20image%2020230510123227.png)
 
 ```g4
 programa ⟶ defVariable* sentencia*
@@ -284,7 +284,7 @@ Requisitos:
 
 Se pide especificar la sintaxis de dicho lenguaje en BNF y en EBNF.
 
-![](IMG_3615.jpeg)
+![](img/IMG_3615.jpeg)
 
 9. Dada la gramática en ANTLR y la gramática abstracta siguientes, añadir al fichero de ANTLR las acciones que construyan el AST.
 
@@ -346,27 +346,27 @@ expr returns[Expression ast]
 # Semántico
 
 1. 
-![](Pasted%20image%2020230510151010.png)
-![](Pasted%20image%2020230510151037.png)
-![](Pasted%20image%2020230510151109.png)
+![](img/Pasted%20image%2020230510151010.png)
+![](img/Pasted%20image%2020230510151037.png)
+![](img/Pasted%20image%2020230510151109.png)
 
-![](Pasted%20image%2020230619140704.png)
+![](img/Pasted%20image%2020230619140704.png)
 
 2. Dada la siguiente CFG, definir una gramática atribuida para realizar la fase de Identificación. Nota, se puede usar el objeto **st** del ejercicio anterior.
 **(G):**
-![](Pasted%20image%2020230510155120.png)
+![](img/Pasted%20image%2020230510155120.png)
 
-![](IMG_3617.jpeg)
+![](img/IMG_3617.jpeg)
 
-3. ![](Pasted%20image%2020230510163627.png)
+3. ![](img/Pasted%20image%2020230510163627.png)
 
-![](IMG_3618.jpeg)
+![](img/IMG_3618.jpeg)
 
 4.  Comprobar que las funciones tengan **return** en la siguiente gramática. Crear la AG correspondiente:
-![](WhatsApp%20Image%202023-05-14%20at%2014.55.43.jpeg)
+![](img/WhatsApp%20Image%202023-05-14%20at%2014.55.43.jpeg)
 
 Solución:
-![](IMG_3619.jpeg)
+![](img/IMG_3619.jpeg)
 
 # Generación de código
 
@@ -390,7 +390,7 @@ LOADI //va a la dirección 0 y lo deja en el tope de la pila
 STOREI
 ```
 
-2. ![](Pasted%20image%2020230510171309.png)
+2. ![](img/Pasted%20image%2020230510171309.png)
 
 ```assembly
 //read myInteger;
@@ -416,52 +416,52 @@ loadf
 outf
 ```
 
-3. ![](Pasted%20image%2020230510204201.png)
+3. ![](img/Pasted%20image%2020230510204201.png)
 
-![](IMG_3620.jpeg)
+![](img/IMG_3620.jpeg)
 
-4. ![](Pasted%20image%2020230510204717.png)
+4. ![](img/Pasted%20image%2020230510204717.png)
 
-![](IMG_3621.jpeg)
+![](img/IMG_3621.jpeg)
 
-5. ![](Pasted%20image%2020230510205821.png)
+5. ![](img/Pasted%20image%2020230510205821.png)
 
-![](IMG_3623.jpeg)
+![](img/IMG_3623.jpeg)
 
 6. Implementar las plantillas de código para las asignaciones. Usar la (G) del ejercicio anterior.
-![](Pasted%20image%2020230619150553.png)
+![](img/Pasted%20image%2020230619150553.png)
 
 7. Define las plantillas de código para apilar el valor de las siguientes expresiones:
-![](Pasted%20image%2020230619150902.png)
+![](img/Pasted%20image%2020230619150902.png)
 
-![](IMG_3625.jpeg)
+![](img/IMG_3625.jpeg)
 
 8. Especificar las plantillas de código de los arrays.
-![](Pasted%20image%2020230619151934.png)
+![](img/Pasted%20image%2020230619151934.png)
 
-![](IMG_3626.jpeg)
+![](img/IMG_3626.jpeg)
 
 Estas plantillas vienen de esta explicación:
-![](Pasted%20image%2020230619152402.png)
+![](img/Pasted%20image%2020230619152402.png)
 
 9. Especificar las plantillas de código para calcular las direcciones de memoria de los campos de los registros
-![](Pasted%20image%2020230619152925.png)
-![](IMG_3627.jpeg)
+![](img/Pasted%20image%2020230619152925.png)
+![](img/IMG_3627.jpeg)
 
 10. Escribir la plantilla de código de un bucle While.
-![](IMG_3629.jpeg)
+![](img/IMG_3629.jpeg)
 
 11. Escribir la plantilla de código de un bucle Do/While.
-![](IMG_3630.jpeg)
+![](img/IMG_3630.jpeg)
 
 12. Escribir la plantilla de código de un bucle For.
-![](IMG_3631.jpeg)
+![](img/IMG_3631.jpeg)
 
 13. Escribir la plantilla de código de un If/Else.
-![](IMG_3632.jpeg)
+![](img/IMG_3632.jpeg)
 
 14. Escribir las plantillas de código para la invocación de funciones.
-![](IMG_3633.jpeg)
+![](img/IMG_3633.jpeg)
 
 15. Switch:
 ```java

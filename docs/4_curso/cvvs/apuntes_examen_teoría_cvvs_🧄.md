@@ -19,7 +19,7 @@
 - **Defecto**: manifestación de un error. Desperfecto en un componente/sistema que puede causar que el software no realice su función requerida
 - **Fallo**: desviación en un componente o sistema respecto de su comportamiento esperado
 
-![](Pasted%20image%2020240101153753.png)
+![](img/Pasted%20image%2020240101153753.png)
 
 - **Clase de equivalencia**: representa un conjunto de datos para los que se supone que el programa tiene un comportamiento similar
 
@@ -58,7 +58,7 @@
 		- Consiste en crear el menor número de casos que cubran las clases válidas
 		- Habitualmente uno por cada una de las clases inválidas (para evitar enmascaramiento, *one-to-one approach*)
 	- En el ejemplo anterior los casos de prueba son:
-	 ![](Pasted%20image%2020240101155834.png)
+	 ![](img/Pasted%20image%2020240101155834.png)
 
 - **Clases de equivalencia de las salidas**:
 	- Complementan el análisis respecto de las entradas
@@ -80,7 +80,7 @@
 - **Análisis de valores límite**
 	- Utilizando valores límite se sitúan las pruebas en los extremos de las clases de equivalencia (denominado *2-way/2-value*)
 	
-	  ![](Pasted%20image%2020240101160844.png)
+	  ![](img/Pasted%20image%2020240101160844.png)
 	  
 	- Existe asimismo el 3-way, que establece 3 valores (el que marca la frontera, uno más y uno menos)
 		- *Ejemplo*: 49.999,99; 10.000,00; 10.000,01
@@ -107,7 +107,7 @@
 			    - Modo Mouse.
 	- De aquí se extraen 4 casos de prueba
 
-![](Pasted%20image%2020240101161554.png)
+![](img/Pasted%20image%2020240101161554.png)
 
 # Técnicas basadas en la Especificación. Clases de Equivalencia. Parte 2
 
@@ -145,7 +145,7 @@
 - **Implementación**
 	- Incluye casos de prueba y trazabilidad
 
-![](Pasted%20image%2020240101162747.png)
+![](img/Pasted%20image%2020240101162747.png)
 
 ## Función con Base de Datos
 
@@ -154,7 +154,7 @@
 - **Diseño**: igual que el anterior
 - **Implementación**: esta vez sólo tenemos un caso de prueba (una tabla). De las clases de equivalencia se derivan filas de la BD, y no casos. El informe es la salida
 
-![](Pasted%20image%2020240101163121.png)
+![](img/Pasted%20image%2020240101163121.png)
 
 ## Función con Base de Datos y Parámetros
 
@@ -184,7 +184,7 @@
 			- 0, 10, 15, 20.
 - Implementación
 
-![](Pasted%20image%2020240101163526.png)
+![](img/Pasted%20image%2020240101163526.png)
 
 Los parámetros que afectan a la salida generan ahora más de un caso de prueba. Concretamente, dos: uno sin especificar el parámetro: salida original; y otro con una edad indicada: aquellos clientes que superan el corte.
 
@@ -210,7 +210,7 @@ Al diseño de las pruebas hemos de añadir una (condición de prueba?):
 		- Se cambia valor.
 		- Se quita.
 
-![](Pasted%20image%2020240101164406.png)
+![](img/Pasted%20image%2020240101164406.png)
 
 - Cuando hay interfaz de usuario
 	- Probar las acciones que realiza
@@ -219,7 +219,7 @@ Al diseño de las pruebas hemos de añadir una (condición de prueba?):
 - Muchas veces esto da lugar a casos de prueba compuestos de una serie de pasos relacionados unos con otros
 - Script para ejecución manual:
 
-![](Pasted%20image%2020240101164612.png)
+![](img/Pasted%20image%2020240101164612.png)
 
 - No abusar de casos de prueba con demasiados pasos
 
@@ -239,9 +239,9 @@ Se prueba realizar operaciones en un repo cuyo contenido cargamos automáticame
 		- Las promociones dependen del país (atributo del cliente).
 		- Los códigos de promociones aplicables a cada país se almacenan y gestionan en un microservicio externo al que se accede mediante un API REST.
 
-![](Pasted%20image%2020240101165016.png)
+![](img/Pasted%20image%2020240101165016.png)
 
-![](Pasted%20image%2020240101165118.png)
+![](img/Pasted%20image%2020240101165118.png)
 
 ## Prueba de un servicio REST
 
@@ -265,7 +265,7 @@ La inicialización consiste siempre en obtener instancia del driver (iniciar se
 4. **Implementación**: de qué forma se organizará la prueba. Derivar casos de prueba -los menos posibles- para cubrir todas las situaciones.
 5. **Trazabilidad**: qué situaciones son ejercitadas por cada caso de prueba.
 
-![](Pasted%20image%2020240101165557.png)
+![](img/Pasted%20image%2020240101165557.png)
 
 - Expandiendo la Implementación y más concretamente los Casos de Prueba. Pueden clasificarse en:
 	- **CP Lógico**: Describe en términos lógicos las circunstancias en las que se probará el comportamiento del sistema, incluyendo las situaciones a cubrir.
@@ -275,7 +275,7 @@ La inicialización consiste siempre en obtener instancia del driver (iniciar se
 	- **Script para ejecución manual**: Descripción detallada de los CP para poder ejecutarlos de forma eficiente y simple: Documento, Excel...
 	- **Script para ejecución automática**: Implementación en un programa o configuración de casos de prueba para ejecución utilizando una herramienta.
 
-![](Pasted%20image%2020240101165803.png)
+![](img/Pasted%20image%2020240101165803.png)
 
 - Técnicas básicas e intuitivas. Proceso:
 	- Determinar las condiciones de prueba para entradas. Completar con salidas.
@@ -304,17 +304,17 @@ La inicialización consiste siempre en obtener instancia del driver (iniciar se
 - **Prueba de decisiones**
 	- Derivamos situaciones a cubrir de modo que cada decisión tome valores V y F
 
-![](Pasted%20image%2020240101174054.png)
+![](img/Pasted%20image%2020240101174054.png)
 
 - **Prueba de condiciones**
 	- Derivamos situaciones a cubrir de forma que cada condición tome los valores V y F
 
-![](Pasted%20image%2020240101174305.png)
+![](img/Pasted%20image%2020240101174305.png)
 
 - Prueba de Decisión/Condición
 	- Derivamos pruebas de modo que cada decisión y condición tome los valores V y F
 
-![](Pasted%20image%2020240101174616.png)
+![](img/Pasted%20image%2020240101174616.png)
 
 ## Prueba de múltiple condición
 
@@ -324,7 +324,7 @@ Derivamos pruebas de modo que se ejercite cada una de las combinaciones lógica
 
 Derivamos situaciones a cubrir de forma que cada condición afecta de forma independiente al resultado de la decisión. *Variar cada condición manteniendo inalteradas al resto*
 
-![](Pasted%20image%2020240101174854.png)
+![](img/Pasted%20image%2020240101174854.png)
 
 ## Variantes de MCDC
 
@@ -332,19 +332,19 @@ Habitualmente, de n condiciones resultan n+1 combinaciones. Pero a veces, si exi
 - Unique Cause MCDC. Ejemplo anterior. 1 y 4 mantienen los valores de las 2 primeras condiciones, la salida cambia al cambiar la tercera condición.
 - Masking MCDC. Relaja el requisito, sólo requiere que las subexpresiones mantengan el valor. Ej: 1 con 4, 4’, 4’’ cumplen Masking; en todas e<21 OR s>=50 es TRUE.
 
-![](Pasted%20image%2020240101175429.png)
+![](img/Pasted%20image%2020240101175429.png)
 
 ## Masking MCDC
 
 Usar cuando no es posible mantener Unique Cause. Por defecto, al hablar de MCDC nos referimos a Unique-Cause.
 
-![](Pasted%20image%2020240101175533.png)
+![](img/Pasted%20image%2020240101175533.png)
 
 ## Pruebas Negativas
 
 Ver si hace lo que no debería hacer. Ejercitar la funcionalidad que trata con fallos/rechazo de entradas, excepciones, etc. Incluir pruebas/valores/condiciones para determinar valores que NO influyen en la salida.
 
-![](Pasted%20image%2020240101175650.png)
+![](img/Pasted%20image%2020240101175650.png)
 
 ## Resumen
 
@@ -361,7 +361,7 @@ Ver si hace lo que no debería hacer. Ejercitar la funcionalidad que trata con 
 - Hay que determinar qué es lo que hay que probar (test conditions) y qué situaciones se probarán (test coverage items) apoyándose en el uso de técnicas de prueba.
 - La cobertura es el porcentaje de situaciones cubiertas por los CP.
 
-![](Pasted%20image%2020240101175900.png)
+![](img/Pasted%20image%2020240101175900.png)
 
 # Técnicas basadas en la Especificación. Caminos y transiciones
 
@@ -374,15 +374,15 @@ Ver si hace lo que no debería hacer. Ejercitar la funcionalidad que trata con 
 
 ## Pruebas de Caminos Simples
 
-![](Pasted%20image%2020240101211722.png)
+![](img/Pasted%20image%2020240101211722.png)
 
-![](Pasted%20image%2020240101211827.png)
+![](img/Pasted%20image%2020240101211827.png)
 
 ## Pruebas de Caminos Pares
 
-![](Pasted%20image%2020240101211929.png)
+![](img/Pasted%20image%2020240101211929.png)
 
-![](Pasted%20image%2020240101211947.png)
+![](img/Pasted%20image%2020240101211947.png)
 
 ## Modelo
 
@@ -401,19 +401,19 @@ Ver si hace lo que no debería hacer. Ejercitar la funcionalidad que trata con 
 
 ## Combinaciones con otras técnicas
 
-![](Pasted%20image%2020240101212218.png)
+![](img/Pasted%20image%2020240101212218.png)
 
-![](Pasted%20image%2020240101212240.png)
+![](img/Pasted%20image%2020240101212240.png)
 
 ## Pruebas negativas
 
-![](Pasted%20image%2020240101212344.png)
+![](img/Pasted%20image%2020240101212344.png)
 
-![](Pasted%20image%2020240101212404.png)
+![](img/Pasted%20image%2020240101212404.png)
 
-![](Pasted%20image%2020240101212440.png)
+![](img/Pasted%20image%2020240101212440.png)
 
-![](Pasted%20image%2020240101212502.png)
+![](img/Pasted%20image%2020240101212502.png)
 
 ## Pruebas basadas en escenarios
 
@@ -429,9 +429,9 @@ Ver si hace lo que no debería hacer. Ejercitar la funcionalidad que trata con 
 	- En la navegación entre varias pantallas
 - En el problema anterior
 
-![](Pasted%20image%2020240101212829.png)
+![](img/Pasted%20image%2020240101212829.png)
 
-![](Pasted%20image%2020240101212850.png)
+![](img/Pasted%20image%2020240101212850.png)
 
 ## Resumen
 
@@ -454,35 +454,35 @@ Ver si hace lo que no debería hacer. Ejercitar la funcionalidad que trata con 
 
 ## Each Choice
 
-![](Pasted%20image%2020240102125334.png)
+![](img/Pasted%20image%2020240102125334.png)
 
 ## Multiple Combination
 
-![](Pasted%20image%2020240102125403.png)
+![](img/Pasted%20image%2020240102125403.png)
 
 ## Base Choice
 
-![](Pasted%20image%2020240102125437.png)
+![](img/Pasted%20image%2020240102125437.png)
 
 ## Combinaciones parciales
 
-![](Pasted%20image%2020240102125513.png)
+![](img/Pasted%20image%2020240102125513.png)
 
 ## Combinaciones con Tablas de Decisión
 
-![](Pasted%20image%2020240102125636.png)
+![](img/Pasted%20image%2020240102125636.png)
 
 - Útiles para probar reglas de negocio complejas en función de combinaciones de diferentes valores
 - Cada regla será una situación a cubrir (test coverage item)
 - Tabla de decisión para el problema anterior:
 
-![](Pasted%20image%2020240102125911.png)
+![](img/Pasted%20image%2020240102125911.png)
 
 - Cada condición no es necesariamente binaria: En problema 1b de parte 1 (interés crédito-importe ppal.+edad) si contemplamos clases para entradas y salidas
 - Realizamos una combinación completa de las clases para entradas
 - Tabla de decisión (incluyendo sólo clases válidas)
 
-![](Pasted%20image%2020240102130215.png)
+![](img/Pasted%20image%2020240102130215.png)
 
 ## Árbol de clasificación
 
@@ -496,15 +496,15 @@ Ver si hace lo que no debería hacer. Ejercitar la funcionalidad que trata con 
 		- Máxima (foto de abajo)
 - Es muy útil cuando hay muchas entradas
 
-![](Pasted%20image%2020240102130525.png)
+![](img/Pasted%20image%2020240102130525.png)
 
 - Ejemplo reserva de vuelos
 
-![](Pasted%20image%2020240102130654.png)
+![](img/Pasted%20image%2020240102130654.png)
 
-![](Pasted%20image%2020240102130722.png)
+![](img/Pasted%20image%2020240102130722.png)
 
-![](Pasted%20image%2020240102130848.png)
+![](img/Pasted%20image%2020240102130848.png)
 
 **Técnicas combinatorias**  
 - En general tenemos pares P-V (Parámetro condición, clasificación; valor clase, VL)
@@ -514,16 +514,16 @@ Ver si hace lo que no debería hacer. Ejercitar la funcionalidad que trata con 
 	- N-wise: generalización.
 	-  All combinations: cada combinación P-V es probada.
 
-![](Pasted%20image%2020240102131054.png)
+![](img/Pasted%20image%2020240102131054.png)
 
 ## Combinaciones Pair-Wise
 
 - Cada valor de cada parámetro se ha combinado con todos los valores del resto de parámetro.
 - Combinación muy compleja, detecta problemas debidos a influencia de parejas de parámetro.
 
-![](Pasted%20image%2020240102131220.png)
+![](img/Pasted%20image%2020240102131220.png)
 
-![](Pasted%20image%2020240102131251.png)
+![](img/Pasted%20image%2020240102131251.png)
 
 ## Resumen
 
@@ -618,7 +618,7 @@ Por ejemplo:
 
 ## Modelo en V
 
-![](Pasted%20image%2020240102134909.png)
+![](img/Pasted%20image%2020240102134909.png)
 
 ## Niveles y Tipos de Prueba
 
@@ -629,7 +629,7 @@ Por ejemplo:
 	- Característica de calidad. *Ej: funcional, rendimiento...*
 	- Relativo a cambios. Ej: *regresión*
 
-![](Pasted%20image%2020240102135234.png)
+![](img/Pasted%20image%2020240102135234.png)
 
 ## Niveles de prueba
 
@@ -663,7 +663,7 @@ Por ejemplo:
 
 Concepto de Mike Cohn, referido a los tests automatizados: *es una metáfora que nos indica agrupar pruebas de software en cubos de diferente granularidad. Da una idea del no de pruebas en cada grupo.*
 
-![](Pasted%20image%2020240102140011.png)
+![](img/Pasted%20image%2020240102140011.png)
 
 Diferentes formas, mezclando en cada capa de la pirámide:
 - Niveles de prueba.
@@ -671,7 +671,7 @@ Diferentes formas, mezclando en cada capa de la pirámide:
 - Grado de automatización.
 No olvidar que tipo, nivel, grado de automatización son conceptos ortogonales.
 
-![](Pasted%20image%2020240102140107.png)
+![](img/Pasted%20image%2020240102140107.png)
 
 Cuando la pirámide no se aplica correctamente. Se entiende como un concepto físico: no se prueba nada en una capa hasta que la anterior esté completa.
 
@@ -744,7 +744,7 @@ Cuando la pirámide no se aplica correctamente. Se entiende como un concepto fi
 
 ## Ejemplo Reporting
 
-![](Pasted%20image%2020240104170153.png)
+![](img/Pasted%20image%2020240104170153.png)
 
 ## Medición
 
@@ -788,19 +788,19 @@ prácticas
 
 - ISO/IEC/IEEE 29119
 
-![](Pasted%20image%2020240104171838.png)
+![](img/Pasted%20image%2020240104171838.png)
 
 ## Modelo de Procesos de pruebas
 
-![](Pasted%20image%2020240104171929.png)
+![](img/Pasted%20image%2020240104171929.png)
 
 ## Especificación pruebas de la organización
 
-![](Pasted%20image%2020240104172022.png)
+![](img/Pasted%20image%2020240104172022.png)
 
 ## Procesos de Gestión
 
-![](Pasted%20image%2020240104172048.png)
+![](img/Pasted%20image%2020240104172048.png)
 
 ## Documentación
 
@@ -810,25 +810,25 @@ prácticas
 
 ## Clasificación de las técnicas de diseño de las pruebas
 
-![](Pasted%20image%2020240104172249.png)
+![](img/Pasted%20image%2020240104172249.png)
 
-![](Pasted%20image%2020240104172329.png)
+![](img/Pasted%20image%2020240104172329.png)
 
 ## Medición de la cobertura alcanzada
 
-![](Pasted%20image%2020240104172357.png)
+![](img/Pasted%20image%2020240104172357.png)
 
 # Pruebas en entornos ágiles
 
 ## Proceso general
 
-![](Pasted%20image%2020240104174415.png)
+![](img/Pasted%20image%2020240104174415.png)
 
-![](Pasted%20image%2020240104174434.png)
+![](img/Pasted%20image%2020240104174434.png)
 
 ## Múltiples dimensiones
 
-![](Pasted%20image%2020240104174519.png)
+![](img/Pasted%20image%2020240104174519.png)
 
 ## Niveles de prueba
 
@@ -852,7 +852,7 @@ prácticas
 
 ## Técnicas
 
-![](Pasted%20image%2020240104175005.png)
+![](img/Pasted%20image%2020240104175005.png)
 
 ## Scripted testing
 
@@ -903,9 +903,9 @@ prácticas
 
 ## Cucumber. Herramienta BDD
 
-![](Pasted%20image%2020240104180119.png)
+![](img/Pasted%20image%2020240104180119.png)
 
-![](Pasted%20image%2020240104180214.png)
+![](img/Pasted%20image%2020240104180214.png)
 
 ## ¿Quién hace las pruebas?
 
@@ -934,7 +934,7 @@ prácticas
 
 ## ¿Cuándo se hacen las pruebas?
 
-![](Pasted%20image%2020240104180813.png)
+![](img/Pasted%20image%2020240104180813.png)
 
 - **Release Planning**
 	- Aunque no se pueda planificar con gran precisión, hay que dimensionar recursos y plazos

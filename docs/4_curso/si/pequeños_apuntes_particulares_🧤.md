@@ -11,7 +11,7 @@
 
 - ***Heurístico***: función que aproxima siempre por debajo, el coste desde el estado en el que estamos hasta el estado final. Si el heurístico se pasa, no sería admisible.
 
-![](Pasted%20image%2020231013110450.png)
+![](img/Pasted%20image%2020231013110450.png)
 
 ## Propiedades de un heurístico
 
@@ -71,11 +71,11 @@
 
 ## Ejemplos de cruce
 
-![](Pasted%20image%2020231013113215.png)
+![](img/Pasted%20image%2020231013113215.png)
 
 - Genero un nuevo cromosoma cogiendo parte del primero y el resto **en orden** del otro
 
-![](Pasted%20image%2020231013113230.png)
+![](img/Pasted%20image%2020231013113230.png)
 
 - Este coge aleatoriamente elementos de uno y de otro y los va mezclando
 
@@ -83,13 +83,13 @@
 
 ## Ejemplos de mutación
 
-![](Pasted%20image%2020231013113608.png)
+![](img/Pasted%20image%2020231013113608.png)
 
 ## Teoría de los Esquemas
 
 - **Longitud:** distancia desde el primer símbolo fijo hasta el último
 
-![](Pasted%20image%2020231013114233.png)
+![](img/Pasted%20image%2020231013114233.png)
 
 - Para contar el número de asteriscos, hay que contar el número por la izquierda y por la derecha hasta encontrar un número
 
@@ -100,7 +100,7 @@
 - **Explotación**: se trabaja sobre un grupo con una buena tendencia a ser solución.
 	- Problema: estancamiento de soluciones (*problema de los máximos*)
 
-![](Pasted%20image%2020231013114640.png)
+![](img/Pasted%20image%2020231013114640.png)
 
 
 # Posibles preguntas de teoría extra
@@ -132,18 +132,18 @@ No podemos asegurar que el nodo n no se va a expandir. El motivo es que n se pod
 
 ## Probabilidad condicionada
 
-![](Pasted%20image%2020231126124850.png)
+![](img/Pasted%20image%2020231126124850.png)
 
 ## Criterios de independencia
 ## Manto de Markov
 
-![](IMG_6150.jpeg)
+![](img/IMG_6150.jpeg)
 
 - Viene dado por sus padres, hijos y padres de los hijos
 
 ## Condición de Markov
 
-![](IMG_6151.jpeg)
+![](img/IMG_6151.jpeg)
 
 - Si conocemos sus padres, el nodo es independiente de todos sus descendientes
 
@@ -151,13 +151,13 @@ No podemos asegurar que el nodo n no se va a expandir. El motivo es que n se pod
 
 - Dos nodos son independientes si todos los caminos que los unen están bloqueados en algún punto
 
-![](IMG_6152.jpeg)
+![](img/IMG_6152.jpeg)
 
 - Dos variables son **independientes** si todos los caminos que las unen están bloqueados en algún punto
 - Dos variables son **condicionalmente dependientes** si conocemos a alguno de sus descendientes
 - Dos variables son **marginalmente independientes** y **dependientes** si:
 
-![](IMG_6153.jpeg)
+![](img/IMG_6153.jpeg)
 
 ### Ejercicio
 
@@ -166,10 +166,10 @@ No podemos asegurar que el nodo n no se va a expandir. El motivo es que n se pod
 - D y E son condicionalmente independientes dada A
 - A y B son condicionalmente dependientes dada E
 
-![](IMG_6156.jpeg)
+![](img/IMG_6156.jpeg)
 ### Aclaración
 
-![](IMG_6154.jpeg)
+![](img/IMG_6154.jpeg)
 
 ## Muestreo estocástico
 
@@ -177,20 +177,20 @@ No podemos asegurar que el nodo n no se va a expandir. El motivo es que n se pod
 
 ## Pregunta sobre muestreo estocástico
 
-![](Pasted%20image%2020231209130216.png)
+![](img/Pasted%20image%2020231209130216.png)
 
 Para realizar el proceso de muestreo, primero hay que establecer un orden topológico. Para esta red, un posible orden sería {A, E, B, D, C, F, G}. Con este orden hay que muestrear cada variable según su tabla de probabilidad condicional teniendo en cuenta el valor de sus padres, si los tiene, que ya han sido asignados para la muestra actual.
 
 La aproximación de la probabilidad pedida es la proporción de las muestras en las que se cumple que E es cierto, C es falso y G es cierto (valor Ns), en relación con las muestras en las que G es cierto (valor Nc), es decir:
 
-![](IMG_6341.jpeg)
+![](img/IMG_6341.jpeg)
 
 ## Muestreo con ponderación de la verosimilitud
 
 - Todas las muestras son útiles
 - Hay que hacer la muestra en orden topológico
 
-![](IMG_6155.jpeg)
+![](img/IMG_6155.jpeg)
 
 # Aprendizaje automático
 
@@ -213,7 +213,7 @@ La aproximación de la probabilidad pedida es la proporción de las muestras en 
 
 ## Pregunta sobre Bootstrap
 
-![](Pasted%20image%2020231209130236.png)
+![](img/Pasted%20image%2020231209130236.png)
 
 El esquema de validación Bootstrap consiste en usar el mismo número de instancias para el entrenamiento que el número total de las que se disponen. Sin embargo, para tener la posibilidad de validar el modelo entrenado con instancias no usadas en el entrenamiento, se realiza un muestreo con reemplazo de forma que varias instancias aparecerán repetidas.
 
@@ -232,7 +232,7 @@ Algunas de las variantes que pueden usar el esquema bootstrap son:
 	- **TN**: los que el clasificador *no clasifica* como X y no son X
 	- **FN**: los que el clasificador *no clasifica* como X y son X
 
-![](IMG_6157.jpeg)
+![](img/IMG_6157.jpeg)
 
 - Una vez obtenida, podemos sacar las siguientes métricas:
 	- **Accuracy**: *(TP + TN)/(TP + TN + FP + FN)*
@@ -240,31 +240,31 @@ Algunas de las variantes que pueden usar el esquema bootstrap son:
 	- **Specificity**: *TN/(TN + FP)*
 	- **Precision**: *TP/(TP + FP)*
 
-![](IMG_6158.jpeg)
+![](img/IMG_6158.jpeg)
 
 ## Curva ROC
 
 - Se encaja en un cuadrado de 1x1
 
-![](IMG_6159.jpeg)
+![](img/IMG_6159.jpeg)
 
 ## Ejercicio raro de curva ROC
 
-![](IMG_6160.jpeg)
+![](img/IMG_6160.jpeg)
 
 ## Árboles de decisión
 
 - Lo importante es saber el orden en el que metemos las variables
 - Para ello existe la entropía, que se calcula:
 
-![](IMG_6161.jpeg)
+![](img/IMG_6161.jpeg)
 
 - Vamos a generar una serie de métricas:
 	- Ganancia de información
 	- Gain ratio
 	- Índice de GINI
 
-![](IMG_6162.jpeg)
+![](img/IMG_6162.jpeg)
 
 - Recordar los algoritmos C.4 y el ID3
 
@@ -279,26 +279,26 @@ AAAABBBBB //entropía alta
 
 ## Ejercicio árboles de decisión
 
-![](IMG_6163.jpeg)
+![](img/IMG_6163.jpeg)
 
 # Redes neuronales
 
 - La neurona más simple es el **perceptrón**
 - El perceptrón consta de una serie de entradas y una única salida
 
-![](IMG_6170.jpeg)
+![](img/IMG_6170.jpeg)
 
 - Cada una de las entradas tiene un peso (el w0, w1...)
 - La salida va a ser una función con la suma de cada uno de los pesos por el valor de la variable:
 
-![](IMG_6171.jpeg)
+![](img/IMG_6171.jpeg)
 
 - Una **red neuronal** está construida por una serie de perceptrones donde cada uno de ellos forma una capa. Tenemos:
 	- Capa de entrada
 	- Capa(s) oculta(s) (que reciben 1 o varias entradas)
 	- Unidad de salida
 
-![](IMG_6172.jpeg)
+![](img/IMG_6172.jpeg)
 
 - El perceptrón está limitado al uso de funciones booleanas (como AND, OR...). Sólo sirve para problemas linealmente separables.
 
@@ -306,30 +306,30 @@ AAAABBBBB //entropía alta
 
 - Sólo se necesita un perceptrón
 
-![](IMG_6173.jpeg)
+![](img/IMG_6173.jpeg)
 
 ## Función sigmoidea
 
-![](IMG_6174.jpeg)
+![](img/IMG_6174.jpeg)
 
 ## Algoritmo de propagación hacia atrás
 ## Ejercicio 1 de propagación hacia atrás
 
-![](IMG_6186.jpeg)
+![](img/IMG_6186.jpeg)
 
-![](IMG_6187.jpeg)
+![](img/IMG_6187.jpeg)
 
 ## Ejercicio 2 propagación hacia atrás
 
-![](IMG_6188.jpeg)
+![](img/IMG_6188.jpeg)
 
 # Redes convolucionales
 
-![](Pasted%20image%2020240108153641.png)
+![](img/Pasted%20image%2020240108153641.png)
 
 ## Fórmula para calcular la salida de un filtro
 
-![](IMG_6979.jpeg)
+![](img/IMG_6979.jpeg)
 
 ## Ejercicio
 
@@ -339,4 +339,4 @@ Si la entrada de una CNN es 200x200x128 y aplicamos un filtro de 7x7x128. ¿Cuá
 2. Con padding 2 filas 2 columnas y stride 1
 3. Con padding 2 filas 2 columnas y stride 2
 
-![](IMG_6980.jpeg)
+![](img/IMG_6980.jpeg)

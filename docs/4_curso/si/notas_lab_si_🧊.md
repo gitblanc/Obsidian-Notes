@@ -12,19 +12,19 @@
 - Seleccionar el kernel (Python 3.9.10)
 - Ejecutar
 
-![](Pasted%20image%2020230920165329.png)
+![](img/Pasted%20image%2020230920165329.png)
 
 ## Ejercicio 2
 
-![](Pasted%20image%2020230920165026.png)
+![](img/Pasted%20image%2020230920165026.png)
 
-![](Pasted%20image%2020230920165055.png)
+![](img/Pasted%20image%2020230920165055.png)
 
 - Comprobar que el coste es el indicado en el Word
 
 - Para cambiar si usa el h0, el h1 o el h2 modificar aquí:
 
-![](Pasted%20image%2020230920165644.png)
+![](img/Pasted%20image%2020230920165644.png)
 
 - Modificamos el h2:
 
@@ -62,11 +62,11 @@ return sum
 
 ## Ejercicio 4
 
-![](Pasted%20image%2020230920173558.png)
+![](img/Pasted%20image%2020230920173558.png)
 
 - Hay que modificar esta función:
 
-![](Pasted%20image%2020230920172003.png)
+![](img/Pasted%20image%2020230920172003.png)
 
 - Solución:
 ````python
@@ -108,17 +108,17 @@ NODES_EXPANDED += 1
 
 ## Ejercicio 6
 
-![](Pasted%20image%2020230920174343.png)
+![](img/Pasted%20image%2020230920174343.png)
 
-![](Pasted%20image%2020230920174527.png)
+![](img/Pasted%20image%2020230920174527.png)
 
 - Para ejecutar el PA* usamos la función weighted_astar_search
 
-![](Pasted%20image%2020230920175226.png)
+![](img/Pasted%20image%2020230920175226.png)
 
 # Lab 2
 
-![](Pasted%20image%2020230927170000.png)
+![](img/Pasted%20image%2020230927170000.png)
 # Lab 3
 
 - El elitismo consiste en conservar los mejores que tengamos (no perder una mejor solución, sino mantenerla)
@@ -135,9 +135,9 @@ NODES_EXPANDED += 1
 - Como ha viajado al extranjero, ahora la probabilidad es un 37,15%
 	- Se ha decrementado porque ha aumentado la probabilidad de que tenga tuberculosis debido a su viaje en el extranjero
 
-![](IMG_5699.jpeg)
+![](img/IMG_5699.jpeg)
 
-![](IMG_5700.jpeg)
+![](img/IMG_5700.jpeg)
 
 # Lab 6
 
@@ -155,7 +155,7 @@ NODES_EXPANDED += 1
 
 - Con diabetes **no hacer VEPropagation** porque tarda pila
 
-![](Pasted%20image%2020231102174957.png)
+![](img/Pasted%20image%2020231102174957.png)
 
 # Lab 7
 

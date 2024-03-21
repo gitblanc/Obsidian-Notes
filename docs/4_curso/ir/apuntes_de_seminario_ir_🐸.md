@@ -19,7 +19,7 @@
 
 ## Ejercicio 1. Identificar stakeholders
 
-![](Pasted%20image%2020231204142225.png)
+![](img/Pasted%20image%2020231204142225.png)
 
 - S1: personal médico
 - S2: usuarios registrados (pacientes)
@@ -63,7 +63,7 @@
 
 ## Clasificación según Someville
 
-![](Pasted%20image%2020231204143019.png)
+![](img/Pasted%20image%2020231204143019.png)
 
 ## Requisitos de producto
 
@@ -75,9 +75,9 @@
 
 ## Ejercicio. Clasificar requisitos de producto
 
-![](Pasted%20image%2020231204143319.png)
+![](img/Pasted%20image%2020231204143319.png)
 
-![](Pasted%20image%2020231204143422.png)
+![](img/Pasted%20image%2020231204143422.png)
 
 ## Requisitos organizacionales
 
@@ -95,7 +95,7 @@
 
 ## Ejercicio. Organizacionales vs Externos
 
-![](Pasted%20image%2020231204143715.png)
+![](img/Pasted%20image%2020231204143715.png)
 
 ## Atributos de calidad
 
@@ -109,7 +109,7 @@
 
 ## Ejercicio 1. Identificar requisitos no funcionales
 
-![](Pasted%20image%2020231204143847.png)
+![](img/Pasted%20image%2020231204143847.png)
 
 - RNF1: Un mensaje entre un usuario emisor y otro receptor ha de llegar del usuario emisor al receptor en menos de 2 segundos
 - RNF2: Un usuario ha de poder autenticarse mediante contraseña
@@ -140,58 +140,58 @@
 
 ## ¿Cómo escribir un diagrama de caso de uso?
 
-![](Pasted%20image%2020231204144838.png)
+![](img/Pasted%20image%2020231204144838.png)
 
 ## Elementos de un diagrama de caso de uso
 
-![](Pasted%20image%2020231204144821.png)
+![](img/Pasted%20image%2020231204144821.png)
 
 ## Relación entre actor y caso de uso
 
-![](Pasted%20image%2020231204144906.png)
+![](img/Pasted%20image%2020231204144906.png)
 
 ## Relaciones entre actores
 
-![](Pasted%20image%2020231204144937.png)
+![](img/Pasted%20image%2020231204144937.png)
 
 ## ¿Cuál es la diferencia entre estos diagramas?
 
-![](Pasted%20image%2020231204145046.png)
+![](img/Pasted%20image%2020231204145046.png)
 
 - En el primero, los dos actores participan en el caso de uso a la vez
 - En el segundo, lo hacen de forma individual
 
 ## Relaciones entre casos de uso
 
-![](Pasted%20image%2020231204145153.png)
+![](img/Pasted%20image%2020231204145153.png)
 
 ## Includes
 
-![](Pasted%20image%2020231204145220.png)
+![](img/Pasted%20image%2020231204145220.png)
 
 ## Extends
 
-![](Pasted%20image%2020231204145325.png)
+![](img/Pasted%20image%2020231204145325.png)
 
 ## Generalización
 
-![](Pasted%20image%2020231204145345.png)
+![](img/Pasted%20image%2020231204145345.png)
 
 ## Ejercicio 1. Escribir un caso de uso
 
-![](Pasted%20image%2020231204145502.png)
+![](img/Pasted%20image%2020231204145502.png)
 
-![](Pasted%20image%2020231204145517.png)
+![](img/Pasted%20image%2020231204145517.png)
 
-![](Pasted%20image%2020231204145559.png)
+![](img/Pasted%20image%2020231204145559.png)
 
 ## Ejercicio 2. Diagrama de casos de uso
 
-![](Pasted%20image%2020231204145654.png)
+![](img/Pasted%20image%2020231204145654.png)
 
-![](Pasted%20image%2020231204145723.png)
+![](img/Pasted%20image%2020231204145723.png)
 
-![](Pasted%20image%2020231204145831.png)
+![](img/Pasted%20image%2020231204145831.png)
 
 # Seminario 4. Diagramas de estado
 
@@ -203,13 +203,13 @@
 
 - Describe el estado en el que se encuentra un objeto en un momento concreto de su ciclo de vida
 
-![](Pasted%20image%2020231206151946.png)
+![](img/Pasted%20image%2020231206151946.png)
 
 ## Transición
 ## Externa
 - Representa la transición entre dos estados. En la imagen, es una transición externa
 
-![](Pasted%20image%2020231206152044.png)
+![](img/Pasted%20image%2020231206152044.png)
 
 - Evento (e): evento que dispara el cambio de estado
 - Condición (c): condición booleana que permite el cambio de estado
@@ -220,60 +220,60 @@
 - Se maneja la aparición de un evento dentro de un estado
 - Como el evento nunca sale de dicho estado, las actividades en entrada y salida no se ejecutan
 
-![](Pasted%20image%2020231206152515.png)
+![](img/Pasted%20image%2020231206152515.png)
 
 ## Auto-transición
 
 - Transición en la que el estado fuente y el objetivo son el mismo
 
-![](Pasted%20image%2020231206152602.png)
+![](img/Pasted%20image%2020231206152602.png)
 
 ## Equivalencias
 
-![](Pasted%20image%2020231206152633.png)
+![](img/Pasted%20image%2020231206152633.png)
 
-![](Pasted%20image%2020231206152720.png)
+![](img/Pasted%20image%2020231206152720.png)
 
-![](Pasted%20image%2020231206152859.png)
+![](img/Pasted%20image%2020231206152859.png)
 
 ## Explicar el orden de ejecución
 
-![](Pasted%20image%2020231206152939.png)
+![](img/Pasted%20image%2020231206152939.png)
 
-![](Pasted%20image%2020231206153000.png)
+![](img/Pasted%20image%2020231206153000.png)
 
-![](Pasted%20image%2020231206153021.png)
+![](img/Pasted%20image%2020231206153021.png)
 
-![](Pasted%20image%2020231206153118.png)
+![](img/Pasted%20image%2020231206153118.png)
 
-![](Pasted%20image%2020231206153150.png)
+![](img/Pasted%20image%2020231206153150.png)
 
-![](Pasted%20image%2020231206153318.png)
+![](img/Pasted%20image%2020231206153318.png)
 
 ## Pseudoestados
 
-![](Pasted%20image%2020231206153414.png)
+![](img/Pasted%20image%2020231206153414.png)
 
-![](Pasted%20image%2020231206153431.png)
+![](img/Pasted%20image%2020231206153431.png)
 
 ## ¿Es correcto este diagrama?
 
-![](Pasted%20image%2020231206153516.png)
+![](img/Pasted%20image%2020231206153516.png)
 
-![](Pasted%20image%2020231206153542.png)
+![](img/Pasted%20image%2020231206153542.png)
 
 ## Hacer el diagrama de estado
 ### Estudiante en una asignatura
 
-![](Pasted%20image%2020231206153612.png)
+![](img/Pasted%20image%2020231206153612.png)
 
-![](Pasted%20image%2020231206153640.png)
+![](img/Pasted%20image%2020231206153640.png)
 
 ### Asientos de cine
 
-![](Pasted%20image%2020231206153723.png)
+![](img/Pasted%20image%2020231206153723.png)
 
-![](Pasted%20image%2020231206153811.png)
+![](img/Pasted%20image%2020231206153811.png)
 
 # Seminario 5. Verificación de requisitos
 
@@ -284,25 +284,25 @@
 
 ## Criterios de calidad: de cada requisito
 
-![](Pasted%20image%2020231206154201.png)
+![](img/Pasted%20image%2020231206154201.png)
 
 ## Criterios de calidad: del SRS
 
-![](Pasted%20image%2020231206154240.png)
+![](img/Pasted%20image%2020231206154240.png)
 
 ## Formato para la revisión de requisitos
 
-![](Pasted%20image%2020231206154308.png)
+![](img/Pasted%20image%2020231206154308.png)
 
-![](Pasted%20image%2020231206154329.png)
+![](img/Pasted%20image%2020231206154329.png)
 
-![](Pasted%20image%2020231206154422.png)
+![](img/Pasted%20image%2020231206154422.png)
 
 ## Ejercicio extra Anexo 1
 
-![](Pasted%20image%2020231206154536.png)
+![](img/Pasted%20image%2020231206154536.png)
 
-![](Pasted%20image%2020231206154559.png)
+![](img/Pasted%20image%2020231206154559.png)
 
-![](Pasted%20image%2020231206154622.png)
+![](img/Pasted%20image%2020231206154622.png)
 

@@ -128,7 +128,7 @@
 - ==Permite observar la evolución del software==
 65. ¿Cuál es la CCD en el esquema de módulos de la figura?
 Nota: El CCD es la suma de dependencias de todos los componentes (cada componente depende de sí mismo)
-![](45b05519-05d5-411d-917f-703a551aa258.webp)
+![](img/45b05519-05d5-411d-917f-703a551aa258.webp)
 - ==8==
 66. ¿Cuál es la CCD en el esquema de módulos de la figura?
 ![](./img/06391517-648c-4323-8534-e896cc98d38a.webp|400)

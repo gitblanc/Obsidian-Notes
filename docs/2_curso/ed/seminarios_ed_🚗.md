@@ -61,24 +61,24 @@ public int sumaVector(int[] vector, int n){
 
 ## Ejercicio grafos
 
-![](Pasted%20image%2020231006194328.png)
+![](img/Pasted%20image%2020231006194328.png)
 
 ## Ejercicio Dijkstra
 
-![](Pasted%20image%2020231006194404.png)
+![](img/Pasted%20image%2020231006194404.png)
 
-![](Pasted%20image%2020231006195200.png)
+![](img/Pasted%20image%2020231006195200.png)
 
 # Seminario 3
 
 ## Ejercicio Prim
 
-![](Pasted%20image%2020231020193415.png)
+![](img/Pasted%20image%2020231020193415.png)
 
 ## Ejercicios Recorrido Profundidad
 
-![](Pasted%20image%2020231020194437.png)
+![](img/Pasted%20image%2020231020194437.png)
 
-![](Pasted%20image%2020231020195200.png)
+![](img/Pasted%20image%2020231020195200.png)
 
-![](Pasted%20image%2020231020200103.png)
+![](img/Pasted%20image%2020231020200103.png)

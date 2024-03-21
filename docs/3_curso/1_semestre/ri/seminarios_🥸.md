@@ -1,14 +1,14 @@
 # 16 Sept 2022
 ---
-![](ej%20seminario%201.png)
+![](img/ej%20seminario%201.png)
 Corregido ✓
 
 ---
 Ampliación car workshop tarea:
-![](tarea%202%20seminario.png)
-![](ampliacion%20completa.png)
+![](img/tarea%202%20seminario.png)
+![](img/ampliacion%20completa.png)
 
-![](ej%20resuelto%202.jpeg)
+![](img/ej%20resuelto%202.jpeg)
 ---
 # 14 Octubre 2022 🗿
 

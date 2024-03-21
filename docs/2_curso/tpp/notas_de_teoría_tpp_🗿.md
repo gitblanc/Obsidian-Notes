@@ -59,7 +59,7 @@ return Arrays.sort({a, b, c})[0];
 
 ## Ejercicio Diseño Reloj
 
-![Créditos a Dani](Pasted%20image%2020240208154910.png)
+![Créditos a Dani](img/Pasted%20image%2020240208154910.png)
 
 ## Genericidad
 
@@ -67,7 +67,7 @@ return Arrays.sort({a, b, c})[0];
 
 ### Genericidad acotada
 
-![](Pasted%20image%2020240208160029.png)
+![](img/Pasted%20image%2020240208160029.png)
 
 La diferencia es que en el primero el T pueden ser de la clase Personas y además esas Personas han de implementar la interfaz IComparable, mientras que en el segundo, el vector está compuesto exclusivamente de IComparable.
 
@@ -114,7 +114,7 @@ Puedes llamar a -> v[0].compareTo(...) exclusivamente
 
 # Expresiones Lambda
 
-![](Pasted%20image%2020240222153315.png)
+![](img/Pasted%20image%2020240222153315.png)
 
 ```cs
 IDictionary > calculadoraFuncional = new Dictionary>(); calculadoraFuncional["add"] = (op1, op2) => op1 + op2; calculadoraFuncional["sub"] = (op1, op2) => op1 - op2; calculadoraFuncional["mul"] = (op1, op2) => op1 * op2; calculadoraFuncional["div"] = (op1, op2) => op1 / op2; calculadoraFuncional[“add"](3, 4); // 7 
@@ -127,25 +127,25 @@ foreach (var cond in condiciones) { if (!cond(str)) {…} }
 
 # Bucles y Recursividad
 
-![](Pasted%20image%2020240222155753.png)
+![](img/Pasted%20image%2020240222155753.png)
 
-![](Pasted%20image%2020240222160334.png)
+![](img/Pasted%20image%2020240222160334.png)
 
 ## Combinador de Punto Fijo
 
-![](Pasted%20image%2020240222160542.png)
+![](img/Pasted%20image%2020240222160542.png)
 
-![](Pasted%20image%2020240222160601.png)
+![](img/Pasted%20image%2020240222160601.png)
 
 # Currificación
 
-![](Pasted%20image%2020240222164215.png)
+![](img/Pasted%20image%2020240222164215.png)
 
-![](Pasted%20image%2020240222164648.png)
+![](img/Pasted%20image%2020240222164648.png)
 
 # Aplicación parcial
 
-![](Pasted%20image%2020240222164929.png)
+![](img/Pasted%20image%2020240222164929.png)
 
 # Transparencia referencial
 
@@ -179,7 +179,7 @@ eval("10 + 20")
 
 # Pattern matching `F#`
 
-![](Pasted%20image%2020240307153145.png)
+![](img/Pasted%20image%2020240307153145.png)
 
 - Función de Orden superior: Es un Map
 - Como característica usa el Pattern Matching
@@ -195,7 +195,7 @@ f(a) //aplicación parcial, para no tener que pasar el parámetro b, creando as�
 
 ## Pattern Matching en `C#`
 
-![](Pasted%20image%2020240307154548.png)
+![](img/Pasted%20image%2020240307154548.png)
 
 # Funciones de Orden Superior
 
@@ -206,32 +206,32 @@ f(a) //aplicación parcial, para no tener que pasar el parámetro b, creando as�
 	- Map -> Select
 	- Reduce -> Aggregate
 
-![](Pasted%20image%2020240307155739.png)
+![](img/Pasted%20image%2020240307155739.png)
 
 ## Ejemplos de Select
 
-![](Pasted%20image%2020240307160151.png)
+![](img/Pasted%20image%2020240307160151.png)
 
 ## Ejemplos de Where
 
-![](Pasted%20image%2020240307160237.png)
+![](img/Pasted%20image%2020240307160237.png)
 
 ## Ejemplos de Reduce
 
-![](Pasted%20image%2020240307160301.png)
+![](img/Pasted%20image%2020240307160301.png)
 
 ## Otras funciones
 
-![](Pasted%20image%2020240307160706.png)
+![](img/Pasted%20image%2020240307160706.png)
 
 # Fundamentos de la programación paralela y concurrente
 
-![](Pasted%20image%2020240314154632.png)
+![](img/Pasted%20image%2020240314154632.png)
 
 - La fecha del 1 indica que es asíncrono
 - La flecha del 2 indica que es síncrono
 
 ## `async` y `await`
 
-![](Pasted%20image%2020240314155944.png)
+![](img/Pasted%20image%2020240314155944.png)
 

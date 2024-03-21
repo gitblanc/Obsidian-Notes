@@ -165,7 +165,7 @@ FALSO. Las técnicas anteriores son dinámicas, que se usan tanto para verificac
 
 25. ***¿Qué dos técnicas se usan? Explícalo con tus propias palabras***
 
-![](Pasted%20image%2020240106165516.png)
+![](img/Pasted%20image%2020240106165516.png)
 
 En primer lugar, cobertura de transiciones. Vemos el modelo e identificamos las transiciones, de manera que los casos de prueba cubras las transiciones. De ahí sacaríamos dos casos de prueba.
 
@@ -181,7 +181,7 @@ Con MCDC podemos sacar el caso extra
 
 26. ***Probar todos los pares de caminos usando todos los casos de prueba necesarios mínimos***
 
-![](Pasted%20image%2020240106170056.png)
+![](img/Pasted%20image%2020240106170056.png)
 
 Pares de transiciones:
 - S0-S1-S2
@@ -200,7 +200,7 @@ Con dos caminos se recorren todos los pares de transiciones
 
 27. Probar todos los pares de transiciones usando todos los casos de prueba necesarios/mínimos
 
-![](Pasted%20image%2020240106170454.png)
+![](img/Pasted%20image%2020240106170454.png)
 
 Pares de transiciones:
 - S0-S1-S2
@@ -219,17 +219,17 @@ Con dos caminos recorremos todos los pares de transiciones
 
 28. ***Aplicar MCDC a la expresión: (a AND b OR c) AND d***
 
-![](IMG_6897.jpeg)
+![](img/IMG_6897.jpeg)
 
 NOTA: la V es un True, que se me coló `-_^`
 
 29. ***Aplicar MCDC a la expresión: a OR b AND c OR d***
 
-![](IMG_6898.jpeg)
+![](img/IMG_6898.jpeg)
 
 30. ***Aplicar MCDC y Valores límite: a=1 AND (b=2 OR c<4) AND d > 4***
 
-![](IMG_6899.jpeg)
+![](img/IMG_6899.jpeg)
 
 31. ***Di qué tipos de prueba existen***
 
@@ -267,7 +267,7 @@ NOTA: recordar CISA
 
 35. ***Dibuja la pirámide de test***
 
-![](Pasted%20image%2020240111165313.png)
+![](img/Pasted%20image%2020240111165313.png)
 
 36. ***¿Para qué se usan los Mocks?***
 
@@ -276,30 +276,30 @@ Se usan cuando tenemos que probar un sistema con un servicio externo que aún no
 # Preguntas de cuestionarios
 
 
-1. ![](Pasted%20image%2020240106173734.png)
+1. ![](img/Pasted%20image%2020240106173734.png)
 
 
-2. ![](Pasted%20image%2020240106173840.png)
+2. ![](img/Pasted%20image%2020240106173840.png)
 
 Con el menor esfuerzo:
 - S0-S1-S2-S4-S1-S2-S3-S1-S4
 
-3. ![](Pasted%20image%2020240106174050.png)
+3. ![](img/Pasted%20image%2020240106174050.png)
 
 
-4. ![](Pasted%20image%2020240106174134.png)
+4. ![](img/Pasted%20image%2020240106174134.png)
 
-5. ![](Pasted%20image%2020240106174224.png)
+5. ![](img/Pasted%20image%2020240106174224.png)
 
 - Ninguna es correcta
 
-6. ![](Pasted%20image%2020240106174325.png)
+6. ![](img/Pasted%20image%2020240106174325.png)
 
 - Aunque es una práctica más de Kanban, es útil utilizarla en Scrum
 - Se puede usar, entre otros, para realizar el "Backlog Grooming"
 
-7. ![](Pasted%20image%2020240106174508.png)
+7. ![](img/Pasted%20image%2020240106174508.png)
 
-8. ![](Pasted%20image%2020240106174528.png)
+8. ![](img/Pasted%20image%2020240106174528.png)
 
 - Ninguna es cierta

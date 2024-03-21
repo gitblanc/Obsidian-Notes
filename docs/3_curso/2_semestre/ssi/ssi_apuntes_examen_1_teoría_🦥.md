@@ -68,10 +68,10 @@ Tipos de malware:
 - Es un trabajo ofrecido por muchas empresas y organizaciones que consiste en compensaciones a cambio de descubrirles vulnerabilidades o reportarles bugs
 
 Redes Ip:
-![](Pasted%20image%2020230316171107.png)
+![](img/Pasted%20image%2020230316171107.png)
 
 - **CIDR**: es un estándar basado en bits que utiliza prefijos para mostrar direcciones ip con sus propiedades de enrutamiento, es decir, es una forma de representar múltiples IPs con el mismo identificador. Estos grupos se denominan **bloques CIDR**:
-![](Pasted%20image%2020230316171457.png)
+![](img/Pasted%20image%2020230316171457.png)
 
 - Las LAN más usadas son la /28 y la /24 (hasta 256 máquinas en la red)
 - Los /31 se usan para crear enlaces punto a punto entre dispositivos
@@ -81,18 +81,18 @@ Redes Ip:
 - Normalmente un router asigna una IP privada a cada dispositivo conectado a él y envía todas las conexiones fuera de su LAN privada a través de una IP única. Este mecanismo de traducción se llama NAT.
 
 Diseño típico de una red doméstica:
-![](Pasted%20image%2020230316172436.png)
-![](Pasted%20image%2020230316172550.png)
+![](img/Pasted%20image%2020230316172436.png)
+![](img/Pasted%20image%2020230316172550.png)
 
 - El servicio DNS traduce IPs en nombres y viceversa
 - URL cheat sheet:
-![](Pasted%20image%2020230316173251.png)
+![](img/Pasted%20image%2020230316173251.png)
 - ¿Cómo funciona un DNS?
-![](Pasted%20image%2020230316173418.png)
+![](img/Pasted%20image%2020230316173418.png)
 
 - ¡No se pueden abrir puertos bajo CG-NAT!
 - Un mal ejemplo sobre puertos:
-![](Pasted%20image%2020230316173833.png)
+![](img/Pasted%20image%2020230316173833.png)
 
 ¿Qué pasa con las redes WIFI?
 - Todos los datos que viajan por tu WIFI podrían ser leídos por la una persona que esté conectada a tu wifi (hay que evitar el wifi gratuito, no me seas *lerdo*, y si lo haces usa un vpn al menos)
@@ -140,18 +140,18 @@ Diseño típico de una red doméstica:
 	- Cada uno elige otro número secreto < p
 	- Usando una fórmula matemática cada máquina realiza una serie de operaciones con los números público y secreto
 	- Esta es la clave secreta usada para cifrar el mensaje
-![](Pasted%20image%2020230316182047.png)
+![](img/Pasted%20image%2020230316182047.png)
 
 **Aplicaciones prácticas de los algoritmos de clave simétrica: **
 - **Cifrado de discos**
-![](Pasted%20image%2020230316182200.png)
+![](img/Pasted%20image%2020230316182200.png)
 - **Autenticación de plataforma**: 
-![](Pasted%20image%2020230316182317.png)
+![](img/Pasted%20image%2020230316182317.png)
 - **Onion routing**: los nodos de Tor intercambian claves simétricas usando Diffie-Hellman:
-![](Pasted%20image%2020230316182525.png)
+![](img/Pasted%20image%2020230316182525.png)
 
 - Algoritmos asimétricos (o de clave pública):
-![](Pasted%20image%2020230316182647.png)
+![](img/Pasted%20image%2020230316182647.png)
 
 - **GNUPG** es una herramienta de cifrado simétrico / asimétrico y firma digital
 
@@ -168,7 +168,7 @@ Diseño típico de una red doméstica:
 	- Diccionarios
 	- Tablas rainbow
 - Para resistir a estos ataques hay que usar KDF (Key Derivation Function):
-![](Pasted%20image%2020230316183553.png)
+![](img/Pasted%20image%2020230316183553.png)
 
 - Firmas digitales: son el resultado de una operación criptográfica que une un documento firmado a un elemento personal, el Certificado Digital. Son el resultado de firmar criptográficamente el hash de un archivo con la clave privada de su autor (las firmas pueden ser .sig o .asc).
 - Objetivos de las firmas digitales:
@@ -177,7 +177,7 @@ Diseño típico de una red doméstica:
 	- No repudiar (el autor no lo puede negar)
 
 - Procedimiento de firma de mensajes:
-![](Pasted%20image%2020230316184021.png)
+![](img/Pasted%20image%2020230316184021.png)
 - Cuando se pierde una clave privada, cualquiera que la tenga puede firmar como otra persona o entidad suplantándola.
 
 # Tema 3 Seguridad de sistemas operativos
@@ -189,7 +189,7 @@ Diseño típico de una red doméstica:
 - Un proceso no puede interactuar con otro que tiene un nivel de integridad (IL) más alto
 - La forma más fácil de obtener acceso no autorizado a un sistema Linux es arrancar el servidor en single user mode
 - Permisos en Linux:
-![](Pasted%20image%2020230318152938.png)
+![](img/Pasted%20image%2020230318152938.png)
 
 # Tema 4 Políticas de seguridad y hardening automatizado
 
@@ -220,7 +220,7 @@ Diseño típico de una red doméstica:
 ---
 # Resumen medallitas
 # Medallitas Tema 1
-![](Pasted%20image%2020230321194030.png)
+![](img/Pasted%20image%2020230321194030.png)
 1. Tipos de ataques contra los sistemas informáticos:
 - Contra la **confidencialidad**
 - Contra la **integridad**
@@ -235,11 +235,11 @@ Diseño típico de una red doméstica:
 - **NAT**: se envían peticiones que se traducen a IPs de la red de destino, y se reciben respuestas que se traducen a la IP del origen.
 
 4. Cómo funcionan los dns
-![](Pasted%20image%2020230321195141.png)
-![](Pasted%20image%2020230321195303.png)
+![](img/Pasted%20image%2020230321195141.png)
+![](img/Pasted%20image%2020230321195303.png)
 
 # Medallitas Tema 2
-![](Pasted%20image%2020230321195448.png)
+![](img/Pasted%20image%2020230321195448.png)
 
 1. Diferencia entre criptografía y esteganografía
 - **Criptografía**: ocultar el *significado* de la información
@@ -266,7 +266,7 @@ Diseño típico de una red doméstica:
 - Nota: debido al salt y al pepper l**a misma contraseña en dos equipos distintos nunca será la misma**
 
 # Medallitas Tema 3
-![](Pasted%20image%2020230321201253.png)
+![](img/Pasted%20image%2020230321201253.png)
 
 1. Partes involucradas en la seguridad de un sistema operativo
 - Los defectos del software
@@ -281,7 +281,7 @@ Diseño típico de una red doméstica:
 - **MAC**: control de acceso obligatorio
 
 # Medallitas Tema 4
-![](Pasted%20image%2020230321202103.png)
+![](img/Pasted%20image%2020230321202103.png)
 
 1. Protocolo SCAP y sus componentes
 - Protocolo que permite el hardening automatizado en sistemas de software.

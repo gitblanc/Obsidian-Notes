@@ -4,7 +4,7 @@ siguen para obtener, validar y mantener un documento de requisitos del sistema (
 - Los procesos de IR no están estandarizados. 
 - Objetivo: elaborar y mantener un SRS.
 
-![](Pasted%20image%2020230919181051.png)
+![](img/Pasted%20image%2020230919181051.png)
 
 # Obtención
 
@@ -52,24 +52,24 @@ Consiste en anticipar y **gestionar** los cambios durante el ciclo de vida del p
 
 # Desarrollo y gestión de requisitos
 
-![](Pasted%20image%2020230919183219.png)
+![](img/Pasted%20image%2020230919183219.png)
 
 # Flujo del proceso
 
-![](Pasted%20image%2020230919183338.png)
+![](img/Pasted%20image%2020230919183338.png)
 
-![](Pasted%20image%2020230919183621.png)
+![](img/Pasted%20image%2020230919183621.png)
 
 # Otros procesos de IR
 
-![](Pasted%20image%2020230919183951.png)
+![](img/Pasted%20image%2020230919183951.png)
 
 - Este proceso es mucho menos lineal (de obtención vamos a negociación o a especificación...)
 
-![](Pasted%20image%2020230919184140.png)
+![](img/Pasted%20image%2020230919184140.png)
 
 - Estamos en la espiral hasta que decidamos que tenemos suficiente (los requisitos están bien definidos)
 
-![](Pasted%20image%2020230919184257.png)
+![](img/Pasted%20image%2020230919184257.png)
 
 ---

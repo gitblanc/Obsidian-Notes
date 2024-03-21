@@ -87,7 +87,7 @@ This part is easy. Your backups are stored in a MobileSync folder. You can find 
 2.  Click on **your device** on the left side of the Finder window.
 3.  Click on **Manage Backups** on the General tab.
 
-![](Pasted%20image%2020230220230831.png)
+![](img/Pasted%20image%2020230220230831.png)
 
 (Image credit: iMore)
 
@@ -95,7 +95,7 @@ This part is easy. Your backups are stored in a MobileSync folder. You can find 
 5.  Hold down the **Control key** and click on the device.
 6.  Select **Show in Finder** from the list of available options.
 
-![](Pasted%20image%2020230220230910.png)
+![](img/Pasted%20image%2020230220230910.png)
 
 ### STEP 2: MOVE YOUR BACKUPS TO AN EXTERNAL HARD DRIVE
 
@@ -106,13 +106,13 @@ This part is easy, too. But, you _really_ have to pay close attention to the n
 3.  Go back to the Finder window with your iOS backups in it and select the **device backup folder** (It will either be called "Backup" or have a bunch of numbers and letters).
 4.  Drag it to your **external hard drive**.
 
-![](Pasted%20image%2020230220230927.png)
+![](img/Pasted%20image%2020230220230927.png)
 
 5.  Enter your **administrator password** to authenticate your action.
 6.  Rename the iOS backup folder on your external hard drive to **ios_backup**. You may have to enter your **administrator password** once again to make this change.
 7.  Rename the old backup folder in Finder to **old_backup**.
 
-![](Pasted%20image%2020230220230941.png)
+![](img/Pasted%20image%2020230220230941.png)
 
 _**Do not**_ delete the old_backup folder yet.
 
@@ -134,7 +134,7 @@ If you're using macOS Mojave or later, you will first need to change the permiss
 4.  Select **Click the lock to make changes** at the bottom left of the screen if this screen is locked. Otherwise, skip to Step 6.
 5.  Enter your **system password** and click **Unlock** on the popup screen.
 
-![](Pasted%20image%2020230220231054.png)
+![](img/Pasted%20image%2020230220231054.png)
 
 6.  Click **Full Disk Access** on the left-hand side of the screen.
 7.  Choose **+** to add Terminal to the list of apps with full control on your computer.
@@ -142,7 +142,7 @@ If you're using macOS Mojave or later, you will first need to change the permiss
 9.  In the search results, highlight **Terminal**.
 10.  Tap **Open**.
 
-![](Pasted%20image%2020230220231107.png)
+![](img/Pasted%20image%2020230220231107.png)
 
 Next, a lesson in using Terminal. The proper pathway is critical for this to work. Every person's hard drive and backup folder names will be different. The following is the anatomy of the Terminal code we are using:
 
@@ -160,14 +160,14 @@ If your external hard drive's name has space, be sure to use the proper coding. 
 1.  Find **Terminal** using Spotlight.
 2.  Type the **code** below.Don't forget to change the **hard drive name** and the [**backup folder name**](https://www.imore.com/how-move-your-iphone-or-ipad-backups-external-hard-drive#backup) to reflect the name of _your_ hard drive and backup folder.`ln -s /Volumes/**External**/ios_backup ~/Library/Application\ Support/MobileSync/Backup/**4f1234a05e6e7ccbaddfd12345678f1234b123f**`
 
-![](Pasted%20image%2020230220231143.png)
+![](img/Pasted%20image%2020230220231143.png)
 
 3.  Hit **Return**.
 4.  Quit **Terminal**.
 
 You will see a new folder in your MobileSync folder called "Backup," or the series of numbers and letters that represent your device. You can tell this is a symlink because it will have an arrow in the bottom left corner.
 
-![](Pasted%20image%2020230220231159.png)
+![](img/Pasted%20image%2020230220231159.png)
 
 Next, you'll need to confirm that it worked before deleting your old_backup file on your Mac.
 
@@ -175,16 +175,16 @@ Next, you'll need to confirm that it worked before deleting your old_backup file
 2.  Click on **your device** on the left side of the Finder window.
 3.  Click on **Back Up Now** on the General tab.
 
-![](Pasted%20image%2020230220231214.png)
+![](img/Pasted%20image%2020230220231214.png)
 
 4.  Open the **ios_backup** folder on your external hard drive.
 5.  Check to see that the **date and time** on the latest backup is for the one you just completed.
 
-![](Pasted%20image%2020230220231230.png)
+![](img/Pasted%20image%2020230220231230.png)
 
 If the pathway relocation worked, and you can confirm that backups are now happening on your external hard drive, you can delete the old_backup folder on your Mac.
 
-![](Pasted%20image%2020230220231245.png)
+![](img/Pasted%20image%2020230220231245.png)
 
 **Note:** If you go back to the MobileSync folder and open the symlink folder, you will see the names of the files that relate to your backup. These are aliases, not actual files. It's like a thumbnail of a picture.
 
@@ -196,7 +196,7 @@ If you don't _always_ have an external hard drive connected to your Mac, you w
 2.  Click on **your device** on the left side of the Finder window.
 3.  Tick the box at the bottom next to **Automatically sync when this iPhone is connected**.
 
-![](Pasted%20image%2020230220231314.png)
+![](img/Pasted%20image%2020230220231314.png)
 
 Don't forget to manually back up your iPhone whenever you connect it to your computer and have your external hard drive plugged in too.
 
@@ -209,7 +209,7 @@ To restore an iPhone or iPad backup from an external drive requires moving the f
 3.  Go back to the Finder window and go to the **device backup folder** on your Mac, where the symlink file you created above is located. Our example above is located at ~/Library/Application\ Support/MobileSync/Backup/.
 4.  Drag the **backup file** on your external hard drive to the device backup folder.
 
-![](Pasted%20image%2020230220231329.png)
+![](img/Pasted%20image%2020230220231329.png)
 
 5.  Enter your **administrator password** to authenticate your action, if necessary.
 
@@ -219,14 +219,14 @@ Depending on the size of your backup, this could take a long time. Make sure you
 2.  Click on **your device** on the left side of the Finder window.
 3.  Click on **Manage Backups** on the General tab to confirm the backup you wish to use is present.
 
-![](Pasted%20image%2020230220231348.png)
+![](img/Pasted%20image%2020230220231348.png)
 
 4.  Click **OK** to close the box.
 5.  Select **Restore Backup**.
 6.  Toggle the backup you wish to use in the pop-up box.
 7.  Click **Restore**.
 
-![](Pasted%20image%2020230220231402.png)
+![](img/Pasted%20image%2020230220231402.png)
 
 Your mobile device is now being restored. Once it's done, you may wish to delete the backup folder you dragged to the Mac to save space. Otherwise, you'll now have two backups, the one you saved on the Mac and the other on the external drive that continues being used for backup purposes.
 
@@ -240,7 +240,7 @@ If you made a mistake and the symlink didn't work, or you want to go back to sto
 4.  Back up your device via the computer.
 5.  Delete the **ios_backup folder** on your external hard drive (optional).
 
-![](Pasted%20image%2020230220231413.png)
+![](img/Pasted%20image%2020230220231413.png)
 
 ## Lots of steps — perhaps a better solution
 

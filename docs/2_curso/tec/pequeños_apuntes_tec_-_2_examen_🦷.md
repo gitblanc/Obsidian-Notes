@@ -2,49 +2,49 @@
 
 ## Transistores MOSFET canal N y P
 
-![](Pasted%20image%2020231216094954.png)
+![](img/Pasted%20image%2020231216094954.png)
 
-![](Pasted%20image%2020231216095039.png)
+![](img/Pasted%20image%2020231216095039.png)
 
-![](Pasted%20image%2020231216095145.png)
+![](img/Pasted%20image%2020231216095145.png)
 
 - Funciona como un inversor lógico (puerta NOT)
 - Tiene problemas relacionados con el consumo
 
-![](Pasted%20image%2020231216095248.png)
+![](img/Pasted%20image%2020231216095248.png)
 
-![](Pasted%20image%2020231216095339.png)
+![](img/Pasted%20image%2020231216095339.png)
 
 ## Consumo de potencia dinámica
 
-![](Pasted%20image%2020231216095530.png)
+![](img/Pasted%20image%2020231216095530.png)
 
 ## Ejercicio 1 potencia dinámica
 
-![](Pasted%20image%2020231216095633.png)
+![](img/Pasted%20image%2020231216095633.png)
 
-![](Pasted%20image%2020231216095658.png)
+![](img/Pasted%20image%2020231216095658.png)
 
 ## Puertas CMOS
 
-![](Pasted%20image%2020231216095727.png)
+![](img/Pasted%20image%2020231216095727.png)
 
 ## Ejemplos de puertas CMOS
 
-![](Pasted%20image%2020231216100720.png)
+![](img/Pasted%20image%2020231216100720.png)
 
 - La primera es un inversor lógico (NOT)
 - La segunda es una puerta NAND
 - La tercera es una puerta NOR
 - La cuarta es una puerta OR
 
-![](IMG_6458.jpeg)
+![](img/IMG_6458.jpeg)
 
 ## Preguntas de repaso
 
-![](Pasted%20image%2020231216103914.png)
+![](img/Pasted%20image%2020231216103914.png)
 
-![](Pasted%20image%2020231216103936.png)
+![](img/Pasted%20image%2020231216103936.png)
 
 # Tema 6. Familias lógicas
 
@@ -59,19 +59,19 @@
 
 ## Niveles lógicos de tensión
 
-![](Pasted%20image%2020231216104507.png)
+![](img/Pasted%20image%2020231216104507.png)
 
-![](Pasted%20image%2020231216104534.png)
+![](img/Pasted%20image%2020231216104534.png)
 
 ## Niveles de corriente
 
-![](Pasted%20image%2020231216104638.png)
+![](img/Pasted%20image%2020231216104638.png)
 
 ## FAN OUT
 
 - Límite de puertas que puedo conectar a la salida de una puerta
 
-![](Pasted%20image%2020231216104734.png)
+![](img/Pasted%20image%2020231216104734.png)
 
 ## Comparativa CMOS vs TTL
 
@@ -88,37 +88,37 @@
 
 ## Transistores bipolares
 
-![](Pasted%20image%2020231216105454.png)
+![](img/Pasted%20image%2020231216105454.png)
 
 ## Transistor bipolar NPN
 
-![](Pasted%20image%2020231216105635.png)
+![](img/Pasted%20image%2020231216105635.png)
 
-![](Pasted%20image%2020231216105703.png)
+![](img/Pasted%20image%2020231216105703.png)
 
 ## Ejemplo 1 NPN
 
-![](Pasted%20image%2020231216105750.png)
+![](img/Pasted%20image%2020231216105750.png)
 
-![](Pasted%20image%2020231216105915.png)
+![](img/Pasted%20image%2020231216105915.png)
 
 ## Preguntas de repaso
 
-![](Pasted%20image%2020231216105948.png)
+![](img/Pasted%20image%2020231216105948.png)
 
-![](Pasted%20image%2020231216110012.png)
+![](img/Pasted%20image%2020231216110012.png)
 
 # Tema 7. Operacionales
 
 ## Amplificadores
 
-![](Pasted%20image%2020231216110540.png)
+![](img/Pasted%20image%2020231216110540.png)
 
 ## Funcionamiento del convertidor A/D
 
-![](Pasted%20image%2020231216110419.png)
+![](img/Pasted%20image%2020231216110419.png)
 
 ## Problema 1
 
-![](Pasted%20image%2020231216110614.png)
+![](img/Pasted%20image%2020231216110614.png)
 

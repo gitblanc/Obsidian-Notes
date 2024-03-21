@@ -21,7 +21,7 @@
 
 ## Algunos atributos de calidad para los requisitos
 
-![](IMG_5083.jpeg)
+![](img/IMG_5083.jpeg)
 
 - **Completos**: todos los servicios solicitados por el usuario deben estar definidos
     - Se incluyen todos los requisitos significativos

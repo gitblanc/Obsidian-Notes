@@ -12,27 +12,27 @@
 
 ## Dijkstra. Ejercicio 1
 
-![](Pasted%20image%2020240113114658.png)
+![](img/Pasted%20image%2020240113114658.png)
 
-![](IMG_7069.jpeg)
+![](img/IMG_7069.jpeg)
 
 ## Dijkstra. Ejercicio 2
 
-![](Pasted%20image%2020240113114724.png)
+![](img/Pasted%20image%2020240113114724.png)
 
-![](IMG_7070.jpeg)
+![](img/IMG_7070.jpeg)
 
 ## Dijkstra. Ejercicio 3
 
-![](Pasted%20image%2020240113115721.png)
+![](img/Pasted%20image%2020240113115721.png)
 
-![](IMG_7071.jpeg)
+![](img/IMG_7071.jpeg)
 
 ## Dijkstra. Ejercicio 4
 
-![](Pasted%20image%2020240113115853.png)
+![](img/Pasted%20image%2020240113115853.png)
 
-![](IMG_7072.jpeg)
+![](img/IMG_7072.jpeg)
 
 # Seminario 3. Grafos
 
@@ -46,33 +46,33 @@
 
 ## Floyd-Warshall. Ejercicio 1
 
-![](Pasted%20image%2020240113121557.png)
+![](img/Pasted%20image%2020240113121557.png)
 
-![](IMG_7073.jpeg)
+![](img/IMG_7073.jpeg)
 
 ## Floyd-Warshall. Ejercicio 2
 
-![](Pasted%20image%2020240113123340.png)
+![](img/Pasted%20image%2020240113123340.png)
 
-![](IMG_7074.jpeg)
+![](img/IMG_7074.jpeg)
 
 ## Floyd-Warshall. Ejercicio 3
 
-![](Pasted%20image%2020240113125545.png)
+![](img/Pasted%20image%2020240113125545.png)
 
-![](IMG_7075.jpeg)
+![](img/IMG_7075.jpeg)
 
 ## Floyd-Warshall. Ejercicio 4
 
-![](Pasted%20image%2020240113131935.png)
+![](img/Pasted%20image%2020240113131935.png)
 
-![](IMG_7076.jpeg)
+![](img/IMG_7076.jpeg)
 
 ## Prim. Ejercicio 5
 
-![](Pasted%20image%2020240113133543.png)
+![](img/Pasted%20image%2020240113133543.png)
 
-![](IMG_7077.jpeg)
+![](img/IMG_7077.jpeg)
 
 # Seminario 4
 
@@ -80,7 +80,7 @@
 
 Insertar 50, 25, 75, 18, 28, 100, 32, 80, 30, 40, 29, 31, 90, 95
 
-![](Pasted%20image%2020240113154356.png)
+![](img/Pasted%20image%2020240113154356.png)
 
 ## BST. Ejercicio 2
 
@@ -110,19 +110,19 @@ Recorrido postOrden del BST anterior
 
 Borrar del árbol del ejercicio 1 el 32, 100, 50, 80, 40, 28
 
-![](Pasted%20image%2020240113155916.png)
+![](img/Pasted%20image%2020240113155916.png)
 
-![](Pasted%20image%2020240113155934.png)
+![](img/Pasted%20image%2020240113155934.png)
 
-![](Pasted%20image%2020240113155951.png)
+![](img/Pasted%20image%2020240113155951.png)
 
-![](Pasted%20image%2020240113160005.png)
+![](img/Pasted%20image%2020240113160005.png)
 
-![](Pasted%20image%2020240113160023.png)
+![](img/Pasted%20image%2020240113160023.png)
 
-![](Pasted%20image%2020240113160040.png)
+![](img/Pasted%20image%2020240113160040.png)
 
-![](Pasted%20image%2020240113155844.png)
+![](img/Pasted%20image%2020240113155844.png)
 
 ## AVL. Ejercicio 1
 
@@ -144,11 +144,11 @@ Notas:
 	- nodo.left=aux.right 
 	- aux.right=nodo
 
-![](IMG_7084.jpeg)
+![](img/IMG_7084.jpeg)
 
-![](IMG_7085.jpeg)
+![](img/IMG_7085.jpeg)
 
-![](IMG_7086.jpeg)
+![](img/IMG_7086.jpeg)
 
 # Seminario 5
 
@@ -166,27 +166,27 @@ Notas:
 
 Partiendo de un árbol B de orden 2 vacío, inserta las siguientes claves en el orden que aparecen: 190, 57, 89, 90, 121, 170, 35, 48, 91, 22, 126, 132, 80
 
-![](IMG_7087.jpeg)
+![](img/IMG_7087.jpeg)
 
 ## Árboles B. Ejercicio 2
 
 Partiendo de un árbol B de orden 2 anterior, borrar las siguientes claves en el orden que aparecen: 80, 91, 57, 170, 48, 126, 22, 90, 89
 
-![](IMG_7088.jpeg)
+![](img/IMG_7088.jpeg)
 
 ## Árboles B. Ejercicio 3
 
 Partiendo de un árbol B de orden 2 insertar las siguientes claves en el orden que aparecen: 60, 40, 80, 20, 55, 65, 63, 51, 75, 2, 4, 90, 95, 100, 41, 42, 50, 22, 30, 25, 31, 32, 33, 36, 38, 39
 
-![](IMG_7089.jpeg)
+![](img/IMG_7089.jpeg)
 
-![](IMG_7090.jpeg)
+![](img/IMG_7090.jpeg)
 
 ## Árboles B. Ejercicio 4
 
 Partiendo del árbol B de orden 2 anterior, borrar las siguientes claves en el orden que aparecen: 100, 60, 65, 63
 
-![](IMG_7091.jpeg)
+![](img/IMG_7091.jpeg)
 
 ## Montículo binario de mínimos
 
@@ -203,45 +203,45 @@ Partiendo del árbol B de orden 2 anterior, borrar las siguientes claves en el o
 
 Insertar las siguientes claves en un montículo binario de mínimos: 60, 40, 80, 20, 55, 65, 63, 51, 75, 2, 4, 90, 95, 99, 41, 42, 50, 22, 30, 25, 31, 32, 33, 36, 38, 39
 
-![](IMG_7092.jpeg)
+![](img/IMG_7092.jpeg)
 
 ## Montículos. Ejercicio 2
 
 En el montículo generado en el ejercicio anterior borrar las siguientes claves: 99, 38, 22, 2
 
-![](IMG_7098.jpeg)
+![](img/IMG_7098.jpeg)
 
 # Seminario 6. De todo un poco
 
 ## Grafos
 
-![](Pasted%20image%2020240114115828.png)
+![](img/Pasted%20image%2020240114115828.png)
 
-![](IMG_7099.jpeg)
+![](img/IMG_7099.jpeg)
 
 ## Árboles B
 
-![](Pasted%20image%2020240114115852.png)
+![](img/Pasted%20image%2020240114115852.png)
 
-![](IMG_7101.jpeg)
+![](img/IMG_7101.jpeg)
 
-![](IMG_7102.jpeg)
+![](img/IMG_7102.jpeg)
 
 ## Árboles AVL
 
-![](Pasted%20image%2020240114115914.png)
+![](img/Pasted%20image%2020240114115914.png)
 
-![](IMG_7103.jpeg)
+![](img/IMG_7103.jpeg)
 
-![](IMG_7104.jpeg)
+![](img/IMG_7104.jpeg)
 
-![](IMG_7105.jpeg)
+![](img/IMG_7105.jpeg)
 
 ## Colas de prioridad
 
-![](Pasted%20image%2020240114115937.png)
+![](img/Pasted%20image%2020240114115937.png)
 
-![](IMG_7108.jpeg)
+![](img/IMG_7108.jpeg)
 
 ## Tablas Hash
 
@@ -258,6 +258,6 @@ En el montículo generado en el ejercicio anterior borrar las siguientes claves:
 - **Redispersión**: LF > 0.5
 - **Redispersión inversa**: LF < 0.16
 
-![](Pasted%20image%2020240114120004.png)
+![](img/Pasted%20image%2020240114120004.png)
 
-![](IMG_7109.jpeg)
+![](img/IMG_7109.jpeg)

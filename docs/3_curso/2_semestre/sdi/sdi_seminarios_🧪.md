@@ -83,7 +83,7 @@ anyRequest () . permitAlI ()
 - ==servidor: son comprobaciones en el servidor sobre los datos enviados por el cliente.
 - ==Las validaciones en el servidor son más seguras.==
 
-19. ![](Pasted%20image%2020230217165205.png)
+19. ![](img/Pasted%20image%2020230217165205.png)
 
 20. 1) ¿Qué es el objeto sesión? 2) Pon un ejemplo de uso común.
 - ==Es un objeto propio de cada cliente / usuario
@@ -92,17 +92,17 @@ anyRequest () . permitAlI ()
 - ==Almacenar productos temporalmente en el carrito de la compra==
 
 21. Completa el siguiente código, se debe utiliza HttpSession para guardar la fecha del último inicio de cada usuario:
-![](Pasted%20image%2020230217165522.png)
+![](img/Pasted%20image%2020230217165522.png)
 22. ¿Cómo afectaría a los formularios de la aplicación incluir protección contra ataques CSRF
 - ==deberían incluir un parámetro nuevo con el token CSRF
 - ==El token es generado por la aplicación==
 
-23. ![](Pasted%20image%2020230217165803.png)
+23. ![](img/Pasted%20image%2020230217165803.png)
 - ==asignaturasRepository.findOne solo recibe el ID de la nota
 - ==El repositorio debería recibir también una referencia al usuario==
 
-24. ![](Pasted%20image%2020230217165938.png)
-26. ![](Pasted%20image%2020230217170015.png)
+24. ![](img/Pasted%20image%2020230217165938.png)
+26. ![](img/Pasted%20image%2020230217170015.png)
 - ==De esta no tengo la solución==
 
 ---
