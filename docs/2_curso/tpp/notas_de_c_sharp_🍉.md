@@ -1377,4 +1377,761 @@ class Program {
 	- `SortedDictionary<T>`: colección de pares clave/contenido ordenados por clave
 - [Documentación oficial](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic)
 
+# Paradigma funcional
+
+## Expresiones Lambda
+
+```cs
+// La mejor forma es la última, pero se incluye el proceso
+mayoresEdad= Array.FindAll(personas,
+	delegate(Personap) { returnp.Edad >= 18; }
+);
+
+mayoresEdad= Array.FindAll(personas,
+	(Persona p) => { return p.Edad >= 18; });
+	
+mayoresEdad= Array.FindAll(personas,
+	(p) => { return p.Edad >= 18; });
+
+mayoresEdad= Array.FindAll(personas,
+	p => { return p.Edad >= 18; });
+
+//Esta es la mejor
+mayoresEdad= Array.FindAll(personas,
+	p => p.Edad >= 18
+);
+```
+
+## Funciones de primer orden vs superior
+
+- Una **función de primer orden** (o nivel) es aquella que **no** recibe otra función como parámetro
+- Una **función de orden superior** es aquella que recibe una o más funciones como parámetro
+
+## Func, Predicate y Action
+
+- `Func<T>` o `Func<T1,T2>`: siempre devuelve algo (no tiene por qué tener parámetros)
+- `Action` o `Action<T>`: método que no devuelve *nunca* nada (puede tener o no parámetros)
+- `Predicate<T>`: método que retorna un `bool` y recibe un `T` (sólo recibe un único parámetro)
+
+## Clausura
+
+- Una **clausura** es una función de primer nivel junto con su ámbito (una tabla que guarda las referencias a sus variables libres)
+- Las variables libres de una clausura representan **estado**
+- Por tanto, pueden representar **objetos**
+
+```cs
+// Ejemplo de Clausura
+static Func<int> RetornarContador() {
+	int contador = 0;
+	return () => ++contador;
+}
+```
+
+- Las clausuras también pueden representar **estructuras de control**:
+
+```cs
+void BucleWhile(Func<bool> condicion, Action cuerpo) {
+	if (condicion()) {
+		cuerpo();
+		BucleWhile(condicion, cuerpo);
+	}
+}
+…
+int i = 0;
+BucleWhile( () => i < 10,
+		    () => { Console.Write(i); i++; }
+		);
+```
+
+### Ejemplos de clausura funcional
+
+```cs
+static void Main() {
+    // * A very simple closure
+    int value = 1;
+    // * In the following function, value is a free variable,
+    //   but it is bound to the value local variable
+    Func<int> doubleValue = () => value * 2;
+    Console.WriteLine("Two times {0} is {1}.", value, doubleValue());
+    value = 7;
+    Console.WriteLine("Two times {0} is {1}.", value, doubleValue());
+
+
+    // * Modeling loops by means of closures
+    int i = 0; // The i variable is used in both closures (condition and body)
+    WhileLoop(() => i < 10, () => { Console.Write(i+" "); i++; });
+    Console.WriteLine();
+
+    Counter();
+    Integer();
+}
+
+//Método 1
+static void Counter() {
+    const int iterations = 10;
+    // * Object oriented version
+    CounterClass anObject = new CounterClass();
+    for (int i = 0; i < iterations; i++)
+        anObject.Increment();
+    Console.WriteLine("Value of the counter object: {0}", anObject.Value);
+
+    // * Functional version
+    var closure = CounterClosure.ReturnCounter();
+    int value = 0;
+    for (int i = 0; i < iterations; i++)
+        value = closure();
+    Console.WriteLine("Last value returned by the closure: {0}", value);
+}
+
+//Método 2
+static void Integer() {
+    // * Object oriented version
+    IntegerClass anObject = new IntegerClass(1);
+    Console.WriteLine("Object value: {0}", anObject.Get());
+    anObject.Set(11);
+    Console.WriteLine("Object value: {0}", anObject.Get());
+
+    // * Functional version returning two closures
+    Func<int> objGet;
+    Action<int> objSet;
+    IntegerClosure.Constructor(2, out objGet, out objSet);
+    Console.WriteLine("Private value of the closure: {0}", objGet());
+    objSet(22);
+    Console.WriteLine("Private value of the closure: {0}", objGet());
+
+    // * Functional version returning a pair of closures
+    Integer obj = IntegerClosure.Constructor(3);
+    Console.WriteLine("Private value of the closure: {0}", obj.Get());
+    obj.Set(33);
+    Console.WriteLine("Private value of the closure: {0}", obj.Get());
+}
+
+/// <summary>
+/// This class creates a closure
+/// </summary>
+static class CounterClosure {
+
+    /// <summary>
+    /// This function returns a closure
+    /// </summary>
+    /// <returns>The closure (function with state)</returns>
+    internal static Func<int> ReturnCounter() {
+        int counter = 0;
+        // * The closure accesses the counter variable, incrementing its value each time
+        //   the closure is invoked.
+        // * This variable implies a private state of the function returned, 
+        //   as the objects in object orientation
+        return () => ++counter;
+    }
+}
+
+/// <summary>
+/// Class that creates two closures 
+/// </summary>
+static class IntegerClosure {
+
+    /// <summary>
+    /// This function returns two closures, simulating the constructor of an object
+    /// with a private state (integer) and two public methods (get and set)
+    /// </summary>
+    internal static void Constructor(int initialValue, out Func<int> get, out Action<int> set) {
+        // * Field
+        int integer = initialValue;
+        // * Two closures representing two methods (integer is the private field)
+        get = () => integer;
+        set = (value) => integer = value;
+    }
+
+    /// <summary>
+    /// This function is similar to the one above, but returns an object with two 
+    /// properties; each one is a clause
+    /// </summary>
+    internal static Integer Constructor(int initialValue) {
+        // * Field
+        int integer = initialValue;
+        // * Two closures representing two methods (integer is the private field)
+        Func<int> get = () => integer;
+        Action<int> set = (valor) => integer = valor;
+        // * A record with the two closures are returned
+        return new Integer { Get = get, Set = set };
+    }
+
+	/// <summary>
+	/// The Integer instances hold two closures, but no state is stored by the object
+	/// (apart from the closures' state)
+	/// </summary>
+	class Integer {
+	    public Func<int> Get { get; set; }
+	    public Action<int> Set { get; set; }
+	}
+}
+```
+
+- Salida:
+
+```cs
+Two times 1 is 2.
+Two times 7 is 14.
+0 1 2 3 4 5 6 7 8 9
+Value of the counter object: 10
+Last value returned by the closure: 10
+Object value: 1
+Object value: 11
+Private value of the closure: 2
+Private value of the closure: 22
+Private value of the closure: 3
+Private value of the closure: 33
+```
+
+## Currificación y aplicación parcial
+
+- La **currificación**(*currying*) es la técnica para transformar una función de varios parámetros en una función que recibe un único parámetro
+	- La función recibe un parámetro y retorna otra función que se puede llamar con el segundo parámetro
+	- Esto puede repetirse para todos los parámetros de la función original
+	- La invocación se convierte en llamadas encadenadas: `f(1) (2) (3)`(currificado) vs `f(1,2,3)`(no currificado)
+
+- La **aplicación parcial**  , cuando las funciones ya están *currificadas*, consiste en pasar un número menor de parámetros en la invocación de la función
+	- El resultado es otra función **con un número menor en su aridad** (número de parámetros)
+
+```cs
+/// <summary>
+/// Function that partially applies the "paramter" as the second parameter of the binary "function"
+/// </summary>
+static Predicate<int> SecondParameter(Func<int, Predicate<int>> predicate, int parameter) {
+    return a => predicate(a)(parameter);
+}
+```
+
+### Ejemplos de Currificación
+
+```cs
+/// <summary>
+/// A curried addition function.
+/// Receives a unique parameter and returns a function.
+/// The returned function is another function that, when invoked,
+/// adds the value of the first invocation with the value of the 
+/// second one.
+/// </summary>
+static Func<int, int> CurriedAdd(int a) {
+    return b => a + b;
+}
+
+/// <summary>
+/// A generic contains curried function (predicate).
+/// The first parameter is a generic array.
+/// Returns a function that, receiving an element, checks whether
+/// the element is contained in the array.
+/// </summary>
+static Func<T, bool> CurriedContains<T>(T[] vector) {
+    return element => {
+        foreach (T el in vector)
+            if (el.Equals(element))
+                return true;
+        return false;
+    };
+}
+
+static void Main() {
+    const int a = 2, b = 1;
+    Console.WriteLine("Curried addition: {0}", CurriedAdd(a)(b));
+
+    int[] integers = { 1, 2, 3, 4, 5 };
+    // * We can use the returned function...
+    var containsInteger = CurriedContains(integers);
+    // * ... and use it in different contexts
+    Console.WriteLine("Does 2 exist in the collection? {0}", containsInteger(2));
+    Console.WriteLine("Does 10 exist in the collection? {0}", containsInteger(10));
+
+    string[] languages = { "C#", "F#", "ML", "Haskell" };
+    Console.WriteLine("Does ML exist in the collection? {0}", CurriedContains(languages)("ML"));
+    Console.WriteLine("Does Java exist in the collection? {0}", CurriedContains(languages)("Java"));
+}
+```
+
+
+- Otro ejemplo (hecho por mí y para mí muchísimo más visual con aplicación parcial y currificación):
+
+```cs
+//Ejercicio 2. EXAMEN
+
+// Si - > 5 / 3 = 1 ; Resto = 2
+
+// Entonces -> 3 * 1 + 2 = 5;
+
+//Currifíquese la función y compruébese mediante el uso de la aplicación parcial el siguiente ejemplo:
+
+// Se sabe que la división:  20 / 6 = 3. Se desconoce el valor del resto.
+// Partiendo del valor 0, e incrementalmente, obténgase el resto.
+
+//Esta es la función original
+public static bool ComprobarDivision(int divisor, int dividendo, int cociente, int resto)
+{
+    return dividendo == cociente * divisor + resto;
+}
+
+public static Predicate<int> ComprobarDivisionCurrificada1(int divisor, int dividendo, int cociente)//, int resto)
+{
+    return resto => dividendo == cociente * divisor + resto;//return dividendo == cociente * divisor + resto;
+}
+
+public static Func<int, Predicate<int>> ComprobarDivisionCurrificada2(int divisor, int dividendo)//, int cociente)//, int resto)
+{
+    return cociente =>
+    {
+        return resto => dividendo == cociente * divisor + resto;
+    };
+}
+
+public static Func<int, Func<int, Predicate<int>>> ComprobarDivisionCurrificada3(int divisor)//, int dividendo)//, int cociente)//, int resto)
+{
+    return dividendo =>
+    {
+        return cociente =>
+        {
+            return resto => dividendo == cociente * divisor + resto;
+        };
+    };
+}
+```
+
+## Generadores
+
+- Un **generador** es una función que simula la *devolución de una colección de elementos* *sin construir toda la colección* **devolviendo un elemento cada vez que la función es invocada**
+- El hecho de no construir toda la colección hace que sea más eficiente
+- Un generador es una función que se comporta como un **iterador**
+
+- Se usa la palabra reservada `yield`
+
+```cs
+static IEnumerable<int> FibonacciInfinito() {
+	int primero = 1, segundo = 1;
+	while (true) {
+		yield return primero;
+		int suma = primero + segundo;
+		primero = segundo;
+		segundo = suma;
+	} 
+}
+...
+foreach (int valor in Fibonacci.FibonacciInfinito()) {
+	Console.WriteLine("Término {0}: {1}.", i, valor);
+	if(i++ == numeroTerminos) break;
+```
+
+- Otro ejemplo
+
+```cs
+/// <summary>
+/// Returns a generator of finite terms of the Fibonacci sequence
+/// </summary>
+static internal IEnumerable<int> FiniteFibonacci(int maximumTerm) {
+    int first = 1, second = 1, term = 1;
+    while (true) {
+        yield return first;
+        int addition = first + second;
+        first = second;
+        second = addition;
+        if (term++ == maximumTerm)
+            // * No more terms are returned (we are done)
+            yield break;
+    }
+}
+...
+foreach (int valor in Fibonacci.FibonacciFinito(10))
+	Console.Write(valor);
+```
+
+## Evaluación Perezosa
+
+- La **evaluación perezosa** (lazy) es la técnica por la que se demora la evaluación de una expresión hasta que ésta es utilizada
+	- Es lo contrario de una evaluación **ansiosa** (eager) o **estricta** (strict)
+
+```cs
+int Eager(int n) { return 0;}
+int Lazy(int n) { return 0;}
+int a = 1, b = 1;
+Eager(a++); // a == 2 tras la invocación
+Lazy(b++); // b == 1 tras la invocación
+```
+
+- `C#` **no ofrece evaluación perezosa de un modo directo**
+- Puesto que la generación de elementos es perezosa, podemos generar colecciones de un número potencialmente infinito de números con `yield` y hacer uso de ellas con los siguientes métodos extensores:
+	- `Skip`: para saltarnos X elementos de una secuencia, retornando los restantes
+	- `Take`: para retornar X elementos contiguos desde el principio de una secuencia
+
+```cs
+static private IEnumerable<int> GeneradorLazyNumerosPrimos() {
+	int n = 1;
+	while (true) {
+		if (EsPrimo(n))
+			yield return n;
+		n++;
+	}
+}
+staticinternalIEnumerable<int> NumerosPrimosLazy(intdesde, intnúmeroDeNúmeros) {
+	returnGeneradorLazyNumerosPrimos().Skip(desde).Take(númeroDeNúmeros);
+}
+```
+
+## Ejemplo de Evaluación perezosa en `C#`
+
+```cs
+//FUNCIONES EAGER Y LAZY
+/// <summary>
+/// Computes whether a number is prime or not
+/// </summary>
+private static bool IsPrime(int n) {
+    bool isPrime= true;
+    for (int i = 2; i <= Math.Sqrt(n) && isPrime; i++)
+        isPrime = n % i != 0;
+    return isPrime;
+}
+
+/// <summary>
+/// Returns a collection of "numberOfNumbers" prime numbers after the from-th prime number
+/// </summary>
+static internal IEnumerable<int> EagerPrimeNumbers(int from, int numberOfNumbers) {
+    int n = 1, counter = 0;
+    while (counter < from) {
+        if (IsPrime(n))
+            counter++;
+        n++;
+    }
+    IList<int> result = new List<int>();
+    counter = 0;
+    while (counter < numberOfNumbers) {
+        if (IsPrime(n)) {
+            counter++;
+            result.Add(n);
+        }
+        n++;
+    }
+    return result;
+}
+
+/// <summary>
+/// Returns an infinite sequence of prime numbers, implemented the lazy way
+/// </summary>
+static private IEnumerable<int> LazyPrimeNumbersGenerator() {
+    int n = 1;
+    while (true) {
+        if (IsPrime(n))
+            yield return n;
+        n++;
+    }
+}
+
+/// <summary>
+/// Returns a sequence of "numberOfNumbers" prime numbers after the from-th prime number,
+/// using the lazy prime number generator
+/// </summary>
+static internal IEnumerable<int> LazyPrimeNumbers(int from, int numberOfNumbers) {
+    return LazyPrimeNumbersGenerator().Skip(from).Take(numberOfNumbers);
+}
+
+/// <summary>
+/// Functional version of performing an action over all the elements in a collection (iteration).
+/// Implemented as an extension method of IEnumerable<T>
+/// </summary>
+static internal void ForEach<T>(this IEnumerable<T> enumerable, Action<T> action, int? maximumNumberOfElements=null) {
+    int counter = 0;
+    foreach (T item in enumerable) {
+        if (maximumNumberOfElements.HasValue && maximumNumberOfElements.Value < counter++)
+            break;
+        action(item);
+    }
+}
+
+//MAIN
+static void Main() {
+    const int from = 100, numberOfNumbers = 100000, elementsToBeShown = 10;
+    var chrono = new Stopwatch();
+    chrono.Start();
+    var eagerPrimes = PrimeNumbers.EagerPrimeNumbers(from, numberOfNumbers);
+    Console.Write("{0} elements after the {1}-th element (eager):\n\t", elementsToBeShown, from);
+    PrimeNumbers.ForEach(eagerPrimes, item => Console.Write("{0} ", item), elementsToBeShown);
+    Console.WriteLine();
+    chrono.Stop();
+    long ticksEager = chrono.ElapsedTicks;
+
+    chrono.Reset();
+    chrono.Start();
+    var lazyPrimes = PrimeNumbers.LazyPrimeNumbers(from, numberOfNumbers);
+    Console.Write("{0} elements after the {1}-th element (lazy):\n\t", elementsToBeShown, from);
+    PrimeNumbers.ForEach(lazyPrimes, item => Console.Write("{0} ", item), elementsToBeShown);
+    Console.WriteLine();
+
+    chrono.Stop();
+    long ticksLazy = chrono.ElapsedTicks;
+
+
+    Console.WriteLine("Elapsed time for the eager version: {0:N} ticks.", ticksEager);
+    Console.WriteLine("Elapsed time for the lazy version: {0:N} ticks.", ticksLazy);
+    Console.WriteLine("Lazy is {0:N} times faster.", (double)ticksEager / ticksLazy - 1);
+
+}
+```
+
+- Salida:
+
+```cs
+10 elements after the 100-th element (eager):
+        541 547 557 563 569 571 577 587 593 599 601
+10 elements after the 100-th element (lazy):
+        541 547 557 563 569 571 577 587 593 599 601
+Elapsed time for the eager version: 5.080.939,00 ticks.
+Elapsed time for the lazy version: 40.183,00 ticks.
+Lazy is 125,44 times faster.
+```
+
+## Variables globales y Asignaciones
+
+- Las **variables mutables fuera del ámbito** de una función hacen que no se obtenga transparencia referencial
+	- La clausura `RetornaContador` devuelve el número de veces que había sido invocada (depende de su “historia”) -> No puede sustituirse por un valor
+
+```cs
+static Func<int> RetornarContador() {
+	int contador = 0;
+	return() => ++contador;
+}
+```
+
+- Con las **asignaciones** sucede lo mismo
+	- La evaluación de una variable depende de sus asignaciones previas
+
+## Funciones Puras
+
+- La utilización de funciones que no son puras implican **opacidad referencial**
+- Una función es pura cuando:
+	- Siempre devuelve el mismo valor ante los mismos valores de los argumentos
+	- La evaluación de una función no genera efectos secundarios ((co)laterales)
+
+- Ejemplos de funciones no puras: `DateTime::Now`,`Random::Random`,`Console::ReadLine`
+- Ejemplos de funciones puras: `Math::Sin`,`String::Length`,`DateTime::ToString`
+
+## Memoización
+
+- La **memoización** es una **técnica de optimización** que puede ser aplicada sobre expresiones con transparencia referencial
+	- La primera vez que se invoca, se retorna el valor guardándolo en una caché (un `Dictionary`)
+	- En sucesivas invocaciones se retornará el valor de la caché sin necesidad de ejecutar la función
+
+```cs
+static void Main() {
+    const int fibonacciTerm = 40;
+    int result;
+
+    var crono = new Stopwatch();
+    crono.Start();
+    result = StandardFibonacci.Fibonacci(fibonacciTerm);
+    crono.Stop();
+    long ticksNoMemoizationFirstCall = crono.ElapsedTicks;
+    Console.WriteLine("No memoization version, first call: {0:N} ticks. Result: {1}.", ticksNoMemoizationFirstCall, result);
+
+    crono.Restart();
+    result = StandardFibonacci.Fibonacci(fibonacciTerm);
+    crono.Stop();
+    long ticksNoMemoizationSeconCall = crono.ElapsedTicks;
+    Console.WriteLine("No memoization version, second call: {0:N} ticks. Result: {1}.", ticksNoMemoizationSeconCall, result);
+
+    crono.Restart();
+    result = MemoizedFibonacci.Fibonacci(fibonacciTerm);
+    crono.Stop();
+    long ticksMemoizationFirstCall = crono.ElapsedTicks;
+    Console.WriteLine("Memoized version, first call: {0:N} ticks. Result: {1}.", ticksMemoizationFirstCall, result);
+
+    crono.Restart();
+    result = MemoizedFibonacci.Fibonacci(fibonacciTerm);
+    crono.Stop();
+    long ticksMemoizationSecondCall = crono.ElapsedTicks;
+    Console.WriteLine("Memoized version, first call: {0:N} ticks. Result: {1}.", ticksMemoizationSecondCall, result);
+}
+
+static class StandardFibonacci {
+    /// <summary>
+    /// Typical recursive Fibonacci function
+    /// </summary>
+    internal static int Fibonacci(int n) {
+        return n <= 2 ? 1 : Fibonacci(n - 2) + Fibonacci(n - 1);
+    }
+}
+
+/// <summary>
+/// Memoized implementation of Fibonacci
+/// </summary>
+static class MemoizedFibonacci {
+    /// <summary>
+    /// Memoized values
+    /// </summary>
+    private static IDictionary<int, int> values = new Dictionary<int, int>();
+    /// <summary>
+    /// Memoized recursive Fibonacci function
+    /// </summary>
+    internal static int Fibonacci(int n) {
+        if (values.Keys.Contains(n))
+            // * If it is the cache, we return its value
+            return values[n];
+        // * Otherwise, we save it before returning it
+        int value =  n <= 2 ? 1 : Fibonacci(n - 2) + Fibonacci(n - 1);
+        values.Add(n, value);
+        return value;
+    }
+}
+```
+
+## Evaluación Perezosa (revisitada)
+
+- Recordemos que en el paso de parámetros perezoso se demora la evaluación de un parámetro hasta que éste sea utilizado
+- Este comportamiento se puede conseguir
+	- Haciendo que los parámetros sean funciones (de orden superior)
+	- Memoizando su evaluación
+
+```cs
+static void Main() {
+    const int fibonacciTerm = 40;
+
+    var crono = new Stopwatch();
+    crono.Start();
+    // Both terms are computed although only one is used (eager)
+    Functions.EagerSquare(Functions.Fibonacci(fibonacciTerm), Functions.Factorial(fibonacciTerm + 1));
+    crono.Stop();
+    long ticksEager = crono.ElapsedTicks;
+    Console.WriteLine("Eager version: {0:N} ticks.", ticksEager);
+
+    crono = new Stopwatch();
+    crono.Restart();
+    // The only term used in LazySquare is computed (lazy)
+    Lazy.LazySquare(() => Functions.Fibonacci(fibonacciTerm), () => Functions.Factorial(fibonacciTerm + 1));
+    crono.Stop();
+    long ticksLazy = crono.ElapsedTicks;
+    Console.WriteLine("Lazy version: {0:N} ticks.", ticksLazy);
+
+    Console.WriteLine("Lazy is {0:N} times faster.", (double)ticksEager / ticksLazy - 1);
+}
+
+static class Functions {
+    /// <summary>
+    /// Recursive Fibonacci function
+    /// </summary>
+    internal static int Fibonacci(int n) {
+        return n <= 2 ? 1 : Fibonacci(n - 2) + Fibonacci(n - 1);
+    }
+
+    /// <summary>
+    /// Recursive factorial function
+    /// </summary>
+    internal static int Factorial(int n) {
+        return n <= 1 ? 1 : Factorial(n - 1) * n;
+    }
+
+    /// <summary>
+    /// Function that simulates the square of one of the two parameters (at random)
+    /// </summary>
+    internal static int EagerSquare(int param1, int param2) {
+        if (new Random().Next() % 2 == 0)
+            return param1 * param1;
+        else
+            return param2 * param2;
+    }
+}
+
+static class Lazy {
+    /// <summary>
+    /// Function that simulates the square of one of the two parameters (at random).
+    /// Uses lazy evaluation. Since C# does not implement lazy parameters, it is
+    /// achieved passing two functions as parameters. Whenever the value of the
+    /// paramters are needed, the functions are called.
+    /// If the parameters are not used, the functions are not called.
+    /// The functions are memoized.
+    /// </summary>
+    /// <returns>The square of one of the parameters (at random)</returns>
+    internal static double LazySquare(Func<int> param1, Func<int> param2) {
+        if (new Random().Next()%2==0) 
+            return param1.Memoize() * param1.Memoize();
+        else 
+            return param2.Memoize() * param2.Memoize();
+    }
+
+    /// <summary>
+    /// Memoization of functions with no parameter and return an integer.
+    /// Implemented using extesion methods (Func<int>).
+    /// </summary>
+    /// <param name="funcion">The function to memoize</param>
+    /// <returns>The value returned by function. It is chached (memoized).</returns>
+    internal static int Memoize(this Func<int> function) {
+        if (values.Keys.Contains(function))
+            // * In case it was computed already, we return the cached (memoized) value
+            return values[function];
+        // * Otherwise, we call it and we memoized it before returning it
+        int result = function();
+        values.Add(function, result);
+        return result;
+    }
+
+    /// <summary>
+    /// Memoized values per function
+    /// </summary>
+    private static IDictionary<Func<int>, int> values = new Dictionary<Func<int>, int>();
+}
+```
+
+## Filter, Map, Reduce
+
+- `Filter` (`Where`): aplica un filtrado a todos los elementos de una colección, devolviendo otra colección con aquellos elementos que satisfagan el predicado
+- `Map` (`Select`): aplica una función a todos los elementos de una colección, devolviendo otra nueva colección con los resultados obtenidos
+- `Reduce` (`Aggregate`): se aplica una función a todos los elementos de una lista y se devuelve un valor
+
+### Ejemplos de `Select` (`Map`)
+
+```cs
+//Dame los nombres de todos los clientes
+IEnumerable<string> names= clients.Select(client=> client.Name);
+
+//Dame la Dirección y la Ciudad de todos los alumnos
+// 1ª opción: Usando una clase creada a propósito para este fin
+IEnumerable<FullAddress> fullAddresses = students.Select(
+	student => new FullAddress {
+		Address= student.Address,
+			City = student.City,
+});
+
+/*2ª opción: Usando tipos anónimos. En este caso solo podemos usar var, ya que un tipo anónimo no tiene nombre, y por tanto no podemos declarar una variable de su tipo directamente*/
+varfullAddresses2 = students.Select(student=>
+	new{
+		Address= student.Address,
+		City = student.City,
+});
+```
+
+### Ejemplos de `Where` (`Filter`)
+
+```cs
+//Dame los alumnos que viven en Oviedo
+IEnumerable<Student> studentsFromOviedo= students.Where(student=> student.City.ToLower().Equals("oviedo"));
+
+//Dame los clientes que sean mayores de edad y más de 10.000 euros ahorrados”
+IEnumerable<Client> oviedoRichClients= clients.Where(client=> client.Age>= 18 && client.Savings> 10000);
+```
+
+### Ejemplos de `Reduce` (`Aggregate`)
+
+```cs
+//Dame la suma de todas las edades de los alumnos
+int sumOfAges= students.Aggregate(0, (previousSum, currentElement) => previousSum+ currentElement.Age);
+//O también existe una función Sum que se usa para estos casos particulares:
+intsumOfAges2 = students.Sum(currentElement=> currentElement.Age);
+
+//Dame una distribución de nombres de los clientes y cuantos clientes hay por cada nombre
+Dictionary<string, int> dictOfNameFrecuency = clients.Aggregate(new Dictionary<string, int>(), (dictSoFar, currentClient) => {
+	if(dictSoFar.ContainsKey(currentClient.Name))
+		dictSoFar[currentClient.Name]++;
+	elsedictSoFar[currentClient.Name] = 1;
+	returndictSoFar;
+});
+```
+
+## Otras funciones
+
+![](img/Pasted%20image%2020240325170406.png)
+
+
 
