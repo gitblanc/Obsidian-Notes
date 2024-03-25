@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/2_curso/tpp/notas_de_teoría_tpp_🗿.md",
+                "file": "docs/2_curso/tpp/apuntes_examen_lab_tpp_🤩.md",
                 "mode": "source",
                 "source": false
               }
@@ -96,9 +96,9 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/2_curso/tpp/notas_de_teoría_tpp_🗿.md",
-                "collapseAll": false,
-                "extraContext": true,
+                "file": "docs/2_curso/tpp/apuntes_examen_lab_tpp_🤩.md",
+                "collapseAll": true,
+                "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
@@ -113,13 +113,14 @@
             "state": {
               "type": "all-properties",
               "state": {
-                "sortOrder": "frequency",
+                "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": ""
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -135,23 +136,24 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "7dfd8165db85933d",
+  "active": "4851b110d405dd3c",
   "lastOpenFiles": [
+    "docs/2_curso/tpp/img/Pasted image 20240325151346.png",
+    "docs/2_curso/tpp/img/Pasted image 20240325150234.png",
+    "docs/2_curso/tpp/notas_de_c_sharp_🍉.md",
+    "docs/2_curso/tpp/apuntes_examen_lab_tpp_🤩.md",
+    "docs/2_curso/tpp/seminarios_tpp_🍎.md",
+    "docs/2_curso/tpp/notas_de_teoría_tpp_🗿.md",
     "docs/2_curso/tpp/img/Pasted image 20240321161637.png",
     "docs/2_curso/tpp/img/Pasted image 20240321161238.png",
     "docs/2_curso/tpp/img/Pasted image 20240321155232.png",
     "docs/2_curso/tpp/img/Pasted image 20240321155103.png",
     "docs/2_curso/tpp/ilist_&_idictionary_🤠.md",
-    "docs/2_curso/tpp/notas_de_c_sharp_🍉.md",
-    "docs/2_curso/tpp/notas_de_teoría_tpp_🗿.md",
-    "docs/2_curso/tpp/seminarios_tpp_🍎.md",
     "docs/2_curso/tpp/img/Pasted image 20240321154541.png",
     "docs/2_curso/tpp/img/Pasted image 20240321154455.png",
     "docs/2_curso/tpp/img/Pasted image 20240321153456.png",
     "docs/2_curso/tpp/img/Pasted image 20240321153406.png",
     "docs/general_data/img/banner.jpg",
-    "docs/general_data/img/Pasted image 20230310153038.png",
-    "docs/general_data/img/Pasted image 20230310152931.png",
     "docs/general_data/mac_useful_commands_and_customizations_.md",
     "docs/general_data/img",
     "docs/general_data/create_desktop_shortcut_of_an_appimage_🌎.md",
@@ -176,7 +178,6 @@
     "docs/3_curso/2_semestre/ssi/ssi_apuntes_examen_2_teoría_🥇.md",
     "docs/3_curso/2_semestre/ssi/ssi_apuntes_examen_1_teoría_🦥.md",
     "docs/3_curso/2_semestre/ssi/img",
-    "docs/3_curso/1_semestre/ri/seminarios_🥸.md",
     "docs/3_curso/1_semestre/ri/recuperación_de_información_☄️",
     "docs/3_curso/1_semestre/ri/nosql_🐝",
     "docs/3_curso/1_semestre/ri/jpa_🛰",
