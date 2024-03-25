@@ -1112,6 +1112,7 @@ IEnumerable enumerablei = arrayEnteros;
 - El método `GetEnumerator` es un *factory method* (patrón de diseño) encargado de construir un iterador
 	- El `IEnumerator` es un *bridge* (patrón de diseño) para ser independiente de la implementación del iterador
 	- El iterador suele implementarse como una clase anidada de la colección
+	- ACORDARSE: cuando creamos un Enumerator, este empieza en el elemento -1, por lo que debemos hacer un `MoveNext` para que no salte una excepción
 
 ![](img/Pasted%20image%2020240221102502.png)
 
