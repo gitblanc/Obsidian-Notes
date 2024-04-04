@@ -274,3 +274,19 @@ lock(Console.Out)//Es importante decidir qué objeto usar y a qué referenciase 
 
 - El interbloqueo está en el `lock(this)`
 
+## TPL y PLINQ
+
+- TPL (Task Parallel Library)
+- PLINQ (Parallel LINQ)
+
+## Parallel.ForEach
+
+![](img/Pasted%20image%2020240404152254.png)
+
+- Justo al final se hace un `Join`
+
+# Tema 5. Tipado Dinámico y Metaprogramación
+
+## Multiple Dispatch
+
+![](img/Pasted%20image%2020240404162636.png)
