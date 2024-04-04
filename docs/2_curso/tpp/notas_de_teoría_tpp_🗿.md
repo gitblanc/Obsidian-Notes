@@ -290,3 +290,13 @@ lock(Console.Out)//Es importante decidir qué objeto usar y a qué referenciase 
 ## Multiple Dispatch
 
 ![](img/Pasted%20image%2020240404162636.png)
+
+- Ejercicio obligatorio:
+
+![](img/IMG_8203.jpeg)
+
+- Q1 llama a A
+- Q2 llama a K
+- Q3 llama a K en tiempo de compilación y de ejecución (no hay multiple dispatch en C#)
+	- Un solución sería usar el visitor
+
