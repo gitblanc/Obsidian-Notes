@@ -204,3 +204,54 @@ a.Map(f => f.Substract(DateTime.Today));
 ```cs
 a.Reduce(1, (acu,x) => acu * x); //el 1 es el opcional
 ```
+
+# Seminario 5. Clausuras
+
+## Ejercicio 1
+
+![](img/Pasted%20image%2020240405190931.png)
+
+```cs
+int c = 0;
+Func<int> f = () => c ++;
+
+new int[1000].Select(x => f());
+
+//Se podría hacer con IEnumerable.Range(0, 1000);
+```
+
+![](img/Pasted%20image%2020240405192315.png)
+
+```cs
+static int Suma(IEnumerable<int> collection)
+{
+	int cont = 0;
+	int res = 0;
+	Action action = () =>
+		{
+			res += collection[cont];
+			cont+=1;
+		}
+	BucleWhile(cont < collection.Length, action);
+	return res;
+}
+```
+
+![](img/Pasted%20image%2020240405193028.png)
+
+```cs
+static void Switch<T>(T valor, IEnumerable<(Predicate<T>,Action cuerpo)> lista, Action defaultA)
+{
+	foreach(var item in lista)
+		if(item.First(valor))
+		{	
+			item.Second();
+			return;
+		}
+	defaultA();
+}
+
+(v) => v==1, () => {a = 0;}
+() => valor==2, () => {b = 0;} //usando Func<bool> en lugar de Predicate<T>
+(v) => v%2==0, () => {c = 0;}
+```
