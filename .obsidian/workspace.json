@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "0f47a841d335bedd",
+        "id": "98a7321a0f452b81",
         "type": "tabs",
         "children": [
           {
-            "id": "7dfd8165db85933d",
+            "id": "8b6e99b0c3fc8b26",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/2_curso/tpp/seminarios_tpp_🍎.md",
+                "file": "readme.md",
                 "mode": "source",
                 "source": false
               }
@@ -96,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/2_curso/tpp/seminarios_tpp_🍎.md",
+                "file": "readme.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -135,12 +135,15 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "7dfd8165db85933d",
+  "active": "8b6e99b0c3fc8b26",
   "lastOpenFiles": [
+    "home.md",
+    "docs/2_curso/tpp/notas_de_teoría_tpp_🗿.md",
+    "docs/4_curso/aslepi/notas_de_seminario_aslepi_🪻.md",
+    "docs/2_curso/tpp/seminarios_tpp_🍎.md",
     "docs/2_curso/tpp/img/Pasted image 20240405193028.png",
     "docs/2_curso/tpp/img/Pasted image 20240405192315.png",
     "docs/2_curso/tpp/img/Pasted image 20240405190931.png",
-    "docs/2_curso/tpp/notas_de_teoría_tpp_🗿.md",
     "docs/2_curso/tpp/img/IMG_8203.jpeg",
     "docs/2_curso/tpp/img/Pasted image 20240404162636.png",
     "docs/2_curso/tpp/img/Pasted image 20240404152254.png",
@@ -149,10 +152,8 @@
     "docs/2_curso/tpp/img/Pasted image 20240325150234.png",
     "docs/2_curso/tpp/apuntes_examen_lab_tpp_🤩.md",
     "docs/2_curso/tpp/img/Pasted image 20240321161637.png",
-    "docs/2_curso/tpp/img/Pasted image 20240321161238.png",
     "docs/2_curso/tpp/ilist_&_idictionary_🤠.md",
     "docs/2_curso/tpp/notas_de_c_sharp_🍉.md",
-    "docs/2_curso/tpp/seminarios_tpp_🍎.md",
     "docs/general_data/mac_useful_commands_and_customizations_.md",
     "docs/general_data/img",
     "docs/general_data/create_desktop_shortcut_of_an_appimage_🌎.md",
@@ -175,7 +176,6 @@
     "docs/3_curso/2_semestre/ssi/ssi_seminarios_🪙.md",
     "docs/3_curso/2_semestre/ssi/ssi_lab_notas_🔮.md",
     "docs/3_curso/2_semestre/ssi/ssi_apuntes_examen_2_teoría_🥇.md",
-    "docs/3_curso/2_semestre/ssi/ssi_apuntes_examen_1_teoría_🦥.md",
     "docs/3_curso/2_semestre/ssi/img",
     "docs/3_curso/1_semestre/ri/recuperación_de_información_☄️",
     "docs/3_curso/1_semestre/ri/nosql_🐝",

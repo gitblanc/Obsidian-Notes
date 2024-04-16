@@ -2,9 +2,8 @@
 
 # ¡Bienvenid@!
 - Si te gusta esta página, déjame una 🌟 en [el repositorio de Github](https://github.com/gitblanc/Obsidian-Notes) :)
-- En esta página/repositorio se encuentran todos mis conocimientos adquiridos en mi carrera como Ingeniero de software en la Universidad de Oviedo así como mis propios conociemientos personales sobre Ciberseguridad
+- En esta página/repositorio se encuentran todos mis conocimientos adquiridos en mi carrera como Ingeniero de software en la Universidad de Oviedo
 - Es una serie de apuntes de múltiples asignaturas hechos en Markdown
-- Con la nueva versión de esta página no sólo se mejora el aspecto, sino que también el motor de búsqueda. Ahora cuenta con una IA llamada Lens, que permite preguntar lo que se desea y ésta indexará la respuesta en base a todos los ficheros de la página
 - Pongo un emoji random cada día (no tienen significado)
 - El entorno que uso para editarlos es [Obsidian](https://obsidian.md/) (de ahí el nombre)
 - ¡Puedes clonártelos, forkearlos o mejorarlos, pero **no venderlos**!
@@ -15,6 +14,7 @@
 - Si me pagas un pincho para mis descansos en la Universidad que sepas que te amo ❤
 
 ![](https://img.shields.io/badge/Bitcoin-000000?style=for-the-badge&logo=bitcoin&logoColor=white): bc1qjf9gc0n03g4zw9nxc4fwvv5zklnextj8wge4zk ❤️
+
 <a href="https://www.buymeacoffee.com/gitblanc"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a pincho&emoji=🥪&slug=gitblanc&button_colour=BD5FFF&font_colour=ffffff&font_family=Lato&outline_colour=000000&coffee_colour=FFDD00" /></a>
 
 ---
