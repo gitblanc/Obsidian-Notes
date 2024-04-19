@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "readme.md",
+                "file": "docs/2_curso/tpp/seminarios_tpp_🍎.md",
                 "mode": "source",
                 "source": false
               }
@@ -96,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "readme.md",
+                "file": "docs/2_curso/tpp/seminarios_tpp_🍎.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -137,6 +137,14 @@
   },
   "active": "8b6e99b0c3fc8b26",
   "lastOpenFiles": [
+    "docs/2_curso/tpp/img/Pasted image 20240419192258.png",
+    "docs/2_curso/tpp/img/Pasted image 20240419192245.png",
+    "docs/2_curso/tpp/img/Pasted image 20240419192230.png",
+    "docs/2_curso/tpp/img/Pasted image 20240419192154.png",
+    "docs/2_curso/tpp/img/Pasted image 20240419190834.png",
+    "docs/2_curso/tpp/img/Pasted image 20240419190802.png",
+    "docs/2_curso/tpp/img/Pasted image 20240419190741.png",
+    "readme.md",
     "home.md",
     "docs/2_curso/tpp/notas_de_teoría_tpp_🗿.md",
     "docs/4_curso/aslepi/notas_de_seminario_aslepi_🪻.md",
@@ -145,13 +153,7 @@
     "docs/2_curso/tpp/img/Pasted image 20240405192315.png",
     "docs/2_curso/tpp/img/Pasted image 20240405190931.png",
     "docs/2_curso/tpp/img/IMG_8203.jpeg",
-    "docs/2_curso/tpp/img/Pasted image 20240404162636.png",
-    "docs/2_curso/tpp/img/Pasted image 20240404152254.png",
-    "docs/2_curso/tpp/img/Pasted image 20240325170406.png",
-    "docs/2_curso/tpp/img/Pasted image 20240325151346.png",
-    "docs/2_curso/tpp/img/Pasted image 20240325150234.png",
     "docs/2_curso/tpp/apuntes_examen_lab_tpp_🤩.md",
-    "docs/2_curso/tpp/img/Pasted image 20240321161637.png",
     "docs/2_curso/tpp/ilist_&_idictionary_🤠.md",
     "docs/2_curso/tpp/notas_de_c_sharp_🍉.md",
     "docs/general_data/mac_useful_commands_and_customizations_.md",
@@ -174,8 +176,6 @@
     "docs/3_curso/2_semestre/sdi/examen_teoría_nodejs_🚁.md",
     "docs/3_curso/2_semestre/ssi/ssi_🥤.md",
     "docs/3_curso/2_semestre/ssi/ssi_seminarios_🪙.md",
-    "docs/3_curso/2_semestre/ssi/ssi_lab_notas_🔮.md",
-    "docs/3_curso/2_semestre/ssi/ssi_apuntes_examen_2_teoría_🥇.md",
     "docs/3_curso/2_semestre/ssi/img",
     "docs/3_curso/1_semestre/ri/recuperación_de_información_☄️",
     "docs/3_curso/1_semestre/ri/nosql_🐝",

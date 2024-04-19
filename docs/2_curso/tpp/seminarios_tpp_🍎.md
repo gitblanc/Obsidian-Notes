@@ -255,3 +255,231 @@ static void Switch<T>(T valor, IEnumerable<(Predicate<T>,Action cuerpo)> lista, 
 () => valor==2, () => {b = 0;} //usando Func<bool> en lugar de Predicate<T>
 (v) => v%2==0, () => {c = 0;}
 ```
+
+# Seminario 6. Programación Concurrente
+
+## Ejercicio 1
+
+![](img/Pasted%20image%2020240419190741.png)
+
+![](img/Pasted%20image%2020240419190802.png)
+
+![](img/Pasted%20image%2020240419190834.png)
+
+```cs
+using System.Threading;
+namespace TPP.Seminarios.Concurrente.Seminario6 {
+ /// <summary>
+ /// Representa un recurso a adquirir por un hilo
+ /// </summary>
+ public class Recurso {
+	 public string Nombre { get; private set; }
+	 public Recurso(string nombre) {
+		 this.Nombre = nombre;
+	 }
+	 public void Procesar() {
+		 Thread.Sleep(100); // simula procesamiento...
+	 }
+ }
+}
+
+namespace TPP.Seminarios.Concurrente.Seminario6 {
+ /// <summary>
+ /// Encapsula un hilo
+ /// </summary>
+ public class Hilo {
+	 public Recurso Recurso1 { get; private set; }
+	 public Recurso Recurso2 { get; private set; }
+	 public Hilo(Recurso recurso1, Recurso recurso2) {
+		 this.Recurso1 = recurso1;
+		 this.Recurso2 = recurso2;
+	 }
+	 /// <summary>
+	 /// Este método será llamado concurrentemente en la ejecución del hilo
+	 /// </summary>
+	 public void Ejecutar() {
+		 lock (this.Recurso1) {
+		 Recurso1.Procesar();
+		 lock (this.Recurso2) {
+		 Recurso2.Procesar();
+		 }
+		 }
+	 }
+ }
+}
+
+using System.Threading;
+namespace TPP.Seminarios.Concurrente.Seminario6 {
+	 class Program {
+		 public static void Main() {
+			 Recurso recurso1 = new Recurso("Recurso 1"),
+			 recurso2 = new Recurso("Recurso 2");
+			 Hilo hilo1 = new Hilo(recurso1, recurso2),
+			 hilo2 = new Hilo(recurso2, recurso1);
+			 new Thread(hilo1.Ejecutar).Start();
+			 new Thread(hilo2.Ejecutar).Start();
+		 }
+	 }
+}
+```
+
+- Solución:
+
+```cs
+using System.Threading;
+namespace TPP.Seminarios.Concurrente.Seminario6 {
+ /// <summary>
+ /// Representa un recurso a adquirir por un hilo
+ /// </summary>
+ public class Recurso {
+	 public string Nombre { get; private set; }
+	 public Recurso(string nombre) {
+		 this.Nombre = nombre;
+	 }
+	 public void Procesar() {
+		 lock(this){//Esto permite que sea Thread-safe
+			 Thread.Sleep(100); // simula procesamiento...
+		 }
+	 }
+ }
+}
+
+namespace TPP.Seminarios.Concurrente.Seminario6 {
+ /// <summary>
+ /// Encapsula un hilo
+ /// </summary>
+ public class Hilo {
+	 public Recurso Recurso1 { get; private set; }
+	 public Recurso Recurso2 { get; private set; }
+	 public Hilo(Recurso recurso1, Recurso recurso2) {
+		 this.Recurso1 = recurso1;
+		 this.Recurso2 = recurso2;
+	 }
+	 /// <summary>
+	 /// Este método será llamado concurrentemente en la ejecución del hilo
+	 /// </summary>
+	 public void Ejecutar() {
+		 //lock (this.Recurso1) {
+			Recurso1.Procesar();
+				 //lock (this.Recurso2) {
+					 Recurso2.Procesar();
+				 //}
+		 //}
+	 }
+ }
+}
+
+using System.Threading;
+namespace TPP.Seminarios.Concurrente.Seminario6 {
+	 class Program {
+		 public static void Main() {
+			 Recurso recurso1 = new Recurso("Recurso 1"),
+					 recurso2 = new Recurso("Recurso 2");
+			 Hilo hilo1 = new Hilo(recurso1, recurso2),
+				  hilo2 = new Hilo(recurso2, recurso1);
+			 new Thread(hilo1.Ejecutar).Start();
+			 new Thread(hilo2.Ejecutar).Start();
+		 }
+	 }
+}
+```
+
+- El **lock** bloquea un trozo de código en base a un objeto
+- Hay que hacer las operaciones de forma atómica
+	- Separar los locks para que no dependan entre sí y posteriormente implementarlos en el método concreto
+
+## Ejercicio 2
+
+### El problema de los cinco filósofos
+
+![](img/Pasted%20image%2020240419192154.png)
+
+![](img/Pasted%20image%2020240419192230.png)
+
+![](img/Pasted%20image%2020240419192245.png)
+
+![](img/Pasted%20image%2020240419192258.png)
+
+```cs
+namespace TPP.Seminarios.Concurrente.Seminario6 {
+ /// <summary>
+ /// Cada uno de los tenedores disponibles
+ /// </summary>
+ class Tenedor {
+	 /// <summary>
+	 /// Número de tenedor
+	 /// </summary>
+	 private int numero;
+	 public Tenedor(int numero) {
+		 this.numero = numero;
+	 }
+ }
+}
+
+using System;
+using System.Threading;
+namespace TPP.Seminarios.Concurrente.Seminario6 {
+ class Filosofo {
+ /// <summary>
+ /// ID del filósofo
+ /// </summary>
+ private int numeroFilosofo;
+ /// <summary>
+ /// El tiempo que tarda pensando
+ /// </summary>
+ private int milisPensar;
+ /// <summary>
+ /// El tiempo que tarda comiendo
+ /// </summary>
+ private int milisComer;
+ /// <summary>
+ /// Los tenedores izquierdos y derechos
+ /// </summary>
+ private Tenedor tenedorIzquierdo, tenedorDerecho;
+ public Filosofo(int numeroFilosofo, int milisPensar, int milisComer, Tenedor tenedorIzquierdo, Tenedor tenedorDerecho) {
+	 this.numeroFilosofo = numeroFilosofo;
+	 this.milisPensar = milisPensar; this.milisComer = milisComer;
+	 this.tenedorIzquierdo = tenedorIzquierdo;
+	 this.tenedorDerecho = tenedorDerecho;
+	 new Thread(new ThreadStart(ComerYPensar)).Start();
+ }
+ private void ComerYPensar() {
+	 for (;;) {
+		 lock (this.tenedorIzquierdo) {
+			 lock (this.tenedorDerecho) {
+				 Console.WriteLine("El filósofo " + numeroFilosofo +
+				 " está comiendo...");
+				 Thread.Sleep(milisComer);
+				 }
+				 }
+				 Console.WriteLine("El filósofo " + numeroFilosofo +
+				 " está pensando...");
+				 Thread.Sleep(milisPensar);
+		 }
+	 }
+ }
+}
+namespace TPP.Seminarios.Concurrente.Seminario6 {
+ class Program {
+	 static void Main(string[] args) {
+	 const int milisPensar = 0, milisComer = 0;
+	 Tenedor[] tenedor = new Tenedor[5];
+	 for (int i = 0; i < tenedor.Length; i++)
+		 tenedor[i] = new Tenedor(i);
+	 new Filosofo(0, milisPensar, milisComer, tenedor[0], tenedor[1]);
+	 new Filosofo(1, milisPensar, milisComer, tenedor[1], tenedor[2]);
+	 new Filosofo(2, milisPensar, milisComer, tenedor[2], tenedor[3]);
+	 new Filosofo(3, milisPensar, milisComer, tenedor[3], tenedor[4]);
+	 new Filosofo(4, milisPensar, milisComer, tenedor[4], tenedor[0]);
+	 }
+ }
+}
+```
+
+Ideas:
+- Hacer lock a un objeto que encapsule 2 tenedores: `lock(new Par(this.tenedorIzq, this.tenedorDer))`
+- Hacer un lock global: `lock(objetoGlobal)`
+	- Sólo puede comer un filósofo a la vez, no 2
+	- Nunca va a caer en un deadlock
+- ***Solución***: Hacer un **manejador de tenedores**
+	- La solución está en el campus
