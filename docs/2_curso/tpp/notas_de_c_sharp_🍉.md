@@ -2134,5 +2134,514 @@ Dictionary<string, int> dictOfNameFrecuency = clients.Aggregate(new Dictionary<s
 
 ![](img/Pasted%20image%2020240325170406.png)
 
+# Fundamentos de la programación concurrente y paralela
 
+## Ley de Moore
+
+Ley empírica que dice lo siguiente:
+
+*El número de transistores por unidad de superficie en circuitos integrados se duplica cada 24 meses, sin encarecer su precio*
+
+Lo que indica que en dos años, por el mismo precio, tendremos un microprocesador el doble de potente
+
+## Programación concurrente
+
+- **Concurrencia** es la propiedad por la que varias tareas se pueden ejecutar simultáneamente y potencialmente interactuar entre sí
+	- Las tareas se pueden ejecutar en varios núcleos, en varios procesadores, o simulada en un único procesador
+	- Las **tareas** pueden ser hilos o procesos
+
+## Programación paralela
+
+- **Paralelismo** es un caso particular de la concurrencia, en el que las tareas se ejecutan de forma paralela (simultáneamente, no simulada)
+	- Con la concurrencia, la simultaneidad *puede ser simulada*
+	- Con el paralelismo, la simultaneidad *debe ser real*
+- El **paralelismo** comúnmente *enfatiza la división* de un problema en partes más pequeñas
+- La programación **concurrente** comúnmente *enfatiza la interacción* entre tareas
+
+## Proceso
+
+- Un **proceso** es un programa de ejecución
+	- Consta de instrucciones, estado de ejecución y valores de los datos en ejecución
+	- En los sistemas de memoria distribuida, las tareas concurrentes en distintos procesadores son procesos
+	- Todo proceso tiene un identificador único (PID)
+
+### Procesos en .NET
+
+- Se abstraen con instancias de la clase `Process` en `System.Diagnostics`:
+
+```cs
+var processes = Process.GetProcesses();
+double totalVirtualMemory = 0;
+int numberOfProcesses = 0;
+foreach (Process process in processes) {
+    double virtualMemoryMB = process.VirtualMemorySize64 / 1024.0 / 1024;
+    Console.WriteLine("-> PID: {0}\tName: {1}\tVirtual memory: {2:N} MB",
+            process.Id, process.ProcessName, virtualMemoryMB );
+    totalVirtualMemory += virtualMemoryMB;
+    numberOfProcesses++;
+}
+Console.WriteLine("Total number of processes: {0}.", numberOfProcesses);
+Console.WriteLine("Total virtual memory: {0:N} MBs.", totalVirtualMemory);
+```
+
+## Hilo
+
+- Un proceso puede constar de varios hilos de ejecución (*threads*)
+- Un hilo de ejecución es una tarea de un proceso que puede ejecutarse concurrentemente, compartiendo la memoria del proceso, con el resto de sus hilos
+
+### Hilos en .NET
+
+- Los hilos se abstraen con instancias de `Thread` en `System.Threading`:
+
+```cs
+Thread.CurrentThread.Name = "Main";
+Console.WriteLine("Current thread. Name: {0}, id: {1}, priority: {2}, state: {3}.",
+    Thread.CurrentThread.Name,
+    Thread.CurrentThread.ManagedThreadId,
+    Thread.CurrentThread.Priority,
+    Thread.CurrentThread.ThreadState);
+ProcessWrapper process = new ProcessWrapper();
+// Open default web browser
+string nameOfExecutable = "explorer.exe"; 
+if (process.Start(nameOfExecutable, "http://www.uniovi.es")) {
+    Console.WriteLine("Threads for \"{0}\":", process.Name);
+    ShowThreads(process.Threads);
+    Console.Write("Press enter to kill the process \"{0}\"...", process.Name);
+    Console.ReadLine();
+    process.Kill();
+}
+else {
+    Console.WriteLine("The process \"{0}\" has not be successfully started.", nameOfExecutable);
+}
+```
+
+## Paralelización de algoritmos
+
+- Existen dos escenarios típicos de paralelización:
+	1. **Paralelización de tareas**: tareas independientes pueden ser ejecutadas concurrentemente
+
+	![](img/Pasted%20image%2020240501105537.png)
+
+	2. **Paralelización de datos**: ejecutar una misma tarea que computa porciones de los mismos datos
+
+	![](img/Pasted%20image%2020240501105600.png)
+
+
+## Paso asíncrono de mensajes
+
+- Una primera aproximación para crear programas paralelos es el **paso de mensajes asíncrono**
+	- Cada mensaje asíncrono crea (potencialmente, no necesariamente) un nuevo hilo (thread)
+	- En `C#` esta funcionalidad se obtiene mediante:
+		- delegados
+		- Tasks
+
+![](img/Pasted%20image%2020240501105810.png)
+
+- Para conseguir el paso asíncrono de mensajes, haremos uso del `async` y `await`
+
+## `async` y `await`
+
+- Se apoya en el uso de objetos `Task` y `Task<T>`
+- Modifican el orden habitual de ejecución del programa
+- El código asíncrono es muy parecido al código síncrono
+- `await`
+	- Se aplica sobre una expresión sobre la que se puede esperar: `expression.GetAwaiter()`
+	- Normalmente expresiones de tipo `Task` y `Task<T>`
+- `async`
+	- Se aplica a métodos que en su cuerpo usan `await`
+		- Se lo contrario se comporta como un método síncrono y al compilar produce un warning
+	- El método devolverá `void`, `Task` o `Task<T>`
+
+![](img/Pasted%20image%2020240501110447.png)
+- Más en [Documentación Microsoft](https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/task-asynchronous-programming-model)
+
+## Creación Explícita de hilos
+
+- Haciendo uso del POO, la clase `Thread` encapsula un hilo de ejecución de forma explícita
+
+![](img/Pasted%20image%2020240501110637.png)
+
+### Ejemplo de uso
+
+- Cálculo paralelizado del módulo de un vector
+- Se usará el Master-Worker
+
+![](img/Pasted%20image%2020240501111248.png)
+
+![](img/Pasted%20image%2020240501111311.png)
+
+```cs
+internal class Worker {
+ private short[] vector;
+	private int índiceDesde, índiceHasta;
+	private long resultado;
+	internal long Resultado { get { return this.resultado; } }
+	internal Worker(short[] vector, int índiceDesde,
+	int índiceHasta) {
+		this.vector = vector;
+		this.índiceDesde = índiceDesde;
+		this.índiceHasta = índiceHasta;
+	}
+	internal void Calcular() {
+	 this.resultado = 0;
+	 for(int i= this.índiceDesde; i<=this.índiceHasta; i++)
+	 {
+		 this.resultado += this.vector[i] * this.vector[i];
+	 } 
+	} 
+}
+
+public class Master {
+ private short[] vector;
+ private int numeroHilos;
+ public Master(short[] vector, int numeroHilos) {
+	 if (numeroHilos < 1 || numeroHilos > vector.Length)
+		throw new ArgumentException("El número de hilos ha
+	de ser menor o igual que los elementos del
+	vector.");
+	this.vector = vector;
+	this.numeroHilos = numeroHilos;
+ }
+
+	public double CalcularModulo() {
+		 Worker[] workers = new Worker[this.numeroHilos];
+		 int elementosPorHilo = this.vector.Length/numeroHilos;
+		 for(int i=0; i < this.numeroHilos; i++)
+			 workers[i] = new Worker(this.vector, i*elementosPorHilo,
+			 (i<this.numeroHilos-1) ? // ¿último?
+			 (i+1)*elementosPorHilo-1: this.vector.Length-1 );
+			 Thread[] hilos = new Thread[workers.Length];
+			 for(int i=0;i<workers.Length;i++) {
+			 hilos[i] = new Thread(workers[i].Calcular);
+			hilos[i].Start();
+		}
+		 foreach (Thread hilo in hilos) hilo.Join();
+		 long resultado = 0;
+		 foreach (Worker worker in workers)
+		 resultado += worker.Resultado;
+		 return Math.Sqrt(resultado); 
+		} 
+	}
+```
+
+## `Thread.Join`
+
+- Cuando se llama al `Join`, el hilo que realiza la llamada se bloquea (duerme) hasta que finaliza la ejecución del Thread que recibió el mensaje
+
+![](img/Pasted%20image%2020240501111743.png)
+## Condición de Carrera
+
+- ¿Qué pasaría si no hubiésemos puesto la llamada a `Thread.Join`?
+	- El hilo master tomaría los resultados del cálculo (posiblemente) antes de que hubiesen acabado los hilos worker de hacer el cómputo
+	- El cálculo final varía de una ejecución a otra
+
+- Se dice que múltiples tareas están en una condición de carrera (race condition) cuando su resultado depende del orden en el que éstas se ejecutan
+	- Un programa concurrente **no** debe tener condiciones de carrera
+- Las condiciones de carrera son un **foco de errores** en programas y sistemas concurrentes
+
+## Parámetros en los hilos
+
+- Si se requiere un enfoque más funcional, se pueden pasar parámetros a los hilos:
+
+```cs
+/// <summary>
+/// Function that receives the number to start counting.
+/// Counts 10 numbers from "from", waiting 1 second after showing the number.
+/// </summary>
+static void Show10Numbers(object from) {
+    int? fromInt = from as int?;
+    if (!fromInt.HasValue)
+        throw new ArgumentException("The parameter \"from\" must be an integer");
+    for (int i = fromInt.Value; i < 10 + fromInt; i++) {
+        Console.WriteLine(i);
+        Thread.Sleep(1000); // Sleeps one second
+    }
+}
+
+static void Main() {
+    Thread thread = new Thread(Show10Numbers);
+    thread.Start(7);
+}
+```
+
+- Los hilos siempre reciben un delegado de tipo `Action`
+
+## Variables libres (free)
+
+- Si se usan funciones lambda, hay que tener cuidado con sus variables libres
+- Cada hilo posee una copia de la pila de ejecución ***a partir del ámbito en el que se creó***
+	- Las variables locales ya declaradas serán compartidas por todos los hilos
+
+```cs
+static void SharedBoundVariables() {
+    int local = global = 1;
+    Thread thread1 = new Thread( () => {
+            Console.WriteLine("Thread 1. Global {0}, Local {1}.",
+                    global, local);
+        });
+    global = local = 2;
+    Thread thread2 = new Thread( () => {
+            Console.WriteLine("Thread 2. Global {0}, Local {1}.",
+                    global, local);
+        });
+    thread1.Start();// Thread 1. Global 2, Local 2.
+    thread2.Start();// Thread 2. Global 2, Local 2.
+}
+```
+
+## Alternativas a variables libres
+
+- **Paso de parámetros** (preferible)
+
+```cs
+static void WithParameters() {
+    int local = 1;
+    Thread thread = new Thread( (parameter) => {
+            Console.WriteLine("With parameter {0}.", parameter);
+        });
+    local = 2;
+    thread.Start(local-1);// With parameter 1.
+}
+```
+
+- **Copia de variables**
+
+```cs
+static void MaingACopy() {            
+    int local = 1;
+    int copy = local;
+    Thread thread = new Thread( () => {
+            Console.WriteLine("Making a copy {0}.", copy);
+        });
+    local = 2;
+    thread.Start(); // Making a copy 1.
+}
+```
+
+## Context Switch
+
+- El **contexto** de una tarea (hilo o proceso) es la información que tiene que ser guardada cuando ésta es interrumpida para que luego pueda reanudarse su ejecución
+- El **cambio de contexto** (*context switch*) es la acción de almacenar/restaurar el contexto de una tarea (hilo o proceso) para que pueda ser reanudada su ejecución
+- Esto permite la *ejecución concurrente de varias tareas en un mismo procesador*
+
+- El cambio de contexto requiere
+	- **Tiempo de computación** para almacenar y restaurar el contexto de varias tareas
+	- **Memoria adicional** para almacenar los distintos contextos
+- Por tanto, la utilización de un número elevado de tareas, en relación con el número de procesadores (cores), puede conllevar una caída global del rendimiento
+
+> Análisis del Context Switch
+
+![](img/Pasted%20image%2020240501113825.png)
+
+> - Con 2 hilos (y con 4) se obtiene el mejor rendimiento
+> - A partir de 28 hilos, el rendimiento de la aplicación decae frente a un algoritmo secuencial
+> - Cuando se usan más de 9 hilos, el rendimiento decae linealmente frente al número de hilos (línea roja)
+
+## Tareas (Task)
+
+- Tienen un nivel de abstracción mayor y proporcionan más funcionalidades que los hilos, facilitando la programación paralela
+- [Documentación de Microsoft](https://learn.microsoft.com/en-us/dotnet/standard/parallel-programming/task-based-asynchronous-programming)
+
+- Una Task representa una operación asíncrona y su uso tiene dos beneficios principales
+	- **Uso más eficiente y escalable de recursos**
+	- **Mayor control de ejecución**
+
+## Composición de tareas
+
+- Estos métodos que poseen permiten implementar patrones típicos y mejorar el uso de las capacidades asíncronas del lenguaje
+	- `Task.WhenAll`: espera de forma asíncrona a que terminen varios objetos de `Task` o `Task<TResult>`
+	- `Task.WhenAny`: espera de forma asíncrona a que terminen uno o varios objetos de `Task` o `Task<TResult>`
+	- `Task.Delay`: crea un objeto `Task` que acaba tras un tiempo determinado
+- [Más info en Documentación de Microsoft](https://learn.microsoft.com/en-us/dotnet/standard/parallel-programming/chaining-tasks-by-using-continuation-tasks)
+
+## Sincronización de hilos
+
+- Puesto que el orden de ejecución de los hilos no es determinista, es necesario utilizar mecanismos de sincronización de hilos para evitar condiciones de carrera
+	- El mecanismo básico es `Thread.Join`
+- No obstante, la necesidad más típica de sincronización de hilos es por acceso concurrente a **recursos compartidos**
+	- Un recurso compartido puede ser un dispositivo físico (impresora), lógico (fichero), una estructura de datos, un objeto e incluso una variable
+- Evitar el uso simultáneo de un recurso compartido se denomina **exclusión mutua**
+
+### Ejemplo
+
+![](img/Pasted%20image%2020240501120418.png)
+
+![](img/Pasted%20image%2020240501120433.png)
+
+## Recurso compartido
+
+- En el código anterior, el recurso compartido es la salida estándar de la consola
+- El hecho de no proteger su acceso, hace que las instrucciones:
+
+```cs
+ConsoleColor colorAnterior = Console.ForegroundColor;
+Console.ForegroundColor = this.color;
+Console.Write("{0}\t", this.color);
+Console.ForegroundColor = colorAnterior;
+```
+
+No se ejecuten de forma **atómica**
+
+- Una **sección crítica** es un fragmento de código que accede a un **recurso compartido** que no debe ser accedido concurrentemente por más de un hilo de ejecución
+- La sincronización de hilos debe usarse para conseguir la máxima exclusión mutua
+
+## Lock
+
+- La principal técnica para sincronizar hilos en `C#` es la palabra reservada `lock`
+	- Consigue que **únicamente un hilo** pueda ejecutar una sección de código (sección crítica) simultáneamente -> **exclusión mútua**
+- `lock` requiere especificar un objeto (referencia) como parámetro:
+
+```cs
+lock(referencia)
+{
+	sección crítica
+}
+```
+
+- El objeto modela un **padlock**:
+	1. Un hilo bloquea el objeto
+	2. Ejecuta la secciíon crítica
+	3. Sale del bloqueo
+- Si otro hilo ejecuta el *lock* sobre un objeto que ya está bloqueado, entonces se pondrá en modo de espera y se bloqueará hasta que el objeto sea liberado
+
+## Asignaciones
+
+- No todas las asignaciones son atómicas
+	- Las asignaciones de 32 bits son atómicas
+	- Las asignaciones de 64 bits (`long`, `ulong`, `double`, `decimal`) no son atómicas en un SO de 32 bits
+	- Los operadores `+=`, `-=`, `*=`, `/=` ... no son atómicos
+	- Los operadores `++`, `--` no son atómicos
+- Por tanto, las asignaciones multihilo de una misma variable deben sincronizarse
+	- Una alternativa es usar `lock`
+	- Otra alternativa es usar los métodos de la clase `Interlocked` (`System.Threading`)
+		- Esta alternativa es mucho más eficiente que usar `lock`
+		- Los métodos son `Increment`, `Decrement` y `Exchange` entre otros
+
+## Interbloqueo (deadlock)
+
+- Se produce un interbloqueo (deadlock) entre un conjunto de tareas si todas y cada una de ellas están esperando por un evento que sólo otra puede causar
+	- Todas las tareas se bloquean de forma permanente
+	- El caso más común es el acceso a recursos compartidos
+
+```cs
+// Ejemplo deadlock
+public class Cuenta {
+	private decimal saldo;
+	public bool Retirar(decimal cantidad) {
+		 if (this.saldo < cantidad) return false;
+			saldo -= cantidad;
+		return true;
+	}
+	
+	public void Ingresar(decimal cantidad) {
+		saldo += cantidad;
+	}
+	
+	public bool Transferir(Cuenta cuentaDestino, decimal cantidad) {
+		lock (this) {
+			lock (cuentaDestino) {
+				if (this.Retirar(cantidad)) {
+					cuentaDestino.Ingresar(cantidad);
+					 return true;
+				}
+				else return false;
+		 } 
+	} 
+}
+```
+
+## TPL y PLINQ
+
+- [Microsoft docs sobre TPL](https://learn.microsoft.com/es-es/dotnet/standard/parallel-programming/task-parallel-library-tpl)
+- Para obtener la paralelización mediante división de datos, los dos métodos más utilizados son `ForEach` y `For` de `System.Threading.Tasks.Parallel`
+	- Ambos reciben la tarea a ejecutar como un delegado (`Action`)
+	- `ForEach` crea potencialmente un hilo por cada elemento de un `IEnumerable`
+	- `For` crea potencialmente un hilo a partir de un índice de comienzo y final, no incluyendo el final
+
+### `Parallel.ForEach`
+
+```cs
+DateTime before = DateTime.Now;
+string[] fileNames = Directory.GetFiles(@"..\..\..\..\pics", "*.jpg");
+string newDirectory = @"..\..\..\..\pics\rotated";
+Directory.CreateDirectory(newDirectory);
+
+// The following tasks are executed in parallel.
+// The program creates POTENTIALLY as many tasks as elements in the enumeration.
+Parallel.ForEach(fileNames, file => {
+    string fileName = Path.GetFileName(file);
+    using (Bitmap bitmap = new Bitmap(file)) {
+        Console.WriteLine("Processing the \"{0}\" file with thread {1}.", fileName, Thread.CurrentThread.ManagedThreadId);
+        bitmap.RotateFlip(RotateFlipType.Rotate180FlipNone);
+        bitmap.Save(Path.Combine(newDirectory, fileName));
+    }
+});
+// Notice, TPL waits for task termination
+DateTime after = DateTime.Now;
+Console.WriteLine("Elapsed time: {0:N} milliseconds.", (after - before).Ticks / TimeSpan.TicksPerMillisecond);
+```
+
+- TPL estima dinámicamente el número de hilos creados
+- La espera a la finalización de hilos es automática
+
+### Data Parallelism con TPL y variables locales de partición
+
+- Cada partición (hilo) tiene su propia variable **subtotal**
+- Minimiza las colisiones de los mecanismos de sincronización
+
+```cs
+short[] vector = CreateRandomVector(100000, -100, 100);
+long result = 0;
+Parallel.ForEach(vector,
+	() => 0, // Method to initialize the local variable
+	(v, loopState, subtotal) => subtotal += v * v,
+	// Method to be executed when each partition has completed.
+	// finalResult is the final value of subtotal for a particular partition.
+	finalResult => Interlocked.Add(ref result, finalResult));
+Console.WriteLine("The result obtained is: {0:N2}.", Math.Sqrt(result));
+```
+
+- *NOTA: se parece mucho a un Aggregate*
+
+### Task Parallelism with TPL
+
+- Para obtener la paralelización mediante **división de tareas independientes**, TPL ofrece el método `Invoke` de la clase `Parallel`
+	- Recibe una lista variable de delegados de tipo `Action`
+	- Crea potencialmente un hilo por cada `Action` pasado como parámetro
+	- Añade una **sincronización** para que en la siguiente instrucción todos los hilos hayan finalizado
+
+```cs
+String texto = LeerFicheroTexto(@"..\..\..\clarin.txt");
+string[] palabras = PartirEnPalabras(texto);
+Parallel.Invoke(
+	() => signosDePuntuación = SignosPuntuación(texto),
+	() => palabrasMasLargas = PalabrasMasLargas(palabras),
+	() => palabrasMasCortas = PalabrasMasCortas(palabras),
+	() => palabrasConMasApariciones = PalabrasConMasApariciones(
+	palabras, out numeroMayorAparciones),
+	() => palabrasConMenosApariciones = PalabrasConMenosApariciones(
+	palabras, out numeroMenorApariciones)
+);
+```
+
+- Más info de TPL en [Microsoft docs](https://learn.microsoft.com/es-es/dotnet/standard/parallel-programming/task-parallel-library-tpl)
+
+### PLINQ
+
+- LINQ trabaja sobre datos secuencialmente
+
+```cs
+vector.Select(elemento => Math.Sqrt(elemento))
+```
+
+- PLINQ hace lo siguiente:
+	- Parte los datos en segmentos
+	- Ejecuta la consulta LINQ en paralelo con un número dinámico de hilos worker
+	- Cada hilo worker procesa un segmento distinto
+
+```cs
+vector.AsParallel().Select(elemento => Math.Sqrt(elemento));
+```
+
+- Para saber más sobre PLINQ consultar [Microsoft docs](https://learn.microsoft.com/en-us/dotnet/standard/parallel-programming/introduction-to-plinq)
 
