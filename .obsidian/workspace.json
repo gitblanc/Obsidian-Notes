@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/2_curso/tpp/notas_de_c_sharp_🍉.md",
+                "file": "docs/2_curso/tpp/seminarios_tpp_🍎.md",
                 "mode": "source",
                 "source": false
               }
@@ -96,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/2_curso/tpp/notas_de_c_sharp_🍉.md",
+                "file": "docs/2_curso/tpp/seminarios_tpp_🍎.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -137,6 +137,12 @@
   },
   "active": "8b6e99b0c3fc8b26",
   "lastOpenFiles": [
+    "docs/2_curso/tpp/img/Pasted image 20240503191049.png",
+    "docs/2_curso/tpp/img/Pasted image 20240503191032.png",
+    "docs/2_curso/tpp/img/Pasted image 20240503191010.png",
+    "docs/2_curso/tpp/img/Pasted image 20240503190948.png",
+    "docs/2_curso/tpp/notas_de_c_sharp_🍉.md",
+    "docs/2_curso/tpp/seminarios_tpp_🍎.md",
     "docs/2_curso/tpp/img/Pasted image 20240501120433.png",
     "docs/2_curso/tpp/img/Pasted image 20240501120418.png",
     "docs/2_curso/tpp/img/Pasted image 20240501113825.png",
@@ -144,18 +150,12 @@
     "docs/2_curso/tpp/img/Pasted image 20240501111311.png",
     "docs/2_curso/tpp/img/Pasted image 20240501111248.png",
     "docs/2_curso/tpp/img/Pasted image 20240501110637.png",
-    "docs/2_curso/tpp/img/Pasted image 20240501110447.png",
-    "docs/2_curso/tpp/img/Pasted image 20240501105810.png",
-    "docs/2_curso/tpp/img/Pasted image 20240501105600.png",
-    "docs/2_curso/tpp/img/Pasted image 20240501105537.png",
-    "docs/2_curso/tpp/apuntes_examen_lab_tpp_🤩.md",
-    "docs/2_curso/tpp/seminarios_tpp_🍎.md",
     "readme.md",
     "home.md",
     "docs/2_curso/tpp/notas_de_teoría_tpp_🗿.md",
     "docs/4_curso/aslepi/notas_de_seminario_aslepi_🪻.md",
+    "docs/2_curso/tpp/apuntes_examen_lab_tpp_🤩.md",
     "docs/2_curso/tpp/ilist_&_idictionary_🤠.md",
-    "docs/2_curso/tpp/notas_de_c_sharp_🍉.md",
     "docs/general_data/mac_useful_commands_and_customizations_.md",
     "docs/general_data/img",
     "docs/general_data/create_desktop_shortcut_of_an_appimage_🌎.md",

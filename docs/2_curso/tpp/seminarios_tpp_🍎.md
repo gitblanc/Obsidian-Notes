@@ -483,3 +483,57 @@ Ideas:
 	- Nunca va a caer en un deadlock
 - ***Solución***: Hacer un **manejador de tenedores**
 	- La solución está en el campus
+
+# Seminario 7. Programación concurrente
+
+## Producto de Matrices
+
+![](img/Pasted%20image%2020240503190948.png)
+
+## Ejercicio 1
+
+![](img/Pasted%20image%2020240503191010.png)
+
+- Tiene complejidad cúbica
+
+```cs
+public int[][] Ejercicio1()
+{
+	for(int i = 0; i < N; i++)
+	{
+		for(int j = 0; j < P; j++)
+		{
+			for(int k
+			
+				= 0; k < M; k++)
+			{
+				res[i,j] += a[i,k]*b[k,i];
+			}
+		}
+	}
+	
+	return res;
+}
+```
+
+## Ejercicio 2
+
+![](img/Pasted%20image%2020240503191032.png)
+
+- El `Invoke` se usa para la paralelización de tareas
+- El `ForEach` se usa para la paralelización de datos (con diferentes datos ejecuta la misma tarea)
+- El `For` se usa para la paralelización de datos (caso especial del `ForEach`)
+
+El método más apropiado sería el `For`
+
+## Ejercicio 3
+
+![](img/Pasted%20image%2020240503191049.png)
+
+- Se podría hacer combinaciones de bucles paralelos
+
+- Si lo hacemos en el bucle de la i, se harían `N` hilos y `P * M` operaciones
+	- Solución óptima
+- Si lo hacemos en el bucle de la k, se harían `M` hilos y `1` operación
+
+- Crear un hilo que haga muchas operaciones siempre va a ser más eficiente que crear muchos hilos y haga pocas o 1 operaciones
