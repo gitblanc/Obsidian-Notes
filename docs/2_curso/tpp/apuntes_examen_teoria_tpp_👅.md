@@ -350,3 +350,133 @@ Las propiedades pueden ser de lectura o escritura.
 
 # Tema 3. Fundamentos del paradigma funcional
 
+- Paradigma declarativo basado en la utilización de funciones que manejan datos inmutables
+	- Los datos nunca se modifican
+	- En lugar de cambiar un dato, se llama a una función que devuelve el dato modificado sin modificar el original
+- Un programa se define mediante un conjunto de funciones invocándose entre sí
+- Las funciones no generan efectos (co)laterales:
+	- el valor de una expresión depende exclusivamente de los valores de los parámetros
+	- devolviendo siempre el mismo valor en función de éstos (paradigma funcional puro)
+
+## Cálculo lambda
+
+- El **cálculo lambda**  es un sistema formal basado en la definición de funciones (abstracción) y su aplicación (invocación)
+	- Hace uso exhaustivo de la recursión
+
+## Expresiones Lambda
+
+- En el cálculo lambda, una expresión lambda se define como:
+	- Una **abstracción** lambda `λx.M` (M. N. M1, M2...) donde x es una variable (x, y, z, x1, x2...) -parámetro- y M es una expresión lambda -cuerpo de la función
+	- Una aplicación M N donde M y N son expresiones lambda
+
+- Ejemplos:
+	- Función identidad: `f(x)=x` -> `λx.x`
+	- Función doble: `g(x)=x+x` -> `λx.x + x`
+
+>[!Tip]
+>A partir de aquí echarle un ojo a [seminarios_tpp_🍎](seminarios_tpp_🍎.md)
+
+## Variables Libres y Ligadas
+
+- En una abstracción `λx.y` se dice que:
+	- La variable `x` está **ligada**
+	- La variable `y` es **libre**
+
+## El problema de la parada
+
+Es imposible describir un algoritmo que demuestre si éste finalizará su ejecución o tendrá una ejecución finita
+
+## Funciones, Entidades de primer nivel
+
+- Las funciones, al igual que el resto de valores (como los objetos), son entidades de primer nivel
+- Una función se dice que es de **orden superior** si:
+	- O bien recibe alguna función como parámetro
+	- O bien retorna una función como resultado
+
+## Delegados
+
+- **Delegado**: constituye un tipo que representa un método de instancia o de clase (`static`)
+	- Las variables de tipo delegado representan un modo de referenciar un método
+
+- Los delegados predefinidos son:
+	- `Func<T>`: método sin parámetros que retorna un `T`
+	- `Func<T1,T2>`: método con un parámetro `T1` que retorna un `T2`
+	- ...
+	- `Action`: método sin parámetros ni retorno
+	- `Action<T>`: método con un parámetro `T` sin retorno
+	- ...
+	- `Predicate<T>`: método que retorna un `bool` y recibe un `T`
+
+## Delegados Anónimos
+
+- En la programación funcional es común escribir la función en el momento de pasarla
+- **Delegado anónimo**: sintaxis para definir una variable delegado indicando sus parámetros y su cuerpo (código)
+
+![](img/Pasted%20image%2020240518160447.png)
+
+## Expresiones Lambda
+
+- Permiten escribir el cuerpo de funciones completas como expresiones
+
+![](img/Pasted%20image%2020240518160531.png)
+
+## Clausura
+
+- Una **clausura** (*closure*) es una función de primer nivel junto con su ámbito: una tabla que guarda las referencias a sus variables libres
+- Las variables libres de una clausura representan **estado**
+	- Este estado puede además estar oculto cuando el ámbito de la variable finaliza
+- Por tanto, pueden representar objetos
+- Además, también pueden representar estructuras de control:
+
+![](img/Pasted%20image%2020240518160812.png)
+
+## Currificación
+
+- La **currificación** (*currying*) es la técnica para transformar una función de varios parámetros en una función que recibe un único parámetro
+- Su principal beneficio es la **aplicación parcial**
+
+## Aplicación parcial
+
+- Cuando las funciones están currificadas es posible realizar su aplicación (invocación) parcial
+- La **aplicación parcial** consiste en pasar un número menor de parámetros en la invocación de una función
+	- El resultado es otra función con un número menor en su aridad (número de parámetros)
+
+## Generadores
+
+- Un **generador** es una función que simula la devolución de una colección de elementos sin construir toda la colección devolviendo un elemento cada vez que la función es invocada
+- El hecho de no construir toda la colección hace que sea más eficiente:
+	- Requiere menos memoria
+	- El invocador obtiene el primer elemento de forma inmediata
+	- Sólo se generan los elementos que se usan
+- `C#` usa `yield`
+
+## Evaluación perezosa
+
+- La **evaluación perezosa** (lazy) es la técnica por la que se demora la evaluación de una expresión hasta que ésta es utilizada
+	- Lo contrario es la evaluación eager (ansiosa)
+- Los beneficios de la evaluación perezosa son:
+	- Un menor consumo de memoria
+	- Un mayor rendimiento
+	- La posibilidad de crear estructuras de datos potencialmente infinitas
+
+## Transparencia referencial
+
+- Una expresión es **referencialmente transparente** si ésta se puede sustituir por su valor sin que cambie la semántica (significado) del programa
+- Tiene los siguientes beneficios:
+	- Se puede aplicar el razonamiento matemático a los programas
+	- Se pueden realizar transformaciones en los programas (simplificación, paralelización, optimización...)
+
+## Memoización
+
+- Técnica de optimización que puede ser aplicada sobre expresiones con transparencia referencial
+
+## Pattern Matching
+
+- **Pattern Matching**: es el acto de comprobar si un conjunto de elementos siguen algún patrón determinado
+
+## Funciones de Orden superior típicas
+
+- **Filter** (Where): aplica un predicado a todos los elementos de la colección, devolviendo otra colección con aquellos elementos que satisfagan el predicado
+- **Map** (Select): aplica una función a todos los elementos de una colección, devolviendo otra nueva colección con los resultados obtenidos
+- **Reduce** (Aggregate): se aplica una función a todos los elementos de una lista, dado un orden, devolviendo un valor
+
