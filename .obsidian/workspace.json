@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "98a7321a0f452b81",
+        "id": "eb480b8929af57cc",
         "type": "tabs",
         "children": [
           {
-            "id": "8b6e99b0c3fc8b26",
+            "id": "c85968c06d52ab26",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/2_curso/tpp/seminarios_tpp_🍎.md",
+                "file": "docs/2_curso/tpp/apuntes_examen_teoria_tpp_👅.md",
                 "mode": "source",
                 "source": false
               }
@@ -96,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/2_curso/tpp/seminarios_tpp_🍎.md",
+                "file": "docs/2_curso/tpp/apuntes_examen_teoria_tpp_👅.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -135,26 +135,26 @@
       "markdown-importer:Open format converter": false
     }
   },
-  "active": "8b6e99b0c3fc8b26",
+  "active": "c85968c06d52ab26",
   "lastOpenFiles": [
+    "docs/2_curso/tpp/apuntes_examen_lab_tpp_🤩.md",
+    "docs/2_curso/tpp/notas_de_c_sharp_🍉.md",
+    "docs/2_curso/tpp/apuntes_examen_teoria_tpp_👅.md",
+    "docs/2_curso/tpp/seminarios_tpp_🍎.md",
     "docs/2_curso/tpp/img/Pasted image 20240503191049.png",
     "docs/2_curso/tpp/img/Pasted image 20240503191032.png",
     "docs/2_curso/tpp/img/Pasted image 20240503191010.png",
     "docs/2_curso/tpp/img/Pasted image 20240503190948.png",
-    "docs/2_curso/tpp/notas_de_c_sharp_🍉.md",
-    "docs/2_curso/tpp/seminarios_tpp_🍎.md",
     "docs/2_curso/tpp/img/Pasted image 20240501120433.png",
     "docs/2_curso/tpp/img/Pasted image 20240501120418.png",
     "docs/2_curso/tpp/img/Pasted image 20240501113825.png",
     "docs/2_curso/tpp/img/Pasted image 20240501111743.png",
     "docs/2_curso/tpp/img/Pasted image 20240501111311.png",
     "docs/2_curso/tpp/img/Pasted image 20240501111248.png",
-    "docs/2_curso/tpp/img/Pasted image 20240501110637.png",
     "readme.md",
     "home.md",
     "docs/2_curso/tpp/notas_de_teoría_tpp_🗿.md",
     "docs/4_curso/aslepi/notas_de_seminario_aslepi_🪻.md",
-    "docs/2_curso/tpp/apuntes_examen_lab_tpp_🤩.md",
     "docs/2_curso/tpp/ilist_&_idictionary_🤠.md",
     "docs/general_data/mac_useful_commands_and_customizations_.md",
     "docs/general_data/img",
