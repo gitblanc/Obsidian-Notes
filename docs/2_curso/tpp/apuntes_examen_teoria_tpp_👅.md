@@ -480,3 +480,78 @@ Es imposible describir un algoritmo que demuestre si éste finalizará su ejecuc
 - **Map** (Select): aplica una función a todos los elementos de una colección, devolviendo otra nueva colección con los resultados obtenidos
 - **Reduce** (Aggregate): se aplica una función a todos los elementos de una lista, dado un orden, devolviendo un valor
 
+# Tema 4. Fundamentos de la programación concurrente y paralela
+
+## Ley de Moore
+
+*El número de transistores por unidad de superficie en circuitos integrados se duplica cada 24 meses, sin encarecer su precio*
+
+En dos años, tendremos un procesador el doble de potente al mismo precio
+
+## Programación Concurrente
+
+- **Concurrencia**: es la propiedad por la que varias tareas se pueden ejecutar simultáneamente y potencialmente interactuar entre sí
+	- Las tareas pueden ser hilos o procesos
+
+## Programación paralela
+
+- **Paralelismo**: es un caso particular de la concurrencia, en el que las tareas se ejecutan de forma paralela (simultáneamente, no simulada)
+	- Con la concurrencia, la simultaneidad *puede ser simulada*
+	- Con el paralelismo, la simultaneidad debe ser real
+- El paralelismo comúnmente enfatiza la división de un problema en partes más pequeñas
+- La programación concurrente enfatiza la interacción entre tareas
+
+## Proceso
+
+- Un **proceso** es un programa en ejecución
+	- Consta de instrucciones, estado de ejecución y valores de los datos en ejecución
+	- En los sistemas de memoria distribuida, las tareas concurrentes en distintos procesadores son procesos
+
+## Hilo
+
+- Un proceso puede constar de varios hilos de ejecución
+- Un hilo de ejecución es una tarea de un proceso que puede ejecutarse concurrentemente, compartiendo la memoria del proceso, con el resto de sus hilos
+
+## Condición de carrera
+
+- Se dice que múltiples tareas están en **condición de carrera** cuando su resultado depende del orden en el que éstas se ejecutan
+	- Un programa concurrente no debe tener condiciones de carrera
+
+## Context Switch
+
+- El **contexto** de una tarea es la información que tiene que ser guardada cuando éste es interrumpido para que luego pueda reanudarse su ejecución
+- El **cambio de contexto** es la acción de almacenar/restaurar el contexto de una tarea para que pueda ser reanudada su ejecución
+- Esto permite la ejecución concurrente de varias tareas en un mismo procesador
+- El cambio de contexto requiere:
+	- Tiempo de computación para almacenar y restaurar el contexto de varias tareas
+	- Memoria adicional para almacenar los distintos contextos
+- Por lo tanto, la utilización de un número elevado de tareas, en relación con el número de procesadores, puede conllevar una caída global del rendimiento
+
+![](img/Pasted%20image%2020240518165433.png)
+
+## Inconvenientes del uso de hilos
+
+- **Condiciones de carrera**: debemos esperar explícitamente hasta que todos los hilos hayan terminado de realizar sus cálculos
+- **Parámetros**: sin parámetros o solo un objeto, variables libres compartidas
+- **Excepciones asíncronas**: las excepciones originadas en un hilo no son capturadas por bloques `try-catch` pertenecientes a un hilo diferente
+- **Rendimiento de los cambios de contexto**: no hay optimización automática del número de hilos creados
+
+## Tareas (Task)
+
+- Una **Task** representa una operación asíncrona y su uso tiene dos beneficios principales:
+	- Uso más eficiente y escalable de recursos
+	- Mayor control de ejecución (comparado con Thread)
+
+## Sección crítica
+
+- Una **sección crítica** es un fragmento de código que accede a un **recurso compartido** que no debe ser accedido concurrentemente por más de un hilo de ejecución
+
+
+## Lock
+
+- Consigue que únicamente un hilo pueda ejecutar una sección crítica simultáneamente (exclusión mutua)
+
+## Interbloqueo
+
+- Se produce **interbloqueo** (*deadlock*) entre un conjunto de tareas si todas y cada una de ellas están esperando por un evento que sólo otra puede causar
+	- Todas las tareas se bloquean de forma permanente
