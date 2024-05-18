@@ -205,3 +205,148 @@ Los lenguajes con comprobación dinámica de tipos son comúnmente denominados:
 - Textual
 - Imperativo (principalmente)
 - Base orientada a objetos, pero incluye elementos de programación funcional
+
+# Tema 2. Paradigma Orientado a Objetos
+
+ >[!Tip]
+ >Te recomiendo echarle un ojo a [notas_de_c_sharp_🍉](notas_de_c_sharp_🍉.md) para mucho más detalle
+
+- Utiliza los **objetos**, unión de datos y métodos, como principal abstracción, definiendo programas como interacciones entre objetos
+- Se basa en la idea de modelar **objetos reales** mediante la codificación de objetos software
+
+## Abstracción
+
+- **Abstracción**: expresa las características esenciales de un objeto, las cuales distinguen al objeto de los demás
+	- El principal mecanismo de los lenguajes de programación para representar sus abstracciones son sus **tipos**
+
+## Encapsulamiento
+
+- **Encapsulamiento**: proceso de almacenar en un mismo compartimento los elementos de una abstracción que constituyen su estructura y su comportamiento
+	- Los objetos encapsulan en una misma entidad datos y comportamiento
+- La **ocultación de la información** permite discernir entre qué partes de la abstracción están disponibles al resto de la aplicación y qué partes son internas de la abstracción
+- Para ello, los lenguajes ofrecen diversos niveles de ocultación
+
+### Beneficios del encapsulamiento
+
+- Aumento de la eficiencia
+- Mejora de la mantenibilidad del código
+- Mayor reutilización de código
+- Se aumenta la robustez, evitando así errores de inconsistencia
+
+## Propiedades
+
+`C#` ofrece el concepto de **propiedad** para acceder al estado de los objetos como si de atributos se tratase, obteniendo los beneficios del encapsulamiento:
+- Se oculta el estado interno del objeto, ofreciendo un acceso indirecto mediante las propiedades
+- Se puede cambiar la implementación de la propiedad sin modificar el acceso por parte del cliente
+Las propiedades pueden ser de lectura o escritura.
+
+## Modularidad
+
+- Propiedad que permite subdividir una aplicación en partes más pequeñas (módulos), siendo cada una de ellas tan independiente como sea posible
+- Cada módulo ha de poder ser compilado por separado para ser utilizados en diversos programas (reutilización)
+
+## Acoplamiento y cohesión
+
+- **Acoplamiento**: nivel de interdependencia entre módulos
+- **Cohesión**: nivel de uniformidad y relación que existe entre las responsabilidades de un módulo
+
+- Un bajo acoplamiento y una alta cohesión favorecen la reutilización y mantenibilidad del software
+
+## Sobrecarga de métodos
+
+- La **sobrecarga de métodos** permite dar distintas implementaciones a un mismo identificador de método
+
+## Herencia
+
+- La **herencia** es un mecanismo de **reutilización de código**
+- El **estado** de una instancia derivada está definido por la unión (herencia) de las estructuras de las clases base y derivada
+- El conjunto de mensajes (**interfaz**) que puede aceptar un objeto derivado es la unión (herencia) de los mensajes de su clase base y derivada
+
+## Polimorfismo
+
+- Es un **mecanismo de generalización** que hace que la abstracción más general pueda representar abstracciones más específicas
+	- El tipo general representa, por tanto, varias formas (*poli morfismo*)
+- Por ello las referencias derivadas promocionan a referencias base (subtipado)
+
+![](img/Pasted%20image%2020240518125127.png)
+
+- La conversión descendente ha de forzarse con un **cast**
+- Operadores is, as
+
+## Enlace Dinámico
+
+- Los métodos heredados se pueden **especializar** en las clases derivadas
+	- Mecanismo por el cual, en tiempo de ejecución, se invoca al método del tipado dinámico implementado por el objeto (no al estático declarado en su clase)
+
+![](img/Pasted%20image%2020240518125356.png)
+
+- `C#` no tiene enlace dinámico por defecto
+	- Para que exista tenemos que:
+		- Poner la palabra reservada `virtual` al método que reciba el mensaje
+		- Redefinir su funcionalidad utilizando la palabra reservada `override` en los métodos derivados
+
+![](img/Pasted%20image%2020240518125723.png)
+
+## Clases y métodos abstractos
+
+- Cuando en una abstracción necesitamos que un mensaje forme parte de su interfaz, pero no podemos implementarlo, este mensaje se declara como método abstracto
+- Todo método abstracto ofrece enlace dinámico
+- En su redefinición hay que usar la palabra `override`
+- Toda clase que posea, al menos, un método abstracto, será una **clase abstracta**
+
+## Herencia múltiple
+
+- Se produce cuando una clase hereda, directamente, de más de una clase
+- La herencia múltiple produce dos conflictos:
+	- **Coincidencia de nombres**: se produce cuando se hereda de dos o más clases un miembro con igual identificador. Se produce una ambigüedad en su acceso
+	- **Herencia repetida**: se produce cuando se hereda más de una vez de una clase por distintos caminos.
+
+## Interfaces
+
+- Conjunto de métodos públicos que ofrecen un conjunto de clases
+	- Tiene los beneficios del polimorfismo (mantenibilidad) sin establecer relaciones de herencia entre abstracciones
+
+### Interfaces vs Composición
+
+- Se usa **composición** si se busca reutilizar implementaciones, pero sin buscar el polimorfismo
+- Se usan **interfaces** si se busca el polimorfismo, es decir, que una clase promocione a múltiples tipos
+
+## Excepciones
+
+- Una **excepción** es un evento que se produce en un momento de ejecución y que impide que la ejecución prosiga por su flujo normal
+- En `c#` todas las excepciones son ***unchecked***
+
+## Asertos
+
+- **Aserto**: son condiciones que se han de cumplir en la correcta ejecución de un programa
+	- Si se producen, se detiene la ejecución del programa
+	- Están orientadas al proceso de desarrollo
+	- Se pueden desactivar para la release
+- La técnica más utilizada para implementar asertos está basada en **compilación condicional**
+
+![](img/Pasted%20image%2020240518130550.png)
+
+## Genericidad
+
+- La **genericidad** es la propiedad que permite construir abstracciones modelo para otras abstracciones
+- Ofrece **dos beneficios** principales:
+	- Una mayor robustez (detección de errores en tiempo de compilación)
+	- Un mayor rendimiento
+- Se hace uso de `default(T)` para el tipo por defecto
+
+## Genericidad Acotada
+
+- La **genericidad acotada** (*bounded*) permite hacer más específicos los tipos genéricos
+	- Limitan (acotan) su genericidad
+	- El beneficio es que se permite un mayor paso de mensajes
+
+![](img/Pasted%20image%2020240518130902.png)
+
+## Inferencia de tipos
+
+- La **inferencia de tipos** es la capacidad para deducir automáticamente el tipo de una expresión
+	- Cuanta menos información de tipos provea el programador, más avanzada será la inferencia de tipos
+- `var` en `C#`
+
+# Tema 3. Fundamentos del paradigma funcional
+
