@@ -555,3 +555,56 @@ En dos años, tendremos un procesador el doble de potente al mismo precio
 
 - Se produce **interbloqueo** (*deadlock*) entre un conjunto de tareas si todas y cada una de ellas están esperando por un evento que sólo otra puede causar
 	- Todas las tareas se bloquean de forma permanente
+
+# Tema 5. Tipado Dinámico y Metaprogramación
+
+## Tipado Dinámico
+
+- El **tipado dinámico** es el proceso de posponer la comprobación e inferencia de tipos en tiempo de ejecución
+	- Ventajas
+		- Mayor adaptabilidad y flexibilidad del código
+		- En general, mayor nivel de abstracción
+	- Inconvenientes
+		- Detección de errores de tipo en tiempo de compilación
+		- Optimización de código (rendimiento)
+- En `C#` se ha de poner `dynamic` a un método
+- Tiene como limitación la obligación de usar **single dispatch**
+	- Sólo permite resolver un método dependiendo del tipo de un único objeto (**this**)
+
+## Duck Typing
+
+- Significa que el estado dinámico de un objeto determina qué operaciones pueden realizarse con él
+
+## Multiple Dispatch
+
+- Si queremos que la resolución del método dependa de varios tipos, necesitamos multiple dispatch
+- Un mecanismo para obtenerlo son los multimétodos
+
+![](img/Pasted%20image%2020240518171336.png)
+
+## Reflexión
+
+- La **reflexión** es la capacidad de un Sistema computacional de **razonar** y **actuar** sobre sí mismo, adaptándose a sí mismo a condiciones cambiantes
+- **Introspección**: cuando se puede consultar la representación de un programa pero no modificarla
+- **Intercesión**: cuando se permite además modificar dicha representación desencadenando un cambio en lo que éstos representan o significan
+
+## Generación dinámica de código
+
+- **Generación dinámica de código**: es la capacidad de generar programas (parte de los mismos) en tiempo de ejecución:
+	- Es decir, programas que generan programas
+	- El código generado de esta forma puede ser parte de la aplicación que lo generó
+- Se puede utilizar para generar dinámicamente el código de nuevos métodos o clases (**intercesión estructural**)
+- El nuevo código se puede crear a partir de:
+	- El propio programa: ***Adaptativeness***
+	- El usuario (directa o indirectamente): ***Adaptability***
+- También se conoce como **programación generativa**
+
+## Metaprogramación
+
+- **Metaprogramación**: es la capacidad de poder escribir programas que escriban o manipulen otros programas
+- Están relacionados con la metaprogramación los siguientes elementos de lenguajes:
+	- Reflexión
+	- Generación dinámica de código
+	- Anotaciones o Atributos
+	- Tipado dinámico
+
