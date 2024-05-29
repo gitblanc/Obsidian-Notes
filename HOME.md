@@ -21,7 +21,7 @@ banner_y: 0.68
 
 ![](https://img.shields.io/badge/Bitcoin-000000?style=for-the-badge&logo=bitcoin&logoColor=white): bc1qjf9gc0n03g4zw9nxc4fwvv5zklnextj8wge4zk ❤️
 
-<script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="gitblanc" data-color="#BD5FFF" data-emoji="🥪" data-font="Inter" data-text="Buy me a pincho" data-outline-color="#000000" data-font-color="#ffffff" data-coffee-color="#FFDD00" ></script>
+<a href="https://www.buymeacoffee.com/gitblanc"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a pincho&emoji=🥪&slug=gitblanc&button_colour=5900ff&font_colour=ffffff&font_family=Poppins&outline_colour=ffffff&coffee_colour=FFDD00" /></a>
 
 ---
 
