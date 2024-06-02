@@ -15,6 +15,25 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  copy:
+    name: Copy my folder
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: copy
+        env:
+          SRC_FOLDER_PATH: 'docs'
+          TARGET_BRANCH: 'dest'
+        run: |
+          files=$(find $SRC_FOLDER_PATH -type f) # get the file list
+          git config --global user.name 'GitHub Action'
+          git config --global user.email 'action@github.com'
+          git fetch                         # fetch branches
+          git checkout $TARGET_BRANCH       # checkout to your branch
+          git checkout ${GITHUB_REF##*/} -- $files # copy files from the source branch
+          git add -A
+          git diff-index --quiet HEAD ||  git commit -am "deploy files"  # commit to the repository (ignore if no modification)
+          git push origin $TARGET_BRANCH # push to remote branch
   build:
     runs-on: ubuntu-22.04
     steps:
@@ -28,18 +47,6 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18.14
-
-      - name: Get main branch name
-        id: branch_name
-        run: |
-          MAIN_BRANCH=$(git symbolic-ref refs/remotes/origin/HEAD | sed 's@^refs/remotes/origin/@@')
-          echo "::set-env name=MAIN_BRANCH::$MAIN_BRANCH"
-
-      - name: Move files if needed
-        run: |
-          git checkout $MAIN_BRANCH -- docs
-          mv docs/ content/
-          git commit -m "añadidos apuntes automáticamente de master"
 
       - name: Install Dependencies
         run: npm ci
