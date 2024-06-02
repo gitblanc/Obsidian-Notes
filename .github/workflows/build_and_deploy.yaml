@@ -40,14 +40,6 @@ jobs:
       with:
         node-version: 20
     - uses: chetan/git-restore-mtime-action@v2
-    - name: Fetch previous version ⤵️ # <- To save some compilation time, we download the last release and unzip it. We also synchronize the project files back in the source/ folder, to gain some time.
-      run: |
-          cd /home/runner/work/gitblanc.github.io/Obsidian-Notes/docs/
-          make fetch
-    - name: Build 🏗️
-      run: |
-        cd /home/runner/work/gitblanc.github.io/Obsidian-Notes/docs/
-        make all
     - name: Switching to quartz 🪴
       run: git checkout quartz # <- This part is a bit tricky. We built the content/ folder previously, and since it is not tracked by github, this folder stays even if we change branch.
       # If we had two different workflow, we would need to re-download the package created previously before being able to deploy the website.
