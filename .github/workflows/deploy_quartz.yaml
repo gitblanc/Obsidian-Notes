@@ -27,7 +27,7 @@ jobs:
       - name: Checkout Quartz code from quartz branch
         uses: actions/checkout@v3
         with:
-          repository: Obsidian-Notes  # Use your repository name
+          repository: gitblanc/Obsidian-Notes # Use your repository name
           ref: quartz  # Checkout the quartz branch
           path: quartz  # Checkout into the quartz directory
 
