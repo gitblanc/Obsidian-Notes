@@ -31,8 +31,8 @@ jobs:
 
       - name: Move files if needed
         run: |
-          git checkout main -- docs/* # Copiar todos los archivos de docs/ de la rama master
-          mv docs/ content/ # Copiar todos los archivos de docs/ al directorio content/
+          cd /home/runner/work/gitblanc.github.io/Obsidian-Notes/ # Copiar todos los archivos de docs/ de la rama master
+          cp -r ./docs/* content/ # Copiar todos los archivos de docs/ al directorio content/
 
       - name: Install Dependencies
         run: npm ci
