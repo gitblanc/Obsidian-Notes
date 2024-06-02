@@ -29,6 +29,11 @@ jobs:
         with:
           node-version: 18.14
 
+      - name: Move files if needed
+        run: |
+          git checkout master -- docs/* # Copiar todos los archivos de docs/ de la rama master
+          mv docs/ content/ # Copiar todos los archivos de docs/ al directorio content/
+
       - name: Install Dependencies
         run: npm ci
 
