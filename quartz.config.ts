@@ -16,7 +16,7 @@ const config: QuartzConfig = {
     },
     locale: "en-US",
     baseUrl: "gitblanc.github.io/Obsidian-Notes/",
-    ignorePatterns: ["private", "templates", ".obsidian"],
+    ignorePatterns: ["private", "templates", ".obsidian", ".gitbook", ".github", ".gitignore", "README.md", "HOME.md"],
     defaultDateType: "created",
     theme: {
       fontOrigin: "googleFonts",
