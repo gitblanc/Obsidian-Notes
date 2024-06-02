@@ -3,7 +3,7 @@ name: Deploy Quartz Site to GitHub Pages
 on:
   push:
     branches:
-      - master  # Trigger the workflow on the master branch of the quartz branch
+      - master  # Trigger the workflow on the master branch
 
 permissions:
   contents: read
@@ -31,7 +31,7 @@ jobs:
           node-version: 18.14
 
       - name: Install Dependencies
-        run: npm ci
+        run: npm install
         working-directory: quartz
 
       - name: Build Quartz
