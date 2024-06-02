@@ -40,6 +40,14 @@ jobs:
       with:
         node-version: 20
     - uses: chetan/git-restore-mtime-action@v2
+    - name: Create package 🎁
+      uses: crowbarmaster/GH-Automatic-Releases@latest
+      with:
+        automatic_release_tag: "latest"
+        repo_token: ${{ secrets.GITHUB_TOKEN }}
+        prerelease: true
+        draft: false
+        files: content/release.zip
     - name: Switching to quartz 🪴
       run: git checkout quartz # <- This part is a bit tricky. We built the content/ folder previously, and since it is not tracked by github, this folder stays even if we change branch.
       # If we had two different workflow, we would need to re-download the package created previously before being able to deploy the website.
