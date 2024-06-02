@@ -29,9 +29,13 @@ jobs:
         with:
           node-version: 18.14
 
+      - name: Get main branch name
+        id: branch_name
+        run: echo ::set-output name=branch::${GITHUB_REF#refs/heads/}
+
       - name: Move files if needed
         run: |
-          git checkout main -- docs
+          git checkout ${{ steps.branch_name.outputs.branch }} -- docs
           mv docs/ content/
           git commit -m "añadidos apuntes automáticamente de master"
 
