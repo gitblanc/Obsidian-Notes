@@ -38,10 +38,10 @@ jobs:
 
       - name: Install Dependencies
         run: npm ci
-        working-directory: quartz
+        working-directory: content
 
       - name: Copy docs to quartz content
-        run: cp -r docs/ quartz/docs
+        run: cp -r docs/ content/
 
       - name: Build Quartz
         run: npx quartz build
