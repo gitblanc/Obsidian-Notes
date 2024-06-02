@@ -31,11 +31,13 @@ jobs:
 
       - name: Get main branch name
         id: branch_name
-        run: echo ::set-output name=branch::${GITHUB_REF#refs/heads/}
+        run: |
+          MAIN_BRANCH=$(git symbolic-ref refs/remotes/origin/HEAD | sed 's@^refs/remotes/origin/@@')
+          echo "::set-env name=MAIN_BRANCH::$MAIN_BRANCH"
 
       - name: Move files if needed
         run: |
-          git checkout ${{ steps.branch_name.outputs.branch }} -- docs
+          git checkout $MAIN_BRANCH -- docs
           mv docs/ content/
           git commit -m "añadidos apuntes automáticamente de master"
 
