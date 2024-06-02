@@ -623,3 +623,121 @@ Posible solución:
 >	- Sólo hay que hacerlo en un único sitio
 >	- Resulta fácil determinar dicho sitio
 
+# Tema 2. Patrones de Diseño
+
+## Herencia de clases vs Herencia de interfaces
+
+- **Herencia de clases**: es un mecanismo para reutilizar código
+- **Herencia de interfaces**: describe cuándo se puede utilizar un objeto en lugar de otro (subtipos)
+
+>[!Tip]
+>Hay que programar para una interfaz, no para una implementación
+
+
+## Herencia frente a composición
+
+- **Herencia de clases**: permite definir la implementación de una clase en términos de la de otra
+	- Se define estáticamente, en tiempo de compilación
+	- Es fácil de usar
+	- La subclase es muy dependiente de la implementación de la clase padre (hace muy difícil la reutilización en otros dominios)
+- **Composición de objetos**: es una alternativa a la herencia, donde la nueva funcionalidad se obtiene ensamblando o componiendo nuevos objetos
+	- Se define dinámicamente en tiempo de ejecución a través de objetos que guardan referencias a otros objetos
+	- A estos objetos sólo se accede a través de sus interfaces
+	- Se puede cambiar cualquier objeto por otro de su mismo tipo en tiempo de ejecución
+	- Ayuda a que la clase se centre en una única tarea
+
+## Elementos de un patrón
+
+- **Contexto**: describe las situaciones en las que se da el problema
+- **Problema**: descripción general que represente bien la esencia de éste
+- **Solución**: cómo resolver el problema
+
+## Categorías de Patrones
+
+- **Arquitectónicos**: situados a un nivel de abstracción más alto, describen la arquitectura, la estructura de un sistema en torno a subsistemas y las relaciones entre ellos (ej: Modelo Vista Controlador)
+- **De diseño**: se sitúan en el nivel de abstracción medio, de diseño (independientes del lenguaje de programación, ej: Observer)
+- **Centrados en el código**: o Modismos, que suelen ser específicos de un lenguaje de programación determinado.
+	- Revelan su intención
+
+## Elementos de un patrón
+
+![](img/Pasted%20image%2020240602175226.png)
+
+## Secciones de un patrón de diseño
+
+![](img/Pasted%20image%2020240602175311.png)
+
+![](img/Pasted%20image%2020240602175325.png)
+
+![](img/Pasted%20image%2020240602175338.png)
+## Organización del catálogo de patrones
+
+![](img/Pasted%20image%2020240602175419.png)
+
+## Causas de rediseño
+
+>[!Note]
+>Aquí incluyo cuándo se debe usar cada patrón
+
+>[!Tip]
+>**TIP 1**: *crear un objeto especificando explícitamente su clase*
+>
+>Si se especifica el nombre de la clase en el código al crear el objeto nos liga a una implementación particular en vez de a una interfaz.
+>
+>Es mejor crear los objetos directamente.
+>
+>Se usan los patrones: *Abstract Factory*, *Factory Method* y *Prototype*
+
+
+>[!Tip]
+>**TIP 2**: *depender de operaciones concretas*
+>
+>Evitando llamar directamente a un método determinado en el código se facilita cambiar la forma en que se responde a una petición
+>
+>Se usan los patrones: *Chain of Responsibility* y *Command*
+
+>[!Tip]
+>**TIP 3**: *dependencia de plataformas de hardware o software*
+>
+>Las interfaces de los sistemas operativos y las APIs de muchas aplicaciones son dependientes de la plataforma
+>
+>Hay que limitar dichas dependencias
+>
+>Se usan los patrones: *Abstract Factory* y *Bridge*
+
+>[!Tip]
+>**TIP 4**: *depender de implementaciones o representaciones de objetos*
+>
+>Los clientes que conocen cómo se representa internamente cómo se almacena, dónde se localiza o cómo se implementa tendrán que cambiar cuando cambie aquél
+>
+>Se usan los patrones: *Abstract Factory*, *Bridge*, *Memento* y *Proxy*
+
+>[!Tip]
+>**TIP 5**: *dependencias de algoritmos*
+>
+>Los algoritmos que es probable que cambien a lo largo del tiempo (para optimizarlos o porque se sustituyan por otro distinto) deben estar aislados
+>
+>Se usan los patrones: *Builder*, *Iterator*, *Strategy*, *Template Method* y *Visitor*
+
+>[!Tip]
+>**TIP 6**: *fuerte acoplamiento*
+>
+>Es difícil reutilizar clases que están fuertemente acopladas a otras
+>
+>Se usan los patrones: *Abstract Factory*, *Bridge*, *Chain of Responsibility*, *Command*, *Facade*, *Mediator* y *Observer*
+
+>[!Tip]
+>**TIP 7**: *extender funcionalidad mediante la herencia*
+>
+>Definir una subclase requiere un profundo conocimiento de la clase padre
+>
+>Se usan los patrones: *Bridge*, *Chain of Responsibility*, *Composite*, *Decorator*, *Observer* y *Strategy*
+
+>[!Tip]
+>**TIP 8**: *no se puede modificar las clases*
+>
+>A veces hay que modificar una clase de la que no disponemos del código fuente o que requeriría cambiar montones de subclases existentes
+>
+>Se usan los patrones: *Adapter*, *Decorator* y *Visitor*
+
+
