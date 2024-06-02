@@ -31,20 +31,17 @@ jobs:
           node-version: 18.14
 
       - name: Install Dependencies
-        run: npm install
+        run: npm i
         working-directory: quartz
 
       - name: Build Quartz
         run: npx quartz build
         working-directory: quartz
 
-      - name: List files in public directory
-        run: ls -al quartz/public
-
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
-          path: quartz/public
+          path: public
 
   deploy:
     needs: build
