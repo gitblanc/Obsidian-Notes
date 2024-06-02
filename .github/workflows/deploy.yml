@@ -21,7 +21,6 @@ jobs:
       - name: Checkout Quartz code from quartz branch
         uses: actions/checkout@v3
         with:
-          repository: gitblanc/Obsidian-Notes  # Use your repository name
           ref: master  # Checkout the master branch of the quartz branch
           path: quartz  # Checkout into the quartz directory
           fetch-depth: 0 # Fetch all history for git info
