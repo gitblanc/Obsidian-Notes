@@ -3,7 +3,7 @@ name: Deploy Quartz Site to GitHub Pages
 on:
   push:
     branches:
-      - master  # Trigger the workflow on the master branch
+      - master  # Trigger the workflow on the master branch of the quartz branch
 
 permissions:
   contents: read
@@ -18,17 +18,11 @@ jobs:
   build:
     runs-on: ubuntu-22.04
     steps:
-      - name: Checkout content from master
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 0  # Fetch all history for git info
-          path: docs  # Checkout the master branch content
-
       - name: Checkout Quartz code from quartz branch
         uses: actions/checkout@v3
         with:
-          repository: gitblanc/Obsidian-Notes # Use your repository name
-          ref: quartz  # Checkout the quartz branch
+          repository: gitblanc/Obsidian-Notes  # Use your repository name
+          ref: master  # Checkout the master branch of the quartz branch
           path: quartz  # Checkout into the quartz directory
 
       - name: Set up Node.js
@@ -38,14 +32,14 @@ jobs:
 
       - name: Install Dependencies
         run: npm ci
-        working-directory: content
-
-      - name: Copy docs to quartz content
-        run: cp -r docs/ content/
+        working-directory: quartz
 
       - name: Build Quartz
         run: npx quartz build
         working-directory: quartz
+
+      - name: List files in public directory
+        run: ls -al quartz/public
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
@@ -60,5 +54,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Deploy to GitHub Pages
-        id: deployment
         uses: actions/deploy-pages@v2
