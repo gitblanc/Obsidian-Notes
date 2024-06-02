@@ -23,7 +23,7 @@ jobs:
       - name: copy
         env:
           SRC_FOLDER_PATH: 'docs'
-          TARGET_BRANCH: 'dest'
+          TARGET_BRANCH: 'quartz'
         run: |
           files=$(find $SRC_FOLDER_PATH -type f) # get the file list
           git config --global user.name 'GitHub Action'
