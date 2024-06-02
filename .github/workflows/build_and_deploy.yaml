@@ -40,6 +40,34 @@ jobs:
       with:
         node-version: 20
     - uses: chetan/git-restore-mtime-action@v2
+    - name: Cache  💾
+      uses: actions/cache@v4
+      with:
+        path: |
+          ~/.cache
+          pandoc-3.2-1-amd64.deb
+        key: ${{ runner.os }}-pip-
+        restore-keys: ${{ runner.os }}-pip-
+    - name: Setup Python 🐍
+      uses: actions/setup-python@v5
+      with:
+        python-version: "3.10"
+    - name: Setup pandoc ⚙️
+      run: |
+        sudo apt-get update
+        test -f pandoc-3.2-1-amd64.deb || wget https://github.com/jgm/pandoc/releases/download/3.2/pandoc-3.2-1-amd64.deb
+        sudo dpkg -i pandoc-3.2-1-amd64.deb
+        sudo apt-get install -y texlive texlive-xetex texlive-latex-extra lmodern librsvg2-bin fonts-symbola
+        pip install --upgrade pip
+        pip install Pygments pandoc-include
+    - name: Fetch previous version ⤵️ # <- To save some compilation time, we download the last release and unzip it. We also synchronize the project files back in the source/ folder, to gain some time.
+      run: |
+          cd /home/runner/work/gitblanc.github.io/Obsidian-Notes/docs/
+          make fetch
+    - name: Build 🏗️
+      run: |
+        cd /home/runner/work/gitblanc.github.io/Obsidian-Notes/docs/
+        make all
     - name: Create package 🎁
       uses: crowbarmaster/GH-Automatic-Releases@latest
       with:
