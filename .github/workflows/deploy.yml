@@ -31,9 +31,9 @@ jobs:
 
       - name: Move files if needed
         run: |
-          git clone https://github.com/gitblanc/Obsidian-Notes.git
-          mv ./Obsidian-Notes/docs/ content/
-          rm -rf Obsidian-Notes/
+          git checkout master -- docs
+          mv docs/ content/
+          git commit -m "añadidos apuntes automáticamente de master"
 
       - name: Install Dependencies
         run: npm ci
