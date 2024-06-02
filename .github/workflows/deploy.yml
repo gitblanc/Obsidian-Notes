@@ -31,7 +31,7 @@ jobs:
 
       - name: Move files if needed
         run: |
-          git checkout master -- docs
+          git checkout main -- docs
           mv docs/ content/
           git commit -m "añadidos apuntes automáticamente de master"
 
