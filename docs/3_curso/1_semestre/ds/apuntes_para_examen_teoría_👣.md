@@ -1,3 +1,6 @@
+>[!Tip]
+>Si quieres ir directamente al grano, te recomiendo que hagas `Ctrl + F` y busques ==Pregunta típica de examen==. Así sólo te estudias "lo más relevante"
+
 # Tema 1. Introducción al diseño OO
 
 ## Diseño vs Análisis
@@ -419,7 +422,7 @@ Posible solución:
 >![](img/Pasted%20image%2020240602132813.png)
 >
 
-- **ISP** (*Interface Segregation Principle*, Principio de segregación de interfaces):
+- **ISP** (*Interface Segregation Principle*, Principio de 1ión de interfaces):
 	- Sugiere que los clientes no deberían tratar con la clase original, sino sólo con la interfaz correspondiente
 	- Es mejor muchas interfaces específicas para cada cliente que una sola interfaz de propósito general
 	- Dicho de otra forma: los clientes no deberían depender de los métodos que no usan
@@ -482,4 +485,141 @@ Posible solución:
 >	- A veces la creación de objetos requiere una cierta complejidad
 >		- En esos casos es conveniente delegar la creación a una clase de fabricación auxiliar
 >	- *Mucho ojo con las factorías*
+
+- **GRASP 3** (*Bajo acoplamiento*): 
+	- ¿Cómo lograr que haya pocas dependencias, que los cambios tengan un bajo impacto e incrementar la reutilización?
+		- Asignar una responsabilidad de manera que el acoplamiento permanezca bajo
+	- **Acoplamiento**: medida de la fuerza con que un elemento está conectado a otros
+		- Si un elemento tiene un bajo acoplamiento no depende de demasiados otros elementos
+		- Si una clase presenta un fuerte acoplamiento con otras, cambios en esas clases obligan a hacer cambios en ella
+
+>[!Example]
+>![](img/Pasted%20image%2020240602140327.png)
+>
+>Solución alternativa:
+>
+>![](img/Pasted%20image%2020240602140411.png)
+>
+>![](img/Pasted%20image%2020240602140435.png)
+>
+>Ventajas del bajo acoplamiento:
+>- No afectan los cambios en otros componentes
+>- Fácil de entender de manera aislada
+>- Favorece la reutilización
+
+- **GRASP 4** (*Alta cohesión*):
+	- ¿Cómo mantener la complejidad manejable?
+		- Asignar una responsabilidad de manera que la cohesión permanezca alta
+	- **Cohesión**: es una medida de la fuerza con que se relacionan las responsabilidades de un elemento
+	- Una clase con baja cohesión hace muchas cosas no relacionadas. Presentan los siguientes problemas:
+		- Difíciles de entender
+		- Difíciles de reutilizar
+		- Difíciles de mantener
+		- Delicadas, constantemente afectadas por los cambios
+
+>[!Example]
+>![](img/Pasted%20image%2020240602140913.png)
+>
+>![](img/Pasted%20image%2020240602140931.png)
+>
+>![](img/Pasted%20image%2020240602140952.png)
+>
+>![](img/Pasted%20image%2020240602141018.png)
+
+- **GRASP 5** (*Controlador*): 
+	- ¿Quién debe ser responsable de gestionar un evento de entrada al sistema?
+		- Asignar la responsabilidad de recibir o manejar un evento a una clase que representa las siguientes opciones:
+			- Representa el sistema global, un dispositivo o un subsistema
+			- Representa un escenario de caso de uso en el que tiene lugar el evento
+
+>[!Example]
+>![](img/Pasted%20image%2020240602142456.png)
+>
+>![](img/Pasted%20image%2020240602142523.png)
+>
+>![](img/Pasted%20image%2020240602142541.png)
+
+- **GRASP 6** (*Polimorfismo*): 
+	- ¿Cómo manejar las alternativas basadas en el tipo? ¿Cómo crear componentes software conectables?
+		- Cuando las alternativas o comportamientos relacionados varían según el tipo de objeto, se asignará la responsabilidad a los tipos para los que varía el comportamiento, empleando operaciones polimórficas
+		- Es decir, hay que intentar huir de la lógica condicional con respecto al tipo (`if`, `switch`, `instanceof`...)
+
+>[!Example]
+>![](img/Pasted%20image%2020240602142850.png)
+>
+>![](img/Pasted%20image%2020240602142909.png)
+>
+>![](img/Pasted%20image%2020240602142930.png)
+
+- **GRASP 7** (*Fabricación pura*):
+	- ¿Qué objetos deberían tener la responsabilidad cuando no se quiere violar los principios de alta cohesión y bajo acoplamiento pero, sin embargo, las soluciones que ofrece el experto no son adecuadas?
+		- Se asignará un conjunto de responsabilidades altamente cohesivo a una clase artificial, de conveniencia, que no representa un concepto del dominio del problema, sino que se ha inventado para permitir esa alta cohesión, bajo acoplamiento y la reutilización de código.
+
+>[!Example]
+>![](img/Pasted%20image%2020240602143208.png)
+
+- **GRASP 8** (*Indirección*): 
+	- ¿Dónde asignar una responsabilidad, para evitar el acoplamiento directo entre dos o más elementos?
+		- Se asignará la responsabilidad a un objeto intermedio que medie entre otros componentes o servicios de manera que no se acoplen directamente
+- **GRASP 9** (*Variaciones protegidas*): 
+	- ¿Cómo diseñar objetos, subsistemas y sistemas de manera que las variaciones o inestabilidades en estos elementos no tengan un impacto no deseable en otros elementos?
+		- Identifique los puntos de variaciones previstas o de inestabilidad; asigne responsabilidades para crear una interfaz estable alrededor de ellos.
+		- Es decir, identificar aquellos aspectos que varían y separarlos de lo que tiende a permanecer igual (encapsular y aislar el concepto que no varía)
+	- Mecanismos de Variaciones protegidas:
+		- Principio de abierto-cerrado
+		- Principio de sustitución de Liskov
+		- Principio de inversión de dependencias
+		- Principio de segregación de interfaces
+## Diseño modular
+
+- **Modularidad**: es la propiedad de un sistema que se ha descompuesto en un conjunto de módulos cohesivos y débilmente acoplados
+	- La modularidad se alcanza diseñando cada método con un único y claro objetivo, y agrupando un conjunto de aspectos relacionados en una clase
+
+## Acoplamiento, cohesión y el cambio
+
+==Pregunta típica de examen==
+
+### Acoplamiento
+
+![](img/Pasted%20image%2020240602141430.png)
+
+### Acoplamiento y cohesión (Beck)
+
+- **Cohesión**: mide el grado de conectividad entre las funciones y elementos de un mismo módulo
+	- Beck dice lo siguiente:
+		- Un elemento es cohesivo en la medida en que el elemento entero cambia cuando el sistema necesita hacer un cambio en una funcionalidad determinada
+		- Y lo relaciona también con el tamaño: un elemento puede perder cohesión si es demasiado grande o demasiado pequeño
+
+![](img/Pasted%20image%2020240602141535.png)
+
+![](img/Pasted%20image%2020240602141711.png)
+
+![](img/Pasted%20image%2020240602141723.png)
+
+### Suficiencia, completitud y ser primitivo
+
+- **Suficiente**: el componente representa suficientes características de una abstracción como para permitir una abstracción significativa con el componente
+	- *Si estamos diseñando una clase Conjunto, está muy bien tener una operación para eliminar un elemento dado, pero servirá de muy poco si no tenemos otra para añadir elementos al conjunto.*
+- **Completo**: la interfaz del componente representa todas las características de la abstracción
+	- *Diferente de la suficiencia: allí íbamos a mínimos; la completitud hace referencia a que ofrezca una interfaz lo suficientemente general como para que pueda ser utilizado por cualquier cliente. Es una cualidad subjetiva (y peligrosa).*
+- **Primitivo**: si todas las operaciones que realiza un componente pueden implementarse fácil y eficientemente, necesitando acceder a la representación interna del componente
+	- *Matiza lo anterior: la operación «añadir» del conjunto es primitiva; una para añadir varios elementos a la vez no (puede lograrse con la anterior, sin requerir acceso a la representación interna). De nuevo, es algo subjetivo.*
+
+### Cohesión
+
+![](img/Pasted%20image%2020240602142154.png)
+
+## ¿Qué es un buen diseño?
+
+- Un sistema está bien diseñado si:
+	- Es fácil de comprender
+	- Es fácil de cambiar
+
+>[!Tip]
+>¡Hay que diseñar para el cambio!
+>- Todo programa sufrirá cambios
+>- El objetivo es facilitarlos
+>- Un cambio será fácil de realizar si:
+>	- Sólo hay que hacerlo en un único sitio
+>	- Resulta fácil determinar dicho sitio
 
