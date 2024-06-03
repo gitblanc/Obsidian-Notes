@@ -534,4 +534,93 @@ Las versiones de clases y de objetos de este patrón tienen diferentes ventajas 
 	- Permite adaptar objetos existentes
 	- No es del tipo de objeto adaptado
 
-### Posibles usos
+## Command
+
+### Propósito
+
+Encapsula una petición en un objeto, permitiendo así parametrizar a los clientes con diferentes peticiones, hacer cola o llevar un registro de las peticiones, y poder deshacer las operaciones
+
+### También conocido como
+
+*Action* (Acción), *Transaction* (Transacción)
+
+### Motivación
+
+- Una biblioteca de clases para interfaces de usuario tendrá objetos como botones y elementos de menú responsables de realizar alguna operación en respuesta a una entrada del usuario
+- La biblioteca no puede implementar dichas operaciones directamente en el botón o el menú
+	- Sólo las aplicaciones que usan la biblioteca saben qué hay que hacer y a qué operaciones de otros objetos hay que llamar
+
+![](img/Pasted%20image%2020240603161258.png)
+
+- La clave de este patrón es una interfaz `Command` que define una operación `execute`
+- Son las subclases concretas quienes implementan la operación y especifican el receptor de la orden
+- Podemos configurar cada elemento del menú, `MenuItem`, con un objeto `Command`
+- Los elementos del menú no saben qué objeto concreto están usando (simplemente llaman a su método `execute`)
+
+![](img/Pasted%20image%2020240603161523.png)
+
+![](img/Pasted%20image%2020240603161537.png)
+
+### Aplicabilidad
+
+Úsese el patrón Command cuando se quiera:
+- Parametrizar objetos con una acción a realizar
+- Especificar, guardar y ejecutar peticiones en distintos momentos
+	- Es decir, que la acción a realizar y el objeto que la crea tengan ciclos de vida distintos (desacoplamiento temporal)
+- Permitir deshacer/repetir (undo/redo)
+	- En ese caso, `execute` deberá guardar el estado para poder revertir los efectos de ejecutar la operación
+	- Y hará falta una operación añadida, `unexecute`
+- Guardar todas las operaciones ejecutadas en un registro (log)
+	- Proporcionando un par de operaciones `store` y `load`
+- Usar transacciones
+
+### Estructura
+
+![](img/Pasted%20image%2020240603161915.png)
+
+![](img/Pasted%20image%2020240603161931.png)
+
+### Participantes
+
+- **Orden** (Command)
+	- Define una interfaz para ejecutar una operación
+- **OrdenConcreta** (ConcreteCommand, OpenCommand...)
+	- Define un enlace entre un objeto receptor y una acción
+	- Implementa `execute` llamando a las operaciones de dicho receptor
+- **Cliente** (Aplicación)
+	- Crea un objeto OrdenConcreta (ConcreteCommand) y establece su receptor
+- **Invocador** (ElementoDeMenu)
+	- Le pide a la orden que ejecute la petición
+- **Receptor** (Documento, Aplicacion)
+	- Quien realmente lleva a cabo la acción.
+
+### Colaboraciones
+
+- El cliente crea un objeto `ConcreteCommand` y especifica su receptor
+- Un objeto `Invoker` guarda el objeto `ConcreteCommand`
+- Aquél llama a la operación de este último
+	- Quien antes guarda el estado par luego poder deshacer la operación (si son operaciones que se pueden deshacer)
+- El objeto `ConcreteCommand` se vale de las operaciones de su receptor para llevar a cabo la acción
+
+![](img/Pasted%20image%2020240603162626.png)
+
+### Consecuencias
+
+- Desacopla el objeto que llama a la operación del que sabe cómo llevarla a cabo
+- Son ciudadanos de primera clase (objetos)
+- Se pueden ensamblar (Composite)
+- Resulta sencillo añadir nuevas acciones, al no tener que tocar las clases existentes
+
+### Implementación
+
+- ¿Cómo de inteligente debería ser?
+	- Desde un mero enlace entre el receptor y las operaciones a realizar en él hasta implementarlo todo él solo sin especificar un receptor
+- Diferentes niveles de deshacer/repetir
+	- A veces será necesario crear una copia del objeto antes de guardarlo en el historial
+		- En este caso, los Command serían también Prototype
+
+### Ejemplo de César
+
+![](img/Pasted%20image%2020240603163102.png)
+
+![](img/Pasted%20image%2020240603163117.png)
