@@ -212,7 +212,7 @@ Los lenguajes con comprobación dinámica de tipos son comúnmente denominados:
 # Tema 2. Paradigma Orientado a Objetos
 
  >[!Tip]
- >Te recomiendo echarle un ojo a [notas_de_c_sharp_🍉](notas_de_c_sharp_🍉.md) para mucho más detalle
+ >Te recomiendo echarle un ojo a [notas_de_c_sharp](notas_de_c_sharp.md) para mucho más detalle
 
 - Utiliza los **objetos**, unión de datos y métodos, como principal abstracción, definiendo programas como interacciones entre objetos
 - Se basa en la idea de modelar **objetos reales** mediante la codificación de objetos software
@@ -377,7 +377,7 @@ Las propiedades pueden ser de lectura o escritura.
 	- Función doble: `g(x)=x+x` -> `λx.x + x`
 
 >[!Tip]
->A partir de aquí echarle un ojo a [seminarios_tpp_🍎](seminarios_tpp_🍎.md)
+>A partir de aquí echarle un ojo a [seminarios_tpp](seminarios_tpp.md)
 
 ## Variables Libres y Ligadas
 
