@@ -1,3 +1,6 @@
+---
+title: Segundo Sprint 🐁
+---
 # 3 Octubre 2022 🌏
 ---
 - Vamos a utilizar diagramas de interacción

@@ -1,3 +1,6 @@
+---
+title: JPA 🚥
+---
 # 13 Octubre 2022 🏖
 ---
 - Ahora vamos a utilizar el modelo de dominio, que hace que el esfuerzo de implementación sea mucho más estable

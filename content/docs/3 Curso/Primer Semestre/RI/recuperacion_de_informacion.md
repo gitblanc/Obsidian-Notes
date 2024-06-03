@@ -1,3 +1,6 @@
+---
+title: Recuperación de Información 🌺
+---
 # 9 Noviembre 2022 🍄
 
 - Los buscadores ofrecen respuestas a preguntas. Explotan grafos de conocimiento para dar datos rápidamente

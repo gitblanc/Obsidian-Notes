@@ -1,15 +1,18 @@
+---
+title: Seminarios RI 👽
+---
 # 16 Sept 2022
 ---
-![](ej%20seminario%201.png)
+![](img/ej%20seminario%201.png)
 Corregido ✓
 
 ---
 Ampliación car workshop tarea:
-![](tarea%202%20seminario.png)
-![](ampliacion%20completa.png)
+![](img/tarea%202%20seminario.png)
+![](img/ampliacion%20completa.png)
 
-![](ej%20resuelto%202.jpeg)
----
+![](img/ej%20resuelto%202.jpeg)
+
 # 14 Octubre 2022 🗿
 
 ## Implementación de modelos de dominio UML  a Java
@@ -30,7 +33,7 @@ Ampliación car workshop tarea:
 ---
 # 11 Noviembre 2022 🧠
 
-![](./img/ej%201%2011%20nov.png|500)
+![](img/ej%201%2011%20nov.png|500)
 - **Vocabulario**: cada una de las palabras de todas las frases
 - **Estematización**: consiste reducir a la raíz
 - **Overstemming**: cuando aglutinas términos que no tienen nada que ver entre sí. (**univers**o y **univers**idad)
@@ -40,6 +43,6 @@ Ampliación car workshop tarea:
 Página para procesamiento de textos -> http://text-processing.com/demo/stem
 
 Fórmula idf-> inverse document frequency
-![](./img/formula%20idf.png|500)
+![](img/formula%20idf.png|500)
 
 ---

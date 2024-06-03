@@ -1,3 +1,6 @@
+---
+title: Tema 2, Transacciones JDBC🍹
+---
 # 22 Sept 2022 🧃
 ---
 - Usaremos **concurrencia** para usar a la vez la **memoria** y el **disco** (saldrán **bloqueos**)

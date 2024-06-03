@@ -1,3 +1,6 @@
+---
+title: Tema 1 JDBC🦩
+---
 # 15 Sept 2022 🐁
 ---
 - **JDBC** es una API Java, clases e interfaces, que permite a aplicaciones Java acceder a fuentes de datos mediante la ejecución de sentencias SQL. Es como un **middleware**.
@@ -8,7 +11,7 @@
 
 ## Arquitectura JDBC
 
-![](./img/jdbc%20arch.png|500)
+![](img/jdbc%20arch.png|500)
 
 ## Proceso de desarrollo (no en las diapos.)
 - **Instalar el driver**

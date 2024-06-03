@@ -1,3 +1,6 @@
+---
+title: Tema 3, Patrones y estándares de acceso a datos JDBC 🦠
+---
 # 29 Sept 2022 🔫
 ---
 - Si tengo código **enmarañado** (tangled, todo en un método) tengo una baja cohesión
@@ -49,9 +52,9 @@ Desventajas:
 ## Table Data Gateway
 - Es un DAO implementado uno para cada tabla
 
-![](./img/gateway.png)
+![](gateway.png)
 ![](./img/organizacion%20base%20de%20datos.png|700) 
-![](./img/organizacion%20base%20de%20datos%20png.png)
+![](organizacion%20base%20de%20datos%20png.png)
 
 ## Patrones para la capa de negocio
 

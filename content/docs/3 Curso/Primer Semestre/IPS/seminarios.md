@@ -1,3 +1,6 @@
+---
+title: Seminarios IPS 💡
+---
 # 16 Sept 2022 🪫
 ---
 HISTORIA 1 -> 5 dias

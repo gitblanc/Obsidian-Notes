@@ -1,3 +1,6 @@
+---
+title: Primer Sprint 🌋
+---
 # 19 Sept 2022 🏟
 ---
 - La técnica SCRUM es un proceso iterativo, de refinamiento, con historias cada vez más concretas.

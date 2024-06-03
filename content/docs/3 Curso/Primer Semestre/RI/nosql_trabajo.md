@@ -1,3 +1,6 @@
+---
+title: NoSQL trabajo 🌏
+---
 # 7 dic 2022 🎄
 
 ## Pasos

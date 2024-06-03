@@ -1,3 +1,6 @@
+---
+title: Apuntes para Examen Teoría IPS 🤩
+---
 - ==**Requisitos**==: necesidades del cliente o del usuario. Describen el qué de un producto software (qué debe hacer, qué debe ser y que limitaciones tiene). Hay varios tipos:
 	- **Funcionales**: servicios y funciones que tendrá el producto. Qué hace el sistema, como se debe comportar y qué no debe hacer
 	- **No funcionales**: restricciones de cómo se implementará el producto, seguridad, almacenamiento...
