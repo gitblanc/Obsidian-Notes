@@ -20,7 +20,7 @@ title: Primer Sprint 🌋
 - **Pliego de condiciones**: documento en el cual se establecen las condiciones o cláusulas de un contrato
 
 ## SCRUM
-![](./img/scrum%20model.png|500)
+![](img/scrum%20model.png|500)
 
 ## Historias de usuario
 - **Objetivo**: 
@@ -60,9 +60,9 @@ Tienen una serie de características -> acrónimo INVEST (independiente, negocia
 
 ---
 # 3 Octubre 2022 🌴
-![](./img/modelo%201.png|500)
-![](./img/modelo%202.png|500)
-![](./img/modelo%203.png|500)
+![](img/modelo%201.png|500)
+![](img/modelo%202.png|500)
+![](img/modelo%203.png|500)
 - La cuenta debe de estar tanto en recibo como en socio
 
 ---

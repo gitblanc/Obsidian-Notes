@@ -12,12 +12,12 @@ title: Introducción 🧭
 -  **Metodología**: Conjunto de prácticas, técnicas, procedimientos y reglas usados por quienes trabajan en una determinada disciplina (PMBOK).
 
 ### Procesos genéricos
-![](./img/procesos%20genericos.png|500)
+![](img/procesos%20genericos.png|500)
 
 - **Ciclo de vida**: cómo se ordenan y coordinan los diferentes procesos
 
 ### Principales procesos
-![](./img/principales%20procesos.png|500)
+![](img/principales%20procesos.png|500)
 
 ### Metodologías típicas
 - Métrica Versión 3
@@ -27,10 +27,10 @@ title: Introducción 🧭
 	- XP
 	- **Scrum**
 
-![](./img/MV3.png|500)
+![](img/MV3.png|500)
 
-![](./img/SCRUM.png|500)
+![](img/SCRUM.png|500)
 
-![](./img/intro%20resumen.png|500)
+![](img/intro%20resumen.png|500)
 
 ---

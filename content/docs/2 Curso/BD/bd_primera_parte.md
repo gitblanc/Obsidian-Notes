@@ -32,20 +32,20 @@ title: BD Primera parte 💿
 	- **Físico:** cómo se guardan los datos
 	- **Conceptual:** qué es lo que se guarda
 	- **Visión:** muestra al usuario una vista personalizada del nivel conceptual. Se le enseña al usuario un subconjunto de las estructuras conceptuales.
- ![](./img/Niveles%20de%20abstraccion.png%20|%20400)
+ ![](img/Niveles%20de%20abstraccion.png%20|%20400)
 
 ---
 # 7 Febrero 2022 🧞‍♂️
 ---
 - **CLAVE primaria (priomary key):** no se puede repetir el código definido como clave primaria.
 - **CLAVE externa (foreign key):** hace referencia a cuando una clave aparece en otra tabla. Tiene una restricción llamada restricción de integridad diferencial. Comprueba que no estés haciendo referencias que no existen. Por ejemplo: un alumno que no exista en la tabla de matriculados no puede ser añadido a la asignatura TPP. Sólo se aceptan valores **existentes**.
-![](./img/matriculados.png|400)
+![](img/matriculados.png|400)
 - **Modelo de datos:** herramienta para definir un esquema (conceptual, físico o de visión).
 - **Modelo relacional/diseño conceptual:** define el esquema de la base de datos que representa fielmente el universo del discurso.
 - **Modelo entidad relación:** no tiene tablas.
-![](./img/mentidadrelacion.png|400)
+![](img/mentidadrelacion.png|400)
 - **Modelo orientado a objetos:**
-![](./img/orientado%20a%20objetos.png|400)
+![](img/orientado%20a%20objetos.png|400)
 
 NOTA: esquema != instancia (datos existentes en un determinado momento)
 
@@ -55,7 +55,7 @@ NOTA: esquema != instancia (datos existentes en un determinado momento)
 ---
 # 14 Febrero 2022 💕
 ---
-![](./img/14%20feb.png%20|400)
+![](img/14%20feb.png%20|400)
 
 ### Restricciones
 - **Cardinalidad(máxima):** n° de elementos con los que puedes conectar. (Por ejemplo: el número de asignaturas en las que está matriculado un alumno) Se representa con un 1 (->) o n (-).
@@ -79,40 +79,40 @@ NOTA: esquema != instancia (datos existentes en un determinado momento)
 # 21 Febrero 2022 🛸
 ---
 - **Superclave:** conjunto de elementos que no se pueden repetir. La unión de todos los atributos siempre es una superclave.
-![](./img/superclave.png%20|400)
+![](img/superclave.png%20|400)
 - **Clave candidato:** superclave mínima, no se puede quitar ningún atributo, todos son esenciales.
 - **Clave primaria:** una de las claves candidato. La principal para identificar el conjunto. Escogida por el diseñador. Se suelen preferir números a cadenas, ya que los números son más rápidos de comparar. Mantiene la integridad de entidad (no puede haber elementos repetidos).
 - **Atributo natural:** algo que ya tienes implícito.
 - **Clave externa:** clave primaria de una tabla que aparece en otra tabla. Mantiene la integridad referencial.
 - **Dependencia por existencia:** la existencia de una entidad depende de la de otra con la que está relacionada.
-![](./img/dependencia.png|400)
+![](img/dependencia.png|400)
 - **Conjunto de entidades fuerte:** aquel que tiene suficientes atributos propios para hacer de clave primaria.
 - **Discriminador:** miniclave para el conjunto de entidades que dependen de otro conjunto. Lo tienen los conjuntos de entidades débil.
 - **Conjunto de entidades débil (CED):** conjunto que no se puede repetir dentro del mismo conjunto. En el ejemplo de arriba un paso a nivel existe en una vía. 
 - **Clave CE débil:** clave de la entidad de la que dependen más el discriminador.
 - **Relación bitácora:** apuntan todo lo relacionado.
-![](./img/claves.png|500)
+![](img/claves.png|500)
 - **Clave subrogado:** creadas aleatoriamente, que no tienen significado.
 - **Generalización:** partir de algo concreto que ya existe y generalizarlo.
-![](./img/generalizacion.png|400)
-![](./img/generalizacionespecializacion.png|400)
+![](img/generalizacion.png|400)
+![](img/generalizacionespecializacion.png|400)
 - **Solapamiento:** una cuenta de ahorro es a su vez una cuenta corriente.
 ---
 # 28 Febrero 2022 🗿
 ---
 - **Agregación:** la relación ternaria son siempre 3 patas. Si existe algún caso en el que son menos, es una agregación.
-![](./img/agregacion.png|400)
+![](img/agregacion.png|400)
 - **Relaciones reflexivas:** las dos entidades que asocian son del mismo tipo.
-![](./img/reflexivas.png|400)
+![](img/reflexivas.png|400)
 - **Relaciones ternarias:** tres partes.
-![](./img/ternarias.png|400)
+![](img/ternarias.png|400)
 - **Atributo derivado:** aquel cuyo valor se calcula a través de una fórmula.
 ---
 # 7 Marzo 2022 🏙
 ---
 - **Relación de exclusión:** la existencia de elementos en un conjunto excluye la existencia en el otro.
 - **Restricción de subconjunto:** un grupo ha de ser el subconjunto de otro.
-![](./img/exclusion.png|400)
+![](img/exclusion.png|400)
 
 ### Desventajas del sistema de procesamiento de ficheros (COBOL)
 - **Redundancia:** repetición innecesaria de datos.
@@ -128,7 +128,7 @@ NOTA: esquema != instancia (datos existentes en un determinado momento)
 - Rollback -> deshacer los cambios.
 - **Front-end** -> gestor de consultas.
 - **Back-end** -> procesador de almacenamiento.
-![](./img/estructura%20sql.png|400)
+![](img/estructura%20sql.png|400)
 - **Índices:** estructuras que permiten acelerar las búsquedas sobre los datos (es un optimizador).
 - **Diccionario de datos:** donde se guardan los metadatos.
 - **Propiedades ACID:**
@@ -143,7 +143,7 @@ NOTA: esquema != instancia (datos existentes en un determinado momento)
 ---
 # 21 Marzo 2022 🍓 
 ---
- ![](./img/database%20system%20internals.png%20|300)
+ ![](img/database%20system%20internals.png%20|300)
 - Para poder usar una biblioteca necesitamos una API.
 
 #### _Técnicas de despliegue de servidores_:

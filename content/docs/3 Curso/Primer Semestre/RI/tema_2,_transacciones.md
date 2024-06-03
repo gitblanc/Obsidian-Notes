@@ -30,14 +30,14 @@ title: Tema 2, Transacciones JDBC🍹
 - El planificador decide el plan de ejecución (planificación)
 - Comprobar si una planificación es serializable -> se crea un **grafo de precedencia**
 - Una planificación es **serializable** si no hay ciclos en el grafo de precedencia
-![](./img/ej%201%20teoria.png|500)
+![](img/ej%201%20teoria.png|500)
 ## Conflictos
 - **Lecturas sucias**: conflicto de lectura escritura
 - **Lecturas no repetibles**: conflicto de dos lecturas y los resultados son distintos cuando deberían ser el mismo
 - **Lecturas fantasmas**
 - **Lecturas inconsistentes**
 - **Pérdida parcial de la actualización**
-![](./img/ej%202%20teoria.png|500)
+![](img/ej%202%20teoria.png|500)
 
 ## ¿Cómo gestionar los conflictos?
 ### Enfoque pesimiesta

@@ -24,4 +24,4 @@ Monolito vs microservicios:
 
 Monolito distribuido vs microservicios:
 
-![](./img/Pasted%20image%2020230215123004.png|400)
+![](img/Pasted%20image%2020230215123004.png|400)

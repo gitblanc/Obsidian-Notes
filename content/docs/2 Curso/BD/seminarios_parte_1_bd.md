@@ -4,11 +4,11 @@ title: Seminarios parte 1 BD☮️
 
 # 18 Febrero 2022, Seminario 2 ⛺️
 ---
-![](./img/seminario%202.png%20|400)
+![](img/seminario%202.png%20|400)
 - **Dominio atómico:** sólo se puede tomar un valor indivisible
 - **Entidad:** es algo principal del universo del discurso, tenemos atributos descriptivos para ella.
-![](./img/jugadorentrenador.png|500)
-![](./img/jugadorentrenadortabla.png|400)
+![](img/jugadorentrenador.png|500)
+![](img/jugadorentrenadortabla.png|400)
 
 ---
 # 4 Marzo 2022 , Seminario 3🏵

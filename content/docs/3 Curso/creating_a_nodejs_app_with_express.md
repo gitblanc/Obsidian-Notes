@@ -840,7 +840,7 @@ node_modules
 	6. On image copy the url of the repository where all was store (ecr)
 		1. Go back to ecr
 		2. Copy the image uri of your latest repository
-		3. ![](./img/Pasted%20image%2020230304140349.png)
+		3. ![](img/Pasted%20image%2020230304140349.png)
 		4. Keep default soft Limit (128)
 		5. Put port 3000 on port maps with protocol tcp
 		6. Leave blank the rest and create

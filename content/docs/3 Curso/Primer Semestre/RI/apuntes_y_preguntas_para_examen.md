@@ -797,7 +797,7 @@ Difieren en:
 7. Problemas de una transacción concurrente
 ==A mayor concurrencia, mayor riesgo de que se produzcan efectos no deseados==
 8. Dado el siguiente esquema, completarlo:
-![](./img/Pasted%20image%2020230105123748.png|500)
+![](img/Pasted%20image%2020230105123748.png|500)
 9. En el modo de aislamiento Read-Uncommitted puede producirse
 - ==Lectura sucia, lectura fantasma y lectura no repetible==
 10. Ventajas de usar Statement

@@ -43,19 +43,19 @@ NOTA: En todas las operaciones se eliminan los elementos duplicados.
 - A veces trabajamos con casos particulares llamados **restricciones específicas**.
 - Los dominios, las claves (super, candidato), claves externas son restricciones específicas. 
 - Las **restricciones específicas** se usan porque suele haber una forma más eficiente de comprobarlas.
-![](./img/especificas.png||600)
-![](./img/restricciones1.png||500)
-![](./img/restricciones%202.png||500)
+![](img/especificas.png||600)
+![](img/restricciones1.png||500)
+![](img/restricciones%202.png||500)
 
 ---
 ## Dominios
 - Tipos de datos base.
-![](./img/dominios%201.png||500)
-![](./img/dominios%202.png||500)
+![](img/dominios%201.png||500)
+![](img/dominios%202.png||500)
 
 ---
 ## Restricciones de integridad referencial
-![](./img/referencial.png||500)
+![](img/referencial.png||500)
 - Los problemas surgen al borrar la entidad r1.
 
 **Alternativas para mantener la integridad referencial** (Cosas que puedo hacer en la r2 cuando se borra la tabla r1):
@@ -65,11 +65,11 @@ NOTA: En todas las operaciones se eliminan los elementos duplicados.
 - Poner como default -> **SET DEFAULT**
 ---
 ## Asertos
-![](./img/2%20CURSO/BD/img/asertos.png||500)
+![](img/2%20CURSO/BD/img/asertos.png||500)
 
 ---
 ## Dependencias funcionales
-![](./img/funcionales.png||500)
+![](img/funcionales.png||500)
 - Como deducir dependencias
 	- Ir aplicando la definición
 	- Usando reglas de inferencia (**Reglas de Armstrong**)
@@ -86,20 +86,20 @@ NOTA: En todas las operaciones se eliminan los elementos duplicados.
 ---
 # 25 Abril 2022 🍓
 ---
-![](./img/cierre.png||600)
+![](img/cierre.png||600)
 - **Cierre de un conjunto de atributos**: dado un conjutno de atributos, qué otros atributos puedo alcanzar.
-![](./img/mas%20cierre.png||500)
+![](img/mas%20cierre.png||500)
 
 - **Recubrimiento canónico:** conjunto equivalente más pequeño posible.
 - **Atributo ajeno:** aquel que es trivial. Ej: F={AB -> CD, A -> B, C->D}, sobran D y B ya que A -> B y C->D.
 - **Normalizar:** eliminar la redundancia.
-![](./img/normalizacion.png||500)
+![](img/normalizacion.png||500)
 - **Decomposición de producto**, propiedades:
 	- **Sin pérdida de información**: los atributos comunes han de ser clave o bien de R1 o R2.
-	![](./img/spdi.png||500)
+	![](img/spdi.png||500)
 	- **Conservación de dependencias**: hace referencia a un asunto de rendimiento, a la hora de comprobar el cumplimiento de las dependencias.
-	![](./img/dpen.png||500)
+	![](img/dpen.png||500)
 - **BOYCE-CODD**:
-![](./img/boyce.png||500)
+![](img/boyce.png||500)
 - **3NF** (tercera forma normal): incluye los puntos anteriores y además 
 	3.todo Y es primo

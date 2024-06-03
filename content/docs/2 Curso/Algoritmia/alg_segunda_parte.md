@@ -6,7 +6,7 @@ title: ALG segunda parte🧼
 ## Programación dinámica
 - Tenemos un array donde guardamos resultados intermedios para calcular el resultado final.
 - Es un método iterativo, cuyo origen es una función recursiva. Sustituimos las llamadas recursiva por accesos a las posiciones del array.
-![](./img/funcion%20recursiva.png|300)
+![](img/funcion%20recursiva.png|300)
 - Se repiten operaciones, por tanto se guardan las calculadas en un array para no recalcularlas varias veces.
 ---
 ## Problema del cambio
@@ -177,16 +177,16 @@ Diferencias de poda con backtracking:
 - Desarrollo de los nodos en anchura.
 - Aplicamos heuristico para seleccionar cuál de ellos vamos a desarrollar.
 
-![](./img/ramificacion.png|500)
+![](img/ramificacion.png|500)
 
-![](./img/ramifica%20asignacion.png|500)
+![](img/ramifica%20asignacion.png|500)
 MALA FORMA, sirve para hallar una solución. Para hallar la solución óptima es malo.
 
-![](./img/ramifica%20asignacion%20good.png|500)
+![](img/ramifica%20asignacion%20good.png|500)
 
 ---
 # 19 Abril 2022 ⏰
 ---
 - El heurístico de ramificación permite saber los nodos que llevan a la solución final
 - El heurístico de poda permite ir eliminando aquellos nodos que superen la cota.
-![](./img/nreinas.png||500)
+![](img/nreinas.png||500)

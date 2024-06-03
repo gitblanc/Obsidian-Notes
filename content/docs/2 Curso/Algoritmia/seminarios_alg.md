@@ -37,7 +37,7 @@ title: Seminarios ALG 🛼
  ## Forma voraz
  Depende mucho del heurístico.
 # EJ 1
- ![](./img/2%20CURSO/Algoritmia/img/EJ%201.png)
+ ![](img/2%20CURSO/Algoritmia/img/EJ%201.png)
  - SOL: Es la 2 
 
 # Ej 2

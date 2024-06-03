@@ -184,7 +184,7 @@ NOTA: los procesos envían mensajes a los buzones y los reciben de buzones.
 	- Compartición de memoria por varios programas
 	- Ejecución de programas que no caben completos
 	- Gestión eficiente del espacio libre
-	![](./img/jerarquia%20de%20memoria.png|500)
+	![](img/jerarquia%20de%20memoria.png|500)
 	---
 	- En ejecución el programa debe acceder a direcciones físicas de memoria principal.
 	- En sistemas monoprogramación dir. física = dir. lógica

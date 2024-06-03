@@ -11,7 +11,7 @@ title: Recuperación de Información 🌺
 - **Consulta**: expresión que una persona construye para formular su necesidad de información
 
 ## Modelo conceptual de Recuperación de información
-![](./img/modelo%20conceptual.png|300)
+![](img/modelo%20conceptual.png|300)
 
 **RI y SGBD** difieren en:
 - los elementos que almacenan
