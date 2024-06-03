@@ -307,3 +307,231 @@ Usar el patrón Composite cuando:
 	- Si es significativo, hay que diseñar las interfaces de acceso y gestión de los hijos cuidadosamente
 
 ## State
+
+### Propósito
+
+Permite que un objeto modifique su comportamiento cada vez que cambie su estado interno. Parecerá que cambia la clase del objeto
+
+### También conocido como
+
+*Objects for States* (Estados como Objetos)
+
+### Motivación
+
+- Una conexión de red es representada en una implementación TCP como TCPConnection
+- La conexión puede estar en uno de los siguientes estados:
+	- Abierta
+	- Escuchando
+	- Cerrada
+
+![](img/Pasted%20image%2020240603144016.png)
+
+### Aplicabilidad
+
+Úsese el patrón State en cualquiera de los siguientes casos:
+- El comportamiento de un objeto depende de su estado, y éste puede cambiar en tiempo de ejecución
+- Las operaciones tienen largas sentencias condicionales anidadas que tratan con los estados
+	- Siendo el estado normalmente una constante
+	- Muy frecuentemente, son varias las operaciones en las que se repite esa misma estructura condicional
+	- Este patrón mueve cada rama de la lógica condicional a una clase aparte
+		- Lo que nos permite tratar al estado del objeto como un objeto de pleno derecho, que puede variar independientemente de otros objetos
+
+### Estructura
+
+![](img/Pasted%20image%2020240603144412.png)
+
+![](img/Pasted%20image%2020240603144426.png)
+
+### Participantes
+
+- **Contexto** (ConexionTCP)
+	- Define la interfaz de interés para los clientes
+	- Mantiene una instancia de una subclase de EstadoConcreto que define el estado actual
+- **Estado** (EstadoTCP)
+	- Define una interfaz para encapsular el comportamiento asociado con el estado del Contexto
+- **subclases del EstadoConcreto** (TCPEstablecida, TCPEscuchando, TCPCerrada)
+	- Cada subclase implementa un comportamiento asociado con un estado del Contexto
+
+### Colaboraciones
+
+- El Contexto delega las operaciones dependientes del estado al objeto que representa el estado actual
+- El contexto podría pasarse a sí mismo como parámetro
+	- Para que el estado acceda al contexto si es necesario
+- una vez que el Contexto es inicializado en un determinado estado, los clientes no necesitan tratar directamente con los estados
+- O bien el Contexto o bien los EstadosConcretos deciden cuándo se pasa de un estado a otro
+
+### Consecuencias
+
+- Localiza el comportamiento específico del estado y lo aísla en un objeto
+	- Se pueden añadir nuevos estados y transiciones fácilmente simplemente definiendo nuevas subclases de `State`
+- Hace explícitas las transiciones entre estados
+
+### Implementación
+
+- ¿Quién define las transiciones entre estados?
+	- Si el criterio es siempre el mismo, puede ser el propio contexto
+	- Normalmente es más flexible y apropiado que sean las subclases de los estados
+		- Esto requiere añadir una operación al contexto para cambiar su estado de forma explícita
+		- **Ventaja**: flexibilidad
+		- **Inconveniente**: dependencias de implementación (acoplamiento) entre las subclases que representan los estados concretos
+- Uso de la herencia dinámica
+	- Este patrón no sería necesario en lenguajes que permiten cambiar la clase de un objeto en tiempo de ejecución o que proveen mecanismos para delegar peticiones automáticamente en otros objetos
+- Acciones de entrada/salida
+	- Cuando hay que realizar alguna acción al entrar o salir de un estado puede venir bien añadir un método `entry`, `exit` o ambos a la interfaz `State`
+
+### Posibles usos
+
+![](img/Pasted%20image%2020240603145625.png)
+
+## State vs Strategy
+
+- **Strategy**: es seleccionada por un agente externo o por el contexto. Una estrategia tiende a tener un método único de "inicio" que llama a todos los demás. Hay mucha cohesión entre los métodos de un Strategy
+- **State**: un State generalmente selecciona el siguiente estado de su contexto. Un estado tiende a tener muchos métodos no relacionados, por lo que hay poca cohesión entre los métodos de un State
+	- Los métodos del State suelen llamarse igual y tener la misma signatura que las que tenían dicho subconjunto de operaciones en el contexto
+
+## Template Method
+
+### Propósito
+
+Define en una operación el esqueleto de un algoritmo, delegando en las subclases algunos de sus pasos. Permite que las subclases redefinan ciertos pasos de un algoritmo sin cambiar su estructura
+
+### Motivación
+
+- Sea un framework de aplicaciones que proporciona unas clases `Application` y `Document`
+	- La primera es la responsable de abrir los documentos almacenados en ficheros
+	- La segunda representa la información en sí del documento, una vez que ya ha sido leído del fichero
+- Las aplicaciones construidas con el framework redefinirán ambas clases para adaptarlas a sus necesidades concretas
+- ¿Cómo implementar, de manera genérica, el método `openDocuiment` de la clase `Application`?
+
+![](img/Pasted%20image%2020240603151045.png)
+
+- El método abstracto anterior define todos los pasos necesarios para abrir un documento
+	- Comprueba si se puede abrir, crea un objeto `Document`, lo añade al conjunto de documentos y finalmente lo lee
+	- Lo hace en términos de operaciones abstractas
+
+![](img/Pasted%20image%2020240603151215.png)
+
+### Aplicabilidad
+
+El patrón Template Method debería usarse:
+- Para implementar las partes de un algoritmo que no cambian y dejar que sean las subclases quienes implementen el comportamiento que puede variar
+- Como motivo de factorizar código, cuando movemos cierto código a una clase base común para evitar código duplicado
+- Para controlar el modo en que las subclases extienden la clase base
+	- Dejando que sea sólo a través de unos métodos plantilla dados
+
+### Estructura
+
+![](img/Pasted%20image%2020240603151421.png)
+
+![](img/Pasted%20image%2020240603151434.png)
+
+### Participantes
+
+- **ClaseAbstracta** (Application)
+	- Define las operaciones primitivas abstractas que redefinirán las subclases
+	- Implementa un método de plantilla con el esqueleto del algoritmo
+- **ClaseConcreta** (MiApplication)
+	- Implementa las operaciones primitivas para realizar los pasos del algoritmo específicos de las subclases
+
+### Consecuencias
+
+- Los métodos de plantilla son una técnica fundamental para la reutilización de código
+- Inversión de control
+	- Es la clase padre quien llama a operaciones en los hijos
+- Los métodos de plantilla pueden llamar a los siguientes tipos de operaciones:
+	- Operaciones concretas de otras clases
+	- Operaciones concretas en la propia clase base abstracta
+		- Proporcionan comportamiento predeterminado que las subclases pueden redefinir si es necesario
+	- Operaciones primitivas (es decir, abstractas)
+		- Que las subclases deberán implementar
+	- Métodos de fabricación
+	- Operaciones de enganche (*hook*)
+		- Normalmente protegidas, tienen una implementación vacía en la clase abstracta, que las subclases podrán redefinir. Son como operaciones opcionales
+
+Operaciones de enganche:
+
+![](img/Pasted%20image%2020240603152121.png)
+
+![](img/Pasted%20image%2020240603152142.png)
+
+### Implementación
+
+- Hacer las operaciones primitivas llamadas por el método de plantilla `protected`
+	- Y, a aquéllas que deban ser obligatoriamente redefinidas, abstractas
+- Minimizar el número de operaciones primitivas abstractas
+- Convenios de nombrado
+	- Es conveniente identificar las operaciones que deben ser redefinidas anteponiendo un prefijo al nombre (ej: `Do-`)
+
+### Patrones relacionados
+
+- *Factory Method*
+	- Muchas veces los métodos de fabricación son llamados desde métodos plantilla
+- *Strategy*
+	- El *Template Method* usa la herencia para modificar parte de un algoritmo; *Strategy* usa delegación para cambiar el algoritmo entero
+
+## Adapter
+
+### Propósito
+
+Convierte la interfaz de una clase en otra interfaz que es la que esperan los clientes. Permite que cooperen clases que de otra forma no podrían tener interfaces compatibles
+
+### También conocido como
+
+*Wrapper* (Envoltorio)
+
+### Motivación
+
+- Supongamos que estamos haciendo un editor de dibujo
+	- La abstracción fundamental es el objeto gráfico (`Shape`), que puede dibujarse a sí mismo
+	- Define una subclase por cada tipo de objeto gráfico: `LineShape`, `PolygonShape`...
+- Supongamos que, para implementar una subclase `TextShape` (bastante más compleja que las anteriores) queremos echar mano de una clase `TextView` que nos proporciona la biblioteca gráfica
+- La interfaz de `TextView` no tendrá nada que ver con la de `Shape`
+	- Le faltarán algunas operaciones, otras las tendrá con otro nombre, o bien recibirán parámetros de otro tipo...
+- Crearemos una clase `TextShape` que adapte la interfaz `TextView` a la de `Shape`
+- Dos opciones:
+	- Heredando la interfaz de `Shape` y la implementación de `TextView` (versión de dos clases)
+	- Mediante composición de objetos, haciendo que `TextShape` delegue en una instancia de `TextView` (versión de objetos)
+
+![](img/Pasted%20image%2020240603153138.png)
+
+### Aplicabilidad
+
+Debería usarse el patrón Adapter cuando:
+- Se quiere usar una clase existente y su interfaz no concuerda con la que necesita
+- Se quiere crear una clase reutilizable que coopere con clases con las que no está relacionada (que no tendrán interfaces compatibles)
+- (Sólo la versión de objetos) Necesitamos usar varias subclases existentes pero sin tener que adaptar su interfaz creando una nueva subclase de cada una
+
+### Estructura
+
+![](img/Pasted%20image%2020240603153436.png)
+
+![](img/Pasted%20image%2020240603153455.png)
+
+![](img/Pasted%20image%2020240603153527.png)
+
+![](img/Pasted%20image%2020240603153545.png)
+
+### Participantes
+
+- **Objetivo** (Forma)
+	- Define la interfaz específica del dominio que usa el Cliente
+- **Cliente** (EditorDeDibujo)
+	- Colabora con objetos que se ajustan a la interfaz Objetivo
+- **Adaptable** (VistaTexto)
+	- Define una interfaz existente que necesita ser adaptada
+- **Adaptador** (FormaTexto)
+	- Adapta la interfaz de Adaptable a la interfaz Objetivo
+
+### Consecuencias
+
+Las versiones de clases y de objetos de este patrón tienen diferentes ventajas e inconvenientes:
+- **Un adaptador de clases**:
+	- Adapta una clase concreta a una interfaz (no se puede usar cuando queremos adaptar una clase y todas sus subclases)
+	- Permite que el adaptador redefina parte del comportamiento de la clase adaptada (es una subclase de aquélla)
+	- Introduce un solo objeto adicional, sin indirección
+- **Un adaptador de objetos**
+	- Permite que un único adaptador funcione no sólo con un objeto de la clase adaptada, sino de cualquiera de sus subclases
+	- Permite adaptar objetos existentes
+	- No es del tipo de objeto adaptado
+
+### Posibles usos
