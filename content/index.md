@@ -63,3 +63,4 @@ Aquí te dejo una lista de repositorios que pueden serte de ayuda o inspiración
 >¡Espero que estos apuntes te sean de ayuda como lo son para mí, y te deseo mucha suerte en la carrera!
 
 
+<script data-goatcounter="https://gitblanc-obsidian-notes.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
