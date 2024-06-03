@@ -1,5 +1,5 @@
 ---
-title: Seminarios ALG 🛼
+title: Seminarios ALG ✏️
 ---
 # 25 Marzo 2022 🎱
 ---

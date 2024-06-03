@@ -8,14 +8,17 @@
 - Pongo un emoji random cada día (no tienen significado)
 - ¡Puedes clonártelos, forkearlos o mejorarlos, pero **no venderlos**!
 
-![](img/Pasted%20image%2020240603230943.png)
+![](/content/img/Pasted%20image%2020240603230943.png)
+
+> [!Important]
+> Te animo a que añadas comentarios y preguntes dudas en los documentos que haya algo que no entiendas o veas que es incorrecto, así ayudas a los que vengan después de ti y a tus propios compañeros (un poco la filosofía _open source_, podría decirse)
 
 # ¡Dóname!
 
 - Si me pagas un pincho para mis descansos en la Universidad que sepas que te amo ❤
 - En la parte inferior derecha encontrarás un botón que te permite enviarme la cantidad de dinero que quieras (que irá destinado a un pincho en el San Gregorio, ==promesa==)
 
-![boton](img/Pasted%20image%2020240603231122.png)
+![boton](/content/img/Pasted%20image%2020240603231122.png)
 
 # Otros proyectos de interés
 
