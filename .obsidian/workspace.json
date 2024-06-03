@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "docs/3_curso/1_semestre/ds/apuntes_para_examen_teoría_👣.md",
+                "file": "docs/3_curso/1_semestre/ds/apuntes_patrones_🔋.md",
                 "mode": "source",
                 "source": false
               }
@@ -96,7 +96,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/3_curso/1_semestre/ds/apuntes_para_examen_teoría_👣.md",
+                "file": "docs/3_curso/1_semestre/ds/apuntes_patrones_🔋.md",
                 "collapseAll": false,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -137,19 +137,20 @@
   },
   "active": "8e2ff4418c2f72c8",
   "lastOpenFiles": [
-    "docs/3_curso/1_semestre/ds/img/Pasted image 20240602175419.png",
-    "docs/3_curso/1_semestre/ds/img/Pasted image 20240602175338.png",
-    "docs/3_curso/1_semestre/ds/img/Pasted image 20240602175325.png",
-    "docs/3_curso/1_semestre/ds/img/Pasted image 20240602175311.png",
-    "docs/3_curso/1_semestre/ds/img/Pasted image 20240602175226.png",
-    "docs/3_curso/1_semestre/ds/img/Pasted image 20240602143208.png",
-    "docs/3_curso/1_semestre/ds/img/Pasted image 20240602142930.png",
-    "docs/3_curso/1_semestre/ds/img/Pasted image 20240602142909.png",
-    "docs/3_curso/1_semestre/ds/img/Pasted image 20240602142850.png",
-    "docs/3_curso/1_semestre/ds/img/Pasted image 20240602142541.png",
-    "docs/3_curso/1_semestre/ds/img/Pasted image 20240602142523.png",
-    "docs/3_curso/1_semestre/ds/notas_antiguas/apuntes_para_examen_🌹.md",
+    "docs/3_curso/1_semestre/ds/img/Pasted image 20240603132753.png",
+    "docs/3_curso/1_semestre/ds/img/Pasted image 20240603132735.png",
+    "docs/3_curso/1_semestre/ds/img/Pasted image 20240603132655.png",
+    "docs/3_curso/1_semestre/ds/img/Pasted image 20240603132441.png",
+    "docs/3_curso/1_semestre/ds/img/Pasted image 20240603132417.png",
     "docs/3_curso/1_semestre/ds/apuntes_para_examen_teoría_👣.md",
+    "docs/3_curso/1_semestre/ds/apuntes_patrones_🔋.md",
+    "docs/3_curso/1_semestre/ds/img/Pasted image 20240603131608.png",
+    "docs/3_curso/1_semestre/ds/notas_antiguas/apuntes_para_examen_🌹.md",
+    "docs/3_curso/1_semestre/ds/img/Pasted image 20240603130255.png",
+    "docs/3_curso/1_semestre/ds/img/Pasted image 20240603125958.png",
+    "docs/3_curso/1_semestre/ds/img/Pasted image 20240603125907.png",
+    "docs/3_curso/1_semestre/ds/img/Pasted image 20240603125322.png",
+    "docs/3_curso/1_semestre/ds/img/Pasted image 20240603124302.png",
     "docs/3_curso/1_semestre/ds/notas_antiguas",
     "docs/2_curso/tpp/apuntes_examen_teoria_tpp_👅.md",
     "docs/2_curso/tpp/notas_de_teoría_tpp_🗿.md",
@@ -176,7 +177,6 @@
     "docs/3_curso/2_semestre/sdi/sdi_seminarios_🧪.md",
     "docs/3_curso/2_semestre/sdi/laboratorios_🌠.md",
     "docs/3_curso/2_semestre/sdi/img",
-    "docs/3_curso/2_semestre/sdi/examen_teoría_spring_🩳.md",
     "docs/3_curso/2_semestre/ssi/img",
     "docs/3_curso/1_semestre/ri/recuperación_de_información_☄️",
     "docs/3_curso/1_semestre/ri/nosql_🐝",

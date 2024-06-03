@@ -88,6 +88,8 @@ Se obtiene como resultado:
 
 ### Síntomas de programación estructurada encubierta
 
+==Pregunta típica de examen==
+
 - Métodos largos
 	- Más de 10 líneas (no se está delegando)
 - Abundancia de llamadas a métodos del mismo objeto
@@ -332,7 +334,7 @@ Posible solución:
 
 ![](img/Pasted%20image%2020240602124920.png)
 
-![](Pasted%20image%2020240602124935.png)
+![](img/Pasted%20image%2020240602124935.png)
 
 ## Tabla Interfaz vs Clase abstracta
 
