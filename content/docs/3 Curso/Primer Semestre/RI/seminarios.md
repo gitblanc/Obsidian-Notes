@@ -44,5 +44,3 @@ Página para procesamiento de textos -> http://text-processing.com/demo/stem
 
 Fórmula idf-> inverse document frequency
 ![](img/formula%20idf.png|500)
-
----

@@ -14,7 +14,7 @@ title: Apuntes para Examen Teoría DS 👣
 
 ## Representación en UML
 
-![](Pasted%20image%2020240602110840.png)
+![](img/Pasted%20image%2020240602110840.png)
 
 ## Resultado del diseño OO
 
@@ -23,7 +23,7 @@ Se obtiene como resultado:
 - Una descripción del comportamiento público de esos objetos
 - Cómo se comunican esos objetos entre sí
 
-![](Pasted%20image%2020240602111004.png)
+![](img/Pasted%20image%2020240602111004.png)
 
 ## Orientación a objetos
 
@@ -43,7 +43,7 @@ Se obtiene como resultado:
 - Cuando se desea que un objeto realice una operación se le envía un mensaje
 - Para realizarla, podrá enviar a su vez mensajes a otros objetos
 
-![](Pasted%20image%2020240602111618.png)
+![](img/Pasted%20image%2020240602111618.png)
 
 ## Interfaz de un objeto
 
@@ -69,7 +69,7 @@ Se obtiene como resultado:
 >[!Example]
 >El polimorfismo nos permite tener una lista de figuras y poder dibujarlas todas sin conocerlas (sin saber de qué tipo concreto es cada una):
 
-![](Pasted%20image%2020240602112614.png)
+![](img/Pasted%20image%2020240602112614.png)
 
 ## Clase
 
@@ -105,7 +105,7 @@ Se obtiene como resultado:
 
 - **Atributos**: almacenan el estado interno del objeto, es decir, forma de guardar la información para su posterior uso por otros mensajes
 
-![](Pasted%20image%2020240602113615.png)
+![](img/Pasted%20image%2020240602113615.png)
 
 >[!Tip]
 >- No se debe empezar el diseño de una clase por sus atributos, ya que si la clase cambia, éstos también lo harán.
@@ -127,22 +127,22 @@ Se obtiene como resultado:
 >- Los **operandos** permanecen estables mientras que las opciones pueden variar a medida que la clase evolucione
 >- Un parámetro es una **opción** si se puede encontrar un valor predeterminado adecuado
 
-![](Pasted%20image%2020240602114424.png)
+![](img/Pasted%20image%2020240602114424.png)
 
 `document` es un operando y el resto son opciones (ya que pueden tener un valor predeterminado: A4, false, 1920x1080)
 
-![](Pasted%20image%2020240602114554.png)
+![](img/Pasted%20image%2020240602114554.png)
 
 ### Ventajas de separarlos
 
 - Es más fácil de invocar al mensaje
 - A medida que la clase evolucione se podrán añadir más opciones, pero los clientes de la clase no se verán afectados
 
-![](Pasted%20image%2020240602114753.png)
+![](img/Pasted%20image%2020240602114753.png)
 
-![](Pasted%20image%2020240602114809.png)
+![](img/Pasted%20image%2020240602114809.png)
 
-![](Pasted%20image%2020240602114837.png)
+![](img/Pasted%20image%2020240602114837.png)
 
 >[!Note]
 >- En la primera versión, el cliente debía conocer todas las opciones permitidas por la impresora ***aunque no las utilizase***
@@ -164,17 +164,17 @@ Se obtiene como resultado:
 
 - Normalmente no se debe dar acceso a los datos internos de un objeto
 
-![](Pasted%20image%2020240602115449.png)
+![](img/Pasted%20image%2020240602115449.png)
 
 ### Ventajas
 
 - Permite controlar las modificaciones del atributo
 
-![](Pasted%20image%2020240602115553.png)
+![](img/Pasted%20image%2020240602115553.png)
 
 - Ocultar los atributos permite modificar la implementación sin afectar a los clientes
 
-![](Pasted%20image%2020240602115636.png)
+![](img/Pasted%20image%2020240602115636.png)
 
 ## Criterio de independencia
 
@@ -224,17 +224,17 @@ Se obtiene como resultado:
 
 - **Interfaces**: permiten comunicar objetos que no se conocen
 
-![](Pasted%20image%2020240602121247.png)
+![](img/Pasted%20image%2020240602121247.png)
 
-![](Pasted%20image%2020240602121318.png)
+![](img/Pasted%20image%2020240602121318.png)
 
-![](Pasted%20image%2020240602121341.png)
+![](img/Pasted%20image%2020240602121341.png)
 
-![](Pasted%20image%2020240602121458.png)
+![](img/Pasted%20image%2020240602121458.png)
 
 La revisión del contrato se hará de manera estática:
 
-![](Pasted%20image%2020240602121537.png)
+![](img/Pasted%20image%2020240602121537.png)
 
 ### Tipos de herencia
 
@@ -248,13 +248,13 @@ La revisión del contrato se hará de manera estática:
 
 ## Reutilización con interfaces
 
-![](Pasted%20image%2020240602121916.png)
+![](img/Pasted%20image%2020240602121916.png)
 
-![](Pasted%20image%2020240602121932.png)
+![](img/Pasted%20image%2020240602121932.png)
 
 Solución:
 
-![](Pasted%20image%2020240602121948.png)
+![](img/Pasted%20image%2020240602121948.png)
 
 ## Clases abstractas
 
@@ -264,36 +264,36 @@ Solución:
 
 ### Ejemplo de factorizar código propio
 
-![](Pasted%20image%2020240602122909.png)
+![](img/Pasted%20image%2020240602122909.png)
 
-![](Pasted%20image%2020240602122924.png)
+![](img/Pasted%20image%2020240602122924.png)
 
 - El jubilado y el catedrático hacen prácticamente lo mismo. ¿Cómo lo evitamos?
 	- Mediante clases abstractas
 
-![](Pasted%20image%2020240602123025.png)
+![](img/Pasted%20image%2020240602123025.png)
 
 ### Ejemplo de facilitar la extensión
 
-![](Pasted%20image%2020240602123233.png)
+![](img/Pasted%20image%2020240602123233.png)
 
-![](Pasted%20image%2020240602123330.png)
+![](img/Pasted%20image%2020240602123330.png)
 
 Se puede aprovechar código ya implementado:
 
-![](Pasted%20image%2020240602123446.png)
+![](img/Pasted%20image%2020240602123446.png)
 
 - Copiando y pegando código sería:
 
-![](Pasted%20image%2020240602123522.png)
+![](img/Pasted%20image%2020240602123522.png)
 
 Aquí es donde nacen los métodos abstractos:
 
-![](Pasted%20image%2020240602123555.png)
+![](img/Pasted%20image%2020240602123555.png)
 
 ## Jerarquías de interfaces
 
-![](Pasted%20image%2020240602123758.png)
+![](img/Pasted%20image%2020240602123758.png)
 
 En Orientado a Objetos:
 - Se extraen las entidades
@@ -304,7 +304,7 @@ En Orientado a Objetos:
 >Nunca debe surgir una jerarquía como manera de clasificación
 >- Hay que comprobar si toda interfaz tiene al menos un cliente que la use
 
-![](Pasted%20image%2020240602124036.png)
+![](img/Pasted%20image%2020240602124036.png)
 
 >[!Tip]
 >**Sin necesidad no hay interfaz**
@@ -312,11 +312,11 @@ En Orientado a Objetos:
 
 ## Jerarquías de clases abstractas
 
-![](Pasted%20image%2020240602124249.png)
+![](img/Pasted%20image%2020240602124249.png)
 
-![](Pasted%20image%2020240602124329.png)
+![](img/Pasted%20image%2020240602124329.png)
 
-![](Pasted%20image%2020240602124346.png)
+![](img/Pasted%20image%2020240602124346.png)
 
 >[!Note]
 >Una jerarquía de implementación (de clases abstractas) no es esencial que sea estable
@@ -331,13 +331,13 @@ En Orientado a Objetos:
 >[!Example]
 >Veamos qué ocurriría si tuviésemos dos o más interfaces, cada una con su correspondiente implementación base que quisiéramos aprovechar, en un lenguaje como Java que no tiene herencia múltiple.
 
-![](Pasted%20image%2020240602124903.png)
+![](img/Pasted%20image%2020240602124903.png)
 
 Posible solución:
 
-![](Pasted%20image%2020240602124920.png)
+![](img/Pasted%20image%2020240602124920.png)
 
-![](Pasted%20image%2020240602124935.png)
+![](img/Pasted%20image%2020240602124935.png)
 
 ## Tabla Interfaz vs Clase abstracta
 
@@ -352,7 +352,7 @@ Posible solución:
 | **Operaciones**                     | Añaden a las de sus ancestros                                                         | Implementan las de sus ancestros. Añaden operaciones de implementaciones parciales |
 | **Impacto de los cambios**          | Alto; es un contrato que afecta a varios programadores                                | Bajo; la interfaz hace de cortafuegos                                              |
 
-![](Pasted%20image%2020240602125450.png)
+![](img/Pasted%20image%2020240602125450.png)
 
 ## Síntomas de un diseño pobre
 
@@ -393,9 +393,9 @@ Posible solución:
 	- Si podemos pensar en más de un motivo por el que la clase debería cambiar, dicha clase tiene más de una responsabilidad
 
 >[!Example]
->![](Pasted%20image%2020240602131818.png)
+>![](img/Pasted%20image%2020240602131818.png)
 >
->![](Pasted%20image%2020240602131852.png)
+>![](img/Pasted%20image%2020240602131852.png)
 >
 >Este diseño viola el principio SRP, pues la clase `Rectangle` tiene dos responsabilidades
 
@@ -404,18 +404,18 @@ Posible solución:
 	- Los principales mecanismos para lograr el principio de abierto-cerrado son la abstracción y el polimorfismo
 
 >[!Example]
->![](Pasted%20image%2020240602132205.png)
+>![](img/Pasted%20image%2020240602132205.png)
 >
->![](Pasted%20image%2020240602132237.png)
+>![](img/Pasted%20image%2020240602132237.png)
 
 - **LSP** (*Liskov Substitution Principle*, Principio de sustitución de Liskov): los subtipos deben poder sustituir a sus tipos base
 	- Los objetos de un programa deberían ser reemplazables por instancias de sus subtipos sin alterar el correcto funcionamiento de un programa
 	- Debemos asegurarnos de que las clases derivadas extiendan la clase base sin alterar su comportamiento de manera que se viole el contrato
 
 >[!Example]
->![](Pasted%20image%2020240602132538.png)
+>![](img/Pasted%20image%2020240602132538.png)
 >
->![](Pasted%20image%2020240602132558.png)
+>![](img/Pasted%20image%2020240602132558.png)
 
 - **DIP** (*Dependency Inversion Principle*, Principio de inversión de dependencias):
 	- Los módulos de alto nivel no deben depender de los de bajo nivel; ambos deben depender de las abstracciones
@@ -424,7 +424,7 @@ Posible solución:
 	- Simplificado: hay que depender de abstracciones, no de implementaciones concretas, es decir, programar para una interfaz, no para una implementación
 
 >[!Example]
->![](Pasted%20image%2020240602132813.png)
+>![](img/Pasted%20image%2020240602132813.png)
 >
 
 - **ISP** (*Interface Segregation Principle*, Principio de 1ión de interfaces):
@@ -433,19 +433,19 @@ Posible solución:
 	- Dicho de otra forma: los clientes no deberían depender de los métodos que no usan
 
 >[!Example]
->![](Pasted%20image%2020240602133216.png)
+>![](img/Pasted%20image%2020240602133216.png)
 >
->![](Pasted%20image%2020240602133233.png)
+>![](img/Pasted%20image%2020240602133233.png)
 >
->![](Pasted%20image%2020240602133250.png)
+>![](img/Pasted%20image%2020240602133250.png)
 >
->![](Pasted%20image%2020240602133309.png)
+>![](img/Pasted%20image%2020240602133309.png)
 >
->![](Pasted%20image%2020240602133327.png)
+>![](img/Pasted%20image%2020240602133327.png)
 >
->![](Pasted%20image%2020240602133346.png)
+>![](img/Pasted%20image%2020240602133346.png)
 >
->![](Pasted%20image%2020240602133409.png)
+>![](img/Pasted%20image%2020240602133409.png)
 
 ## Patrones GRASP
 
@@ -457,15 +457,15 @@ Posible solución:
 - **GRASP 1** (*Experto en información*): asignar una responsabilidad al experto (la clase que tiene la información necesaria para llevarla a cabo)
 
 >[!Example]
->![](Pasted%20image%2020240602134052.png)
+>![](img/Pasted%20image%2020240602134052.png)
 >
->![](Pasted%20image%2020240602134128.png)
+>![](img/Pasted%20image%2020240602134128.png)
 >
->![](Pasted%20image%2020240602134206.png)
+>![](img/Pasted%20image%2020240602134206.png)
 >
->![](Pasted%20image%2020240602134238.png)
+>![](img/Pasted%20image%2020240602134238.png)
 >
->![](Pasted%20image%2020240602134256.png)
+>![](img/Pasted%20image%2020240602134256.png)
 >
 >- **Contraindicaciones**:
 >	- La clase `Sale` ahora deberá contener la lógica relacionada con la gestión de la base de datos
@@ -484,7 +484,7 @@ Posible solución:
 	- B tiene los datos de inicialización de un objeto de A
 
 >[!Example]
->![](Pasted%20image%2020240602134943.png)
+>![](img/Pasted%20image%2020240602134943.png)
 >
 >- Contraindicaciones:
 >	- A veces la creación de objetos requiere una cierta complejidad
@@ -499,13 +499,13 @@ Posible solución:
 		- Si una clase presenta un fuerte acoplamiento con otras, cambios en esas clases obligan a hacer cambios en ella
 
 >[!Example]
->![](Pasted%20image%2020240602140327.png)
+>![](img/Pasted%20image%2020240602140327.png)
 >
 >Solución alternativa:
 >
->![](Pasted%20image%2020240602140411.png)
+>![](img/Pasted%20image%2020240602140411.png)
 >
->![](Pasted%20image%2020240602140435.png)
+>![](img/Pasted%20image%2020240602140435.png)
 >
 >Ventajas del bajo acoplamiento:
 >- No afectan los cambios en otros componentes
@@ -523,13 +523,13 @@ Posible solución:
 		- Delicadas, constantemente afectadas por los cambios
 
 >[!Example]
->![](Pasted%20image%2020240602140913.png)
+>![](img/Pasted%20image%2020240602140913.png)
 >
->![](Pasted%20image%2020240602140931.png)
+>![](img/Pasted%20image%2020240602140931.png)
 >
->![](Pasted%20image%2020240602140952.png)
+>![](img/Pasted%20image%2020240602140952.png)
 >
->![](Pasted%20image%2020240602141018.png)
+>![](img/Pasted%20image%2020240602141018.png)
 
 - **GRASP 5** (*Controlador*): 
 	- ¿Quién debe ser responsable de gestionar un evento de entrada al sistema?
@@ -538,11 +538,11 @@ Posible solución:
 			- Representa un escenario de caso de uso en el que tiene lugar el evento
 
 >[!Example]
->![](Pasted%20image%2020240602142456.png)
+>![](img/Pasted%20image%2020240602142456.png)
 >
->![](Pasted%20image%2020240602142523.png)
+>![](img/Pasted%20image%2020240602142523.png)
 >
->![](Pasted%20image%2020240602142541.png)
+>![](img/Pasted%20image%2020240602142541.png)
 
 - **GRASP 6** (*Polimorfismo*): 
 	- ¿Cómo manejar las alternativas basadas en el tipo? ¿Cómo crear componentes software conectables?
@@ -550,18 +550,18 @@ Posible solución:
 		- Es decir, hay que intentar huir de la lógica condicional con respecto al tipo (`if`, `switch`, `instanceof`...)
 
 >[!Example]
->![](Pasted%20image%2020240602142850.png)
+>![](img/Pasted%20image%2020240602142850.png)
 >
->![](Pasted%20image%2020240602142909.png)
+>![](img/Pasted%20image%2020240602142909.png)
 >
->![](Pasted%20image%2020240602142930.png)
+>![](img/Pasted%20image%2020240602142930.png)
 
 - **GRASP 7** (*Fabricación pura*):
 	- ¿Qué objetos deberían tener la responsabilidad cuando no se quiere violar los principios de alta cohesión y bajo acoplamiento pero, sin embargo, las soluciones que ofrece el experto no son adecuadas?
 		- Se asignará un conjunto de responsabilidades altamente cohesivo a una clase artificial, de conveniencia, que no representa un concepto del dominio del problema, sino que se ha inventado para permitir esa alta cohesión, bajo acoplamiento y la reutilización de código.
 
 >[!Example]
->![](Pasted%20image%2020240602143208.png)
+>![](img/Pasted%20image%2020240602143208.png)
 
 - **GRASP 8** (*Indirección*): 
 	- ¿Dónde asignar una responsabilidad, para evitar el acoplamiento directo entre dos o más elementos?
@@ -586,7 +586,7 @@ Posible solución:
 
 ### Acoplamiento
 
-![](Pasted%20image%2020240602141430.png)
+![](img/Pasted%20image%2020240602141430.png)
 
 ### Acoplamiento y cohesión (Beck)
 
@@ -595,11 +595,11 @@ Posible solución:
 		- Un elemento es cohesivo en la medida en que el elemento entero cambia cuando el sistema necesita hacer un cambio en una funcionalidad determinada
 		- Y lo relaciona también con el tamaño: un elemento puede perder cohesión si es demasiado grande o demasiado pequeño
 
-![](Pasted%20image%2020240602141535.png)
+![](img/Pasted%20image%2020240602141535.png)
 
-![](Pasted%20image%2020240602141711.png)
+![](img/Pasted%20image%2020240602141711.png)
 
-![](Pasted%20image%2020240602141723.png)
+![](img/Pasted%20image%2020240602141723.png)
 
 ### Suficiencia, completitud y ser primitivo
 
@@ -612,7 +612,7 @@ Posible solución:
 
 ### Cohesión
 
-![](Pasted%20image%2020240602142154.png)
+![](img/Pasted%20image%2020240602142154.png)
 
 ## ¿Qué es un buen diseño?
 
@@ -666,18 +666,18 @@ Posible solución:
 
 ## Elementos de un patrón
 
-![](Pasted%20image%2020240602175226.png)
+![](img/Pasted%20image%2020240602175226.png)
 
 ## Secciones de un patrón de diseño
 
-![](Pasted%20image%2020240602175311.png)
+![](img/Pasted%20image%2020240602175311.png)
 
-![](Pasted%20image%2020240602175325.png)
+![](img/Pasted%20image%2020240602175325.png)
 
-![](Pasted%20image%2020240602175338.png)
+![](img/Pasted%20image%2020240602175338.png)
 ## Organización del catálogo de patrones
 
-![](Pasted%20image%2020240602175419.png)
+![](img/Pasted%20image%2020240602175419.png)
 
 ## Causas de rediseño
 

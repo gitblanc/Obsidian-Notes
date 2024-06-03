@@ -28,9 +28,9 @@ Existen muchos algoritmos para dividir en líneas un flujo de texto. No resulta 
 
 Estos problemas pueden evitarse definiendo clases que encapsulen los diferentes algoritmos de división en líneas. Un algoritmo así encapsulado se denomina estrategia.
 
-![](Pasted%20image%2020240603115339.png)
+![](img/Pasted%20image%2020240603115339.png)
 
-![](Pasted%20image%2020240603121408.png)
+![](img/Pasted%20image%2020240603121408.png)
 
 ### Aplicabilidad
 
@@ -42,9 +42,9 @@ Usar el patrón Strategy cuando:
 
 ### Estructura
 
-![](Pasted%20image%2020240603115828.png)
+![](img/Pasted%20image%2020240603115828.png)
 
-![](Pasted%20image%2020240603121353.png)
+![](img/Pasted%20image%2020240603121353.png)
 
 ### Participantes
 
@@ -88,11 +88,11 @@ Usar el patrón Strategy cuando:
 
 ### Ejemplo que nos da César
 
-![](Pasted%20image%2020240603120841.png)
+![](img/Pasted%20image%2020240603120841.png)
 
 *¿Cómo hacemos para que ahora vuelen?*
 
-![](Pasted%20image%2020240603120946.png)
+![](img/Pasted%20image%2020240603120946.png)
 
 >[!Error]
 >Esto conlleva un problema
@@ -103,7 +103,7 @@ Una posibilidad sería que el `volar` en `PatoDeGoma` no hiciese nada (estuviese
 
 **Solución:**
 
-![](Pasted%20image%2020240603121214.png)
+![](img/Pasted%20image%2020240603121214.png)
 
 ## Factory Method
 
@@ -126,9 +126,9 @@ Define una interfaz para crear un objeto, pero deja que sean las subclases quien
 
 Llamaremos a `CrearDocumento` un método de fabricación porque es el responsable de "fabricar" un objeto
 
-![](Pasted%20image%2020240603123616.png)
+![](img/Pasted%20image%2020240603123616.png)
 
-![](Pasted%20image%2020240603123630.png)
+![](img/Pasted%20image%2020240603123630.png)
 
 ### Aplicabilidad
 
@@ -139,9 +139,9 @@ Llamaremos a `CrearDocumento` un método de fabricación porque es el responsabl
 
 ### Estructura
 
-![](Pasted%20image%2020240603124130.png)
+![](img/Pasted%20image%2020240603124130.png)
 
-![](Pasted%20image%2020240603124302.png)
+![](img/Pasted%20image%2020240603124302.png)
 
 ### Participantes
 
@@ -170,7 +170,7 @@ Llamaremos a `CrearDocumento` un método de fabricación porque es el responsabl
 - En los ejemplos anteriores, el método de fabricación era llamado únicamente por el creador y sus subclases. No tiene por qué ser siempre así: hay veces en que puede ser el cliente quien se encargue de ello
 	- Por ejemplo en los casos de **jerarquías paralelas**
 
-![](Pasted%20image%2020240603125322.png)
+![](img/Pasted%20image%2020240603125322.png)
 
 ## Abstract Factory
 
@@ -188,9 +188,9 @@ Proporciona una interfaz para crear familias de objetos relacionados o que depen
 	- Cada uno de ellos tendrá una clase distinta para representar una ventana, una barra de desplazamiento, un botón...
 - Si queremos que una aplicación se aproveche de ello y sea portable, no podrá crear directamente objetos de esas clases específicas
 
-![](Pasted%20image%2020240603125907.png)
+![](img/Pasted%20image%2020240603125907.png)
 
-![](Pasted%20image%2020240603125958.png)
+![](img/Pasted%20image%2020240603125958.png)
 
 ### Aplicabilidad
 
@@ -202,7 +202,7 @@ Proporciona una interfaz para crear familias de objetos relacionados o que depen
 
 ### Estructura
 
-![](Pasted%20image%2020240603130255.png)
+![](img/Pasted%20image%2020240603130255.png)
 
 ### Participantes
 
@@ -243,7 +243,7 @@ Proporciona una interfaz para crear familias de objetos relacionados o que depen
 
 ## Factory Method vs Abstract Factory
 
-![](Pasted%20image%2020240603131608.png)
+![](img/Pasted%20image%2020240603131608.png)
 
 ## Composite
 
@@ -256,9 +256,9 @@ Compone objetos en estructuras de árbol para representar jerarquías de parte/t
 - Un editor de dibujo permite realizar dibujos compuestos de elementos simples (líneas, rectángulos...) u otros dibujos
 	- ¿Cómo evitamos que los clientes tengan que distinguir entre unos y otros?
 
-![](Pasted%20image%2020240603132417.png)
+![](img/Pasted%20image%2020240603132417.png)
 
-![](Pasted%20image%2020240603132441.png)
+![](img/Pasted%20image%2020240603132441.png)
 
 ### Aplicabilidad
 
@@ -268,11 +268,11 @@ Usar el patrón Composite cuando:
 
 ### Estructura
 
-![](Pasted%20image%2020240603132655.png)
+![](img/Pasted%20image%2020240603132655.png)
 
-![](Pasted%20image%2020240603132735.png)
+![](img/Pasted%20image%2020240603132735.png)
 
-![](Pasted%20image%2020240603132753.png)
+![](img/Pasted%20image%2020240603132753.png)
 
 ### Participantes
 
@@ -327,7 +327,7 @@ Permite que un objeto modifique su comportamiento cada vez que cambie su estado 
 	- Escuchando
 	- Cerrada
 
-![](Pasted%20image%2020240603144016.png)
+![](img/Pasted%20image%2020240603144016.png)
 
 ### Aplicabilidad
 
@@ -341,9 +341,9 @@ Permite que un objeto modifique su comportamiento cada vez que cambie su estado 
 
 ### Estructura
 
-![](Pasted%20image%2020240603144412.png)
+![](img/Pasted%20image%2020240603144412.png)
 
-![](Pasted%20image%2020240603144426.png)
+![](img/Pasted%20image%2020240603144426.png)
 
 ### Participantes
 
@@ -384,7 +384,7 @@ Permite que un objeto modifique su comportamiento cada vez que cambie su estado 
 
 ### Posibles usos
 
-![](Pasted%20image%2020240603145625.png)
+![](img/Pasted%20image%2020240603145625.png)
 
 ## State vs Strategy
 
@@ -406,13 +406,13 @@ Define en una operación el esqueleto de un algoritmo, delegando en las subclase
 - Las aplicaciones construidas con el framework redefinirán ambas clases para adaptarlas a sus necesidades concretas
 - ¿Cómo implementar, de manera genérica, el método `openDocuiment` de la clase `Application`?
 
-![](Pasted%20image%2020240603151045.png)
+![](img/Pasted%20image%2020240603151045.png)
 
 - El método abstracto anterior define todos los pasos necesarios para abrir un documento
 	- Comprueba si se puede abrir, crea un objeto `Document`, lo añade al conjunto de documentos y finalmente lo lee
 	- Lo hace en términos de operaciones abstractas
 
-![](Pasted%20image%2020240603151215.png)
+![](img/Pasted%20image%2020240603151215.png)
 
 ### Aplicabilidad
 
@@ -424,9 +424,9 @@ El patrón Template Method debería usarse:
 
 ### Estructura
 
-![](Pasted%20image%2020240603151421.png)
+![](img/Pasted%20image%2020240603151421.png)
 
-![](Pasted%20image%2020240603151434.png)
+![](img/Pasted%20image%2020240603151434.png)
 
 ### Participantes
 
@@ -453,9 +453,9 @@ El patrón Template Method debería usarse:
 
 Operaciones de enganche:
 
-![](Pasted%20image%2020240603152121.png)
+![](img/Pasted%20image%2020240603152121.png)
 
-![](Pasted%20image%2020240603152142.png)
+![](img/Pasted%20image%2020240603152142.png)
 
 ### Implementación
 
@@ -495,7 +495,7 @@ Convierte la interfaz de una clase en otra interfaz que es la que esperan los cl
 	- Heredando la interfaz de `Shape` y la implementación de `TextView` (versión de dos clases)
 	- Mediante composición de objetos, haciendo que `TextShape` delegue en una instancia de `TextView` (versión de objetos)
 
-![](Pasted%20image%2020240603153138.png)
+![](img/Pasted%20image%2020240603153138.png)
 
 ### Aplicabilidad
 
@@ -506,13 +506,13 @@ Debería usarse el patrón Adapter cuando:
 
 ### Estructura
 
-![](Pasted%20image%2020240603153436.png)
+![](img/Pasted%20image%2020240603153436.png)
 
-![](Pasted%20image%2020240603153455.png)
+![](img/Pasted%20image%2020240603153455.png)
 
-![](Pasted%20image%2020240603153527.png)
+![](img/Pasted%20image%2020240603153527.png)
 
-![](Pasted%20image%2020240603153545.png)
+![](img/Pasted%20image%2020240603153545.png)
 
 ### Participantes
 
@@ -553,16 +553,16 @@ Encapsula una petición en un objeto, permitiendo así parametrizar a los client
 - La biblioteca no puede implementar dichas operaciones directamente en el botón o el menú
 	- Sólo las aplicaciones que usan la biblioteca saben qué hay que hacer y a qué operaciones de otros objetos hay que llamar
 
-![](Pasted%20image%2020240603161258.png)
+![](img/Pasted%20image%2020240603161258.png)
 
 - La clave de este patrón es una interfaz `Command` que define una operación `execute`
 - Son las subclases concretas quienes implementan la operación y especifican el receptor de la orden
 - Podemos configurar cada elemento del menú, `MenuItem`, con un objeto `Command`
 - Los elementos del menú no saben qué objeto concreto están usando (simplemente llaman a su método `execute`)
 
-![](Pasted%20image%2020240603161523.png)
+![](img/Pasted%20image%2020240603161523.png)
 
-![](Pasted%20image%2020240603161537.png)
+![](img/Pasted%20image%2020240603161537.png)
 
 ### Aplicabilidad
 
@@ -579,9 +579,9 @@ Encapsula una petición en un objeto, permitiendo así parametrizar a los client
 
 ### Estructura
 
-![](Pasted%20image%2020240603161915.png)
+![](img/Pasted%20image%2020240603161915.png)
 
-![](Pasted%20image%2020240603161931.png)
+![](img/Pasted%20image%2020240603161931.png)
 
 ### Participantes
 
@@ -605,7 +605,7 @@ Encapsula una petición en un objeto, permitiendo así parametrizar a los client
 	- Quien antes guarda el estado par luego poder deshacer la operación (si son operaciones que se pueden deshacer)
 - El objeto `ConcreteCommand` se vale de las operaciones de su receptor para llevar a cabo la acción
 
-![](Pasted%20image%2020240603162626.png)
+![](img/Pasted%20image%2020240603162626.png)
 
 ### Consecuencias
 
@@ -624,6 +624,6 @@ Encapsula una petición en un objeto, permitiendo así parametrizar a los client
 
 ### Ejemplo de César
 
-![](Pasted%20image%2020240603163102.png)
+![](img/Pasted%20image%2020240603163102.png)
 
-![](Pasted%20image%2020240603163117.png)
+![](img/Pasted%20image%2020240603163117.png)
