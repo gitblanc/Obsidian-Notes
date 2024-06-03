@@ -1,5 +1,5 @@
 ---
-image: banner.jpg
+banner: banner.jpg
 title: Bienvenid@ a Obsidian Notes :)
 ---
 
