@@ -1,3 +1,6 @@
+---
+title: ASW 🥋
+---
 # 1 Febrero 2023 🎱
 
 - **Registro de decisiones arquitectónicas**: anotación de las ventajas e inconvenientes de una arquitectura de software
@@ -35,29 +38,29 @@
 	- Conocimiento del dominio de negocio  
 	- Poseer habilidades interpersonales 
 	- Comprender y navegar en política empresarial
-![](Pasted%20image%2020230208115042.png)
+![](img/Pasted%20image%2020230208115042.png)
 
 ## Maniobra inversa de Conway
-![](Pasted%20image%2020230208115727.png)
+![](img/Pasted%20image%2020230208115727.png)
 
 ## Ley de Brook
 - Añadir más personas a un equipo que va retrasado hace que se retrase más todavía
 
 ## Identificando stakeholders
-![](Pasted%20image%2020230208121025.png)
+![](img/Pasted%20image%2020230208121025.png)
 
 ## Atributos de calidad
 - Son las características de la arquitectura junto con los requisitos no-funcionales
 
 - Tipos de requisitos:
-![](Pasted%20image%2020230208121342.png)
+![](img/Pasted%20image%2020230208121342.png)
 - Los funcionales se suelen cumplir.
 - Los no funcionales (velocidad, accesibilidad, disponibilidad) es lo difícil.
 
 - Los atributos de calidad han de comprobarse en los **escenarios** de calidad.
-![](Pasted%20image%2020230208122206.png)
+![](img/Pasted%20image%2020230208122206.png)
 - Árbol de atributos de calidad: usar mindmap
-![](Pasted%20image%2020230208122354.png)
+![](img/Pasted%20image%2020230208122354.png)
 
 ## 4 métricas clave (métricas DORA)
 Origen: Informe State of DevOps de DORA (equipo DevOps Research and Assessment
@@ -83,7 +86,7 @@ https://www.devops-research.com/quickcheck.html
 
 - **Riesgo**: algo malo que puede o no ocurrir
 - Se suelen crear tablas de riesgo (tablas de matriz de riesgo)
-![](Pasted%20image%2020230222113230.png)
+![](img/Pasted%20image%2020230222113230.png)
 
 - Los problemas que no se arreglan pueden generar una deuda técnica (**technical debt**)
 
@@ -108,7 +111,7 @@ https://www.devops-research.com/quickcheck.html
 - Tenemos que afrontar que el software va a cambiar
 - Tenemos que ser capaces de atomatizar la contrucción
 - Modelo en V
-![](Pasted%20image%2020230222121354.png)
+![](img/Pasted%20image%2020230222121354.png)
 - **Big Design Up Front**: dedicarse únicamente a diseñar es una mala práctica
 - Hay que intentar que las pruebas sean automáticas
 - Principios FIRST:

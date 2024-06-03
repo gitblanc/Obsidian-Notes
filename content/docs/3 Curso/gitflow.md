@@ -1,3 +1,6 @@
+---
+title: Gitflow 👽
+---
 # Comandos avanzados para Github
 ---
 - Resetear toda la rama (borra los cambios no guardados) `git reset`

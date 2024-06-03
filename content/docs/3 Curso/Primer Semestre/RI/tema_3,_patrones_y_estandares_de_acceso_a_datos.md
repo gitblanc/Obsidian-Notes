@@ -52,9 +52,9 @@ Desventajas:
 ## Table Data Gateway
 - Es un DAO implementado uno para cada tabla
 
-![](gateway.png)
+![](img/gateway.png)
 ![](./img/organizacion%20base%20de%20datos.png|700) 
-![](organizacion%20base%20de%20datos%20png.png)
+![](img/organizacion%20base%20de%20datos%20png.png)
 
 ## Patrones para la capa de negocio
 

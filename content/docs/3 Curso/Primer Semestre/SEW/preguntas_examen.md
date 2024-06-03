@@ -1,3 +1,6 @@
+---
+title: Preguntas examen SEW 👹
+---
 1. ¿Qué compara `===`? ==Iguales en tipo y valor==
 2. ¿MySQL es estándar de PHP? ==No==
 3. ¿PHP de qué es estándar?        FALTA
@@ -128,6 +131,7 @@ añadir al < head >: ==< meta name="author" content="pepito grillo" />==
 57. Sobre jQuery se puede decir: ==Permite recorrer el árbol DOM y seleccionar los elementos HTML==
 58. Sobre Window en JavaScript se puede decir: ==Es un objeto predefinido==
 59. En cuanto a especificidad en CSS:
+
 ````css
 #contenedor /*Especificidad 100*/
 
@@ -164,5 +168,6 @@ a[accesskey] /*Especificidad 011*/
 - Uso de variables locales y globales en JavaScript
 	- **==var y let==** en el interior de una función hace que la variable sea **local**, mientras que en el exterior de una función es **global**
 - Lenguajes derivados de XML:
-![](Pasted%20image%2020221217153849.png)
+
+![](img/Pasted%20image%2020221217153849.png)
 ---

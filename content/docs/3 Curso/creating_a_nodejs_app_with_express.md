@@ -1,3 +1,6 @@
+---
+title: Creating a NodeJS app with Express 🗂️
+---
 1. Open an empty directoy
 2. Open a terminal and run `npm init -y`. This will generate a **package.json**
 3. Install express: `npm install express --safe`. This will generate a **package-lock.json** and a folder called node-modules
@@ -861,6 +864,6 @@ node_modules
 		3. Listener set to HTTP on port 80 (Create a target group if not exists)
 		4. Select the default vpc and select all the subnets
 20. Refresh the tasks view (1~2mis)
-![](./img/Pasted%20image%2020230304142754.png)
+
 
 

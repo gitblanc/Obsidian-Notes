@@ -1,3 +1,6 @@
+---
+title: Github API 🎒
+---
 # GitHub API Tutorial
 
 Build a simple web application by learning the fundamentals of the GitHub API and then display dynamic data to the front-end!

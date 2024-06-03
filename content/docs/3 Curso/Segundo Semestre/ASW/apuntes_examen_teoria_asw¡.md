@@ -1,3 +1,6 @@
+---
+title: Apuntes Examen Teoria ASW 🧶
+---
 1. ¿Cuál es la primera ley de la arquitectura del software?
 - ==Todo en arquitectura es una solución de compromiso==
 2. ¿Cuál es la segunda ley de la arquitectura de software?
@@ -128,10 +131,14 @@
 - ==Permite observar la evolución del software==
 65. ¿Cuál es la CCD en el esquema de módulos de la figura?
 Nota: El CCD es la suma de dependencias de todos los componentes (cada componente depende de sí mismo)
-![](45b05519-05d5-411d-917f-703a551aa258.webp)
+
+![](img/45b05519-05d5-411d-917f-703a551aa258.webp)
+
 - ==8==
 66. ¿Cuál es la CCD en el esquema de módulos de la figura?
+
 ![](./img/06391517-648c-4323-8534-e896cc98d38a.webp|400)
+
 - ==13==
 67. ¿Cuál de los siguientes es un sistema de control de versiones distribuido?
 - ==git==
@@ -168,7 +175,9 @@ Nota: El CCD es la suma de dependencias de todos los componentes (cada component
 83. En la métrica LCOM
 - ==Cuanto menor sea, mejor, porque hay más cohesividad==
 84. Dada una clase como la de la figura, ¿cuál sería el valor de LCOM?
+
 ![](./img/0de5b610-4eb4-4e5b-8528-fb104c20a5cf.webp|400)
+
 - ==1==
 85. Según los principios de cohesividad de Robert Martin, REP se refiere a 
 - ==Equivalencia entre unidad de reutilización y de release==
@@ -179,7 +188,9 @@ Nota: El CCD es la suma de dependencias de todos los componentes (cada component
 88. Según el principio de acoplamiento SDP de Robert Martin
 - ==Un componente debería depender de componentes más estables==
 89. Según el diagrama de módulos de la figura, la inestabilidad de B y C son...
+
 ![](./img/de140175-b50a-4cf9-9380-23e508bca089.webp|400)
+
 - ==I(B)=0.5, I(C)=0==
 90. Según la figura del principio de abstracciones estables, la zona de inutilidad
 - ==Son módulos abstractos e inestables==

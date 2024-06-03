@@ -1,3 +1,6 @@
+---
+title: Seminarios ASW 💎
+---
 
 # 3 Febrero 2023 🚰
 - Transparencia por minuto

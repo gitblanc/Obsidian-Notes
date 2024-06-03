@@ -1,3 +1,6 @@
+---
+title: UML Cheatsheet 🥳
+---
 ## Things in UML
 
 A thing can be described as any real-world entity or an object. Things are divided into various categories in UML as follows,

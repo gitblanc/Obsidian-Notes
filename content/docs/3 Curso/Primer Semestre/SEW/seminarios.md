@@ -1,3 +1,6 @@
+---
+title: Deminarios SEW 🥃
+---
 # 23 Sept 2022 🍡
 ---
 ## La nube

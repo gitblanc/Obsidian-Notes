@@ -1,3 +1,6 @@
+---
+title: Conferencia 1 ASW 🌊
+---
 - Si el código es difícil de cambiar, es de **mala calidad**
 - La **facilidad del cambio** es más importante que la **solidez** de un problema
 - ¿Cómo construír un buen sistema?Aspectos a tener en cuenta:
@@ -16,8 +19,9 @@
 	- **TDD** (Test Driven Development), muy buena herramienta para autodocumentar el código, pues cada test es un contrato implícito de cada parte del código
 - Hoy en día no hay prácticamente sistemas con microservicios, sino que hay sistemas **monolitos distribuidos** (varios servicios que usan una misma BBDD por ejemplo).
 Monolito vs microservicios:
-![](Pasted%20image%2020230215122942.png)
-Monolito distribuido vs microservicios:
-![](./img/Pasted%20image%2020230215123004.png|400)
 
----
+![](img/Pasted%20image%2020230215122942.png)
+
+Monolito distribuido vs microservicios:
+
+![](./img/Pasted%20image%2020230215123004.png|400)
