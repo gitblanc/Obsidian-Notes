@@ -1,7 +1,5 @@
 ---
-banner: banner.jpg
-cover: banner.jpg
-banner_y: 0.68
+image: banner.jpg
 title: Bienvenid@ a Obsidian Notes :)
 ---
 
