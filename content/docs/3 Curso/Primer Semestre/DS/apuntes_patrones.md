@@ -1,5 +1,5 @@
 ---
-title: Apuntes de Patrones 🔋
+title: Apuntes de Patrones de Diseño 🔋
 ---
 >[!Note]
 >Estos apuntes están basados en el libro Patrones de Diseño de Erich Gamma junto con los apuntes de DS que nos proporciona la Universidad.
@@ -627,3 +627,347 @@ Encapsula una petición en un objeto, permitiendo así parametrizar a los client
 ![](img/Pasted%20image%2020240603163102.png)
 
 ![](img/Pasted%20image%2020240603163117.png)
+
+## Decorator
+
+### Propósito
+
+Asigna responsabilidades adicionales a un objeto dinámicamente , proporcionando una alternativa flexible a la herencia para extender la funcionalidad
+
+### También conocido como
+
+*Wrapper* (Envoltorio)
+
+### Motivación
+
+- A veces queremos añadir responsabilidades a objetos individuales, no a toda una clase
+
+![](img/Pasted%20image%2020240604105933.png)
+
+- Primera alternativa: mediante la herencia
+
+![](img/Pasted%20image%2020240604110007.png)
+
+>[!Problem]
+>- **Inflexible**: la elección del borde se hace estáticamente, no la puede hacer el cliente
+>- **Explosión de clases**: ¿qué pasaría si queremos un `TextView` con borde y barra de desplazamiento?
+
+- Una solución más flexible es envolver el componente en otro objeto que sea quien añada el borde
+	- Este objeto envoltorio es el decorador
+- El decorador sigue cumpliendo la interfaz del objeto original, así que su presencia es transparente para los clientes del componente
+	- El decorador delega las peticiones al componente y puede llevar a cabo acciones adicionales
+	- La transparencia permite anidar decoradores de forma recursiva
+
+![](img/Pasted%20image%2020240604110330.png)
+
+![](img/Pasted%20image%2020240604110345.png)
+### Aplicabilidad
+
+Use el Decorator:
+- Para añadir responsabilidades a otros objetos dinámicamente y de forma transparente
+- Cuando no se puede heredar o no resulta práctico (explosión de subclases para permitir cada combinación posible)
+### Estructura
+
+![](img/Pasted%20image%2020240604110542.png)
+
+En UML:
+
+![](img/Pasted%20image%2020240604110608.png)
+
+### Participantes
+
+- **Componente** (ComponenteVisual)
+	- Define la interfaz de los objetos a los que se les puede añadir responsabilidades dinámicamente
+- **ComponenteConcreto** (VistaTexto)
+	- Define un objeto al que se le pueden añadir responsabilidades adicionales
+- **Decorador**
+	- Mantiene una referencia a un objeto Componente y tiene su misma interfaz
+- **DecoradorConcreto** (DecoradorBorde, DecoradorDesplazamiento)
+	- Añade responsabilidades al componente
+
+### Consecuencias
+
+- **Ventajas**:
+	- Más flexibilidad que la herencia estática
+	- Evita que las clases de arriba de la jerarquía estén repletas de funcionalidades
+- **Inconvenientes**:
+	- Un decorador y sus componentes no son idénticos
+		- Desde el punto de vista de la identidad de objetos
+	- Muchos objetos pequeños
+		- Mayor dificultad para depurar
+
+### Implementación
+
+![](img/Pasted%20image%2020240604111904.png)
+
+### Posibles usos
+
+![](img/Pasted%20image%2020240604111939.png)
+
+### Patrones relacionados
+
+- **Adapter**:
+	- El Decorador sólo cambia las responsabilidades del objeto, no su interfaz
+- **Composite**:
+	- Un Decorador puede verse como un Composite de un solo componente
+	- Pero el decorador añade responsabilidades adicionales (no está pensado para la agregación de objetos)
+- **Strategy**:
+	- El decorador cambia la piel del objeto; una estrategia cambia sus tripas
+
+### Ejemplo real
+
+![](img/Pasted%20image%2020240604112141.png)
+
+![](img/Pasted%20image%2020240604112213.png)
+
+## Observer
+
+### Propósito
+
+Define una dependencia de uno-a-muchos entre objetos, de forma que cuando un objeto cambie de estado se notifique y se actualicen automáticamente todos los objetos que dependen de él
+
+### También conocido como
+
+*Dependents* (Dependientes), *Publish-Subscribe* (Publicar-Suscribir)
+
+### Motivación
+
+- Muchas veces un efecto lateral de partir un sistema en una colección de objetos relacionados es que necesitamos mantener la consistencia entre dichos objetos
+	- ¿Cómo hacerlo sin que sus clases estén fuertemente acopladas?
+
+![](img/Pasted%20image%2020240604112622.png)
+
+![](img/Pasted%20image%2020240604112643.png)
+
+### Aplicabilidad
+
+Úsese el patrón Observer:
+- Cuando una abstracción tiene dos aspectos, uno de los cuales depende del otro
+	- Encapsular estos aspectos en objetos separados permite que los objetos varíen (y puedan ser reutilizados) de forma independiente
+- Cuando un cambio en un objeto requiere que cambien otros
+	- Y no sabemos a priori cuáles ni cuántos
+- Cuando un objeto necesita notificar a otros cambios en su estado sin hacer presunciones sobre quiénes son dichos objetos
+	- Es decir, cuando no queremos que estén fuertemente acoplados
+
+### Estructura
+
+![](img/Pasted%20image%2020240604112933.png)
+
+![](img/Pasted%20image%2020240604112950.png)
+
+![](img/Pasted%20image%2020240604113020.png)
+
+### Participantes
+
+- **Sujeto** (Subject)
+	- Conoce a sus observadores
+	- Proporciona una interfaz para que se suscriban los objetos Observer (o que se borren)
+- **Observador** (Observer)
+	- Define una interfaz para actualizar los objetos que deben ser notificados de cambios en el objeto Subject
+- **SujetoConcreto** (ConcreteSubject)
+	- Guarda el estado de interés para los objetos ConcreteObserver
+	- Envía una notificación a sus observadores cuando cambia su estado
+- **ObservadorConcreto** (ConcreteObserver)
+	- Mantiene una referencia a un objeto ConcreteSubject
+	- Guarda el estado que debería permanecer sincronizado con el objeto observado
+	- Implementa la interfaz Observer para mantener su estado consistente con el objeto observado
+
+### Colaboraciones
+
+- El objeto observado notifica a sus observadores cada vez que ocurre un cambio
+- Después de ser informado de un cambio en el objeto observado, cada observador concreto puede pedirle información que necesita para reconciliar su estado con el de aquél
+
+![](img/Pasted%20image%2020240604113738.png)
+
+### Consecuencias
+
+- Permite variar objetos observados y observadores independientemente
+	- Se puede reutilizar los objetos observados sin sus observadores, y viceversa
+	- Se pueden añadir nuevos observadores sin modificar ninguna de las clases existentes
+- Acoplamiento abstracto entre Subject y Observer
+	- Todo lo que un objeto sabe de sus observadores es que tiene una lista de objetos que satisfacen la interfaz Observer
+- No se especifica el receptor de una actualización
+	- Se envía a todos los objetos interesados
+- Actualizaciones inesperadas
+	- Se podrían producir actualizaciones en cascada muy ineficientes
+
+### Implementación
+
+- En vez de mantener una colección con referencias explícitas a los observadores en el objeto observado, sería posible hacerlo con una tabla hash que relacionase ambos
+- Cuando un observador dependa de más de un objeto, es necesario ampliar la información de la operación `update`
+- ¿Quién se encarga de llamar a la actualización (`notify`)?
+	- El objeto observado, cada vez que cambia su estado
+	- Los clientes
+		- Más propenso a errores
+- Protocolos de actualización
+	- Modelo push
+		- El objeto observado envía información detallada a sus observadores sobre el cambio producido (la necesiten o no)
+	- Modelo pull
+		- Tan sólo avisa de que cambió
+
+## Visitor
+
+### Propósito
+
+Representa una operación sobre los elementos de una estructura de objetos. Permite definir una nueva operación sin cambiar las clases de los elementos sobre los que opera
+
+### Motivación
+
+- Un compilador suele representar los programas mediante una estructura de árbol
+- Necesitará realizar operaciones como:
+	- Análisis sintáctico
+	- Análisis semántico
+	- Generación de código
+	- ...
+- Normalmente tendremos clases distintas para las distintas construcciones del lenguaje (referencias a variables, sentencias de asignación...)
+- Serán los nodos del árbol
+
+![](img/Pasted%20image%2020240604115248.png)
+
+![](img/Pasted%20image%2020240604115308.png)
+
+![](img/Pasted%20image%2020240604115330.png)
+
+- Encapsulamos cada tipo de operación en una clase "visitor" y se la pasamos al árbol
+	- Los nodos definirán una operación para aceptar visitantes
+	- Y llamarán a su vez a la operación apropiada del visitante pasándose a sí mismos como parámetros
+
+![](img/Pasted%20image%2020240604115510.png)
+
+![](img/Pasted%20image%2020240604115531.png)
+
+- Lo que se hace es simular el **despacho múltiple** (multiple dispatch)
+
+### Aplicabilidad
+
+Úsese el patrón Visitor cuando:
+- Una estructura de objetos contiene muchas clases de objetos con diferentes interfaces, y queremos realizar operaciones sobre esos elementos que dependen de su clase concreta
+- Se necesitan realizar muchas operaciones distintas y no relacionadas sobre objetos de una estructura de objetos, y queremos evitar "contaminar" sus clases con dichas operaciones
+	- Con el Visitor se pueden mantener juntas operaciones relacionadas en una clase
+
+Debería aplicarse el patrón Visitor cuando:
+- Las clases que definen la estructura de objetos rara vez cambian, pero muchas veces queremos definir nuevas operaciones sobre la estructura
+
+### Estructura
+
+![](img/Pasted%20image%2020240604120138.png)
+
+![](img/Pasted%20image%2020240604120156.png)
+
+### Participantes
+
+- **Visitante** (Visitor, NodeVisitor)
+	- Declara una operación `visit` para cada clase de operación `ConcreteElement` de la estructura de objetos
+	- El nombre (opcional) y signatura de la operación identifican a la clase que envía la petición visit al visitante
+- **VisitanteConcreto** (ConcreteVisitor, TypeCheckingVisitor)
+	- Implementa cada operación declarada por `Visitor`
+	- Cada operación implementa un fragmento del algoritmo definido para la clase correspondiente de la estructura
+	- `ConcreteVisitor` proporciona el contexto para el algoritmo y guarda su estado local
+- **Elemento** (Element, Node)
+	- Define una operación `accept` que recibe un visitante como argumento
+- **ElementoConcreto** (ConcreteElement, AssignmentNode, VariableRefNode)
+	- Implementa una operación `accept` que recibe un visitante como argumento
+- **EstructuraDeObjetos** (ObjectStructure, Program)
+	- Permite enumerar sus elementos
+	- Puede proporcionar una interfaz de alto nivel para permitir al visitante visitar a sus elementos
+	- Puede ser un compuesto (patrón Composite) o una colección, como una lista o un conjunto
+
+### Colaboraciones
+
+- Un cliente que usa el patrón **Visitor** debe crear un objeto **ConcreteVisitor** y a continuación recorrer la estructura, visitando cada objeto con el visitante
+- Cada vez que se visita a un elemento, éste llama a la operación del **Visitor** que se corresponde con su clase
+	- El elemento se pasa a sí mismo como argumento de la operación
+
+![](img/Pasted%20image%2020240604120930.png)
+
+### Consecuencias
+
+- El visitante facilita añadir nuevas operaciones
+	- Podemos definir una nueva operación sobre una estructura simplemente añadiendo un nuevo visitante
+	- Si, por el contrario, extendiésemos la funcionalidad sobre muchas clases, habría que cambiar cada clase para definir una nueva operación
+- Un visitante agrupa operaciones relacionadas y separa las que no lo están
+- Es difícil añadir nuevas clases de elementos concretos
+
+## Prototype
+
+### Propósito
+
+Especifica los tipos de objetos a crear por medio de una instancia prototípica, y crea nuevos objetos copiando dicho prototipo
+- Básicamente consiste en que los objetos sepan cómo clonarse a sí mismos
+
+### Motivación
+
+- Tenemos que crear un framework para editores gráficos
+- Un usuario podría construir con él un editor de partituras musicales
+- Supongamos que el framework provee una clase abstracta `Graphic` para los elementos gráficos
+- El framework también proporciona una clase `GraphicTool` para los elementos de la paleta que permiten crear símbolos gráficos
+- ¿Cómo podríamos parametrizar `GraphicTool` con el tipo de objeto a crear, aplicando la composición de objetos?
+	- Haciendo que cada instancia de ella reciba en el constructor un objeto representando el tipo de figura a crear
+	- Y que cada figura sepa cómo clonarse a sí misma
+
+![](img/Pasted%20image%2020240604121940.png)
+
+### Aplicabilidad
+
+Úsese el patrón Prototype cuando un sistema deba ser independiente de cómo se crean, se componen y se representan sus productos, y además se da alguna de estas circunstancias:
+- Las clases a instanciar son definidas en tiempo de ejecución
+- Para evitar construir una jerarquía paralela de factorías de productos
+- Cuando las instancias de una clase puedan tener sólo unos pocos posibles estados, y pueda resultar más conveniente crear los objetos correspondientes como prototipos y clonarlos, en vez de instanciar manualmente la clase, cada vez con el estado necesario
+
+### Estructura
+
+![](img/Pasted%20image%2020240604122237.png)
+
+![](img/Pasted%20image%2020240604122507.png)
+
+### Participantes
+
+- **Prototipo** (Prototype, Graphic)
+	- Declara la interfaz (normalmente una única operación para clonarse)
+- **PrototipoConcreto** (ConcretePrototype, Staff, WholeNote, HalfNote)
+	- Implementa la operación de clonación
+- **Cliente** (Client, GraphicTool)
+	- Crea un nuevo objeto diciéndole al prototipo que se clone
+
+### Colaboraciones
+
+- Un cliente le pide al prototipo que se clone
+
+### Consecuencias
+
+- Como el patrón *Abstract Factory*, oculta las clases concretas de producto al cliente
+- Además permite:
+	- Añadir y eliminar productos dinámicamente (en tiempo de ejecución)
+	- Especificar nuevos objetos modificando valores de sus propiedades
+		- Mediante composición de objetos
+	- Especificar nuevos objetos variando su estructura
+		- A partir de partes y subpartes
+		- Podemos guardar esas estructuras complejas para crearlas una y otra vez
+		- Entrará el juego el patrón *Composite*
+	- Reduce las subclases
+		- A diferencia del *Factory Method*
+- **Inconvenientes**:
+	- La implementación de la operación de clonación puede no ser fácil
+
+### Implementación
+
+- Es especialmente útil en lenguajes como Java y C++, donde las clases no son objetos
+- Hay lenguajes que lo incorporan de serie
+- Cuestiones a tener en cuenta:
+	- Usar un gestor o registro de prototipos
+	- Implementación de la operación de clonación
+		- ¿Copia profunda o superficial?
+	- Inicialización de los prototipos
+
+### Posibles usos
+
+- Plantillas de Word
+
+## Prototype vs Abstract Factory vs Factory Method
+
+- El objeto fábrica de *Abstract Factory* produce objetos de varias clases, mientras que el Prototype hace que el objeto fábrica construya un producto copiando un objeto prototípico. En este caso, el objeto fábrica y el prototipo son el mismo objeto, ya que el prototipo es el responsable de devolver el producto.
+- El *Factory Method* puede requerir crear una nueva subclase simplemente para cambiar la clase del producto (dichos cambios pueden tener lugar en cascada). Mientras que el Prototype hace que el objeto fábrica construya un producto copiando un objeto prototípico. En este caso, el objeto fábrica y el prototipo son el mismo objeto, ya que el prototipo es el responsable de devolver el producto.
+
+>[!Note]
+>*Esto está sacado del GoF*
+
