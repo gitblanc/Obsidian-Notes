@@ -32,7 +32,7 @@ Aquí te dejo una lista de repositorios que pueden serte de ayuda o inspiración
 ![preguntator](img/Pasted%20image%2020240603235037.png)
 
 >[!Note]
->Es una aplicación web que te permite preparar tus exámenes tipo test. Gracias a la colaboración de varios compañeros ha sido posible preparas exámenes tipo test de asignaturas tales como ASW, DPPI o ASLEPI.
+>Es una aplicación web que te permite preparar tus exámenes tipo test. Gracias a la colaboración de varios compañeros ha sido posible preparar exámenes tipo test de asignaturas tales como ASW, DPPI o ASLEPI.
 
 >[!Tip]
 >Te animo a que si acabas usando esta app te animes a colaborar, añadiendo exámenes que hagas mediante una Pull Request al [repositorio de Preguntator](https://github.com/gitblanc/Preguntator)
