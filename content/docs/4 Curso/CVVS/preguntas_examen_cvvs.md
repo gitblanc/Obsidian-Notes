@@ -9,26 +9,38 @@ title: Preguntas de Examen CVVS 🍓
 - **Defecto**: manifestación de un error. Desperfecto en un componente o sistema que puede causar que el software no realice su función requerida. Se identifican mediante pruebas de carácter estático
 - **Fallo**: desviación en un componente o sistema de su comportamiento esperado. Se identifican mediante pruebas de carácter dinámico
 
-2. ***Di que está mal o incompleto en la siguiente afirmación: "La denominada pirámide de test sirve para representar los diferentes niveles de prueba, de forma que tenemos que completar todas las pruebas de un nivel para comenzar con el siguiente"***
+2. ***¿Qué implica conseguir calidad?***
+
+- Hemos hecho las cosas correctamente: el producto satisface los requisitos: Funcionales y de rendimiento (explícitos), de Calidad (implícitos)
+- Hemos hecho el sistema correcto: Los requisitos corresponden a las necesidades del usuario
+
+3. ***Definición de calidad*** 
+
+**Calidad**: capacidad de un producto, servicio, sistema, componente o proceso para cumplir necesidades, expectativas o requisitos del cliente o usuario. Hay dos tipos de calidad:
+- **Calidad del producto**: grado en el que el producto software cumple los requisitos y necesidades
+- **Calidad del proceso**: indica en qué medida se sigue el proceso y si se cumplen los estándares
+
+3. ***Di que está mal o incompleto en la siguiente afirmación: "La denominada pirámide de test sirve para representar los diferentes niveles de prueba, de forma que tenemos que completar todas las pruebas de un nivel para comenzar con el siguiente"***
 
 - La primera parte está incompleta, pues no sólo representa niveles de prueba, sino también tipos de prueba
 - La segunda parte está mal, pues no necesitamos completar todas las pruebas de un nivel para comenzar con el siguiente
 
-3. ***¿Qué dice la estrategia de los "Three Amigos"? ¿Qué ventajas ofrece?***
+4. ***¿Qué dice la estrategia de los "Three Amigos"? ¿Qué ventajas ofrece?***
 
 - Esta estrategia consiste en una reunión entre el analista de negocio y/o dueño del producto, los desarrolladores y los testers.
+- Su objetivo está relacionado especialmente con la planificación de sprint (más Kanban que Scrum)
 - Sus ventajas son:
 	- Se discuten características nuevas y se revisa la especificación
 	- Entendimiento y vocabulario compartido
 	- Identificación de requisitos no definidos y definición de pruebas
 	- Se realizan antes de que la característica se considere lista para el desarrollo y es asignada en un sprint
 
-4. ***¿De qué dos factores principales depende la clasificación en una organización de CMMI? ¿Qué se debe hacer en relación con estos factores para progresar al siguiente nivel?***
+5. ***¿De qué dos factores principales depende la clasificación en una organización de CMMI? ¿Qué se debe hacer en relación con estos factores para progresar al siguiente nivel?***
 
 - Depende de cuáles son los procesos que estoy cumpliendo, porque cada nivel tiene establecidos una serie de procesos que debes cumplir. Además, depende del nivel de capacidad más bajo de esos procesos
 - Para progresar al siguiente nivel se necesita incorporar todos los procesos que incluye el nivel al que se quiere avanzar, es decir, ampliar los procesos (con los de ese nivel) y aumentar el nivel
 
-5. ***Diferencia entre nivel de prueba y tipo de prueba. Nombra tres ejemplos de cada uno. Di si las siguientes frases son verdaderas o falsas***
+6. ***Diferencia entre nivel de prueba y tipo de prueba. Nombra tres ejemplos de cada uno. Di si las siguientes frases son verdaderas o falsas***
 
 - **Nivel de prueba**: grupo de actividades de prueba organizadas y gestionadas en conjunto. Ej: *integración, sistema y aceptación*
 - **Tipo de prueba**: grupo de actividades de prueba para un componente o sistema enfocadas en un objetivo específico de prueba. Un tipo de prueba puede usarse en uno o más niveles de prueba. Ej: *funcional, de rendimiento, regresión*
@@ -36,14 +48,14 @@ title: Preguntas de Examen CVVS 🍓
 - ***a) Un tipo de prueba puede relacionarse con multiples niveles de prueba.*** VERDADERO
 - ***b) Un nivel de prueba puede relacionarse con multiples tipos de prueba.*** FALSO
 
-6. ***Además de defectos, ¿qué buscan las pruebas de software?***
+7. ***Además de defectos, ¿qué buscan las pruebas de software?***
 
 Buscan encontrar fallos, además de determinar que el sistema satisface la especificación de requisitos y cumple con su propósito (satisface las necesidades y expectativas del cliente)
 
 7. ***Diferencia entre Verificación y Validación***
 
 - **Verificación**: confirmación, a través de pruebas objetivas, de que se han cumplido los requisitos especificados. Consiste en comprobar el programa frente a sus atributos de calidad
-- **Validación**:confirmación, a través de pruebas objetivas, de que se han cumplido los requisitos para un uso concreto. Consiste en comprobar que es lo que el cliente espera
+- **Validación**: confirmación, a través de pruebas objetivas, de que se han cumplido los requisitos para un uso concreto. Consiste en comprobar que es lo que el cliente espera
 
 En la **validación** podemos preguntarnos *¿estamos haciendo el producto adecuado?*, mientras que en la verificación podemos preguntarnos *¿estamos haciendo el producto de forma correcta?*
 
@@ -52,23 +64,27 @@ En la **verificación** se comprueba que el sistema cumple con la especificació
 8. ***Define prueba. ¿Qué es para ti un buen caso de prueba?***
 
 - **Definición clásica**: La prueba (testing) es el proceso de ejecutar un programa con la intención de encontrar fallos
-- Un buen caso de prueba es el que tiene una alta probabilidad de detectar un nuevo fallo
+	- Un buen caso de prueba es el que tiene una alta probabilidad de detectar un nuevo fallo
+	- Un caso de prueba con éxito es el que detecta un nuevo fallo
 
 9. ***Completa la siguiente tabla sobre la presencia de tipos de pruebas en verificación y validación***
 
-|Tipos de pruebas|Consiste en|Verificación|Validación|
-|--|--|--|--|
-|Estáticas|Sin ejecutar código|Si|No|
-|Dinámicas|Ejecutando código|Si|Si|
-|Caja negra|Sin conocer código|Si|Si|
-|Caja blanca|Conociendo código|Si|Si|
+| Tipos de pruebas | Consiste en         | Verificación | Validación |
+| ---------------- | ------------------- | ------------ | ---------- |
+| Estáticas        | Sin ejecutar código | Si           | No         |
+| Dinámicas        | Ejecutando código   | Si           | Si         |
+| Caja negra       | Sin conocer código  | Si           | Si         |
+| Caja blanca      | Conociendo código   | Si           | Si         |
 
 10. ***Da un resumen sobre la técnica de Partición en Clases de Equivalencia***
 
-- Determinar las condiciones de prueba (test conditions) para las entradas. Completar con las salidas
-- Determinar y aplicar técnicas para determinar las situaciones a cubrir (test coverage ítems)
-- Decidir si algunas situaciones a cubrir se han de combinar
-- Partiendo de las situaciones a cubrir, derivar los casos de prueba
+- **Clase de Equivalencia**: representa un conjunto de datos para los que se supone que el programa tiene un comportamiento similar
+- Identificación de clases de equivalencia:
+	- Se examina cada condición de entrada
+	- Cada condición se divide en clases de equivalencia (enumeraciones, rangos o valores lógicos)
+	- Si hay razones para creer que los elementos de una clase no se tratarán de la misma forma, dividir la clase en otra más pequeña (jerarquía de clases)
+- Derivación de casos de prueba:
+	- Estrategia típica: minimizada, que consiste en crear el menor número de casos que cubran las clases válidas (habitualmente uno por cada una de las inválidas para evitar enmascaramiento de defectos)
 - Comprobar que: Nº situaciones > Nº casos > Nº bases de datos
 
 11. ***¿Qué son las pruebas negativas?***
@@ -92,18 +108,19 @@ En la **verificación** se comprueba que el sistema cumple con la especificació
 
 - Formular la especificación en términos de un modelo: diagrama de flujo o de transición de estados
 - Se considera el modelo como la condición de entrada
-- Las situaciones por cubrir son cada uno de los caminos
+- Las situaciones a cubrir son cada uno de los caminos/transiciones
 - Comprobar cuántos casos de prueba necesitamos
 - Derivar casos de prueba para cubrir cada uno de los caminos (secuencia de pasos)
 - Casos de prueba como secuencia de pasos
 
-15. ***Detalla el procedimiento de las pruebas de caminos pares***
+15. ***Detalla el procedimiento de las pruebas de caminos pares (o de pares de caminos)***
 
 - Probar con mayor intensidad usando los "pares de caminos"
+- Las situaciones a cubrir son cada par de caminos adyacentes
 - Definir casos de prueba para cada uno de los pares
 - Se requieren más casos, pero la prueba es más completa
 
-16. ¿Para qué escenario son útiles las combinaciones con Tablas de Decisión? ¿Y con árboles de clasificación?
+16. ***¿Para qué escenario son útiles las combinaciones con Tablas de Decisión? ¿Y con árboles de clasificación?***
 
 - Las combinaciones con Tablas de Decisión son útiles para probar reglas de negocio complejas en función de combinaciones de diferentes valores. Cada regla será una situación a cubrir
 - Los Árboles de clasificación son útiles cuando hay muchas entradas
@@ -113,7 +130,33 @@ En la **verificación** se comprueba que el sistema cumple con la especificació
 - Son aquellas que no requieren ejecución de software. Pueden realizarse muy pronto y sirven para una detección temprana de defectos, lo que reduce el coste. 
 - Dos grupos: *revisiones, análisis estático*
 
-18. ***Indica qué debe incluir el Reporting***
+18. ***¿En qué consiste el análisis estático?***
+
+Consiste en analizar artefactos en busca de defectos
+- Mediante herramientas automáticas
+- Muchas veces antes de las revisiones manuales
+- Comprobación de requisitos y trazabilidad, estándares de codificación, vulnerabilidades...
+- Ejemplos de herramientas: *SonarQube*, *OWASP Dependency Check*
+
+19. ***Modelo en V***
+
+![](img/Pasted%20image%2020240102134909.png)
+
+20. ***Di todo lo que sepas sobre el Proceso de Reporting***
+
+- Para cada problema detectado:
+	- Ejecutar y anotar el resultado provisional (pasa, falla...)
+	- Verificar que es realmente un fallo, reproducir, aislar
+	- Incorporar información útil para resolución
+	- Comprobar duplicados. No perder credibilidad
+	- Determinar causa probable
+	- Determinar severidad provisional, título, descripción concisa y completa
+- Otras pruebas:
+	- Anotar fallos no buscados explícitamente
+	- Explorar zonas problemáticas con más detalle
+- Revisar los resultados (completitud y precisión) e informar (reporting)
+
+21. ***Indica qué debe incluir el Reporting***
 
 Ha de incluir:
 - El último objetivo es conseguir que los problemas se solucionen. Hay que vender el report (Bug advocacy)
@@ -220,7 +263,16 @@ Caminos:
 
 Con dos caminos recorremos todos los pares de transiciones
 
-28. ***Aplicar MCDC a la expresión: (a AND b OR c) AND d***
+28. ***Aplicar MCDC a la siguiente expresión (ejemplo teoría)***
+
+![](img/Pasted%20image%2020240605121846.png)
+
+>[!Note]
+>Fijarse esta otra forma de hacerlo (*Masking MCDC*)
+
+![](img/Pasted%20image%2020240605122016.png)
+
+29. ***Aplicar MCDC a la expresión: (a AND b OR c) AND d***
 
 ![](img/IMG_6897.jpeg)
 
@@ -251,15 +303,15 @@ NOTA: la V es un True, que se me coló `-_^`
 
 NOTA: recordar CISA
 
-- **Componente**: por separado, funcionalidades individuales
-- **Integración**: interfaces entre componentes e interacciones intrasistema
-- **Sistema**: comportamiento del sistema global, funcional y no funcional
-- **Aceptación**: determinar si el sistema está listo para funcionar
+- **Componente**: por separado, principalmente funcionalidad
+- **Integración**: interfaces entre componentes e interacciones con otras partes del sistema
+- **Sistema**: comportamiento del sistema global, funcional y no funcional (suele ser el último paso de la verificación)
+- **Aceptación**: determinar si el sistema está listo para ser liberado (validación)
 
-33. ***Estrategias para los casos de prueba***
+33. ***Estrategias para los casos de prueba***1
 
 - **Minimizada (each choice)**: por defecto. Implica no combinar. Se cubren todas las situaciones con el menor número de casos de prueba
-- **Base choice**: permite probar la sensibilidad ante pequeños cambios. Se elige una combinación base y el resto son iguales salvo un cambio en las situaciones
+- **Base choice**: permite probar la sensibilidad ante pequeños cambios. Se elige una combinación base y el resto son iguales salvo un cambio en una de las situaciones
 - **Combinaciones parciales**: algunas condiciones de prueba son más importantes que otras
 - **Multiple combination**: fuerza bruta. Se combina todo con todo
 
@@ -270,11 +322,25 @@ NOTA: recordar CISA
 
 35. ***Dibuja la pirámide de test***
 
+Concepto inicial de *Mike Cohn*
+
 ![](img/Pasted%20image%2020240111165313.png)
+
+![](img/Pasted%20image%2020240605115022.png)
 
 36. ***¿Para qué se usan los Mocks?***
 
 Se usan cuando tenemos que probar un sistema con un servicio externo que aún no está implementado, o cuando queremos probar la lógica de negocio independiente a ese servicio. El Mock se usa para sustituir a ese componente o API
+
+37. ***Modelo de Procesos de pruebas***
+
+![](img/Pasted%20image%2020240104171929.png)
+
+38. ***Agile Testing Quadrants, Lisa Crispin***
+
+![](img/Pasted%20image%2020240605122700.png)
+
+![](img/Pasted%20image%2020240605122717.png)
 
 # Preguntas de cuestionarios
 
