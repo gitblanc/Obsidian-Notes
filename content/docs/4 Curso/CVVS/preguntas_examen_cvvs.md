@@ -342,6 +342,19 @@ Se usan cuando tenemos que probar un sistema con un servicio externo que aún no
 
 ![](img/Pasted%20image%2020240605122717.png)
 
+39. ***En qué consiste Exploratory Testing***
+
+Diseño, ejecución y aprendizaje simultáneo:
+- Planificación previa (test charter): declaración breve del alcance y objetivos para una prueba en una ventana de tiempo limitado (ej: 2 horas)
+- Diseño y ejecución se realizan en paralelo
+	- Se profundiza en conocimiento del sistema según se ejecuta
+	- Se aplican técnicas, aunque no siempre se documenta
+	- Se registra lo que se aprueba y los problemas encontrados
+- Otros aspectos
+	- No es test ad-hoc o improvisado
+	- Necesita personal muy experimentado
+	- Session-Based Testing: Más estructurado
+
 # Preguntas de cuestionarios
 
 
