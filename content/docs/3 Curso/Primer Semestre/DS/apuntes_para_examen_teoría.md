@@ -427,7 +427,7 @@ Posible solución:
 >![](img/Pasted%20image%2020240602132813.png)
 >
 
-- **ISP** (*Interface Segregation Principle*, Principio de 1ión de interfaces):
+- **ISP** (*Interface Segregation Principle*, Principio de segregación de interfaces):
 	- Sugiere que los clientes no deberían tratar con la clase original, sino sólo con la interfaz correspondiente
 	- Es mejor muchas interfaces específicas para cada cliente que una sola interfaz de propósito general
 	- Dicho de otra forma: los clientes no deberían depender de los métodos que no usan
