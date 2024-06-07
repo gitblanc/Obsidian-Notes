@@ -641,6 +641,8 @@ Posible solución:
 
 ## Herencia frente a composición
 
+==Pregunta típica de examen==
+
 - **Herencia de clases**: permite definir la implementación de una clase en términos de la de otra
 	- Se define estáticamente, en tiempo de compilación
 	- Es fácil de usar
