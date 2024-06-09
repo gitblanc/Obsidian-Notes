@@ -23,6 +23,16 @@ title: Bienvenid@ a Obsidian Notes :)
 
 ![boton](img/Pasted%20image%2020240603231122.png)
 
+# Organización de esta web
+
+> [!Tip]
+> - 2 Curso
+> 	- [Algoritmia](/docs/2%20Curso/Algoritmia/)
+> 	- [Bases de Datos (BD)](/docs/2%20Curso/BD/)
+> 	- [Computación Numérica (CN)](/docs/2%20Curso/CN/)
+> - 3 Curso
+> - 4 Curso
+
 # Otros proyectos de interés
 
 Aquí te dejo una lista de repositorios que pueden serte de ayuda o inspiración en los que he colaborado o bien hice yo. Déjales una 🌟 si te son útiles o te gustan:
