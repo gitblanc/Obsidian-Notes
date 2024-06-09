@@ -11,7 +11,7 @@ const config: QuartzConfig = {
     pageTitle: "Obsidian Notes💜",
     enableSPA: true,
     enablePopovers: true,
-    analytics: { provider: 'goatcounter', websiteId: 'gitblanc-obsidian-notes' }
+    analytics: { provider: 'goatcounter', websiteId: 'gitblanc-obsidian-notes' },
     locale: "en-US",
     baseUrl: "gitblanc.github.io/Obsidian-Notes/",
     ignorePatterns: [
