@@ -1,7 +1,15 @@
 ---
 title: Ejercicios y apuntes para Examen Teoría ED 🍑
 ---
-*En este documento están todos los ejercicios de seminario resueltos y hay algunas definiciones que considero interesantes para el examen de teoría*
+>[!Note]
+>*En este documento están todos los ejercicios de seminario resueltos y hay algunas definiciones que considero interesantes para el examen de teoría*
+
+>[!Tip]
+>Te recomiendo que veas los siguientes archivos:
+>- [Exámenes de Teoría ED 🍅](exámenes_de_teoría_ed.md)
+>- [Notas de Laboratorio ED 🍄](notas_laboratorio_ed.md)
+>- [Seminarios ED 🚗](seminarios_ed.md) 
+
 # Seminario 2. Grafos
 
 ## Dijkstra

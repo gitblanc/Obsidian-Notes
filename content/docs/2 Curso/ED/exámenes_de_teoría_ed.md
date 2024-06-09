@@ -1,6 +1,11 @@
 ---
 title: Exámenes de Teoría ED 🍅
 ---
+>[!Tip]
+>Te recomiendo que veas los siguientes archivos:
+>- [Notas de Laboratorio ED 🍄](notas_laboratorio_ed.md)
+>- [Seminarios ED 🚗](seminarios_ed.md) 
+>- [Ejercicios y apuntes para Examen Teoría ED 🍑](ejercicios_y_apuntes_para_examen_teoría_ed)
 
 # Mayo 2020
 

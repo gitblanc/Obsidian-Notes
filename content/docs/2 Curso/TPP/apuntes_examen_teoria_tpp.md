@@ -1,6 +1,14 @@
 ---
 title: Apuntes Examen Teoría 👅
 ---
+>[!Tip]
+>Te recomiendo que veas los siguientes archivos:
+>- [Apuntes Examen Lab TPP 🤩](apuntes_examen_lab_tpp.md)
+>- [Ejemplos Examen Lab TPP ☃️](ejemplos_examen_lab_tpp.md)
+>- [Notas de C# 🍉](notas_de_c_sharp.md)
+>- [Seminarios TPP 🍎](seminarios_tpp.md)
+>- [Notas de Teoría TPP 🗿](notas_de_teoria_tpp.md)
+
 # Tema 1. Lenguajes y Paradigmas de la Programación
 
 ## Lenguaje de programación

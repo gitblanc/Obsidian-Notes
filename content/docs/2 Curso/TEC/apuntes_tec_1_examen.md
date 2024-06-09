@@ -375,3 +375,5 @@ Amperio.hora -> Culombios
 ![](img/Pasted%20image%2020231105121420.png)
 
 ![](img/IMG_5835.jpeg)
+
+- Continúa aquí -> [Apuntes TEC 2 examen 🦷](apuntes_tec_2_examen.md)
