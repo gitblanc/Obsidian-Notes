@@ -12,7 +12,7 @@ title: Organización de 4º 🦍
 >[!Note]
 >Notas de la asignatura *Calidad Validación y Verificación del Software*
 
-- [Apuntes para el examen de teoría 🧄](CVVS/apuntes_examen_teoria_cvvs.md)
+- [Apuntes para el examen de teoría 🧄](./CVVS/apuntes_examen_teoria_cvvs.md)
 - [Preguntas que pueden caer en el examen de teoría CVVS 🍓](CVVS/preguntas_examen_cvvs.md)
 - [Conceptos generales de CVVS 🛫](CVVS/conceptos_generales.md)
 - [Notas de laboratorio de CVVS 🦺](CVVS/notas_lab_cvvs.md)
@@ -40,7 +40,7 @@ title: Organización de 4º 🦍
 - [Pequeños apuntes 🧤](SI/pequeños_apuntes_particulares.md)
 - [Ejercicios de SI (una mezcla grande) 🚕](SI/ejercicios_si.md)
 
-## Segundo semestre
+# Segundo semestre
 
 ## DPPI
 
