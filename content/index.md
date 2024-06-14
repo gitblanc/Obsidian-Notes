@@ -26,12 +26,9 @@ title: Bienvenid@ a Obsidian Notes :)
 # Organización de esta web
 
 > [!Tip]
-> - 2 Curso
-> 	- [Algoritmia](/docs/2%20Curso/Algoritmia/)
-> 	- [Bases de Datos (BD)](/docs/2%20Curso/BD/)
-> 	- [Computación Numérica (CN)](/docs/2%20Curso/CN/)
-> - 3 Curso
-> - 4 Curso
+> Puedes seguir los documentos a través del grafo de la derecha (si haces click en los puntitos te llevará a las notas y ves un poco el mapa conceptual de su organización)
+
+- [4º Curso 🦍](/docs/4%20Curso/organizacion.md)
 
 # Otros proyectos de interés
 
