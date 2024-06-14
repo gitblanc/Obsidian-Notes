@@ -308,7 +308,7 @@ NOTA: recordar CISA
 - **Sistema**: comportamiento del sistema global, funcional y no funcional (suele ser el último paso de la verificación)
 - **Aceptación**: determinar si el sistema está listo para ser liberado (validación)
 
-39. ***Estrategias para los casos de prueba***1
+39. ***Estrategias para los casos de prueba***
 
 - **Minimizada (each choice)**: por defecto. Implica no combinar. Se cubren todas las situaciones con el menor número de casos de prueba
 - **Base choice**: permite probar la sensibilidad ante pequeños cambios. Se elige una combinación base y el resto son iguales salvo un cambio en una de las situaciones
@@ -364,7 +364,7 @@ Diseño, ejecución y aprendizaje simultáneo:
 2. ![](img/Pasted%20image%2020240106173840.png)
 
 Con el menor esfuerzo:
-- S0-S1-S2-S4-S1-S2-S3-S1-S4
+- ==S0-S1-S2-S4-S1-S2-S3-S1-S4==
 
 3. ![](img/Pasted%20image%2020240106174050.png)
 
@@ -373,15 +373,20 @@ Con el menor esfuerzo:
 
 5. ![](img/Pasted%20image%2020240106174224.png)
 
-- Ninguna es correcta
+- ==Ninguna es correcta==
 
 6. ![](img/Pasted%20image%2020240106174325.png)
 
-- Aunque es una práctica más de Kanban, es útil utilizarla en Scrum
-- Se puede usar, entre otros, para realizar el "Backlog Grooming"
+- ==Aunque es una práctica más de Kanban, es útil utilizarla en Scrum==
+- ==Se puede usar, entre otros, para realizar el "Backlog Grooming"==
 
 7. ![](img/Pasted%20image%2020240106174508.png)
 
 8. ![](img/Pasted%20image%2020240106174528.png)
 
-- Ninguna es cierta
+- ==*El tipo de pruebas de la interfaz de usuario está situado en la parte alta de la pirámide*==
+
+>[!Note]
+>Originalmente, donde yo lo encontré ponía *Ninguna es cierta*, pero revisa la pirámide de pruebas:
+
+![Pirámide de pruebas](img/Pasted%20image%2020240111165313.png)
