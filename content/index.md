@@ -28,6 +28,8 @@ title: Bienvenid@ a Obsidian Notes :)
 > [!Tip]
 > Puedes seguir los documentos a través del grafo de la derecha (si haces click en los puntitos te llevará a las notas y ves un poco el mapa conceptual de su organización)
 
+[2º Curso 🐳](/docs/2%20Curso/organizacion.md)
+- [3º Curso 🐊](/docs/3%20Curso/organizacion.md)
 - [4º Curso 🦍](/docs/4%20Curso/organizacion.md)
 
 # Otros proyectos de interés

@@ -109,3 +109,6 @@ title: Organización de 3º 🐊
 - [Seminarios de SSI 🧰](./Segundo%20Semestre/SSI/ssi_seminarios.md)
 - [Algunas notillas de clase de SSI 🥤](./Segundo%20Semestre/SSI/ssi.md)
 
+
+
+> Continúa al siguiente curso -> [Organización 4º Curso 🦍](../4%20Curso/organizacion.md)
