@@ -197,9 +197,9 @@ FALSO. Las técnicas anteriores son dinámicas, que se usan tanto para verificac
 
 28. ***Además de BDD y TDD ¿qué otras pruebas se realizan en Scrum y cuándo? Explica en qué consisten***
 
-- Scripted Testing y Explanatory Testing. Se usan antes de entregar la release
+- Scripted Testing y Exploratory Testing. Se usan antes de entregar la release
 - **Scripted Testing**: las acciones a realizar por el tester son prescritas en el caso de prueba. La preparación (diseño e implementación) están claramente separadas de la ejecución
-- **Explanatory Testing**: el aprendizaje, diseño y ejecución son simultáneos. Es necesario personal muy experimentado. No tienen por qué documentarse todas las técnicas, aunque sí se registrarán los resultados
+- **Exploratory Testing**: el aprendizaje, diseño y ejecución son simultáneos. Es necesario personal muy experimentado. No tienen por qué documentarse todas las técnicas, aunque sí se registrarán los resultados
 
 29. ***¿En qué consiste el estándar ISO/IEC 29119?***
 
@@ -231,6 +231,7 @@ Con MCDC podemos sacar el caso extra
 
 Pares de transiciones:
 - S0-S1-S2
+- S0-S1-S4
 - S1-S4-S5
 - S4-S5-S1
 - S5-S1-S2
