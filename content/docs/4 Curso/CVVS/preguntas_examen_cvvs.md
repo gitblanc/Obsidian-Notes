@@ -356,6 +356,18 @@ Diseño, ejecución y aprendizaje simultáneo:
 	- Necesita personal muy experimentado
 	- Session-Based Testing: Más estructurado
 
+46. ¿En qué consiste el Page Object Model?
+
+- Consiste en encapsular en clases todas las acciones Selenium sobre una página
+	- Simplifica el test, centrándolo en la lógica a probar
+	- Evita dispersión de las mismas acciones en varios tests
+	- Mayor facilidad de cambios cuando cambie el marcado de la página
+- Aspectos clave:
+	- En general, no contienen asserts
+	- Los "locators" se suelen definir como variables para simplificar código
+	- Los métodos incluyen los waits que sean necesarios
+	- La navegación se realiza ejecutando la acción con Selenium y devolviendo el page object de la página destino
+
 # Preguntas de cuestionarios
 
 
