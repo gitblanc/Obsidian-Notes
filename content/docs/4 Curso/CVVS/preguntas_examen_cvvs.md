@@ -368,6 +368,14 @@ Diseño, ejecución y aprendizaje simultáneo:
 	- Los métodos incluyen los waits que sean necesarios
 	- La navegación se realiza ejecutando la acción con Selenium y devolviendo el page object de la página destino
 
+47. ¿Qué tipos de Revisiones existen?
+
+- **Revisión de Gestión** (Management Review): Monitorización de progreso, estado de planes, etc.
+- **Recorrido** (Walkthrough): Presentación del documento por parte del autor para obtener un conocimiento común, comentarioes, etc.
+- **Revisión técnica** (Technical Review): Discusión detallada para determinar consenso/discrepancias en los contenidos técnicos.
+- **Inspección** (Inspection): La más formal, con un procedimiento muy definido para detectar defectos.
+- **Auditoría** (Audit): Independiente, para determinar conformidad con especificaciones, estádnares, u otros criterios
+
 # Preguntas de cuestionarios
 
 
