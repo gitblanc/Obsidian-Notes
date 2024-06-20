@@ -376,7 +376,13 @@ Diseño, ejecución y aprendizaje simultáneo:
 	- Los métodos incluyen los waits que sean necesarios
 	- La navegación se realiza ejecutando la acción con Selenium y devolviendo el page object de la página destino
 
-47. ¿Qué tipos de Revisiones existen?
+47. ¿En qué consiste el shift left y shift right? ¿De qué forman parte?
+
+Forman parte del Continuous Testing.
+- **Shift left**: realizar las pruebas lo antes posible
+- **Shift right**: monitorizar y probar en producción
+
+48. ¿Qué tipos de Revisiones existen?
 
 - **Revisión de Gestión** (Management Review): Monitorización de progreso, estado de planes, etc.
 - **Recorrido** (Walkthrough): Presentación del documento por parte del autor para obtener un conocimiento común, comentarioes, etc.
