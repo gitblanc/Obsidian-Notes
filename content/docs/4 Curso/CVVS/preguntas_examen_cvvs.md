@@ -245,6 +245,7 @@ Pares de transiciones:
 - S5-S1-S4
 - S1-S2-S3
 - S1-S2-S5
+- S2-S5-S1
 
 Caminos:
 - S0-S1-S4-S5-S1-S2-S3
@@ -412,12 +413,7 @@ Con el menor esfuerzo:
 
 8. ![](img/Pasted%20image%2020240106174528.png)
 
-- ==*El tipo de pruebas de la interfaz de usuario está situado en la parte alta de la pirámide*==
-
->[!Note]
->Originalmente, donde yo lo encontré ponía *Ninguna es cierta*, pero revisa la pirámide de pruebas:
-
-![Pirámide de pruebas](img/Pasted%20image%2020240111165313.png)
+- ===Ninguna es correcta=
 
 9. ¿Cuáles son ciertas?
 
