@@ -3,11 +3,11 @@ title: Preguntas de Examen CVVS 🍓
 ---
 # Preguntas de exámenes
 
-1. ***Diferencia entre fallo, error y defecto. ¿Con qué tipo de pruebas se relacionan?***
+1. ***Diferencia entre fallo, error y defecto. ¿Con qué tipo de pruebas se relacionan? ¿Quiénes son capaces de detectarlos?***
 
-- **Error**: acción humana que produce un resultado incorrecto. Las pruebas no son capaces de detectarlos
-- **Defecto**: manifestación de un error. Desperfecto en un componente o sistema que puede causar que el software no realice su función requerida. Se identifican mediante pruebas de carácter estático
-- **Fallo**: desviación en un componente o sistema de su comportamiento esperado. Se identifican mediante pruebas de carácter dinámico
+- **Error**: acción humana que produce un resultado incorrecto. Las pruebas no son capaces de detectarlos. Son detectados por los desarrolladores.
+- **Defecto**: manifestación de un error. Desperfecto en un componente o sistema que puede causar que el software no realice su función requerida. Se identifican mediante pruebas de carácter estático. Son detectados por los testers.
+- **Fallo**: desviación en un componente o sistema de su comportamiento esperado. Se identifican mediante pruebas de carácter dinámico. Son detectados por el cliente.
 
 2. ***¿Qué implica conseguir calidad?***
 
