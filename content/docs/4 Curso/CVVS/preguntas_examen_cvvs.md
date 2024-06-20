@@ -57,9 +57,16 @@ Buscan encontrar fallos, además de determinar que el sistema satisface la espec
 - **Verificación**: confirmación, a través de pruebas objetivas, de que se han cumplido los requisitos especificados. Consiste en comprobar el programa frente a sus atributos de calidad
 - **Validación**: confirmación, a través de pruebas objetivas, de que se han cumplido los requisitos para un uso concreto. Consiste en comprobar que es lo que el cliente espera
 
-En la **validación** podemos preguntarnos *¿estamos haciendo el producto adecuado?*, mientras que en la verificación podemos preguntarnos *¿estamos haciendo el producto de forma correcta?*
+En la **validación** podemos preguntarnos *¿estamos haciendo el producto adecuado?*, mientras que en la **verificación** podemos preguntarnos *¿estamos haciendo el producto de forma correcta?*
 
 En la **verificación** se comprueba que el sistema cumple con la especificación de requisitos, mientras que en la **validación** se comprueba que las necesidades del usuario se satisfacen
+
+>[!Note]
+>*Relación entre calidad, verificación y validación*
+
+**Calidad**: capacidad de un producto, servicio, sistema, componente o proceso para cumplir necesidades, expectativas o requisitos del cliente o usuario.
+
+En términos de calidad, la **verificación** se centra en asegurar que el producto es construido correctamente, mientras que la **validación** asegura que se ha construido el producto correcto
 
 10. ***Define prueba. ¿Qué es para ti un buen caso de prueba?***
 
