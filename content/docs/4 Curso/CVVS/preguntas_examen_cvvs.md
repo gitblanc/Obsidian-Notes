@@ -418,3 +418,35 @@ Con el menor esfuerzo:
 >Originalmente, donde yo lo encontré ponía *Ninguna es cierta*, pero revisa la pirámide de pruebas:
 
 ![Pirámide de pruebas](img/Pasted%20image%2020240111165313.png)
+
+9. ¿Cuáles son ciertas?
+
+![](img/Pasted%20image%2020240620173416.png)
+
+10. ¿Cuáles son falsas?
+
+![](img/Pasted%20image%2020240620173452.png)
+
+11. ¿Cuáles son ciertas?
+
+![](img/Pasted%20image%2020240620173541.png)
+
+12. Dado a,b,c ...
+
+![](img/Pasted%20image%2020240620173611.png)
+
+13. Indica cuáles no son válidos:
+
+![](img/Pasted%20image%2020240620173705.png)
+
+14. Dado el siguiente diagrama, da la secuencia de transiciones con menor esfuerzo:
+
+![](img/Pasted%20image%2020240620173747.png)
+
+15. ¿Cuál es cierta?
+
+![](img/Pasted%20image%2020240620173829.png)
+
+16. ¿Cuáles de las siguientes son falsas en relación al modelo en V?
+
+![](img/Pasted%20image%2020240620173907.png)
