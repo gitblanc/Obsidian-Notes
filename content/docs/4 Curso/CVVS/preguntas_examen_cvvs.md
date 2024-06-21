@@ -420,7 +420,7 @@ Con el menor esfuerzo:
 
 8. ![](img/Pasted%20image%2020240106174528.png)
 
-- ===Ninguna es correcta=
+- ==Ninguna es correcta==
 
 9. ¿Cuáles son ciertas?
 
