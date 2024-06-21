@@ -321,6 +321,7 @@ NOTA: recordar CISA
 
 - **Minimizada (each choice)**: por defecto. Implica no combinar. Se cubren todas las situaciones con el menor número de casos de prueba
 - **Base choice**: permite probar la sensibilidad ante pequeños cambios. Se elige una combinación base y el resto son iguales salvo un cambio en una de las situaciones
+- **Pair Wise**: combinación múltiple de las condiciones de entrada tomadas dos a dos
 - **Combinaciones parciales**: algunas condiciones de prueba son más importantes que otras
 - **Multiple combination**: fuerza bruta. Se combina todo con todo
 
