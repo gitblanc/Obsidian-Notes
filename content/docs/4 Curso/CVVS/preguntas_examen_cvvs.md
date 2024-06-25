@@ -391,6 +391,20 @@ Forman parte del Continuous Testing.
 - **Inspección** (Inspection): La más formal, con un procedimiento muy definido para detectar defectos.
 - **Auditoría** (Audit): Independiente, para determinar conformidad con especificaciones, estádnares, u otros criterios
 
+49. ¿Cuáles son las fases del proyecto de prueba?
+
+- Planificación
+	- Priorizar y estimar
+	- Realizar el plan
+- Preparación
+	- Diseño e implementación
+- Realización
+	- Ejecución
+	- Reporting
+- Monitorización y Control
+	- Medir
+	- Aplicar acciones
+
 # Preguntas de cuestionarios
 
 
