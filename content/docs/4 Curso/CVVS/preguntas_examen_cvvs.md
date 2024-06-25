@@ -325,6 +325,9 @@ NOTA: recordar CISA
 - **Combinaciones parciales**: algunas condiciones de prueba son más importantes que otras
 - **Multiple combination**: fuerza bruta. Se combina todo con todo
 
+>[!Note]
+>La técnica que más se parece a MCDC es "Base choice", ya que ambas se centran en evaluar el impacto de pequeños cambios en las condiciones para asegurar la cobertura adecuada de los casos de prueba.
+
 40. ***Explica la diferencia entre caso de prueba lógico y físico***
 
 - **Lógico**: describe en términos lógicos las circunstancias en las que se probará el comportamiento del sistema, incluyendo las situaciones a cubrir
