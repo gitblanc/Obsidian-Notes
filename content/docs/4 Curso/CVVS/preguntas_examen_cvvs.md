@@ -5,9 +5,9 @@ title: Preguntas de Examen CVVS 🍓
 
 1. ***Diferencia entre fallo, error y defecto. ¿Con qué tipo de pruebas se relacionan? ¿Quiénes son capaces de detectarlos?***
 
-- **Error**: acción humana que produce un resultado incorrecto. Las pruebas no son capaces de detectarlos. Son detectados por los desarrolladores.
-- **Defecto**: manifestación de un error. Desperfecto en un componente o sistema que puede causar que el software no realice su función requerida. Se identifican mediante pruebas de carácter estático. Son detectados por los testers.
-- **Fallo**: desviación en un componente o sistema de su comportamiento esperado. Se identifican mediante pruebas de carácter dinámico. Son detectados por el cliente.
+- **Error**: acción humana que produce un resultado incorrecto. Las pruebas no son capaces de detectarlos. No se pueden detectar.
+- **Defecto**: manifestación de un error. Desperfecto en un componente o sistema que puede causar que el software no realice su función requerida. Se identifican mediante pruebas de carácter estático. Son detectados por los testers, desarrolladores e incluso los clientes.
+- **Fallo**: desviación en un componente o sistema de su comportamiento esperado. Se identifican mediante pruebas de carácter dinámico. Son detectados por cualquier persona que ejecute la aplicación.
 
 2. ***¿Qué implica conseguir calidad?***
 
@@ -326,7 +326,7 @@ NOTA: recordar CISA
 - **Multiple combination**: fuerza bruta. Se combina todo con todo
 
 >[!Note]
->La técnica que más se parece a MCDC es "Base choice", ya que ambas se centran en evaluar el impacto de pequeños cambios en las condiciones para asegurar la cobertura adecuada de los casos de prueba.
+>La técnica que más se parece a MCDC es "Base choice", ya que ambas se centran en evaluar el impacto de pequeños cambios en las condiciones.
 
 40. ***Explica la diferencia entre caso de prueba lógico y físico***
 
@@ -407,6 +407,27 @@ Forman parte del Continuous Testing.
 - Monitorización y Control
 	- Medir
 	- Aplicar acciones
+
+50. Objetivos de Page Object Model vs Page Factory
+
+- El objetivo del **POM** es encapsular en clases todas las acciones Selenium sobre una página
+	- Simplifica el test, centrándolo en la lógica a probar
+	- Evita la dispersión de las mismas acciones en varios tests
+	- Mayor facilidad de cambios cuando cambie el marcado de la página
+- **Page Factory** es una implementación del *Page Object Model* en la que en lugar de definir locators (selectores CSS) para los elementos a probar, se definen WebElements (especificados con anotación `@FindBy`)
+
+51. Di si las siguientes afirmaciones son verdaderas o falsas dependiendo de la situación. Justifícalo
+
+- El Tester ha reportado un defecto en el software
+	- **Verdadero** si las pruebas son estáticas, **Falso** si las pruebas son dinámicas (sería un fallo)
+- El desarrollador ha reportado un fallo en el software
+	- **Verdadero** si está usando la aplicación, **Falso** si está revisando el código (sería un defecto)
+- El cliente ha reportado un error en el software
+	- **Falso**, porque a menos que el error lo cometa él, lo que está reportando es un fallo
+
+52. ¿Qué detectan las pruebas?
+
+Dependiendo de si las pruebas son dinámicas o estáticas, detectaríamos fallos y defectos respectivamente
 
 # Preguntas de cuestionarios
 
