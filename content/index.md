@@ -2,7 +2,8 @@
 banner: banner.jpg
 title: Bienvenid@ a Obsidian Notes :)
 ---
-![](https://img.shields.io/badge/Made%20with-Obsidian-blueviolet) ![Visitors](https://api.visitorbadge.io/api/daily?path=https%3A%2F%2Fgithub.com%2Fgitblanc%2FObsidian-Notes%2F&label=Visitors%20today&countColor=%2337d67a&style=plastic&labelStyle=upper)
+![](https://img.shields.io/badge/Made%20with-Obsidian-blueviolet) ![Visitors](https://api.visitorbadge.io/api/daily?path=https%3A%2F%2Fgithub.com%2Fgitblanc%2FObsidian-Notes%2F&label=Visitors%20today&countColor=%2337d67a&style=plastic&labelStyle=upper) <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/gitblanc/Obsidian-Notes"> <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/gitblanc/Obsidian-Notes?style=social"> 
+
 # ¡Bienvenid@!
 
 - Si te gusta esta página, déjame una 🌟 en [el repositorio de Github](https://github.com/gitblanc/Obsidian-Notes) :)
