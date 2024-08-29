@@ -22,8 +22,8 @@ PageTitle.css = `
   margin: 0;
 }
 .Logo {
-  height: 40%;
-  width: 40%;
+  height: 70%;
+  width: 70%;
   margin: 0;
 }
 `
