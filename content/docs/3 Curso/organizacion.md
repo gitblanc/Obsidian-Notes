@@ -18,6 +18,8 @@ title: Organización de 3º 🐊
 - [Seminarios de DS 🥡](./Primer%20Semestre/DS/seminarios.md)
 - [Herencia vs composición 🧦](./Primer%20Semestre/DS/herencia_vs_composicion.md)
 
+[Enlace al Repositorio de DS 📂 ](https://github.com/gitblanc/DS)
+
 ## IPS
 
 >[!Note]
@@ -28,6 +30,8 @@ title: Organización de 3º 🐊
 - [Primer Sprint 🌋](./Primer%20Semestre/IPS/primer_sprint.md)
 - [Segundo Sprint 🐁](./Primer%20Semestre/IPS/segundo_sprint.md)
 - [Tercer Sprint 🌍](./Primer%20Semestre/IPS/sprint_3.md)
+
+[Enlace al Repositorio de IPS 📂 ](https://github.com/gitblanc/IPS)
 
 ## RI
 
@@ -44,6 +48,8 @@ title: Organización de 3º 🐊
 	- [Trabajo de NoSQL 🌏](./Primer%20Semestre/RI/nosql_trabajo.md)
 - [Seminarios de RI 👽](./Primer%20Semestre/RI/seminarios.md)
 
+[Enlace al Repositorio de RI 📂 ](https://github.com/gitblanc/RI)
+
 ## SEW
 
 >[!Note]
@@ -55,6 +61,8 @@ title: Organización de 3º 🐊
 - [Lenguajes de marcado 🖲](./Primer%20Semestre/SEW/2._lenguajes_de_marcado.md)
 - [XML 💎](./Primer%20Semestre/SEW/3._xml.md)
 - [Computación en la web 🐨](./Primer%20Semestre/SEW/4._computacion_en_la_web.md)
+
+[Enlace al Repositorio de SEW 📂 ](https://github.com/gitblanc/SEW)
 
 # Segundo semestre
 
@@ -72,6 +80,8 @@ title: Organización de 3º 🐊
 	- [Primera conferencia (2022-2023) 🌊](./Segundo%20Semestre/ASW/conf_1_asw.md)
 	- [Segunda conferencia (2022-2023) 🌿](./Segundo%20Semestre/ASW/conf_2_asw.md)
 
+[Enlace al Repositorio de ASW 📂 ](https://github.com/gitblanc/ASW)
+
 ## DLP
 
 >[!Note]
@@ -80,6 +90,8 @@ title: Organización de 3º 🐊
 - [Ejercicios para el examen de teoría de DLP 🐲](./Segundo%20Semestre/DLP/ejercicios_examen_teoria_dlp.md)
 - [RESUMEN de Ejercicios para el examen de teoría de DLP 💎](./Segundo%20Semestre/DLP/resumen_ejercicios_teoria_dlp.md)
 - [Apuntes para el examen de teoría de DLP 🐟](./Segundo%20Semestre/DLP/apuntes_examen_teoria_dlp.md)
+
+[Enlace al Repositorio de DLP 📂 ](https://github.com/gitblanc/DLP)
 
 ## SDI
 
@@ -91,6 +103,8 @@ title: Organización de 3º 🐊
 - [Notas de laboratorio de SDI 🌠](./Segundo%20Semestre/SDI/laboratorios.md)
 - [Seminarios de SDI 🧪](./Segundo%20Semestre/SDI/sdi_seminarios.md)
 - [Notillas varias de teoría de SDI 🍯](./Segundo%20Semestre/SDI/sdi.md)
+
+[Enlace al Repositorio de SDI 📂 ](https://github.com/gitblanc/SDI)
 
 ## SSI
 
@@ -109,6 +123,6 @@ title: Organización de 3º 🐊
 - [Seminarios de SSI 🧰](./Segundo%20Semestre/SSI/ssi_seminarios.md)
 - [Algunas notillas de clase de SSI 🥤](./Segundo%20Semestre/SSI/ssi.md)
 
-
+[Enlace al Repositorio de SSI 📂 ](https://github.com/gitblanc/SSI)
 
 > Continúa al siguiente curso -> [Organización 4º Curso 🦍](../4%20Curso/organizacion.md)

@@ -19,6 +19,8 @@ title: Organización de 2º 🐳
 - [Exámenes de TEC 🚨](./TEC/exámenes_de_tec.md)
 - [Algunas notillas de clase de TEC ⛑](./TEC/notas_de_tec.md)
 
+- [Enlace al Repositorio de TEC 📂 ](https://github.com/gitblanc/TEC)
+
 ## ED
 
 >[!Note]
@@ -35,6 +37,8 @@ title: Organización de 2º 🐳
 	- [Estructuras Diccionario 🐿️](./ED/4._estructuras_diccionario.md)
 - [Presentación de ED 🐬](./ED/presentación_ed.md)
 
+[Enlace al Repositorio de ED 📂 ](https://github.com/gitblanc/ED)
+
 # Segundo semestre
 
 ## BD
@@ -47,6 +51,8 @@ title: Organización de 2º 🐳
 - [Seminarios de BD, Primera parte ☮️](./BD/seminarios_parte_1_bd.md)
 - [Seminarios de BD, Segunda parte 🎁](./BD/seminarios_parte_2_bd.md)
 
+[Enlace al Repositorio de BD 📂 ](https://github.com/gitblanc/2-curso-2-cuatri/tree/main/Bases%20de%20datos)
+
 ## Algoritmia
 
 >[!Note]
@@ -54,6 +60,8 @@ title: Organización de 2º 🐳
 
 - [Seminarios de Algoritmia ✏️](./Algoritmia/seminarios_alg.md)
 - [Algunas notillas de clase de Algoritmia 🧼](./Algoritmia/alg_segunda_parte.md)
+
+[Enlace al Repositorio de Algoritmia 📂 ](https://github.com/gitblanc/https://github.com/gitblanc/2-curso-2-cuatri/tree/main/Algoritmia)
 
 ## CN
 
@@ -64,6 +72,8 @@ title: Organización de 2º 🐳
 
 - [Algunas notillas de CN 📈](./CN/notas_generales_cn.md)
 
+[Enlace al Repositorio de CN 📂 ](https://github.com/gitblanc/https://github.com/gitblanc/2-curso-2-cuatri/tree/main/CN)
+
 ## SO
 
 >[!Note]
@@ -73,6 +83,8 @@ title: Organización de 2º 🐳
 - [Segunda parte de teoría de SO 🖥](./SO/so_segunda_parte.md)
 - [Ejercicios de Seminario de SO 🌴](./SO/ejercicios_seminario.md)
 - [Seminarios de SO 🧩](./SO/seminarios_so.md)
+
+[Enlace al Repositorio de SO 📂 ](https://github.com/gitblanc/https://github.com/gitblanc/2-curso-2-cuatri/tree/main/SO)
 
 ## TPP
 
@@ -89,5 +101,7 @@ title: Organización de 2º 🐳
 - [Apuntes para examen de teoría de TPP 👅](./TPP/apuntes_examen_teoria_tpp.md)
 - [Seminarios de TPP 🍎](./TPP/seminarios_tpp.md)
 - [Algunas notillas de clase de TPP 🗿](./TPP/notas_de_teoria_tpp.md)
+
+[Enlace al Repositorio de TPP 📂 ](https://github.com/gitblanc/TPP)
 
 > Continúa al siguiente curso -> [Organización 3º Curso 🐊](../3%20Curso/organizacion.md)

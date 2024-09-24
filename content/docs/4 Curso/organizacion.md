@@ -18,6 +18,8 @@ title: Organización de 4º 🦍
 - [Notas de laboratorio de CVVS 🦺](CVVS/notas_lab_cvvs.md)
 - [Seminarios de CVVS 🥐](CVVS/seminarios_cvvs.md)
 
+[Enlace al Repositorio de CVVS 📂 ](https://github.com/gitblanc/CVVS)
+
 ## IR
 
 
@@ -28,6 +30,8 @@ title: Organización de 4º 🦍
 - [Notas de laboratorio de IR 🐿️](IR/notas_de_lab_de_ir.md)
 - [Seminarios de IR 🍙](IR/seminarios_ir.md)
 - [Apuntes de seminarios de IR 🐸](IR/apuntes_de_seminario_ir.md)
+
+[Enlace al Repositorio de IR 📂 ](https://github.com/gitblanc/IR)
 
 ## SI
 
@@ -40,6 +44,8 @@ title: Organización de 4º 🦍
 - [Pequeños apuntes 🧤](SI/pequeños_apuntes_particulares.md)
 - [Ejercicios de SI (una mezcla grande) 🚕](SI/ejercicios_si.md)
 
+[Enlace al Repositorio de SI 📂 ](https://github.com/gitblanc/SI)
+
 # Segundo semestre
 
 ## DPPI
@@ -50,6 +56,8 @@ title: Organización de 4º 🦍
 - Si quieres preparar el examen de teoría, te recomiendo que mires mi app para preparar exámenes tipo test [Preguntator](https://preguntator.netlify.app/) y te los hagas todos cargando uno de los archivos en [Los ejemplos de Preguntator](https://github.com/gitblanc/Preguntator/tree/main/examples/DPPI), después léete (*aunque sea por encima*) la guía de aprendizaje
 - [Notas de laboratorio de DPPI 🌃](DPPI/notas_de_lab_dppi.md)
 - [Notas de teoría de DPPI 🏖️](DPPI/notas_de_teoria_dppi.md)
+
+[Enlace al Repositorio de DPPI 📂 ](https://github.com/gitblanc/DPPI)
 
 ## PE
 
@@ -67,4 +75,6 @@ title: Organización de 4º 🦍
 
 - De ASLEPI no tomé ninguna nota porque con escuchar a Darío **basta**
 - De nuevo, si quieres preparar el examen de teoría, te recomiendo que mires mi app para preparar exámenes tipo test [Preguntator](https://preguntator.netlify.app/) y te los hagas todos cargando uno de los archivos en [Los ejemplos de Preguntator](https://github.com/gitblanc/Preguntator/tree/main/examples/ASLEPI)
+
+[Enlace al Repositorio de ASLEPI 📂 ](https://github.com/gitblanc/ASLEPI)
 
