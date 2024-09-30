@@ -7,6 +7,8 @@ Si se quiere mirar ejemplos de cualquier lenguaje de un patrón de diseño, cons
 # Lab 1
 - Solución: aplicar un **Strategy**
 # Lab 2
+
+- Es importante sacar un loader para que la Máquina Virtual no tenga 2 responsabilidades (cargar el programa y ejecutarlo)
 - Solución: aplicar un **Template Method**
 - Contraseña: sol2
 
