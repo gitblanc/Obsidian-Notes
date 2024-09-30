@@ -9,7 +9,7 @@ Si se quiere mirar ejemplos de cualquier lenguaje de un patrón de diseño, cons
 # Lab 2
 
 - Es importante sacar un loader para que la Máquina Virtual no tenga 2 responsabilidades (cargar el programa y ejecutarlo)
-- Solución: aplicar un **Template Method**
+- Solución: aplicar un **State** y un **Template Method**
 - Contraseña: sol2
 
 - Nota: método execute() y doExecute() que es el que varía 
