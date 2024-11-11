@@ -63,7 +63,27 @@ for (Foto foto : db.selectFotos()) {
 - La clase UserInterface no se toca
 - Solución: patrón **Observer** y **Decorator** para la encapsulación
 - Contraseña: FALTA -> pedir a raúl
+
+### Comparativa Observer vs Command
+
+- **Command**: Tengo un objeto que cuando ocurre un evento ejecuta uno (o varios) comando(s). Su misión no es almacenar datos, sino saber cuando se lanza un evento y ejecutar dichos comandos. ==*Si no tiene comandos registrados, no tiene sentido que exista, pues no hay ningún dato que consultar*==
+- **Observer**: es útil aunque no haya eventos porque guarda datos (por ejemplo un contador de votos a favor y en contra en una encuesta). ==*Tiene sentido que exista aunque no contenga eventos, pues aún así contiene datos que pueden ser utilizados por otras partes de la aplicación*==
+
 # Lab 9
 
 - Solución: patrón **Visitor**
+
+### Lab 9 2024
+
+- Solución 1: **Strategy**
+- Solución 2: **Template Method**
+
+**Explicación**:
+
+- Utilizar un **Strategy** sería adecuado en caso de que el cliente desee cambiar en tiempo de ejecución la plataforma en la que ejecutar el juego (por ejemplo un debugger o un desarrollador).
+
+- Utilizar el **Template Method** sería adecuado para un cliente que ejecute el juego directamente en la consola, es decir, no quiera cambiar en tiempo de ejcución la plataforma de juego
+
+**Relación**: Template Method trabaja al nivel de la clase, por lo que es estático. Strategy trabaja al nivel del objeto, permitiéndote cambiar los comportamientos durante el tiempo de ejecución.
+
 
