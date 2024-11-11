@@ -75,15 +75,13 @@ for (Foto foto : db.selectFotos()) {
 
 ### Lab 9 2024
 
-- Solución 1: **Strategy**
+- Solución 1: **Adapter**
 - Solución 2: **Template Method**
 
 **Explicación**:
 
-- Utilizar un **Strategy** sería adecuado en caso de que el cliente desee cambiar en tiempo de ejecución la plataforma en la que ejecutar el juego (por ejemplo un debugger o un desarrollador).
+- Utilizar un **Adapter** sería adecuado en caso de que el cliente desee cambiar en tiempo de ejecución la plataforma en la que ejecutar el juego (por ejemplo un debugger o un desarrollador).
 
 - Utilizar el **Template Method** sería adecuado para un cliente que ejecute el juego directamente en la consola, es decir, no quiera cambiar en tiempo de ejcución la plataforma de juego
-
-**Relación**: Template Method trabaja al nivel de la clase, por lo que es estático. Strategy trabaja al nivel del objeto, permitiéndote cambiar los comportamientos durante el tiempo de ejecución.
 
 
