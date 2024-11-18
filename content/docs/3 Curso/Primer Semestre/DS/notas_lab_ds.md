@@ -85,3 +85,13 @@ for (Foto foto : db.selectFotos()) {
 - Utilizar el **Template Method** sería adecuado para un cliente que ejecute el juego directamente en la consola, es decir, no quiera cambiar en tiempo de ejcución la plataforma de juego
 
 
+# Lab 10 2024
+
+- Solución: patrón **Visitor**
+
+```java
+Figura circulo = new Circulo();
+print(figura) // Se imprime "figura" en vez de "circulo" porque no hay enlace dinámico
+```
+
+- Java no permite el enlace dinámico (se mira el tipo de la referencia porque no se comprueba el tipo concreto)
