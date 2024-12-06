@@ -836,7 +836,7 @@ Representa una operación sobre los elementos de una estructura de objetos. Perm
 
 ![](img/Pasted%20image%2020240604115531.png)
 
-- Lo que se hace es simular el **despacho múltiple** (multiple dispatch)
+- Lo que se hace es simular el **despacho doble** (double dispatch)
 
 ### Aplicabilidad
 

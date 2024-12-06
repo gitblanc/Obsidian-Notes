@@ -354,6 +354,16 @@ Posible solución:
 
 ![](img/Pasted%20image%2020240602125450.png)
 
+## ¿Qué quiere decir que las interfaces hacen de cortafuegos?
+
+==Pregunta típica de examen==
+
+En un buen diseño software, en **la raíz** de una jerarquía siempre debería situarse una interfaz ya que representan un contrato como resultado de las necesidades del cliente. A éste no le interesa el cómo (lo hace), sino el qué (deben poder hacer los objetos que implementan dicha interfaz).
+
+Si no lo hiciéramos así y usásemos una clase base (abstracta o no) como raíz de la jerarquía, nos estaríamos atando a una determinada funcionalidad que ante un cambio en los requisitos lo que era común en las subclases ya no lo sea.
+
+En definitiva, con una **interfaz** el cliente no se inmuta si cambia el cómo, mientras que con una **clase base**, se vería afectado ante un cambio.
+
 ## Síntomas de un diseño pobre
 
 ==Pregunta típica de examen==
@@ -616,9 +626,16 @@ Posible solución:
 
 ## ¿Qué es un buen diseño?
 
+==Pregunta típica de examen==
+
 - Un sistema está bien diseñado si:
 	- Es fácil de comprender
+		- Si la responsabilidad se indica claramente (nombres adecuados, se usan patrones de diseño) 
 	- Es fácil de cambiar
+		- Hay que tener en cuenta que todo programa sufrirá cambios, y el objetivo del diseño es facilitarlos. De esta forma, *diseñar para el cambio* significa:
+			- Sólo hay que cambiar en un único sitio (o añadiendo código nuevo -> Principio Abierto-Cerrado)
+			- Es fácil determinar el lugar de dicho cambio
+			- Debemos centrarnos en clases y métodos cohesivos (una única responsabilidad)
 
 >[!Tip]
 >¡Hay que diseñar para el cambio!
