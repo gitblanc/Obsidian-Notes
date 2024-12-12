@@ -172,6 +172,14 @@ Llamaremos a `CrearDocumento` un método de fabricación porque es el responsabl
 
 ![](img/Pasted%20image%2020240603125322.png)
 
+Como en nuestro editor:
+
+![](img/Pasted%20image%2020241212114825.png)
+
+¿Qué diferencia a las jerarquías paralelas de la versión normal del patrón?
+- Que es el cliente quien llama al método de creación.
+- Que pasa a ser público, en vez de protegido.
+
 ## Abstract Factory
 
 ### Propósito
