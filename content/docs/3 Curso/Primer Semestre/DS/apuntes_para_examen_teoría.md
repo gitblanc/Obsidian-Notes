@@ -764,4 +764,51 @@ En definitiva, con una **interfaz** el cliente no se inmuta si cambia el cómo, 
 >
 >Se usan los patrones: *Adapter*, *Decorator* y *Visitor*
 
+# Diferencias entre patrones
 
+==Pregunta típica de examen==
+
+## Decorator vs Strategy
+
+- *En cuanto a su propósito*, mientras que el **Strategy** permite cambiar parte del comportamiento interno de un objeto (el contexto), delegando en otro (la estrategia, que puede ser sustituido por otra estrategia), el **Decorator** añade responsabilidades a uno o varios métodos de un objeto en tiempo de ejecución, llevando a cabo tareas adicionales antes o después de llamar al método correspondiente del objeto que decora.
+- *En cuanto a la forma de implementarlos*, un objeto sabe que internamente tiene una **estrategia** que lo completa sin la cual no puede funcionar, mientras que la presencia de un **decorador** es totalmente transparente al objeto que decora, envolviéndolo desde fuera.
+
+### Decorador vs lista de Estrategias
+
+![](img/Pasted%20image%2020241212154129.png)
+
+![](img/Pasted%20image%2020241212154143.png)
+
+### Ejemplo: tickets (sistema de ficheros)
+
+Con un **Decorator**:
+
+![](img/Pasted%20image%2020241212154222.png)
+
+![](img/Pasted%20image%2020241212154337.png)
+
+Con una lista de Estrategias (**Strategy**):
+
+![](img/Pasted%20image%2020241212154301.png)
+
+![](img/Pasted%20image%2020241212154348.png)
+
+## Decorator vs Composite
+
+
+## State vs Strategy
+
+- **Strategy**: es seleccionada por un agente externo o por el contexto. Una estrategia tiende a tener un único método de "*inicio*" que llama a todos los demás. Hay mucha cohesión entre los métodos de un Strategy
+- **State**: un State generalmente selecciona el siguiente estado de su contexto. Un estado tiende a tener muchos métodos no relacionados, por lo que hay poca cohesión entre los métodos de un State.
+	- Los métodos del State suelen llamarse igual y tener la misma signatura que las que tenían dicho subconjunto de operaciones en el contexto
+
+## Factory Method vs Abstract Factory
+
+![](img/Pasted%20image%2020240603131608.png)
+
+## Prototype vs Abstract Factory vs Factory Method
+
+- El objeto fábrica de **Abstract Factory** produce varios objetos de varias clases, mientras que el **Prototype** hace que el objeto fábrica construya un producto copiando un objeto prototípico. 
+	- En este caso, el objeto fábrica y el prototipo son el mismo objeto, ya que el prototipo es el responsable de devolver el producto
+- El **Factory Method** puede requerir crear una nueva subclase simplemente para cambiar la clase del producto (dichos cambios pueden tener lugar en cascada), mientras que el **Prototype** hace que el objeto fábrica construya un producto copiando un objeto prototípico.
+	- En este caso, el objeto fábrica y el prototipo son el mismo objeto, ya que el prototipo es el responsable de devolver el producto
