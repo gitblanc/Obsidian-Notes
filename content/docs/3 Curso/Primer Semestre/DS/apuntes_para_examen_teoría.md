@@ -435,7 +435,17 @@ En definitiva, con una **interfaz** el cliente no se inmuta si cambia el cómo, 
 
 >[!Example]
 >![](img/Pasted%20image%2020240602132813.png)
+
+>[!Example]
+>Este ejercicio cayó en varios exámenes:
+>![](img/Pasted%20image%2020241212160815.png)
 >
+>¿Cómo lo podríamos mejorar?
+>
+>![](img/Pasted%20image%2020241212160838.png)
+>- El botón especifica el contrato de los dispositivos que puede controlar a través de una interfaz.
+>- Ahora el botón puede controlar cualquier dispositivo que implemente la interfaz proporcionada por él.
+>	- ¡Incluso aquellos que aún no han sido inventados!
 
 - **ISP** (*Interface Segregation Principle*, Principio de segregación de interfaces):
 	- Sugiere que los clientes no deberían tratar con la clase original, sino sólo con la interfaz correspondiente
