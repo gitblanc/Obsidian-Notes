@@ -795,7 +795,7 @@ Con una lista de Estrategias (**Strategy**):
 
 ## Decorator vs Composite
 
-
+Un **Decorator** es como un **Composite** pero sólo tiene un componente hijo. Además, el **Decorator** añade responsabilidades adicionales al objeto envuelto, mientras que el **Composite** se limita a "recapitular" los resultados de sus hijos
 ## State vs Strategy
 
 - **Strategy**: es seleccionada por un agente externo o por el contexto. Una estrategia tiende a tener un único método de "*inicio*" que llama a todos los demás. Hay mucha cohesión entre los métodos de un Strategy
